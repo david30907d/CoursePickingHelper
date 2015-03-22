@@ -35,7 +35,7 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
     #icon-text, #icon-text1, #icon-text2, #icon-text3, #icon-text4, #icon-text5 {color: white;
       font-family: "Lucida Calligraphy";font-size: 190%;font-style: italic;}
       body {
-        background-image: url(https://www.dropbox.com/s/25l2psd07eor2u6/pic203.jpg?dl=1);
+        background-color:#3074B5;
         background-repeat:no-repeat;
         background-attachment: fixed;
         font-family: 開源正黑體;
@@ -45,6 +45,11 @@ try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag
     #imgfb{height: 148px;}
     #lead{font-size: 40px; font-weight: 20;}
     /*最後改的p是相簿的英文字*/
+    /*修改table的border*/
+    table {border: 5px inset black;padding: 10px; text-align: center;border-collapse: collapse;}
+    caption {margin-bottom: 20px;}
+    th,td {border: 3px outset black; padding: 10px; text-align: center;}
+    /*table的屬性結束*/
     /*這邊放的是側拉式選單*/
     #mwt_mwt_slider_scroll
     {
@@ -180,11 +185,11 @@ $(function(){
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="m-picture.html" id="icon-text1"><span class="fa fa-camera-retro"></span> 泰瑋的日常</a></li>
-        <li><a href="learning.html" id="icon-text2"><span class="fa fa-history fa-fw"></span> 經歷</a></li>
-        <li><a href="skills.html" id="icon-text3"><span class="fa fa-bar-chart-o fa-rotate-90 fa-fw"></span> 技能</a></li>
-        <li><a href="my-art-of-work.html" id="icon-text4"><span class="fa fa-file-code-o fa-fw"></span> 作品集</a></li>
-        <li><a href="contact-me.html" id="icon-text"5><span class="fa fa-eyedropper"></span> 有話想說</a></li>
+        <li><a href="my-personal-page/m-picture.html" id="icon-text1"><span class="fa fa-camera-retro"></span> 泰瑋的日常</a></li>
+        <li><a href="my-personal-page/learning.html" id="icon-text2"><span class="fa fa-history fa-fw"></span> 經歷</a></li>
+        <li><a href="my-personal-page/skills.html" id="icon-text3"><span class="fa fa-bar-chart-o fa-rotate-90 fa-fw"></span> 技能</a></li>
+        <li><a href="my-personal-page/my-art-of-work.html" id="icon-text4"><span class="fa fa-file-code-o fa-fw"></span> 作品集</a></li>
+        <li><a href="my-personal-page/contact-me.html" id="icon-text"5><span class="fa fa-eyedropper"></span> 有話想說</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
@@ -232,6 +237,120 @@ $(function(){
       </div>
     </div>
 </div>
+</div>
+<div class="container table-responsive">  
+  <table class="table table-boarded table-striped table-hover">
+    <colgroup>
+      <col width="20">
+      <col width="20">
+    </colgroup>
+    <tbody>
+      <tr class="danger">
+        <th>節次</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+      <tr class="default">
+        <th>8:10~9:00</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+      <tr class="info">
+        <th>09:10~10:00 </th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+      <tr class="default">
+        <th>10:10~11:00</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+      <tr class="info">
+        <th>11:10~12:00</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+      <tr class="default">
+        <th>13:10~14:00</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+      <tr class="info">
+        <th>14:10~15:00</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+      <tr class="default">
+        <th>15:10~16:00</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+      <tr class="info">
+        <th>16:10~17:00</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+      <tr class="default">
+        <th>17:10~18:00</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+      <tr class="info">
+        <th>18:20~19:10</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+      <tr class="default">
+        <th>19:15~20:05</th>
+        <th>星期一</th>
+        <th>星期二</th>
+        <th>星期三</th>
+        <th>星期四</th>
+        <th>星期五</th>
+      </tr>
+      <tr class="info">
+        <td>20:10~21:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>   
 </div>
 <input class="form-control input-lg" type="text" placeholder=".input-lg">
 <input class="form-control" type="text" placeholder="Default input">
