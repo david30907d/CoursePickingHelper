@@ -339,9 +339,6 @@
 											</SELECT>
 										</td>
 									</tr>
-									<tr>
-										<TD ALIGN="center" COLSPAN="8" height=20></TD>
-									</tr>
 								</table>
 							</center>
 						</div>
@@ -350,8 +347,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="container table-responsive">  
-			<table class="table table-boarded table-striped table-hover">
+		<div class="container-fluid">  
+			<row>
+				<div class="col-sm-9">
+				<table class="table table-boarded table-striped table-hover table-responsive">
 				<colgroup>
 					<col width="20">
 					<row width="20">
@@ -462,7 +461,39 @@
 						<td></td>
 					</tr>
 				</tbody>
-			</table>   
+				</table>
+				</div>   
+				<div class="col-sm-3">
+				<form>
+					<table class="table table-boarded table-striped table-hover"><!--會出現系選修和體育、通識-->
+						<tr>
+						<td>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">
+							    	本系選修
+							  	</label>
+							</div>
+						</td>
+						<td>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">通識課程
+							  	</label>
+							</div>
+						</td>
+						<td>
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">體　　育
+							  	</label>
+							</div>
+						</td>
+						</tr>
+					</table>
+				</form><!--選課表單結束-->
+				</div>
+			</row>
 		</div>
 
 	    	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
