@@ -1,183 +1,184 @@
 <!DOCTYPE html>
 <html lang="zh-tw" class="han-la">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>選課小幫手</title>
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>選課小幫手</title>
 
-    <!-- han -->
-    <script type="text/javascript">
-		//<![CDATA[
-		try{
-			if (!window.CloudFlare) {
-				var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"c6a15bb64cee3e7501f8d3925dbaeadb",petok:"9dc7564530d8588c5caa56c6d86ba416298bd76d-1421981249-1800",zone:"taichunmin.idv.tw",rocket:"0",apps:{"ga_key":{"ua":"UA-39556213-3","ga_bs":"2"}}}];
-				!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=919620257c/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()
-			}
-		}catch(e){};
-		//]]>
-	</script>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
+	    <!-- han -->
+	    <script type="text/javascript">
+			//<![CDATA[
+			try{
+				if (!window.CloudFlare) {
+					var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"c6a15bb64cee3e7501f8d3925dbaeadb",petok:"9dc7564530d8588c5caa56c6d86ba416298bd76d-1421981249-1800",zone:"taichunmin.idv.tw",rocket:"0",apps:{"ga_key":{"ua":"UA-39556213-3","ga_bs":"2"}}}];
+					!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=919620257c/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()
+				}
+			}catch(e){};
+			//]]>
+		</script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	    <!-- Bootstrap -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-    <!-- Font Awesome -->
-    <link href="https://david30907d.github.io/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <style>
-    	body { padding-top: 51px; font-family:\5FAE\8EDF\6B63\9ED1\9AD4,Microsoft JhengHei,MingLiU,sans-serif; }
-    </style>
+	    <!-- Font Awesome -->
+	    <link href="https://david30907d.github.io/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
+	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    <style>
+	    	body { padding-top: 51px; font-family:\5FAE\8EDF\6B63\9ED1\9AD4,Microsoft JhengHei,MingLiU,sans-serif; }
+	    </style>
 
-	<style> 
-	    /*這裡開始是我寫的，選取表單和選單上的id，並把顏色反白*/
-	    nav.navbar {background-color: #3074B5;}
-	    #icon-text, #icon-text1, #icon-text2, #icon-text3, #icon-text4, #icon-text5 {color: white;
-	      font-family: "Lucida Calligraphy";font-size: 190%;font-style: italic;}
-	      body {
-	        background-color:#3074B5;
-	        background-repeat:no-repeat;
-	        background-attachment: fixed;
-	        font-family: 開源正黑體;
-	        background-size:100% 100%;    
-	    }
-	    p strong{color: blue}
-	    #imgfb{height: 148px;}
-	    #lead{font-size: 40px; font-weight: 20;}
-	    /*最後改的p是相簿的英文字*/
-	    /*修改table的border*/
-	    table {border: 5px inset black;padding: 10px; text-align: center;border-collapse: collapse;}
-	    caption {margin-bottom: 20px;}
-	    th,td {border: 3px outset black; padding: 10px; text-align: center;}
-	    /*table的屬性結束*/
-	    /*這邊放的是側拉式選單*/
-	    #mwt_mwt_slider_scroll
-	    {
-			top: 0;
-			left:-360px;
-			width:360px;  
-			position:fixed;
-			z-index:9999;
-	    }
-	     
-	    #mwt_slider_content{
-			background:#332788;
-			text-align:center;
-			padding-top:50px;
-	    }
-	     
-	    #mwt_fb_tab {
-			position:absolute;
-			top:20px;
-			right:-24px;
-			width:24px;
-			background:#E1CF71;
-			color:#141415;
-			font-family:Arial, Helvetica, sans-serif; 
-			text-align:center;
-			padding:20px 0;
+		<style> 
+		    /*這裡開始是我寫的，選取表單和選單上的id，並把顏色反白*/
+		    nav.navbar {background-color: #3074B5;}
+		    #icon-text, #icon-text1, #icon-text2, #icon-text3, #icon-text4, #icon-text5 {color: white;
+		      font-family: "Lucida Calligraphy";font-size: 190%;font-style: italic;}
+		      body {
+		        background-color:#3074B5;
+		        background-repeat:no-repeat;
+		        background-attachment: fixed;
+		        font-family: 開源正黑體;
+		        background-size:100% 100%;    
+		    }
+		    p strong{color: blue}
+		    #imgfb{height: 148px;}
+		    #lead{font-size: 40px; font-weight: 20;}
+		    /*最後改的p是相簿的英文字*/
+		    /*修改table的border*/
+		    table {border: 5px inset black;padding: 10px; text-align: center;border-collapse: collapse;}
+		    caption {margin-bottom: 20px;}
+		    th,td {border: 3px outset black; padding: 10px; text-align: center;}
+		    /*table的屬性結束*/
+		    /*這邊放的是側拉式選單*/
+		    #mwt_mwt_slider_scroll
+		    {
+				top: 0;
+				left:-360px;
+				width:360px;  
+				position:fixed;
+				z-index:9999;
+		    }
+		     
+		    #mwt_slider_content{
+				background:#332788;
+				text-align:center;
+				padding-top:50px;
+		    }
+		     
+		    #mwt_fb_tab {
+				position:absolute;
+				top:20px;
+				right:-24px;
+				width:24px;
+				background:#E1CF71;
+				color:#141415;
+				font-family:Arial, Helvetica, sans-serif; 
+				text-align:center;
+				padding:20px 0;
 
-			-moz-border-radius-topright:10px;
-			-moz-border-radius-bottomright:10px;
-			-webkit-border-top-right-radius:10px;
-			-webkit-border-bottom-right-radius:10px;  
-	    }
-	    #mwt_fb_tab span {
-			display:block;
-			height:50px;
-			padding:3px 0;
-			line-height:7px;
-			text-transform:uppercase;
-			font-size:20px;
-	    }      
-	    /*END  */
-	    .work-summary .panel-heading img{
-			width: 100%;
-			border-top-left-radius: 4px;
-			border-top-right-radius: 4px;
-			-webkit-border-top-left-radius: 4px;
-			-webkit-border-top-right-radius: 4px;
-			-moz-border-top-left-radius: 4px;
-			-moz-border-top-right-radius: 4px;
-	    }
-	    .work-summary .panel-heading{
-			width: 100%;
-			padding: 0;
-	    }
-	    .work-summary .panel-body{
-			background-color: #f5f5f5;
-	    }
-	    .work-summary .panel-body h4{
-			margin-top: 0;
-	    }
-	    .background-loader{
-			background-image: url(images/ajax-loader.gif);
-			background-size: 50px 50px;
-			background-repeat: no-repeat;
-			background-position: center center;
-	    }
-	    .carousel-caption{
-			/* Fallback for web browsers that don't support RGBa */
-			background-color: rgb(0, 0, 0);
-			/* RGBa with 0.6 opacity */
-			background-color: rgba(0, 0, 0, 0.6);
-			/* For IE 5.5 - 7*/
-			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-			/* For IE 8*/
-			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-	    }
-	    .carousel-inner img{
-			margin: 0 auto;
-	    }
- 	</style>
- 	<script type="text/javascript">
-		/* <![CDATA[ */
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-39556213-3']);
-		_gaq.push(['_trackPageview']);
+				-moz-border-radius-topright:10px;
+				-moz-border-radius-bottomright:10px;
+				-webkit-border-top-right-radius:10px;
+				-webkit-border-bottom-right-radius:10px;  
+		    }
+		    #mwt_fb_tab span {
+				display:block;
+				height:50px;
+				padding:3px 0;
+				line-height:7px;
+				text-transform:uppercase;
+				font-size:20px;
+		    }      
+		    /*END  */
+		    .work-summary .panel-heading img{
+				width: 100%;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+				-webkit-border-top-left-radius: 4px;
+				-webkit-border-top-right-radius: 4px;
+				-moz-border-top-left-radius: 4px;
+				-moz-border-top-right-radius: 4px;
+		    }
+		    .work-summary .panel-heading{
+				width: 100%;
+				padding: 0;
+		    }
+		    .work-summary .panel-body{
+				background-color: #f5f5f5;
+		    }
+		    .work-summary .panel-body h4{
+				margin-top: 0;
+		    }
+		    .background-loader{
+				background-image: url(images/ajax-loader.gif);
+				background-size: 50px 50px;
+				background-repeat: no-repeat;
+				background-position: center center;
+		    }
+		    .carousel-caption{
+				/* Fallback for web browsers that don't support RGBa */
+				background-color: rgb(0, 0, 0);
+				/* RGBa with 0.6 opacity */
+				background-color: rgba(0, 0, 0, 0.6);
+				/* For IE 5.5 - 7*/
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+				/* For IE 8*/
+				-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+		    }
+		    .carousel-inner img{
+				margin: 0 auto;
+		    }
+	 	</style>
+	 	<script type="text/javascript">
+			/* <![CDATA[ */
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-39556213-3']);
+			_gaq.push(['_trackPageview']);
 
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
 
-		(function(b){
-			(function(a){
-				"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)
-			})
-			(function(){
-				"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));
-				"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})
-			})
-		})(window);
-		/* ]]> */
-	</script>
-	<script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
-	<!--側拉式js-->
-	<script type='text/javascript'>
-		$(function(){
-			var w = $("#mwt_slider_content").width();
-			$('#mwt_slider_content').css('height', ($(window).height() - 20) + 'px' ); //將區塊自動撐滿畫面高度
-			$("#mwt_fb_tab").mouseover(function(){ //滑鼠滑入時
-			if ($("#mwt_mwt_slider_scroll").css('left') == '-'+w+'px')
-			{
-			  $("#mwt_mwt_slider_scroll").animate({ left:'0px' }, 600 ,'swing');
-			}
+			(function(b){
+				(function(a){
+					"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)
+				})
+				(function(){
+					"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));
+					"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})
+				})
+			})(window);
+			/* ]]> */
+		</script>
+		<script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
+		<!--側拉式js-->
+		<script type='text/javascript'>
+			$(function(){
+				var w = $("#mwt_slider_content").width();
+				$('#mwt_slider_content').css('height', ($(window).height() - 20) + 'px' ); //將區塊自動撐滿畫面高度
+				$("#mwt_fb_tab").mouseover(function(){ //滑鼠滑入時
+				if ($("#mwt_mwt_slider_scroll").css('left') == '-'+w+'px')
+				{
+				  $("#mwt_mwt_slider_scroll").animate({ left:'0px' }, 600 ,'swing');
+				}
+				});
+				$("#mwt_slider_content").mouseleave(function(){　//滑鼠離開後
+				$("#mwt_mwt_slider_scroll").animate( { left:'-'+w+'px' }, 600 ,'swing');  
+				}); 
 			});
-			$("#mwt_slider_content").mouseleave(function(){　//滑鼠離開後
-			$("#mwt_mwt_slider_scroll").animate( { left:'-'+w+'px' }, 600 ,'swing');  
-			}); 
-		});
-		 
-	</script>
-	<!--側拉式js-->
-	<script type="text/javascript" src="http://img.yac.mx/js/adr.js?v=22dd87"></script></head>
+			 
+		</script>
+		<!--側拉式js-->
+		<script type="text/javascript" src="http://img.yac.mx/js/adr.js?v=22dd87"></script>
+	</head>
 	<body>
 
 		<div class="container-fluid">
@@ -194,12 +195,13 @@
 					                <span>尋</span>
 								</div>
 								<div id="mwt_slider_content">
+
 				                <div id="about-me-social" class="col-sm-offset-3">
 					                <a class="btn btn-lg" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-2x fa-fw"></span>選課系統</a></br>
 					                <a class="btn btn-lg" href="http://cah.nchu.edu.tw/class/class_plan.php?new=Y&d_id=3" target="_blank"><span class="fa fa-book fa-2x fa-fw"></span>通識中心</a></br>
 					                <a class="btn btn-lg" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-2x fa-fw"></span>單一簽入</a></br>
+
 								</div>
-				              </div>
 							</div>
 				          <!--側拉是結束-->
 							<div class="col-sm-5 text-center">
