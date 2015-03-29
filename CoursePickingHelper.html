@@ -5,45 +5,30 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title>選課小幫手</title>
-
-	    <!-- han -->
-	    <script type="text/javascript">
-			//<![CDATA[
-			try{
-				if (!window.CloudFlare) {
-					var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"c6a15bb64cee3e7501f8d3925dbaeadb",petok:"9dc7564530d8588c5caa56c6d86ba416298bd76d-1421981249-1800",zone:"taichunmin.idv.tw",rocket:"0",apps:{"ga_key":{"ua":"UA-39556213-3","ga_bs":"2"}}}];
-					!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=919620257c/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()
-				}
-			}catch(e){};
-			//]]>
-		</script>
+	    <script type="text/javascript"></script>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
-
-	    <!-- Bootstrap -->
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
-	    <!-- Font Awesome -->
 	    <link href="https://david30907d.github.io/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
-	    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	    <!--[if lt IE 9]>
-	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	    <![endif]-->
-	    <style>
-	    	body { padding-top: 51px; font-family:\5FAE\8EDF\6B63\9ED1\9AD4,Microsoft JhengHei,MingLiU,sans-serif; }
-	    </style>
+
+
 
 		<style> 
 		    /*這裡開始是我寫的，選取表單和選單上的id，並把顏色反白*/
 		    nav.navbar {background-color: #3074B5;}
-		    #icon-text, #icon-text1, #icon-text2, #icon-text3, #icon-text4, #icon-text5 {color: white;
-		      font-family: "Lucida Calligraphy";font-size: 190%;font-style: italic;}
-		      body {
+		    #icon-text, #icon-text1, #icon-text2, #icon-text3, #icon-text4, #icon-text5 
+		    {
+		    	color: white;
+		     	font-family: "Microsoft JhengHei";
+		     	font-size: 190%;
+		     	font-style: italic;
+		    }
+		    body 
+		    {
 		        background-color:#3074B5;
 		        background-repeat:no-repeat;
 		        background-attachment: fixed;
-		        font-family: 開源正黑體;
+		        font-family: "Microsoft JhengHei";
+				padding-top: 0px;
 		        background-size:100% 100%;    
 		    }
 		    p strong{color: blue}
@@ -65,7 +50,8 @@
 				z-index:9999;
 		    }
 		     
-		    #mwt_slider_content{
+		    #mwt_slider_content
+		    {
 				background:#332788;
 				text-align:center;
 				padding-top:50px;
@@ -80,7 +66,7 @@
 				color:#141415;
 				font-family:Arial, Helvetica, sans-serif; 
 				text-align:center;
-				padding:20px 0;
+				padding:40px 0;
 
 				-moz-border-radius-topright:10px;
 				-moz-border-radius-bottomright:10px;
@@ -96,44 +82,6 @@
 				font-size:20px;
 		    }      
 		    /*END  */
-		    .work-summary .panel-heading img{
-				width: 100%;
-				border-top-left-radius: 4px;
-				border-top-right-radius: 4px;
-				-webkit-border-top-left-radius: 4px;
-				-webkit-border-top-right-radius: 4px;
-				-moz-border-top-left-radius: 4px;
-				-moz-border-top-right-radius: 4px;
-		    }
-		    .work-summary .panel-heading{
-				width: 100%;
-				padding: 0;
-		    }
-		    .work-summary .panel-body{
-				background-color: #f5f5f5;
-		    }
-		    .work-summary .panel-body h4{
-				margin-top: 0;
-		    }
-		    .background-loader{
-				background-image: url(images/ajax-loader.gif);
-				background-size: 50px 50px;
-				background-repeat: no-repeat;
-				background-position: center center;
-		    }
-		    .carousel-caption{
-				/* Fallback for web browsers that don't support RGBa */
-				background-color: rgb(0, 0, 0);
-				/* RGBa with 0.6 opacity */
-				background-color: rgba(0, 0, 0, 0.6);
-				/* For IE 5.5 - 7*/
-				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-				/* For IE 8*/
-				-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-		    }
-		    .carousel-inner img{
-				margin: 0 auto;
-		    }
 	 	</style>
 	 	<script type="text/javascript">
 			/* <![CDATA[ */
@@ -179,143 +127,206 @@
 		<!--側拉式js-->
 		<script type="text/javascript" src="http://img.yac.mx/js/adr.js?v=22dd87"></script>
 	</head>
+	
+	
 	<body>
+
+		<!--側拉式開始 -->
+			<div id="mwt_mwt_slider_scroll">
+				<div id="mwt_fb_tab">
+		            <span class="glyphicon glyphicon-search"></span>
+				</div>
+		
+				<div id="mwt_slider_content">
+		            <div id="about-me-social" class="col-sm-offset-3">
+	    	            <a class="btn btn-lg" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-2x fa-fw"></span>選課系統</a>
+	        	        <a class="btn btn-lg" href="http://cah.nchu.edu.tw/class/class_plan.php?new=Y&d_id=3" target="_blank"><span class="fa fa-book fa-2x fa-fw"></span>通識中心</a>
+	            	    <a class="btn btn-lg" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-2x fa-fw"></span>單一簽入</a>
+					</div>
+				</div>
+			</div>
+    	<!--側拉是結束-->
 
 		<div class="container-fluid">
 		    <div class="row">
 			    <div class="jumbotron">
 					<div class="container">
-				        <div class="row">
-				          <!--側拉式開始 -->
-							<div id="mwt_mwt_slider_scroll">
-								<div id="mwt_fb_tab">
-					                <span>課</span>
-					                <span>程</span>
-					                <span>搜</span>
-					                <span>尋</span>
-								</div>
-				          <!--側拉是結束-->
-						  <!--選取系級的表單-->
+						<!--杜杰的圖片輪播-->
+					    <div class="row">
+					      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					        <!-- Indicators -->
+					        <ol class="carousel-indicators">
+					          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					        </ol>
+
+					        <!-- Wrapper for slides -->
+					        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					              <!-- Indicators -->
+					              <ol class="carousel-indicators">
+					                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					              </ol>
+
+					              <!-- Wrapper for slides -->
+					              <div class="carousel-inner" role="listbox">
+					                <div class="item active">
+					                  <div align="center"><img src="images/test5.jpg" style="width:100%; height:100%"></div>
+					                  <div class="carousel-caption">
+					                    <h3>Test1</h3>
+					                  </div>
+					                </div>
+					 
+					                <div class="item">
+					                  <div align="center"><img src="images/test4.jpg" style="width:100%; height:100%"></div>
+					                  <div class="carousel-caption">
+					                    <h3>Test2</h3>
+					                  </div>
+					                </div>
+					                <div class="item">
+					                  <div align="center"><img src="images/test6.jpg" style="width:100%; height:100%"></div>
+					                  <div class="carousel-caption">
+					                    <h3>Test3</h3>
+					                  </div>
+					                </div>
+					              </div>
+					              <!-- Controls -->
+					              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					                <span class="sr-only">Previous</span>
+					              </a>
+					              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					                <span class="sr-only">Next</span>
+					              </a>
+					            </div>
+					      </div>
+					    </div>
+					    <!--杜杰的圖片結束-->
+					    <!--選取系級的表單-->
 						  <div class="col-sm-12">
-						  <center>
-						  <table  width="100%" border="0" cellspacing="0" cellpadding="0">
-								<tr>
-								<form action="" method="POST" name=form1>
-								  <td width=14% align="left" ><span class="word_13">學年期：</span>
-								<select name="v_year" onChange="document.form1.submit()">
-								<option value="1032">1032</option>
-								<option value="1031">1031</option>
-								<option value="1022">1022</option>
-								<option value="1021">1021</option>
-								<option value="1012">1012</option>
-								<option value="1011">1011</option>
-								<option value="1002">1002</option>
-								<option value="1001">1001</option>
-								<option value="0992">0992</option>
-								<option value="0991">0991</option>
-								<option value="0982">0982</option>
-								<option value="0981">0981</option>
-								<option value="0972">0972</option>
-								<option value="0971">0971</option>
-								<option value="0962">0962</option>
-								<option value="0961">0961</option>
-								<option value="0952">0952</option>
-								<option value="0951">0951</option>
-								<option value="0942">0942</option>
-								<option value="0941">0941</option>
-								</select>
-								</td>
-								</FORM>
-								<FORM ACTION="" METHOD="POST" name=form2>
-								<INPUT TYPE="hidden" NAME="v_year" VALUE="">
-								 <td width=16% align="left">
-								<span class="word_13">學制：</span><SELECT NAME="v_career" onChange="document.form2.submit()">
-								<OPTION SELECTED value="U">學士班
-								<OPTION value="G">碩士班
-								<OPTION value="D">博士班
-								<OPTION value="R">產專班
-								<OPTION value="W">碩專班
-								<OPTION value="N">進修學士班
-								</SELECT>
-								</td>
-								</FORM>
-								<FORM ACTION="" METHOD="POST">
-								 <td colspan="5" align="left">
-								<INPUT TYPE="hidden" NAME="v_year" VALUE="">
-								<INPUT TYPE="hidden" NAME="v_career" VALUE="U">
-								<span class="word_13">系所：
-									<SELECT NAME="v_dept">
-										<OPTION value="C10">C10 文學院</OPTION>
-										<OPTION value="C20">C20 管理學院</OPTION>
-										<OPTION value="C30">C30 農業暨自然資源學院</OPTION>
-										<OPTION value="U11">U11 中國文學系學士班</OPTION>
-										<OPTION value="U12">U12 外國語文學系學士班</OPTION>
-										<OPTION value="U13">U13 歷史學系學士班</OPTION>
-										<OPTION value="U21">U21 財務金融學系學士班</OPTION>
-										<OPTION value="U23">U23 企業管理學系學士班</OPTION>
-										<OPTION value="U24">U24 法律學系學士班</OPTION>
-										<OPTION value="U28">U28 會計學系學士班</OPTION>
-										<OPTION value="U29">U29 資訊管理學系學士班</OPTION>
-										<OPTION value="U30F">U30F 景觀與遊憩學士學位學程</OPTION>
-										<OPTION value="U30G">U30G 生物科技學士學位學程</OPTION>
-										<OPTION value="U30H">U30H 國際農企業學士學位學程</OPTION>
-										<OPTION value="U31">U31 農藝學系學士班</OPTION>
-										<OPTION value="U32">U32 園藝學系學士班</OPTION>
-										<OPTION value="U33A">U33A 森林學系林學組學士班</OPTION>
-										<OPTION value="U33B">U33B 森林學系木材科學組學士班</OPTION>
-										<OPTION value="U34">U34 應用經濟學系學士班</OPTION>
-										<OPTION value="U35">U35 植物病理學系學士班</OPTION>
-										<OPTION value="U36">U36 昆蟲學系學士班</OPTION>
-										<OPTION value="U37">U37 動物科學系學士班</OPTION>
-										<OPTION value="U38A">U38A 獸醫學系學士班</OPTION>
-										<OPTION value="U38B">U38B 獸醫學系學士班</OPTION>
-										<OPTION value="U39">U39 土壤環境科學系學士班</OPTION>
-										<OPTION value="U40">U40 生物產業機電工程學系學士班</OPTION>
-										<OPTION value="U42">U42 水土保持學系學士班</OPTION>
-										<OPTION value="U43">U43 食品暨應用生物科技學系學士班</OPTION>
-										<OPTION value="U44">U44 行銷學系學士班</OPTION>
-										<OPTION value="U51">U51 化學系學士班</OPTION>
-										<OPTION value="U52">U52 生命科學系學士班</OPTION>
-										<OPTION value="U53A">U53A 應用數學系學士班</OPTION>
-										<OPTION value="U53B">U53B 應用數學系學士班</OPTION>
-										<OPTION value="U54A">U54A 物理學系一般物理組學士班</OPTION>
-										<OPTION value="U54B">U54B 物理學系光電物理組學士班</OPTION>
-										<OPTION value="U56">U56 資訊科學與工程學系學士班</OPTION>
-										<OPTION value="U60F">U60F 學士後太陽能光電系統應用學士學位學
-										</OPTION>
-										<OPTION value="U61B">U61B 機械工程學系學士班</OPTION>
-										<OPTION value="U61A">U61A 機械工程學系學士班</OPTION>
-										<OPTION value="U62A">U62A 土木工程學系學士班</OPTION>
-										<OPTION value="U62B">U62B 土木工程學系學士班</OPTION>
-										<OPTION value="U63">U63 環境工程學系學士班</OPTION>
-										<OPTION value="U64B">U64B 電機工程學系學士班</OPTION>
-										<OPTION value="U64A">U64A 電機工程學系學士班</OPTION>
-										<OPTION value="U65">U65 化學工程學系學士班</OPTION>
-										<OPTION value="U66">U66 材料科學與工程學系學士班</OPTION>
-									</SELECT>
-								</span></td>
-								 <td align="left">
-								<span class="word_13">年級：</span><SELECT NAME="v_level">
-								<OPTION value=""></OPTION>
-								<OPTION value="1">一年級</OPTION>
-								<OPTION value="2">二年級</OPTION>
-								<OPTION value="3">三年級</OPTION>
-								<OPTION value="4">四年級</OPTION>
-								<OPTION value="5">五年級</OPTION>
-								</SELECT>
-								</td>
-								</TR>
-								<TR>
-									<TD ALIGN="center" COLSPAN="8" height=20></TD>
-								</TR>
-							</table>
-							</center>
+							  <center>
+								  <table  width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<form action="" method="POST" name=form1>
+											  <td width=14% align="left" ><span class="word_13">學年期：</span>
+													<select name="v_year" onChange="document.form1.submit()">
+														<option value="1032">1032</option>
+														<option value="1031">1031</option>
+														<option value="1022">1022</option>
+														<option value="1021">1021</option>
+														<option value="1012">1012</option>
+														<option value="1011">1011</option>
+														<option value="1002">1002</option>
+														<option value="1001">1001</option>
+														<option value="0992">0992</option>
+														<option value="0991">0991</option>
+														<option value="0982">0982</option>
+														<option value="0981">0981</option>
+														<option value="0972">0972</option>
+														<option value="0971">0971</option>
+														<option value="0962">0962</option>
+														<option value="0961">0961</option>
+														<option value="0952">0952</option>
+														<option value="0951">0951</option>
+														<option value="0942">0942</option>
+														<option value="0941">0941</option>
+													</select>
+												</td>
+											</form>
+											<form action="" METHOD="POST" name=form2>
+												<INPUT TYPE="hidden" NAME="v_year" VALUE="">
+												<td width=16% align="left">
+													<span class="word_13">學制：</span>
+													<SELECT NAME="v_career" onChange="document.form2.submit()">
+														<OPTION SELECTED value="U">學士班
+														<OPTION value="G">碩士班
+														<OPTION value="D">博士班
+														<OPTION value="R">產專班
+														<OPTION value="W">碩專班
+														<OPTION value="N">進修學士班
+													</SELECT>
+												</td>
+											</form>
+											<form ACTION="" METHOD="POST">
+												<td colspan="5" align="left">
+													<INPUT TYPE="hidden" NAME="v_year" VALUE="">
+													<INPUT TYPE="hidden" NAME="v_career" VALUE="U">
+													<span class="word_13">系所：
+														<SELECT NAME="v_dept">
+															<OPTION value="C10">C10 文學院</OPTION>
+															<OPTION value="C20">C20 管理學院</OPTION>
+															<OPTION value="C30">C30 農業暨自然資源學院</OPTION>
+															<OPTION value="U11">U11 中國文學系學士班</OPTION>
+															<OPTION value="U12">U12 外國語文學系學士班</OPTION>
+															<OPTION value="U13">U13 歷史學系學士班</OPTION>
+															<OPTION value="U21">U21 財務金融學系學士班</OPTION>
+															<OPTION value="U23">U23 企業管理學系學士班</OPTION>
+															<OPTION value="U24">U24 法律學系學士班</OPTION>
+															<OPTION value="U28">U28 會計學系學士班</OPTION>
+															<OPTION value="U29">U29 資訊管理學系學士班</OPTION>
+															<OPTION value="U30F">U30F 景觀與遊憩學士學位學程</OPTION>
+															<OPTION value="U30G">U30G 生物科技學士學位學程</OPTION>
+															<OPTION value="U30H">U30H 國際農企業學士學位學程</OPTION>
+															<OPTION value="U31">U31 農藝學系學士班</OPTION>
+															<OPTION value="U32">U32 園藝學系學士班</OPTION>
+															<OPTION value="U33A">U33A 森林學系林學組學士班</OPTION>
+															<OPTION value="U33B">U33B 森林學系木材科學組學士班</OPTION>
+															<OPTION value="U34">U34 應用經濟學系學士班</OPTION>
+															<OPTION value="U35">U35 植物病理學系學士班</OPTION>
+															<OPTION value="U36">U36 昆蟲學系學士班</OPTION>
+															<OPTION value="U37">U37 動物科學系學士班</OPTION>
+															<OPTION value="U38A">U38A 獸醫學系學士班</OPTION>
+															<OPTION value="U38B">U38B 獸醫學系學士班</OPTION>
+															<OPTION value="U39">U39 土壤環境科學系學士班</OPTION>
+															<OPTION value="U40">U40 生物產業機電工程學系學士班</OPTION>
+															<OPTION value="U42">U42 水土保持學系學士班</OPTION>
+															<OPTION value="U43">U43 食品暨應用生物科技學系學士班</OPTION>
+															<OPTION value="U44">U44 行銷學系學士班</OPTION>
+															<OPTION value="U51">U51 化學系學士班</OPTION>
+															<OPTION value="U52">U52 生命科學系學士班</OPTION>
+															<OPTION value="U53A">U53A 應用數學系學士班</OPTION>
+															<OPTION value="U53B">U53B 應用數學系學士班</OPTION>
+															<OPTION value="U54A">U54A 物理學系一般物理組學士班</OPTION>
+															<OPTION value="U54B">U54B 物理學系光電物理組學士班</OPTION>
+															<OPTION value="U56">U56 資訊科學與工程學系學士班</OPTION>
+															<OPTION value="U60F">U60F 學士後太陽能光電系統應用學士學位學
+															</OPTION>
+															<OPTION value="U61B">U61B 機械工程學系學士班</OPTION>
+															<OPTION value="U61A">U61A 機械工程學系學士班</OPTION>
+															<OPTION value="U62A">U62A 土木工程學系學士班</OPTION>
+															<OPTION value="U62B">U62B 土木工程學系學士班</OPTION>
+															<OPTION value="U63">U63 環境工程學系學士班</OPTION>
+															<OPTION value="U64B">U64B 電機工程學系學士班</OPTION>
+															<OPTION value="U64A">U64A 電機工程學系學士班</OPTION>
+															<OPTION value="U65">U65 化學工程學系學士班</OPTION>
+															<OPTION value="U66">U66 材料科學與工程學系學士班</OPTION>
+														</SELECT>
+													</span>
+												</td>
+											</form>
+											 <td align="left">
+											<span class="word_13">年級：</span><SELECT NAME="v_level">
+											<OPTION value=""></OPTION>
+											<OPTION value="1">一年級</OPTION>
+											<OPTION value="2">二年級</OPTION>
+											<OPTION value="3">三年級</OPTION>
+											<OPTION value="4">四年級</OPTION>
+											<OPTION value="5">五年級</OPTION>
+											</SELECT>
+											</td>
+										</TR>
+										<TR>
+											<TD ALIGN="center" COLSPAN="8" height=20></TD>
+										</TR>
+									</table>
+								</center>
 							</div>
 						  <!--選取系級的表單結束-->
-				        </div>
 					</div>
-			    </div>
-			</div>
+				</div>
 			</div>
 		</div>
 		<div class="container table-responsive">  
