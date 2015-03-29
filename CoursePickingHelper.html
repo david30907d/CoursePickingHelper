@@ -76,9 +76,13 @@
 		    }
 		    #mwt_slider_content
 		    {
-				background:#332788;
+				background:#D0D0D0;
 				text-align:center;
 				padding-top:50px;
+		    }
+		    #mwt_slider_content a
+		    {
+				font-size: 12px;
 		    }
 		    #mwt_fb_tab 
 		    {
@@ -87,7 +91,7 @@
 				right:-50px;
 				width:50px;
 				background:#3074B5;
-				padding:10px 0px 0px;
+				padding:10px 0px;
 				color:#141414;
 				text-align:center;
 
@@ -96,15 +100,6 @@
 				-webkit-border-top-right-radius:10px;
 				-webkit-border-bottom-right-radius:10px;  
 		    }
-		    #mwt_fb_tab span 
-		    {
-				display:block;
-				height:50px;
-				padding: 5px 0px;
-				line-height:7px;
-				text-transform:uppercase;
-				font-size:20px;
-		    }      
 		    /*END*/
 	 	</style>
 	 	<script type="text/javascript">
@@ -158,15 +153,30 @@
 		<!--側拉式開始 -->
 			<div id="mwt_mwt_slider_scroll">
 				<div id="mwt_fb_tab">
-		            <h3><span class="glyphicon glyphicon-search"></span></h3>
+		            <span class="fa fa-search fa-2x"></span>
 				</div>
 		
 				<div id="mwt_slider_content">
-		            <div id="about-me-social">
-	    	            <a class="btn btn-lg" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-2x fa-fw"></span>選課系統</a>
-	        	        <a class="btn btn-lg" href="http://cah.nchu.edu.tw/class/class_plan.php?new=Y&d_id=3" target="_blank"><span class="fa fa-book fa-2x fa-fw"></span>通識中心</a>
-	            	    <a class="btn btn-lg" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-2x fa-fw"></span>單一簽入</a>
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-3 control-label">課程名稱</label>
+						<div class="col-sm-9">
+					    	<input type="class" class="form-control" id="inputEmail3">
+						</div>
 					</div>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-3 control-label">授課教師</label>
+						<div class="col-sm-9">
+					    	<input type="teacher" class="form-control" id="inputPassword3">
+					  	</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-sm-1"></div>
+					    <a class="btn btn-lg col-sm-3" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-2x fa-fw"></span>選課系統</a>
+	        	        <a class="btn btn-lg col-sm-3" href="http://cah.nchu.edu.tw/class/class_plan.php?new=Y&d_id=3" target="_blank"><span class="fa fa-book fa-2x fa-fw"></span>通識中心</a>
+	            	    <a class="btn btn-lg col-sm-3" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-2x fa-fw"></span>單一簽入</a>
+            	    </div>
+            	    
 				</div>
 			</div>
     	<!--側拉式結束-->
