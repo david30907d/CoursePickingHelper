@@ -9,17 +9,19 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	    <link href="https://david30907d.github.io/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
-
+	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
 
 		<style> 
 		    /*這裡開始是我寫的，選取表單和選單上的id，並把顏色反白*/
-		    nav.navbar {background-color: #3074B5;}
+
 		    #icon-text, #icon-text1, #icon-text2, #icon-text3, #icon-text4, #icon-text5 
 		    {
 		    	color: white;
 		     	font-family: "Microsoft JhengHei";
-		     	font-size: 190%;
+		     	font-size: 100%;
 		     	font-style: italic;
 		    }
 		    body 
@@ -29,16 +31,39 @@
 		        background-attachment: fixed;
 		        font-family: "Microsoft JhengHei";
 				padding-top: 0px;
-		        background-size:100% 100%;    
 		    }
-		    p strong{color: blue}
-		    #imgfb{height: 148px;}
-		    #lead{font-size: 40px; font-weight: 20;}
+		    p strong
+		    {
+		    	color: blue
+		    }
+		    #imgfb
+		    {
+		    	height: 148px;
+		    }
+		    #lead
+		    {
+		    	font-size: 40px;
+		    	font-weight: 20;
+		    }
 		    /*最後改的p是相簿的英文字*/
 		    /*修改table的border*/
-		    table {border: 5px inset black;padding: 10px; text-align: center;border-collapse: collapse;}
-		    caption {margin-bottom: 20px;}
-		    th,td {border: 3px outset black; padding: 10px; text-align: center;}
+		    table 
+		    {
+		    	border: 5px inset black;
+		    	padding: 10px;
+		    	text-align: center;
+		    	border-collapse: collapse;
+		    }
+		    caption 
+		    {
+		    	margin-bottom: 20px;
+		    }
+		    th,td 
+		    {
+		    	border: 3px outset black;
+		    	padding: 10px;
+		    	text-align: center;
+		    }
 		    /*table的屬性結束*/
 		    /*這邊放的是側拉式選單*/
 		    #mwt_mwt_slider_scroll
@@ -49,31 +74,31 @@
 				position:fixed;
 				z-index:9999;
 		    }
-		     
 		    #mwt_slider_content
 		    {
 				background:#332788;
 				text-align:center;
 				padding-top:50px;
 		    }
-		     
-		    #mwt_fb_tab {
+		    #mwt_fb_tab 
+		    {
 				position:absolute;
-				top:20px;
+				top:10px;
 				right:-24px;
 				width:24px;
 				background:#E1CF71;
-				color:#141415;
+				color:#141414;
 				font-family:Arial, Helvetica, sans-serif; 
 				text-align:center;
-				padding:40px 0;
+				padding:10px 0px;
 
 				-moz-border-radius-topright:10px;
 				-moz-border-radius-bottomright:10px;
 				-webkit-border-top-right-radius:10px;
 				-webkit-border-bottom-right-radius:10px;  
 		    }
-		    #mwt_fb_tab span {
+		    #mwt_fb_tab span 
+		    {
 				display:block;
 				height:50px;
 				padding:3px 0;
@@ -81,7 +106,7 @@
 				text-transform:uppercase;
 				font-size:20px;
 		    }      
-		    /*END  */
+		    /*END*/
 	 	</style>
 	 	<script type="text/javascript">
 			/* <![CDATA[ */
@@ -128,7 +153,7 @@
 		<script type="text/javascript" src="http://img.yac.mx/js/adr.js?v=22dd87"></script>
 	</head>
 	
-	
+
 	<body>
 
 		<!--側拉式開始 -->
@@ -138,14 +163,14 @@
 				</div>
 		
 				<div id="mwt_slider_content">
-		            <div id="about-me-social" class="col-sm-offset-3">
+		            <div id="about-me-social">
 	    	            <a class="btn btn-lg" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-2x fa-fw"></span>選課系統</a>
 	        	        <a class="btn btn-lg" href="http://cah.nchu.edu.tw/class/class_plan.php?new=Y&d_id=3" target="_blank"><span class="fa fa-book fa-2x fa-fw"></span>通識中心</a>
 	            	    <a class="btn btn-lg" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-2x fa-fw"></span>單一簽入</a>
 					</div>
 				</div>
 			</div>
-    	<!--側拉是結束-->
+    	<!--側拉式結束-->
 		<div class="container-fluid">
 		    <div class="row">
 			    <div class="jumbotron">
@@ -211,7 +236,6 @@
 		<div class="container table-responsive">  
 			<table class="table table-boarded table-striped table-hover">
 				<colgroup>
-					<col width="20">
 					<col width="20">
 				</colgroup>
 				<tbody>
@@ -322,19 +346,8 @@
 				</tbody>
 			</table>   
 		</div>
-		<input class="form-control input-lg" type="text" placeholder=".input-lg">
-		<input class="form-control" type="text" placeholder="Default input">
-		<input class="form-control input-sm" type="text" placeholder=".input-sm">
-
-		<select class="form-control input-lg">...</select>
-		<select class="form-control">...</select>
-		<select class="form-control input-sm">...</select>
 	    	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	    	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.js"></script>
-	    	<!-- Latest compiled and minified JavaScript -->
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 
 	    <script>
 		    (function(d, s, id) {
