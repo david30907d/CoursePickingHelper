@@ -243,8 +243,10 @@
 								<table  width="100%" border="0" cellspacing="0" cellpadding="0">
 									<tr>
 										<form action="" method="POST" name=form1>
-											<td width=14% align="left" ><span class="word_13">學年期：</span>
+											<td width=14% align="left" >
+											<span class="word_13"></span>
 												<select name="v_year" onChange="document.form1.submit()">
+													<option value="0000">學年期：</option>
 													<option value="1032">1032</option>
 													<option value="1031">1031</option>
 													<option value="1022">1022</option>
@@ -255,9 +257,10 @@
 										<form action="" METHOD="POST" name=form2>
 											<INPUT TYPE="hidden" NAME="v_year" VALUE=""></INPUT>
 											<td width=16% align="left">
-												<span class="word_13">學制：</span>
+												<span class="word_13"></span>
 												<SELECT NAME="v_career" onChange="document.form2.submit()">
-													<OPTION SELECTED value="U">學士班</OPTION>
+													<option value="0">學制：</option>
+													<OPTION value="U">學士班</OPTION>
 													<OPTION value="G">碩士班</OPTION>
 													<OPTION value="D">博士班</OPTION>
 													<OPTION value="R">產專班</OPTION>
@@ -270,9 +273,9 @@
 											<td colspan="5" align="left">
 												<INPUT TYPE="hidden" NAME="v_year" VALUE=""></INPUT>
 												<INPUT TYPE="hidden" NAME="v_career" VALUE="U"></INPUT>
-												<span class="word_13">
+												<span class="word_13"></span>
 													<SELECT NAME="v_dept">
-														<option value="templete">系所:請選擇</option>
+														<option value="templete">系所：請選擇</option>
 														<OPTION value="C10">C10 文學院</OPTION>
 														<OPTION value="C20">C20 管理學院</OPTION>
 														<OPTION value="C30">C30 農業暨自然資源學院</OPTION>
@@ -325,9 +328,9 @@
 											</td>
 										</form>
 										<td align="left">
-											<span class="word_13">年級：</span>
+											<span class="word_13"></span>
 											<SELECT NAME="v_level">
-												<OPTION value=""></OPTION>
+												<OPTION value="0">年級：</OPTION>
 												<OPTION value="1">一年級</OPTION>
 												<OPTION value="2">二年級</OPTION>
 												<OPTION value="3">三年級</OPTION>
