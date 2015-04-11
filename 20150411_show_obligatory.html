@@ -130,7 +130,7 @@
 	<script>
 	(function($){
 		//先定義JQuery為$，不要讓它衝突
-		var courses = null;
+		//var courses = null;
 		$(function(){
 			//當文件準備好的時候，讀入json檔
 			$.getJSON('json/nchu_U56.json', function(json){
@@ -139,7 +139,7 @@
 			});
 		});
 
-		var add_course = function($target, course) {		//假設target為time-table的參數，course為courses的某一個課程
+		window.add_course = function($target, course) {		//假設target為time-table的參數，course為courses的某一個課程
 			if( !$.isArray(course.time_parsed) )
 				throw 'time_parsed error';		//判斷time-parse是不是陣列
 			if( $.type(course.title) !== "string" )			//判斷課程是不是字串	
