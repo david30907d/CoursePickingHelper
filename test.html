@@ -291,7 +291,6 @@
 										<option value="5">五年級</option>
 									</select>
 								</div>
-								
 								<button type="button" class="btn btn-default" id="OK_Button_Ch" value="0">中文課名</button><!--回傳值0為顯示中文-->
 								<button type="button" class="btn btn-default" id="OK_Button_En" value="1">English Title</button><!--回傳值1為顯示英文-->
 
@@ -526,11 +525,20 @@
 				});
 				$('button#OK_Button_Ch').click(function()
 				{	
+					
+					$.each(courses,function(ik,iv){
+						if(iv.class==1){
+							add_course($('#time-table'),courses[ik],0);
+						}
+					})
+					/*
 					add_course($('#time-table'),courses[0],0);
 					add_course($('#time-table'),courses[1],0);
 					add_course($('#time-table'),courses[2],0);
 					add_course($('#time-table'),courses[3],0);
-					add_course($('#time-table'),courses[4],0);											
+					add_course($('#time-table'),courses[4],0);
+					add_course($('#time-table'),courses[5],0);
+					*/											
 				});
 				$('button#OK_Button_En').click(function()
 				{	
@@ -542,7 +550,7 @@
 				});
 			});
 	    
-			window.add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
+			 window.add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
 				if( !$.isArray(course.time_parsed) )
 					throw 'time_parsed error';		//判斷time-parse是不是陣列
 				if( $.type(course.title_parsed) !== "object")			//判斷課程是不是物件	
