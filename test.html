@@ -527,10 +527,11 @@
 				{	
 					
 					$.each(courses,function(ik,iv){
-						if(iv.class==1){
+						if(iv.class==3){
 							add_course($('#time-table'),courses[ik],0);
 						}
 					})
+					
 					/*
 					add_course($('#time-table'),courses[0],0);
 					add_course($('#time-table'),courses[1],0);
@@ -538,7 +539,7 @@
 					add_course($('#time-table'),courses[3],0);
 					add_course($('#time-table'),courses[4],0);
 					add_course($('#time-table'),courses[5],0);
-					*/											
+					*/									
 				});
 				$('button#OK_Button_En').click(function()
 				{	
@@ -546,7 +547,8 @@
 					add_course($('#time-table'),courses[1],1);
 					add_course($('#time-table'),courses[2],1);
 					add_course($('#time-table'),courses[3],1);
-					add_course($('#time-table'),courses[4],1);											
+					add_course($('#time-table'),courses[4],1);	
+					add_course($('#time-table'),courses[5],1);								
 				});
 			});
 	    
