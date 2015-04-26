@@ -7,7 +7,7 @@
 	    <title>選課小幫手</title>
 	    <script type="text/javascript"></script>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootst	rap/3.3.1/css/bootstrap.min.css">
 	    <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
 	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.js"></script>
@@ -292,7 +292,8 @@
 									</select>
 								</div>
 								
-								<button type="button" class="btn btn-default" id="OK_Button" onclick="alert('請使用者於右下方的欄位自行勾選本年級必修課')">確定</button>
+								<button type="button" class="btn btn-default" id="OK_Button_Ch" value="0">中文課名</button><!--回傳值0為顯示中文-->
+								<button type="button" class="btn btn-default" id="OK_Button_En" value="1">English Title</button><!--回傳值1為顯示英文-->
 
 						</div>
 					</div>
@@ -513,47 +514,55 @@
 	  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	    <script>
 
-		    (function(d, s, id) {
-			    var js, fjs = d.getElementsByTagName(s)[0];
-			    if (d.getElementById(id)) return;
-			    js = d.createElement(s);
-			    js.id = id;
-			    js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
-			    fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-
 
 			(function($){
 		//先定義JQuery為$，不要讓它衝突
 		//var courses = null;
 			$(function(){
 				//當文件準備好的時候，讀入json檔
-				$.getJSON('json/nchu_U56.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
+				$.getJSON('json/course.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
 					courses = json.course;
 					//把json.course的物件存入courses變數裡
 				});
-				$('button#OK_Button').click(function()
-				{
-					add_course($('#time-table'),courses[0]);
-					add_course($('#time-table'),courses[1]);
-					add_course($('#time-table'),courses[2]);
-					add_course($('#time-table'),courses[3]);
-					add_course($('#time-table'),courses[4]);											
+				$('button#OK_Button_Ch').click(function()
+				{	
+					add_course($('#time-table'),courses[0],0);
+					add_course($('#time-table'),courses[1],0);
+					add_course($('#time-table'),courses[2],0);
+					add_course($('#time-table'),courses[3],0);
+					add_course($('#time-table'),courses[4],0);											
+				});
+				$('button#OK_Button_En').click(function()
+				{	
+					add_course($('#time-table'),courses[0],1);
+					add_course($('#time-table'),courses[1],1);
+					add_course($('#time-table'),courses[2],1);
+					add_course($('#time-table'),courses[3],1);
+					add_course($('#time-table'),courses[4],1);											
 				});
 			});
 	    
-			window.add_course = function($target, course) {		//假設target為time-table的參數，course為courses的某一個課程
+			window.add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
 				if( !$.isArray(course.time_parsed) )
 					throw 'time_parsed error';		//判斷time-parse是不是陣列
-				if( $.type(course.title) !== "string" )			//判斷課程是不是字串	
-					throw 'title error';
-				var tmp = course.title.split(' ');		//切割課程名稱，遇到空格就切開
-				course.title_short = tmp[0]+tmp[2];		//title_short是會自動宣告的區域變數，存沒有英文的課名
-				// console.log(course.title_short);
+				if( $.type(course.title_parsed) !== "object")			//判斷課程是不是物件	
+					throw 'title_parsed error';
+				if(language==0){
+					var tmpCh = course.title_parsed["zh_TW"].split(' ');		//(這是中文課名)切割課程名稱，遇到空格就切開
+					course.title_short = tmpCh[0];		//title_short是會自動宣告的區域變數，存沒有英文的課名
+			  	//console.log( "這是中文的"+course.title_shortCh);
+				}
+				else{
+					var tmpEn =course.title_parsed["en_US"];
+					course.title_short = tmpEn;
+			  	//console.log(course.title_shortEn);
+				}
+				
 				$.each(course.time_parsed, function(ik, iv){		
 				//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
 					$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
-						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');				
+						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
+
 						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一
 						// console.log($td[0]);
 						var $cell = $($.parseHTML('<div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div></div></div>'));

@@ -159,7 +159,7 @@
 			$.each(course.time_parsed, function(ik, iv){		
 			//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
 				$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
-					var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');		
+					var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');				
 					//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一
 					// console.log($td[0]);
 					var $cell = $($.parseHTML('<div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div></div></div>'));
