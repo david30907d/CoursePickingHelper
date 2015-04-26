@@ -583,11 +583,8 @@
 				});
 			});
 	    
-<<<<<<< HEAD
-			var add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
-=======
+
 			 window.add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
->>>>>>> e4c13cff884e7fa7e2134a0417f227e09ff36536
 				if( !$.isArray(course.time_parsed) )
 					throw 'time_parsed error';		//判斷time-parsed是不是陣列
 				if( $.type(course.title_parsed) !== "object")			//判斷課程名稱是不是物件
