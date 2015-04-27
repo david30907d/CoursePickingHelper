@@ -55,10 +55,6 @@
 				text-align: center;
 				
 			}
-			#time-table tbody tr td{
-				min-height: 55px;
-				float: center;
-			}
 			#time-table div.title{
 				text-align: center;
 				font-size: 120%;
@@ -564,7 +560,7 @@
 							add_course($('#time-table'),courses[ik],0);
 						}
 					})
-					/*
+					/**
 					add_course($('#time-table'),courses[0],0);
 					add_course($('#time-table'),courses[1],0);
 					add_course($('#time-table'),courses[2],0);
@@ -575,11 +571,18 @@
 				});
 				$('button#OK_Button_En').click(function()
 				{	
+					$.each(courses,function(ik,iv){
+						if(iv.class==1){
+							add_course($('#time-table'),courses[ik],1);
+						}
+					})
+					/**
 					add_course($('#time-table'),courses[0],1);
 					add_course($('#time-table'),courses[1],1);
 					add_course($('#time-table'),courses[2],1);
 					add_course($('#time-table'),courses[3],1);
-					add_course($('#time-table'),courses[4],1);											
+					add_course($('#time-table'),courses[4],1);	
+					*/										
 				});
 			});
 	    
