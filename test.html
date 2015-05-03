@@ -399,7 +399,7 @@
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			        <button type="button" class="btn btn-success" data-dismiss="modal">Submit</button>
+			        <button type="button" class="btn btn-success" data-dismiss="modal" id="ok-button">Submit</button>
 			      </div>
 			    </div>
 			  </div>
@@ -482,22 +482,20 @@
 					}
 				};			
 
-				var OK_Button_value=function(){//能夠把選取到的年級給回傳
-					var level=$("#v_level").val();
-					return level;
-				};
-				var empty_timetable=function(){
-					$('#time-table td').empty();//把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
-				};	
 				$("#ok-button").click(function()
 				{	
-					empty_timetable();
-					var level=OK_Button_value();
+					$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
+					var level=$("#v_level").val();
 					$.each(courses,function(ik,iv){
 						if(iv.class==level&&iv.obligatory_tf==true){
 							add_course($('#time-table'),courses[ik],$("#change-language").val());
 						}			
 					})							
+				});
+
+				$("#clear-button").click(function()
+				{
+					$('#time-table td').empty();
 				});
 
 				$("#change-language").click(function()
