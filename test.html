@@ -556,7 +556,7 @@
 					}
 				}
 
-				$('button#OK_Button_Ch').click(function()
+				$("#OK_Button_Ch").click(function()
 				{	
 					
 					$.each(courses,function(ik,iv){
@@ -574,14 +574,13 @@
 					add_course($('#time-table'),courses[5],0);
 					*/									
 				});
-				$('button#OK_Button_En').click(function()
+				$("#OK_Button_En").click(function()
 				{	
-					add_course($('#time-table'),courses[0],1);
-					add_course($('#time-table'),courses[1],1);
-					add_course($('#time-table'),courses[2],1);
-					add_course($('#time-table'),courses[3],1);
-					add_course($('#time-table'),courses[4],1);	
-					add_course($('#time-table'),courses[5],1);								
+					$.each(courses,function(ik,iv){
+						if(iv.class==3){
+							add_course($('#time-table'),courses[ik],1);
+						}
+					})								
 				});
 			});
 	    
