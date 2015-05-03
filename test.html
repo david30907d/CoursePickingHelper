@@ -304,7 +304,7 @@
 			      	  <div class="form-group">
 			      	    <label for="v_year" class="col-sm-2 control-label">學期</label>
 			      	    <div class="col-sm-10">
-			      	      <select class="form-control" id="v_year">
+			      	      <select class="form-control" name="v_year" id="v_year">
 			      	        <option value="103_2">1032</option>
 			      	        <option value="103_1">1031</option>
 			      	        <option value="102_2">1022</option>
@@ -315,7 +315,7 @@
 			      	  <div class="form-group">
 			      	    <label for="v_career" class="col-sm-2 control-label">學制</label>
 			      	    <div class="col-sm-10">
-			      	      <select class="form-control" id="v_career">
+			      	      <select class="form-control" name="v_career" id="v_career">
 			      	        <option value="U">學士班</option>
 			      	        <option value="G">碩士班</option>
 			      	        <option value="D">博士班</option>
@@ -328,7 +328,7 @@
 			      	  <div class="form-group">
 			      	    <label for="v_dept" class="col-sm-2 control-label">系所</label>
 			      	    <div class="col-sm-10">
-			      	      <select class="form-control" id="v_dept">
+			      	      <select class="form-control" name="v_dept" id="v_dept">
 			      	        <option value="C10">文學院</option>
 			      	        <option value="C20">管理學院</option>
 			      	        <option value="C30">農業暨自然資源學院</option>
@@ -381,7 +381,7 @@
 			      	  <div class="form-group">
 			      	    <label for="v_level" class="col-sm-2 control-label">年級</label>
 			      	    <div class="col-sm-10">
-			      	      <select class="form-control" id="v_level">                    
+			      	      <select class="form-control" name="v_level" id="v_level">                    
 			      	        <option value="1">一年級</option>
 			      	        <option value="2">二年級</option>
 			      	        <option value="3">三年級</option>
@@ -475,7 +475,17 @@
 						case "N":
 
 					}
-				};							
+				};	
+				var serializearray=function(){//比較好的方法來取option 的value!!!!
+					$a = $($0)//取到年級選單
+					[<form class=​"form-horizontal">​…​</form>​]
+					$a.serializeArray()
+					[Objectname: "v_year"value: "103_2"__proto__: Object, Objectname: "v_career"value: "U"__proto__: Object, Objectname: "v_dept"value: "C10"__proto__: Object, Objectname: "v_level"value: "1"__proto__: Object]
+					$a.serializeArray()[0].name
+					"v_year"
+					$a.serializeArray()[1].value
+					"U"
+				}
 				var OK_Button_value=function(){//能夠把選取到的年級給回傳
 					var level=$("#v_level").val();
 					return level;
