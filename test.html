@@ -163,59 +163,27 @@
 					</div>
 				</div>
 
-				<!--會出現系選修和體育、通識-->
-				<div class="col-sm-3" style="background-color:#D9EDF7">
-					<div class="row" align="center">
-						<div class="col-sm-4">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">本系選修
-							  	</label>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">通識課程
-							  	</label>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">體　　育
-							  	</label>
-							</div>
-						</div>
-						
-						<select multiple class="form-control">
-							<option>class1</option>
-							<option>class1</option>
-							<option>class1</option>
-							<option>class1</option>
-							<option>class1</option>
-						</select>
-					</div>
-				</div>
-
 			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#exp">
-			  <span class="fa fa-question fa-1x fa-fw"></span>
+			<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exp">
+			  <span class="fa fa-question fa-2x fa-fw"></span>
 			</button>
 			
-			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#detail">
-			  <span class="fa fa-graduation-cap fa-1x fa-fw"></span>
+			<button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail">
+			  <span class="fa fa-graduation-cap fa-2x fa-fw"></span>
 			</button>
 
-			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#search">
-			  <span class="fa fa-search fa-1x fa-fw"></span>
+			<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#search">
+			  <span class="fa fa-search fa-2x fa-fw"></span>
 			</button>
 
-			<button type="button" class="btn btn-info btn-lg" id="clear-button">
-			  <span class="fa fa-trash fa-1x fa-fw"></span>
+			<button type="button" class="btn btn-danger" id="clear-button">
+			  <span class="fa fa-trash fa-2x fa-fw"></span>
 			</button>
 
-			<button type="button" class="btn btn-default" id="change-language" value="0">中 　文　|　English</button><!--中英切換-->
+			<button type="button" class="btn btn-danger" id="change-language" value="0">
+			  <span class="fa fa-trash fa-2x fa-fw"></span>
+			</button><!--中英切換-->
+			<!--<button type="button" class="btn btn-default" id="change-language" value="0">中 　文　|　English</button><!--中英切換-->
 
 			<!-- Modal -->
 			<div class="modal fade modal fade bs-example-modal-lg" id="exp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -309,7 +277,7 @@
 			      	  <div class="form-group">
 			      	    <label for="v_year" class="col-sm-2 control-label">學期</label>
 			      	    <div class="col-sm-10">
-			      	      <select class="form-control" id="v_year">
+			      	      <select class="form-control" name="v_year" id="v_year">
 			      	        <option value="103_2">1032</option>
 			      	        <option value="103_1">1031</option>
 			      	        <option value="102_2">1022</option>
@@ -320,7 +288,7 @@
 			      	  <div class="form-group">
 			      	    <label for="v_career" class="col-sm-2 control-label">學制</label>
 			      	    <div class="col-sm-10">
-			      	      <select class="form-control" id="v_career">
+			      	      <select class="form-control" name="v_career" id="v_career">
 			      	        <option value="U">學士班</option>
 			      	        <option value="G">碩士班</option>
 			      	        <option value="D">博士班</option>
@@ -333,7 +301,7 @@
 			      	  <div class="form-group">
 			      	    <label for="v_dept" class="col-sm-2 control-label">系所</label>
 			      	    <div class="col-sm-10">
-			      	      <select class="form-control" id="v_dept">
+			      	      <select class="form-control" name="v_dept" id="v_dept">
 			      	        <option value="C10">文學院</option>
 			      	        <option value="C20">管理學院</option>
 			      	        <option value="C30">農業暨自然資源學院</option>
@@ -386,7 +354,7 @@
 			      	  <div class="form-group">
 			      	    <label for="v_level" class="col-sm-2 control-label">年級</label>
 			      	    <div class="col-sm-10">
-			      	      <select class="form-control" id="v_level">                    
+			      	      <select class="form-control" name="v_level" id="v_level">                    
 			      	        <option value="1">一年級</option>
 			      	        <option value="2">二年級</option>
 			      	        <option value="3">三年級</option>
@@ -440,6 +408,43 @@
 			    </div>
 			  </div>
 			</div>
+
+				<!--會出現系選修和體育、通識-->
+				<div class="col-sm-3" style="background-color:#D9EDF7">
+					<div class="row" align="center">
+						<div class="col-sm-4">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">本系選修
+							  	</label>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">通識課程
+							  	</label>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">體　　育
+							  	</label>
+							</div>
+						</div>
+						
+						<select multiple class="form-control">
+							<option>class1</option>
+							<option>class1</option>
+							<option>class1</option>
+							<option>class1</option>
+							<option>class1</option>
+						</select>
+					</div>
+				</div>
+
+
 
 		</div>
 
