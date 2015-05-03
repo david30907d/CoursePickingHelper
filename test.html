@@ -70,137 +70,12 @@
 				font-size: 80%;
 			}
 		    /*table的屬性結束*/
-		    /*這邊放的是側拉式選單*/
-		    #mwt_mwt_slider_scroll
-		    {
-				top: 0;
-				left:-360px;
-				width:360px;  
-				position:fixed;
-				z-index:9999;
-		    }
-		    #mwt_slider_content
-		    {
-				background:#D0D0D0;
-				text-align:center;
-				padding-top:50px;
-		    }
-		    #mwt_slider_content a
-		    {
-				font-size: 12px;
-		    }
-		    #mwt_fb_tab 
-		    {
-				position:absolute;
-				top:10px;
-				right:-50px;
-				width:50px;
-				background:#3074B5;
-				padding:10px 0px;
-				color:#141414;
-				text-align:center;
-
-				-moz-border-radius-topright:10px;
-				-moz-border-radius-bottomright:10px;
-				-webkit-border-top-right-radius:10px;
-				-webkit-border-bottom-right-radius:10px;
-		    }
-		    table.table>tbody>tr>th
-		    {
-				vertical-align: middle;
-		    }
-
-		    p
-		    {
-		    	margin: 0;
-		    }
-		    /*END*/
 	 	</style>
-	 	<script type="text/javascript">
-			/* <![CDATA[ */
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-39556213-3']);
-			_gaq.push(['_trackPageview']);
 
-			(function() {
-				var ga = document.createElement('script');
-				ga.type = 'text/javascript';
-				ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(ga, s);
-			})();
-
-			(function(b){
-				(function(a){
-					"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)
-				})
-				(function(){
-					"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));
-					"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){
-						var b;
-						if(a.target&&a.target.nodeName=="IFRAME")
-							a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);
-						b=0;
-						for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})
-				})
-			})(window);
-			/* ]]> */
-		</script>
-		<script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
-		<!--側拉式js-->
-		<script type='text/javascript'>
-			$(function(){
-				var w = $("#mwt_slider_content").width();
-				$('#mwt_slider_content').css('height', ($(window).height() - 20) + 'px' ); //將區塊自動撐滿畫面高度
-				$("#mwt_fb_tab").mouseover(function(){ //滑鼠滑入時
-				if ($("#mwt_mwt_slider_scroll").css('left') == '-'+w+'px')
-				{
-				  $("#mwt_mwt_slider_scroll").animate({ left:'0px' }, 600 ,'swing');
-				}
-				});
-				$("#mwt_slider_content").mouseleave(function(){　//滑鼠離開後
-				$("#mwt_mwt_slider_scroll").animate( { left:'-'+w+'px' }, 600 ,'swing');
-				}); 
-			});
-			 
-		</script>
-		<!--側拉式js-->
-		<script type="text/javascript" src="http://img.yac.mx/js/adr.js?v=22dd87"></script>
 	</head>
 	
 
 	<body>
-
-		<!--側拉式開始 -->
-		<div id="mwt_mwt_slider_scroll">
-				<div id="mwt_fb_tab">
-		            <span class="fa fa-search fa-2x"></span>
-				</div>
-		
-				<div id="mwt_slider_content">
-					<div class="form-group">
-						<label for="inputEmail3" class="col-sm-3 control-label">課程名稱</label>
-						<div class="col-sm-9">
-					    	<input type="class" class="form-control" id="inputEmail3">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-3 control-label">授課教師</label>
-						<div class="col-sm-9">
-					    	<input type="teacher" class="form-control" id="inputPassword3">
-					  	</div>
-					</div>
-					
-					<div class="row">
-					    <a class="btn btn-lg col-sm-3 col-sm-offset-1" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-2x fa-fw"></span>選課系統</a>
-	        	        <a class="btn btn-lg col-sm-3" href="http://cah.nchu.edu.tw/class/class_plan.php?new=Y&d_id=3" target="_blank"><span class="fa fa-book fa-2x fa-fw"></span>通識中心</a>
-	            	    <a class="btn btn-lg col-sm-3" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-2x fa-fw"></span>單一簽入</a>
-            	    </div>
-            	    
-				</div>
-		</div>
-    	<!--側拉式結束-->
 		
 		<!--選取系級的表單-->
 		<div class="jumbotron">
@@ -424,15 +299,24 @@
 				</div>
 
 			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#exp">
 			  <span class="fa fa-question fa-2x"></span>
 			</button>
+			
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#detail">
+			  <span class="fa fa-question fa-2x"></span>
+			</button>
+
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#search">
+			  <span class="fa fa-search fa-2x"></span>
+			</button>
+
 			<button type="button" class="btn btn-info btn-lg" id="Clear_Button">
 			  <p>Clear</p>
 			</button>
 
 			<!-- Modal -->
-			<div class="modal fade modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal fade modal fade bs-example-modal-lg" id="exp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			  <div class="modal-dialog modal-lg">
 			    <div class="modal-content">
 			      <div class="modal-header">
@@ -503,6 +387,59 @@
 						</div>
 					</div>
 					<!--杜杰的圖片結束-->
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+			<div class="modal fade modal fade bs-example-modal-lg" id="detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">學年及系所選擇</h4>
+			      </div>
+			      <div class="modal-body">
+
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+			<div class="modal fade modal fade bs-example-modal-lg" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">課程查詢</h4>
+			      </div>
+			      <div class="modal-body">
+
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-3 control-label">課程名稱</label>
+						<div class="col-sm-9">
+					    	<input type="class" class="form-control" id="inputEmail3">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-3 control-label">授課教師</label>
+						<div class="col-sm-9">
+					    	<input type="teacher" class="form-control" id="inputPassword3">
+					  	</div>
+					</div>
+					
+					<div class="row">
+					    <a class="btn btn-lg col-sm-3 col-sm-offset-1" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-2x fa-fw"></span>選課系統</a>
+	        	        <a class="btn btn-lg col-sm-3" href="http://cah.nchu.edu.tw/class/class_plan.php?new=Y&d_id=3" target="_blank"><span class="fa fa-book fa-2x fa-fw"></span>通識中心</a>
+	            	    <a class="btn btn-lg col-sm-3" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-2x fa-fw"></span>單一簽入</a>
+            	    </div>
+
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
