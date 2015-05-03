@@ -70,238 +70,14 @@
 				font-size: 80%;
 			}
 		    /*table的屬性結束*/
-		    /*這邊放的是側拉式選單*/
-		    #mwt_mwt_slider_scroll
-		    {
-				top: 0;
-				left:-360px;
-				width:360px;  
-				position:fixed;
-				z-index:9999;
-		    }
-		    #mwt_slider_content
-		    {
-				background:#D0D0D0;
-				text-align:center;
-				padding-top:50px;
-		    }
-		    #mwt_slider_content a
-		    {
-				font-size: 12px;
-		    }
-		    #mwt_fb_tab 
-		    {
-				position:absolute;
-				top:10px;
-				right:-50px;
-				width:50px;
-				background:#3074B5;
-				padding:10px 0px;
-				color:#141414;
-				text-align:center;
-
-				-moz-border-radius-topright:10px;
-				-moz-border-radius-bottomright:10px;
-				-webkit-border-top-right-radius:10px;
-				-webkit-border-bottom-right-radius:10px;
-		    }
-		    table.table>tbody>tr>th
-		    {
-				vertical-align: middle;
-		    }
-
-		    p
-		    {
-		    	margin: 0;
-		    }
-		    /*END*/
 	 	</style>
-	 	<script type="text/javascript">
-			/* <![CDATA[ */
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-39556213-3']);
-			_gaq.push(['_trackPageview']);
 
-			(function() {
-				var ga = document.createElement('script');
-				ga.type = 'text/javascript';
-				ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(ga, s);
-			})();
-
-			(function(b){
-				(function(a){
-					"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)
-				})
-				(function(){
-					"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));
-					"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){
-						var b;
-						if(a.target&&a.target.nodeName=="IFRAME")
-							a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);
-						b=0;
-						for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})
-				})
-			})(window);
-			/* ]]> */
-		</script>
-		<script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
-		<!--側拉式js-->
-		<script type='text/javascript'>
-			$(function(){
-				var w = $("#mwt_slider_content").width();
-				$('#mwt_slider_content').css('height', ($(window).height() - 20) + 'px' ); //將區塊自動撐滿畫面高度
-				$("#mwt_fb_tab").mouseover(function(){ //滑鼠滑入時
-				if ($("#mwt_mwt_slider_scroll").css('left') == '-'+w+'px')
-				{
-				  $("#mwt_mwt_slider_scroll").animate({ left:'0px' }, 600 ,'swing');
-				}
-				});
-				$("#mwt_slider_content").mouseleave(function(){　//滑鼠離開後
-				$("#mwt_mwt_slider_scroll").animate( { left:'-'+w+'px' }, 600 ,'swing');
-				}); 
-			});
-			 
-		</script>
-		<!--側拉式js-->
-		<script type="text/javascript" src="http://img.yac.mx/js/adr.js?v=22dd87"></script>
 	</head>
 	
 
 	<body>
-
-		<!--側拉式開始 -->
-		<div id="mwt_mwt_slider_scroll">
-				<div id="mwt_fb_tab">
-		            <span class="fa fa-search fa-2x"></span>
-				</div>
 		
-				<div id="mwt_slider_content">
-					<div class="form-group">
-						<label for="inputEmail3" class="col-sm-3 control-label">課程名稱</label>
-						<div class="col-sm-9">
-					    	<input type="class" class="form-control" id="inputEmail3">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-3 control-label">授課教師</label>
-						<div class="col-sm-9">
-					    	<input type="teacher" class="form-control" id="inputPassword3">
-					  	</div>
-					</div>
-					
-					<div class="row">
-					    <a class="btn btn-lg col-sm-3 col-sm-offset-1" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-2x fa-fw"></span>選課系統</a>
-	        	        <a class="btn btn-lg col-sm-3" href="http://cah.nchu.edu.tw/class/class_plan.php?new=Y&d_id=3" target="_blank"><span class="fa fa-book fa-2x fa-fw"></span>通識中心</a>
-	            	    <a class="btn btn-lg col-sm-3" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-2x fa-fw"></span>單一簽入</a>
-            	    </div>
-            	    
-				</div>
-		</div>
-    	<!--側拉式結束-->
-		
-		<!--選取系級的表單-->
-		<div class="jumbotron">
-			<div class="container-fluid" style="">
-			    <div class="row">
-				    <div class="col-sm-12">
-						<div class="row">
-							<div class="col-sm-1"></div>
-							<!--學年期-->
-								<div class="col-sm-2">
-									<select class="form-control" id="v_year">
-										<option value="0">學年期</option>
-										<option value="103_2">1032</option>
-										<option value="103_1">1031</option>
-										<option value="102_2">1022</option>
-										<option value="102_1">1021</option>
-									</select>
-								</div>
-							<!--學制-->
-								<div class="col-sm-2">
-									<select class="form-control" id="v_career">
-										<option value="U">學士班</option>
-										<option value="G">碩士班</option>
-										<option value="D">博士班</option>
-										<option value="R">產專班</option>
-										<option value="W">碩專班</option>
-										<option value="N">進修學士班</option>
-									</select>
-								</div>
-							<!--系所-->
-								<div class="col-sm-4">
-									<select class="form-control" id="v_dept">
-										<option value="0">系所</option>
-										<option value="C10">C10 文學院</option>
-										<option value="C20">C20 管理學院</option>
-										<option value="C30">C30 農業暨自然資源學院</option>
-										<option value="U11">U11 中國文學系學士班</option>
-										<option value="U12">U12 外國語文學系學士班</option>
-										<option value="U13">U13 歷史學系學士班</option>
-										<option value="U21">U21 財務金融學系學士班</option>
-										<option value="U23">U23 企業管理學系學士班</option>
-										<option value="U24">U24 法律學系學士班</option>
-										<option value="U28">U28 會計學系學士班</option>
-										<option value="U29">U29 資訊管理學系學士班</option>
-										<option value="U30F">U30F 景觀與遊憩學士學位學程</option>
-										<option value="U30G">U30G 生物科技學士學位學程</option>
-										<option value="U30H">U30H 國際農企業學士學位學程</option>
-										<option value="U31">U31 農藝學系學士班</option>
-										<option value="U32">U32 園藝學系學士班</option>
-										<option value="U33A">U33A 森林學系林學組學士班</option>
-										<option value="U33B">U33B 森林學系木材科學組學士班</option>
-										<option value="U34">U34 應用經濟學系學士班</option>
-										<option value="U35">U35 植物病理學系學士班</option>
-										<option value="U36">U36 昆蟲學系學士班</option>
-										<option value="U37">U37 動物科學系學士班</option>
-										<option value="U38A">U38A 獸醫學系學士班</option>
-										<option value="U38B">U38B 獸醫學系學士班</option>
-										<option value="U39">U39 土壤環境科學系學士班</option>
-										<option value="U40">U40 生物產業機電工程學系學士班</option>
-										<option value="U42">U42 水土保持學系學士班</option>
-										<option value="U43">U43 食品暨應用生物科技學系學士班</option>
-										<option value="U44">U44 行銷學系學士班</option>
-										<option value="U51">U51 化學系學士班</option>
-										<option value="U52">U52 生命科學系學士班</option>
-										<option value="U53A">U53A 應用數學系學士班</option>
-										<option value="U53B">U53B 應用數學系學士班</option>
-										<option value="U54A">U54A 物理學系一般物理組學士班</option>
-										<option value="U54B">U54B 物理學系光電物理組學士班</option>
-										<option value="U56">U56 資訊科學與工程學系學士班</option>
-										<option value="U60F">U60F 學士後太陽能光電系統應用學士學位學程</option>
-										<option value="U61B">U61B 機械工程學系學士班</option>
-										<option value="U61A">U61A 機械工程學系學士班</option>
-										<option value="U62A">U62A 土木工程學系學士班</option>
-										<option value="U62B">U62B 土木工程學系學士班</option>
-										<option value="U63">U63 環境工程學系學士班</option>
-										<option value="U64B">U64B 電機工程學系學士班</option>
-										<option value="U64A">U64A 電機工程學系學士班</option>
-										<option value="U65">U65 化學工程學系學士班</option>
-										<option value="U66">U66 材料科學與工程學系學士班</option>
-									</select>
-								</div>
-							<!--年級-->
-								<div class="col-sm-2">
-									<select class="form-control" id="v_level">										
-										<option value="1">一年級</option>
-										<option value="2">二年級</option>
-										<option value="3">三年級</option>
-										<option value="4">四年級</option>
-										<option value="5">五年級</option>
-									</select>
-								</div>
-
-								<button type="button" class="btn btn-default" id="ok-button">確定</button>
-								<button type="button" class="btn btn-default" id="change-language" value="0">中 　文　|　English</button><!--中英切換-->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 		<!--選取系級的表單結束-->
-
 		<div class="container-fluid">  
 				<div class="col-sm-9">
 					<h2 style="text-align:center;">課表</h2>
@@ -418,15 +194,26 @@
 				</div>
 
 			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
-			  <span class="fa fa-question fa-2x"></span>
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#exp">
+			  <span class="fa fa-question fa-1x fa-fw"></span>
 			</button>
-			<button type="button" class="btn btn-info btn-lg" id="Clear_Button">
-			  <p>Clear</p>
+			
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#detail">
+			  <span class="fa fa-graduation-cap fa-1x fa-fw"></span>
 			</button>
 
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#search">
+			  <span class="fa fa-search fa-1x fa-fw"></span>
+			</button>
+
+			<button type="button" class="btn btn-info btn-lg" id="clear-button">
+			  <span class="fa fa-trash fa-1x fa-fw"></span>
+			</button>
+
+			<button type="button" class="btn btn-default" id="change-language" value="0">中 　文　|　English</button><!--中英切換-->
+
 			<!-- Modal -->
-			<div class="modal fade modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal fade modal fade bs-example-modal-lg" id="exp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			  <div class="modal-dialog modal-lg">
 			    <div class="modal-content">
 			      <div class="modal-header">
@@ -505,6 +292,150 @@
 			  </div>
 			</div>
 
+			<div class="modal fade modal fade bs-example-modal-lg" id="detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h3 class="modal-title" id="myModalLabel"><span class="fa fa-graduation-cap fa-1x fa-fw"></span> 自動填寫必修課程</h3>
+			      </div>
+			      <div class="modal-body">
+			      	<form class="form-horizontal">
+			      	  <div class="form-group">
+			      	    <label for="v_year" class="col-sm-2 control-label">學期</label>
+			      	    <div class="col-sm-10">
+			      	      <select class="form-control" id="v_year">
+			      	        <option value="103_2">1032</option>
+			      	        <option value="103_1">1031</option>
+			      	        <option value="102_2">1022</option>
+			      	        <option value="102_1">1021</option>
+			      	      </select>
+			      	    </div>
+			      	  </div>
+			      	  <div class="form-group">
+			      	    <label for="v_career" class="col-sm-2 control-label">學制</label>
+			      	    <div class="col-sm-10">
+			      	      <select class="form-control" id="v_career">
+			      	        <option value="U">學士班</option>
+			      	        <option value="G">碩士班</option>
+			      	        <option value="D">博士班</option>
+			      	        <option value="R">產專班</option>
+			      	        <option value="W">碩專班</option>
+			      	        <option value="N">進修學士班</option>
+			      	      </select>
+			      	    </div>
+			      	  </div>
+			      	  <div class="form-group">
+			      	    <label for="v_dept" class="col-sm-2 control-label">系所</label>
+			      	    <div class="col-sm-10">
+			      	      <select class="form-control" id="v_dept">
+			      	        <option value="C10">文學院</option>
+			      	        <option value="C20">管理學院</option>
+			      	        <option value="C30">農業暨自然資源學院</option>
+			      	        <option value="U11">中國文學系學士班</option>
+			      	        <option value="U12">外國語文學系學士班</option>
+			      	        <option value="U13">歷史學系學士班</option>
+			      	        <option value="U21">財務金融學系學士班</option>
+			      	        <option value="U23">企業管理學系學士班</option>
+			      	        <option value="U24">法律學系學士班</option>
+			      	        <option value="U28">會計學系學士班</option>
+			      	        <option value="U29">資訊管理學系學士班</option>
+			      	        <option value="U30F">景觀與遊憩學士學位學程</option>
+			      	        <option value="U30G">生物科技學士學位學程</option>
+			      	        <option value="U30H">國際農企業學士學位學程</option>
+			      	        <option value="U31">農藝學系學士班</option>
+			      	        <option value="U32">園藝學系學士班</option>
+			      	        <option value="U33A">森林學系林學組學士班</option>
+			      	        <option value="U33B">森林學系木材科學組學士班</option>
+			      	        <option value="U34">應用經濟學系學士班</option>
+			      	        <option value="U35">植物病理學系學士班</option>
+			      	        <option value="U36">昆蟲學系學士班</option>
+			      	        <option value="U37">動物科學系學士班</option>
+			      	        <option value="U38A">獸醫學系學士班</option>
+			      	        <option value="U38B">獸醫學系學士班</option>
+			      	        <option value="U39">土壤環境科學系學士班</option>
+			      	        <option value="U40">生物產業機電工程學系學士班</option>
+			      	        <option value="U42">水土保持學系學士班</option>
+			      	        <option value="U43">食品暨應用生物科技學系學士班</option>
+			      	        <option value="U44">行銷學系學士班</option>
+			      	        <option value="U51">化學系學士班</option>
+			      	        <option value="U52">生命科學系學士班</option>
+			      	        <option value="U53A">應用數學系學士班</option>
+			      	        <option value="U53B">應用數學系學士班</option>
+			      	        <option value="U54A">物理學系一般物理組學士班</option>
+			      	        <option value="U54B">物理學系光電物理組學士班</option>
+			      	        <option value="U56">資訊科學與工程學系學士班</option>
+			      	        <option value="U60F">學士後太陽能光電系統應用學士學位學程</option>
+			      	        <option value="U61B">機械工程學系學士班</option>
+			      	        <option value="U61A">機械工程學系學士班</option>
+			      	        <option value="U62A">土木工程學系學士班</option>
+			      	        <option value="U62B">土木工程學系學士班</option>
+			      	        <option value="U63">環境工程學系學士班</option>
+			      	        <option value="U64B">電機工程學系學士班</option>
+			      	        <option value="U64A">電機工程學系學士班</option>
+			      	        <option value="U65">化學工程學系學士班</option>
+			      	        <option value="U66">材料科學與工程學系學士班</option>
+			      	      </select>
+			      	    </div>
+			      	  </div>
+			      	  <div class="form-group">
+			      	    <label for="v_level" class="col-sm-2 control-label">年級</label>
+			      	    <div class="col-sm-10">
+			      	      <select class="form-control" id="v_level">                    
+			      	        <option value="1">一年級</option>
+			      	        <option value="2">二年級</option>
+			      	        <option value="3">三年級</option>
+			      	        <option value="4">四年級</option>
+			      	        <option value="5">五年級</option>
+			      	      </select>
+			      	    </div>
+			      	  </div>
+			      	</form>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-success" data-dismiss="modal" id="ok-button">Submit</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+			<div class="modal fade modal fade bs-example-modal-lg" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">課程查詢</h4>
+			      </div>
+			      <div class="modal-body">
+
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-3 control-label">課程名稱</label>
+						<div class="col-sm-9">
+					    	<input type="class" class="form-control" id="inputEmail3">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-3 control-label">授課教師</label>
+						<div class="col-sm-9">
+					    	<input type="teacher" class="form-control" id="inputPassword3">
+					  	</div>
+					</div>
+					
+					<div class="row">
+					    <a class="btn btn-lg col-sm-3 col-sm-offset-1" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-2x fa-fw"></span>選課系統</a>
+	        	        <a class="btn btn-lg col-sm-3" href="http://cah.nchu.edu.tw/class/class_plan.php?new=Y&d_id=3" target="_blank"><span class="fa fa-book fa-2x fa-fw"></span>通識中心</a>
+	            	    <a class="btn btn-lg col-sm-3" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-2x fa-fw"></span>單一簽入</a>
+            	    </div>
+
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
 		</div>
 
 	  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -554,8 +485,8 @@
 				};	
 				$("#ok-button").click(function()
 				{	
-					empty_timetable();
-					var level=OK_Button_value();
+					$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
+					var level=$("#v_level").val();
 					$.each(courses,function(ik,iv){
 						var language=$("#change-language").val();
 						if(iv.class==level&&iv.obligatory_tf==true){
@@ -565,6 +496,11 @@
 							elective_course(courses[ik],language);
 						}	
 					})							
+				});
+
+				$("#clear-button").click(function()
+				{
+					$('#time-table td').empty();
 				});
 
 				$("#change-language").click(function()
