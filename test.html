@@ -302,106 +302,104 @@
 			    <div class="modal-content">
 			      <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title" id="myModalLabel">選擇資料</h4>
+			        <h3 class="modal-title" id="myModalLabel"><span class="fa fa-graduation-cap fa-1x fa-fw"></span> 自動填寫必修課程</h3>
 			      </div>
 			      <div class="modal-body">
-
-			    <div class="row">
-				    <div class="col-sm-12">
-						<div class="row">
-							<div class="col-sm-1"></div>
-							<!--學年期-->
-								<div class="col-sm-2">
-									<select class="form-control" id="v_year">
-										<option value="0">學年期</option>
-										<option value="103_2">1032</option>
-										<option value="103_1">1031</option>
-										<option value="102_2">1022</option>
-										<option value="102_1">1021</option>
-									</select>
-								</div>
-							<!--學制-->
-								<div class="col-sm-2">
-									<select class="form-control" id="v_career">
-										<option value="0">學制</option>
-										<option value="U">學士班</option>
-										<option value="G">碩士班</option>
-										<option value="D">博士班</option>
-										<option value="R">產專班</option>
-										<option value="W">碩專班</option>
-										<option value="N">進修學士班</option>
-									</select>
-								</div>
-							<!--系所-->
-								<div class="col-sm-4">
-									<select class="form-control" id="v_dept">
-										<option value="0">系所</option>
-										<option value="C10">文學院</option>
-										<option value="C20">管理學院</option>
-										<option value="C30">農業暨自然資源學院</option>
-										<option value="U11">中國文學系學士班</option>
-										<option value="U12">外國語文學系學士班</option>
-										<option value="U13">歷史學系學士班</option>
-										<option value="U21">財務金融學系學士班</option>
-										<option value="U23">企業管理學系學士班</option>
-										<option value="U24">法律學系學士班</option>
-										<option value="U28">會計學系學士班</option>
-										<option value="U29">資訊管理學系學士班</option>
-										<option value="U30F">景觀與遊憩學士學位學程</option>
-										<option value="U30G">生物科技學士學位學程</option>
-										<option value="U30H">國際農企業學士學位學程</option>
-										<option value="U31">農藝學系學士班</option>
-										<option value="U32">園藝學系學士班</option>
-										<option value="U33A">森林學系林學組學士班</option>
-										<option value="U33B">森林學系木材科學組學士班</option>
-										<option value="U34">應用經濟學系學士班</option>
-										<option value="U35">植物病理學系學士班</option>
-										<option value="U36">昆蟲學系學士班</option>
-										<option value="U37">動物科學系學士班</option>
-										<option value="U38A">獸醫學系學士班</option>
-										<option value="U38B">獸醫學系學士班</option>
-										<option value="U39">土壤環境科學系學士班</option>
-										<option value="U40">生物產業機電工程學系學士班</option>
-										<option value="U42">水土保持學系學士班</option>
-										<option value="U43">食品暨應用生物科技學系學士班</option>
-										<option value="U44">行銷學系學士班</option>
-										<option value="U51">化學系學士班</option>
-										<option value="U52">生命科學系學士班</option>
-										<option value="U53A">應用數學系學士班</option>
-										<option value="U53B">應用數學系學士班</option>
-										<option value="U54A">物理學系一般物理組學士班</option>
-										<option value="U54B">物理學系光電物理組學士班</option>
-										<option value="U56">資訊科學與工程學系學士班</option>
-										<option value="U60F">學士後太陽能光電系統應用學士學位學程</option>
-										<option value="U61B">機械工程學系學士班</option>
-										<option value="U61A">機械工程學系學士班</option>
-										<option value="U62A">土木工程學系學士班</option>
-										<option value="U62B">土木工程學系學士班</option>
-										<option value="U63">環境工程學系學士班</option>
-										<option value="U64B">電機工程學系學士班</option>
-										<option value="U64A">電機工程學系學士班</option>
-										<option value="U65">化學工程學系學士班</option>
-										<option value="U66">材料科學與工程學系學士班</option>
-									</select>
-								</div>
-							<!--年級-->
-								<div class="col-sm-2">
-									<select class="form-control" id="v_level">										
-										<option value="0">年級</option>
-										<option value="1">一年級</option>
-										<option value="2">二年級</option>
-										<option value="3">三年級</option>
-										<option value="4">四年級</option>
-										<option value="5">五年級</option>
-									</select>
-								</div>
-						</div>
-					</div>
-				</div>
-
+			      	<form class="form-horizontal">
+			      	  <div class="form-group">
+			      	    <label for="v_year" class="col-sm-2 control-label">學期</label>
+			      	    <div class="col-sm-10">
+			      	      <select class="form-control" id="v_year">
+			      	        <option value="103_2">1032</option>
+			      	        <option value="103_1">1031</option>
+			      	        <option value="102_2">1022</option>
+			      	        <option value="102_1">1021</option>
+			      	      </select>
+			      	    </div>
+			      	  </div>
+			      	  <div class="form-group">
+			      	    <label for="v_career" class="col-sm-2 control-label">學制</label>
+			      	    <div class="col-sm-10">
+			      	      <select class="form-control" id="v_career">
+			      	        <option value="U">學士班</option>
+			      	        <option value="G">碩士班</option>
+			      	        <option value="D">博士班</option>
+			      	        <option value="R">產專班</option>
+			      	        <option value="W">碩專班</option>
+			      	        <option value="N">進修學士班</option>
+			      	      </select>
+			      	    </div>
+			      	  </div>
+			      	  <div class="form-group">
+			      	    <label for="v_dept" class="col-sm-2 control-label">系所</label>
+			      	    <div class="col-sm-10">
+			      	      <select class="form-control" id="v_dept">
+			      	        <option value="C10">文學院</option>
+			      	        <option value="C20">管理學院</option>
+			      	        <option value="C30">農業暨自然資源學院</option>
+			      	        <option value="U11">中國文學系學士班</option>
+			      	        <option value="U12">外國語文學系學士班</option>
+			      	        <option value="U13">歷史學系學士班</option>
+			      	        <option value="U21">財務金融學系學士班</option>
+			      	        <option value="U23">企業管理學系學士班</option>
+			      	        <option value="U24">法律學系學士班</option>
+			      	        <option value="U28">會計學系學士班</option>
+			      	        <option value="U29">資訊管理學系學士班</option>
+			      	        <option value="U30F">景觀與遊憩學士學位學程</option>
+			      	        <option value="U30G">生物科技學士學位學程</option>
+			      	        <option value="U30H">國際農企業學士學位學程</option>
+			      	        <option value="U31">農藝學系學士班</option>
+			      	        <option value="U32">園藝學系學士班</option>
+			      	        <option value="U33A">森林學系林學組學士班</option>
+			      	        <option value="U33B">森林學系木材科學組學士班</option>
+			      	        <option value="U34">應用經濟學系學士班</option>
+			      	        <option value="U35">植物病理學系學士班</option>
+			      	        <option value="U36">昆蟲學系學士班</option>
+			      	        <option value="U37">動物科學系學士班</option>
+			      	        <option value="U38A">獸醫學系學士班</option>
+			      	        <option value="U38B">獸醫學系學士班</option>
+			      	        <option value="U39">土壤環境科學系學士班</option>
+			      	        <option value="U40">生物產業機電工程學系學士班</option>
+			      	        <option value="U42">水土保持學系學士班</option>
+			      	        <option value="U43">食品暨應用生物科技學系學士班</option>
+			      	        <option value="U44">行銷學系學士班</option>
+			      	        <option value="U51">化學系學士班</option>
+			      	        <option value="U52">生命科學系學士班</option>
+			      	        <option value="U53A">應用數學系學士班</option>
+			      	        <option value="U53B">應用數學系學士班</option>
+			      	        <option value="U54A">物理學系一般物理組學士班</option>
+			      	        <option value="U54B">物理學系光電物理組學士班</option>
+			      	        <option value="U56">資訊科學與工程學系學士班</option>
+			      	        <option value="U60F">學士後太陽能光電系統應用學士學位學程</option>
+			      	        <option value="U61B">機械工程學系學士班</option>
+			      	        <option value="U61A">機械工程學系學士班</option>
+			      	        <option value="U62A">土木工程學系學士班</option>
+			      	        <option value="U62B">土木工程學系學士班</option>
+			      	        <option value="U63">環境工程學系學士班</option>
+			      	        <option value="U64B">電機工程學系學士班</option>
+			      	        <option value="U64A">電機工程學系學士班</option>
+			      	        <option value="U65">化學工程學系學士班</option>
+			      	        <option value="U66">材料科學與工程學系學士班</option>
+			      	      </select>
+			      	    </div>
+			      	  </div>
+			      	  <div class="form-group">
+			      	    <label for="v_level" class="col-sm-2 control-label">年級</label>
+			      	    <div class="col-sm-10">
+			      	      <select class="form-control" id="v_level">                    
+			      	        <option value="1">一年級</option>
+			      	        <option value="2">二年級</option>
+			      	        <option value="3">三年級</option>
+			      	        <option value="4">四年級</option>
+			      	        <option value="5">五年級</option>
+			      	      </select>
+			      	    </div>
+			      	  </div>
+			      	</form>
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-success" data-dismiss="modal">Submit</button>
 			      </div>
 			    </div>
 			  </div>
