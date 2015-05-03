@@ -515,7 +515,17 @@
 						case "N":
 
 					}
-				};							
+				};	
+				var serializearray=function(){//比較好的方法來取option 的value!!!!
+					$a = $($0)//取到年級選單
+					[<form class=​"form-horizontal">​…​</form>​]
+					$a.serializeArray()
+					[Objectname: "v_year"value: "103_2"__proto__: Object, Objectname: "v_career"value: "U"__proto__: Object, Objectname: "v_dept"value: "C10"__proto__: Object, Objectname: "v_level"value: "1"__proto__: Object]
+					$a.serializeArray()[0].name
+					"v_year"
+					$a.serializeArray()[1].value
+					"U"
+				}
 				var OK_Button_value=function(){//能夠把選取到的年級給回傳
 					var level=$("#v_level").val();
 					return level;
