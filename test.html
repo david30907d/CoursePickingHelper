@@ -49,15 +49,12 @@
 			#time-table tbody th{
 				white-space: nowrap;
 				font-size: 80%;
+				height:55px;
 			}
 
 			#time-table th{
 				text-align: center;
 				
-			}
-			#time-table tbody tr td{
-				min-height: 55px;
-				float: center;
 			}
 			#time-table div.title{
 				text-align: center;
@@ -564,15 +561,6 @@
 							add_course($('#time-table'),courses[ik],0);
 						}
 					})
-					
-					/*
-					add_course($('#time-table'),courses[0],0);
-					add_course($('#time-table'),courses[1],0);
-					add_course($('#time-table'),courses[2],0);
-					add_course($('#time-table'),courses[3],0);
-					add_course($('#time-table'),courses[4],0);
-					add_course($('#time-table'),courses[5],0);
-					*/									
 				});
 				$("#OK_Button_En").click(function()
 				{	
@@ -580,8 +568,8 @@
 						if(iv.class==3){
 							add_course($('#time-table'),courses[ik],1);
 						}
-					})								
-				});
+					})
+				});											
 			});
 	    
 
