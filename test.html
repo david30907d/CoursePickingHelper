@@ -163,6 +163,36 @@
 					</div>
 				</div>
 
+				<!--會出現系選修和體育、通識-->
+				<div class="col-sm-3" style="background-color:#D9EDF7">
+					<div class="row" align="center">
+						<div class="col-sm-4">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">本系選修
+							  	</label>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">通識課程
+							  	</label>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">體　　育
+							  	</label>
+							</div>
+						</div>						
+						<select multiple class="form-control" id="class-post">
+							<!--<option>class1</option>-->					
+						</select>
+					</div>
+				</div>
+
 			<!-- Button trigger modal -->
 			<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exp">
 			  <span class="fa fa-question fa-2x fa-fw"></span>
@@ -485,16 +515,26 @@
 						case "N":
 
 					}
-				};			
-
+				};							
+				var OK_Button_value=function(){//能夠把選取到的年級給回傳
+					var level=$("#v_level").val();
+					return level;
+				};
+				var empty_timetable=function(){
+					$('#time-table td').empty();//把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
+				};	
 				$("#ok-button").click(function()
 				{	
 					$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
 					var level=$("#v_level").val();
 					$.each(courses,function(ik,iv){
+						var language=$("#change-language").val();
 						if(iv.class==level&&iv.obligatory_tf==true){
-							add_course($('#time-table'),courses[ik],$("#change-language").val());
-						}			
+							add_course($('#time-table'),courses[ik],language);
+						}	
+						else{
+							elective_course(courses[ik],language);
+						}	
 					})							
 				});
 
@@ -511,6 +551,26 @@
 						$("#change-language").val(0);
 				});
 			});
+			 var elective_course=function(course,language){
+			 	if( !$.isArray(course.time_parsed) )
+					throw 'time_parsed error';		//判斷time-parsed是不是陣列
+				if( $.type(course.title_parsed) !== "object")			//判斷課程名稱是不是物件
+					throw 'title_parsed error';
+				if(language==0){
+					var tmpCh = course.title_parsed["zh_TW"].split(' ');		//(這是中文課名)切割課程名稱，遇到空格就切開
+					course.title_short = tmpCh[0];		//title_short是會自動宣告的區域變數，存沒有英文的課名
+			  	//console.log( "這是中文的"+course.title_shortCh);
+				}
+				else{
+					var tmpEn =course.title_parsed["en_US"];
+					course.title_short = tmpEn;
+			  	//console.log(course.title_shortEn);
+				}
+				var $select =$("#class-post");
+				var $option = $($.parseHTML('<option></option>'));
+				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中，.title就是class="title"				     
+				$select.html($option.html());		//顯示課程，把cell.html()塞到<td>tag裡面
+			 };
 			 var add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
 				if( !$.isArray(course.time_parsed) )
 					throw 'time_parsed error';		//判斷time-parsed是不是陣列
@@ -525,26 +585,22 @@
 					var tmpEn =course.title_parsed["en_US"];
 					course.title_short = tmpEn;
 			  	//console.log(course.title_shortEn);
-				}
-				
+				}				
 				$.each(course.time_parsed, function(ik, iv){		
 				//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
 					$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
 						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
-						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一
-						// console.log($td[0]);
+						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一					
 						var $cell = $($.parseHTML('<div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div></div></div>'));
 						//把上面的html格式匯入找到的td type中(parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
 						// console.log($cell[0]);
 						$cell.find('.title').text(course.title_short).end()		//將對應的課程內容寫入cell的html語法中，.title就是class="title"
 						     .find('.professor').text(course.professor).end()//text()會把東西填入找到的class那裡，end()會回到var $cell那一行
 						     .find('.location').text(course.location);
-
-						// console.log($cell[0]);
-						$td.html($cell.html());		//顯示課程
+						$td.html($cell.html());		//顯示課程，把cell.html()塞到<td>tag裡面
 					})
 				})
-			}
+			};
 		})(jQuery);
 	    </script>
 	</body>
