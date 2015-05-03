@@ -213,10 +213,10 @@
 								<div class="col-sm-2">
 									<select class="form-control" id="v_year">
 										<option value="0">學年期</option>
-										<option value="1032">1032</option>
-										<option value="1031">1031</option>
-										<option value="1022">1022</option>
-										<option value="1021">1021</option>
+										<option value="103_2">1032</option>
+										<option value="103_1">1031</option>
+										<option value="102_2">1022</option>
+										<option value="102_1">1021</option>
 									</select>
 								</div>
 							<!--學制-->
@@ -294,8 +294,8 @@
 									</select>
 								</div>
 
-								<button type="button" class="btn btn-default" id="OK_Button_Ch" value="0">中文課名</button><!--回傳值0為顯示中文-->
-								<button type="button" class="btn btn-default" id="OK_Button_En" value="1">English Title</button><!--回傳值1為顯示英文-->
+								<button type="button" class="btn btn-default" id="ok-button">確定</button>
+								<button type="button" class="btn btn-default" id="change-language" value="0">中 　文　|　English</button><!--中英切換-->
 						</div>
 					</div>
 				</div>
@@ -305,6 +305,7 @@
 
 		<div class="container-fluid">  
 				<div class="col-sm-9">
+					<h2 style="text-align:center;">課表</h2>
 					<div class="table-responsive" id="time-table">
 						<table class="table table-striped table-hover table-condensed table-bordered">
 							<thead>
@@ -553,23 +554,24 @@
 					}
 				}
 
-				$("#OK_Button_Ch").click(function()
-				{	
-					
-					$.each(courses,function(ik,iv){
-						if(iv.class==3){
-							add_course($('#time-table'),courses[ik],0);
+				$("#ok-button").click(function()
+				{
+					$.each(courses,function(ik,iv)
+					{
+						if(iv.class==3)
+						{
+							add_course($('#time-table'),courses[ik],$("#change-language").val());
 						}
 					})
 				});
-				$("#OK_Button_En").click(function()
-				{	
-					$.each(courses,function(ik,iv){
-						if(iv.class==3){
-							add_course($('#time-table'),courses[ik],1);
-						}
-					})
-				});											
+
+				$("#change-language").click(function()
+				{
+					if($("#change-language").val()==0)
+						$("#change-language").val(1);
+					else
+						$("#change-language").val(0);
+				});
 			});
 	    
 
