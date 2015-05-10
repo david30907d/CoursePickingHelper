@@ -182,7 +182,7 @@
 			</button>
 
 			<button type="button" class="btn btn-danger btn-lg" id="change-language" value="zh_TW">
-			  <span class="fa fa-trash fa-2x fa-fw"></span>
+			  <span class="fa fa-language fa-2x fa-fw"></span>
 			</button><!--中英切換-->
 
 			<!--會出現系選修和體育、通識-->
@@ -479,12 +479,26 @@
 						case "N":
 
 					}
-				};
 
-				$("#post").dblclick(function()
-				{
-
-				})
+				};	
+				/*//這段是軍民的原始碼
+				var serializearray=function(){//比較好的方法來取option 的value!!!!
+					$a = $($0)//取到年級選單
+					//[<form class=​"form-horizontal">​…​</form>​]
+					$a.serializeArray()
+					[Objectname: "v_year"value: "103_2"__proto__: Object, Objectname: "v_career"value: "U"__proto__: Object, Objectname: "v_dept"value: "C10"__proto__: Object, Objectname: "v_level"value: "1"__proto__: Object]
+					$a.serializeArray()[0].name
+					"v_year"
+					$a.serializeArray()[1].value
+					"U"
+				}*/				
+				$("#elective-post").delegate("option","click",function(){
+					var language=$("#change-language").val();
+					//var index=$(this).val();
+					//course=courses[index];				
+					var course=$(this).data("class");
+					add_course($('#time-table'),course, language);						
+				});
 
 				$("#ok-button").click(function()
 				{	
@@ -520,7 +534,9 @@
 				});
 			});
 
-			var elective_course=function(course,language){			 	
+			var week = ["一", "二", "三", "四", "五"];
+			var elective_course=function(course,language,index){	//index是表示這是課程陣列的第幾	個
+
 			 	if( $.type(course.title_parsed) !== "object")			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
 				if(language=="zh_TW"){
@@ -532,15 +548,16 @@
 			  	//console.log(course.title_shortEn);
 				}
 				var $elective = $("#elective-post");
-				var time = "";
+				var time = [];//time設定為空陣列
 				$.each(course.time_parsed, function(ik, iv){		
-					time = "星期:"+time + iv.day+"  " +iv.time;
+					time.push("星期" + week[iv.day-1] +iv.time);//push是把裡面的元素變成陣列的一格
 				})
+				time = time.join('; ');//把多個陣列用;分隔並合併指派給time
 				//var time = course.time_parsed.day+course.time_parsed.time;
-				var $option = $($.parseHTML('<option title="" id="post" style="color:#3074B5;"></span></option>'));//把hint與option做成dom，在hint裡面放時間
+				var $option = $($.parseHTML('<option title="" class="elective-post" value="" style="color:#3074B5;"></span></option>'));//把hint與option做成dom，在hint裡面放時間
 				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中，.title就是class="title"		
 				$option.attr("title",time);
-				$option.data()
+				$option.data("class",course);				
 				$elective.append($option);		//顯示課程，把cell.html()塞到<td>tag裡面
 			 };
 			 var add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
