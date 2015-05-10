@@ -166,22 +166,60 @@
 
 			<!-- Button trigger modal -->
 			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#exp">
-			  <span class="fa fa-question fa-1x fa-fw"></span>
+			  <span class="fa fa-question fa-2x fa-fw"></span>
 			</button>
 			
-			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#detail">
-			  <span class="fa fa-graduation-cap fa-1x fa-fw"></span>
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#detail">
+			  <span class="fa fa-graduation-cap fa-2x fa-fw"></span>
 			</button>
 
-			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#search">
-			  <span class="fa fa-search fa-1x fa-fw"></span>
+			<button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#search">
+			  <span class="fa fa-search fa-2x fa-fw"></span>
 			</button>
 
-			<button type="button" class="btn btn-info btn-lg" id="clear-button">
-			  <span class="fa fa-trash fa-1x fa-fw"></span>
+			<button type="button" class="btn btn-danger btn-lg" id="clear-button">
+			  <span class="fa fa-trash fa-2x fa-fw"></span>
 			</button>
 
-			<button type="button" class="btn btn-default" id="change-language" value="0">中 　文　|　English</button><!--中英切換-->
+			<button type="button" class="btn btn-danger btn-lg" id="change-language" value="0">
+			  <span class="fa fa-trash fa-2x fa-fw"></span>
+			</button><!--中英切換-->
+
+			<!--會出現系選修和體育、通識-->
+			<div class="col-sm-3" style="background-color:#D9EDF7">
+				<div class="row" align="center">
+					<div class="col-sm-4">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">本系選修
+						  	</label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">通識課程
+						  	</label>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="">體　　育
+						  	</label>
+						</div>
+					</div>
+					
+					<select multiple class="form-control">
+						<option>class1</option>
+						<option>class1</option>
+						<option>class1</option>
+						<option>class1</option>
+						<option>class1</option>
+					</select>
+				</div>
+			</div>
+-
 
 			<!-- Modal -->
 			<div class="modal fade modal fade bs-example-modal-lg" id="exp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -429,7 +467,7 @@
 				//var select_degree = function(degree)
 				var select_degree = function(degree)
 				{
-					console.log(degree);
+					cozsnsole.log(degree);
 					switch(degree)
 					{
 						case "U":
