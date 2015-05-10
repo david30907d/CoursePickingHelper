@@ -194,26 +194,23 @@
 				</div>
 
 			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exp">
-			  <span class="fa fa-question fa-2x fa-fw"></span>
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#exp">
+			  <span class="fa fa-question fa-1x fa-fw"></span>
 			</button>
 			
-			<button type="button" class="btn btn-info" data-toggle="modal" data-target="#detail">
-			  <span class="fa fa-graduation-cap fa-2x fa-fw"></span>
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#detail">
+			  <span class="fa fa-graduation-cap fa-1x fa-fw"></span>
 			</button>
 
-			<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#search">
-			  <span class="fa fa-search fa-2x fa-fw"></span>
+			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#search">
+			  <span class="fa fa-search fa-1x fa-fw"></span>
 			</button>
 
-			<button type="button" class="btn btn-danger" id="clear-button">
-			  <span class="fa fa-trash fa-2x fa-fw"></span>
+			<button type="button" class="btn btn-info btn-lg" id="clear-button">
+			  <span class="fa fa-trash fa-1x fa-fw"></span>
 			</button>
 
-			<button type="button" class="btn btn-danger" id="change-language" value="0">
-			  <span class="fa fa-trash fa-2x fa-fw"></span>
-			</button><!--中英切換-->
-			<!--<button type="button" class="btn btn-default" id="change-language" value="0">中 　文　|　English</button><!--中英切換-->
+			<button type="button" class="btn btn-default" id="change-language" value="0">中 　文　|　English</button><!--中英切換-->
 
 			<!-- Modal -->
 			<div class="modal fade modal fade bs-example-modal-lg" id="exp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -439,43 +436,6 @@
 			  </div>
 			</div>
 
-				<!--會出現系選修和體育、通識-->
-				<div class="col-sm-3" style="background-color:#D9EDF7">
-					<div class="row" align="center">
-						<div class="col-sm-4">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">本系選修
-							  	</label>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">通識課程
-							  	</label>
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="">體　　育
-							  	</label>
-							</div>
-						</div>
-						
-						<select multiple class="form-control">
-							<option>class1</option>
-							<option>class1</option>
-							<option>class1</option>
-							<option>class1</option>
-							<option>class1</option>
-						</select>
-					</div>
-				</div>
-
-
-
 		</div>
 
 	  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -601,7 +561,7 @@
 				//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
 					$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
 						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
-						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一					
+						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一	 find()是找class!!				
 						var $cell = $($.parseHTML('<div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div></div></div>'));
 						//把上面的html格式匯入找到的td type中(parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
 						// console.log($cell[0]);
