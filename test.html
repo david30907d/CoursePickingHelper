@@ -80,7 +80,7 @@
 		<!--選取系級的表單結束-->
 		<div class="container-fluid">  
 				<div class="col-sm-9">
-					<h2 style="text-align:center;">課表</h2>
+					<h2 style="text-align:center;" id="curriculum-title">課表</h2>
 					<div class="table-responsive" id="time-table">
 						<table class="table table-striped table-hover table-condensed table-bordered">
 							<thead>
@@ -182,7 +182,7 @@
 			</button>
 
 			<button type="button" class="btn btn-danger btn-lg" id="change-language" value="0">
-			  <span class="fa fa-trash fa-2x fa-fw"></span>
+			  <span class="fa fa-language fa-2x fa-fw"></span>
 			</button><!--中英切換-->
 
 			<!--會出現系選修和體育、通識-->
@@ -192,21 +192,21 @@
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" value="">本系選修
-						  	</label>
+						  </label>
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" value="">通識課程
-						  	</label>
+						  </label>
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" value="">體　　育
-						  	</label>
+						  </label>
 						</div>
 					</div>
 					
@@ -227,7 +227,7 @@
 			    <div class="modal-content">
 			      <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title" id="myModalLabel">使用說明</h4>
+			        <h3 class="modal-title" id="myModalLabel"><span class="fa fa-question fa-1x fa-fw"></span> 使用說明</h3>
 			      </div>
 			      <div class="modal-body">
 					<!--杜杰的圖片輪播-->
@@ -235,11 +235,11 @@
 						<div class="row">
 							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 						    <!-- Indicators -->
-						        <ol class="carousel-indicators">
-									<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-									<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-									<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-						        </ol>
+						      <ol class="carousel-indicators">
+										<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+										<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+										<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						      </ol>
 
 						    	<!-- Wrapper for slides -->
 						    	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -250,25 +250,25 @@
 										<li data-target="#carousel-example-generic" data-slide-to="2"></li>
 									</ol>
 
-						          <!-- Wrapper for slides -->
-						          	<div class="carousel-inner" role="listbox">
-						                <div class="item active">
+						      <!-- Wrapper for slides -->
+						      <div class="carousel-inner" role="listbox">
+						        <div class="item active">
 											<div align="center">
 												<img src="images/test5.jpg" style="width:100%; height:100%">
 											</div>
 											<div class="carousel-caption">
-						                    	<h3>Test1</h3>
-						                	</div>
-						            	</div>
+						          	<h3>Test1</h3>
+						        	</div>
+						      	</div>
 
-						                <div class="item">
+						        <div class="item">
 											<div align="center">
 												<img src="images/test4.jpg" style="width:100%; height:100%">
 											</div>
 											<div class="carousel-caption">
 												<h3>Test2</h3>
 											</div>
-						                </div>
+						        </div>
 
 										<div class="item">
 											<div align="center">
@@ -485,29 +485,19 @@
 
 					}
 				};	
-				/*//這段是軍民的原始碼
-				var serializearray=function(){//比較好的方法來取option 的value!!!!
-					$a = $($0)//取到年級選單
-					//[<form class=​"form-horizontal">​…​</form>​]
-					$a.serializeArray()
-					[Objectname: "v_year"value: "103_2"__proto__: Object, Objectname: "v_career"value: "U"__proto__: Object, Objectname: "v_dept"value: "C10"__proto__: Object, Objectname: "v_level"value: "1"__proto__: Object]
-					$a.serializeArray()[0].name
-					"v_year"
-					$a.serializeArray()[1].value
-					"U"
-				}*/
+
 				var OK_Button_value=function(){//能夠把選取到的年級給回傳
 					var level=$("#v_level").val();
 					return level;
 				};
-				var empty_timetable=function(){
-					$('#time-table td').empty();//把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
-				};	
+
+
 				$("#ok-button").click(function()
 				{	
 					$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
 					var level=$("#v_level").val();
-					$.each(courses,function(ik,iv){
+					$.each(courses,function(ik,iv)
+					{
 						var language=$("#change-language").val();
 						if(iv.class==level&&iv.obligatory_tf==true){
 							add_course($('#time-table'),courses[ik],language);
@@ -515,7 +505,11 @@
 						else{
 							elective_course(courses[ik],language);
 						}	
-					})							
+					})	
+
+					//var year=$("v_year").val(),leavl=$("v_level").val();
+					//$curriculum-title.text("OwO");
+
 				});
 
 				$("#clear-button").click(function()
@@ -531,6 +525,7 @@
 						$("#change-language").val(0);
 				});
 			});
+			 
 			 var elective_course=function(course,language){
 			 	if( !$.isArray(course.time_parsed) )
 					throw 'time_parsed error';		//判斷time-parsed是不是陣列
@@ -554,7 +549,7 @@
 			 var add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
 				if( !$.isArray(course.time_parsed) )
 					throw 'time_parsed error';		//判斷time-parsed是不是陣列
-				if( $.type(course.title_parsed) !== "object")			//判斷課程名稱是不是物件
+				( $.type(course.title_parsed) !== "object")			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
 				if(language==0){
 					var tmpCh = course.title_parsed["zh_TW"].split(' ');		//(這是中文課名)切割課程名稱，遇到空格就切開
@@ -575,7 +570,7 @@
 						//把上面的html格式匯入找到的td type中(parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
 						// console.log($cell[0]);
 						$cell.find('.title').text(course.title_short).end()		//將對應的課程內容寫入cell的html語法中，.title就是class="title"
-						     .find('.professor').text(course.professor).end()//text()會把東西填入找到的class那裡，end()會回到var $cell那一行
+						     .find('.professor').text(course.professor).end()	//text()會把東西填入找到的class那裡，end()會回到var $cell那一行
 						     .find('.location').text(course.location);
 						$td.html($cell.html());		//顯示課程，把cell.html()塞到<td>tag裡面
 					})
