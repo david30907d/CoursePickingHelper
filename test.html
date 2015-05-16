@@ -8,13 +8,10 @@
 	    <script type="text/javascript"></script>
 			<link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootst	rap/3.3.1/css/bootstrap.min.css">
-	    <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
-	    <link rel="stylesheet" href="hint.css">
+	    <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">	    
 	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.js"></script>
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
-
 		<style> 
 		    /*這裡開始是我寫的，選取表單和選單上的id，並把顏色反白*/
 		    #icon-text, #icon-text1, #icon-text2, #icon-text3, #icon-text4, #icon-text5 
@@ -453,8 +450,18 @@
 		  $(function(){
 				//當文件準備好的時候，讀入json檔
 				$.getJSON('json/course.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
-					courses = json.course;
-					//把json.course的物件存入courses變數裡
+					window.courses = {};//宣告一個空的物件
+					window.course_of_majors = {};//宣告一個空的物件
+					$.each(json.course, function(ik,iv){
+						if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
+							window.course_of_majors[iv.for_dept] = {};
+						if(typeof(window.course_of_majors[iv.for_dept][iv.class]) == 'undefined'){
+							window.course_of_majors[iv.for_dept][iv.class] = [];//如果這一行(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，[]裡面的是放陣列
+						}
+						window.course_of_majors[iv.for_dept][iv.class].push(iv.code);//把東西推進這個陣列裡，概念跟stack一樣
+						window.courses[iv.code] = iv;//這邊可以直接把選課號當作索引值key，裡面的值為object				
+					});
+					//console.log(window.courses, window.course_of_majors);
 				});
 				$("#v_career").change(function()
 				{
@@ -492,11 +499,11 @@
 					$a.serializeArray()[1].value
 					"U"
 				}*/				
-				$("#elective-post").delegate("option","click",function(){
+				$("#elective-post").delegate("option","click",function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
 					var language=$("#change-language").val();
 					//var index=$(this).val();
 					//course=courses[index];				
-					var course=$(this).data("class");
+					var course=$(this).data("class");//this會代表我抓到的那個東西，也就是option
 					add_course($('#time-table'),course, language);						
 				});
 				$("#ok-button").click(function()
@@ -521,7 +528,14 @@
 				{
 					$('#time-table td').empty();
 				});
+				$("#time-table").delegate("botton","click",function(){//這是用來把單獨一堂課刪掉的按鈕
+					$target=$(this).closest("td");
+					var boolean=confirm("是否刪除此課程?");
+					if(boolean){
 
+						$target.empty();
+					}					
+				})
 				$("#change-language").click(function()
 				{
 					if($("#change-language").val()=="zh_TW")
@@ -544,15 +558,16 @@
 				}
 				var $elective = $("#elective-post");
 				var time = [];//time設定為空陣列
+				var $td;
 				$.each(course.time_parsed, function(ik, iv){		
-					time.push("星期" + week[iv.day-1] +iv.time);//push是把裡面的元素變成陣列的一格
+					time.push("星期" + week[iv.day-1] +iv.time);//push是把裡面的元素變成陣列的一格		
 				})
 				time = time.join('; ');//把多個陣列用;分隔並合併指派給time
 				//var time = course.time_parsed.day+course.time_parsed.time;
-				var $option = $($.parseHTML('<option title="" class="elective-post" value="" style="color:#3074B5;"></span></option>'));//把hint與option做成dom，在hint裡面放時間
-				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中，.title就是class="title"		
-				$option.attr("title",time);
-				$option.data("class",course);				
+				var $option = $($.parseHTML('<option title="" value="" style="color:#3074B5;"></span></option>'));//把option做成dom，再把dom做成jQuery物件
+				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中	
+				$option.attr("title",time);//在title裡面放課堂時間
+				$option.data("class",course);	//把現在找到的這門選修課處存到這個option，並用class表示
 				$elective.append($option);		//顯示課程，把cell.html()塞到<td>tag裡面
 			 };
 			 var add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
@@ -570,17 +585,18 @@
 					course.title_short = tmpEn;
 			  	//console.log(course.title_shortEn);
 				}				
-				$.each(course.time_parsed, function(ik, iv){		
+				$.each(course.time_parsed, function(ik, iv){
 				//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
 					$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
 						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
 						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一	 find()是找class!!				
-						var $cell = $($.parseHTML('<div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div></div></div>'));
+						var $cell = $($.parseHTML('<div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div></div><div class="row"><botton type="button" class="btn btn-default">delete</botton></div></div>'));
 						//把上面的html格式匯入找到的td type中(parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
 						// console.log($cell[0]);
 						$cell.find('.title').text(course.title_short).end()		//將對應的課程內容寫入cell的html語法中，.title就是class="title"
 						     .find('.professor').text(course.professor).end()//text()會把東西填入找到的class那裡，end()會回到var $cell那一行
-						     .find('.location').text(course.location);
+						     .find('.location').text(course.location);				
+
 						$td.html($cell.html());		//顯示課程，把cell.html()塞到<td>tag裡面
 					})
 				})
