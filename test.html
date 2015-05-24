@@ -426,15 +426,21 @@
 			      <div class="modal-body">
 
 					<div class="form-group">
-						<label for="inputEmail3" class="col-sm-3 control-label">課程名稱</label>
+						<label for="class_title" class="col-sm-3 control-label">課程名稱</label>
 						<div class="col-sm-9">
-					    	<input type="class" class="form-control" id="inputEmail3">
+					    	<input type="class" class="form-control" id="class_title">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-3 control-label">授課教師</label>
+						<label for="class_code" class="col-sm-3 control-label">課程代碼</label>
 						<div class="col-sm-9">
-					    	<input type="teacher" class="form-control" id="inputPassword3">
+					    	<input type="class" class="form-control" id="class_code">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="class_teacher" class="col-sm-3 control-label">授課教師</label>
+						<div class="col-sm-9">
+					    	<input type="teacher" class="form-control" id="class_teacher">
 					  	</div>
 					</div>
 					
@@ -448,6 +454,9 @@
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			      </div>
+			      <div>
+			      	<button type="button" class="btn btn-success" data-dismiss="modal" id="specific_search">Submit</button>
+			      </div>			      
 			    </div>
 			  </div>
 			</div>
@@ -513,14 +522,22 @@
 					"v_year"
 					$a.serializeArray()[1].value
 					"U"
-				}*/				
-				$("#elective-post").delegate("option","click",function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
-					var boolean=confirm("是否要加入課程？");
+				}*/	
+				$("#specific_search").click(function(){	//
+					var code=$("#class_code").val();
 					var language=$("#change-language").val();
-					//var index=$(this).val();
-					//course=courses[index];				
-					var course=$(this).data("class");//this會代表我抓到的那個東西，也就是option
-					add_course($('#time-table'),course, language);						
+					elective_course(courses[code],language);
+				})
+
+				$("#elective-post").delegate("option","click",function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
+					var boolean=confirm("確認添加此課程?"+"\n"+"Are you sure to enroll this class?");
+					if(boolean){
+						var language=$("#change-language").val();
+						//var index=$(this).val();
+						//course=courses[index];				
+						var course=$(this).data("class");//this會代表我抓到的那個東西，也就是option
+						add_course($('#time-table'),course, language);	
+					}										
 				});
 
 				$("#ok-button").click(function()
@@ -546,13 +563,12 @@
 					$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
 					$('#elective-post').empty();//清掉選修課程
 				});
-				$("#time-table").delegate("span","click",function(){//這是用來把單獨一堂課刪掉的按鈕
+				$("#time-table").delegate("span","click",function(){//這是用來把一整個課程都刪掉的按鈕
 					$target=$(this).closest("td");
 					var code=$(this).next("input").val();
-					var boolean=confirm("是否刪除此課程?"+"\n"+"Are you sure you really want to drop this course?");
-					console.log(courses[code]);
+					var boolean=confirm("是否刪除此課程?"+"\n"+"Are you sure you really want to drop this course?");					
 					if(boolean){
-						delete_course($('#time-table'),courses[code]);						
+						delete_course($('#time-table'),courses[code]);	//就跟add_course一樣，只是把填東西改成刪掉						
 					}					
 				})				
 				$("#change-language").click(function()
@@ -565,8 +581,7 @@
 			});
 
 			var week = ["一", "二", "三", "四", "五"];
-			var elective_course=function(course,language,index){	//index是表示這是課程陣列的第幾	個
-
+			var elective_course=function(course,language){	
 			 	if( $.type(course.title_parsed) !== "object")			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
 				if(language=="zh_TW"){
@@ -605,32 +620,69 @@
 					var tmpEn =course.title_parsed["en_US"];
 					course.title_short = tmpEn;
 			  	//console.log(course.title_shortEn);
-				}				
+				}		
+				var stop_day,stop_time;	//這裡是刪除課程應該要停止的星期與節數
+				var check_conflict=false;	//他用來判斷是否衝堂，如果有則下面的if就會讓最外圈的each停止
 				$.each(course.time_parsed, function(ik, iv){
-				//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
-					$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
+					//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)								
+					if(check_conflict){
+						//console.log(check_conflict);
+						console.log($target+course+stop_day+stop_time);
+						delete_conflict($target, course,stop_day,stop_time);
+						return false;
+					}			
+					//console.log(check_conflict);
+					//console.log($target+course+stop_day+stop_time);		
+					$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)					
 						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
-						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一	 find()是找class!!				
-						var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));
-						/*var $cell = $($.parseHTML('<div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div></div><div class="row"><botton type="button" class="btn btn-default col-xs-6">delete</botton></div></div>'));*/
-						//把上面的html格式匯入找到的td type中(parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
-						// console.log($cell[0]);
-						$cell.find('.title').text(course.title_short).end()
-						$cell.find('input').val(course.code).end()		//將對應的課程內容寫入cell的html語法中，.title就是class="title"
-						     .find('.professor').text(course.professor).end()//text()會把東西填入找到的class那裡，end()會回到var $cell那一行
-						     .find('.location').text(course.location);	
-						//$cell.attr("code-value",course.code);
-						//$cell.attr("value",course.code);	//我想要把選課號放進val裡面，可是抓出來都是空的
-						//console.log($cell.code_value);
-						$td.html($cell.html());		//顯示課程，把cell.html()塞到<td>tag裡面
+						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一	 find()是找class!!		
+						if($td.text()!=""){
+							stop_day=iv.day;
+							stop_time=jv;
+							check_conflict=true;
+							delete_conflict($target, course,stop_day,stop_time);
+							alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that time! Please drop out some class"+stop_day+stop_time);
+							return false;
+						}	
+						else{
+							var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));						
+							//把上面的html格式匯入找到的td type中(	parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
+							// console.log($cell[0]);
+							$cell.find('.title').text(course.title_short).end()
+							$cell.find('input').val(course.code).end()		//	將對應的課程內容寫入cell的html語法中，.title就是class="title"
+							     .find('.professor').text(course.professor).end()//text()	會把東西填入找到的class那裡，end()會回到var $cell那一行
+							     .find('.location').text(course.location);	
+							//$cell.attr("code-value",course.code);
+							//$cell.attr("value",course.code);	//	我想要把選課號放進val裡面，可是抓出來都是空的
+							//console.log($cell.code_value);
+							$td.html($cell.html());		//顯示課程，把cell.html()塞到<td>tag裡面
+						}							
 					})
 				})
 			};
-			var delete_course = function($target, course) {		//假設target為time-table的參數，course為courses的某一個課程
-				if( !$.isArray(course.time_parsed) )
-					throw 'time_parsed error';		//判斷time-parsed是不是陣列
-				if( $.type(course.title_parsed) !== "object")			//判斷課程名稱是不是物件
-					throw 'title_parsed error';
+			var delete_conflict = function($target, course,stop_day,stop_time) {		//這是用來刪除衝堂的課程
+			//假設target為time-table的參數，course為courses的某一個課程
+				$.each(course.time_parsed, function(ik, iv){
+					//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)	
+					var already_delete=false;
+					if(already_delete){
+						return false;
+					}
+					$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
+						if(iv.day==stop_day&&jv==stop_time){
+							already_delete=true;
+							return false;
+						}
+						//console.log("刪掉了"+iv.day+" "+jv+" ");
+						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
+						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一	 find()是找class!!	
+						//console.log($td);			
+						$td.empty();	//顯示課程，把cell.html()塞到<td>tag裡面
+					})
+				})
+			};
+			var delete_course = function($target, course) {		//這個函式是用來刪除一整門課程的
+			//假設target為time-table的參數，course為courses的某一個課程				
 				$.each(course.time_parsed, function(ik, iv){
 				//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
 					$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
