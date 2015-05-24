@@ -504,6 +504,7 @@
 					"U"
 				}*/				
 				$("#elective-post").delegate("option","click",function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
+					var boolean=confirm("是否");
 					var language=$("#change-language").val();
 					//var index=$(this).val();
 					//course=courses[index];				
@@ -540,7 +541,7 @@
 					var boolean=confirm("是否刪除此課程?"+"\n"+"Are you sure you really want to drop this course?");
 					console.log(courses[code]);
 					if(boolean){
-						$target.empty();
+						delete_course($('#time-table'),courses[code]);						
 					}					
 				})				
 				$("#change-language").click(function()
@@ -614,40 +615,17 @@
 					})
 				})
 			};
-			var delete_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
+			var delete_course = function($target, course) {		//假設target為time-table的參數，course為courses的某一個課程
 				if( !$.isArray(course.time_parsed) )
 					throw 'time_parsed error';		//判斷time-parsed是不是陣列
 				if( $.type(course.title_parsed) !== "object")			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
-				if(language=="zh_TW"){
-					var tmpCh = course.title_parsed["zh_TW"].split(' ');		//(這是中文課名)切割課程名稱，遇到空格就切開
-					course.title_short = tmpCh[0];		//title_short是會自動宣告的區域變數，存沒有英文的課名
-			  	//console.log( "這是中文的"+course.title_shortCh);
-				}
-				else{
-					var tmpEn =course.title_parsed["en_US"];
-					course.title_short = tmpEn;
-			  	//console.log(course.title_shortEn);
-				}				
 				$.each(course.time_parsed, function(ik, iv){
 				//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
 					$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
 						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
 						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一	 find()是找class!!				
-						var $cell = $($.parseHTML('<div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div></div><div class="row"><botton type="button" class="btn btn-default col-xs-6">delete</botton><input type="hidden" name="code-of-course" value=""></div></div>'));
-
-						var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));
-
-						//把上面的html格式匯入找到的td type中(parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
-						// console.log($cell[0]);
-						$cell.find('.title').text(course.title_short).end()
-						$cell.find('input').val(course.code).end()		//將對應的課程內容寫入cell的html語法中，.title就是class="title"
-						     .find('.professor').text(course.professor).end()//text()會把東西填入找到的class那裡，end()會回到var $cell那一行
-						     .find('.location').text(course.location);	
-						//$cell.attr("code-value",course.code);
-						//$cell.attr("value",course.code);	//我想要把選課號放進val裡面，可是抓出來都是空的
-						//console.log($cell.code_value);
-						$td.html($cell.html());		//顯示課程，把cell.html()塞到<td>tag裡面
+						$td.empty();	//顯示課程，把cell.html()塞到<td>tag裡面
 					})
 				})
 			};
