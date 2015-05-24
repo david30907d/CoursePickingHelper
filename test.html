@@ -47,6 +47,10 @@
 		    {
 		    	margin-bottom: 10px;
 		    }
+			#classification div div
+			{
+				padding: 0;
+			}
 		    /*修改table的border*/
 			#time-table tbody th{
 				white-space: nowrap;
@@ -169,41 +173,48 @@
 					</div>
 				</div>
 
-
-			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#exp">
-			  <span class="fa fa-question fa-2x fa-fw"></span>
-			</button>
-			
-			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#detail">
-			  <span class="fa fa-graduation-cap fa-2x fa-fw"></span>
-			</button>
-
-			<button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#search">
-			  <span class="fa fa-search fa-2x fa-fw"></span>
-			</button>
-
-			<button type="button" class="btn btn-danger btn-lg" id="clear-button">
-			  <span class="fa fa-trash fa-2x fa-fw"></span>
-			</button>
-
-			<button type="button" class="btn btn-danger btn-lg" id="change-language" value="zh_TW">
-			  <span class="fa fa-language fa-2x fa-fw"></span>
-			</button><!--中英切換-->
-
 			<!--會出現系選修和體育、通識-->
+			<div class="col-sm-3" id="classification">
 
-
-			<div class="col-sm-3" style = "background-color:#D9EDF7">
 				<div calss="row">
-					<div class="col-sm-4 col-xs-12"><input type="checkbox" value="">系選修</div>
-					<div class="col-sm-5 col-xs-12"><input type="checkbox" value="">通識課程</div>
-					<div class="col-sm-3 col-xs-12"><input type="checkbox" value="">體育</div>
-				</div>
-				
+					<div class="col-xs-2  col-xs-offset-1">
+						<button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#exp">
+				  		<span class="fa fa-question fa-1x fa-fw"></span>
+						</button>
+					</div>
+					<div class="col-xs-2">
+						<button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#detail">
+				  		<span class="fa fa-graduation-cap fa-1x fa-fw"></span>
+						</button>
+					</div>
+					<div class="col-xs-2">
+						<button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#search">
+				  		<span class="fa fa-search fa-1x fa-fw"></span>
+						</button>
+					</div>
+					<div class="col-xs-2">
+						<button type="button" class="btn btn-danger btn-block" id="clear-button">
+				  		<span class="fa fa-trash fa-1x fa-fw"></span>
+						</button>
+					</div>
+					<div class="col-xs-2">
+						<button type="button" class="btn btn-danger btn-block" id="change-language" value="zh_TW">
+				  		<span class="fa fa-language fa-1x fa-fw"></span>
+						</button><!--中英切換-->
+					</div>
+ 				</div>
+
+				<div calss="row">
+				<div class="col-sm-12" style = "background-color:#D9EDF7">
+					<div calss="row">
+						<div class="col-sm-4 col-xs-4"><input type="checkbox" value="">系選修</div>
+						<div class="col-sm-4 col-xs-4"><input type="checkbox" value="">通識</div>
+						<div class="col-sm-4 col-xs-4"><input type="checkbox" value="">體育</div>
+					</div>
 				<select multiple class="form-control" id="elective-post">
 					
 				</select>
+				</div>
 			</div>
 			
 
@@ -434,9 +445,9 @@
 					</div>
 					
 					<div class="row">
-					    <a class="btn btn-lg col-sm-3 col-sm-offset-1" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-2x fa-fw"></span>選課系統</a>
-	        	        <a class="btn btn-lg col-sm-3" href="http://cah.nchu.edu.tw/class/class_plan.php?new=Y&d_id=3" target="_blank"><span class="fa fa-book fa-2x fa-fw"></span>通識中心</a>
-	            	    <a class="btn btn-lg col-sm-3" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-2x fa-fw"></span>單一簽入</a>
+					    <a class="btn btn-lg col-sm-3 col-sm-offset-1" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-1x fa-fw"></span>選課系統</a>
+	        	        <a class="btn btn-lg col-sm-3" href="http://cah.nchu.edu.tw/class/class_plan.php?new=Y&d_id=3" target="_blank"><span class="fa fa-book fa-1x fa-fw"></span>通識中心</a>
+	            	    <a class="btn btn-lg col-sm-3" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-1x fa-fw"></span>單一簽入</a>
             	    </div>
 
 			      </div>
