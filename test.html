@@ -52,7 +52,10 @@
 
 			#time-table th{
 				text-align: center;
-				
+			}
+			#time-table button.btn-link{
+				text-align: center;
+				color:black;
 			}
 			#time-table div.title{
 				text-align: center;
@@ -94,7 +97,21 @@
 							<tbody>
 								<tr data-hour="1" class="active">
 									<th>08:10 - 09:00</th>
-									<td></td>
+									<td>
+										<div>
+											<!--<button class="btn btn-link btn-xs"><span class="fa fa-times"></span></button>-->
+											<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+											<div class="title">普通物理</div>
+											<div class="row">
+												<div class="professor col-xs-6">劉瑞堂</div>
+												<div class="location col-xs-6">S102</div>
+											</div>
+										</div>
+
+<div><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div></div>
+										</div>
+
+									</td>
 									<td></td>
 									<td></td>
 									<td></td>
@@ -532,11 +549,10 @@
 				{
 					$('#time-table td').empty();
 				});
-				$("#time-table").delegate("botton","click",function(){//這是用來把單獨一堂課刪掉的按鈕
+				$("#time-table").delegate("span","click",function(){//這是用來把單獨一堂課刪掉的按鈕
 					$target=$(this).closest("td");
 					var boolean=confirm("是否刪除此課程?");
 					if(boolean){
-
 						$target.empty();
 					}					
 				})
@@ -596,7 +612,7 @@
 					$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
 						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
 						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一	 find()是找class!!				
-						var $cell = $($.parseHTML('<div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div></div><div class="row"><botton type="button" class="btn btn-default">delete</botton></div></div>'));
+						var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));
 						//把上面的html格式匯入找到的td type中(parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
 						// console.log($cell[0]);
 						$cell.find('.title').text(course.title_short).end()		//將對應的課程內容寫入cell的html語法中，.title就是class="title"
