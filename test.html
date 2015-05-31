@@ -106,67 +106,67 @@
 							<tbody>
 								<tr data-hour="1" class="active">
 									<th>08:10 - 09:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
 								</tr>
 								<tr data-hour="2" class="active">
 									<th>09:10 - 10:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
 								</tr>
 								<tr data-hour="3" class="active">
 									<th>10:10 - 11:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
 								</tr>
 								<tr data-hour="4" class="active">
 									<th>11:10 - 12:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
 								</tr>
 								<tr data-hour="5" class="active">
 									<th>13:10 - 14:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
 								</tr>
 								<tr data-hour="6" class="active">
 									<th>14:10 - 15:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
 								</tr>
 								<tr data-hour="7" class="active">
 									<th>15:10 - 16:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
 								</tr>
 								<tr data-hour="8" class="active">
 									<th>16:10 - 17:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
 								</tr>
 							</tbody>
 						</table>
@@ -475,6 +475,8 @@
 				$.getJSON('json/course.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
 					window.courses = {};//宣告一個空的物件
 					window.course_of_majors = {};//宣告一個空的物件
+					window.course_of_day = {};	//這是宣告日期的陣列
+					window.teacher_course = {};
 					$.each(json.course, function(ik,iv){
 						if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
 							window.course_of_majors[iv.for_dept] = {};  
@@ -482,7 +484,22 @@
 							window.course_of_majors[iv.for_dept][iv.class] = [];//如果這一行(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，[]裡面的是放陣列
 						}
 						window.course_of_majors[iv.for_dept][iv.class].push(iv.code);//把東西推進這個陣列裡，概念跟stack一樣
-						window.courses[iv.code] = iv;//這邊可以直接把選課號當作索引值key，裡面的值為object				
+						window.courses[iv.code] = iv;//這邊可以直接把選課號當作索引值key，裡面的值為object
+						$.each(iv.time_parsed,function(jk,jv){							
+							$.each(jv.time,function(mk,mv){
+								if(typeof(window.course_of_day[jv.day])=='undefined'){
+									window.course_of_day[jv.day]={};
+								}
+								if(typeof(window.course_of_day[jv.day][mv])=='undefined'){
+									window.course_of_day[jv.day][mv]=[];
+								}
+								window.course_of_day[jv.day][mv].push(iv);
+							})
+						})		
+						if(typeof(window.teacher_course[iv.professor])=='undefined'){
+							window.teacher_course[iv.professor]=[];
+						}
+						teacher_course[iv.professor].push(iv);																					
 					});
 					//console.log(window.courses, window.course_of_majors);
 				});
@@ -578,9 +595,9 @@
 						$("#change-language").val("zh_TW");
 				});
 				$("td").click(function(){
-					//var day=
-					var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
+					var day=$(this).find	
 				});
+
 			});
 
 			var week = ["一", "二", "三", "四", "五"];
