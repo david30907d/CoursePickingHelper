@@ -27,7 +27,6 @@
 		        background-repeat:no-repeat;
 		        background-attachment: fixed;
 		        font-family: "Microsoft JhengHei";
-
 		    }
 		    p strong
 		    {
@@ -85,96 +84,107 @@
 		
 		<!--選取系級的表單結束-->
 		<div class="container-fluid">  
-				<div class="col-sm-9">
-					<h2 style="text-align:center;" id="curriculum-title">課表</h2>
-					<div class="table-responsive" id="time-table">
-						<table class="table table-striped table-hover table-condensed table-bordered">
-							<thead>
-								<tr class="info">
-									<th style="width: 1px">時間</th>
-									<th style="width: 20%">一</th>
-									<th style="width: 20%">二</th>
-									<th style="width: 20%">三</th>
-									<th style="width: 20%">四</th>
-									<th style="width: 20%">五</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr data-hour="1" class="active">
-									<th>08:10 - 09:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr data-hour="2" class="active">
-									<th>09:10 - 10:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr data-hour="3" class="active">
-									<th>10:10 - 11:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr data-hour="4" class="active">
-									<th>11:10 - 12:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr data-hour="5" class="active">
-									<th>13:10 - 14:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr data-hour="6" class="active">
-									<th>14:10 - 15:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr data-hour="7" class="active">
-									<th>15:10 - 16:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr data-hour="8" class="active">
-									<th>16:10 - 17:00</th>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+			<div class="col-sm-9">
+				<h2 style="text-align:center;" id="curriculum-title">課表</h2>
+				<div class="table-responsive" id="time-table">
+					<table class="table table-striped table-hover table-condensed table-bordered">
+						<thead>
+							<tr class="info">
+								<th style="width: 1px">時間</th>
+								<th style="width: 20%">一</th>
+								<th style="width: 20%">二</th>
+								<th style="width: 20%">三</th>
+								<th style="width: 20%">四</th>
+								<th style="width: 20%">五</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr data-hour="1" class="active">
+								<th>08:10 - 09:00</th>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr data-hour="2" class="active">
+								<th>09:10 - 10:00</th>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr data-hour="3" class="active">
+								<th>10:10 - 11:00</th>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr data-hour="4" class="active">
+								<th>11:10 - 12:00</th>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr data-hour="5" class="active">
+								<th>13:10 - 14:00</th>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr data-hour="6" class="active">
+								<th>14:10 - 15:00</th>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr data-hour="7" class="active">
+								<th>15:10 - 16:00</th>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr data-hour="8" class="active">
+								<th>16:10 - 17:00</th>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
+			</div>
 
+			<h2 style="text-align:center;" id="curriculum-title">課表</h2>
+			<!--會出現系選修和體育、通識-->
+			<div class="col-sm-3" style = "background-color:#D9EDF7">
+				<div calss="row">
+					<div class="col-sm-4 col-xs-12"><input type="checkbox" value="">系選修</div>
+					<div class="col-sm-5 col-xs-12"><input type="checkbox" value="">通識課程</div>
+					<div class="col-sm-3 col-xs-12"><input type="checkbox" value="">體育</div>
+				</div>
+				<select multiple class="form-control" id="elective-post">
+				</select>
+			</div>
 
 			<!-- Button trigger modal -->
 			<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#exp">
 			  <span class="fa fa-question fa-2x fa-fw"></span>
 			</button>
-			
+
 			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#detail">
 			  <span class="fa fa-graduation-cap fa-2x fa-fw"></span>
 			</button>
@@ -191,20 +201,7 @@
 			  <span class="fa fa-language fa-2x fa-fw"></span>
 			</button><!--中英切換-->
 
-			<!--會出現系選修和體育、通識-->
 
-
-			<div class="col-sm-3" style = "background-color:#D9EDF7">
-				<div calss="row">
-					<div class="col-sm-4 col-xs-12"><input type="checkbox" value="">系選修</div>
-					<div class="col-sm-5 col-xs-12"><input type="checkbox" value="">通識課程</div>
-					<div class="col-sm-3 col-xs-12"><input type="checkbox" value="">體育</div>
-				</div>
-				
-				<select multiple class="form-control" id="elective-post">
-					
-				</select>
-			</div>
 			
 
 			<!-- Modal -->
@@ -244,7 +241,7 @@
 									</ol>
 
 						      <!-- Wrapper for slides -->
-						      <div class="carousel-inner" role="listbox">
+						    	<div class="carousel-inner" role="listbox">
 						        <div class="item active">
 											<div align="center">
 												<img src="images/test5.jpg" style="width:100%; height:100%">
@@ -255,23 +252,23 @@
 						      	</div>
 
 						        <div class="item">
-											<div align="center">
-												<img src="images/test4.jpg" style="width:100%; height:100%">
-											</div>
-											<div class="carousel-caption">
-												<h3>Test2</h3>
-											</div>
+									<div align="center">
+										<img src="images/test4.jpg" style="width:100%; height:100%">
+									</div>
+									<div class="carousel-caption">
+										<h3>Test2</h3>
+									</div>
 						        </div>
 
-										<div class="item">
-											<div align="center">
-												<img src="images/test6.jpg" style="width:100%; height:100%">
-											</div>
-											<div class="carousel-caption">
-												<h3>Test3</h3>
-											</div>
-										</div>
+								<div class="item">
+									<div align="center">
+										<img src="images/test6.jpg" style="width:100%; height:100%">
 									</div>
+									<div class="carousel-caption">
+										<h3>Test3</h3>
+									</div>
+								</div>
+								</div>
 									<!-- Controls -->
 									<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 										<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -488,9 +485,7 @@
 						case "W":
 
 						case "N":
-
 					}
-
 				};	
 				/*//這段是軍民的原始碼
 				var serializearray=function(){//比較好的方法來取option 的value!!!!
