@@ -477,7 +477,7 @@
 					window.course_of_majors = {};//宣告一個空的物件
 					$.each(json.course, function(ik,iv){
 						if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
-							window.course_of_majors[iv.for_dept] = {};
+							window.course_of_majors[iv.for_dept] = {};  
 						if(typeof(window.course_of_majors[iv.for_dept][iv.class]) == 'undefined'){
 							window.course_of_majors[iv.for_dept][iv.class] = [];//如果這一行(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，[]裡面的是放陣列
 						}
@@ -523,9 +523,10 @@
 					$a.serializeArray()[1].value
 					"U"
 				}*/	
-				$("#specific_search").click(function(){	//
-					var code = $("#class_code").val();
-					var language = $("#change-language").val();
+
+				$("#specific_search").click(function(){	//可以用課號搜尋，把input的的課號用.val()取出
+					var code=$("#class_code").val();
+					var language=$("#change-language").val();
 					elective_course(courses[code],language);
 				})
 
@@ -533,10 +534,9 @@
 				$("#elective-post").delegate("option","click",function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
 					var boolean = confirm("確認添加此課程?"+"\n"+"Are you sure to enroll this class?");
 					if(boolean){
-						var language=$("#change-language").val();
-						//var index=$(this).val();
-						//course=courses[index];				
-						var course = $(this).data("class");//this會代表我抓到的那個東西，也就是option
+						var language=$("#change-language").val();						
+						var code=$(this).val();//this會代表我抓到的那個東西，也就是option						
+						course=courses[code];							
 						add_course($('#time-table'),course, language);	
 					}										
 				});
@@ -571,7 +571,7 @@
 					if(boolean){
 						delete_course($('#time-table'),courses[code]);	//就跟add_course一樣，只是把填東西改成刪掉						
 					}					
-				})				
+				});				
 				$("#change-language").click(function()
 				{
 					if($("#change-language").val()=="zh_TW")
@@ -579,10 +579,14 @@
 					else
 						$("#change-language").val("zh_TW");
 				});
+				$("td").click(function(){
+					//var day=
+					var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
+				});
 			});
 
 			var week = ["一", "二", "三", "四", "五"];
-			var elective_course = function(course,language){	
+			var elective_course=function(course,language){	//這是用來把課程放到右邊的欄位
 			 	if( $.type(course.title_parsed) !== "object")			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
 				if(language=="zh_TW"){
@@ -601,11 +605,12 @@
 				})
 				time = time.join('; ');//把多個陣列用;分隔並合併指派給time
 				//var time = course.time_parsed.day+course.time_parsed.time;
-				var $option = $($.parseHTML('<option title="" style="color:#3074B5;"></option>'));//把option做成dom，再把dom做成jQuery物件
+				var $option = $($.parseHTML('<option title="" style="color:#3074B5;" value=""></option>'));//把option做成dom，再把dom做成jQuery物件
 				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中	
 				$option.attr("title",time);//在title裡面放課堂時間
-				$option.data("class",course);	//把現在找到的這門選修課處存到這個option，並用class表示
-				$elective.append($option);		//顯示課程，把cell.html()塞到<td>tag裡面
+				$option.val(course.code);
+				//把現在找到的這門選修課課程代碼儲存到這個option，並用class表示
+				$elective.append($option);		//顯示課程，把$option放到elective-post
 			 };
 			 var add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
 				if( !$.isArray(course.time_parsed) )
@@ -692,7 +697,7 @@
 						$td.empty();	//顯示課程，把cell.html()塞到<td>tag裡面
 					})
 				})
-			};
+			};			
 		})(jQuery);
 	    </script>
 	</body>
