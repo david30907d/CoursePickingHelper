@@ -475,7 +475,7 @@
 				$.getJSON('json/course.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
 					window.courses = {};//宣告一個空的物件
 					window.course_of_majors = {};//宣告一個空的物件
-					$.each(json.course, function(ik,iv){
+					$.each(json.course, function(ik, iv){
 						if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
 							window.course_of_majors[iv.for_dept] = {};  
 						if(typeof(window.course_of_majors[iv.for_dept][iv.class]) == 'undefined'){
@@ -527,7 +527,7 @@
 				$("#specific_search").click(function(){	//可以用課號搜尋，把input的的課號用.val()取出
 					var code = $("#class_code").val();
 					var language = $("#change-language").val();
-					elective_course(courses[code],language);
+					elective_course(courses[code], language);
 				})
 
 
@@ -537,7 +537,7 @@
 						var language = $("#change-language").val();						
 						var code = $(this).val();//this會代表我抓到的那個東西，也就是option						
 						course = courses[code];			
-						add_course($('#time-table'),course, language);	
+						add_course($('#time-table'), course, language);	
 					}
 				});
 
@@ -546,15 +546,15 @@
 					var level = $("#v_level").val();
 					$('#time-table td').empty();
 					var language = $("#change-language").val();
-					$.each(courses,function(ik,iv)
+					$.each(courses, function(ik,iv)
 					{
 						if(iv.class==level && iv.obligatory_tf==true)
 						{
-							add_course($('#time-table'),courses[ik],language);
+							add_course($('#time-table'), courses[ik], language);
 						}	
 						else if(iv.class==level && iv.obligatory_tf==false)
 						{
-							elective_course(courses[ik],language);
+							elective_course(courses[ik], language);
 						}						
 					})							
 				});
@@ -564,12 +564,12 @@
 					$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
 					$('#elective-post').empty();//清掉選修課程
 				});
-				$("#time-table").delegate("span","click",function(){//這是用來把一整個課程都刪掉的按鈕
+				$("#time-table").delegate("span", "click", function(){//這是用來把一整個課程都刪掉的按鈕
 					$target = $(this).closest("td");
 					var code = $(this).next("input").val();
 					var boolean = confirm("是否刪除此課程?" + "\n" + "Are you sure you really want to drop this course?");					
 					if(boolean){
-						delete_course($('#time-table'),courses[code]);	//就跟add_course一樣，只是把填東西改成刪掉						
+						delete_course($('#time-table'), courses[code]);	//就跟add_course一樣，只是把填東西改成刪掉						
 					}					
 				});				
 				$("#change-language").click(function()
@@ -637,7 +637,7 @@
 					if(check_conflict){
 						//console.log(check_conflict);
 						console.log($target + course + stop_day + stop_time);
-						delete_conflict($target, course,stop_day,stop_time);
+						delete_conflict($target, course, stop_day, stop_time);
 						return false;
 					}			
 					//console.log(check_conflict);
@@ -649,7 +649,7 @@
 							stop_day=iv.day;
 							stop_time=jv;
 							check_conflict=true;
-							delete_conflict($target, course,stop_day,stop_time);
+							delete_conflict($target, course, stop_day, stop_time);
 							alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that time! Please drop out some class");
 							return false;
 						}	
