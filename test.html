@@ -525,20 +525,20 @@
 				}*/	
 
 				$("#specific_search").click(function(){	//可以用課號搜尋，把input的的課號用.val()取出
-					var code=$("#class_code").val();
-					var language=$("#change-language").val();
+					var code = $("#class_code").val();
+					var language = $("#change-language").val();
 					elective_course(courses[code],language);
 				})
 
 
 				$("#elective-post").delegate("option","click",function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
-					var boolean = confirm("確認添加此課程?"+"\n"+"Are you sure to enroll this class?");
+					var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
 					if(boolean){
-						var language=$("#change-language").val();						
-						var code=$(this).val();//this會代表我抓到的那個東西，也就是option						
-						course=courses[code];							
+						var language = $("#change-language").val();						
+						var code = $(this).val();//this會代表我抓到的那個東西，也就是option						
+						course = courses[code];			
 						add_course($('#time-table'),course, language);	
-					}										
+					}
 				});
 
 				$("#ok-button").click(function()
@@ -548,11 +548,11 @@
 					var language = $("#change-language").val();
 					$.each(courses,function(ik,iv)
 					{
-						if(iv.class==level&&iv.obligatory_tf==true)
+						if(iv.class==level && iv.obligatory_tf==true)
 						{
 							add_course($('#time-table'),courses[ik],language);
 						}	
-						else if(iv.class==level&&iv.obligatory_tf==false)
+						else if(iv.class==level && iv.obligatory_tf==false)
 						{
 							elective_course(courses[ik],language);
 						}						
@@ -567,29 +567,31 @@
 				$("#time-table").delegate("span","click",function(){//這是用來把一整個課程都刪掉的按鈕
 					$target = $(this).closest("td");
 					var code = $(this).next("input").val();
-					var boolean = confirm("是否刪除此課程?"+"\n"+"Are you sure you really want to drop this course?");					
+					var boolean = confirm("是否刪除此課程?" + "\n" + "Are you sure you really want to drop this course?");					
 					if(boolean){
 						delete_course($('#time-table'),courses[code]);	//就跟add_course一樣，只是把填東西改成刪掉						
 					}					
 				});				
 				$("#change-language").click(function()
 				{
-					if($("#change-language").val()=="zh_TW")
+					if( $("#change-language").val()=="zh_TW" )
 						$("#change-language").val("en_US");
 					else
 						$("#change-language").val("zh_TW");
 				});
 				$("td").click(function(){
 					//var day=
-					var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
+					var $td = $target.find('tr[data-hour='+jv+'] td:eq('+(iv.day-1)+')');	
 				});
 			});
 
+			
 			var week = ["一", "二", "三", "四", "五"];
-			var elective_course=function(course,language){	//這是用來把課程放到右邊的欄位
-			 	if( $.type(course.title_parsed) !== "object")			//判斷課程名稱是不是物件
+			/************這是用來把課程放到右邊的欄位**************/
+			var elective_course=function(course,language){	
+			 	if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
-				if(language=="zh_TW"){
+				if( language=="zh_TW" ){
 					course.title_short = course.title_parsed["zh_TW"];		//title_short是會自動宣告的區域變數，存沒有英文的課名
 			  	//console.log( "這是中文的"+course.title_shortCh);
 				}
@@ -601,7 +603,7 @@
 				var time = [];//time設定為空陣列
 				var $td;
 				$.each(course.time_parsed, function(ik, iv){		
-					time.push("星期" + week[iv.day-1] +iv.time);//push是把裡面的元素變成陣列的一格		
+					time.push("星期"+week[iv.day-1]+iv.time);//push是把裡面的元素變成陣列的一格		
 				})
 				time = time.join('; ');//把多個陣列用;分隔並合併指派給time
 				//var time = course.time_parsed.day+course.time_parsed.time;
@@ -612,12 +614,13 @@
 				//把現在找到的這門選修課課程代碼儲存到這個option，並用class表示
 				$elective.append($option);		//顯示課程，把$option放到elective-post
 			 };
+
 			 var add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
 				if( !$.isArray(course.time_parsed) )
 					throw 'time_parsed error';		//判斷time-parsed是不是陣列
-				if( $.type(course.title_parsed) !== "object")			//判斷課程名稱是不是物件
+				if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
-				if(language=="zh_TW"){
+				if(language == "zh_TW"){
 					var tmpCh = course.title_parsed["zh_TW"].split(' ');		//(這是中文課名)切割課程名稱，遇到空格就切開
 					course.title_short = tmpCh[0];		//title_short是會自動宣告的區域變數，存沒有英文的課名
 			  	//console.log( "這是中文的"+course.title_shortCh);
@@ -633,7 +636,7 @@
 					//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)								
 					if(check_conflict){
 						//console.log(check_conflict);
-						console.log($target+course+stop_day+stop_time);
+						console.log($target + course + stop_day + stop_time);
 						delete_conflict($target, course,stop_day,stop_time);
 						return false;
 					}			
@@ -666,7 +669,9 @@
 					})
 				})
 			};
-			var delete_conflict = function($target, course,stop_day,stop_time) {		//這是用來刪除衝堂的課程
+
+			/**********這是用來刪除衝堂的課程***********/
+			var delete_conflict = function($target, course,stop_day,stop_time) {		
 			//假設target為time-table的參數，course為courses的某一個課程
 				$.each(course.time_parsed, function(ik, iv){
 					//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)	
@@ -687,13 +692,15 @@
 					})
 				})
 			};
-			var delete_course = function($target, course) {		//這個函式是用來刪除一整門課程的
+
+			/**********這個函式是用來刪除一整門課程的**********/
+			var delete_course = function($target, course) {		
 			//假設target為time-table的參數，course為courses的某一個課程				
 				$.each(course.time_parsed, function(ik, iv){
 				//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
 					$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
 						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
-						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一	 find()是找class!!				
+						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一	 find()是找class!!
 						$td.empty();	//顯示課程，把cell.html()塞到<td>tag裡面
 					})
 				})
