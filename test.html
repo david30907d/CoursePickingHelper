@@ -160,35 +160,39 @@
                     </table>
                 </div>
             </div>
+            <br>
             <!--會出現系選修和體育、通識-->
             <div class="col-md-3" id="classification">
                 <div class="container-fluid">
-                    <div class="col-xs-2  col-xs-offset-1" id="btn-tools">
-                        <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#exp">
+                    <div class="col-xs-3" id="btn-tools">
+                        <button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#exp">
                         <span class="fa fa-question fa-1x fa-fw"></span>
                         </button>
                     </div>
-                    <div class="col-xs-2" id="btn-tools">
+                    <!--
+                    <div class="col-xs-1" id="btn-tools">
                         <button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#detail">
                         <span class="fa fa-graduation-cap fa-1x fa-fw"></span>
                         </button>
                     </div>
-                    <div class="col-xs-2" id="btn-tools">
-                        <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#search">
+                    -->
+                    <div class="col-xs-3" id="btn-tools">
+                        <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#search">
                         <span class="fa fa-search fa-1x fa-fw"></span>
                         </button>
                     </div>
-                    <div class="col-xs-2" id="btn-tools">
+                    <div class="col-xs-3" id="btn-tools">
+                        <button type="button" class="btn btn-warning btn-block" id="change-language" value="zh_TW">
+                        <span class="fa fa-language fa-1x fa-fw"></span>
+                        </button><!--中英切換-->
+                    </div>
+                    <div class="col-xs-3" id="btn-tools">
                         <button type="button" class="btn btn-danger btn-block" id="clear-button">
                         <span class="fa fa-trash fa-1x fa-fw"></span>
                         </button>
                     </div>
-                    <div class="col-xs-2" id="btn-tools">
-                        <button type="button" class="btn btn-danger btn-block" id="change-language" value="zh_TW">
-                        <span class="fa fa-language fa-1x fa-fw"></span>
-                        </button><!--中英切換-->
-                    </div>
                 </div>
+                <br>
                 <div calss="row">
                     <div class="col-xs-12" style = "background-color:#D9EDF7">
                         <div calss="row">
@@ -277,6 +281,7 @@
                         </div>
                     </div>
                 </div>
+                <!--
                 <div class="modal fade modal fade bs-example-modal-lg" id="detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -293,10 +298,6 @@
                                         <div class="col-xs-10">
                                             <select class="form-control" name="v_year" id="v_year">
                                             	<option value="0">請選擇學期</option>
-                                                <option value="103_2">1032</option>
-                                                <option value="103_1">1031</option>
-                                                <option value="102_2">1022</option>
-                                                <option value="102_1">1021</option>
                                             </select>
                                         </div>
                                     </div>
@@ -305,12 +306,6 @@
                                         <div class="col-xs-10">
                                             <select class="form-control" name="v_career" id="v_career">
                                                 <option value="0">請選擇學制</option>
-                                                <option value="U">學士班</option>
-                                                <option value="G">碩士班</option>
-                                                <option value="D">博士班</option>
-                                                <option value="R">產專班</option>
-                                                <option value="W">碩專班</option>
-                                                <option value="N">進修學士班</option>
                                             </select>
                                         </div>
                                     </div>
@@ -319,52 +314,6 @@
                                         <div class="col-xs-10">
                                             <select class="form-control" name="v_dept" id="v_dept">
                                             	<option value="0">請選擇系所</option>
-                                                <option value="C10">文學院</option>
-                                                <option value="C20">管理學院</option>
-                                                <option value="C30">農業暨自然資源學院</option>
-                                                <option value="U11">中國文學系學士班</option>
-                                                <option value="U12">外國語文學系學士班</option>
-                                                <option value="U13">歷史學系學士班</option>
-                                                <option value="U21">財務金融學系學士班</option>
-                                                <option value="U23">企業管理學系學士班</option>
-                                                <option value="U24">法律學系學士班</option>
-                                                <option value="U28">會計學系學士班</option>
-                                                <option value="U29">資訊管理學系學士班</option>
-                                                <option value="U30F">景觀與遊憩學士學位學程</option>
-                                                <option value="U30G">生物科技學士學位學程</option>
-                                                <option value="U30H">國際農企業學士學位學程</option>
-                                                <option value="U31">農藝學系學士班</option>
-                                                <option value="U32">園藝學系學士班</option>
-                                                <option value="U33A">森林學系林學組學士班</option>
-                                                <option value="U33B">森林學系木材科學組學士班</option>
-                                                <option value="U34">應用經濟學系學士班</option>
-                                                <option value="U35">植物病理學系學士班</option>
-                                                <option value="U36">昆蟲學系學士班</option>
-                                                <option value="U37">動物科學系學士班</option>
-                                                <option value="U38A">獸醫學系學士班</option>
-                                                <option value="U38B">獸醫學系學士班</option>
-                                                <option value="U39">土壤環境科學系學士班</option>
-                                                <option value="U40">生物產業機電工程學系學士班</option>
-                                                <option value="U42">水土保持學系學士班</option>
-                                                <option value="U43">食品暨應用生物科技學系學士班</option>
-                                                <option value="U44">行銷學系學士班</option>
-                                                <option value="U51">化學系學士班</option>
-                                                <option value="U52">生命科學系學士班</option>
-                                                <option value="U53A">應用數學系學士班</option>
-                                                <option value="U53B">應用數學系學士班</option>
-                                                <option value="U54A">物理學系一般物理組學士班</option>
-                                                <option value="U54B">物理學系光電物理組學士班</option>
-                                                <option value="U56">資訊科學與工程學系學士班</option>
-                                                <option value="U60F">學士後太陽能光電系統應用學士學位學程</option>
-                                                <option value="U61B">機械工程學系學士班</option>
-                                                <option value="U61A">機械工程學系學士班</option>
-                                                <option value="U62A">土木工程學系學士班</option>
-                                                <option value="U62B">土木工程學系學士班</option>
-                                                <option value="U63">環境工程學系學士班</option>
-                                                <option value="U64B">電機工程學系學士班</option>
-                                                <option value="U64A">電機工程學系學士班</option>
-                                                <option value="U65">化學工程學系學士班</option>
-                                                <option value="U66">材料科學與工程學系學士班</option>
                                             </select>
                                         </div>
                                     </div>
@@ -373,11 +322,6 @@
                                         <div class="col-xs-10">
                                             <select class="form-control" name="v_level" id="v_level">
                                             	<option value="0">請選擇年級</option>
-                                                <option value="1">一年級</option>
-                                                <option value="2">二年級</option>
-                                                <option value="3">三年級</option>
-                                                <option value="4">四年級</option>
-                                                <option value="5">五年級</option>
                                             </select>
                                         </div>
                                     </div>
@@ -390,6 +334,7 @@
                         </div>
                     </div>
                 </div>
+                -->
                 <div class="modal fade modal fade bs-example-modal-lg" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -547,7 +492,7 @@
 		(function($){
 		//先定義JQuery為$，不要讓它衝突
 		//var courses = null;
-		  $(function(){
+			$(function(){
 				//當文件準備好的時候，讀入json檔
 				$.getJSON('json/course.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
 					window.courses = {};//宣告一個空的物件
@@ -599,12 +544,14 @@
 					"U"
 				}*/	
 				
+				//$("#ok-button").click(function(){
+				/*
 				$("#specific_search").click(function(){	//可以用課號搜尋，把input的的課號用.val()取出
 					var code = $("#class_code").val();
 					var language = $("#change-language").val();
 					elective_course(courses[code], language);
 				})
-				
+				*/
 
 				$("#elective-post").delegate("option","click",function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
 					var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
@@ -615,12 +562,14 @@
 						add_course($('#time-table'), course, language);	
 					}
 				});
-				//$("#specific_search").click(function()	//可以用課號搜尋，把input的的課號用.val()取出
-				$("#ok-button").click(function()
+				$("#specific_search").click(function()	//可以用課號搜尋，把input的的課號用.val()取出
+				//$("#ok-button").click(function()
 				{											
 					var level = $("#v_level").val();
+					console.log(level);
 					$('#time-table td').empty();
 					var language = $("#change-language").val();
+					console.log(language);
 					$.each(courses, function(ik,iv)
 					{
 						if(iv.class==level && iv.obligatory_tf==true)
@@ -643,8 +592,9 @@
 					$target = $(this).closest("td");
 					var code = $(this).next("input").val();
 					var boolean = confirm("是否刪除此課程?" + "\n" + "Are you sure you really want to drop this course?");					
-					if(boolean){
-						delete_course($('#time-table'), courses[code]);	//就跟add_course一樣，只是把填東西改成刪掉						
+					if(boolean)
+					{
+						delete_course($('#time-table'), courses[code]);	//就跟add_course一樣，只是把填東西改成刪掉			
 					}					
 				});				
 				$("#change-language").click(function()
