@@ -459,7 +459,7 @@
 						}
 						window.course_of_majors[iv.for_dept][iv.class].push(iv.code);//把東西推進這個陣列裡，概念跟stack一樣
 						window.courses[iv.code] = iv;//這邊可以直接把選課號當作索引值key，裡面的值為object
-						$.each(iv.time_parsed,function(jk,jv){							
+						$.each(iv.time_parsed,function(jk,jv){					
 							$.each(jv.time,function(mk,mv){
 								if(typeof(window.course_of_day[jv.day])=='undefined'){
 									window.course_of_day[jv.day]={};
@@ -470,18 +470,16 @@
 								window.course_of_day[jv.day][mv].push(iv);
 							})
 						})		
-						if(typeof(window.teacher_course[iv.professor])=='undefined'){
+						if(typeof(window.teacher_course[iv.professor])=='undefined'){//建立老師名稱的陣列
 							window.teacher_course[iv.professor]=[];
 						}
 						teacher_course[iv.professor].push(iv);																					
-					});
-					//console.log(window.courses, window.course_of_majors);
+					});					
 				});
 				$("#v_career").change(function()
 				{
 					select_degree($("#v_career").val());
-				});
-				//var select_degree = function(degree)
+				});				
 				var select_degree = function(degree)
 				{
 					cozsnsole.log(degree);
@@ -512,16 +510,6 @@
 					$a.serializeArray()[1].value
 					"U"
 				}*/	
-				
-				//$("#ok-button").click(function(){
-				/*
-				$("#specific_search").click(function(){	//可以用課號搜尋，把input的的課號用.val()取出
-					var code = $("#class_code").val();
-					var language = $("#change-language").val();
-					elective_course(courses[code], language);
-				})
-				*/
-
 				$("#elective-post").delegate("option","click",function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
 					var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
 					if(boolean){
@@ -545,14 +533,16 @@
 							}
 					});
 					$.each(course_of_majors[major], function(ik,iv){				
-						$.each(iv,function(jk,jv){
-							//console.log(jv);							
+						$.each(iv,function(jk,jv){													
 							if(courses[jv].obligatory_tf==false){
 								console.log(jv);
 								elective_course(courses[jv], language);
 							}						
 						})
-					})							
+					})//以上為必修 選修填入	
+					//可以用課號搜尋，把input的的課號用.val()取出
+					var code = $("#class_code").val();					
+					elective_course(courses[code], language);
 				});
 
 				$("#clear-button").click(function()
@@ -578,12 +568,10 @@
 				});
 				$("td").click(function(){	//按一下課表欄位就有課程彈出來了
 					var day=$(this).attr("data-day");
-					var hour=$(this).closest("tr").attr("data-hour");
-					console.log(course_of_day[day][hour]);
+					var hour=$(this).closest("tr").attr("data-hour");				
 					var language = $("#change-language").val();
-					$.each(course_of_day[day][hour],function(ik,iv){
-						console.log(ik);
-						elective_course(course_of_day[day][hour][ik],language);	
+					$.each(course_of_day[day][hour],function(ik,iv){					
+						elective_course(course_of_day[day][hour][ik],language);	//因為我把同意時段的課程塞進陣列裡，所以要用index去取
 					})
 					
 				});
@@ -607,10 +595,11 @@
 				var $elective = $("#elective-post");
 				var time = [];//time設定為空陣列
 				var $td;
+				time.push("上課時間:");
 				$.each(course.time_parsed, function(ik, iv){		
 					time.push("星期"+week[iv.day-1]+iv.time);//push是把裡面的元素變成陣列的一格		
 				})
-				time = time.join('; ');//把多個陣列用;分隔並合併指派給time
+				time = time.join(' ');//把多個陣列用;分隔並合併指派給time
 				//var time = course.time_parsed.day+course.time_parsed.time;
 				var $option = $($.parseHTML('<option title="" style="color:#3074B5;" value=""></option>'));//把option做成dom，再把dom做成jQuery物件
 				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中	
