@@ -459,7 +459,7 @@
 						}
 						window.course_of_majors[iv.for_dept][iv.class].push(iv.code);//把東西推進這個陣列裡，概念跟stack一樣
 						window.courses[iv.code] = iv;//這邊可以直接把選課號當作索引值key，裡面的值為object
-						$.each(iv.time_parsed,function(jk,jv){					
+						$.each(iv.time_parsed,function(jk,jv){//					
 							$.each(jv.time,function(mk,mv){
 								if(typeof(window.course_of_day[jv.day])=='undefined'){
 									window.course_of_day[jv.day]={};
