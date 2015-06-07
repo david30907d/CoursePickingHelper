@@ -286,60 +286,6 @@
                         </div>
                     </div>
                 </div>
-                <!--
-                <div class="modal fade modal fade bs-example-modal-lg" id="detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
-                                <h3 class="modal-title" id="myModalLabel">
-                                <span class="fa fa-graduation-cap fa-1x fa-fw"></span> 自動填寫必修課程</h3>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-horizontal">
-                                    <div class="form-group">
-                                        <label for="v_year" class="col-xs-2 control-label">學期</label>
-                                        <div class="col-xs-10">
-                                            <select class="form-control" name="v_year" id="v_year">
-                                            	<option value="0">請選擇學期</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="v_career" class="col-xs-2 control-label">學制</label>
-                                        <div class="col-xs-10">
-                                            <select class="form-control" name="v_career" id="v_career">
-                                                <option value="0">請選擇學制</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="v_dept" class="col-xs-2 control-label">系所</label>
-                                        <div class="col-xs-10">
-                                            <select class="form-control" name="v_dept" id="v_dept">
-                                            	<option value="0">請選擇系所</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="v_level" class="col-xs-2 control-label">年級</label>
-                                        <div class="col-xs-10">
-                                            <select class="form-control" name="v_level" id="v_level">
-                                            	<option value="0">請選擇年級</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-success" data-dismiss="modal" id="ok-button">Submit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                -->
                 <div class="modal fade modal fade bs-example-modal-lg" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -494,7 +440,6 @@
             </div>
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script>
->>>>>>> 1312c68d5743ebad39254c9c5035815d155f55a9
 		(function($){
 		//先定義JQuery為$，不要讓它衝突
 		//var courses = null;
@@ -568,6 +513,7 @@
 						add_course($('#time-table'), course, language);	
 					}
 				});
+                
 				$("#specific_search").click(function()	//可以用課號搜尋，把input的的課號用.val()取出
 				//$("#ok-button").click(function()
 				{											
