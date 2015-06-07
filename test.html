@@ -488,10 +488,9 @@
 						case "U":
 
 						case "G":
-							$("#v_major").prepend("<option value='100'>OK!!</option>");
-							break;
+
 						case "D":
-							break;
+
 						case "R":
 
 						case "W":
@@ -541,8 +540,17 @@
 						})
 					})//以上為必修 選修填入	
 					//可以用課號搜尋，把input的的課號用.val()取出
-					var code = $("#class_code").val();					
-					elective_course(courses[code], language);
+					var code = $("#class_code").val();
+					if(code!=""){
+						elective_course(courses[code], language);
+					}
+					var teacher = $("#class_teacher").val();
+					if(teacher!=""){
+						$.each(teacher_course[teacher], function(ik, iv){
+							//console.log("HAHA");
+							elective_course(iv, language);
+						});
+					}													
 				});
 
 				$("#clear-button").click(function()
@@ -581,10 +589,10 @@
 			
 			window.week = ["一", "二", "三", "四", "五"];
 			/************這是用來把課程放到右邊的欄位**************/
-			var elective_course=function(course,language){	
+			var elective_course = function(course, language){	
 			 	if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
-				if( language=="zh_TW" ){
+				if(language == "zh_TW"){
 					course.title_short = course.title_parsed["zh_TW"];		//title_short是會自動宣告的區域變數，存沒有英文的課名
 			  	//console.log( "這是中文的"+course.title_shortCh);
 				}
