@@ -497,10 +497,9 @@
 						case "U":
 
 						case "G":
-							$("#v_major").prepend("<option value='100'>OK!!</option>");
-							break;
+
 						case "D":
-							break;
+
 						case "R":
 
 						case "W":
@@ -565,6 +564,13 @@
 							}							
 						})												
 					}	
+					var teacher = $("#class_teacher").val();
+					if(teacher!=""){
+						$.each(teacher_course[teacher], function(ik, iv){
+							//console.log("HAHA");
+							elective_course(iv, language);
+						});
+					}			
 				});
 
 				$("#clear-button").click(function()
@@ -603,7 +609,7 @@
 			
 			window.week = ["一", "二", "三", "四", "五"];
 			/************這是用來把課程放到右邊的欄位**************/
-			var elective_course=function(course,language){	
+			var elective_course = function(course, language){	
 			 	if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
 				if( language=="zh_TW" ){
