@@ -449,7 +449,8 @@
 					window.courses = {};//宣告一個空的物件
 					window.course_of_majors = {};//宣告一個空的物件
 					window.course_of_day = {};	//這是宣告日期的陣列
-					window.teacher_course = {};
+					window.teacher_course = {};	//這是以老師姓名為index的陣列
+					window.name_of_course = {};	//這是以課程名稱為index的陣列
 					$.each(json.course, function(ik, iv){
 						if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
 							window.course_of_majors[iv.for_dept] = {};  
@@ -458,8 +459,9 @@
 						}
 						window.course_of_majors[iv.for_dept][iv.class].push(iv.code);//把東西推進這個陣列裡，概念跟stack一樣
 						window.courses[iv.code] = iv;//這邊可以直接把選課號當作索引值key，裡面的值為object
-						$.each(iv.time_parsed,function(jk, jv){//					
-							$.each(jv.time,function(mk, mv){
+
+						$.each(iv.time_parsed, function(jk, jv){//建立日期的陣列				
+							$.each(jv.time, function(mk, mv){
 								if(typeof(window.course_of_day[jv.day])=='undefined'){
 									window.course_of_day[jv.day]={};
 								}
@@ -472,7 +474,15 @@
 						if(typeof(window.teacher_course[iv.professor])=='undefined'){//建立老師名稱的陣列
 							window.teacher_course[iv.professor]=[];
 						}
-						teacher_course[iv.professor].push(iv);																					
+						window.teacher_course[iv.professor].push(iv);	
+						if(typeof(window.name_of_course[iv.title_parsed.zh_TW])=='undefined'){//中文課名陣列
+							window.name_of_course[iv.title_parsed.zh_TW]=[];
+						}																				
+						window.name_of_course[iv.title_parsed.zh_TW].push(iv);
+						if(typeof(window.name_of_course[iv.title_parsed.en_US])=='undefined'){//英文課名陣列
+							window.name_of_course[iv.title_parsed.en_US]=[];
+						}																				
+						window.name_of_course[iv.title_parsed.en_US].push(iv);
 					});					
 				});
 				$("#v_career").change(function()
@@ -524,7 +534,7 @@
 					var level = $("#v_level").val();//取到年級
 					$('#time-table td').empty();
 					var language = $("#change-language").val();
-					console.log(major+" "+level);
+					//console.log(major+" "+level);
 					$.each(course_of_majors[major][level], function(ik, iv){
 							if(courses[iv].obligatory_tf==true){
 								add_course($('#time-table'), courses[iv], language);
@@ -533,23 +543,34 @@
 					$.each(course_of_majors[major], function(ik,iv){				
 						$.each(iv,function(jk,jv){													
 							if(courses[jv].obligatory_tf==false){
-								console.log(jv);
+								//console.log(jv);
 								elective_course(courses[jv], language);
 							}						
 						})
 					})//以上為必修 選修填入	
 					//可以用課號搜尋，把input的的課號用.val()取出
-					var code = $("#class_code").val();
+					var code = $("#class_code").val();		
 					if(code!=""){
 						elective_course(courses[code], language);
-					}
+					}		
+
+					var class_title=$("#class_title").val();
+					if(class_title!=""){
+						$.each(name_of_course,function(ik,iv){
+							if(ik.search(class_title)!=-1){
+								$.each(iv,function(jk,jv){
+									elective_course(jv, language);
+								});
+							}							
+						})												
+					}	
 					var teacher = $("#class_teacher").val();
 					if(teacher!=""){
 						$.each(teacher_course[teacher], function(ik, iv){
 							//console.log("HAHA");
 							elective_course(iv, language);
 						});
-					}													
+					}			
 				});
 
 				$("#clear-button").click(function()
@@ -591,13 +612,11 @@
 			var elective_course = function(course, language){	
 			 	if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
-				if(language == "zh_TW"){
-					course.title_short = course.title_parsed["zh_TW"];		//title_short是會自動宣告的區域變數，存沒有英文的課名
-			  	//console.log( "這是中文的"+course.title_shortCh);
+				if( language=="zh_TW" ){
+					course.title_short = course.title_parsed["zh_TW"];		//title_short是會自動宣告的區域變數，存沒有英文的課名			  	
 				}
 				else{
-					course.title_short = course.title_parsed["en_US"];
-			  	//console.log(course.title_shortEn);
+					course.title_short = course.title_parsed["en_US"];			  	
 				}
 				var $elective = $("#elective-post");
 				var time = [];//time設定為空陣列
@@ -623,52 +642,42 @@
 					throw 'title_parsed error';
 				if(language == "zh_TW"){
 					var tmpCh = course.title_parsed["zh_TW"].split(' ');		//(這是中文課名)切割課程名稱，遇到空格就切開
-					course.title_short = tmpCh[0];		//title_short是會自動宣告的區域變數，存沒有英文的課名
-			  	//console.log( "這是中文的"+course.title_shortCh);
+					course.title_short = tmpCh[0];		//title_short是會自動宣告的區域變數，存沒有英文的課名			  	
 				}
 				else{
 					var tmpEn = course.title_parsed["en_US"];
-					course.title_short = tmpEn;
-			  	//console.log(course.title_shortEn);
+					course.title_short = tmpEn;			  	
 				}		
 				var stop_day,stop_time;	//這裡是刪除課程應該要停止的星期與節數
 				var check_conflict = false;	//他用來判斷是否衝堂，如果有則下面的if就會讓最外圈的each停止
-				$.each(course.time_parsed, function(ik, iv){
-					//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)								
-					if(check_conflict){
-						//console.log(check_conflict);
-						console.log($target + course + stop_day + stop_time);
-						delete_conflict($target, course, stop_day, stop_time);
-						return false;
-					}			
-					//console.log(check_conflict);
-					//console.log($target+course+stop_day+stop_time);		
-					$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)					
-						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
-						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一	 find()是找class!!		
-						if($td.text()!=""){
-							stop_day=iv.day;
-							stop_time=jv;
+				$.each(course.time_parsed,function(ik,iv){
+					$.each(iv.time,function(jk,jv){
+						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
+						if($td.text()!=""){							
 							check_conflict=true;
-							delete_conflict($target, course, stop_day, stop_time);
-							alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that time! Please drop out some class");
-							return false;
+							alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that 	time! Please drop out some class");
+							return false;//傳回false就是跳離迴圈
 						}	
-						else{
-							var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));						
-							//把上面的html格式匯入找到的td type中(	parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
-							// console.log($cell[0]);
+					});
+					if(check_conflict==true){
+						return false;
+					}
+				});
+				if(check_conflict==false){
+					$.each(course.time_parsed, function(ik, iv){							
+						$.each(iv.time, function(jk, jv){		//同上，iv.	time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)					
+							var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
+						  var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));						
+							//把上面的html格式匯入找到的td type中(	parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)							
 							$cell.find('.title').text(course.title_short).end()
 							$cell.find('input').val(course.code).end()		//	將對應的課程內容寫入cell的html語法中，.title就是class="title"
 							     .find('.professor').text(course.professor).end()//text()	會把東西填入找到的class那裡，end()會回到var $cell那一行
-							     .find('.location').text(course.location);	
-							//$cell.attr("code-value",course.code);
-							//$cell.attr("value",course.code);	//	我想要把選課號放進val裡面，可是抓出來都是空的
-							//console.log($cell.code_value);
+							     .find('.location').text(course.location);								
 							$td.html($cell.html());		//顯示課程，把cell.html()塞到<td>tag裡面
-						}							
-					})
-				})
+						});
+					});
+				}
+				
 			};
 
 			/**********這是用來刪除衝堂的課程***********/
