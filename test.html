@@ -205,8 +205,14 @@
                             <div class="col-xs-4 col-xs-4"><input type="checkbox" value="">通識</div>
                             <div class="col-xs-4 col-xs-4"><input type="checkbox" value="">體育</div>
                         </div>
-                        <select multiple class="form-control" id="elective-post">
-
+                        <select multiple class="form-control" id="">
+                        	<optgroup label="系選修" id="elective-post">                       
+                        	</optgroup>
+                        	<optgroup label="指定搜尋" id="specific-post"></optgroup>
+                        	<optgroup label="通識" id="general-post">                        	
+                        	</optgroup>
+                        	<optgroup label="體育" id="PE-post">                        		
+                        	</optgroup>                           
                         </select>
                     </div>
                 </div>
@@ -460,8 +466,8 @@
 						}
 						window.course_of_majors[iv.for_dept][iv.class].push(iv.code);//把東西推進這個陣列裡，概念跟stack一樣
 						window.courses[iv.code] = iv;//這邊可以直接把選課號當作索引值key，裡面的值為object
-						$.each(iv.time_parsed,function(jk,jv){//建立日期的陣列				
-							$.each(jv.time,function(mk,mv){
+						$.each(iv.time_parsed, function(jk, jv){//建立日期的陣列				
+							$.each(jv.time, function(mk,mv){
 								if(typeof(window.course_of_day[jv.day])=='undefined'){
 									window.course_of_day[jv.day]={};
 								}
@@ -530,18 +536,18 @@
 				$("#specific_search").click(function()	//可以用課號搜尋，把input的的課號用.val()取出
 				//$("#ok-button").click(function()
 				{											
-					var major=$("#v_major").val();//取到系
-					var level = $("#v_level").val();//取到年級
-					$('#time-table td').empty();
+					var major=$("#v_major").val();	//取到系
+					var level = $("#v_level").val();	//取到年級
+					reset();
 					var language = $("#change-language").val();
-					console.log(major+" "+level);
-					$.each(course_of_majors[major][level],function(ik,iv){						
+					//console.log(major+" "+level);
+					$.each(course_of_majors[major][level], function(ik ,iv){						
 							if(courses[iv].obligatory_tf==true){
 								add_course($('#time-table'), courses[iv], language);
 							}
 					});
-					$.each(course_of_majors[major], function(ik,iv){				
-						$.each(iv,function(jk,jv){													
+					$.each(course_of_majors[major], function(ik, iv){				
+						$.each(iv,function(jk, jv){													
 							if(courses[jv].obligatory_tf==false){
 								//console.log(jv);
 								elective_course(courses[jv], language);
@@ -551,15 +557,15 @@
 					//可以用課號搜尋，把input的的課號用.val()取出
 					var code = $("#class_code").val();		
 					if(code!=""){
-						elective_course(courses[code], language);
+						specific_course(courses[code], language);
 					}		
 
 					var class_title=$("#class_title").val();
 					if(class_title!=""){
-						$.each(name_of_course,function(ik,iv){
+						$.each(name_of_course, function(ik, iv){
 							if(ik.search(class_title)!=-1){
-								$.each(iv,function(jk,jv){
-									elective_course(jv, language);
+								$.each(iv,function(jk, jv){
+									specific_course(jv, language);
 								});
 							}							
 						})												
@@ -568,7 +574,7 @@
 					if(teacher!=""){
 						$.each(teacher_course[teacher], function(ik, iv){
 							//console.log("HAHA");
-							elective_course(iv, language);
+							specific_course(iv, language);
 						});
 					}			
 				});
@@ -598,8 +604,8 @@
 					var day=$(this).attr("data-day");
 					var hour=$(this).closest("tr").attr("data-hour");				
 					var language = $("#change-language").val();
-					$.each(course_of_day[day][hour],function(ik,iv){					
-						elective_course(course_of_day[day][hour][ik],language);	//因為我把同意時段的課程塞進陣列裡，所以要用index去取
+					$.each(course_of_day[day][hour], function(ik,iv){					
+						elective_course(course_of_day[day][hour][ik], language);	//因為我把同意時段的課程塞進陣列裡，所以要用index去取
 					})
 					
 				});
@@ -629,7 +635,32 @@
 				//var time = course.time_parsed.day+course.time_parsed.time;
 				var $option = $($.parseHTML('<option title="" style="color:#3074B5;" value=""></option>'));//把option做成dom，再把dom做成jQuery物件
 				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中	
-				$option.attr("title",time);//在title裡面放課堂時間
+				$option.attr("title", time);//在title裡面放課堂時間
+				$option.val(course.code);
+				//把現在找到的這門選修課課程代碼儲存到這個option，並用class表示
+				$elective.append($option);		//顯示課程，把$option放到elective-post
+			 };
+			 var specific_course = function(course, language){	
+			 	if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
+					throw 'title_parsed error';
+				if( language=="zh_TW" ){
+					course.title_short = course.title_parsed["zh_TW"];		//title_short是會自動宣告的區域變數，存沒有英文的課名			  	
+				}
+				else{
+					course.title_short = course.title_parsed["en_US"];			  	
+				}
+				var $elective = $("#specific-post");
+				var time = [];//time設定為空陣列
+				var $td;
+				time.push("上課時間:");
+				$.each(course.time_parsed, function(ik, iv){		
+					time.push("星期"+week[iv.day-1]+iv.time);//push是把裡面的元素變成陣列的一格		
+				})
+				time = time.join(' ');//把多個陣列用;分隔並合併指派給time
+				//var time = course.time_parsed.day+course.time_parsed.time;
+				var $option = $($.parseHTML('<option title="" style="color:#3074B5;" value=""></option>'));//把option做成dom，再把dom做成jQuery物件
+				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中	
+				$option.attr("title", time);//在title裡面放課堂時間
 				$option.val(course.code);
 				//把現在找到的這門選修課課程代碼儲存到這個option，並用class表示
 				$elective.append($option);		//顯示課程，把$option放到elective-post
@@ -650,11 +681,11 @@
 				}		
 				var stop_day,stop_time;	//這裡是刪除課程應該要停止的星期與節數
 				var check_conflict = false;	//他用來判斷是否衝堂，如果有則下面的if就會讓最外圈的each停止
-				$.each(course.time_parsed,function(ik,iv){
-					$.each(iv.time,function(jk,jv){
+				$.each(course.time_parsed,function(ik, iv){
+					$.each(iv.time,function(jk, jv){
 						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
 						if($td.text()!=""){							
-							check_conflict=true;
+							check_conflict = true;
 							alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that 	time! Please drop out some class");
 							return false;//傳回false就是跳離迴圈
 						}	
@@ -714,7 +745,11 @@
 						$td.empty();	//顯示課程，把cell.html()塞到<td>tag裡面
 					})
 				})
-			};			
+			};
+			var reset=function(){
+				$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
+				$('#elective-post').empty();//清掉選修課程
+			}			
 		})(jQuery);
 	    </script>
         </body>
