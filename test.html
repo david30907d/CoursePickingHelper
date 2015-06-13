@@ -202,13 +202,15 @@
                     <div class="col-xs-12" style = "background-color:#D9EDF7">
                         <div calss="row">
                             <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="elective-check">系選修</div>
+                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="specific-time-check">指定時間</div>
                             <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="specific-check">指定搜尋</div>
                             <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="general-check">通識</div>
                             <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="PE-check">體育</div>
                         </div>
-                        <select multiple class="form-control" id="">
+                        <select multiple class="form-control" id="bulletin-post">
                         	<optgroup label="系選修" id="elective-post" style="display:">
                         	</optgroup>
+                        	<optgroup label="指定時間" id="specific-time-post" style="display:"></optgroup>
                         	<optgroup label="指定搜尋" id="specific-post" style="display:"></optgroup>
                         	<optgroup label="通識" id="general-post" style="display:">  	
                         	</optgroup>
@@ -338,8 +340,8 @@
 				                            <option value="C10">文學院</option>
 				                            <option value="C20">管理學院</option>
 				                            <option value="C30">農業暨自然資源學院</option>
-				                            <option value="U11">中國文學系學士班</option>
-				                            <option value="U12">外國語文學系學士班</option>
+				                            <option value="中國文學系學士班">中國文學系學士班</option>
+				                            <option value="外國語文學系學士班">外國語文學系學士班</option>
 				                            <option value="U13">歷史學系學士班</option>
 				                            <option value="U21">財務金融學系學士班</option>
 				                            <option value="U23">企業管理學系學士班</option>
@@ -400,7 +402,7 @@
 				                <div class="form-group">
 				                    <label for="class_credit" class="col-xs-2 control-label">學分數</label>
 				                    <div class="col-xs-10">
-				                        <input type="teacher" class="form-control" id="class_credit">
+				                        <input type="teacher" class="form-control" id="class_credit" value="0" readonly><!--不讓使用者自己改學分數-->
 				                    </div>
 				                </div>
 				                <div class="form-group">
@@ -453,7 +455,8 @@
 		//var courses = null;
 			$(function(){
 				//當文件準備好的時候，讀入json檔
-				$.getJSON('json/course.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
+				$.getJSON('json/proto-course.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
+					window.credits=0//一開始的學分數是0
 					window.courses = {};//宣告一個空的物件
 					window.course_of_majors = {};//宣告一個空的物件
 					window.course_of_day = {};	//這是宣告日期的陣列
@@ -525,7 +528,7 @@
 					$a.serializeArray()[1].value
 					"U"
 				}*/	
-				$("#elective-post").delegate("option", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
+				$("#bulletin-post").delegate("option", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
 					var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
 					if(boolean){
 						var language = $("#change-language").val();						
@@ -533,16 +536,7 @@
 						course = courses[code];			
 						add_course($('#time-table'), course, language);	
 					}
-				});
-				$("#specific-post").delegate("option", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
-					var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
-					if(boolean){
-						var language = $("#change-language").val();						
-						var code = $(this).val();//this會代表我抓到的那個東西，也就是option						
-						course = courses[code];			
-						add_course($('#time-table'), course, language);	
-					}
-				});
+				});				
 				$("#specific_search").click(function()	//可以用課號搜尋，把input的的課號用.val()取出
 				//$("#ok-button").click(function()
 				{											
@@ -560,31 +554,29 @@
 						$.each(iv,function(jk, jv){													
 							if(courses[jv].obligatory_tf==false){
 								//console.log(jv);
-								elective_course(courses[jv], language);
+								bulletin_post($("#elective-post"),courses[jv], language);
 							}						
 						})
 					})//以上為必修 選修填入	
 					//可以用課號搜尋，把input的的課號用.val()取出
-					var code = $("#class_code").val();		
+					var code = $("#class_code").val();	//課號搜尋
 					if(code!=""){
-						specific_course(courses[code], language);
+						bulletin_post($("#specific-post"),courses[code], language);
 					}		
-
-					var class_title=$("#class_title").val();
+					var class_title=$("#class_title").val();//課程名稱搜尋
 					if(class_title!=""){
 						$.each(name_of_course, function(ik, iv){
 							if(ik.search(class_title)!=-1){
 								$.each(iv,function(jk, jv){
-									specific_course(jv, language);
+									bulletin_post($("#specific-post"),jv, language);
 								});
 							}							
 						})												
 					}	
-					var teacher = $("#class_teacher").val();
+					var teacher = $("#class_teacher").val();//老師名稱搜尋
 					if(teacher!=""){
-						$.each(teacher_course[teacher], function(ik, iv){
-							//console.log("HAHA");
-							specific_course(iv, language);
+						$.each(teacher_course[teacher], function(ik, iv){							
+							bulletin_post($("#specific-post"),iv, language);
 						});
 					}			
 				});
@@ -611,12 +603,18 @@
 						$("#change-language").val("zh_TW");
 				});
 				$("td").click(function(){	//按一下課表欄位就有課程彈出來了
-					var day=$(this).attr("data-day");
-					var hour=$(this).closest("tr").attr("data-hour");				
-					var language = $("#change-language").val();
-					$.each(course_of_day[day][hour], function(ik, iv){					
-						elective_course(course_of_day[day][hour][ik], language);	//因為我把同意時段的課程塞進陣列裡，所以要用index去取
-					})					
+					if($(this).text()==""){ //我現在才知道null!=""
+						var major=$("#v_major").val();	//取到系
+						var day=$(this).attr("data-day");
+						var hour=$(this).closest("tr").attr("data-hour");				
+						var language = $("#change-language").val();
+						$("#specific-time-post").empty();
+						$.each(course_of_day[day][hour], function(ik, iv){	
+							if(iv.for_dept==major){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列
+								bulletin_post($("#specific-time-post"),course_of_day[day][hour][ik], language);	//因為我把同一時段的課程塞進陣列裡，所以要用index去取
+							}											
+						})					
+					}					
 				});
 				$("#elective-check").change(function(){//用來檢查勾選表被選了沒
 					if ($(this).prop("checked")){//如果選了，就設定成隱藏的css屬性
@@ -624,6 +622,14 @@
 					};
 					if($(this).prop("checked")==false){//如果沒有就恢復成空的
 						$("#elective-post").css("display", "");
+					}
+				});
+				$("#specific-time-check").change(function(){
+					if ($(this).prop("checked")){
+						$("#specific-time-post").css("display", "none");
+					};
+					if($(this).prop("checked")==false){
+						$("#specific-time-post").css("display", "");
 					}
 				});
 				$("#specific-check").change(function(){
@@ -655,7 +661,7 @@
 			
 			window.week = ["一", "二", "三", "四", "五"];
 			/************這是用來把課程放到右邊的欄位**************/
-			var elective_course = function(course, language){	
+			var bulletin_post = function($target,course, language){	
 			 	if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
 				if( language=="zh_TW" ){
@@ -663,8 +669,7 @@
 				}
 				else{
 					course.title_short = course.title_parsed["en_US"];			  	
-				}
-				var $elective = $("#elective-post");
+				}				
 				var time = [];//time設定為空陣列
 				var $td;
 				time.push("上課時間:");
@@ -677,35 +682,9 @@
 				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中	
 				$option.attr("title", time);//在title裡面放課堂時間
 				$option.val(course.code);
-				//把現在找到的這門選修課課程代碼儲存到這個option，並用class表示
-				$elective.append($option);		//顯示課程，把$option放到elective-post
+				//把現在找到的這門選修課課程代碼儲存到這個option，並用value表示
+				$target.append($option);		//顯示課程，把$option放到elective-post，append是追加在後面
 			 };
-			 var specific_course = function(course, language){	
-			 	if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
-					throw 'title_parsed error';
-				if( language=="zh_TW" ){
-					course.title_short = course.title_parsed["zh_TW"];		//title_short是會自動宣告的區域變數，存沒有英文的課名			  	
-				}
-				else{
-					course.title_short = course.title_parsed["en_US"];			  	
-				}
-				var $elective = $("#specific-post");
-				var time = [];//time設定為空陣列
-				var $td;
-				time.push("上課時間:");
-				$.each(course.time_parsed, function(ik, iv){		
-					time.push("星期"+week[iv.day-1]+iv.time);//push是把裡面的元素變成陣列的一格		
-				})
-				time = time.join(' ');//把多個陣列用;分隔並合併指派給time
-				//var time = course.time_parsed.day+course.time_parsed.time;
-				var $option = $($.parseHTML('<option title="" style="color:#3074B5;" value=""></option>'));//把option做成dom，再把dom做成jQuery物件
-				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中	
-				$option.attr("title", time);//在title裡面放課堂時間
-				$option.val(course.code);
-				//把現在找到的這門選修課課程代碼儲存到這個option，並用class表示
-				$elective.append($option);		//顯示課程，把$option放到elective-post
-			 };
-
 			 var add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
 				if( !$.isArray(course.time_parsed) )
 					throw 'time_parsed error';		//判斷time-parsed是不是陣列
@@ -747,6 +726,7 @@
 							$td.html($cell.html());		//顯示課程，把cell.html()塞到<td>tag裡面
 						});
 					});
+					add_credits(course);
 				}
 				
 			};
@@ -775,7 +755,7 @@
 			};
 
 			/**********這個函式是用來刪除一整門課程的**********/
-			var delete_course = function($target, course) {		
+			var delete_course = function($target, course) {
 			//假設target為time-table的參數，course為courses的某一個課程				
 				$.each(course.time_parsed, function(ik, iv){
 				//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
@@ -785,10 +765,24 @@
 						$td.empty();	//顯示課程，把cell.html()塞到<td>tag裡面
 					})
 				})
+				minus_credits(course);
+			};
+			var add_credits = function(course){//增加學分
+				window.credits+=parseInt(course.credits);//要先把字串型態的學分轉成int才能做加減
+				$("#class_credit").val(window.credits);
+			};
+			var minus_credits = function(course){
+				window.credits-=parseInt(course.credits);
+				$("#class_credit").val(window.credits);
 			};
 			var reset=function(){
 				$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
-				$('#elective-post').empty();//清掉選修課程
+				$('#elective-post').empty();//以下是要清掉選修課程、指定時間搜尋等課程
+				$('#specific-time-post').empty();
+				$('#specific-post').empty();
+				$('#general-post').empty();
+				$('#PE-post').empty();
+				$("#class_credit").val(0);
 			}			
 		})(jQuery);
 	    </script>
