@@ -97,71 +97,71 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr data-hour="1" class="active">
-                                <th>08:10 - 09:00</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr data-hour="2" class="active">
-                                <th>09:10 - 10:00</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr data-hour="3" class="active">
-                                <th>10:10 - 11:00</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr data-hour="4" class="active">
-                                <th>11:10 - 12:00</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr data-hour="5" class="active">
-                                <th>13:10 - 14:00</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr data-hour="6" class="active">
-                                <th>14:10 - 15:00</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr data-hour="7" class="active">
-                                <th>15:10 - 16:00</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr data-hour="8" class="active">
-                                <th>16:10 - 17:00</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
+								<tr data-hour="1" class="active">
+									<th>08:10 - 09:00</th>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
+								</tr>
+								<tr data-hour="2" class="active">
+									<th>09:10 - 10:00</th>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
+								</tr>
+								<tr data-hour="3" class="active">
+									<th>10:10 - 11:00</th>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
+								</tr>
+								<tr data-hour="4" class="active">
+									<th>11:10 - 12:00</th>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
+								</tr>
+								<tr data-hour="5" class="active">
+									<th>13:10 - 14:00</th>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
+								</tr>
+								<tr data-hour="6" class="active">
+									<th>14:10 - 15:00</th>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
+								</tr>
+								<tr data-hour="7" class="active">
+									<th>15:10 - 16:00</th>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
+								</tr>
+								<tr data-hour="8" class="active">
+									<th>16:10 - 17:00</th>
+									<td data-day="1"></td>
+									<td data-day="2"></td>
+									<td data-day="3"></td>
+									<td data-day="4"></td>
+									<td data-day="5"></td>
+								</tr>
+							</tbody>
                     </table>
                 </div>
             </div>
@@ -201,12 +201,21 @@
                 <div calss="row">
                     <div class="col-xs-12" style = "background-color:#D9EDF7">
                         <div calss="row">
-                            <div class="col-xs-4 col-xs-4"><input type="checkbox" value="">選修</div>
-                            <div class="col-xs-4 col-xs-4"><input type="checkbox" value="">通識</div>
-                            <div class="col-xs-4 col-xs-4"><input type="checkbox" value="">體育</div>
+                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="elective-check">系選修</div>
+                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="specific-time-check">指定時間</div>
+                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="specific-check">指定搜尋</div>
+                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="general-check">通識</div>
+                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="PE-check">體育</div>
                         </div>
-                        <select multiple class="form-control" id="elective-post">
-
+                        <select multiple class="form-control" id="bulletin-post">
+                        	<optgroup label="系選修" id="elective-post" style="display:">
+                        	</optgroup>
+                        	<optgroup label="指定時間" id="specific-time-post" style="display:"></optgroup>
+                        	<optgroup label="指定搜尋" id="specific-post" style="display:"></optgroup>
+                        	<optgroup label="通識" id="general-post" style="display:">  	
+                        	</optgroup>
+                        	<optgroup label="體育" id="PE-post" style="display:">      		
+                        	</optgroup>                           
                         </select>
                     </div>
                 </div>
@@ -286,6 +295,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="modal fade modal fade bs-example-modal-lg" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -323,15 +333,15 @@
 				                    </div>
 				                </div>
 				                <div class="form-group">
-				                    <label for="v_dept" class="col-xs-2 control-label">系所</label>
+				                    <label for="v_major" class="col-xs-2 control-label">系所</label>
 				                    <div class="col-xs-10">
-				                        <select class="form-control" name="v_dept" id="v_dept">
+				                        <select class="form-control" name="v_major" id="v_major">
 				                            <option value="0">請選擇系所</option>
 				                            <option value="C10">文學院</option>
 				                            <option value="C20">管理學院</option>
 				                            <option value="C30">農業暨自然資源學院</option>
-				                            <option value="U11">中國文學系學士班</option>
-				                            <option value="U12">外國語文學系學士班</option>
+				                            <option value="中國文學系學士班">中國文學系學士班</option>
+				                            <option value="外國語文學系學士班">外國語文學系學士班</option>
 				                            <option value="U13">歷史學系學士班</option>
 				                            <option value="U21">財務金融學系學士班</option>
 				                            <option value="U23">企業管理學系學士班</option>
@@ -362,7 +372,7 @@
 				                            <option value="U53B">應用數學系學士班</option>
 				                            <option value="U54A">物理學系一般物理組學士班</option>
 				                            <option value="U54B">物理學系光電物理組學士班</option>
-				                            <option value="U56">資訊科學與工程學系學士班</option>
+				                            <option value="資訊科學與工程學系學士班">資訊科學與工程學系學士班</option>
 				                            <option value="U60F">學士後太陽能光電系統應用學士學位學程</option>
 				                            <option value="U61B">機械工程學系學士班</option>
 				                            <option value="U61A">機械工程學系學士班</option>
@@ -392,7 +402,7 @@
 				                <div class="form-group">
 				                    <label for="class_credit" class="col-xs-2 control-label">學分數</label>
 				                    <div class="col-xs-10">
-				                        <input type="teacher" class="form-control" id="class_credit">
+				                        <input type="teacher" class="form-control" id="class_credit" value="0" readonly><!--不讓使用者自己改學分數-->
 				                    </div>
 				                </div>
 				                <div class="form-group">
@@ -445,9 +455,13 @@
 		//var courses = null;
 			$(function(){
 				//當文件準備好的時候，讀入json檔
-				$.getJSON('json/course.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
+				$.getJSON('json/proto-course.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
+					window.credits=0//一開始的學分數是0
 					window.courses = {};//宣告一個空的物件
 					window.course_of_majors = {};//宣告一個空的物件
+					window.course_of_day = {};	//這是宣告日期的陣列
+					window.teacher_course = {};	//這是以老師姓名為index的陣列
+					window.name_of_course = {};	//這是以課程名稱為index的陣列
 					$.each(json.course, function(ik, iv){
 						if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
 							window.course_of_majors[iv.for_dept] = {};  
@@ -455,15 +469,36 @@
 							window.course_of_majors[iv.for_dept][iv.class] = [];//如果這一行(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，[]裡面的是放陣列
 						}
 						window.course_of_majors[iv.for_dept][iv.class].push(iv.code);//把東西推進這個陣列裡，概念跟stack一樣
-						window.courses[iv.code] = iv;//這邊可以直接把選課號當作索引值key，裡面的值為object				
-					});
-					//console.log(window.courses, window.course_of_majors);
+						window.courses[iv.code] = iv;//這邊可以直接把選課號當作索引值key，裡面的值為object
+						$.each(iv.time_parsed, function(jk, jv){//建立日期的陣列				
+							$.each(jv.time, function(mk, mv){
+								if(typeof(window.course_of_day[jv.day])=='undefined'){
+									window.course_of_day[jv.day]={};
+								}
+								if(typeof(window.course_of_day[jv.day][mv])=='undefined'){
+									window.course_of_day[jv.day][mv]=[];
+								}
+								window.course_of_day[jv.day][mv].push(iv);
+							})
+						})		
+						if(typeof(window.teacher_course[iv.professor])=='undefined'){//建立老師名稱的陣列
+							window.teacher_course[iv.professor]=[];
+						}
+						window.teacher_course[iv.professor].push(iv);	
+						if(typeof(window.name_of_course[iv.title_parsed.zh_TW])=='undefined'){//中文課名陣列
+							window.name_of_course[iv.title_parsed.zh_TW]=[];
+						}																				
+						window.name_of_course[iv.title_parsed.zh_TW].push(iv);
+						if(typeof(window.name_of_course[iv.title_parsed.en_US])=='undefined'){//英文課名陣列
+							window.name_of_course[iv.title_parsed.en_US]=[];
+						}																				
+						window.name_of_course[iv.title_parsed.en_US].push(iv);
+					});					
 				});
 				$("#v_career").change(function()
 				{
 					select_degree($("#v_career").val());
-				});
-				//var select_degree = function(degree)
+				});				
 				var select_degree = function(degree)
 				{
 					cozsnsole.log(degree);
@@ -472,10 +507,9 @@
 						case "U":
 
 						case "G":
-							$("#v_dept").prepend("<option value='100'>OK!!</option>");
-							break;
+
 						case "D":
-							break;
+
 						case "R":
 
 						case "W":
@@ -488,23 +522,13 @@
 					$a = $($0)//取到年級選單
 					//[<form class=​"form-horizontal">​…​</form>​]
 					$a.serializeArray()
-					[Objectname: "v_year"value: "103_2"__proto__: Object, Objectname: "v_career"value: "U"__proto__: Object, Objectname: "v_dept"value: "C10"__proto__: Object, Objectname: "v_level"value: "1"__proto__: Object]
+					[Objectname: "v_year"value: "103_2"__proto__: Object, Objectname: "v_career"value: "U"__proto__: Object, Objectname: "v_major"value: "C10"__proto__: Object, Objectname: "v_level"value: "1"__proto__: Object]
 					$a.serializeArray()[0].name
 					"v_year"
 					$a.serializeArray()[1].value
 					"U"
 				}*/	
-				
-				//$("#ok-button").click(function(){
-				/*
-				$("#specific_search").click(function(){	//可以用課號搜尋，把input的的課號用.val()取出
-					var code = $("#class_code").val();
-					var language = $("#change-language").val();
-					elective_course(courses[code], language);
-				})
-				*/
-
-				$("#elective-post").delegate("option","click",function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
+				$("#bulletin-post").delegate("option", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
 					var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
 					if(boolean){
 						var language = $("#change-language").val();						
@@ -512,27 +536,49 @@
 						course = courses[code];			
 						add_course($('#time-table'), course, language);	
 					}
-				});
-                
+				});				
 				$("#specific_search").click(function()	//可以用課號搜尋，把input的的課號用.val()取出
 				//$("#ok-button").click(function()
 				{											
-					var level = $("#v_level").val();
-					console.log(level);
-					$('#time-table td').empty();
+					var major=$("#v_major").val();	//取到系
+					var level = $("#v_level").val();	//取到年級
+					reset();
 					var language = $("#change-language").val();
-					console.log(language);
-					$.each(courses, function(ik,iv)
-					{
-						if(iv.class==level && iv.obligatory_tf==true)
-						{
-							add_course($('#time-table'), courses[ik], language);
-						}	
-						else if(iv.class==level && iv.obligatory_tf==false)
-						{
-							elective_course(courses[ik], language);
-						}						
-					})							
+					//console.log(major+" "+level);
+					$.each(course_of_majors[major][level], function(ik, iv){
+							if(courses[iv].obligatory_tf==true){
+								add_course($('#time-table'), courses[iv], language);
+							}
+					});
+					$.each(course_of_majors[major], function(ik, iv){				
+						$.each(iv,function(jk, jv){													
+							if(courses[jv].obligatory_tf==false){
+								//console.log(jv);
+								bulletin_post($("#elective-post"),courses[jv], language);
+							}						
+						})
+					})//以上為必修 選修填入	
+					//可以用課號搜尋，把input的的課號用.val()取出
+					var code = $("#class_code").val();	//課號搜尋
+					if(code!=""){
+						bulletin_post($("#specific-post"),courses[code], language);
+					}		
+					var class_title=$("#class_title").val();//課程名稱搜尋
+					if(class_title!=""){
+						$.each(name_of_course, function(ik, iv){
+							if(ik.search(class_title)!=-1){
+								$.each(iv,function(jk, jv){
+									bulletin_post($("#specific-post"),jv, language);
+								});
+							}							
+						})												
+					}	
+					var teacher = $("#class_teacher").val();//老師名稱搜尋
+					if(teacher!=""){
+						$.each(teacher_course[teacher], function(ik, iv){							
+							bulletin_post($("#specific-post"),iv, language);
+						});
+					}			
 				});
 
 				$("#clear-button").click(function()
@@ -556,42 +602,89 @@
 					else
 						$("#change-language").val("zh_TW");
 				});
-				$("td").click(function(){
-					//var day=
-					var $td = $target.find('tr[data-hour='+jv+'] td:eq('+(iv.day-1)+')');	
+				$("td").click(function(){	//按一下課表欄位就有課程彈出來了
+					if($(this).text()==""){ //我現在才知道null!=""
+						var major=$("#v_major").val();	//取到系
+						var day=$(this).attr("data-day");
+						var hour=$(this).closest("tr").attr("data-hour");				
+						var language = $("#change-language").val();
+						$("#specific-time-post").empty();
+						$.each(course_of_day[day][hour], function(ik, iv){	
+							if(iv.for_dept==major){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列
+								bulletin_post($("#specific-time-post"),course_of_day[day][hour][ik], language);	//因為我把同一時段的課程塞進陣列裡，所以要用index去取
+							}											
+						})					
+					}					
+				});
+				$("#elective-check").change(function(){//用來檢查勾選表被選了沒
+					if ($(this).prop("checked")){//如果選了，就設定成隱藏的css屬性
+						$("#elective-post").css("display", "none");
+					};
+					if($(this).prop("checked")==false){//如果沒有就恢復成空的
+						$("#elective-post").css("display", "");
+					}
+				});
+				$("#specific-time-check").change(function(){
+					if ($(this).prop("checked")){
+						$("#specific-time-post").css("display", "none");
+					};
+					if($(this).prop("checked")==false){
+						$("#specific-time-post").css("display", "");
+					}
+				});
+				$("#specific-check").change(function(){
+					if ($(this).prop("checked")){
+						$("#specific-post").css("display", "none");
+					};
+					if($(this).prop("checked")==false){
+						$("#specific-post").css("display", "");
+					}
+				});
+				$("#general-check").change(function(){
+					if ($(this).prop("checked")){
+						$("#general-post").css("display", "none");
+					};
+					if($(this).prop("checked")==false){
+						$("#general-post").css("display", "");
+					}
+				});
+				$("#PE-check").change(function(){
+					if ($(this).prop("checked")){
+						$("#PE-post").css("display", "none");
+					};
+					if($(this).prop("checked")==false){
+						$("#PE-post").css("display", "");
+					}
 				});
 			});
 
 			
-			var week = ["一", "二", "三", "四", "五"];
+			window.week = ["一", "二", "三", "四", "五"];
 			/************這是用來把課程放到右邊的欄位**************/
-			var elective_course=function(course,language){	
+			var bulletin_post = function($target,course, language){	
 			 	if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
 				if( language=="zh_TW" ){
-					course.title_short = course.title_parsed["zh_TW"];		//title_short是會自動宣告的區域變數，存沒有英文的課名
-			  	//console.log( "這是中文的"+course.title_shortCh);
+					course.title_short = course.title_parsed["zh_TW"];		//title_short是會自動宣告的區域變數，存沒有英文的課名			  	
 				}
 				else{
-					course.title_short = course.title_parsed["en_US"];
-			  	//console.log(course.title_shortEn);
-				}
-				var $elective = $("#elective-post");
+					course.title_short = course.title_parsed["en_US"];			  	
+				}				
 				var time = [];//time設定為空陣列
 				var $td;
+				time.push("上課時間:");
 				$.each(course.time_parsed, function(ik, iv){		
 					time.push("星期"+week[iv.day-1]+iv.time);//push是把裡面的元素變成陣列的一格		
 				})
-				time = time.join('; ');//把多個陣列用;分隔並合併指派給time
+				time = time.join(' ');//把多個陣列用;分隔並合併指派給time
 				//var time = course.time_parsed.day+course.time_parsed.time;
 				var $option = $($.parseHTML('<option title="" style="color:#3074B5;" value=""></option>'));//把option做成dom，再把dom做成jQuery物件
 				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中	
-				$option.attr("title",time);//在title裡面放課堂時間
+				$option.attr("title", time);//在title裡面放課堂時間
 				$option.val(course.code);
-				//把現在找到的這門選修課課程代碼儲存到這個option，並用class表示
-				$elective.append($option);		//顯示課程，把$option放到elective-post
+				//把現在找到的這門選修課課程代碼儲存到這個option，並用value表示
+				$target.append($option);		//顯示課程，把$option放到elective-post，append是追加在後面
 			 };
-
 			 var add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
 				if( !$.isArray(course.time_parsed) )
 					throw 'time_parsed error';		//判斷time-parsed是不是陣列
@@ -599,56 +692,47 @@
 					throw 'title_parsed error';
 				if(language == "zh_TW"){
 					var tmpCh = course.title_parsed["zh_TW"].split(' ');		//(這是中文課名)切割課程名稱，遇到空格就切開
-					course.title_short = tmpCh[0];		//title_short是會自動宣告的區域變數，存沒有英文的課名
-			  	//console.log( "這是中文的"+course.title_shortCh);
+					course.title_short = tmpCh[0];		//title_short是會自動宣告的區域變數，存沒有英文的課名			  	
 				}
 				else{
 					var tmpEn = course.title_parsed["en_US"];
-					course.title_short = tmpEn;
-			  	//console.log(course.title_shortEn);
+					course.title_short = tmpEn;			  	
 				}		
 				var stop_day,stop_time;	//這裡是刪除課程應該要停止的星期與節數
 				var check_conflict = false;	//他用來判斷是否衝堂，如果有則下面的if就會讓最外圈的each停止
-				$.each(course.time_parsed, function(ik, iv){
-					//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)								
-					if(check_conflict){
-						//console.log(check_conflict);
-						console.log($target + course + stop_day + stop_time);
-						delete_conflict($target, course, stop_day, stop_time);
-						return false;
-					}			
-					//console.log(check_conflict);
-					//console.log($target+course+stop_day+stop_time);		
-					$.each(iv.time, function(jk, jv){		//同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)					
-						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
-						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一	 find()是找class!!		
-						if($td.text()!=""){
-							stop_day=iv.day;
-							stop_time=jv;
-							check_conflict=true;
-							delete_conflict($target, course, stop_day, stop_time);
-							alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that time! Please drop out some class");
-							return false;
+				$.each(course.time_parsed,function(ik, iv){
+					$.each(iv.time,function(jk, jv){
+						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
+						if($td.text()!=""){							
+							check_conflict = true;
+							alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that 	time! Please drop out some class");
+							return false;//傳回false就是跳離迴圈
 						}	
-						else{
-							var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));						
-							//把上面的html格式匯入找到的td type中(	parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
-							// console.log($cell[0]);
+					});
+					if(check_conflict==true){
+						return false;
+					}
+				});
+				if(check_conflict==false){
+					$.each(course.time_parsed, function(ik, iv){							
+						$.each(iv.time, function(jk, jv){		//同上，iv.	time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)					
+							var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
+						  var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));						
+							//把上面的html格式匯入找到的td type中(	parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)							
 							$cell.find('.title').text(course.title_short).end()
 							$cell.find('input').val(course.code).end()		//	將對應的課程內容寫入cell的html語法中，.title就是class="title"
 							     .find('.professor').text(course.professor).end()//text()	會把東西填入找到的class那裡，end()會回到var $cell那一行
-							     .find('.location').text(course.location);	
-							//$cell.attr("code-value",course.code);
-							//$cell.attr("value",course.code);	//	我想要把選課號放進val裡面，可是抓出來都是空的
-							//console.log($cell.code_value);
+							     .find('.location').text(course.location);								
 							$td.html($cell.html());		//顯示課程，把cell.html()塞到<td>tag裡面
-						}							
-					})
-				})
+						});
+					});
+					add_credits(course);
+				}
+				
 			};
 
 			/**********這是用來刪除衝堂的課程***********/
-			var delete_conflict = function($target, course,stop_day,stop_time) {		
+			var delete_conflict = function($target, course, stop_day, stop_time) {		
 			//假設target為time-table的參數，course為courses的某一個課程
 				$.each(course.time_parsed, function(ik, iv){
 					//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)	
@@ -671,7 +755,7 @@
 			};
 
 			/**********這個函式是用來刪除一整門課程的**********/
-			var delete_course = function($target, course) {		
+			var delete_course = function($target, course) {
 			//假設target為time-table的參數，course為courses的某一個課程				
 				$.each(course.time_parsed, function(ik, iv){
 				//each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
@@ -681,7 +765,25 @@
 						$td.empty();	//顯示課程，把cell.html()塞到<td>tag裡面
 					})
 				})
-			};			
+				minus_credits(course);
+			};
+			var add_credits = function(course){//增加學分
+				window.credits+=parseInt(course.credits);//要先把字串型態的學分轉成int才能做加減
+				$("#class_credit").val(window.credits);
+			};
+			var minus_credits = function(course){
+				window.credits-=parseInt(course.credits);
+				$("#class_credit").val(window.credits);
+			};
+			var reset=function(){
+				$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
+				$('#elective-post').empty();//以下是要清掉選修課程、指定時間搜尋等課程
+				$('#specific-time-post').empty();
+				$('#specific-post').empty();
+				$('#general-post').empty();
+				$('#PE-post').empty();
+				$("#class_credit").val(0);
+			}			
 		})(jQuery);
 	    </script>
         </body>
