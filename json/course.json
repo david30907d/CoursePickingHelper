@@ -1,0 +1,858 @@
+{
+    "course": [{
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "服務學習(二)：勞作教育 y`Service-LearningII:Student Labor Education and Work-Study Management",
+        "title_parsed": {
+            "zh_TW": "服務學習(二)：勞作教育 y",
+            "en_US": "Service-LearningII:Student Labor Education and Work-Study Management"
+        },
+        "hours_parsed": 2,
+        "credits": "0",
+        "department": "學務處",
+        "obligatory_tf": true,
+        "number": "200",
+        "code": "1037",
+        "time_parsed": [{
+            "day": 4,
+            "time": [8, 9]
+        }],
+        "credits_parsed": 0,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "",
+        "location": "",
+        "professor": "全體教師",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 200,
+        "year": "半",
+        "time": "489"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "微積分(二) u`Calculus(II)",
+        "title_parsed": {
+            "zh_TW": "微積分(二) u",
+            "en_US": "Calculus(II)"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "應數系",
+        "obligatory_tf": true,
+        "number": "60",
+        "code": "1260",
+        "time_parsed": [{
+            "day": 2,
+            "time": [3, 4]
+        }, {
+            "day": 3,
+            "time": [2]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S102",
+        "professor": "施因澤",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "234,32"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "普通物理學實驗 d`General Physics Lab",
+        "title_parsed": {
+            "zh_TW": "普通物理學實驗 d",
+            "en_US": "General Physics Lab"
+        },
+        "hours_parsed": 3,
+        "credits": "1",
+        "department": "物理系",
+        "obligatory_tf": true,
+        "number": "60",
+        "code": "1268",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 1,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S2A06",
+        "professor": "陳光胤",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "4567"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "普通物理學 e`General Physics",
+        "title_parsed": {
+            "zh_TW": "普通物理學 e",
+            "en_US": "General Physics"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "物理系",
+        "obligatory_tf": true,
+        "number": "60",
+        "code": "1285",
+        "time_parsed": [{
+            "day": 1,
+            "time": [1]
+        }, {
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S102",
+        "professor": "劉瑞堂",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "11,434"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "機率 `Probability",
+        "title_parsed": {
+            "zh_TW": "機率",
+            "en_US": "Probability"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "70",
+        "code": "1301",
+        "time_parsed": [{
+            "day": 1,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S1001",
+        "professor": "余明興",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 70,
+        "year": "半",
+        "time": "1234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "物件導向程式設計 `Object-Oriented Programming",
+        "title_parsed": {
+            "zh_TW": "物件導向程式設計",
+            "en_US": "Object-Oriented Programming"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "80",
+        "code": "1302",
+        "time_parsed": [{
+            "day": 1,
+            "time": [8]
+        }, {
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S1001",
+        "professor": "廖宜恩",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 80,
+        "year": "半",
+        "time": "18,378"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "演算法 `Algorithms",
+        "title_parsed": {
+            "zh_TW": "演算法",
+            "en_US": "Algorithms"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "81",
+        "code": "2347",
+        "time_parsed": [{
+            "day": 2,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S1001",
+        "professor": "林添進",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 81,
+        "year": "半",
+        "time": "2234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "計算機網路 `Computer Networks",
+        "title_parsed": {
+            "zh_TW": "計算機網路",
+            "en_US": "Computer Networks"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "90",
+        "code": "2348",
+        "time_parsed": [{
+            "day": 2,
+            "time": [6, 7, 8]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S1001",
+        "professor": "王丕中",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 90,
+        "year": "半",
+        "time": "2678"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "電子電路學 `Electronic Circuit",
+        "title_parsed": {
+            "zh_TW": "電子電路學",
+            "en_US": "Electronic Circuit"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "80",
+        "code": "2349",
+        "time_parsed": [{
+            "day": 4,
+            "time": [6, 7, 8]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S101",
+        "professor": "王行健",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 80,
+        "year": "半",
+        "time": "4678"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "組合語言與系統程式 `Assenbly Language and System Programming",
+        "title_parsed": {
+            "zh_TW": "組合語言與系統程式",
+            "en_US": "Assenbly Language and System Programming"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "90",
+        "code": "2351",
+        "time_parsed": [{
+            "day": 4,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S1001",
+        "professor": "張軒彬",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 90,
+        "year": "半",
+        "time": "4234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "邏輯設計實驗 `Logic Design Lab.",
+        "title_parsed": {
+            "zh_TW": "邏輯設計實驗",
+            "en_US": "Logic Design Lab."
+        },
+        "hours_parsed": 3,
+        "credits": "1",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "66",
+        "code": "2352",
+        "time_parsed": [{
+            "day": 3,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 1,
+        "obligatory": "必修",
+        "previous": "邏輯設計",
+        "language": "中文",
+        "location": "S1022A",
+        "professor": "張延任",
+        "class": "2",
+        "hours": "3",
+        "note": "先修科目須達40分以上",
+        "number_parsed": 66,
+        "year": "半",
+        "time": "3234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "統計學 `Statistics",
+        "title_parsed": {
+            "zh_TW": "統計學",
+            "en_US": "Statistics"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "2353",
+        "time_parsed": [{
+            "day": 5,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S101",
+        "professor": "林添進",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "5234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "計算機組織 `Computer Organization",
+        "title_parsed": {
+            "zh_TW": "計算機組織",
+            "en_US": "Computer Organization"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "76",
+        "code": "3359",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "組合語言與系統程式 等",
+        "language": "中文",
+        "location": "S1001",
+        "professor": "林偉",
+        "class": "3",
+        "hours": "3",
+        "note": "先修科目須達60分以上",
+        "number_parsed": 76,
+        "year": "半",
+        "time": "1567"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資料庫管理系統導論 *`Introduction to Database Management System",
+        "title_parsed": {
+            "zh_TW": "資料庫管理系統導論 *",
+            "en_US": "Introduction to Database Management System"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "75",
+        "code": "3360",
+        "time_parsed": [{
+            "day": 3,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S701",
+        "professor": "賈坤芳",
+        "class": "3",
+        "hours": "3",
+        "note": "Z",
+        "number_parsed": 75,
+        "year": "半",
+        "time": "3567"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "嵌入式處理器架構與應用 `Embedded Processor Architecture and Application",
+        "title_parsed": {
+            "zh_TW": "嵌入式處理器架構與應用",
+            "en_US": "Embedded Processor Architecture and Application"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "30",
+        "code": "3364",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "計算機組織 等",
+        "language": "中文",
+        "location": "S1022A",
+        "professor": "張延任",
+        "class": "3",
+        "hours": "3",
+        "note": "先修科目須達60分以上",
+        "number_parsed": 30,
+        "year": "半",
+        "time": "4567"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) a`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) a",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3365",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "張軒彬",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) b`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) b",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3366",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "張延任",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) c`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) c",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3367",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "洪國寶",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) d`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) d",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3368",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "喻石生",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) e`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) e",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3369",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "廖宜恩",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) f`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) f",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3370",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "范耀中",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) g`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) g",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3371",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "官大智",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) h`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) h",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3372",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "曾學文",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "數位色彩科學導論與應用 `Introduction to Digital Color Science and Applications",
+        "title_parsed": {
+            "zh_TW": "數位色彩科學導論與應用",
+            "en_US": "Introduction to Digital Color Science and Applications"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "3373",
+        "time_parsed": [{
+            "day": 2,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "計算機程式設計 等",
+        "language": "中文",
+        "location": "S702A",
+        "professor": "王宗銘",
+        "class": "3",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "2234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "成圖技術與應用 `Rendering Techniques and Applications",
+        "title_parsed": {
+            "zh_TW": "成圖技術與應用",
+            "en_US": "Rendering Techniques and Applications"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "31",
+        "code": "3374",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S702A",
+        "professor": "黃春融",
+        "class": "3",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "2567"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "雲端運算導論 `Introduction to Cloud Computing",
+        "title_parsed": {
+            "zh_TW": "雲端運算導論",
+            "en_US": "Introduction to Cloud Computing"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "3375",
+        "time_parsed": [{
+            "day": 4,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S106",
+        "professor": "曾學文",
+        "class": "3",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "4234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "軟體工程 `Software Engineering",
+        "title_parsed": {
+            "zh_TW": "軟體工程",
+            "en_US": "Software Engineering"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "4156",
+        "time_parsed": [{
+            "day": 3,
+            "time": [6, 7, 8]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S106",
+        "professor": "范耀中",
+        "class": "4",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "3678"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊安全與密碼學 `Information Security and Cryptography",
+        "title_parsed": {
+            "zh_TW": "資訊安全與密碼學",
+            "en_US": "Information Security and Cryptography"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "4157",
+        "time_parsed": [{
+            "day": 3,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S702A",
+        "professor": "洪國寶",
+        "class": "4",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "3234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "綠能資訊科技導論 `Introduction to Green Computing Technology",
+        "title_parsed": {
+            "zh_TW": "綠能資訊科技導論",
+            "en_US": "Introduction to Green Computing Technology"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "4159",
+        "time_parsed": [{
+            "day": 2,
+            "time": [6, 7, 8]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S102",
+        "professor": "范耀中",
+        "class": "4",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "2678"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "智慧型手機應用程式開發 `Smart Phone Application Development",
+        "title_parsed": {
+            "zh_TW": "智慧型手機應用程式開發",
+            "en_US": "Smart Phone Application Development"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "31",
+        "code": "4160",
+        "time_parsed": [{
+            "day": 1,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S821",
+        "professor": "陳煥",
+        "class": "4",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "1234"
+    }]
+}
