@@ -446,7 +446,7 @@
 						var language = $("#change-language").val();
 						var code = $(this).val();//this會代表我抓到的那個東西，也就是option						
 						course = courses[code];			
-						add_course($('#time-table'), course, language);	
+						add_course($('#time-table'), course, "en_US");	
 					}
 				});				
 				$("#specific_search").click(function()	//可以用課號搜尋，把input的的課號用.val()取出
@@ -455,32 +455,31 @@
 					var major=$("#v_major").val();	//取到系
 					var level = $("#v_level").val();	//取到年級
 					reset();
-					var language = $("#change-language").val();
 					//console.log(major+" "+level);
 					$.each(course_of_majors[major][level], function(ik, iv){
 							if(courses[iv].obligatory_tf==true){
-								add_course($('#time-table'), courses[iv], language);
+								add_course($('#time-table'), courses[iv], "en_US");
 							}
 					});
 					$.each(course_of_majors[major], function(ik, iv){				
 						$.each(iv,function(jk, jv){													
 							if(courses[jv].obligatory_tf==false){
 								//console.log(jv);
-								bulletin_post($("#elective-post"),courses[jv], language);
+								bulletin_post($("#elective-post"),courses[jv], "en_US");
 							}						
 						})
 					})//以上為必修 選修填入	
 					//可以用課號搜尋，把input的的課號用.val()取出
 					var code = $("#class_code").val();	//課號搜尋
 					if(code!=""){
-						bulletin_post($("#specific-post"),courses[code], language);
+						bulletin_post($("#specific-post"),courses[code], "en_US");
 					}		
 					var class_title=$("#class_title").val();//課程名稱搜尋
 					if(class_title!=""){
 						$.each(name_of_course, function(ik, iv){
 							if(ik.search(class_title)!=-1){
 								$.each(iv,function(jk, jv){
-									bulletin_post($("#specific-post"),jv, language);
+									bulletin_post($("#specific-post"),jv, "en_US");
 								});
 							}							
 						})												
@@ -488,7 +487,7 @@
 					var teacher = $("#class_teacher").val();//老師名稱搜尋
 					if(teacher!=""){
 						$.each(teacher_course[teacher], function(ik, iv){							
-							bulletin_post($("#specific-post"),iv, language);
+							bulletin_post($("#specific-post"),iv, "en_US");
 						});
 					}			
 				});
@@ -507,23 +506,15 @@
 						delete_course($('#time-table'), courses[code]);	//就跟add_course一樣，只是把填東西改成刪掉			
 					}					
 				});				
-				$("#change-language").click(function()
-				{
-					if( $("#change-language").val()=="zh_TW" )
-						$("#change-language").val("en_US");
-					else
-						$("#change-language").val("zh_TW");
-				});
 				$("td").click(function(){	//按一下課表欄位就有課程彈出來了
 					if($(this).text()==""){ //我現在才知道null!=""
 						var major=$("#v_major").val();	//取到系
 						var day=$(this).attr("data-day");
-						var hour=$(this).closest("tr").attr("data-hour");				
-						var language = $("#change-language").val();
+						var hour=$(this).closest("tr").attr("data-hour");
 						$("#specific-time-post").empty();
 						$.each(course_of_day[day][hour], function(ik, iv){	
 							if(iv.for_dept==major){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列
-								bulletin_post($("#specific-time-post"),course_of_day[day][hour][ik], language);	//因為我把同一時段的課程塞進陣列裡，所以要用index去取
+								bulletin_post($("#specific-time-post"),course_of_day[day][hour][ik], "en_US");	//因為我把同一時段的課程塞進陣列裡，所以要用index去取
 							}											
 						})					
 					}					
@@ -576,12 +567,7 @@
 			var bulletin_post = function($target,course, language){	
 			 	if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
-				if( language=="zh_TW" ){
-					course.title_short = course.title_parsed["zh_TW"];		//title_short是會自動宣告的區域變數，存沒有英文的課名			  	
-				}
-				else{
-					course.title_short = course.title_parsed["en_US"];			  	
-				}				
+				course.title_short = course.title_parsed["en_US"];
 				var time = [];//time設定為空陣列
 				var $td;
 				time.push("上課時間:");

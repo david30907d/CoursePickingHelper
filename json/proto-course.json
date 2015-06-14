@@ -1,0 +1,4553 @@
+{
+    "course": [{
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "服務學習(二)：勞作教育 y`Service-LearningII:Student Labor Education and Work-Study Management",
+        "title_parsed": {
+            "zh_TW": "服務學習(二)：勞作教育 y",
+            "en_US": "Service-LearningII:Student Labor Education and Work-Study Management"
+        },
+        "hours_parsed": 2,
+        "credits": "0",
+        "department": "學務處",
+        "obligatory_tf": true,
+        "number": "200",
+        "code": "1037",
+        "time_parsed": [{
+            "day": 4,
+            "time": [8, 9]
+        }],
+        "credits_parsed": 0,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "",
+        "location": "",
+        "professor": "全體教師",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 200,
+        "year": "半",
+        "time": "489"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "微積分(二) u`Calculus(II)",
+        "title_parsed": {
+            "zh_TW": "微積分(二) u",
+            "en_US": "Calculus(II)"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "應數系",
+        "obligatory_tf": true,
+        "number": "60",
+        "code": "1260",
+        "time_parsed": [{
+            "day": 2,
+            "time": [3, 4]
+        }, {
+            "day": 3,
+            "time": [2]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S102",
+        "professor": "施因澤",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "234,32"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "普通物理學實驗 d`General Physics Lab",
+        "title_parsed": {
+            "zh_TW": "普通物理學實驗 d",
+            "en_US": "General Physics Lab"
+        },
+        "hours_parsed": 3,
+        "credits": "1",
+        "department": "物理系",
+        "obligatory_tf": true,
+        "number": "60",
+        "code": "1268",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 1,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S2A06",
+        "professor": "陳光胤",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "4567"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "普通物理學 e`General Physics",
+        "title_parsed": {
+            "zh_TW": "普通物理學 e",
+            "en_US": "General Physics"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "物理系",
+        "obligatory_tf": true,
+        "number": "60",
+        "code": "1285",
+        "time_parsed": [{
+            "day": 1,
+            "time": [1]
+        }, {
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S102",
+        "professor": "劉瑞堂",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "11,434"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "機率 `Probability",
+        "title_parsed": {
+            "zh_TW": "機率",
+            "en_US": "Probability"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "70",
+        "code": "1301",
+        "time_parsed": [{
+            "day": 1,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S1001",
+        "professor": "余明興",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 70,
+        "year": "半",
+        "time": "1234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "物件導向程式設計 `Object-Oriented Programming",
+        "title_parsed": {
+            "zh_TW": "物件導向程式設計",
+            "en_US": "Object-Oriented Programming"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "80",
+        "code": "1302",
+        "time_parsed": [{
+            "day": 1,
+            "time": [8]
+        }, {
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S1001",
+        "professor": "廖宜恩",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 80,
+        "year": "半",
+        "time": "18,378"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "演算法 `Algorithms",
+        "title_parsed": {
+            "zh_TW": "演算法",
+            "en_US": "Algorithms"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "81",
+        "code": "2347",
+        "time_parsed": [{
+            "day": 2,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S1001",
+        "professor": "林添進",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 81,
+        "year": "半",
+        "time": "2234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "計算機網路 `Computer Networks",
+        "title_parsed": {
+            "zh_TW": "計算機網路",
+            "en_US": "Computer Networks"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "90",
+        "code": "2348",
+        "time_parsed": [{
+            "day": 2,
+            "time": [6, 7, 8]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S1001",
+        "professor": "王丕中",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 90,
+        "year": "半",
+        "time": "2678"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "電子電路學 `Electronic Circuit",
+        "title_parsed": {
+            "zh_TW": "電子電路學",
+            "en_US": "Electronic Circuit"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "80",
+        "code": "2349",
+        "time_parsed": [{
+            "day": 4,
+            "time": [6, 7, 8]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S101",
+        "professor": "王行健",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 80,
+        "year": "半",
+        "time": "4678"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "組合語言與系統程式 `Assenbly Language and System Programming",
+        "title_parsed": {
+            "zh_TW": "組合語言與系統程式",
+            "en_US": "Assenbly Language and System Programming"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "90",
+        "code": "2351",
+        "time_parsed": [{
+            "day": 4,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S1001",
+        "professor": "張軒彬",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 90,
+        "year": "半",
+        "time": "4234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "邏輯設計實驗 `Logic Design Lab.",
+        "title_parsed": {
+            "zh_TW": "邏輯設計實驗",
+            "en_US": "Logic Design Lab."
+        },
+        "hours_parsed": 3,
+        "credits": "1",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "66",
+        "code": "2352",
+        "time_parsed": [{
+            "day": 3,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 1,
+        "obligatory": "必修",
+        "previous": "邏輯設計",
+        "language": "中文",
+        "location": "S1022A",
+        "professor": "張延任",
+        "class": "2",
+        "hours": "3",
+        "note": "先修科目須達40分以上",
+        "number_parsed": 66,
+        "year": "半",
+        "time": "3234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "統計學 `Statistics",
+        "title_parsed": {
+            "zh_TW": "統計學",
+            "en_US": "Statistics"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "2353",
+        "time_parsed": [{
+            "day": 5,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S101",
+        "professor": "林添進",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "5234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "計算機組織 `Computer Organization",
+        "title_parsed": {
+            "zh_TW": "計算機組織",
+            "en_US": "Computer Organization"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "76",
+        "code": "3359",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "組合語言與系統程式 等",
+        "language": "中文",
+        "location": "S1001",
+        "professor": "林偉",
+        "class": "3",
+        "hours": "3",
+        "note": "先修科目須達60分以上",
+        "number_parsed": 76,
+        "year": "半",
+        "time": "1567"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資料庫管理系統導論 *`Introduction to Database Management System",
+        "title_parsed": {
+            "zh_TW": "資料庫管理系統導論 *",
+            "en_US": "Introduction to Database Management System"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "75",
+        "code": "3360",
+        "time_parsed": [{
+            "day": 3,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "S701",
+        "professor": "賈坤芳",
+        "class": "3",
+        "hours": "3",
+        "note": "Z",
+        "number_parsed": 75,
+        "year": "半",
+        "time": "3567"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "嵌入式處理器架構與應用 `Embedded Processor Architecture and Application",
+        "title_parsed": {
+            "zh_TW": "嵌入式處理器架構與應用",
+            "en_US": "Embedded Processor Architecture and Application"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "30",
+        "code": "3364",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "計算機組織 等",
+        "language": "中文",
+        "location": "S1022A",
+        "professor": "張延任",
+        "class": "3",
+        "hours": "3",
+        "note": "先修科目須達60分以上",
+        "number_parsed": 30,
+        "year": "半",
+        "time": "4567"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) a`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) a",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3365",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "張軒彬",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) b`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) b",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3366",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "張延任",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) c`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) c",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3367",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "洪國寶",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) d`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) d",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3368",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "喻石生",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) e`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) e",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3369",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "廖宜恩",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) f`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) f",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3370",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "范耀中",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) g`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) g",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3371",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "官大智",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊專題(二) h`Special Projects on Information(II)",
+        "title_parsed": {
+            "zh_TW": "資訊專題(二) h",
+            "en_US": "Special Projects on Information(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "資工系",
+        "obligatory_tf": true,
+        "number": "31",
+        "code": "3372",
+        "time_parsed": [],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "*",
+        "professor": "曾學文",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "*"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "數位色彩科學導論與應用 `Introduction to Digital Color Science and Applications",
+        "title_parsed": {
+            "zh_TW": "數位色彩科學導論與應用",
+            "en_US": "Introduction to Digital Color Science and Applications"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "3373",
+        "time_parsed": [{
+            "day": 2,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "計算機程式設計 等",
+        "language": "中文",
+        "location": "S702A",
+        "professor": "王宗銘",
+        "class": "3",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "2234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "成圖技術與應用 `Rendering Techniques and Applications",
+        "title_parsed": {
+            "zh_TW": "成圖技術與應用",
+            "en_US": "Rendering Techniques and Applications"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "31",
+        "code": "3374",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S702A",
+        "professor": "黃春融",
+        "class": "3",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "2567"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "雲端運算導論 `Introduction to Cloud Computing",
+        "title_parsed": {
+            "zh_TW": "雲端運算導論",
+            "en_US": "Introduction to Cloud Computing"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "3375",
+        "time_parsed": [{
+            "day": 4,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S106",
+        "professor": "曾學文",
+        "class": "3",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "4234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "軟體工程 `Software Engineering",
+        "title_parsed": {
+            "zh_TW": "軟體工程",
+            "en_US": "Software Engineering"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "4156",
+        "time_parsed": [{
+            "day": 3,
+            "time": [6, 7, 8]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S106",
+        "professor": "范耀中",
+        "class": "4",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "3678"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "資訊安全與密碼學 `Information Security and Cryptography",
+        "title_parsed": {
+            "zh_TW": "資訊安全與密碼學",
+            "en_US": "Information Security and Cryptography"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "4157",
+        "time_parsed": [{
+            "day": 3,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S702A",
+        "professor": "洪國寶",
+        "class": "4",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "3234"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "綠能資訊科技導論 `Introduction to Green Computing Technology",
+        "title_parsed": {
+            "zh_TW": "綠能資訊科技導論",
+            "en_US": "Introduction to Green Computing Technology"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "4159",
+        "time_parsed": [{
+            "day": 2,
+            "time": [6, 7, 8]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S102",
+        "professor": "范耀中",
+        "class": "4",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "2678"
+    }, {
+        "for_dept": "資訊科學與工程學系學士班",
+        "title": "智慧型手機應用程式開發 `Smart Phone Application Development",
+        "title_parsed": {
+            "zh_TW": "智慧型手機應用程式開發",
+            "en_US": "Smart Phone Application Development"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "資工系",
+        "obligatory_tf": false,
+        "number": "31",
+        "code": "4160",
+        "time_parsed": [{
+            "day": 1,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "S821",
+        "professor": "陳煥",
+        "class": "4",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "1234"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "服務學習(二)：勞作教育 G`Service-LearningII:Student Labor Education and Work-Study Management",
+        "title_parsed": {
+            "zh_TW": "服務學習(二)：勞作教育 G",
+            "en_US": "Service-LearningII:Student Labor Education and Work-Study Management"
+        },
+        "hours_parsed": 2,
+        "credits": "0",
+        "department": "學務處",
+        "obligatory_tf": true,
+        "number": "200",
+        "code": "1007",
+        "time_parsed": [{
+            "day": 4,
+            "time": [8, 9]
+        }],
+        "credits_parsed": 0,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "",
+        "location": "",
+        "professor": "全體教師",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 200,
+        "year": "半",
+        "time": "489"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "臺灣文化概論 `Interduction to the Culture of Taiwan",
+        "title_parsed": {
+            "zh_TW": "臺灣文化概論",
+            "en_US": "Interduction to the Culture of Taiwan"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "1038",
+        "time_parsed": [{
+            "day": 5,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y307",
+        "professor": "劉智濬",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "578"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "大學國文 `College Chinese",
+        "title_parsed": {
+            "zh_TW": "大學國文",
+            "en_US": "College Chinese"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "70",
+        "code": "1039",
+        "time_parsed": [{
+            "day": 5,
+            "time": [2, 3]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y202",
+        "professor": "李建福",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 70,
+        "year": "全",
+        "time": "523"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "國學導讀 `Introduction to Sinology",
+        "title_parsed": {
+            "zh_TW": "國學導讀",
+            "en_US": "Introduction to Sinology"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "1040",
+        "time_parsed": [{
+            "day": 2,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "",
+        "location": "Y201",
+        "professor": "韓碧琴",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "234"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "文學概論 `Introduction to Literature",
+        "title_parsed": {
+            "zh_TW": "文學概論",
+            "en_US": "Introduction to Literature"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "54",
+        "code": "1041",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y302",
+        "professor": "尤雅姿",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 54,
+        "year": "全",
+        "time": "256"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "書法 `Chinese Calligraphy",
+        "title_parsed": {
+            "zh_TW": "書法",
+            "en_US": "Chinese Calligraphy"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "35",
+        "code": "1042",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "B16",
+        "professor": "陳欽忠",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 35,
+        "year": "全",
+        "time": "434"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "書法 `Chinese Calligraphy",
+        "title_parsed": {
+            "zh_TW": "書法",
+            "en_US": "Chinese Calligraphy"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "37",
+        "code": "1043",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "B16",
+        "professor": "林榮森",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 37,
+        "year": "全",
+        "time": "378"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "世說新語 `Shih Shuo Shin Yu",
+        "title_parsed": {
+            "zh_TW": "世說新語",
+            "en_US": "Shih Shuo Shin Yu"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "1044",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y303",
+        "professor": "尤雅姿",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "156"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "現代詩 `Modern Poetry",
+        "title_parsed": {
+            "zh_TW": "現代詩",
+            "en_US": "Modern Poetry"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "40",
+        "code": "1045",
+        "time_parsed": [{
+            "day": 3,
+            "time": [1, 2]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y305",
+        "professor": "解昆樺",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "全",
+        "time": "312"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "現代散文 `Modern Prose",
+        "title_parsed": {
+            "zh_TW": "現代散文",
+            "en_US": "Modern Prose"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "40",
+        "code": "1046",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y417",
+        "professor": "羅秀美",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "全",
+        "time": "334"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "人文與知識探索 ` The Humanities and Knowledge Exploration",
+        "title_parsed": {
+            "zh_TW": "人文與知識探索",
+            "en_US": "The Humanities and Knowledge Exploration"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "文學院",
+        "obligatory_tf": true,
+        "number": "70",
+        "code": "1908",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y402",
+        "professor": "張慧銖等",
+        "class": "1",
+        "hours": "2",
+        "note": "限文學院大一學生",
+        "number_parsed": 70,
+        "year": "半",
+        "time": "156"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "繪本文學欣賞 `Appreciation of Painting and Picture Literature",
+        "title_parsed": {
+            "zh_TW": "繪本文學欣賞",
+            "en_US": "Appreciation of Painting and Picture Literature"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "2028",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "",
+        "location": "Y104",
+        "professor": "林淑貞",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "半",
+        "time": "378"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "中國文學史 `History of Chinese Literature",
+        "title_parsed": {
+            "zh_TW": "中國文學史",
+            "en_US": "History of Chinese Literature"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "60",
+        "code": "2029",
+        "time_parsed": [{
+            "day": 2,
+            "time": [7, 8, 9]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y305",
+        "professor": "蔡妙真",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "2789"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "歷代文選及習作 a`Prose : Reading and Writing",
+        "title_parsed": {
+            "zh_TW": "歷代文選及習作 a",
+            "en_US": "Prose : Reading and Writing"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "35",
+        "code": "2030",
+        "time_parsed": [{
+            "day": 2,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y304",
+        "professor": "李建福",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 35,
+        "year": "全",
+        "time": "2234"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "歷代文選及習作 b`Prose : Reading and Writing",
+        "title_parsed": {
+            "zh_TW": "歷代文選及習作 b",
+            "en_US": "Prose : Reading and Writing"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "35",
+        "code": "2031",
+        "time_parsed": [{
+            "day": 2,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y305",
+        "professor": "江乾益",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 35,
+        "year": "全",
+        "time": "2234"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "文字學 `Etymology",
+        "title_parsed": {
+            "zh_TW": "文字學",
+            "en_US": "Etymology"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "60",
+        "code": "2032",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y411",
+        "professor": "林清源",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "334"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "詩選及習作 a`Poetry : Reading and Writing",
+        "title_parsed": {
+            "zh_TW": "詩選及習作 a",
+            "en_US": "Poetry : Reading and Writing"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "35",
+        "code": "2033",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y312",
+        "professor": "祁立峰",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 35,
+        "year": "全",
+        "time": "378"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "詩選及習作 b`Poetry : Reading and Writing",
+        "title_parsed": {
+            "zh_TW": "詩選及習作 b",
+            "en_US": "Poetry : Reading and Writing"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "35",
+        "code": "2034",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y309",
+        "professor": "李建福",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 35,
+        "year": "全",
+        "time": "434"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "論孟 `Confucius Analects and Mencius",
+        "title_parsed": {
+            "zh_TW": "論孟",
+            "en_US": "Confucius Analects and Mencius"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "2035",
+        "time_parsed": [{
+            "day": 4,
+            "time": [1, 2]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y302",
+        "professor": "江乾益",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "412"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "臺灣文學 `Taiwanese Literature",
+        "title_parsed": {
+            "zh_TW": "臺灣文學",
+            "en_US": "Taiwanese Literature"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "2036",
+        "time_parsed": [{
+            "day": 4,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "",
+        "location": "Y206",
+        "professor": "廖振富",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "478"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "神話學 `Mythology",
+        "title_parsed": {
+            "zh_TW": "神話學",
+            "en_US": "Mythology"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "80",
+        "code": "2037",
+        "time_parsed": [{
+            "day": 3,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y410",
+        "professor": "陳器文",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 80,
+        "year": "全",
+        "time": "356"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "現代小說 `Modern Fiction",
+        "title_parsed": {
+            "zh_TW": "現代小說",
+            "en_US": "Modern Fiction"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "2038",
+        "time_parsed": [{
+            "day": 1,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y303",
+        "professor": "石美玲",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "134"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "魏晉南北朝志怪小說 `The Wei-Jin-Nan-Bei Dynasties Chih-Kuai Fiction",
+        "title_parsed": {
+            "zh_TW": "魏晉南北朝志怪小說",
+            "en_US": "The Wei-Jin-Nan-Bei Dynasties Chih-Kuai Fiction"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "62",
+        "code": "2039",
+        "time_parsed": [{
+            "day": 1,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y303",
+        "professor": "尤雅姿",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 62,
+        "year": "全",
+        "time": "178"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "語言學概論 `Introduction to Linguistics",
+        "title_parsed": {
+            "zh_TW": "語言學概論",
+            "en_US": "Introduction to Linguistics"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "2040",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y303",
+        "professor": "石美玲",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "256"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "小說選讀及習作 `Selection of Fiction & Writing Practice",
+        "title_parsed": {
+            "zh_TW": "小說選讀及習作",
+            "en_US": "Selection of Fiction & Writing Practice"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "43",
+        "code": "3004",
+        "time_parsed": [{
+            "day": 3,
+            "time": [1, 2]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y303",
+        "professor": "黃東陽",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 43,
+        "year": "全",
+        "time": "312"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "老莊 `Laotz and Chuangtz",
+        "title_parsed": {
+            "zh_TW": "老莊",
+            "en_US": "Laotz and Chuangtz"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "52",
+        "code": "3005",
+        "time_parsed": [{
+            "day": 5,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y303",
+        "professor": "林文彬",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 52,
+        "year": "全",
+        "time": "534"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "編輯與採訪 `Editing and Covering News",
+        "title_parsed": {
+            "zh_TW": "編輯與採訪",
+            "en_US": "Editing and Covering News"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "40",
+        "code": "3006",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "",
+        "location": "Y405",
+        "professor": "羅珮瑩",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "半",
+        "time": "456"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "禮記 `The Book of Rites",
+        "title_parsed": {
+            "zh_TW": "禮記",
+            "en_US": "The Book of Rites"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "3007",
+        "time_parsed": [{
+            "day": 1,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y201",
+        "professor": "韓碧琴",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "134"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "宋明理學 `Neo-Confucianism of Sung and Ming Dynasties",
+        "title_parsed": {
+            "zh_TW": "宋明理學",
+            "en_US": "Neo-Confucianism of Sung and Ming Dynasties"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "3008",
+        "time_parsed": [{
+            "day": 2,
+            "time": [1, 2]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "",
+        "location": "Y308",
+        "professor": "劉錦賢",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "212"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "聲韻學 `Chinese Phonology",
+        "title_parsed": {
+            "zh_TW": "聲韻學",
+            "en_US": "Chinese Phonology"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "65",
+        "code": "3009",
+        "time_parsed": [{
+            "day": 4,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y212",
+        "professor": "丘彥遂",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 65,
+        "year": "全",
+        "time": "478"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "中國思想史 `History of Chinese Thoughts",
+        "title_parsed": {
+            "zh_TW": "中國思想史",
+            "en_US": "History of Chinese Thoughts"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "65",
+        "code": "3010",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "",
+        "location": "Y309",
+        "professor": "劉錦賢",
+        "class": "3",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 65,
+        "year": "全",
+        "time": "1567"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "詞曲選及習作 a`Tsu and Chu : Reading and Writing",
+        "title_parsed": {
+            "zh_TW": "詞曲選及習作 a",
+            "en_US": "Tsu and Chu : Reading and Writing"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "35",
+        "code": "3011",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y305",
+        "professor": "祁立峰",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 35,
+        "year": "全",
+        "time": "334"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "詞曲選及習作 b`Tsu and Chu : Reading and Writing",
+        "title_parsed": {
+            "zh_TW": "詞曲選及習作 b",
+            "en_US": "Tsu and Chu : Reading and Writing"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "35",
+        "code": "3012",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y211",
+        "professor": "林仁昱",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 35,
+        "year": "全",
+        "time": "334"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "詞彙學 `Phraseology",
+        "title_parsed": {
+            "zh_TW": "詞彙學",
+            "en_US": "Phraseology"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "3013",
+        "time_parsed": [{
+            "day": 5,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y212",
+        "professor": "丘彥遂",
+        "class": "3",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 50,
+        "year": "半",
+        "time": "5567"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "民間文學 `Folk Literature",
+        "title_parsed": {
+            "zh_TW": "民間文學",
+            "en_US": "Folk Literature"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "3014",
+        "time_parsed": [{
+            "day": 2,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "",
+        "location": "Y208",
+        "professor": "林仁昱",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "278"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "應用文及習作 `Applied Chinese Writing",
+        "title_parsed": {
+            "zh_TW": "應用文及習作",
+            "en_US": "Applied Chinese Writing"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "3015",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y201",
+        "professor": "戴瑞坤",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "256"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "周易 `The Book of Change",
+        "title_parsed": {
+            "zh_TW": "周易",
+            "en_US": "The Book of Change"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "4003",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y303",
+        "professor": "林文彬",
+        "class": "4",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "334"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "昭明文選 `Chao Mings Literary Anthology",
+        "title_parsed": {
+            "zh_TW": "昭明文選",
+            "en_US": "Chao Mings Literary Anthology"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "4004",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y313",
+        "professor": "祁立峰",
+        "class": "4",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "256"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "訓詁學 `Scholium",
+        "title_parsed": {
+            "zh_TW": "訓詁學",
+            "en_US": "Scholium"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": true,
+        "number": "60",
+        "code": "4005",
+        "time_parsed": [{
+            "day": 2,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "文字學 等",
+        "language": "中文",
+        "location": "Y303",
+        "professor": "石美玲",
+        "class": "4",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "234"
+    }, {
+        "for_dept": "中國文學系學士班",
+        "title": "詩經 `The Book of Poetry",
+        "title_parsed": {
+            "zh_TW": "詩經",
+            "en_US": "The Book of Poetry"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "中文系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "4006",
+        "time_parsed": [{
+            "day": 5,
+            "time": [1, 2]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y303",
+        "professor": "江乾益",
+        "class": "4",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "512"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "服務學習(二)：勞作教育 H`Service-LearningII:Student Labor Education and Work-Study Management",
+        "title_parsed": {
+            "zh_TW": "服務學習(二)：勞作教育 H",
+            "en_US": "Service-LearningII:Student Labor Education and Work-Study Management"
+        },
+        "hours_parsed": 2,
+        "credits": "0",
+        "department": "學務處",
+        "obligatory_tf": true,
+        "number": "200",
+        "code": "1008",
+        "time_parsed": [{
+            "day": 4,
+            "time": [8, 9]
+        }],
+        "credits_parsed": 0,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "",
+        "location": "",
+        "professor": "全體教師",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 200,
+        "year": "半",
+        "time": "489"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "大一英文 a`Freshman English",
+        "title_parsed": {
+            "zh_TW": "大一英文 a",
+            "en_US": "Freshman English"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "40",
+        "code": "1047",
+        "time_parsed": [{
+            "day": 1,
+            "time": [2]
+        }, {
+            "day": 5,
+            "time": [1, 2]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "AA203",
+        "professor": "趙鳯玫",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 40,
+        "year": "全",
+        "time": "12,512"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "大一英文 b`Freshman English",
+        "title_parsed": {
+            "zh_TW": "大一英文 b",
+            "en_US": "Freshman English"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "40",
+        "code": "1048",
+        "time_parsed": [{
+            "day": 1,
+            "time": [2]
+        }, {
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "英文",
+        "location": "Y307",
+        "professor": "吳佩如",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 40,
+        "year": "全",
+        "time": "12,378"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英文作文(一) a`English Composition (I)",
+        "title_parsed": {
+            "zh_TW": "英文作文(一) a",
+            "en_US": "English Composition (I)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "20",
+        "code": "1050",
+        "time_parsed": [{
+            "day": 3,
+            "time": [1, 2]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "英文",
+        "location": "Y405",
+        "professor": "吳佩如",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 20,
+        "year": "全",
+        "time": "312"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英文作文(一) b`English Composition (I)",
+        "title_parsed": {
+            "zh_TW": "英文作文(一) b",
+            "en_US": "English Composition (I)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "20",
+        "code": "1051",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "英文",
+        "location": "Y312",
+        "professor": "謝心怡",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 20,
+        "year": "全",
+        "time": "434"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英文作文(一) c`English Composition (I)",
+        "title_parsed": {
+            "zh_TW": "英文作文(一) c",
+            "en_US": "English Composition (I)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "20",
+        "code": "1052",
+        "time_parsed": [{
+            "day": 3,
+            "time": [1, 2]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y504",
+        "professor": "朱崇儀",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 20,
+        "year": "全",
+        "time": "312"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英文作文(一) d`English Composition (I)",
+        "title_parsed": {
+            "zh_TW": "英文作文(一) d",
+            "en_US": "English Composition (I)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "20",
+        "code": "1053",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "CC1PC",
+        "professor": "張旭琪",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 20,
+        "year": "全",
+        "time": "434"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "西洋文學概論 b`Introduction to Western Literature",
+        "title_parsed": {
+            "zh_TW": "西洋文學概論 b",
+            "en_US": "Introduction to Western Literature"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "40",
+        "code": "1054",
+        "time_parsed": [{
+            "day": 1,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y312",
+        "professor": "宋維科",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "全",
+        "time": "134"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "西洋文學概論 a`Introduction to Western Literature",
+        "title_parsed": {
+            "zh_TW": "西洋文學概論 a",
+            "en_US": "Introduction to Western Literature"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "40",
+        "code": "1055",
+        "time_parsed": [{
+            "day": 2,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y302",
+        "professor": "周淑娟",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "全",
+        "time": "234"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "文學作品讀法 b`Approaches to Literature",
+        "title_parsed": {
+            "zh_TW": "文學作品讀法 b",
+            "en_US": "Approaches to Literature"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "45",
+        "code": "1056",
+        "time_parsed": [{
+            "day": 2,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y312",
+        "professor": "周幸君",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 45,
+        "year": "全",
+        "time": "234"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "文學作品讀法 a`Approaches to Literature",
+        "title_parsed": {
+            "zh_TW": "文學作品讀法 a",
+            "en_US": "Approaches to Literature"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "45",
+        "code": "1057",
+        "time_parsed": [{
+            "day": 1,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "英文",
+        "location": "Y304",
+        "professor": "蔡淑惠",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 45,
+        "year": "全",
+        "time": "134"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英語口語訓練(一) a`English Oral Training (I)",
+        "title_parsed": {
+            "zh_TW": "英語口語訓練(一) a",
+            "en_US": "English Oral Training (I)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "21",
+        "code": "1059",
+        "time_parsed": [{
+            "day": 5,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "英文",
+        "location": "Y305",
+        "professor": "曹麗莎",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 21,
+        "year": "全",
+        "time": "534"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英語口語訓練(一) b`English Oral Training (I)",
+        "title_parsed": {
+            "zh_TW": "英語口語訓練(一) b",
+            "en_US": "English Oral Training (I)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "18",
+        "code": "1060",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "英文",
+        "location": "Y305",
+        "professor": "曹麗莎",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 18,
+        "year": "全",
+        "time": "456"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英語口語訓練(一) c`English Oral Training (I)",
+        "title_parsed": {
+            "zh_TW": "英語口語訓練(一) c",
+            "en_US": "English Oral Training (I)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "19",
+        "code": "1061",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "英文",
+        "location": "Y407",
+        "professor": "吳夏暄",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 19,
+        "year": "全",
+        "time": "434"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英語口語訓練(一) d`English Oral Training (I)",
+        "title_parsed": {
+            "zh_TW": "英語口語訓練(一) d",
+            "en_US": "English Oral Training (I)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "18",
+        "code": "1062",
+        "time_parsed": [{
+            "day": 2,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "英文",
+        "location": "Y417",
+        "professor": "周廷戎",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 18,
+        "year": "全",
+        "time": "278"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英語聽講教學(一) a`Language Lab. Workshop (I)",
+        "title_parsed": {
+            "zh_TW": "英語聽講教學(一) a",
+            "en_US": "Language Lab. Workshop (I)"
+        },
+        "hours_parsed": 2,
+        "credits": "1",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "40",
+        "code": "1064",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 1,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "英文",
+        "location": "AA402",
+        "professor": "施以明",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "全",
+        "time": "334"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英語聽講教學(一) b`Language Lab. Workshop (I)",
+        "title_parsed": {
+            "zh_TW": "英語聽講教學(一) b",
+            "en_US": "Language Lab. Workshop (I)"
+        },
+        "hours_parsed": 2,
+        "credits": "1",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "40",
+        "code": "1065",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 1,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "英文",
+        "location": "AA303",
+        "professor": "周淑娟",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "全",
+        "time": "456"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "發音練習 `Pronunciation Drills",
+        "title_parsed": {
+            "zh_TW": "發音練習",
+            "en_US": "Pronunciation Drills"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "31",
+        "code": "1066",
+        "time_parsed": [{
+            "day": 3,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "英文",
+        "location": "AA202",
+        "professor": "曹麗莎",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "356"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "高級英文文法(二) `Advanced Grammar(II)",
+        "title_parsed": {
+            "zh_TW": "高級英文文法(二)",
+            "en_US": "Advanced Grammar(II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "70",
+        "code": "1067",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y204",
+        "professor": "吳黌銘",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 70,
+        "year": "半",
+        "time": "256"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "語言初步(二) `Beginning Linguistics (II)",
+        "title_parsed": {
+            "zh_TW": "語言初步(二)",
+            "en_US": "Beginning Linguistics (II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "40",
+        "code": "1068",
+        "time_parsed": [{
+            "day": 1,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y305",
+        "professor": "吳黌銘",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "半",
+        "time": "178"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "人文與知識探索 ` The Humanities and Knowledge Exploration",
+        "title_parsed": {
+            "zh_TW": "人文與知識探索",
+            "en_US": "The Humanities and Knowledge Exploration"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "文學院",
+        "obligatory_tf": true,
+        "number": "70",
+        "code": "1908",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y402",
+        "professor": "張慧銖等",
+        "class": "1",
+        "hours": "2",
+        "note": "限文學院大一學生",
+        "number_parsed": 70,
+        "year": "半",
+        "time": "156"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "戲劇導讀(一) `Introduction to Drama (I)",
+        "title_parsed": {
+            "zh_TW": "戲劇導讀(一)",
+            "en_US": "Introduction to Drama (I)"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "40",
+        "code": "2041",
+        "time_parsed": [{
+            "day": 3,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y212",
+        "professor": "謝心怡",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 40,
+        "year": "半",
+        "time": "3234"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "德文(一) `German(I)",
+        "title_parsed": {
+            "zh_TW": "德文(一)",
+            "en_US": "German(I)"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "50",
+        "code": "2043",
+        "time_parsed": [{
+            "day": 2,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "AA504",
+        "professor": "林貞儀",
+        "class": "2",
+        "hours": "3",
+        "note": "限外文系同學",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "2234"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "日文(一) `Japanese (I)",
+        "title_parsed": {
+            "zh_TW": "日文(一)",
+            "en_US": "Japanese (I)"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "50",
+        "code": "2044",
+        "time_parsed": [{
+            "day": 1,
+            "time": [7, 8]
+        }, {
+            "day": 3,
+            "time": [5]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "AA201",
+        "professor": "蔡碧玲",
+        "class": "2",
+        "hours": "3",
+        "note": "限外文系同學",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "178,35"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英文作文(二) a`English Composition (II)",
+        "title_parsed": {
+            "zh_TW": "英文作文(二) a",
+            "en_US": "English Composition (II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "20",
+        "code": "2045",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "英文作文(一)",
+        "language": "英文",
+        "location": "Y415",
+        "professor": "曹麗莎",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 20,
+        "year": "全",
+        "time": "378"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英文作文(二) b`English Composition (II)",
+        "title_parsed": {
+            "zh_TW": "英文作文(二) b",
+            "en_US": "English Composition (II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "20",
+        "code": "2046",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "英文作文(一)",
+        "language": "英文",
+        "location": "Y415",
+        "professor": "吳夏暄",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 20,
+        "year": "全",
+        "time": "256"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英文作文(二) c`English Composition (II)",
+        "title_parsed": {
+            "zh_TW": "英文作文(二) c",
+            "en_US": "English Composition (II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "20",
+        "code": "2047",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "英文作文(一)",
+        "language": "中文",
+        "location": "Y417",
+        "professor": "陳瓊娟",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 20,
+        "year": "全",
+        "time": "378"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英文作文(二) d`English Composition (II)",
+        "title_parsed": {
+            "zh_TW": "英文作文(二) d",
+            "en_US": "English Composition (II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "20",
+        "code": "2048",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "英文作文(一)",
+        "language": "中文",
+        "location": "Y404",
+        "professor": "邱幸珍",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 20,
+        "year": "全",
+        "time": "378"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "法文(一) `Second Foreign Language-French (I)",
+        "title_parsed": {
+            "zh_TW": "法文(一)",
+            "en_US": "Second Foreign Language-French (I)"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "50",
+        "code": "2049",
+        "time_parsed": [{
+            "day": 2,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "AA402",
+        "professor": "蔡明華",
+        "class": "2",
+        "hours": "3",
+        "note": "限外文系同學",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "2234"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "西班牙文(一) `Second Foreign Language-Spanish (I)",
+        "title_parsed": {
+            "zh_TW": "西班牙文(一)",
+            "en_US": "Second Foreign Language-Spanish (I)"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "50",
+        "code": "2050",
+        "time_parsed": [{
+            "day": 3,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "AA504",
+        "professor": "謝琬湞",
+        "class": "2",
+        "hours": "3",
+        "note": "限外文系同學",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "3234"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "新聞英文 `Journalistic English",
+        "title_parsed": {
+            "zh_TW": "新聞英文",
+            "en_US": "Journalistic English"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "35",
+        "code": "2051",
+        "time_parsed": [{
+            "day": 2,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y211",
+        "professor": "陳麗珍",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 35,
+        "year": "全",
+        "time": "234"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英語口語訓練(二) a`English Oral Training (II)",
+        "title_parsed": {
+            "zh_TW": "英語口語訓練(二) a",
+            "en_US": "English Oral Training (II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "18",
+        "code": "2052",
+        "time_parsed": [{
+            "day": 5,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "英語口語訓練(一)",
+        "language": "英文",
+        "location": "Y305",
+        "professor": "曹麗莎",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 18,
+        "year": "全",
+        "time": "556"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英語口語訓練(二) b`English Oral Training (II)",
+        "title_parsed": {
+            "zh_TW": "英語口語訓練(二) b",
+            "en_US": "English Oral Training (II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "18",
+        "code": "2053",
+        "time_parsed": [{
+            "day": 2,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "英語口語訓練(一)",
+        "language": "英文",
+        "location": "Y415",
+        "professor": "吳夏暄",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 18,
+        "year": "全",
+        "time": "278"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英語口語訓練(二) c`English Oral Training (II)",
+        "title_parsed": {
+            "zh_TW": "英語口語訓練(二) c",
+            "en_US": "English Oral Training (II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "18",
+        "code": "2054",
+        "time_parsed": [{
+            "day": 5,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "英語口語訓練(一)",
+        "language": "英文",
+        "location": "Y305",
+        "professor": "曹麗莎",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 18,
+        "year": "全",
+        "time": "578"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英語口語訓練(二) d`English Oral Training (II)",
+        "title_parsed": {
+            "zh_TW": "英語口語訓練(二) d",
+            "en_US": "English Oral Training (II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "18",
+        "code": "2055",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "英語口語訓練(一)",
+        "language": "英文",
+        "location": "Y407",
+        "professor": "吳夏暄",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 18,
+        "year": "全",
+        "time": "156"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英語聽講教學(二) a`Language Lab. Workshop (II)",
+        "title_parsed": {
+            "zh_TW": "英語聽講教學(二) a",
+            "en_US": "Language Lab. Workshop (II)"
+        },
+        "hours_parsed": 2,
+        "credits": "1",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "40",
+        "code": "2056",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 1,
+        "obligatory": "必修",
+        "previous": "英語聽講教學(一)",
+        "language": "英文",
+        "location": "AA201",
+        "professor": "劉鳳芯",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "全",
+        "time": "434"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英語聽講教學(二) b`Language Lab. Workshop (II)",
+        "title_parsed": {
+            "zh_TW": "英語聽講教學(二) b",
+            "en_US": "Language Lab. Workshop (II)"
+        },
+        "hours_parsed": 2,
+        "credits": "1",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "40",
+        "code": "2057",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 1,
+        "obligatory": "必修",
+        "previous": "英語聽講教學(一)",
+        "language": "英文",
+        "location": "AA301",
+        "professor": "葉蕙華",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "全",
+        "time": "434"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "語言學概論 `Introduction to Linguistics",
+        "title_parsed": {
+            "zh_TW": "語言學概論",
+            "en_US": "Introduction to Linguistics"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "78",
+        "code": "2058",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y301",
+        "professor": "吳黌銘",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 78,
+        "year": "全",
+        "time": "456"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英國文學:復辟與新古典時期 `English Literature:Restoration and Neoclassical Periods",
+        "title_parsed": {
+            "zh_TW": "英國文學:復辟與新古典時期",
+            "en_US": "English Literature:Restoration and Neoclassical Periods"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "80",
+        "code": "2060",
+        "time_parsed": [{
+            "day": 1,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "英文",
+        "location": "Y204",
+        "professor": "陳淑卿",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 80,
+        "year": "半",
+        "time": "1234"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "進階翻譯習作(一) `Advanced Translation Practice I",
+        "title_parsed": {
+            "zh_TW": "進階翻譯習作(一)",
+            "en_US": "Advanced Translation Practice I"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "36",
+        "code": "3016",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y202",
+        "professor": "蔣豐維",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 36,
+        "year": "半",
+        "time": "334"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "歐洲文學(一) `European Literature(I)",
+        "title_parsed": {
+            "zh_TW": "歐洲文學(一)",
+            "en_US": "European Literature(I)"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "31",
+        "code": "3017",
+        "time_parsed": [{
+            "day": 2,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y307",
+        "professor": "阮秀莉",
+        "class": "3",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "2234"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "華語教學導論 `Introduction to Teaching Chinese as a Second Language",
+        "title_parsed": {
+            "zh_TW": "華語教學導論",
+            "en_US": "Introduction to Teaching Chinese as a Second Language"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "31",
+        "code": "3018",
+        "time_parsed": [{
+            "day": 1,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y411",
+        "professor": "陳春美",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "134"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英文作文(三) a`English Composition (III)",
+        "title_parsed": {
+            "zh_TW": "英文作文(三) a",
+            "en_US": "English Composition (III)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "20",
+        "code": "3020",
+        "time_parsed": [{
+            "day": 4,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "英文作文(二)",
+        "language": "英文",
+        "location": "Y417",
+        "professor": "曹麗莎",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 20,
+        "year": "全",
+        "time": "478"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英文作文(三) b`English Composition (III)",
+        "title_parsed": {
+            "zh_TW": "英文作文(三) b",
+            "en_US": "English Composition (III)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "20",
+        "code": "3021",
+        "time_parsed": [{
+            "day": 4,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "英文作文(二)",
+        "language": "英文",
+        "location": "Y407",
+        "professor": "吳夏暄",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 20,
+        "year": "全",
+        "time": "478"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英文作文(三) c`English Composition (III)",
+        "title_parsed": {
+            "zh_TW": "英文作文(三) c",
+            "en_US": "English Composition (III)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "20",
+        "code": "3022",
+        "time_parsed": [{
+            "day": 4,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "英文作文(二)",
+        "language": "中文",
+        "location": "Y405",
+        "professor": "胡培菱",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 20,
+        "year": "全",
+        "time": "478"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英文作文(三) d`English Composition (III)",
+        "title_parsed": {
+            "zh_TW": "英文作文(三) d",
+            "en_US": "English Composition (III)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "20",
+        "code": "3023",
+        "time_parsed": [{
+            "day": 4,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "英文作文(二)",
+        "language": "英文",
+        "location": "Y406",
+        "professor": "周廷戎",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 20,
+        "year": "全",
+        "time": "478"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "語意學 `Semantics",
+        "title_parsed": {
+            "zh_TW": "語意學",
+            "en_US": "Semantics"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "31",
+        "code": "3024",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "語言學概論",
+        "language": "中文",
+        "location": "Y404",
+        "professor": "李靜桂",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "全",
+        "time": "256"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英語口語訓練(三) `English Oral Training(III)",
+        "title_parsed": {
+            "zh_TW": "英語口語訓練(三)",
+            "en_US": "English Oral Training(III)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "31",
+        "code": "3025",
+        "time_parsed": [{
+            "day": 1,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "英語口語訓練(二)",
+        "language": "英文",
+        "location": "Y407",
+        "professor": "吳夏暄",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "全",
+        "time": "178"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "美國文學:二十世紀迄今 `American Literatrue since the 20th Century",
+        "title_parsed": {
+            "zh_TW": "美國文學:二十世紀迄今",
+            "en_US": "American Literatrue since the 20th Century"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "60",
+        "code": "3027",
+        "time_parsed": [{
+            "day": 4,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y305",
+        "professor": "林建光",
+        "class": "3",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "4234"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "英國文學:二十世紀迄今 `English Literatrue since the 20th Century",
+        "title_parsed": {
+            "zh_TW": "英國文學:二十世紀迄今",
+            "en_US": "English Literatrue since the 20th Century"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "外文系",
+        "obligatory_tf": true,
+        "number": "60",
+        "code": "3028",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y308",
+        "professor": "周幸君",
+        "class": "3",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "2567"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "外語習得(一) `Second Language Acquisition(I)",
+        "title_parsed": {
+            "zh_TW": "外語習得(一)",
+            "en_US": "Second Language Acquisition(I)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "31",
+        "code": "3029",
+        "time_parsed": [{
+            "day": 1,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y415",
+        "professor": "張玉芳",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "178"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "語言測驗與評量 `Language Testing and Assessment",
+        "title_parsed": {
+            "zh_TW": "語言測驗與評量",
+            "en_US": "Language Testing and Assessment"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "31",
+        "code": "3031",
+        "time_parsed": [{
+            "day": 2,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y404",
+        "professor": "施以明",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "234"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "兒童與青少年文學(二) `Literature for Children and Young Adults (II)",
+        "title_parsed": {
+            "zh_TW": "兒童與青少年文學(二)",
+            "en_US": "Literature for Children and Young Adults (II)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "31",
+        "code": "3032",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "英語口語訓練(二) 等",
+        "language": "英文",
+        "location": "Y405",
+        "professor": "劉鳳芯",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 31,
+        "year": "半",
+        "time": "378"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "實用英文(三) `Practical English(Ⅲ)",
+        "title_parsed": {
+            "zh_TW": "實用英文(三)",
+            "en_US": "Practical English(Ⅲ)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "63",
+        "code": "4008",
+        "time_parsed": [{
+            "day": 4,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y304",
+        "professor": "吳黌銘",
+        "class": "4",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 63,
+        "year": "半",
+        "time": "478"
+    }, {
+        "for_dept": "外國語文學系學士班",
+        "title": "商用英文 `Business English",
+        "title_parsed": {
+            "zh_TW": "商用英文",
+            "en_US": "Business English"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "外文系",
+        "obligatory_tf": false,
+        "number": "40",
+        "code": "4009",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "英文",
+        "location": "Y313",
+        "professor": "吳夏暄",
+        "class": "4",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "全",
+        "time": "456"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "服務學習(二)：勞作教育 t`Service-LearningII:Student Labor Education and Work-Study Management",
+        "title_parsed": {
+            "zh_TW": "服務學習(二)：勞作教育 t",
+            "en_US": "Service-LearningII:Student Labor Education and Work-Study Management"
+        },
+        "hours_parsed": 2,
+        "credits": "0",
+        "department": "學務處",
+        "obligatory_tf": true,
+        "number": "200",
+        "code": "1030",
+        "time_parsed": [{
+            "day": 4,
+            "time": [8, 9]
+        }],
+        "credits_parsed": 0,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "",
+        "location": "",
+        "professor": "全體教師",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 200,
+        "year": "半",
+        "time": "489"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "中國通史 `General Chinese History",
+        "title_parsed": {
+            "zh_TW": "中國通史",
+            "en_US": "General Chinese History"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "歷史系",
+        "obligatory_tf": true,
+        "number": "70",
+        "code": "1070",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y212",
+        "professor": "黃純怡",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 70,
+        "year": "全",
+        "time": "2567"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "世界通史 `General World History",
+        "title_parsed": {
+            "zh_TW": "世界通史",
+            "en_US": "General World History"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "歷史系",
+        "obligatory_tf": true,
+        "number": "70",
+        "code": "1071",
+        "time_parsed": [{
+            "day": 2,
+            "time": [8]
+        }, {
+            "day": 3,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y112",
+        "professor": "陳樂元",
+        "class": "1",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 70,
+        "year": "全",
+        "time": "28,356"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "臺灣史 `History of Taiwan",
+        "title_parsed": {
+            "zh_TW": "臺灣史",
+            "en_US": "History of Taiwan"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "1072",
+        "time_parsed": [{
+            "day": 1,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "臺灣史",
+        "language": "中文",
+        "location": "Y302",
+        "professor": "孟祥瀚",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "134"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "史籍導讀 `Introduction to Historical Books",
+        "title_parsed": {
+            "zh_TW": "史籍導讀",
+            "en_US": "Introduction to Historical Books"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "1073",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y201",
+        "professor": "劉瑞寬",
+        "class": "1",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "434"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "計算機概論 `Introduction to Computer Science",
+        "title_parsed": {
+            "zh_TW": "計算機概論",
+            "en_US": "Introduction to Computer Science"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "40",
+        "code": "1074",
+        "time_parsed": [{
+            "day": 3,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "CC2PC",
+        "professor": "郭俊桔",
+        "class": "1",
+        "hours": "3",
+        "note": "計資中心第二PC教室214室",
+        "number_parsed": 40,
+        "year": "半",
+        "time": "3234"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "人文與知識探索 ` The Humanities and Knowledge Exploration",
+        "title_parsed": {
+            "zh_TW": "人文與知識探索",
+            "en_US": "The Humanities and Knowledge Exploration"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "文學院",
+        "obligatory_tf": true,
+        "number": "70",
+        "code": "1908",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y402",
+        "professor": "張慧銖等",
+        "class": "1",
+        "hours": "2",
+        "note": "限文學院大一學生",
+        "number_parsed": 70,
+        "year": "半",
+        "time": "156"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "日治時期臺灣山區探險史 `The adventure history in Taiwan mountain during the Japanese",
+        "title_parsed": {
+            "zh_TW": "日治時期臺灣山區探險史",
+            "en_US": "The adventure history in Taiwan mountain during the Japanese"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "2061",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y303",
+        "professor": "鄭安睎",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "半",
+        "time": "456"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "中國現代史 `Contemporary Chinese History",
+        "title_parsed": {
+            "zh_TW": "中國現代史",
+            "en_US": "Contemporary Chinese History"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "2062",
+        "time_parsed": [{
+            "day": 3,
+            "time": [6, 7, 8]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y303",
+        "professor": "李君山",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "3678"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "魏晉南北朝史 `History of Wei-Tsin and South-North Dynasties",
+        "title_parsed": {
+            "zh_TW": "魏晉南北朝史",
+            "en_US": "History of Wei-Tsin and South-North Dynasties"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "2063",
+        "time_parsed": [{
+            "day": 1,
+            "time": [6, 7, 8]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "魏晉南北朝史",
+        "language": "中文",
+        "location": "Y202",
+        "professor": "蔡宗憲",
+        "class": "2",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 60,
+        "year": "全",
+        "time": "1678"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "史學方法 `Historiography",
+        "title_parsed": {
+            "zh_TW": "史學方法",
+            "en_US": "Historiography"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": true,
+        "number": "71",
+        "code": "2064",
+        "time_parsed": [{
+            "day": 4,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "必修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y202",
+        "professor": "林正珍",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 71,
+        "year": "全",
+        "time": "478"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "美國史 `American History",
+        "title_parsed": {
+            "zh_TW": "美國史",
+            "en_US": "American History"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "51",
+        "code": "2065",
+        "time_parsed": [{
+            "day": 1,
+            "time": [2, 3]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "美國史",
+        "language": "中文",
+        "location": "Y211",
+        "professor": "陳靜瑜",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 51,
+        "year": "全",
+        "time": "123"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "宋史 `History of Sung Dynasty",
+        "title_parsed": {
+            "zh_TW": "宋史",
+            "en_US": "History of Sung Dynasty"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "2066",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y207",
+        "professor": "黃純怡",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "334"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "考古學導論 `Introduction to Archeology",
+        "title_parsed": {
+            "zh_TW": "考古學導論",
+            "en_US": "Introduction to Archeology"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "40",
+        "code": "2067",
+        "time_parsed": [{
+            "day": 5,
+            "time": [6, 7]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y211",
+        "professor": "屈慧麗",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "半",
+        "time": "567"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "唐代文化史 `Cultural History of Tang Dynasty",
+        "title_parsed": {
+            "zh_TW": "唐代文化史",
+            "en_US": "Cultural History of Tang Dynasty"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "40",
+        "code": "2068",
+        "time_parsed": [{
+            "day": 5,
+            "time": [1, 2]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "F09",
+        "professor": "宋德喜",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "全",
+        "time": "512"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "中國繪畫史 `Chinese Painting History",
+        "title_parsed": {
+            "zh_TW": "中國繪畫史",
+            "en_US": "Chinese Painting History"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "2070",
+        "time_parsed": [{
+            "day": 2,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y104",
+        "professor": "劉瑞寬",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "234"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "臺灣文化史 `Cultural History of Taiwan",
+        "title_parsed": {
+            "zh_TW": "臺灣文化史",
+            "en_US": "Cultural History of Taiwan"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "2071",
+        "time_parsed": [{
+            "day": 5,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y204",
+        "professor": "李毓嵐",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "534"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "法國刑罰史 `French History of Punishment",
+        "title_parsed": {
+            "zh_TW": "法國刑罰史",
+            "en_US": "French History of Punishment"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "2072",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y207",
+        "professor": "陳樂元",
+        "class": "2",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "256"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "中西交通史 `Sino-Western Communication History",
+        "title_parsed": {
+            "zh_TW": "中西交通史",
+            "en_US": "Sino-Western Communication History"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "3033",
+        "time_parsed": [{
+            "day": 5,
+            "time": [8, 9]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y309",
+        "professor": "游博清",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "589"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "中臺灣的山海文化 `the view of the mountain and the seamiddle sea culture",
+        "title_parsed": {
+            "zh_TW": "中臺灣的山海文化",
+            "en_US": "the view of the mountain and the seamiddle sea culture"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "3034",
+        "time_parsed": [{
+            "day": 4,
+            "time": [8, 9]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y203",
+        "professor": "蘇全正",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "489"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "中國遊記選讀 `Selected Readings of Chinese Travel Literature",
+        "title_parsed": {
+            "zh_TW": "中國遊記選讀",
+            "en_US": "Selected Readings of Chinese Travel Literature"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "3035",
+        "time_parsed": [{
+            "day": 5,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y304",
+        "professor": "蔡宗憲",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "534"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "中國近古社會與文化 `The Society and Culture in Early Modern China(907-1368)",
+        "title_parsed": {
+            "zh_TW": "中國近古社會與文化",
+            "en_US": "The Society and Culture in Early Modern China(907-1368)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "3036",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y304",
+        "professor": "黃純怡",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "半",
+        "time": "378"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "隋唐五代史 `History of Sui,Tang and Five Dynasties",
+        "title_parsed": {
+            "zh_TW": "隋唐五代史",
+            "en_US": "History of Sui,Tang and Five Dynasties"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "3037",
+        "time_parsed": [{
+            "day": 4,
+            "time": [2, 3, 4]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "F201",
+        "professor": "宋德喜",
+        "class": "3",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "4234"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "西洋近代史 `Western History: The 16th-to-18th Century",
+        "title_parsed": {
+            "zh_TW": "西洋近代史",
+            "en_US": "Western History: The 16th-to-18th Century"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "40",
+        "code": "3038",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y312",
+        "professor": "陳佩璟",
+        "class": "3",
+        "hours": "3",
+        "note": "",
+        "number_parsed": 40,
+        "year": "半",
+        "time": "1567"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "大英國協史 `History of Britain : Empire and Commonwealth",
+        "title_parsed": {
+            "zh_TW": "大英國協史",
+            "en_US": "History of Britain : Empire and Commonwealth"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "40",
+        "code": "3039",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "英國史",
+        "language": "中文",
+        "location": "Y206",
+        "professor": "林志龍",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 40,
+        "year": "半",
+        "time": "334"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "史記 `Shih Chi(The Historical Records)",
+        "title_parsed": {
+            "zh_TW": "史記",
+            "en_US": "Shih Chi(The Historical Records)"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "3041",
+        "time_parsed": [{
+            "day": 1,
+            "time": [8, 9]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y312",
+        "professor": "吳昌廉",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "全",
+        "time": "189"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "古代中國知識與思想的世界 `The World of Knowledge and Thought in Ancient China",
+        "title_parsed": {
+            "zh_TW": "古代中國知識與思想的世界",
+            "en_US": "The World of Knowledge and Thought in Ancient China"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "45",
+        "code": "3042",
+        "time_parsed": [{
+            "day": 3,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y206",
+        "professor": "王仁祥",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 45,
+        "year": "全",
+        "time": "356"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "歐洲中古史 `European Medieval Histo",
+        "title_parsed": {
+            "zh_TW": "歐洲中古史",
+            "en_US": "European Medieval Histo"
+        },
+        "hours_parsed": 3,
+        "credits": "3",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "0",
+        "code": "3043",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6, 7]
+        }],
+        "credits_parsed": 3,
+        "obligatory": "選修",
+        "previous": "歐洲中古史",
+        "language": "中文",
+        "location": "Y309",
+        "professor": "杜子信",
+        "class": "3",
+        "hours": "3",
+        "note": "擬停開",
+        "number_parsed": 0,
+        "year": "全",
+        "time": "4567"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "近代醫療史導論 `Introduction to History of Modern Medicine",
+        "title_parsed": {
+            "zh_TW": "近代醫療史導論",
+            "en_US": "Introduction to History of Modern Medicine"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "35",
+        "code": "3045",
+        "time_parsed": [{
+            "day": 2,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y411",
+        "professor": "許宏彬",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 35,
+        "year": "半",
+        "time": "278"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "畫史與畫論 `Painting History and Painting Theory",
+        "title_parsed": {
+            "zh_TW": "畫史與畫論",
+            "en_US": "Painting History and Painting Theory"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "3046",
+        "time_parsed": [{
+            "day": 1,
+            "time": [3, 4]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y309",
+        "professor": "劉瑞寬",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "半",
+        "time": "134"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "臺灣社會史 `Social History of Taiwan",
+        "title_parsed": {
+            "zh_TW": "臺灣社會史",
+            "en_US": "Social History of Taiwan"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "60",
+        "code": "3047",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "中文",
+        "location": "Y206",
+        "professor": "孟祥瀚",
+        "class": "3",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 60,
+        "year": "半",
+        "time": "256"
+    }, {
+        "for_dept": "歷史學系學士班",
+        "title": "影視史學:理論與實作 `Historical Consciousness and Representation on Visual Texts : Theory and Pratice",
+        "title_parsed": {
+            "zh_TW": "影視史學:理論與實作",
+            "en_US": "Historical Consciousness and Representation on Visual Texts : Theory and Pratice"
+        },
+        "hours_parsed": 2,
+        "credits": "2",
+        "department": "歷史系",
+        "obligatory_tf": false,
+        "number": "50",
+        "code": "4011",
+        "time_parsed": [{
+            "day": 2,
+            "time": [7, 8]
+        }],
+        "credits_parsed": 2,
+        "obligatory": "選修",
+        "previous": "",
+        "language": "",
+        "location": "Y206",
+        "professor": "周樑楷",
+        "class": "4",
+        "hours": "2",
+        "note": "",
+        "number_parsed": 50,
+        "year": "半",
+        "time": "278"
+    }]
+}
