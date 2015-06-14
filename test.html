@@ -201,11 +201,11 @@
                 <div calss="row">
                     <div class="col-xs-12" style = "background-color:#D9EDF7">
                         <div calss="row">
-                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="elective-check">系選修</div>
-                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="specific-time-check">指定時間</div>
-                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="specific-check">指定搜尋</div>
-                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="general-check">通識</div>
-                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="PE-check">體育</div>
+                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="elective-check" checked>系選修</div>
+                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="specific-time-check" checked>指定時間</div>
+                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="specific-check" checked>指定搜尋</div>
+                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="general-check" checked>通識</div>
+                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="PE-check" checked>體育</div>
                         </div>
                         <select multiple class="form-control" id="bulletin-post">
                         	<optgroup label="系選修" id="elective-post" style="display:">
@@ -618,42 +618,42 @@
 				});
 				$("#elective-check").change(function(){//用來檢查勾選表被選了沒
 					if ($(this).prop("checked")){//如果選了，就設定成隱藏的css屬性
-						$("#elective-post").css("display", "none");
+						$("#elective-post").css("display", "");						
 					};
 					if($(this).prop("checked")==false){//如果沒有就恢復成空的
-						$("#elective-post").css("display", "");
+						$("#elective-post").css("display", "none");
 					}
 				});
 				$("#specific-time-check").change(function(){
 					if ($(this).prop("checked")){
-						$("#specific-time-post").css("display", "none");
+						$("#specific-time-post").css("display", "");
 					};
 					if($(this).prop("checked")==false){
-						$("#specific-time-post").css("display", "");
+						$("#specific-time-post").css("display", "none");						
 					}
 				});
 				$("#specific-check").change(function(){
 					if ($(this).prop("checked")){
-						$("#specific-post").css("display", "none");
+						$("#specific-post").css("display", "");
 					};
 					if($(this).prop("checked")==false){
-						$("#specific-post").css("display", "");
+						$("#specific-post").css("display", "none");						
 					}
 				});
 				$("#general-check").change(function(){
 					if ($(this).prop("checked")){
-						$("#general-post").css("display", "none");
+						$("#general-post").css("display", "");
 					};
 					if($(this).prop("checked")==false){
-						$("#general-post").css("display", "");
+						$("#general-post").css("display", "none");						
 					}
 				});
 				$("#PE-check").change(function(){
 					if ($(this).prop("checked")){
-						$("#PE-post").css("display", "none");
+						$("#PE-post").css("display", "");
 					};
 					if($(this).prop("checked")==false){
-						$("#PE-post").css("display", "");
+						$("#PE-post").css("display", "none");						
 					}
 				});
 			});
@@ -782,7 +782,8 @@
 				$('#specific-post').empty();
 				$('#general-post').empty();
 				$('#PE-post').empty();
-				$("#class_credit").val(0);
+				window.credits=0;
+				$("#class_credit").val(window.credits);
 			}			
 		})(jQuery);
 	    </script>
