@@ -463,13 +463,13 @@
 					$a.serializeArray()[1].value
 					"U"
 				}*/	
-				$("#bulletin-post").delegate("option", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
+				$("#bulletin-post").delegate("option", "dblclick", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
 					var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
 					if(boolean){				
 						var code = $(this).val();//this會代表我抓到的那個東西，也就是option				
 						course = courses[code];			
 						add_course($('#time-table'), course, language);	
-						change_color($(this));
+						change_color($(this));//選過的課程就會改顏色
 					}
 				});				
 				$("#specific_search").click(function()	//可以用課號搜尋，把input的的課號用.val()取出
@@ -482,7 +482,7 @@
 					$.each(tableArray,function(ik,iv){
 						$.each(iv,function(jk,jv){
 							var $td = $("#time-table").find('tr[data-hour=' + jv + '] td[data-day='+ik+']');		
-							$td.html('<center><button type="button" class="btn btn-info btn-block"><span class="fa fa-plus-circle 	fa-3x fa-fw"></span></button></center>');
+							$td.html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');
 						})						
 					})
 					$.each(course_of_majors[major][level], function(ik, iv){
@@ -526,20 +526,20 @@
 					$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
 					$('#elective-post').empty();//清掉選修課程
 				});
-				$("#time-table").delegate("span", "click", function(){//這是用來把一整個課程都刪掉的按鈕
-					$target = $(this).closest("td");
-					var code = $(this).next("input").val();
+				$("#time-table").delegate("span.delete", "click", function(){//這是用來把一整個課程都刪掉的按鈕
+					$target = $(this).closest("td");//因為這裡點到的是span，要往上找td
+					var code = $(this).next("input").val();//找到最近的一個sibling,可以用selector去篩選
 					var boolean = confirm("是否刪除此課程?" + "\n" + "Are you sure you really want to drop this course?");					
 					if(boolean)
 					{
-						delete_course($('#time-table'), courses[code]);	//就跟add_course一樣，只是把填東西改成刪掉			
+						delete_course($('#time-table'), courses[code]);	//就跟add_course一樣，只是把填東西改成刪掉				
 					}					
 				});								
-				$("td").click(function(){	//按一下課表欄位就有課程彈出來了
+				$("#time-table").delegate("button.plusIcon","click",function(){	//按一下課表欄位就有課程彈出來了
 					if($(this).text()==""){ //我現在才知道null!=""
 						var major=$("#v_major").val();	//取到系
-						var day=$(this).attr("data-day");
-						var hour=$(this).closest("tr").attr("data-hour");		
+						var day=$(this).closest("td").attr("data-day");
+						var hour=$(this).closest("tr").attr("data-hour");	
 						$("#specific-time-post").empty();
 						$.each(course_of_day[day][hour], function(ik, iv){	
 							if(iv.for_dept==major){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列
@@ -634,7 +634,7 @@
 				$.each(course.time_parsed,function(ik, iv){
 					$.each(iv.time,function(jk, jv){
 						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
-						if($td.text()!=""){							
+						if($td.text()!=""){//用來判斷td裡面是不已經有放過課程了，但若先在裡面放個按鈕那.text()回傳回來的也是空字串					
 							check_conflict = true;
 							alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that 	time! Please drop out some class");
 							return false;//傳回false就是跳離迴圈
@@ -648,13 +648,13 @@
 					$.each(course.time_parsed, function(ik, iv){							
 						$.each(iv.time, function(jk, jv){		//同上，iv.	time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)					
 							var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
-						  var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));						
+						  var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="delete">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));						
 							//把上面的html格式匯入找到的td type中(	parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)							
 							$cell.find('.title').text(course.title_short).end()
 							$cell.find('input').val(course.code).end()		//	將對應的課程內容寫入cell的html語法中，.title就是class="title"
 							     .find('.professor').text(course.professor).end()//text()	會把東西填入找到的class那裡，end()會回到var $cell那一行
 							     .find('.location').text(course.location);								
-							$td.html($cell.html());		//顯示課程，把cell.html()塞到<td>tag裡面
+							$td.html($cell.html());		//顯示課程，把cell.html()塞到<td>tag裡面，就算裡面原本有按鈕也會直接被蓋掉
 						});
 					});
 					add_credits(course);
@@ -694,6 +694,7 @@
 						var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
 						//td:eq()為搜尋td的陣列索引值，找到課程的時間	iv.day為星期，但因為td為陣列所以iv.day要減一	 find()是找class!!
 						$td.empty();	//顯示課程，把cell.html()塞到<td>tag裡面
+						$td.html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');
 					})
 				})
 				minus_credits(course);
