@@ -396,6 +396,7 @@
                     window.course_of_day = {};  //這是宣告日期的陣列
                     window.teacher_course = {}; //這是以老師姓名為index的陣列
                     window.name_of_course = {}; //這是以課程名稱為index的陣列
+                    window.name_of_optional_obligatory = [] //這是用來存系上的必修課，檢查有沒有課名是重複的，若有就讓使用者自行決定要上哪堂
                     window.language="zh_TW";//固定顯示語言為中文
                     $.each(json.course, function(ik, iv){
                         if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
@@ -465,8 +466,9 @@
                 }*/ 
                 $("#bulletin-post").delegate("option", "dblclick", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
                     var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
+
                     if(boolean){                
-                        var code = $(this).val();//this會代表我抓到的那個東西，也就是option                
+                        var code = $(this).val();//this會代表我抓到的那個東西，也就是option
                         course = courses[code];         
                         add_course($('#time-table'), course, language); 
                         change_color($(this));//選過的課程就會改顏色
@@ -485,15 +487,22 @@
                             $td.html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');
                         })                      
                     })
-                    $.each(course_of_majors[major][level], function(ik, iv){
-                            if(courses[iv].obligatory_tf==true){
-                                add_course($('#time-table'), courses[iv], language);
-                            }
+                    $.each(course_of_majors[major][level], function(ik, iv){//先這一年級的必修課全部跑過一次，計算重複課名的數量
+                        if(courses[iv].obligatory_tf==true){
+                            check_optional_obligatory(courses[iv]); 
+                        }
+                    });
+                    $.each(course_of_majors[major][level], function(ik, iv){//知道那些課程會重複之後，再決定那些課程要填入課表
+                        var tmpCh = courses[iv].title_parsed["zh_TW"].split(' ');       //(這是中文課名)切割課程名稱，遇到空格就切開
+                        title_short = tmpCh[0];     //title_short是會自動宣告的區域變數，存沒有英文的課名
+                        if(window.name_of_optional_obligatory[title_short]==1){
+                            add_course($('#time-table'), courses[iv], language);
+                        }       
+                        show_optional_obligatory(courses[iv]);      
                     });
                     $.each(course_of_majors[major], function(ik, iv){               
-                        $.each(iv,function(jk, jv){                                                 
+                        $.each(iv,function(jk, jv){ 
                             if(courses[jv].obligatory_tf==false){
-                                //console.log(jv);
                                 bulletin_post($("#elective-post"),courses[jv], language);
                             }                       
                         })
@@ -716,10 +725,29 @@
                 $('#PE-post').empty();
                 window.credits=0;
                 $("#class_credit").val(window.credits);
+                window.name_of_optional_obligatory=[];//把數過的課程清空
             }    
             var change_color=function($target){//一旦添加了課程，則側欄的課名改了顏色 
                 $target.css("color","red");
-            }               
+            } 
+            var check_optional_obligatory=function(course){//用來確認這個戲有幾堂必修課是同名的
+                var tmpCh = course.title_parsed["zh_TW"].split(' ');        //(這是中文課名)切割課程名稱，遇到空格就切開
+                course.title_short = tmpCh[0];      //title_short是會自動宣告的區域變數，存沒有英文的課名
+                if(typeof(window.name_of_optional_obligatory[course.title_short]) == 'undefined'){//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
+                    window.name_of_optional_obligatory[course.title_short] = 1;
+                }
+                else{
+                    window.name_of_optional_obligatory[course.title_short]++;
+                }           
+                console.log(course.title_short+" "+window.name_of_optional_obligatory[course.title_short]);
+            } 
+            var show_optional_obligatory=function(course){
+                var tmpCh = course.title_parsed["zh_TW"].split(' ');        //(這是中文課名)切割課程名稱，遇到空格就切開
+                course.title_short = tmpCh[0];      //title_short是會自動宣告的區域變數，存沒有英文的課名
+                if(window.name_of_optional_obligatory[course.title_short]>1){
+                    bulletin_post($("#obligatory-post"),course,language);
+                }
+            }           
         })(jQuery);
         </script>
         </body>
