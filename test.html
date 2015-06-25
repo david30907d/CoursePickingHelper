@@ -211,6 +211,7 @@
                 <div calss="row">
                     <div class="col-xs-12" style = "background-color:#D9EDF7">
                         <div calss="row">
+                        	<div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="obligatory-check" checked>選擇性必修</div>
                             <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="elective-check" checked>系選修</div>
                             <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="specific-time-check" checked>指定時間</div>
                             <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="specific-check" checked>指定搜尋</div>
@@ -221,12 +222,22 @@
                         	<optgroup label="選擇性必修" id="obligatory-post" style="display:">
                         	</optgroup>
                         	<optgroup label="系選修" id="elective-post" style="display:">
+                        		<optgroup label="一年級" id="freshman" style="display:">
+                        		</optgroup>
+                        		<optgroup label="二年級" id="sophomore" style="display:">
+                        		</optgroup>
+                        		<optgroup label="三年級" id="junior" style="display:">
+                        		</optgroup>
+                        		<optgroup label="四年級" id="senior" style="display:">
+                        		</optgroup>
+                        		<optgroup label="五年級" id="fifth-grade" style="display:">
+                        		</optgroup>
                         	</optgroup>
                         	<optgroup label="指定時間" id="specific-time-post" style="display:"></optgroup>
                         	<optgroup label="指定搜尋" id="specific-post" style="display:"></optgroup>
-                        	<optgroup label="通識" id="general-post" style="display:">  	
+                        	<optgroup label="通識" id="general-post" style="display:">  
                         	</optgroup>
-                        	<optgroup label="體育" id="PE-post" style="display:">      		
+                        	<optgroup label="體育" id="PE-post" style="display:">      	
                         	</optgroup>                           
                         </select>
                     </div>
@@ -505,7 +516,21 @@
 					$.each(course_of_majors[major], function(ik, iv){				
 						$.each(iv,function(jk, jv){	
 							if(courses[jv].obligatory_tf==false){
-								bulletin_post($("#elective-post"),courses[jv], language);
+								if(courses[jv].class==1){
+									bulletin_post($("#freshman"),courses[jv], language);
+								}
+								if(courses[jv].class==2){
+									bulletin_post($("#sophomore"),courses[jv], language);
+								}
+								if(courses[jv].class==3){
+									bulletin_post($("#junior"),courses[jv], language);
+								}
+								if(courses[jv].class==4){
+									bulletin_post($("#senior"),courses[jv], language);
+								}
+								if(courses[jv].class==5){
+									bulletin_post($("#fifth-grade"),courses[jv], language);
+								}
 							}						
 						})
 					})//以上為必修 選修填入	
@@ -559,12 +584,28 @@
 						})					
 					}					
 				});
-				$("#elective-check").change(function(){//用來檢查勾選表被選了沒
+				$("#obligatory-check").change(function(){//用來檢查勾選表被選了沒
 					if ($(this).prop("checked")){//如果選了，就設定成隱藏的css屬性
-						$("#elective-post").css("display", "");						
+						$("#obligatory-post").css("display", "");						
 					};
 					if($(this).prop("checked")==false){//如果沒有就恢復成空的
-						$("#elective-post").css("display", "none");
+						$("#obligatory-post").css("display", "none");
+					}
+				});
+				$("#elective-check").change(function(){//用來檢查勾選表被選了沒
+					if ($(this).prop("checked")){//如果選了，就設定成隱藏的css屬性
+						$("#freshman").css("display", "");
+						$("#sophomore").css("display", "");
+						$("#junior").css("display", "");
+						$("#senior").css("display", "");
+						$("#fifth-grade").css("display", "");						
+					};
+					if($(this).prop("checked")==false){//如果沒有就恢復成空的
+						$("#freshman").css("display", "none");
+						$("#sophomore").css("display", "none");
+						$("#junior").css("display", "none");
+						$("#senior").css("display", "none");
+						$("#fifth-grade").css("display", "none");
 					}
 				});
 				$("#specific-time-check").change(function(){
@@ -659,7 +700,7 @@
 					$.each(course.time_parsed, function(ik, iv){							
 						$.each(iv.time, function(jk, jv){		//同上，iv.	time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)					
 							var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
-						  var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="delete">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));						
+						  var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color:red;"><span aria-hidden="true" class="delete" style="color:red;">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));						
 							//把上面的html格式匯入找到的td type中(	parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)							
 							$cell.find('.title').text(course.title_short).end()
 							$cell.find('input').val(course.code).end()		//	將對應的課程內容寫入cell的html語法中，.title就是class="title"
@@ -720,7 +761,11 @@
 			};
 			var reset=function(){
 				$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
-				$('#elective-post').empty();//以下是要清掉選修課程、指定時間搜尋等課程
+				$('#freshman').empty();//以下是要清掉選修課程、指定時間搜尋等課程
+				$('#sophomore').empty();
+				$('#senior').empty();
+				$('#junior').empty();
+				$('#fifth-grade').empty();
 				$('#specific-time-post').empty();
 				$('#specific-post').empty();
 				$('#general-post').empty();
