@@ -97,6 +97,16 @@
         	font-size: 80%;
         }
         /*table的屬性結束*/
+        .search-class .panel-body
+        {
+            padding-top: 0;
+            padding-bottom  : 0;
+        }
+        .search-class .panel-body > h4:hover,
+        .search-class .panel-body > h4:focus
+        {
+            background-color: yellow;
+        }
         </style>
     </head>
 
@@ -244,13 +254,16 @@
                     </div>
                 </div>
                 -->
-
+                
+                <div class="search-class">
 				<div class="panel panel-info">
-				  <div class="panel-heading">必修
-				  <button type="button" class="close"><span class="fa fa-trash"></span></button>
+				  <div class="panel-heading">必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
 				  </div>
 				  <div class="panel-body">
-				    
+				    <h4>Class1</h4>
+                    <h4>Class2</h4>
+                    <h4>Class3</h4>
+                    <h4>Class4</h4>
 				  </div>
 				</div>
 				<div class="panel panel-info">
@@ -271,6 +284,7 @@
 				    
 				  </div>
 				</div>
+                </div>
 
                 <div class="modal fade modal fade bs-example-modal-lg" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
