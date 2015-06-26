@@ -27,7 +27,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>中興選課小幫手</title>
+        <title>選課小幫手</title>
         <script type="text/javascript"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -97,6 +97,16 @@
             font-size: 80%;
         }
         /*table的屬性結束*/
+        .search-class .panel-body
+        {
+            padding-top: 0;
+            padding-bottom  : 0;
+        }
+        .panel-body h5:hover,
+        .panel-body h5:focus
+        {
+            background-color: yellow;
+        }
         </style>
     </head>
 
@@ -208,6 +218,7 @@
                     </div>
                 </div>
                 <br>
+                <!--
                 <div calss="row">
                     <div class="col-xs-12" style = "background-color:#D9EDF7">
                         <div calss="row">
@@ -219,20 +230,84 @@
                             <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="PE-check" checked>體育</div>
                         </div>
                         <select multiple class="form-control" id="bulletin-post">
-                            <optgroup label="選擇性必修" id="obligatory-post" style="display:">
+                            <optgroup label="選擇性必修" id="obligatory-post">
                             </optgroup>
-                            <optgroup label="系選修" id="elective-post" style="display:">
+                            <optgroup label="系選修" id="elective-post">
+                                <optgroup label="一年級" id="freshman">
+                                </optgroup>
+                                <optgroup label="二年級" id="sophomore">
+                                </optgroup>
+                                <optgroup label="三年級" id="junior">
+                                </optgroup>
+                                <optgroup label="四年級" id="senior">
+                                </optgroup>
+                                <optgroup label="五年級" id="fifth-grade">
+                                </optgroup>
                             </optgroup>
-                            <optgroup label="指定時間" id="specific-time-post" style="display:"></optgroup>
-                            <optgroup label="指定搜尋" id="specific-post" style="display:"></optgroup>
-                            <optgroup label="通識" id="general-post" style="display:">  
+                            <optgroup label="指定時間" id="specific-time-post"></optgroup>
+                            <optgroup label="指定搜尋" id="specific-post"></optgroup>
+                            <optgroup label="通識" id="general-post">  
                             </optgroup>
-                            <optgroup label="體育" id="PE-post" style="display:">         
+                            <optgroup label="體育" id="PE-post">          
                             </optgroup>                           
                         </select>
                     </div>
                 </div>
-                
+                -->
+                <!--側欄位-->
+                <div class="search-class" id="bulletin-post">
+                    <div class="panel panel-info">
+                      <div class="panel-heading">必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+                      </div>
+                      <div class="panel-body">
+                        <h5>Class1</h5>
+                        <h5>Class2</h5>
+                        <h5>Class3</h5>
+                        <h5>Class4</h5>
+                      </div>
+                    </div>
+
+                    <div class="panel panel-info">
+                      <div class="panel-heading">選擇性必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+                      </div>
+                      <div class="panel-body" id="obligatory-post">
+                      </div>
+                    </div>
+                    <div class="panel panel-info">
+                      <div class="panel-heading">選修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+                      </div>
+                      <div class="panel-body" id="elective-post">
+                        <h5 id="">一年級</h5>
+                        <div id="freshman">                     
+                        </div>
+                        <h5 id="">二年級</h5>
+                        <div id="sophomore">                        
+                        </div>
+                        <h5 id="">三年級</h5>
+                        <div id="junior">                       
+                        </div>
+                        <h5 id="">四年級</h5>
+                        <div id="senior">                               
+                        </div>
+                        <h5 id="">五年級</h5>
+                        <div id="fifth-grade">                                 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-info">
+                      <div class="panel-heading">通識<button type="button" class="close"><span class="fa fa-trash"></span></button>
+                      </div>
+                      <div class="panel-body" id="general-post">
+                      </div>
+                    </div>
+                    <div class="panel panel-info">
+                      <div class="panel-heading">體育<button type="button" class="close"><span class="fa fa-trash"></span></button>
+                      </div>
+                      <div class="panel-body" id="PE-post">
+                      </div>
+                    </div>
+                </div>
+
                 <div class="modal fade modal fade bs-example-modal-lg" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -467,9 +542,8 @@
                     $a.serializeArray()[1].value
                     "U"
                 }*/ 
-                $("#bulletin-post").delegate("option", "dblclick", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
+                $("#bulletin-post").delegate("h5", "dblclick", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
                     var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
-
                     if(boolean){                
                         var code = $(this).val();//this會代表我抓到的那個東西，也就是option
                         course = courses[code];         
@@ -482,14 +556,15 @@
                 {                                           
                     var major=$("#v_major").val();  //取到系
                     var level = $("#v_level").val();    //取到年級
-                    reset();                        
+                    reset();/*                      
                     var tableArray={1:[1,2,3,4,5,6,7,8],2:[1,2,3,4,5,6,7,8],3:[1,2,3,4,5,6,7,8],4:[1,2,3,4,5,6,7,8],5:[1,2,3,4,5,6,7,8]}                
                     $.each(tableArray,function(ik,iv){
                         $.each(iv,function(jk,jv){
                             var $td = $("#time-table").find('tr[data-hour=' + jv + '] td[data-day='+ik+']');        
                             $td.html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');
                         })                      
-                    })
+                    })*/
+                    $("td").html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');
                     $.each(course_of_majors[major][level], function(ik, iv){//先這一年級的必修課全部跑過一次，計算重複課名的數量
                         if(courses[iv].obligatory_tf==true){
                             check_optional_obligatory(courses[iv]); 
@@ -506,7 +581,21 @@
                     $.each(course_of_majors[major], function(ik, iv){               
                         $.each(iv,function(jk, jv){ 
                             if(courses[jv].obligatory_tf==false){
-                                bulletin_post($("#elective-post"),courses[jv], language);
+                                if(courses[jv].class==1){
+                                    bulletin_post($("#freshman"),courses[jv], language);
+                                }
+                                if(courses[jv].class==2){
+                                    bulletin_post($("#sophomore"),courses[jv], language);
+                                }
+                                if(courses[jv].class==3){
+                                    bulletin_post($("#junior"),courses[jv], language);
+                                }
+                                if(courses[jv].class==4){
+                                    bulletin_post($("#senior"),courses[jv], language);
+                                }
+                                if(courses[jv].class==5){
+                                    bulletin_post($("#fifth-grade"),courses[jv], language);
+                                }
                             }                       
                         })
                     })//以上為必修 選修填入  
@@ -536,7 +625,8 @@
                 $("#clear-button").click(function()
                 {
                     $('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
-                    $('#elective-post').empty();//清掉選修課程
+                    $('#bulletin_post').empty();//清掉選修課程
+                    $("td").html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');//再把加號的按鈕填上去
                 });
                 $("#time-table").delegate("span.delete", "click", function(){//這是用來把一整個課程都刪掉的按鈕
                     $target = $(this).closest("td");//因為這裡點到的是span，要往上找td
@@ -560,12 +650,28 @@
                         })                  
                     }                   
                 });
-                $("#elective-check").change(function(){//用來檢查勾選表被選了沒
+                $("#obligatory-check").change(function(){//用來檢查勾選表被選了沒
                     if ($(this).prop("checked")){//如果選了，就設定成隱藏的css屬性
-                        $("#elective-post").css("display", "");                     
+                        $("#obligatory-post").css("display", "");                       
                     };
                     if($(this).prop("checked")==false){//如果沒有就恢復成空的
-                        $("#elective-post").css("display", "none");
+                        $("#obligatory-post").css("display", "none");
+                    }
+                });
+                $("#elective-check").change(function(){//用來檢查勾選表被選了沒
+                    if ($(this).prop("checked")){//如果選了，就設定成隱藏的css屬性
+                        $("#freshman").css("display", "");
+                        $("#sophomore").css("display", "");
+                        $("#junior").css("display", "");
+                        $("#senior").css("display", "");
+                        $("#fifth-grade").css("display", "");                       
+                    };
+                    if($(this).prop("checked")==false){//如果沒有就恢復成空的
+                        $("#freshman").css("display", "none");
+                        $("#sophomore").css("display", "none");
+                        $("#junior").css("display", "none");
+                        $("#senior").css("display", "none");
+                        $("#fifth-grade").css("display", "none");
                     }
                 });
                 $("#specific-time-check").change(function(){
@@ -622,7 +728,7 @@
                 })
                 time = time.join(' ');//把多個陣列用;分隔並合併指派給time
                 //var time = course.time_parsed.day+course.time_parsed.time;
-                var $option = $($.parseHTML('<option title="" style="color:#3074B5;" value=""></option>'));//把option做成dom，再把dom做成jQuery物件
+                var $option = $($.parseHTML('<h5 title="" style="color:#3074B5;" value=""></h5>'));//把option做成dom，再把dom做成jQuery物件
                 $option.text(course.title_short);   //將對應的課程內容寫入cell的html語法中    
                 $option.attr("title", time);//在title裡面放課堂時間
                 $option.val(course.code);
@@ -660,7 +766,7 @@
                     $.each(course.time_parsed, function(ik, iv){                            
                         $.each(iv.time, function(jk, jv){       //同上，iv.    time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)                   
                             var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');   
-                          var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="delete">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));                       
+                          var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color:red;"><span aria-hidden="true" class="delete" style="color:red;">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));                     
                             //把上面的html格式匯入找到的td type中(  parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)                           
                             $cell.find('.title').text(course.title_short).end()
                             $cell.find('input').val(course.code).end()      //  將對應的課程內容寫入cell的html語法中，.title就是class="title"
@@ -721,7 +827,11 @@
             };
             var reset=function(){
                 $('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
-                $('#elective-post').empty();//以下是要清掉選修課程、指定時間搜尋等課程
+                $('#freshman').empty();//以下是要清掉選修課程、指定時間搜尋等課程
+                $('#sophomore').empty();
+                $('#senior').empty();
+                $('#junior').empty();
+                $('#fifth-grade').empty();
                 $('#specific-time-post').empty();
                 $('#specific-post').empty();
                 $('#general-post').empty();
