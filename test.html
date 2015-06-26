@@ -97,6 +97,16 @@
         	font-size: 80%;
         }
         /*table的屬性結束*/
+        .search-class .panel-body
+        {
+            padding-top: 0;
+            padding-bottom  : 0;
+        }
+        .search-class .panel-body > h5:hover,
+        .search-class .panel-body > h5:focus
+        {
+            background-color: yellow;
+        }
         </style>
     </head>
 
@@ -220,69 +230,84 @@
                             <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="PE-check" checked>體育</div>
                         </div>
                         <select multiple class="form-control" id="bulletin-post">
-                        	<optgroup label="選擇性必修" id="obligatory-post" style="display:">
+                        	<optgroup label="選擇性必修" id="obligatory-post">
                         	</optgroup>
-                        	<optgroup label="系選修" id="elective-post" style="display:">
-                        		<optgroup label="一年級" id="freshman" style="display:">
+                        	<optgroup label="系選修" id="elective-post">
+                        		<optgroup label="一年級" id="freshman">
                         		</optgroup>
-                        		<optgroup label="二年級" id="sophomore" style="display:">
+                        		<optgroup label="二年級" id="sophomore">
                         		</optgroup>
-                        		<optgroup label="三年級" id="junior" style="display:">
+                        		<optgroup label="三年級" id="junior">
                         		</optgroup>
-                        		<optgroup label="四年級" id="senior" style="display:">
+                        		<optgroup label="四年級" id="senior">
                         		</optgroup>
-                        		<optgroup label="五年級" id="fifth-grade" style="display:">
+                        		<optgroup label="五年級" id="fifth-grade">
                         		</optgroup>
                         	</optgroup>
-                        	<optgroup label="指定時間" id="specific-time-post" style="display:"></optgroup>
-                        	<optgroup label="指定搜尋" id="specific-post" style="display:"></optgroup>
-                        	<optgroup label="通識" id="general-post" style="display:">  
+                        	<optgroup label="指定時間" id="specific-time-post"></optgroup>
+                        	<optgroup label="指定搜尋" id="specific-post"></optgroup>
+                        	<optgroup label="通識" id="general-post">  
                         	</optgroup>
-                        	<optgroup label="體育" id="PE-post" style="display:">      	
+                        	<optgroup label="體育" id="PE-post">      	
                         	</optgroup>                           
                         </select>
                     </div>
                 </div>
                 -->
+                <!--側欄位-->
+                <div class="search-class">
+				<div class="panel panel-info">
+				  <div class="panel-heading">必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+				  </div>
+				  <div class="panel-body">
+				    <h5>Class1</h5>
+                    <h5>Class2</h5>
+                    <h5>Class3</h5>
+                    <h5>Class4</h5>
+                  </div>
+                </div>
 
-				<div class="panel panel-info"><!--側欄位-->
-				  <div class="panel-heading">選擇性必修
-				  <button type="button" class="close"><span class="fa fa-trash"></span></button>
+				<div class="panel panel-info">
+				  <div class="panel-heading">選擇性必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
 				  </div>
-				  <div class="panel-body" id="obligatory-post" style="display:">
+				  <div class="panel-body" id="obligatory-post">
 				  </div>
 				</div>
 				<div class="panel panel-info">
-				  <div class="panel-heading">選修</div>
-				  <div class="panel-body" id="elective-post" style="display:">
-				  	<h6 id="">一年級</h6>
-				    <div id="freshman" style="display:">				    	
+				  <div class="panel-heading">選修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+                  </div>
+				  <div class="panel-body" id="elective-post">
+				  	<h5 id="">一年級</h5>
+				    <div id="freshman">				    	
 				    </div>
-				    <h6 id="">二年級</h6>
-				    <div id="sophomore" style="display:">				    	
+				    <h5 id="">二年級</h5>
+				    <div id="sophomore">				    	
 				    </div>
-				    <h6 id="">三年級</h6>
-				    <div id="junior" style="display:">				    	
+				    <h5 id="">三年級</h5>
+				    <div id="junior">				    	
 				    </div>
-				    <h6 id="">四年級</h6>
-				    <div id="senior" style="display:">				    			
+				    <h5 id="">四年級</h5>
+				    <div id="senior">				    			
 				    </div>
-				    <div id="fifth-grade" style="display:">
-				    	<h6 id="">五年級</h6>		    	
+				    <div id="fifth-grade">
+				    <h5 id="">五年級</h5>		    	
 				    </div>
 				  </div>
 				</div>
 				<div class="panel panel-info">
-				  <div class="panel-heading">通識</div>
-				  <div class="panel-body" id="general-post" style="display:">
+				  <div class="panel-heading">通識<button type="button" class="close"><span class="fa fa-trash"></span></button>
+                  </div>
+				  <div class="panel-body" id="general-post">
 				    
 				  </div>
 				</div>
 				<div class="panel panel-info">
-				  <div class="panel-heading">體育</div>
-				  <div class="panel-body" id="PE-post" style="display:">
+				  <div class="panel-heading">體育<button type="button" class="close"><span class="fa fa-trash"></span></button>
+                  </div>
+				  <div class="panel-body" id="PE-post">
 				  </div>
 				</div>
+                </div>
 
                 <div class="modal fade modal fade bs-example-modal-lg" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
