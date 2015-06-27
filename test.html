@@ -112,19 +112,21 @@
             <div class="col-md-9">              	          
                 <div class="panel panel-success" id="curriculum-title">
 			        <div class="panel-heading row">
-			          <div class="col-xs-10">
-			          	<h2 style="text-align:center;" id="curriculum-title">課表</h2>
-			          </div>
-			          <div class="col-xs-2">
-			          	<h4>
-			          		<span class="glyphicon glyphicon-user" style="text-align:right;"></span>
-			          		 學分 <span class="badge" id="class_credit"></span>
-			          	</h4>
-			          </div>
+						<div class="col-xs-10">
+							<h2 style="text-align:center;" id="curriculum-title">課表</h2>
+						</div>
+							
+						<div class="col-xs-2">
+							<h4>
+								<span class="glyphicon glyphicon-user" style="text-align:right;"></span>
+								 學分：<span class="badge" id="class_credit"></span>
+							</h4>
+						</div>
 			          
 			        </div>			        
 		      	</div>
 				<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="fuckfuck pastelo">Tooltip on left</button>
+
                 <div class="table-responsive" id="time-table">
                     <table class="table table-striped table-hover table-condensed table-bordered">
                         <thead>
@@ -230,24 +232,24 @@
                 <!--側欄位-->
                 <div class="search-class" id="bulletin-post">
 					<div class="panel panel-info">
-					  <div class="panel-heading">必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
-					  </div>
-					  <div class="panel-body">
-					    <h5>Class1</h5>
-	                    <h5>Class2</h5>
-	                    <h5>Class3</h5>
-	                    <h5>Class4</h5>
-	                  </div>
+						<div class="panel-heading">必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+						</div>
+						<div class="panel-body">
+							<h5>Class1</h5>
+							<h5>Class2</h5>
+							<h5>Class3</h5>
+							<h5>Class4</h5>
+						</div>
 	                </div>
-					<div class="panel panel-info">
-					  <div class="panel-heading">選擇性必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
-					  </div>
-					  <div class="panel-body" id="obligatory-post">
-					  </div>
+						<div class="panel panel-info">
+							<div class="panel-heading">選擇性必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+							</div>
+							<div class="panel-body" id="obligatory-post">
+						</div>
 					</div>
 					<div class="panel panel-info">
-					  <div class="panel-heading">選修<button type="button" class="close"><span class="fa fa-trash"></span></button>
-	                  </div>
+						<div class="panel-heading">選修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+						</div>
 						<div class="panel-body" id="elective-post">
 							<h5>一年級</h5>
                             <div id="freshman">
@@ -684,7 +686,7 @@
 						$.each(teacher_course[teacher], function(ik, iv){							
 							bulletin_post($("#specific-post"),iv, language);
 						});
-					}			
+					}
 				});
 
 				$("#clear-button").click(function()
@@ -716,7 +718,6 @@
 					}					
 				});
 			});
-
 			
 			window.week = ["一", "二", "三", "四", "五"];
 			/************這是用來把課程放到右邊的欄位**************/
@@ -731,14 +732,14 @@
 				})
 				time = time.join(' ');//把多個陣列用;分隔並合併指派給time
 				//var time = course.time_parsed.day+course.time_parsed.time;
-				var $option = $($.parseHTML('<h5 title="" style="color:#3074B5;" value=""></h5>'));//把option做成dom，再把dom做成jQuery物件
+				var $option = $($.parseHTML('<button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="" style="color:#3074B5;" value=""></button>'));//把option做成dom，再把dom做成jQuery物件
 				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中	
 				$option.attr("title", time);//在title裡面放課堂時間
 				$option.val(course.code);
 				//把現在找到的這門選修課課程代碼儲存到這個option，並用value表示
 				$target.append($option);		//顯示課程，把$option放到elective-post，append是追加在後面
-			 };
-			 var add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
+			};
+			var add_course = function($target, course, language) {		//假設target為time-table的參數，course為courses的某一個課程
 				if( !$.isArray(course.time_parsed) )
 					throw 'time_parsed error';		//判斷time-parsed是不是陣列
 				if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
@@ -785,7 +786,6 @@
             /**********刪除課程搜尋結果**********/
             $("#bulletin-post .panel-heading").click(function(){
                 console.log("click");
-                var 
             });
 
 			/**********這是用來刪除衝堂的課程***********/
