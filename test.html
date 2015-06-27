@@ -847,7 +847,7 @@
 			};
 			var minus_credits = function(course){
 				window.credits-=parseInt(course.credits);
-				$("#class_credit").val(window.credits);
+				$("#class_credit").text(window.credits);
 			};
 			var reset=function(){
 				$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
