@@ -101,10 +101,15 @@
             padding-top: 0;
             padding-bottom  : 0;
         }
+<<<<<<< HEAD
         .panel-body h5:hover,
         .panel-body h5:focus
+=======
+        .search-class .panel-body h5:hover,
+        .search-class .panel-body h5:focus
+>>>>>>> f2330237b1ad4a79be8369e4202b09ec998a9dc0
         {
-            background-color: yellow;
+            background-color: #BACAD2;
         }
         </style>
     </head>
@@ -279,7 +284,6 @@
 	                    <h5>Class4</h5>
 	                  </div>
 	                </div>
-
 					<div class="panel panel-info">
 					  <div class="panel-heading">選擇性必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
 					  </div>
@@ -289,45 +293,45 @@
 					<div class="panel panel-info">
 					  <div class="panel-heading">選修<button type="button" class="close"><span class="fa fa-trash"></span></button>
 	                  </div>
-					  <div class="panel-body" id="elective-post">
-					  	<div class="row">
-					  		<div class="col-xs-9"><h5 id="">一年級</h5></div>                            
-                            <div class="col-xs-3">
-                            	<button type="button" class="btn fa-stack fa-lg plusIcon table-btn"><span class="fa fa-plus-circle fa-1x fa-fw "></span></button>
-                            	<!--
-                            	<span class="fa-stack fa-lg">
-                            	  <span class="fa fa-circle fa-stack-2x"></span>
-                            	  <span class="fa fa-plus-circle "></span>
-                            	</span>  fa fa-plus-circle fa-3x fa-fw -->
-                            </div>   
-                        </div>                                            
-					    <div id="freshman">				    	
-					    </div>
-					    <h5 id="">二年級</h5>
-					    <div id="sophomore">				    	
-					    </div>
-					    <h5 id="">三年級</h5>
-					    <div id="junior">				    	
-					    </div>
-					    <h5 id="">四年級</h5>
-					    <div id="senior">				    			
-					    </div>
-					    <h5 id="">五年級</h5>
-					    <div id="fifth-grade">					    		   
-					    </div>
-					  </div>
+						<div class="panel-body" id="elective-post">
+							<div class="row">
+								<div class="col-xs-9"><h5 id="">一年級</h5></div>                            
+								<div class="col-xs-3">
+									<button type="button" class="btn fa-stack fa-lg plusIcon table-btn"><span class="fa fa-plus-circle fa-1x fa-fw "></span></button>
+									<!--
+									<span class="fa-stack fa-lg">
+									<span class="fa fa-circle fa-stack-2x"></span>
+									<span class="fa fa-plus-circle "></span>
+									</span>  fa fa-plus-circle fa-3x fa-fw -->
+								</div>   
+							</div>                                            
+								<div id="freshman">				    	
+								</div>
+								<h5 id="">二年級</h5>
+								<div id="sophomore">				    	
+								</div>
+								<h5 id="">三年級</h5>
+								<div id="junior">				    	
+								</div>
+								<h5 id="">四年級</h5>
+								<div id="senior">				    			
+								</div>
+								<h5 id="">五年級</h5>
+								<div id="fifth-grade">					    		   
+								</div>
+						</div>
 					</div>
 					<div class="panel panel-info">
-					  <div class="panel-heading">通識<button type="button" class="close"><span class="fa fa-trash"></span></button>
-	                  </div>
-					  <div class="panel-body" id="general-post">
-					  </div>
+						<div class="panel-heading">通識<button type="button" class="close"><span class="fa fa-trash"></span></button>
+						</div>
+						<div class="panel-body" id="general-post">
+						</div>
 					</div>
 					<div class="panel panel-info">
-					  <div class="panel-heading">體育<button type="button" class="close"><span class="fa fa-trash"></span></button>
-	                  </div>
-					  <div class="panel-body" id="PE-post">
-					  </div>
+						<div class="panel-heading">體育<button type="button" class="close"><span class="fa fa-trash"></span></button>
+						</div>
+						<div class="panel-body" id="PE-post">
+						</div>
 					</div>
                 </div>
 
@@ -794,8 +798,8 @@
 					$.each(course.time_parsed, function(ik, iv){							
 						$.each(iv.time, function(jk, jv){		//同上，iv.	time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)					
 							var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
-						  var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color:red;"><span aria-hidden="true" class="delete" style="color:red;">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));						
-							//把上面的html格式匯入找到的td type中(	parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)							
+						  var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color:red;"><span aria-hidden="true" class="delete" style="color:red;">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));
+							//把上面的html格式匯入找到的td type中(	parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
 							$cell.find('.title').text(course.title_short).end()
 							$cell.find('input').val(course.code).end()		//	將對應的課程內容寫入cell的html語法中，.title就是class="title"
 							     .find('.professor').text(course.professor).end()//text()	會把東西填入找到的class那裡，end()會回到var $cell那一行
