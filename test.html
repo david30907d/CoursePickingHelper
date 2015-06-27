@@ -51,6 +51,10 @@
         	font-family: "Microsoft JhengHei";
         }
         /*最後改的p是相簿的英文字*/
+        #elective-post
+        {
+        	margin-bottom: 10px;
+        }
         #btn-tools
         {
         	padding: 0;
@@ -229,7 +233,7 @@
                     </div>
                 </div>
                 <br>
-                <!--側欄位-->
+
                 <div class="search-class" id="bulletin-post">
 					<div class="panel panel-info">
 						<div class="panel-heading">必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
@@ -251,20 +255,22 @@
 						<div class="panel-heading">選修<button type="button" class="close"><span class="fa fa-trash"></span></button>
 						</div>
 						<div class="panel-body" id="elective-post">
-							<h5>一年級</h5>
-                            <div id="freshman">
+							<div class="row">
+								<div class="col-xs-9"><h5 id="">一年級</h5></div>                   
+							</div>                                            
+							<div id="freshman">				    	
 							</div>
-							<h5>二年級</h5>
-							<div id="sophomore">
+							<h5 id="">二年級</h5>
+							<div id="sophomore">				    	
 							</div>
-							<h5>三年級</h5>
-							<div id="junior">
+							<h5 id="">三年級</h5>
+							<div id="junior">				    	
 							</div>
-							<h5>四年級</h5>
-							<div id="senior">
+							<h5 id="">四年級</h5>
+							<div id="senior">				    			
 							</div>
-							<h5>五年級</h5>
-							<div id="fifth-grade">
+							<h5 id="">五年級</h5>
+							<div id="fifth-grade">					    		   
 							</div>
 						</div>
 					</div>
@@ -272,7 +278,6 @@
 						<div class="panel-heading">通識<button type="button" class="close"><span class="fa fa-trash"></span></button>
 						</div>
 						<div class="panel-body" id="general-post">
-
 						</div>
 					</div>
 					<div class="panel panel-info">
@@ -282,7 +287,6 @@
 						</div>
 					</div>
                 </div>
-
                 <div class="modal fade modal fade bs-example-modal-lg" id="focus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -384,7 +388,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="modal fade modal fade bs-example-modal-lg" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -395,7 +398,7 @@
                             
 				        <div class="modal-body">
 				            <form class="form-horizontal">
-				                <div class="form-group">
+				                <div class="form-group">				                    
 				                    <label for="v_career" class="col-xs-2 control-label">學制</label>
 				                    <div class="col-xs-10">
 				                        <select class="form-control" name="v_career" id="v_career">
@@ -579,7 +582,7 @@
 				$("#v_career").change(function()
 				{
 					select_degree($("#v_career").val());
-				});
+				});				
 				var select_degree = function(degree)
 				{
 					cozsnsole.log(degree);
@@ -597,7 +600,6 @@
 
 						case "N":
 					}
-<<<<<<< HEAD
 				};	*/
 				/*//這段是均民的原始碼
 				var serializearray=function(){//比較好的方法來取option 的value!!!!
@@ -610,18 +612,18 @@
 					$a.serializeArray()[1].value
 					"U"
 				}*/	
-				$("#bulletin-post").delegate("h5", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
+				$("#bulletin-post").delegate("button", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
 					var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
 					if(boolean){				
 						var code = $(this).val();//this會代表我抓到的那個東西，也就是option
-						course = courses[code];
+						course = courses[code];			
 						add_course($('#time-table'), course, language);	
 						change_color($(this));//選過的課程就會改顏色
 					}
 				});				
 				$("#specific_search").click(function()	//可以用課號搜尋，把input的的課號用.val()取出
 				//$("#ok-button").click(function()
-				{
+				{											
 					var major=$("#v_major").val();	//取到系
 					var level = $("#v_level").val();	//取到年級
 					reset();/*						
@@ -731,7 +733,8 @@
 					$("[data-toggle='tooltip']").on('hover', function(){
         				$(this).tooltip({title: "Hooray!", trigger: "hover"}); 
     				});			
-				});				
+				});
+				
 			});
 			
 			window.week = ["一", "二", "三", "四", "五"];
@@ -739,6 +742,12 @@
 			var bulletin_post = function($target, course, language){	
 			 	if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
+				if( language=="zh_TW" ){
+					course.title_short = course.title_parsed["zh_TW"];		//title_short是會自動宣告的區域變數，存沒有英文的課名			  	
+				}
+				else{
+					course.title_short = course.title_parsed["en_US"];			  	
+				}				
 				var time = [];//time設定為空陣列
 				var $td;
 				time.push("上課時間:");
@@ -747,7 +756,7 @@
 				})
 				time = time.join(' ');//把多個陣列用;分隔並合併指派給time
 				//var time = course.time_parsed.day+course.time_parsed.time;
-				var $option = $($.parseHTML('<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" style="color:#3074B5;" title="" value=""></button>'));//把option做成dom，再把dom做成jQuery物件
+				var $option = $($.parseHTML('<button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" style="color:#3074B5;" title="" value=""></button>'));//把option做成dom，再把dom做成jQuery物件
 				//<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" >Tooltip on left</button>
 				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中	
 				$option.attr("data-toggle", time);	//在title裡面放課堂時間
@@ -799,10 +808,6 @@
 				}
 				
 			};
-            /**********刪除課程搜尋結果**********/
-            $("#bulletin-post .panel-heading").click(function(){
-                console.log("click");
-            });
 
 			/**********這是用來刪除衝堂的課程***********/
 			var delete_conflict = function($target, course, stop_day, stop_time) {		
