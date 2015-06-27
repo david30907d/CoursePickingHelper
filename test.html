@@ -241,10 +241,10 @@
 							<h5>Class4</h5>
 						</div>
 	                </div>
-						<div class="panel panel-info">
-							<div class="panel-heading">選擇性必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
-							</div>
-							<div class="panel-body" id="obligatory-post">
+					<div class="panel panel-info">
+						<div class="panel-heading">選擇性必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+						</div>
+						<div class="panel-body" id="obligatory-post">
 						</div>
 					</div>
 					<div class="panel panel-info">
@@ -851,6 +851,7 @@
 			};
 			var reset=function(){
 				$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
+				$('#obligatory-post').empty();
 				$('#freshman').empty();//以下是要清掉選修課程、指定時間搜尋等課程
 				$('#sophomore').empty();
 				$('#senior').empty();
