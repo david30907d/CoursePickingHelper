@@ -101,13 +101,8 @@
             padding-top: 0;
             padding-bottom  : 0;
         }
-<<<<<<< HEAD
-        .panel-body h5:hover,
-        .panel-body h5:focus
-=======
         .search-class .panel-body h5:hover,
         .search-class .panel-body h5:focus
->>>>>>> f2330237b1ad4a79be8369e4202b09ec998a9dc0
         {
             background-color: #BACAD2;
         }
@@ -294,37 +289,28 @@
 					  <div class="panel-heading">選修<button type="button" class="close"><span class="fa fa-trash"></span></button>
 	                  </div>
 						<div class="panel-body" id="elective-post">
-							<div class="row">
-								<div class="col-xs-9"><h5 id="">一年級</h5></div>                            
-								<div class="col-xs-3">
-									<button type="button" class="btn fa-stack fa-lg plusIcon table-btn"><span class="fa fa-plus-circle fa-1x fa-fw "></span></button>
-									<!--
-									<span class="fa-stack fa-lg">
-									<span class="fa fa-circle fa-stack-2x"></span>
-									<span class="fa fa-plus-circle "></span>
-									</span>  fa fa-plus-circle fa-3x fa-fw -->
-								</div>   
-							</div>                                            
-								<div id="freshman">				    	
-								</div>
-								<h5 id="">二年級</h5>
-								<div id="sophomore">				    	
-								</div>
-								<h5 id="">三年級</h5>
-								<div id="junior">				    	
-								</div>
-								<h5 id="">四年級</h5>
-								<div id="senior">				    			
-								</div>
-								<h5 id="">五年級</h5>
-								<div id="fifth-grade">					    		   
-								</div>
+							<h5>一年級</h5>
+                            <div id="freshman">
+							</div>
+							<h5>二年級</h5>
+							<div id="sophomore">
+							</div>
+							<h5>三年級</h5>
+							<div id="junior">
+							</div>
+							<h5>四年級</h5>
+							<div id="senior">
+							</div>
+							<h5>五年級</h5>
+							<div id="fifth-grade">
+							</div>
 						</div>
 					</div>
 					<div class="panel panel-info">
 						<div class="panel-heading">通識<button type="button" class="close"><span class="fa fa-trash"></span></button>
 						</div>
 						<div class="panel-body" id="general-post">
+
 						</div>
 					</div>
 					<div class="panel panel-info">
@@ -541,7 +527,7 @@
 				$("#v_career").change(function()
 				{
 					select_degree($("#v_career").val());
-				});				
+				});
 				var select_degree = function(degree)
 				{
 					cozsnsole.log(degree);
@@ -571,7 +557,7 @@
 					$a.serializeArray()[1].value
 					"U"
 				}*/	
-				$("#bulletin-post").delegate("h5", "dblclick", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
+				$("#bulletin-post").delegate("h5", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
 					var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
 					if(boolean){				
 						var code = $(this).val();//this會代表我抓到的那個東西，也就是option
@@ -747,7 +733,7 @@
 			 	if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
 				if( language=="zh_TW" ){
-					course.title_short = course.title_parsed["zh_TW"];		//title_short是會自動宣告的區域變數，存沒有英文的課名			  	
+					course.title_short = course.title_parsed["zh_TW"];		//title_short是會自動宣告的區域變數，存沒有英文的課名
 				}
 				else{
 					course.title_short = course.title_parsed["en_US"];			  	
@@ -811,7 +797,8 @@
 				}
 				
 			};
-
+            /**********刪除課程搜尋結果**********/
+            var delete_search_class
 			/**********這是用來刪除衝堂的課程***********/
 			var delete_conflict = function($target, course, stop_day, stop_time) {		
 			//假設target為time-table的參數，course為courses的某一個課程
