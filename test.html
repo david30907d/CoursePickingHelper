@@ -306,7 +306,6 @@
 				  <div class="panel-heading">體育<button type="button" class="close"><span class="fa fa-trash"></span></button>
                   </div>
 				  <div class="panel-body" id="PE-post">
-				    
 				  </div>
 				</div>
                 </div>
@@ -547,7 +546,6 @@
 				}*/	
 				$("#bulletin-post").delegate("option", "dblclick", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
 					var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
-
 					if(boolean){				
 						var code = $(this).val();//this會代表我抓到的那個東西，也就是option
 						course = courses[code];			
