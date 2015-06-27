@@ -32,9 +32,8 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
+        
         <style>
         /*這裡開始是我寫的，選取表單和選單上的id，並把顏色反白*/
         #icon-text, #icon-text1, #icon-text2, #icon-text3, #icon-text4, #icon-text5
@@ -102,8 +101,8 @@
             padding-top: 0;
             padding-bottom  : 0;
         }
-        .search-class .panel-body > h5:hover,
-        .search-class .panel-body > h5:focus
+        .panel-body h5:hover,
+        .panel-body h5:focus
         {
             background-color: yellow;
         }
@@ -114,8 +113,22 @@
 
         <!--選取系級的表單結束-->
         <div class="container-fluid">
-            <div class="col-md-9">
-                <h2 style="text-align:center;" id="curriculum-title">課表</h2>
+            <div class="col-md-9">              	          
+                <div class="panel panel-success" id="curriculum-title">
+			        <div class="panel-heading row">
+			          <div class="col-xs-10">
+			          	<h2 style="text-align:center;" id="curriculum-title">課表</h2>
+			          </div>
+			          <div class="col-xs-2">
+			          	<h4>
+			          		<span class="glyphicon glyphicon-user" style="text-align:right;"></span>
+			          		 學分 <span class="badge" id="class_credit"></span>
+			          	</h4>
+			          </div>
+			          
+			        </div>			        
+		      	</div>
+				<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="fuckfuck pastelo">Tooltip on left</button>
                 <div class="table-responsive" id="time-table">
                     <table class="table table-striped table-hover table-condensed table-bordered">
                         <thead>
@@ -255,58 +268,67 @@
                 </div>
                 -->
                 <!--側欄位-->
-                <div class="search-class">
-				<div class="panel panel-info">
-				  <div class="panel-heading">必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
-				  </div>
-				  <div class="panel-body">
-				    <h5>Class1</h5>
-                    <h5>Class2</h5>
-                    <h5>Class3</h5>
-                    <h5>Class4</h5>
-                  </div>
-                </div>
+                <div class="search-class" id="bulletin-post">
+					<div class="panel panel-info">
+					  <div class="panel-heading">必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+					  </div>
+					  <div class="panel-body">
+					    <h5>Class1</h5>
+	                    <h5>Class2</h5>
+	                    <h5>Class3</h5>
+	                    <h5>Class4</h5>
+	                  </div>
+	                </div>
 
-				<div class="panel panel-info">
-				  <div class="panel-heading">選擇性必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
-				  </div>
-				  <div class="panel-body" id="obligatory-post">
-				  </div>
-				</div>
-				<div class="panel panel-info">
-				  <div class="panel-heading">選修<button type="button" class="close"><span class="fa fa-trash"></span></button>
-                  </div>
-				  <div class="panel-body" id="elective-post">
-				  	<h5 id="">一年級</h5>
-				    <div id="freshman">				    	
-				    </div>
-				    <h5 id="">二年級</h5>
-				    <div id="sophomore">				    	
-				    </div>
-				    <h5 id="">三年級</h5>
-				    <div id="junior">				    	
-				    </div>
-				    <h5 id="">四年級</h5>
-				    <div id="senior">				    			
-				    </div>
-				    <div id="fifth-grade">
-				    <h5 id="">五年級</h5>		    	
-				    </div>
-				  </div>
-				</div>
-				<div class="panel panel-info">
-				  <div class="panel-heading">通識<button type="button" class="close"><span class="fa fa-trash"></span></button>
-                  </div>
-				  <div class="panel-body" id="general-post">
-				    
-				  </div>
-				</div>
-				<div class="panel panel-info">
-				  <div class="panel-heading">體育<button type="button" class="close"><span class="fa fa-trash"></span></button>
-                  </div>
-				  <div class="panel-body" id="PE-post">
-				  </div>
-				</div>
+					<div class="panel panel-info">
+					  <div class="panel-heading">選擇性必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+					  </div>
+					  <div class="panel-body" id="obligatory-post">
+					  </div>
+					</div>
+					<div class="panel panel-info">
+					  <div class="panel-heading">選修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+	                  </div>
+					  <div class="panel-body" id="elective-post">
+					  	<div class="row">
+					  		<div class="col-xs-9"><h5 id="">一年級</h5></div>                            
+                            <div class="col-xs-3">
+                            	<button type="button" class="btn fa-stack fa-lg plusIcon table-btn"><span class="fa fa-plus-circle fa-1x fa-fw "></span></button>
+                            	<!--
+                            	<span class="fa-stack fa-lg">
+                            	  <span class="fa fa-circle fa-stack-2x"></span>
+                            	  <span class="fa fa-plus-circle "></span>
+                            	</span>  fa fa-plus-circle fa-3x fa-fw -->
+                            </div>   
+                        </div>                                            
+					    <div id="freshman">				    	
+					    </div>
+					    <h5 id="">二年級</h5>
+					    <div id="sophomore">				    	
+					    </div>
+					    <h5 id="">三年級</h5>
+					    <div id="junior">				    	
+					    </div>
+					    <h5 id="">四年級</h5>
+					    <div id="senior">				    			
+					    </div>
+					    <h5 id="">五年級</h5>
+					    <div id="fifth-grade">					    		   
+					    </div>
+					  </div>
+					</div>
+					<div class="panel panel-info">
+					  <div class="panel-heading">通識<button type="button" class="close"><span class="fa fa-trash"></span></button>
+	                  </div>
+					  <div class="panel-body" id="general-post">
+					  </div>
+					</div>
+					<div class="panel panel-info">
+					  <div class="panel-heading">體育<button type="button" class="close"><span class="fa fa-trash"></span></button>
+	                  </div>
+					  <div class="panel-body" id="PE-post">
+					  </div>
+					</div>
                 </div>
 
                 <div class="modal fade modal fade bs-example-modal-lg" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -415,7 +437,7 @@
 				                <div class="form-group">
 				                    <label for="class_credit" class="col-xs-2 control-label">學分數</label>
 				                    <div class="col-xs-10">
-				                        <input type="teacher" class="form-control" id="class_credit" value="0" readonly><!--不讓使用者自己改學分數-->
+				                        <input type="teacher" class="form-control" id= value="0" readonly><!--不讓使用者自己改學分數-->
 				                    </div>
 				                </div>
 				                <div class="form-group">
@@ -462,6 +484,8 @@
   	            </div>
             </div>
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="bootstrap/js/bootstrap.min.js"></script>
 		<script>
 		(function($){
 		//先定義JQuery為$，不要讓它衝突
@@ -543,7 +567,7 @@
 					$a.serializeArray()[1].value
 					"U"
 				}*/	
-				$("#bulletin-post").delegate("option", "dblclick", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
+				$("#bulletin-post").delegate("h5", "dblclick", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
 					var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
 					if(boolean){				
 						var code = $(this).val();//this會代表我抓到的那個東西，也就是option
@@ -557,14 +581,15 @@
 				{											
 					var major=$("#v_major").val();	//取到系
 					var level = $("#v_level").val();	//取到年級
-					reset();						
+					reset();/*						
 					var tableArray={1:[1,2,3,4,5,6,7,8],2:[1,2,3,4,5,6,7,8],3:[1,2,3,4,5,6,7,8],4:[1,2,3,4,5,6,7,8],5:[1,2,3,4,5,6,7,8]}				
 					$.each(tableArray,function(ik,iv){
 						$.each(iv,function(jk,jv){
 							var $td = $("#time-table").find('tr[data-hour=' + jv + '] td[data-day='+ik+']');		
 							$td.html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');
 						})						
-					})
+					})*/
+					$("td").html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');
 					$.each(course_of_majors[major][level], function(ik, iv){//先這一年級的必修課全部跑過一次，計算重複課名的數量
 						if(courses[iv].obligatory_tf==true){
 							check_optional_obligatory(courses[iv]);	
@@ -625,7 +650,8 @@
 				$("#clear-button").click(function()
 				{
 					$('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
-					$('#elective-post').empty();//清掉選修課程
+					$('#bulletin_post').empty();//清掉選修課程
+					$("td").html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');//再把加號的按鈕填上去
 				});
 				$("#time-table").delegate("span.delete", "click", function(){//這是用來把一整個課程都刪掉的按鈕
 					$target = $(this).closest("td");//因為這裡點到的是span，要往上找td
@@ -705,6 +731,9 @@
 						$("#PE-post").css("display", "none");						
 					}
 				});
+				$(document).ready(function(){
+				    $('[data-toggle="tooltip"]').tooltip(); 
+				});
 			});
 
 			
@@ -727,7 +756,7 @@
 				})
 				time = time.join(' ');//把多個陣列用;分隔並合併指派給time
 				//var time = course.time_parsed.day+course.time_parsed.time;
-				var $option = $($.parseHTML('<option title="" style="color:#3074B5;" value=""></option>'));//把option做成dom，再把dom做成jQuery物件
+				var $option = $($.parseHTML('<h5 title="" style="color:#3074B5;" value=""></h5>'));//把option做成dom，再把dom做成jQuery物件
 				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中	
 				$option.attr("title", time);//在title裡面放課堂時間
 				$option.val(course.code);
@@ -818,7 +847,7 @@
 			};
 			var add_credits = function(course){//增加學分
 				window.credits+=parseInt(course.credits);//要先把字串型態的學分轉成int才能做加減
-				$("#class_credit").val(window.credits);
+				$("#class_credit").text(window.credits);
 			};
 			var minus_credits = function(course){
 				window.credits-=parseInt(course.credits);
@@ -859,7 +888,8 @@
 				if(window.name_of_optional_obligatory[course.title_short]>1){
 					bulletin_post($("#obligatory-post"),course,language);
 				}
-			}        	
+			}
+			
 		})(jQuery);
 	    </script>
         </body>
