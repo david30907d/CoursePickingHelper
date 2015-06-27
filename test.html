@@ -51,10 +51,6 @@
         	font-family: "Microsoft JhengHei";
         }
         /*最後改的p是相簿的英文字*/
-        #elective-post
-        {
-        	margin-bottom: 10px;
-        }
         #btn-tools
         {
         	padding: 0;
@@ -217,58 +213,22 @@
             <div class="col-md-3" id="classification">
                 <div class="container-fluid">
                     <div class="col-xs-4" id="btn-tools">
+                        <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#focus">
+                        <span class="fa fa-heart fa-1x fa-fw"></span>
+                        </button>
+                    </div>
+                    <div class="col-xs-4" id="btn-tools">
                         <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#search">
                         <span class="fa fa-search fa-1x fa-fw"></span>
                         </button>
                     </div>
                     <div class="col-xs-4" id="btn-tools">
-                        <button type="button" class="btn btn-warning btn-block" id="clear-class-button">
-                        <span class="fa fa-eraser fa-1x fa-fw"></span>
-                        </button>
-                    </div>
-                    <div class="col-xs-4" id="btn-tools">
-                        <button type="button" class="btn btn-danger btn-block" id="clear-button">
+                        <button type="button" class="btn btn-warning btn-block" id="clear-button">
                         <span class="fa fa-trash fa-1x fa-fw"></span>
                         </button>
                     </div>
                 </div>
                 <br>
-                <!--
-                <div calss="row">
-                    <div class="col-xs-12" style = "background-color:#D9EDF7">
-                        <div calss="row">
-                        	<div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="obligatory-check" checked>選擇性必修</div>
-                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="elective-check" checked>系選修</div>
-                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="specific-time-check" checked>指定時間</div>
-                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="specific-check" checked>指定搜尋</div>
-                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="general-check" checked>通識</div>
-                            <div class="col-xs-3 col-xs-3"><input type="checkbox" value="" id="PE-check" checked>體育</div>
-                        </div>
-                        <select multiple class="form-control" id="bulletin-post">
-                        	<optgroup label="選擇性必修" id="obligatory-post">
-                        	</optgroup>
-                        	<optgroup label="系選修" id="elective-post">
-                        		<optgroup label="一年級" id="freshman">
-                        		</optgroup>
-                        		<optgroup label="二年級" id="sophomore">
-                        		</optgroup>
-                        		<optgroup label="三年級" id="junior">
-                        		</optgroup>
-                        		<optgroup label="四年級" id="senior">
-                        		</optgroup>
-                        		<optgroup label="五年級" id="fifth-grade">
-                        		</optgroup>
-                        	</optgroup>
-                        	<optgroup label="指定時間" id="specific-time-post"></optgroup>
-                        	<optgroup label="指定搜尋" id="specific-post"></optgroup>
-                        	<optgroup label="通識" id="general-post">  
-                        	</optgroup>
-                        	<optgroup label="體育" id="PE-post">      	
-                        	</optgroup>                           
-                        </select>
-                    </div>
-                </div>
-                -->
                 <!--側欄位-->
                 <div class="search-class" id="bulletin-post">
 					<div class="panel panel-info">
@@ -291,22 +251,20 @@
 						<div class="panel-heading">選修<button type="button" class="close"><span class="fa fa-trash"></span></button>
 						</div>
 						<div class="panel-body" id="elective-post">
-							<div class="row">
-								<div class="col-xs-9"><h5 id="">一年級</h5></div>                   
-							</div>                                            
-							<div id="freshman">				    	
+							<h5>一年級</h5>
+                            <div id="freshman">
 							</div>
-							<h5 id="">二年級</h5>
-							<div id="sophomore">				    	
+							<h5>二年級</h5>
+							<div id="sophomore">
 							</div>
-							<h5 id="">三年級</h5>
-							<div id="junior">				    	
+							<h5>三年級</h5>
+							<div id="junior">
 							</div>
-							<h5 id="">四年級</h5>
-							<div id="senior">				    			
+							<h5>四年級</h5>
+							<div id="senior">
 							</div>
-							<h5 id="">五年級</h5>
-							<div id="fifth-grade">					    		   
+							<h5>五年級</h5>
+							<div id="fifth-grade">
 							</div>
 						</div>
 					</div>
@@ -314,6 +272,7 @@
 						<div class="panel-heading">通識<button type="button" class="close"><span class="fa fa-trash"></span></button>
 						</div>
 						<div class="panel-body" id="general-post">
+
 						</div>
 					</div>
 					<div class="panel panel-info">
@@ -322,6 +281,108 @@
 						<div class="panel-body" id="PE-post">
 						</div>
 					</div>
+                </div>
+
+                <div class="modal fade modal fade bs-example-modal-lg" id="focus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h3 class="modal-title" id="myModalLabel"><span class="fa fa-heart fa-1x fa-fw"></span>選擇科系</h3>
+                            </div>
+                            
+                        <div class="modal-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="v_career" class="col-xs-2 control-label">學制</label>
+                                    <div class="col-xs-10">
+                                        <select class="form-control" name="v_career" id="v_career">
+                                            <option value="0">請選擇學制</option>
+                                            <option value="U">學士班</option>
+                                            <option value="G">碩士班</option>
+                                            <option value="D">博士班</option>
+                                            <option value="R">產專班</option>
+                                            <option value="W">碩專班</option>
+                                            <option value="N">進修學士班</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="v_major" class="col-xs-2 control-label">系所</label>
+                                    <div class="col-xs-10">
+                                        <select class="form-control" name="v_major" id="v_major">
+                                            <option>請選擇系所</option>
+                                            <option>文學院</option>
+                                            <option>管理學院</option>
+                                            <option>農業暨自然資源學院</option>
+                                            <option>中國文學系學士班</option>
+                                            <option>外國語文學系學士班</option>
+                                            <option>歷史學系學士班</option>
+                                            <option>財務金融學系學士班</option>
+                                            <option>企業管理學系學士班</option>
+                                            <option>法律學系學士班</option>
+                                            <option>會計學系學士班</option>
+                                            <option>資訊管理學系學士班</option>
+                                            <option>景觀與遊憩學士學位學程</option>
+                                            <option>生物科技學士學位學程</option>
+                                            <option>國際農企業學士學位學程</option>
+                                            <option>農藝學系學士班</option>
+                                            <option>園藝學系學士班</option>
+                                            <option>森林學系林學組學士班</option>
+                                            <option>森林學系木材科學組學士班</option>
+                                            <option>應用經濟學系學士班</option>
+                                            <option>植物病理學系學士班</option>
+                                            <option>昆蟲學系學士班</option>
+                                            <option>動物科學系學士班</option>
+                                            <option>獸醫學系學士班</option>
+                                            <option>獸醫學系學士班</option>
+                                            <option>土壤環境科學系學士班</option>
+                                            <option>生物產業機電工程學系學士班</option>
+                                            <option>水土保持學系學士班</option>
+                                            <option>食品暨應用生物科技學系學士班</option>
+                                            <option>行銷學系學士班</option>
+                                            <option>化學系學士班</option>
+                                            <option>生命科學系學士班</option>
+                                            <option>應用數學系學士班</option>
+                                            <option>應用數學系學士班</option>
+                                            <option>物理學系一般物理組學士班</option>
+                                            <option>物理學系光電物理組學士班</option>
+                                            <option>資訊科學與工程學系學士班</option>
+                                            <option>學士後太陽能光電系統應用學士學位學程</option>
+                                            <option>機械工程學系學士班</option>
+                                            <option>機械工程學系學士班</option>
+                                            <option>土木工程學系學士班</option>
+                                            <option>土木工程學系學士班</option>
+                                            <option>環境工程學系學士班</option>
+                                            <option>電機工程學系學士班</option>
+                                            <option>電機工程學系學士班</option>
+                                            <option>化學工程學系學士班</option>
+                                            <option>材料科學與工程學系學士班</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="v_level" class="col-xs-2 control-label">年級</label>
+                                    <div class="col-xs-10">
+                                        <select class="form-control" name="v_level" id="v_level">
+                                            <option value="0">請選擇年級</option>
+                                            <option value="1">一年級</option>
+                                            <option value="2">二年級</option>
+                                            <option value="3">三年級</option>
+                                            <option value="4">四年級</option>
+                                            <option value="5">五年級</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success" data-dismiss="modal" id="specific_search">Submit</button>
+                        </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="modal fade modal fade bs-example-modal-lg" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -334,15 +395,6 @@
                             
 				        <div class="modal-body">
 				            <form class="form-horizontal">
-				                <div class="form-group">
-				                    <label for="v_year" class="col-xs-2 control-label">學期</label>
-				                    <div class="col-xs-10">
-				                        <select class="form-control" name="v_year" id="v_year">
-				                        	<option value="0">請選擇學期</option>
-				                        	<option value="104_1">1041</option>
-				                        </select>
-				                    </div>
-				                </div>
 				                <div class="form-group">
 				                    <label for="v_career" class="col-xs-2 control-label">學制</label>
 				                    <div class="col-xs-10">
@@ -527,7 +579,7 @@
 				$("#v_career").change(function()
 				{
 					select_degree($("#v_career").val());
-				});				
+				});
 				var select_degree = function(degree)
 				{
 					cozsnsole.log(degree);
@@ -545,6 +597,7 @@
 
 						case "N":
 					}
+<<<<<<< HEAD
 				};	*/
 				/*//這段是均民的原始碼
 				var serializearray=function(){//比較好的方法來取option 的value!!!!
@@ -557,18 +610,18 @@
 					$a.serializeArray()[1].value
 					"U"
 				}*/	
-				$("#bulletin-post").delegate("button", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
+				$("#bulletin-post").delegate("h5", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
 					var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
 					if(boolean){				
 						var code = $(this).val();//this會代表我抓到的那個東西，也就是option
-						course = courses[code];			
+						course = courses[code];
 						add_course($('#time-table'), course, language);	
 						change_color($(this));//選過的課程就會改顏色
 					}
 				});				
 				$("#specific_search").click(function()	//可以用課號搜尋，把input的的課號用.val()取出
 				//$("#ok-button").click(function()
-				{											
+				{
 					var major=$("#v_major").val();	//取到系
 					var level = $("#v_level").val();	//取到年級
 					reset();/*						
@@ -678,8 +731,7 @@
 					$("[data-toggle='tooltip']").on('hover', function(){
         				$(this).tooltip({title: "Hooray!", trigger: "hover"}); 
     				});			
-				});
-				
+				});				
 			});
 			
 			window.week = ["一", "二", "三", "四", "五"];
@@ -687,12 +739,6 @@
 			var bulletin_post = function($target,course, language){	
 			 	if( $.type(course.title_parsed)!=="object" )			//判斷課程名稱是不是物件
 					throw 'title_parsed error';
-				if( language=="zh_TW" ){
-					course.title_short = course.title_parsed["zh_TW"];		//title_short是會自動宣告的區域變數，存沒有英文的課名			  	
-				}
-				else{
-					course.title_short = course.title_parsed["en_US"];			  	
-				}				
 				var time = [];//time設定為空陣列
 				var $td;
 				time.push("上課時間:");
@@ -753,6 +799,10 @@
 				}
 				
 			};
+            /**********刪除課程搜尋結果**********/
+            $("#bulletin-post .panel-heading").click(function(){
+                console.log("click");
+            });
 
 			/**********這是用來刪除衝堂的課程***********/
 			var delete_conflict = function($target, course, stop_day, stop_time) {		
