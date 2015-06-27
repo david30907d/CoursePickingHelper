@@ -105,7 +105,7 @@
         .search-class .panel-body h5:hover,
         .search-class .panel-body h5:focus
         {
-            background-color: yellow;
+            background-color: #BACAD2;
         }
         </style>
     </head>
@@ -279,7 +279,6 @@
 				  <div class="panel-body" id="elective-post">
 				  	<h5 id="">一年級</h5>
 				    <div id="freshman">
-                        <h5>class1</h5>
                     </div>
 				    <h5 id="">二年級</h5>
 				    <div id="sophomore">				    	
@@ -728,7 +727,7 @@
 				})
 				time = time.join(' ');//把多個陣列用;分隔並合併指派給time
 				//var time = course.time_parsed.day+course.time_parsed.time;
-				var $option = $($.parseHTML('<option title="" style="color:#3074B5;" value=""></option>'));//把option做成dom，再把dom做成jQuery物件
+				var $option = $($.parseHTML('<h5 title="" style="color:#3074B5;" value=""></h5>'));//把option做成dom，再把dom做成jQuery物件
 				$option.text(course.title_short);	//將對應的課程內容寫入cell的html語法中	
 				$option.attr("title", time);//在title裡面放課堂時間
 				$option.val(course.code);
@@ -766,8 +765,8 @@
 					$.each(course.time_parsed, function(ik, iv){							
 						$.each(iv.time, function(jk, jv){		//同上，iv.	time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)					
 							var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');	
-						  var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color:red;"><span aria-hidden="true" class="delete" style="color:red;">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));						
-							//把上面的html格式匯入找到的td type中(	parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)							
+						  var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color:red;"><span aria-hidden="true" class="delete" style="color:red;">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));
+							//把上面的html格式匯入找到的td type中(	parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
 							$cell.find('.title').text(course.title_short).end()
 							$cell.find('input').val(course.code).end()		//	將對應的課程內容寫入cell的html語法中，.title就是class="title"
 							     .find('.professor').text(course.professor).end()//text()	會把東西填入找到的class那裡，end()會回到var $cell那一行
