@@ -237,19 +237,19 @@
                 <div class="search-class" id="bulletin-post">                    
                     <div class="panel panel-info">
                         <div class="panel-heading">必修
+                        	<button type="button" class="close obligatory"><span class="fa fa-sort" id="obligatory-span"></span></button>
                             <button type="button" class="close obligatory"><span class="fa fa-trash"></span></button>
                         </div>
-                        <div class="panel-body" id="obligatory-post">
+                        <div class="panel-body" id="obligatory-post" slide="">                        	
                         </div>
                     </div>
                     <div class="panel panel-info">
                         <div class="panel-heading">選修
+                        	<button type="button" class="close elective"><span class="fa fa-sort"></span></button>
                         	<button type="button" class="close elective"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="elective-post">
-                            <div class="row">
-                                <div class="col-xs-9"><h5 id="">一年級</h5></div>                   
-                            </div>                                            
+                            <h5 id="">一年級</h5>                                                    
                             <div id="freshman">                     
                             </div>
                             <h5 id="">二年級</h5>
@@ -268,6 +268,7 @@
                     </div>
                     <div class="panel panel-info">
                         <div class="panel-heading">通識
+                        	<button type="button" class="close general"><span class="fa fa-sort"></span></button>
                         	<button type="button" class="close general"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="general-post">
@@ -275,6 +276,7 @@
                     </div>
                     <div class="panel panel-info">
                         <div class="panel-heading">體育
+                        	<button type="button" class="close PE"><span class="fa fa-sort"></span></button>
                         	<button type="button" class="close PE"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="PE-post">
@@ -521,7 +523,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>           
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
             <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -595,6 +597,7 @@
                         case "N":
                     }
                 };  */
+
                 /*//這段是均民的原始碼
                 var serializearray=function(){//比較好的方法來取option 的value!!!!
                     $a = $($0)//取到年級選單
@@ -606,17 +609,35 @@
                     $a.serializeArray()[1].value
                     "U"
                 }*/ 
-                $("#bulletin-post").delegate("span", "click", function(){//這是給垃圾桶用的                    
-                    if($(this).attr("class")=="obligatory"){
+
+                
+
+
+                
+                $("#obligatory-span").click(function(){
+                	$("#obligatory-post").attr("slide","on");
+                	if ($("#obligatory-post").attr("slide")=="on") {
+                		$("#bulletin_post").trigger("slideEvent"); 
+                		$("#bulletin_post").on("slideEvent","div[slide|='on']",function(){
+                		 	$(this).slideToggle( "slow" );
+                		})             	
+                	};                	
+                });                 					           
+                $("#bulletin-post").delegate("span.fa-trash", "click", function(){//這是給垃圾桶用的                    
+                    if($(this).parents("button").attr("class")=="close obligatory"){
                     	$("#obligatory-post").empty();
                     }
-                    else if($(this).attr("class")=="elective"){
-                    	$("#elective-post").empty();
+                    else if($(this).parents("button").attr("class")=="close elective"){
+                    	$("#freshman").empty();
+                    	$("#sophomore").empty();
+                    	$("#junior").empty();
+                    	$("#senior").empty();
+                    	$("#fifth-grade").empty();
                     }
-                    else if($(this).attr("class")=="general"){
+                    else if($(this).parents("button").attr("class")=="close general"){
                     	$("#general-post").empty();
                     }
-                    else if($(this).attr("class")=="PE"){
+                    else if($(this).parents("button").attr("class")=="close PE"){
                     	$("#PE-post").empty();
                     }
                 });             
@@ -735,11 +756,10 @@
                         $("#obligatory-post").css("display", "none");
                     }
                 });     */      
-                $(document).ready(function(){
-                    $('[data-toggle="tooltip"]').tooltip();                                 
-                    $("[data-toggle='tooltip']").on('hover', function(){
-                        $(this).tooltip({title: "Hooray!", trigger: "hover"}); 
-                    });         
+                $(document).ready(function(){                    
+                    $(document).delegate("[data-toggle='tooltip']","load",function(){
+                    	$(this).tooltip();
+                    })     
                 });
                 
             });
@@ -887,8 +907,7 @@
                 }
                 else{
                     window.name_of_optional_obligatory[course.title_short]++;
-                }           
-                console.log(course.title_short+" "+window.name_of_optional_obligatory[course.title_short]);
+                }                           
             } 
             var show_optional_obligatory=function(course){
                 var tmpCh = course.title_parsed["zh_TW"].split(' ');        //(這是中文課名)切割課程名稱，遇到空格就切開
