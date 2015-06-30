@@ -279,6 +279,15 @@
                         	<button type="button" class="close general"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="general-post">
+							<h4 id="">人文領域</h4>
+							<div id="humanities">
+							</div>
+							<h4 id="">社會科學領域</h4>
+							<div id="social">
+							</div>
+							<h4 id="">自然科學領域</h4>
+							<div id="natural">
+							</div>
                         </div>
                     </div>
                     <div class="panel panel-info">
@@ -401,25 +410,11 @@
                             
                         <div class="modal-body">
                             <form class="form-horizontal">
-                                <div class="form-group">                                    
-                                    <label for="v_career" class="col-xs-2 control-label">學制</label>
-                                    <div class="col-xs-10">
-                                        <select class="form-control" name="v_career" id="s_career">
-                                            <option value="0">請選擇學制</option>
-                                            <option value="U">學士班</option>
-                                            <option value="G">碩士班</option>
-                                            <option value="D">博士班</option>
-                                            <option value="R">產專班</option>
-                                            <option value="W">碩專班</option>
-                                            <option value="N">進修學士班</option>
-                                        </select>
-                                    </div>
-                                </div>
                                 <div class="form-group">
                                     <label for="v_major" class="col-xs-2 control-label">系所</label>
                                     <div class="col-xs-10">
-                                        <select class="form-control" name="v_major" id="s_major">
-                                            <option>請選擇系所</option>
+                                        <select class="form-control" name="v_major" id="v_major">
+                                            <option>-----</option>
                                             <option>文學院</option>
                                             <option>管理學院</option>
                                             <option>農業暨自然資源學院</option>
@@ -473,7 +468,7 @@
                                     <label for="v_level" class="col-xs-2 control-label">年級</label>
                                     <div class="col-xs-10">
                                         <select class="form-control" name="v_level" id="s_level">
-                                            <option value="">請選擇年級</option>
+                                            <option value="">-----</option>
                                             <option value="1">一年級</option>
                                             <option value="2">二年級</option>
                                             <option value="3">三年級</option>
@@ -485,7 +480,7 @@
                                 <div class="form-group">
                                     <label for="class_credit" class="col-xs-2 control-label">學分數</label>
                                     <div class="col-xs-10">
-                                        <input type="teacher" class="form-control" id= value="0" readonly><!--不讓使用者自己改學分數-->
+                                        <input type="teacher" class="form-control" id= value="0">
                                     </div>
                                 </div>
                                 <div class="form-group">
