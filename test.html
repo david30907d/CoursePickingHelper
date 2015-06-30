@@ -204,6 +204,46 @@
                                 <td data-day="4"></td>
                                 <td data-day="5"></td>
                             </tr>
+                            <tr data-hour="9" class="active">
+                                <th>17:10<br>|<br>18:00</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="10" class="active">
+                                <th>18:20<br>|<br>19:10</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="11" class="active">
+                                <th>19:15<br>|<br>20:05</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="12" class="active">
+                                <th>20:10<br>|<br>21:00</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="13" class="active">
+                                <th>21:05<br>|<br>21:55</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -244,16 +284,17 @@
                     </div>
                     <div class="panel panel-info">
                         <div class="panel-heading">學年課
-                        	<button type="button" class="close general"><span class="fa fa-sort"></span></button>
+                        	<button type="button" class="close general" id="year-span"><span class="fa fa-sort"></span></button>
                         	<button type="button" class="close general"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="year-post">
                         </div>
                     </div>
                     <div class="panel panel-info">
-                        <div class="panel-heading">選修
-                        	<button type="button" class="close elective"><span class="fa fa-sort"></span></button>
-                        	<button type="button" class="close elective"><span class="fa fa-trash"></span></button>
+                        <div class="panel-heading">
+                        <div class="expander"></div>
+                        	<button type="button" class="close elective"><span class="fa fa-trash"></span></button>選修
+                            <button type="button" class="close elective" id="elective-span"><span class="fa fa-sort"></span></button>
                         </div>
                         <div class="panel-body" id="elective-post">
                             <h4 id="">一年級</h4>
@@ -273,12 +314,13 @@
                             </div>
                             <h4 id="">不分年級</h4>
                             <div id="whole-school">                                 
+
                             </div>
                         </div>
                     </div>
                     <div class="panel panel-info">
                         <div class="panel-heading">通識
-                        	<button type="button" class="close general"><span class="fa fa-sort"></span></button>
+                        	<button type="button" class="close general"><span class="fa fa-sort" id="general-span"></span></button>
                         	<button type="button" class="close general"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="general-post">
@@ -295,7 +337,7 @@
                     </div>
                     <div class="panel panel-info">
                         <div class="panel-heading">體育
-                        	<button type="button" class="close PE"><span class="fa fa-sort"></span></button>
+                        	<button type="button" class="close PE" id="PE-span"><span class="fa fa-sort"></span></button>
                         	<button type="button" class="close PE"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="PE-post">
@@ -600,27 +642,69 @@
                     $a.serializeArray()[1].value
                     "U"
                 }*/ 
-
-                
-                $("#obligatory-span").click(function(){
+                //////泰瑋的程式遺跡//////
+                /*$("#obligatory-span").click(function(){
                 	$("#obligatory-post").trigger("slideEvent");
 
                 });   
                 $("#obligatory-post").delegate("button.btn-link","slideEvent",function(){
                 	$(this).slideToggle( "slow" );
                 });
-               	              
-                /*   我用on沒辦法成功使用slideToggle
+                ///////我用on沒辦法成功使用slideToggle///////
                 $("#obligatory-span").click(function(){
-                	$("#obligatory-post").attr("slide","on");
-                	if ($("#obligatory-post").attr("slide")=="on") {
-                		$("#bulletin_post").trigger("slideEvent"); 
-                		$("#bulletin_post").on("slideEvent","div[slide|='on']",function(){
-                		 	$(this).slideToggle( "slow" );
-                		})             	
-                	};                	
+                    $("#obligatory-post").attr("slide","on");
+                    if ($("#obligatory-post").attr("slide")=="on") {
+                        $("#bulletin_post").trigger("slideEvent"); 
+                        $("#bulletin_post").on("slideEvent","div[slide|='on']",function(){
+                            $(this).slideToggle( "slow" );
+                        })              
+                    };                  
                 });   
-                */              					           
+                */
+                /*******    ↓製作隱藏側欄的功能↓   *******/
+                    /***必修***/
+                $("#obligatory-span").hover(function(){
+                    $(this).addClass('obligatory-post-on');
+                }, function(){
+                    $(this).removeClass('obligatory-post-on');
+                }).click(function(){
+                    // 當點到圖案時，若內容是隱藏時則顯示它；反之則隱藏
+                    $('#obligatory-post').slideToggle();
+                }).siblings('elective-post').hide();
+                    /***學年課***/
+                $("#year-span").hover(function(){
+                    $(this).addClass('year-post-on');
+                }, function(){
+                    $(this).removeClass('year-post-on');
+                }).click(function(){
+                    $('#year-post').slideToggle();
+                }).siblings('year-post').hide();
+                    /***選修***/
+                $("#elective-span").hover(function(){
+                    $(this).addClass('elective-post-on');
+                }, function(){
+                    $(this).removeClass('elective-post-on');
+                }).click(function(){
+                    $('#elective-post').slideToggle();
+                }).siblings('elective-post').hide();
+                    /***通識***/
+                $("#general-span").hover(function(){
+                    $(this).addClass('general-post-on');
+                }, function(){
+                    $(this).removeClass('general-post-on');
+                }).click(function(){
+                    $('#general-post').slideToggle();
+                }).siblings('general-post').hide();
+                    /***體育***/
+                $("#PE-span").hover(function(){
+                    $(this).addClass('PE-post-on');
+                }, function(){
+                    $(this).removeClass('PE-post-on');
+                }).click(function(){
+                    $('#PE-post').slideToggle();
+                }).siblings('PE-post').hide();
+                /*******   ↑製作隱藏側欄的功能↑   *******/
+                      					           
                 $("#bulletin").delegate("span.fa-trash", "click", function(){//這是給垃圾桶用的                    
                     if($(this).parents("button").attr("class")=="close obligatory"){
                     	$("#obligatory-post").empty();
