@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-tw" class="han-la">   
 <!--  
@@ -58,7 +59,7 @@
         #btn-tools
         {
             padding: 0;
-        }
+        }        
         #classification
         {
             padding: 0px;
@@ -67,7 +68,7 @@
         #time-table tbody th
         {
             white-space: nowrap;
-            font-size: 80%;
+            font-size: 100%;
             height:55px;
         }
         #time-table th
@@ -101,10 +102,9 @@
             padding-top: 0;
             padding-bottom  : 0;
         }
-        .search-class .panel-body h5:hover,
-        .search-class .panel-body h5:focus
+        .add
         {
-            background-color: #BACAD2;
+            color: red;
         }
         </style>
     </head>
@@ -119,18 +119,14 @@
                         <div class="col-xs-7">
                             <h2 style="text-align:right;" id="curriculum-title">課表</h2>
                         </div>
-                            
                         <div class="col-xs-5" style="text-align:right;">
                             <h4>
                                 <span class="glyphicon glyphicon-user" ></span>
                                  學分：<span class="badge" id="class_credit"></span>
                             </h4>
                         </div>
-                      
-                    </div>                  
+                    </div>
                 </div>
-                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="fuckfuck pastelo">Tooltip on left</button>
-
                 <div class="table-responsive" id="time-table">
                     <table class="table table-striped table-hover table-condensed table-bordered">
                         <thead>
@@ -144,71 +140,115 @@
                             </tr>
                         </thead>
                         <tbody>
-                                <tr data-hour="1" class="active">
-                                    <th>08:10 - 09:00</th>
-                                    <td data-day="1"></td>
-                                    <td data-day="2"></td>
-                                    <td data-day="3"></td>
-                                    <td data-day="4"></td>
-                                    <td data-day="5"></td>
-                                </tr>
-                                <tr data-hour="2" class="active">
-                                    <th>09:10 - 10:00</th>
-                                    <td data-day="1"></td>
-                                    <td data-day="2"></td>
-                                    <td data-day="3"></td>
-                                    <td data-day="4"></td>
-                                    <td data-day="5"></td>
-                                </tr>
-                                <tr data-hour="3" class="active">
-                                    <th>10:10 - 11:00</th>
-                                    <td data-day="1"></td>
-                                    <td data-day="2"></td>
-                                    <td data-day="3"></td>
-                                    <td data-day="4"></td>
-                                    <td data-day="5"></td>
-                                </tr>
-                                <tr data-hour="4" class="active">
-                                    <th>11:10 - 12:00</th>
-                                    <td data-day="1"></td>
-                                    <td data-day="2"></td>
-                                    <td data-day="3"></td>
-                                    <td data-day="4"></td>
-                                    <td data-day="5"></td>
-                                </tr>
-                                <tr data-hour="5" class="active">
-                                    <th>13:10 - 14:00</th>
-                                    <td data-day="1"></td>
-                                    <td data-day="2"></td>
-                                    <td data-day="3"></td>
-                                    <td data-day="4"></td>
-                                    <td data-day="5"></td>
-                                </tr>
-                                <tr data-hour="6" class="active">
-                                    <th>14:10 - 15:00</th>
-                                    <td data-day="1"></td>
-                                    <td data-day="2"></td>
-                                    <td data-day="3"></td>
-                                    <td data-day="4"></td>
-                                    <td data-day="5"></td>
-                                </tr>
-                                <tr data-hour="7" class="active">
-                                    <th>15:10 - 16:00</th>
-                                    <td data-day="1"></td>
-                                    <td data-day="2"></td>
-                                    <td data-day="3"></td>
-                                    <td data-day="4"></td>
-                                    <td data-day="5"></td>
-                                </tr>
-                                <tr data-hour="8" class="active">
-                                    <th>16:10 - 17:00</th>
-                                    <td data-day="1"></td>
-                                    <td data-day="2"></td>
-                                    <td data-day="3"></td>
-                                    <td data-day="4"></td>
-                                    <td data-day="5"></td>
-                                </tr>
-                            </tbody>
+                            <tr data-hour="1" class="active">
+                                <th>08:10<br>|<br>09:00</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="2" class="active">
+                                <th>09:10<br>|<br>10:00</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="3" class="active">
+                                <th>10:10<br>|<br>11:00</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="4" class="active">
+                                <th>11:10<br>|<br>12:00</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="" class="active">
+                                <th>M<br>12:00<br>|<br>13:00</th>
+                                <th colspan="5" style="background-color:#7B848B"><center><h1>午休</h1></center></th>
+                            </tr>
+                            <tr data-hour="5" class="active">
+                                <th>13:10<br>|<br>14:00</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="6" class="active">
+                                <th>14:10<br>|<br>15:00</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="7" class="active">
+                                <th>15:10<br>|<br>16:00</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="8" class="active">
+                                <th>16:10<br>|<br>17:00</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="9" class="active">
+                                <th>17:10<br>|<br>18:00</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="10" class="active">
+                                <th>A<br>18:20<br>|<br>19:10</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="11" class="active">
+                                <th>B<br>19:15<br>|<br>20:05</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="12" class="active">
+                                <th>C<br>20:10<br>|<br>21:00</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                            <tr data-hour="13" class="active">
+                                <th>D<br>21:05<br>|<br>21:55</th>
+                                <td data-day="1"></td>
+                                <td data-day="2"></td>
+                                <td data-day="3"></td>
+                                <td data-day="4"></td>
+                                <td data-day="5"></td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -218,70 +258,99 @@
                 <div class="container-fluid">
                     <div class="col-xs-4" id="btn-tools">
                         <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#focus">
+                        <h5>選擇系級</h5>
                         <span class="fa fa-heart fa-1x fa-fw"></span>
                         </button>
                     </div>
                     <div class="col-xs-4" id="btn-tools">
                         <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#search">
+                        <h5>課程查詢</h5>
                         <span class="fa fa-search fa-1x fa-fw"></span>
                         </button>
                     </div>
                     <div class="col-xs-4" id="btn-tools">
                         <button type="button" class="btn btn-warning btn-block" id="clear-button">
+                        <h5>版面清除</h5>
                         <span class="fa fa-trash fa-1x fa-fw"></span>
                         </button>
                     </div>
                 </div>
                 <br>
 
-                <div class="search-class" id="bulletin-post">
+                <div class="search-class" id="bulletin">                    
                     <div class="panel panel-info">
-                        <div class="panel-heading">必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+                        <div class="panel-heading">必修
+                            <button type="button" class="close obligatory"><span class="fa fa-sort" id="obligatory-span"></span></button>
+                            <button type="button" class="close obligatory"><span class="fa fa-trash"></span></button>
                         </div>
-                        <div class="panel-body">
-                            <h5>Class1</h5>
-                            <h5>Class2</h5>
-                            <h5>Class3</h5>
-                            <h5>Class4</h5>
-                        </div>
-                    </div>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">選擇性必修<button type="button" class="close"><span class="fa fa-trash"></span></button>
-                            </div>
-                            <div class="panel-body" id="obligatory-post">
+                        <div class="panel-body" id="obligatory-post" slide="">                          
                         </div>
                     </div>
                     <div class="panel panel-info">
-                        <div class="panel-heading">選修<button type="button" class="close"><span class="fa fa-trash"></span></button>
+                        <div class="panel-heading">學年課
+                            <button type="button" class="close general" id="year-span"><span class="fa fa-sort"></span></button>
+                            <button type="button" class="close general"><span class="fa fa-trash"></span></button>
+                        </div>
+                        <div class="panel-body" id="year-post">
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                        <div class="expander"></div>
+                            <button type="button" class="close elective"><span class="fa fa-trash"></span></button>選修
+                            <button type="button" class="close elective" id="elective-span"><span class="fa fa-sort"></span></button>
                         </div>
                         <div class="panel-body" id="elective-post">
-                            <div class="row">
-                                <div class="col-xs-9"><h5 id="">一年級</h5></div>                   
-                            </div>                                            
+                            <h4 id="">一年級</h4>
                             <div id="freshman">                     
                             </div>
-                            <h5 id="">二年級</h5>
+                            <h4 id="">二年級</h4>
                             <div id="sophomore">                        
                             </div>
-                            <h5 id="">三年級</h5>
+                            <h4 id="">三年級</h4>
                             <div id="junior">                       
                             </div>
-                            <h5 id="">四年級</h5>
+                            <h4 id="">四年級</h4>
                             <div id="senior">                               
                             </div>
-                            <h5 id="">五年級</h5>
+                            <h4 id="">五年級</h4>
                             <div id="fifth-grade">                                 
+                            </div>
+                            <h4 id="">不分年級</h4>
+                            <div id="whole-school">                                 
+
                             </div>
                         </div>
                     </div>
                     <div class="panel panel-info">
-                        <div class="panel-heading">通識<button type="button" class="close"><span class="fa fa-trash"></span></button>
+                        <div class="panel-heading">通識
+                            <button type="button" class="close general"><span class="fa fa-sort" id="general-span"></span></button>
+                            <button type="button" class="close general"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="general-post">
+                            <h4 id="">人文領域</h4>
+                            <div id="humanities">
+                            </div>
+                            <h4 id="">社會科學領域</h4>
+                            <div id="social">
+                            </div>
+                            <h4 id="">自然科學領域</h4>
+                            <div id="natural">
+                            </div>
                         </div>
                     </div>
                     <div class="panel panel-info">
-                        <div class="panel-heading">體育<button type="button" class="close"><span class="fa fa-trash"></span></button>
+                        <div class="panel-heading">體育
+                            <button type="button" class="close PE" id="PE-span"><span class="fa fa-sort"></span></button>
+                            <button type="button" class="close PE"><span class="fa fa-trash"></span></button>
+                        </div>
+                        <div class="panel-body" id="PE-post">
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">指定搜尋
+                            <button type="button" class="close search"><span class="fa fa-sort"></span></button>
+                            <button type="button" class="close search"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="PE-post">
                         </div>
@@ -292,7 +361,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h3 class="modal-title" id="myModalLabel"><span class="fa fa-heart fa-1x fa-fw"></span>選擇科系</h3>
+                                <h3 class="modal-title" id="myModalLabel"><span class="fa fa-heart fa-1x fa-fw"></span>選擇系級</h3>
                             </div>
                             
                         <div class="modal-body">
@@ -338,8 +407,8 @@
                                             <option>植物病理學系學士班</option>
                                             <option>昆蟲學系學士班</option>
                                             <option>動物科學系學士班</option>
-                                            <option>獸醫學系學士班</option>
-                                            <option>獸醫學系學士班</option>
+                                            <option value="獸醫學系學士班 A">獸醫學系學士班A</option>
+                                            <option value="獸醫學系學士班 B">獸醫學系學士班B</option>
                                             <option>土壤環境科學系學士班</option>
                                             <option>生物產業機電工程學系學士班</option>
                                             <option>水土保持學系學士班</option>
@@ -347,19 +416,19 @@
                                             <option>行銷學系學士班</option>
                                             <option>化學系學士班</option>
                                             <option>生命科學系學士班</option>
-                                            <option>應用數學系學士班</option>
-                                            <option>應用數學系學士班</option>
+                                            <option value="應用數學系學士班 A">應用數學系學士班A</option>
+                                            <option value="應用數學系學士班 B">應用數學系學士班B</option>
                                             <option>物理學系一般物理組學士班</option>
                                             <option>物理學系光電物理組學士班</option>
                                             <option>資訊科學與工程學系學士班</option>
                                             <option>學士後太陽能光電系統應用學士學位學程</option>
-                                            <option>機械工程學系學士班</option>
-                                            <option>機械工程學系學士班</option>
-                                            <option>土木工程學系學士班</option>
-                                            <option>土木工程學系學士班</option>
+                                            <option value="機械工程學系學士班 A">機械工程學系學士班A</option>
+                                            <option value="機械工程學系學士班 B">機械工程學系學士班B</option>
+                                            <option value="土木工程學系學士班 A">土木工程學系學士班A</option>
+                                            <option value="土木工程學系學士班 B">土木工程學系學士班B</option>
                                             <option>環境工程學系學士班</option>
-                                            <option>電機工程學系學士班</option>
-                                            <option>電機工程學系學士班</option>
+                                            <option value="電機工程學系學士班 A">電機工程學系學士班A</option>
+                                            <option value="電機工程學系學士班 B">電機工程學系學士班B</option>
                                             <option>化學工程學系學士班</option>
                                             <option>材料科學與工程學系學士班</option>
                                         </select>
@@ -369,7 +438,7 @@
                                     <label for="v_level" class="col-xs-2 control-label">年級</label>
                                     <div class="col-xs-10">
                                         <select class="form-control" name="v_level" id="v_level">
-                                            <option value="0">請選擇年級</option>
+                                            <option value="">請選擇年級</option>
                                             <option value="1">一年級</option>
                                             <option value="2">二年級</option>
                                             <option value="3">三年級</option>
@@ -398,25 +467,11 @@
                             
                         <div class="modal-body">
                             <form class="form-horizontal">
-                                <div class="form-group">                                    
-                                    <label for="v_career" class="col-xs-2 control-label">學制</label>
-                                    <div class="col-xs-10">
-                                        <select class="form-control" name="v_career" id="v_career">
-                                            <option value="0">請選擇學制</option>
-                                            <option value="U">學士班</option>
-                                            <option value="G">碩士班</option>
-                                            <option value="D">博士班</option>
-                                            <option value="R">產專班</option>
-                                            <option value="W">碩專班</option>
-                                            <option value="N">進修學士班</option>
-                                        </select>
-                                    </div>
-                                </div>
                                 <div class="form-group">
-                                    <label for="v_major" class="col-xs-2 control-label">系所</label>
+                                    <label for="s_major" class="col-xs-2 control-label">系所</label>
                                     <div class="col-xs-10">
-                                        <select class="form-control" name="v_major" id="v_major">
-                                            <option>請選擇系所</option>
+                                        <select class="form-control" name="s_major" id="s_major">
+                                            <option>-----</option>
                                             <option>文學院</option>
                                             <option>管理學院</option>
                                             <option>農業暨自然資源學院</option>
@@ -467,10 +522,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="v_level" class="col-xs-2 control-label">年級</label>
+                                    <label for="s_level" class="col-xs-2 control-label">年級</label>
                                     <div class="col-xs-10">
-                                        <select class="form-control" name="v_level" id="v_level">
-                                            <option value="0">請選擇年級</option>
+                                        <select class="form-control" name="s_level" id="s_level">
+                                            <option value="">-----</option>
                                             <option value="1">一年級</option>
                                             <option value="2">二年級</option>
                                             <option value="3">三年級</option>
@@ -482,7 +537,7 @@
                                 <div class="form-group">
                                     <label for="class_credit" class="col-xs-2 control-label">學分數</label>
                                     <div class="col-xs-10">
-                                        <input type="teacher" class="form-control" id= value="0" readonly><!--不讓使用者自己改學分數-->
+                                        <input type="teacher" class="form-control" id= value="0">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -527,7 +582,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>           
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
             <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -537,7 +592,7 @@
         //var courses = null;
             $(function(){
                 //當文件準備好的時候，讀入json檔
-                $.getJSON('json/proto-course.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
+                $.getJSON('json/protoC.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
                     window.credits=0//一開始的學分數是0
                     window.courses = {};//宣告一個空的物件
                     window.course_of_majors = {};//宣告一個空的物件
@@ -552,7 +607,7 @@
                         if(typeof(window.course_of_majors[iv.for_dept][iv.class]) == 'undefined'){
                             window.course_of_majors[iv.for_dept][iv.class] = [];//如果這一行(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，[]裡面的是放陣列
                         }
-                        window.course_of_majors[iv.for_dept][iv.class].push(iv.code);//把東西推進這個陣列裡，概念跟stack一樣
+                        window.course_of_majors[iv.for_dept][iv.class].push(iv.code);//把東西推進這個陣列裡，概念跟stack一樣                        
                         window.courses[iv.code] = iv;//這邊可以直接把選課號當作索引值key，裡面的值為object
                         $.each(iv.time_parsed, function(jk, jv){//建立日期的陣列               
                             $.each(jv.time, function(mk, mv){
@@ -578,29 +633,8 @@
                         }                                                                               
                         window.name_of_course[iv.title_parsed.en_US].push(iv);
                     });                 
-                });/*
-                $("#v_career").change(function()
-                {
-                    select_degree($("#v_career").val());
-                });             
-                var select_degree = function(degree)
-                {
-                    cozsnsole.log(degree);
-                    switch(degree)
-                    {
-                        case "U":
+                });                
 
-                        case "G":
-
-                        case "D":
-
-                        case "R":
-
-                        case "W":
-
-                        case "N":
-                    }
-                };  */
                 /*//這段是均民的原始碼
                 var serializearray=function(){//比較好的方法來取option 的value!!!!
                     $a = $($0)//取到年級選單
@@ -612,20 +646,102 @@
                     $a.serializeArray()[1].value
                     "U"
                 }*/ 
-                $("#bulletin-post").delegate("button", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
-                    var boolean = confirm("確認添加此課程?" + "\n" + "Are you sure to enroll this class?");
-                    if(boolean){                
-                        var code = $(this).val();//this會代表我抓到的那個東西，也就是option
-                        course = courses[code];         
-                        add_course($('#time-table'), course, language); 
-                        change_color($(this));//選過的課程就會改顏色
+                //////泰瑋的程式遺跡//////
+                /*$("#obligatory-span").click(function(){
+                    $("#obligatory-post").trigger("slideEvent");
+
+                });   
+                $("#obligatory-post").delegate("button.btn-link","slideEvent",function(){
+                    $(this).slideToggle( "slow" );
+                });
+                ///////我用on沒辦法成功使用slideToggle///////
+                $("#obligatory-span").click(function(){
+                    $("#obligatory-post").attr("slide","on");
+                    if ($("#obligatory-post").attr("slide")=="on") {
+                        $("#bulletin_post").trigger("slideEvent"); 
+                        $("#bulletin_post").on("slideEvent","div[slide|='on']",function(){
+                            $(this).slideToggle( "slow" );
+                        })              
+                    };                  
+                });   
+                */
+                /*******    ↓製作隱藏側欄的功能↓   *******/
+                    /***必修***/
+                $("#obligatory-span").hover(function(){
+                    $(this).addClass('obligatory-post-on');
+                }, function(){
+                    $(this).removeClass('obligatory-post-on');
+                }).click(function(){
+                    // 當點到圖案時，若內容是隱藏時則顯示它；反之則隱藏
+                    $('#obligatory-post').slideToggle();
+                }).siblings('elective-post').hide();
+                    /***學年課***/
+                $("#year-span").hover(function(){
+                    $(this).addClass('year-post-on');
+                }, function(){
+                    $(this).removeClass('year-post-on');
+                }).click(function(){
+                    $('#year-post').slideToggle();
+                }).siblings('year-post').hide();
+                    /***選修***/
+                $("#elective-span").hover(function(){
+                    $(this).addClass('elective-post-on');
+                }, function(){
+                    $(this).removeClass('elective-post-on');
+                }).click(function(){
+                    $('#elective-post').slideToggle();
+                }).siblings('elective-post').hide();
+                    /***通識***/
+                $("#general-span").hover(function(){
+                    $(this).addClass('general-post-on');
+                }, function(){
+                    $(this).removeClass('general-post-on');
+                }).click(function(){
+                    $('#general-post').slideToggle();
+                }).siblings('general-post').hide();
+                    /***體育***/
+                $("#PE-span").hover(function(){
+                    $(this).addClass('PE-post-on');
+                }, function(){
+                    $(this).removeClass('PE-post-on');
+                }).click(function(){
+                    $('#PE-post').slideToggle();
+                }).siblings('PE-post').hide();
+                /*******   ↑製作隱藏側欄的功能↑   *******/
+                                                   
+                $("#bulletin").delegate("span.fa-trash", "click", function(){//這是給垃圾桶用的                    
+                    if($(this).parents("button").attr("class")=="close obligatory"){
+                        $("#obligatory-post").empty();
                     }
+                    else if($(this).parents("button").attr("class")=="close elective"){
+                        $("#freshman").empty();
+                        $("#sophomore").empty();
+                        $("#junior").empty();
+                        $("#senior").empty();
+                        $("#fifth-grade").empty();
+                    }
+                    else if($(this).parents("button").attr("class")=="close general"){
+                        $("#general-post").empty();
+                    }
+                    else if($(this).parents("button").attr("class")=="close PE"){
+                        $("#PE-post").empty();
+                    }
+                });             
+                $("#bulletin").delegate("button.btn-link", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件                                  
+                    var code = $(this).val();//this會代表我抓到的那個東西，也就是option
+                    course = courses[code];         
+                    var check=add_course($('#time-table'), course, language); 
+                    if(check=="available"){
+                        change_color($(this),"used");//選過的課程就會改顏色
+                    }                                   
                 });             
                 $("#specific_search").click(function()  //可以用課號搜尋，把input的的課號用.val()取出
                 //$("#ok-button").click(function()
                 {                                           
-                    var major=$("#v_major").val();  //取到系
-                    var level = $("#v_level").val();    //取到年級
+                    var major=$("#v_major").val();  //取到系                    
+                    window.level = check_which_class(major);//取到年級
+                    major=major.split(" ");
+                    major=major[0];                    
                     reset();/*                      
                     var tableArray={1:[1,2,3,4,5,6,7,8],2:[1,2,3,4,5,6,7,8],3:[1,2,3,4,5,6,7,8],4:[1,2,3,4,5,6,7,8],5:[1,2,3,4,5,6,7,8]}                
                     $.each(tableArray,function(ik,iv){
@@ -634,41 +750,69 @@
                             $td.html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');
                         })                      
                     })*/
-                    $("td").html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');
-                    $.each(course_of_majors[major][level], function(ik, iv){//先這一年級的必修課全部跑過一次，計算重複課名的數量
-                        if(courses[iv].obligatory_tf==true){
-                            check_optional_obligatory(courses[iv]); 
-                        }
-                    });
-                    $.each(course_of_majors[major][level], function(ik, iv){//知道那些課程會重複之後，再決定那些課程要填入課表
-                        var tmpCh = courses[iv].title_parsed["zh_TW"].split(' ');       //(這是中文課名)切割課程名稱，遇到空格就切開
-                        title_short = tmpCh[0];     //title_short是會自動宣告的區域變數，存沒有英文的課名
-                        if(window.name_of_optional_obligatory[title_short]==1){
-                            add_course($('#time-table'), courses[iv], language);
-                        }       
-                        show_optional_obligatory(courses[iv]);      
-                    });
-                    $.each(course_of_majors[major], function(ik, iv){               
-                        $.each(iv,function(jk, jv){ 
-                            if(courses[jv].obligatory_tf==false){
-                                if(courses[jv].class==1){
-                                    bulletin_post($("#freshman"),courses[jv], language);
+                    $("td").html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>')  
+                    if(level==""){//這是給文學院、管理學院與農業暨自然資源學院這種沒有年級的選項
+                        $.each(course_of_majors[major][level],function(ik,iv){//因為這種院的課一定是交給使用者自己選，所以就不自動填入
+                            if(courses[iv].obligatory_tf==true){
+                                bulletin_post($("#obligatory-post"),courses[iv], language);
+                            }
+                            if(courses[iv].obligatory_tf==false){
+                                if(courses[iv].class==1){
+                                    bulletin_post($("#freshman"),courses[iv], language);
                                 }
-                                if(courses[jv].class==2){
-                                    bulletin_post($("#sophomore"),courses[jv], language);
+                                if(courses[iv].class==2){
+                                    bulletin_post($("#sophomore"),courses[iv], language);
                                 }
-                                if(courses[jv].class==3){
-                                    bulletin_post($("#junior"),courses[jv], language);
+                                if(courses[iv].class==3){
+                                    bulletin_post($("#junior"),courses[iv], language);
                                 }
-                                if(courses[jv].class==4){
-                                    bulletin_post($("#senior"),courses[jv], language);
+                                if(courses[iv].class==4){
+                                    bulletin_post($("#senior"),courses[iv], language);
                                 }
-                                if(courses[jv].class==5){
-                                    bulletin_post($("#fifth-grade"),courses[jv], language);
+                                if(courses[iv].class==5){
+                                    bulletin_post($("#fifth-grade"),courses[iv], language);
                                 }
-                            }                       
-                        })
-                    })//以上為必修 選修填入  
+                                if(courses[iv].class==""){
+                                    bulletin_post($("#whole-school"),courses[iv], language);
+                                }
+                            }
+                            //check_optional_obligatory(courses[iv]);
+                        });
+                    }                      
+                    else{
+                        $.each(course_of_majors[major][level], function(ik, iv){//先這一年級的必修課全部跑過一次，計算重複課名的數量
+                            if(courses[iv].obligatory_tf==true){
+                                check_optional_obligatory(courses[iv]); 
+                            }  
+
+                        });                    
+                        $.each(course_of_majors[major][level], function(ik, iv){//知道那些課程會重複之後，再決定那些課程要填入課表
+                            var tmpCh = courses[iv].title_parsed["zh_TW"].split(' ');       //(這是中文課名)切割課程名稱，遇到空格就切開
+                            title_short = tmpCh[0];     //title_short是會自動宣告的區域變數，存沒有英文的課名
+                            if(window.name_of_optional_obligatory[title_short]==1){
+                                if(title_short=="日文(一)"||title_short=="德文(一)"||title_short=="西班牙文(一)"||title_short=="法文(一)"){//判斷是否為德日西法等語言課
+                                    bulletin_post($("#year-post"),courses[iv],language);
+                                }
+                                if(courses[iv].time_parsed==0){//表示應該為實習課，所以無時間，神奇的是[]在boolean判斷式中居然會被當作0
+                                    bulletin_post($("#obligatory-post"),courses[iv],language);
+                                }
+                                else{
+                                    add_course($('#time-table'), courses[iv], language);//如果這個課名只有出現過一次，就可以自動填入
+                                }                            
+                            }       
+                            else{
+                                show_optional_obligatory(courses[iv]);//若重複出現，則讓使用者自己決定
+                            }
+                            
+                        });
+                        $.each(course_of_majors[major], function(ik, iv){//系上所有的選修課都先填入bulletin             
+                            $.each(iv,function(jk, jv){ 
+                                if(courses[jv].obligatory_tf==false){
+                                    check_which_bulletin(jv);//由fuction決定該貼到哪個年級的欄位
+                                }                       
+                            })
+                        })//以上為必修 選修填入 
+                    }                   
                     //可以用課號搜尋，把input的的課號用.val()取出
                     var code = $("#class_code").val();  //課號搜尋
                     if(code!=""){
@@ -691,11 +835,9 @@
                         });
                     }
                 });
-
                 $("#clear-button").click(function()
                 {
-                    $('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
-                    $('#bulletin_post').empty();//清掉選修課程
+                    reset();
                     $("td").html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');//再把加號的按鈕填上去
                 });
                 $("#time-table").delegate("span.delete", "click", function(){//這是用來把一整個課程都刪掉的按鈕
@@ -712,10 +854,16 @@
                         var major=$("#v_major").val();  //取到系
                         var day=$(this).closest("td").attr("data-day");
                         var hour=$(this).closest("tr").attr("data-hour");   
-                        $("#specific-time-post").empty();
-                        $.each(course_of_day[day][hour], function(ik, iv){  
-                            if(iv.for_dept==major){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列
-                                bulletin_post($("#specific-time-post"),course_of_day[day][hour][ik], language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
+                        reset_for_time_request();
+                        $.each(course_of_day[day][hour], function(ik, iv){                          
+                            if(iv.for_dept==major){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列                             
+                                if(iv.obligatory_tf==true){                                 
+                                    bulletin_post($("#obligatory-post"),course_of_day[day][hour][ik], language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
+                                }
+                                if(iv.obligatory_tf==false){
+                                    check_which_bulletin(iv.code);//由fuction決定該貼到哪個年級的欄位
+                                    //bulletin_post($("#whole-school"),course_of_day[day][hour][ik], language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
+                                }
                             }                                           
                         })                  
                     }                   
@@ -727,19 +875,20 @@
                     if($(this).prop("checked")==false){//如果沒有就恢復成空的
                         $("#obligatory-post").css("display", "none");
                     }
-                });     */      
-                $(document).ready(function(){
-                    $('[data-toggle="tooltip"]').tooltip();                                 
-                    $("[data-toggle='tooltip']").on('hover', function(){
-                        $(this).tooltip({title: "Hooray!", trigger: "hover"}); 
-                    });         
-                });
+                });     */   
+
+                /*   
+                $(document).ready(function(){                    
+                    $(document).delegate("[data-toggle='tooltip']","load",function(){
+                        $(this).tooltip();
+                    })     
+                });//這是tooltip的原版*/ 
                 
             });
             
             window.week = ["一", "二", "三", "四", "五"];
             /************這是用來把課程放到右邊的欄位**************/
-            var bulletin_post = function($target,course, language){ 
+            var bulletin_post = function($target, course, language){ 
                 if( $.type(course.title_parsed)!=="object" )            //判斷課程名稱是不是物件
                     throw 'title_parsed error';
                 if( language=="zh_TW" ){
@@ -754,15 +903,17 @@
                 $.each(course.time_parsed, function(ik, iv){        
                     time.push("星期"+week[iv.day-1]+iv.time);//push是把裡面的元素變成陣列的一格     
                 })
-                time = time.join(' ');//把多個陣列用;分隔並合併指派給time
+                time.push("代碼:"+course.code);
+                time = time.join(' ');//把多個陣列用" "分隔並合併指派給time
                 //var time = course.time_parsed.day+course.time_parsed.time;
-                var $option = $($.parseHTML('<button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" style="color:#3074B5;" title="" value=""></button>'));//把option做成dom，再把dom做成jQuery物件
+                var $option = $($.parseHTML('<button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button>'));//把option做成dom，再把dom做成jQuery物件
                 //<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" >Tooltip on left</button>
                 $option.text(course.title_short);   //將對應的課程內容寫入cell的html語法中    
-                $option.attr("data-toggle", time);  //在title裡面放課堂時間
+                $option.attr("title", time);  //在title裡面放課堂時間
                 $option.val(course.code);
                 //把現在找到的這門選修課課程代碼儲存到這個option，並用value表示
                 $target.append($option);        //顯示課程，把$option放到elective-post，append是追加在後面
+                $('[data-toggle="tooltip"]').tooltip(); //讓tooltip功能綁上去
             };
             var add_course = function($target, course, language) {      //假設target為time-table的參數，course為courses的某一個課程
                 if( !$.isArray(course.time_parsed) )
@@ -785,13 +936,13 @@
                             check_conflict = true;
                             alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that     time! Please drop out some class");
                             return false;//傳回false就是跳離迴圈
-                        }   
+                        }                           
                     });
                     if(check_conflict==true){
                         return false;
                     }
                 });
-                if(check_conflict==false){
+                if(check_conflict==false){                  
                     $.each(course.time_parsed, function(ik, iv){                            
                         $.each(iv.time, function(jk, jv){       //同上，iv.    time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)                   
                             var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');   
@@ -806,7 +957,12 @@
                     });
                     add_credits(course);
                 }
-                
+                if(check_conflict==false){
+                    return("available");//沒衝堂，可以變色
+                }
+                else{
+                    return("conflict")//衝堂，不要變色
+                }
             };
 
             /**********這是用來刪除衝堂的課程***********/
@@ -844,7 +1000,8 @@
                         $td.html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');
                     })
                 })
-                minus_credits(course);
+                minus_credits(course);                
+                change_color($("button[value="+course.code+"]"),"restore");
             };
             var add_credits = function(course){//增加學分
                 window.credits+=parseInt(course.credits);//要先把字串型態的學分轉成int才能做加減
@@ -861,16 +1018,37 @@
                 $('#senior').empty();
                 $('#junior').empty();
                 $('#fifth-grade').empty();
-                $('#specific-time-post').empty();
+                $('#whole-school').empty();
+                $('#obligatory-post').empty();
                 $('#specific-post').empty();
                 $('#general-post').empty();
                 $('#PE-post').empty();
                 window.credits=0;
-                $("#class_credit").val(window.credits);
+                $("#class_credit").text(window.credits);
                 window.name_of_optional_obligatory=[];//把數過的課程清空
-            }    
-            var change_color=function($target){//一旦添加了課程，則側欄的課名改了顏色 
-                $target.css("color","red");
+            } 
+            var reset_for_time_request=function(){//這個function是在你的td的時候，會把該時段的課程顯示，但是要先把顯示欄位清空
+                $('#freshman').empty();//以下是要清掉選修課程、指定時間搜尋等課程
+                $('#sophomore').empty();
+                $('#senior').empty();
+                $('#junior').empty();
+                $('#fifth-grade').empty();
+                $('#whole-school').empty();
+                $('#obligatory-post').empty();
+                $('#specific-post').empty();
+                $('#general-post').empty();
+                $('#PE-post').empty();
+            }   
+            var change_color=function($target,command){//一旦添加了課程，則側欄的課名改了顏色 
+                if(command=="restore"){
+                    $target.css("color","#3074B5");
+                }
+                else if(command=="used"){
+                    $target.css("color","red");
+                }
+                else{
+                    alert("遇到不可預期的錯誤，請聯絡開發小組XD");
+                }
             } 
             var check_optional_obligatory=function(course){//用來確認這個戲有幾堂必修課是同名的
                 var tmpCh = course.title_parsed["zh_TW"].split(' ');        //(這是中文課名)切割課程名稱，遇到空格就切開
@@ -880,8 +1058,8 @@
                 }
                 else{
                     window.name_of_optional_obligatory[course.title_short]++;
-                }           
-                console.log(course.title_short+" "+window.name_of_optional_obligatory[course.title_short]);
+                } 
+                console.log(course.title_short+window.name_of_optional_obligatory[course.title_short]);
             } 
             var show_optional_obligatory=function(course){
                 var tmpCh = course.title_parsed["zh_TW"].split(' ');        //(這是中文課名)切割課程名稱，遇到空格就切開
@@ -890,7 +1068,35 @@
                     bulletin_post($("#obligatory-post"),course,language);
                 }
             }
-            
+            var check_which_class=function(major){//確定他是不是有分A、B班
+                if(major=="獸醫學系學士班 A"||major=="獸醫學系學士班 B"||major=="應用數學系學士班 A"||major=="應用數學系學士班 B"||major=="機械工程學系學士班 A"||major=="機械工程學系學士班 B"||major=="土木工程學系學士班 A"||major=="土木工程學系學士班 B"||major=="電機工程學系學士班 A"||major=="電機工程學系學士班 B"){
+                    var subclass=$("#v_major").val().split(" ");//A班或B班                 
+                    subclass=subclass[1];                   
+                    var level = $("#v_level").val();    //取到年級
+                    level=(level+subclass);                 
+                    return level; 
+                }
+                else{                   
+                    return ($("#v_level").val());    //取到年級
+                }
+            } 
+            var check_which_bulletin=function(courseCode){
+                if(courses[courseCode].class=="1"||courses[courseCode].class=="1A"||courses[courseCode].class=="1B"){
+                    bulletin_post($("#freshman"),courses[courseCode], language);
+                }
+                if(courses[courseCode].class=="2"||courses[courseCode].class=="2A"||courses[courseCode].class=="2B"){
+                    bulletin_post($("#sophomore"),courses[courseCode], language);
+                }
+                if(courses[courseCode].class=="3"||courses[courseCode].class=="3A"||courses[courseCode].class=="3B"){
+                    bulletin_post($("#junior"),courses[courseCode], language);
+                }
+                if(courses[courseCode].class=="4"||courses[courseCode].class=="4A"||courses[courseCode].class=="4B"){
+                    bulletin_post($("#senior"),courses[courseCode], language);
+                }
+                if(courses[courseCode].class=="5"||courses[courseCode].class=="5A"||courses[courseCode].class=="5B"){
+                    bulletin_post($("#fifth-grade"),courses[courseCode], language);
+                }
+            }           
         })(jQuery);
         </script>
         </body>
