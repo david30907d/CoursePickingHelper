@@ -107,6 +107,14 @@
         {
         	color: red;
         }
+        #curriculum-title h2
+        {
+            text-align:center;
+        }
+        #curriculum-title h4
+        {
+            text-align:left;
+        }
         </style>
     </head>
 
@@ -114,20 +122,30 @@
 
         <!--選取系級的表單結束-->
         <div class="container-fluid">
-            <div class="col-md-9">                            
+            <div class="col-md-9">
+                <div class="row" id="curriculum-title">
+                    <div class="col-xs-4 col-xs-offset-4">
+                        <h2>課表</h2>
+                    </div>
+                    <div class="col-xs-4">
+                        <h4><span class="glyphicon glyphicon-user" ></span>學分：<span class="badge" id="class_credit"></span></h4>
+                    </div>
+                </div>
+                <!--
                 <div class="panel" id="curriculum-title">
+                    
                     <div class="panel-heading row">
                         <div class="col-xs-7">
                             <h2 style="text-align:right;" id="curriculum-title">課表</h2>
                         </div>
                         <div class="col-xs-5" style="text-align:right;">
                             <h4>
-                                <span class="glyphicon glyphicon-user" ></span>
-                                 學分：<span class="badge" id="class_credit"></span>
+                                <span class="glyphicon glyphicon-user" ></span>學分：<span class="badge" id="class_credit"></span>
                             </h4>
                         </div>
                     </div>
                 </div>
+                -->
                 <div class="table-responsive" id="time-table">
                     <table class="table table-striped table-hover table-condensed table-bordered">
                         <thead>
@@ -289,10 +307,10 @@
                         </div>
                     </div>
                     <div class="panel panel-info">
-                        <div class="panel-heading">
+                        <div class="panel-heading">選修
+                            <button type="button" class="close elective" id="year-span"><span class="fa fa-sort"></span></button>
+                            <button type="button" class="close elective"><span class="fa fa-trash"></span></button>
                         <div class="expander"></div>
-                        	<button type="button" class="close elective"><span class="fa fa-trash"></span></button>選修
-                            <button type="button" class="close elective" id="elective-span"><span class="fa fa-sort"></span></button>
                         </div>
                         <div class="panel-body" id="elective-post">
                             <h5 id="">一年級</h5>
