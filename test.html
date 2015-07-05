@@ -119,6 +119,7 @@
                     <div class="panel-heading row">
                         <div class="col-xs-7">
                             <h2 style="text-align:right;" id="curriculum-title">課表</h2>
+                            <button id="toggleTable">夜校模式</button>
                         </div>
                         <div class="col-xs-5" style="text-align:right;">
                             <h4>
@@ -213,7 +214,7 @@
                                 <td data-day="4"></td>
                                 <td data-day="5"></td>
                             </tr>
-                            <tr data-hour="10" class="active">
+                            <tr data-hour="10" class="active" style="display:none">
                                 <th>A<br>18:20<br>|<br>19:10</th>
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
@@ -221,7 +222,7 @@
                                 <td data-day="4"></td>
                                 <td data-day="5"></td>
                             </tr>
-                            <tr data-hour="11" class="active">
+                            <tr data-hour="11" class="active" style="display:none">
                                 <th>B<br>19:15<br>|<br>20:05</th>
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
@@ -229,7 +230,7 @@
                                 <td data-day="4"></td>
                                 <td data-day="5"></td>
                             </tr>
-                            <tr data-hour="12" class="active">
+                            <tr data-hour="12" class="active" style="display:none">
                                 <th>C<br>20:10<br>|<br>21:00</th>
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
@@ -237,7 +238,7 @@
                                 <td data-day="4"></td>
                                 <td data-day="5"></td>
                             </tr>
-                            <tr data-hour="13" class="active">
+                            <tr data-hour="13" class="active" style="display:none">
                                 <th>D<br>21:05<br>|<br>21:55</th>
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
@@ -856,21 +857,21 @@
                 });
                 $("#time-table").delegate("span.delete", "click", function(){//這是用來把一整個課程都刪掉的按鈕
                     $target = $(this).closest("td");//因為這裡點到的是span，要往上找td
-                    var code = $(this).next("input").val();//找到最近的一個sibling,可以用selector去篩選
-                    var boolean = confirm("是否刪除此課程?" + "\n" + "Are you sure you really want to drop this course?");                 
-                    if(boolean)
-                    {
-                        delete_course($('#time-table'), courses[code]); //就跟add_course一樣，只是把填東西改成刪掉             
-                    }                   
+                    var code = $(this).next("input").val();//找到最近的一個sibling,可以用selector去篩選                    
+                    delete_course($('#time-table'), courses[code]); //就跟add_course一樣，只是把填東西改成刪掉                                                  
                 });                             
                 $("#time-table").delegate("button.plusIcon","click",function(){ //按一下課表欄位就有課程彈出來了
                     if($(this).text()==""){ //我現在才知道null!=""
                         var major=$("#v_major").val();  //取到系
+                    	var s_major=$("#s_major").val();
+                    	var s_level=$("#s_level").val();
+                    	console.log(s_major);
+                    	console.log(s_level);
                         var day=$(this).closest("td").attr("data-day");//因為我把同一時段的課程塞進陣列裡，所以要用index去取
                         var hour=$(this).closest("tr").attr("data-hour");   
                         reset_for_time_request();
                         $.each(course_of_day[day][hour], function(ik, iv){                    
-                            if(iv.for_dept==major){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列                            	
+                            if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列    
                             	if(iv.obligatory_tf==true){                            		
                             		bulletin_post($("#obligatory-post"),course_of_day[day][hour][ik], language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
                             	}
@@ -897,7 +898,15 @@
                     	$(this).tooltip();
                     })     
                 });//這是tooltip的原版*/ 
-                
+                $("#toggleTable").click(function(){
+                	$("tr:gt(9)").toggle("slow");
+                	if($(this).text()=="夜校模式"){
+                		$(this).text("日校模式");
+                	}
+                	else{
+                		$(this).text("夜校模式");
+                	}
+                });
             });
             
             window.week = ["一", "二", "三", "四", "五"];
@@ -1123,7 +1132,7 @@
                     }
                     //check_optional_obligatory(courses[iv]);
                 });                                                            
-            }          
+            }                     
         })(jQuery);
         </script>
         </body>
