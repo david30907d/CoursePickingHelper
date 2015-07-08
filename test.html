@@ -114,6 +114,12 @@
         }
 
         </style>
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    	<![endif]-->
     </head>
 
     <body>
@@ -844,10 +850,10 @@
                     	}          
                 	}
                 	else{
-                		sub_major=major;
+                		sub_major=major;//紀錄這次提交的系級，好讓下次判斷有沒有變動
                 		sub_level=level;
                 		var level = check_which_class(major,$("#s_level").val());//取到年級
-                    	major=major.split(" ");
+                    	major=major.split(" ");//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
                     	major=major[0];    
                     	reset_for_time_request();
                 		department_course_for_specific_search(major,level); 
@@ -858,16 +864,20 @@
                     reset();
                     $("td").html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');//再把加號的按鈕填上去
                 });
-                $("#time-table").delegate("span.delete", "click", function(){//這是用來把一整個課程都刪掉的按鈕
-                    $target = $(this).closest("td");//因為這裡點到的是span，要往上找td
-                    var code = $(this).next("input").val();//找到最近的一個sibling,可以用selector去篩選                    
+                $("#time-table").on( "click", "button[class='close delete']",function(){//這是用來把一整個課程都刪掉的按鈕                	                   
+                    var code = $(this).children("input").val();//找到子代的input，然後把裡面的代碼給取出來
                     delete_course($('#time-table'), courses[code]); //就跟add_course一樣，只是把填東西改成刪掉                                                  
                 });                             
-                $("#time-table").delegate("button.plusIcon","click",function(){ //按一下課表欄位就有課程彈出來了
+                $("#time-table").on("click","button.plusIcon",function(){ //按一下課表欄位就有課程彈出來了
                     if($(this).text()==""){ //我現在才知道null!=""
                         var major=$("#v_major").val();  //取到系
                     	var s_major=$("#s_major").val();
                     	var s_level=$("#s_level").val();
+                    	s_level=check_which_class(s_major,s_level);//用這個function就可以處理有分A、B班的系，若無則為正常的年級
+                    	major=major.split(" ");//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
+                    	major=major[0];  
+                    	s_major=s_major.split(" ");//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
+                    	s_major=s_major[0];  
                     	console.log(s_major);
                     	console.log(s_level);
                         var day=$(this).closest("td").attr("data-day");//因為我把同一時段的課程塞進陣列裡，所以要用index去取
@@ -901,6 +911,7 @@
                     	$(this).tooltip();
                     })     
                 });//這是tooltip的原版*/ 
+				/**********用來把夜校的欄位隱藏起來***********/
                 $("#toggleTable").click(function(){
                 	$("tr:gt(9)").toggle("slow");
                 	if($(this).text()=="夜校模式"){
@@ -972,7 +983,7 @@
                     $.each(course.time_parsed, function(ik, iv){                            
                         $.each(iv.time, function(jk, jv){       //同上，iv.    time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)                   
                           	var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');   
-                          	var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color:red;"><span aria-hidden="true" class="delete" style="color:red;">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));
+                          	var $cell = $($.parseHTML('<div><div><button type="button" class="close delete" data-dismiss="alert" aria-label="Close" style="color:red;"><span aria-hidden="true"  style="color:red;">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));
                             //把上面的html格式匯入找到的td type中(  parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
                             $cell.find('.title').text(course.title_short).end()
                             $cell.find('input').val(course.code).end()      //  將對應的課程內容寫入cell的html語法中，.title就是class="title"
