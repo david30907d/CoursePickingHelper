@@ -114,12 +114,6 @@
         }
 
         </style>
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    	<![endif]-->
     </head>
 
     <body>
@@ -131,10 +125,9 @@
                 <div class="row" id="curriculum-title">
                     <div class="col-xs-4 col-xs-offset-4" style="text-align:center;">
                         <h2>課表</h2>
-                        <button id="toggleTable">夜校模式</button>
                     </div>
                     <div class="col-xs-4" style="text-align:left;">
-                        <h2><small><span class="glyphicon glyphicon-user" ></span>學分 <span class="badge" id="class_credit"></span></small></h2>
+                        <h2><small><span class="glyphicon glyphicon-user" ></span>學分：<span class="badge" id="class_credit"></span></small></h2>
                     </div>
                 </div>
 
@@ -152,10 +145,7 @@
                         </thead>
                         <tbody>
                             <tr data-hour="1" class="active">
-                                <th>
-                                    <h2>1</h2>
-                                    <h5>08:10-09:00</h5>
-                                </th>
+                                <th>08:10<br>|<br>09:00</th>
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
                                 <td data-day="3"></td>
@@ -163,10 +153,7 @@
                                 <td data-day="5"></td>
                             </tr>
                             <tr data-hour="2" class="active">
-                                <th>
-                                    <h2>2</h2>
-                                    <h5>09:10-10:00</h5>
-                                </th>
+                                <th>09:10<br>|<br>10:00</th>
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
                                 <td data-day="3"></td>
@@ -174,10 +161,7 @@
                                 <td data-day="5"></td>
                             </tr>
                             <tr data-hour="3" class="active">
-                                <th>
-                                    <h2>3</h2>
-                                    <h5>10:10-12:00</h5>
-                                </th>
+                                <th>10:10<br>|<br>11:00</th>
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
                                 <td data-day="3"></td>
@@ -185,10 +169,7 @@
                                 <td data-day="5"></td>
                             </tr>
                             <tr data-hour="4" class="active">
-                                <th>
-                                    <h2>4</h2>
-                                    <h5>11:10-12:00</h5>
-                                </th>
+                                <th>11:10<br>|<br>12:00</th>
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
                                 <td data-day="3"></td>
@@ -196,10 +177,7 @@
                                 <td data-day="5"></td>
                             </tr>
                             <tr data-hour="5" class="active">
-                                <th>
-                                    <h2>5</h2>
-                                    <h5>13:10-14:00</h5>
-                                </th>
+                                <th>13:10<br>|<br>14:00</th>
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
                                 <td data-day="3"></td>
@@ -207,10 +185,7 @@
                                 <td data-day="5"></td>
                             </tr>
                             <tr data-hour="6" class="active">
-                                <th>
-                                    <h2>6</h2>
-                                    <h5>14:10-15:00</h5>
-                                </th>
+                                <th>14:10<br>|<br>15:00</th>
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
                                 <td data-day="3"></td>
@@ -218,10 +193,7 @@
                                 <td data-day="5"></td>
                             </tr>
                             <tr data-hour="7" class="active">
-                                <th>
-                                    <h2>7</h2>
-                                    <h5>15:10-18:00</h5>
-                                </th>
+                                <th>15:10<br>|<br>16:00</th>
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
                                 <td data-day="3"></td>
@@ -229,10 +201,7 @@
                                 <td data-day="5"></td>
                             </tr>
                             <tr data-hour="8" class="active">
-                                <th>
-                                    <h2>8</h2>
-                                    <h5>16:10-17:00</h5>
-                                </th>
+                                <th>16:10<br>|<br>17:00</th>
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
                                 <td data-day="3"></td>
@@ -240,74 +209,39 @@
                                 <td data-day="5"></td>
                             </tr>
                             <tr data-hour="9" class="active">
-                                <th>
-                                    <h2>9</h2>
-                                    <h5>17:10-18:00</h5>
-                                </th>
+                                <th>17:10<br>|<br>18:00</th>
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
                                 <td data-day="3"></td>
                                 <td data-day="4"></td>
                                 <td data-day="5"></td>
                             </tr>
-<<<<<<< HEAD
                             <tr data-hour="10" class="active">
-                                <th>
-                                    <h2>A</h2>
-                                    <h5>18:20-19:10</h5>
-                                </th>
-=======
-                            <tr data-hour="10" class="active" style="display:none">
                                 <th>A<br>18:20<br>|<br>19:10</th>
->>>>>>> ddbd7d44c792088bc24c88d31f5be1f6ef38e076
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
                                 <td data-day="3"></td>
                                 <td data-day="4"></td>
                                 <td data-day="5"></td>
                             </tr>
-<<<<<<< HEAD
                             <tr data-hour="11" class="active">
-                                <th>
-                                    <h2>B</h2>
-                                    <h5>19:15-20:05</h5>
-                                </th>
-=======
-                            <tr data-hour="11" class="active" style="display:none">
                                 <th>B<br>19:15<br>|<br>20:05</th>
->>>>>>> ddbd7d44c792088bc24c88d31f5be1f6ef38e076
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
                                 <td data-day="3"></td>
                                 <td data-day="4"></td>
                                 <td data-day="5"></td>
                             </tr>
-<<<<<<< HEAD
                             <tr data-hour="12" class="active">
-                                <th>
-                                    <h2>C</h2>
-                                    <h5>20:10-21:00</h5>
-                                </th>
-=======
-                            <tr data-hour="12" class="active" style="display:none">
                                 <th>C<br>20:10<br>|<br>21:00</th>
->>>>>>> ddbd7d44c792088bc24c88d31f5be1f6ef38e076
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
                                 <td data-day="3"></td>
                                 <td data-day="4"></td>
                                 <td data-day="5"></td>
                             </tr>
-<<<<<<< HEAD
                             <tr data-hour="13" class="active">
-                                <th>
-                                    <h2>D</h2>
-                                    <h5>21:05-21:55</h5>
-                                </th>
-=======
-                            <tr data-hour="13" class="active" style="display:none">
                                 <th>D<br>21:05<br>|<br>21:55</th>
->>>>>>> ddbd7d44c792088bc24c88d31f5be1f6ef38e076
                                 <td data-day="1"></td>
                                 <td data-day="2"></td>
                                 <td data-day="3"></td>
@@ -663,7 +597,6 @@
                     window.teacher_course = {}; //這是以老師姓名為index的陣列
                     window.name_of_course = {}; //這是以課程名稱為index的陣列
                     window.name_of_optional_obligatory = [] //這是用來存系上的必修課，檢查有沒有課名是重複的，若有就讓使用者自行決定要上哪堂
-                    $("#class_credit").text(0);
                     window.language="zh_TW";//固定顯示語言為中文
                     $.each(json.course, function(ik, iv){
                         if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
@@ -910,10 +843,10 @@
                     	}          
                 	}
                 	else{
-                		sub_major=major;//紀錄這次提交的系級，好讓下次判斷有沒有變動
+                		sub_major=major;
                 		sub_level=level;
                 		var level = check_which_class(major,$("#s_level").val());//取到年級
-                    	major=major.split(" ");//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
+                    	major=major.split(" ");
                     	major=major[0];    
                     	reset_for_time_request();
                 		department_course_for_specific_search(major,level); 
@@ -924,27 +857,23 @@
                     reset();
                     $("td").html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');//再把加號的按鈕填上去
                 });
-                $("#time-table").on( "click", "button[class='close delete']",function(){//這是用來把一整個課程都刪掉的按鈕                	                   
-                    var code = $(this).children("input").val();//找到子代的input，然後把裡面的代碼給取出來
-                    delete_course($('#time-table'), courses[code]); //就跟add_course一樣，只是把填東西改成刪掉                                                  
+                $("#time-table").delegate("span.delete", "click", function(){//這是用來把一整個課程都刪掉的按鈕
+                    $target = $(this).closest("td");//因為這裡點到的是span，要往上找td
+                    var code = $(this).next("input").val();//找到最近的一個sibling,可以用selector去篩選
+                    var boolean = confirm("是否刪除此課程?" + "\n" + "Are you sure you really want to drop this course?");                 
+                    if(boolean)
+                    {
+                        delete_course($('#time-table'), courses[code]); //就跟add_course一樣，只是把填東西改成刪掉             
+                    }                   
                 });                             
-                $("#time-table").on("click","button.plusIcon",function(){ //按一下課表欄位就有課程彈出來了
+                $("#time-table").delegate("button.plusIcon","click",function(){ //按一下課表欄位就有課程彈出來了
                     if($(this).text()==""){ //我現在才知道null!=""
                         var major=$("#v_major").val();  //取到系
-                    	var s_major=$("#s_major").val();
-                    	var s_level=$("#s_level").val();
-                    	s_level=check_which_class(s_major,s_level);//用這個function就可以處理有分A、B班的系，若無則為正常的年級
-                    	major=major.split(" ");//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
-                    	major=major[0];  
-                    	s_major=s_major.split(" ");//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
-                    	s_major=s_major[0];  
-                    	console.log(s_major);
-                    	console.log(s_level);
                         var day=$(this).closest("td").attr("data-day");//因為我把同一時段的課程塞進陣列裡，所以要用index去取
                         var hour=$(this).closest("tr").attr("data-hour");   
                         reset_for_time_request();
                         $.each(course_of_day[day][hour], function(ik, iv){                    
-                            if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列    
+                            if(iv.for_dept==major){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列                            	
                             	if(iv.obligatory_tf==true){                            		
                             		bulletin_post($("#obligatory-post"),course_of_day[day][hour][ik], language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
                             	}
@@ -971,16 +900,7 @@
                     	$(this).tooltip();
                     })     
                 });//這是tooltip的原版*/ 
-				/**********用來把夜校的欄位隱藏起來***********/
-                $("#toggleTable").click(function(){
-                	$("tr:gt(9)").toggle("slow");
-                	if($(this).text()=="夜校模式"){
-                		$(this).text("日校模式");
-                	}
-                	else{
-                		$(this).text("夜校模式");
-                	}
-                });
+                
             });
             
             window.week = ["一", "二", "三", "四", "五"];
@@ -1043,7 +963,7 @@
                     $.each(course.time_parsed, function(ik, iv){                            
                         $.each(iv.time, function(jk, jv){       //同上，iv.    time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)                   
                           	var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');   
-                          	var $cell = $($.parseHTML('<div><div><button type="button" class="close delete" data-dismiss="alert" aria-label="Close" style="color:red;"><span aria-hidden="true"  style="color:red;">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));
+                          	var $cell = $($.parseHTML('<div><div><button type="button" class="close" data-dismiss="alert" aria-label="Close" style="color:red;"><span aria-hidden="true" class="delete" style="color:red;">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));
                             //把上面的html格式匯入找到的td type中(  parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
                             $cell.find('.title').text(course.title_short).end()
                             $cell.find('input').val(course.code).end()      //  將對應的課程內容寫入cell的html語法中，.title就是class="title"
@@ -1206,7 +1126,7 @@
                     }
                     //check_optional_obligatory(courses[iv]);
                 });                                                            
-            }                     
+            }          
         })(jQuery);
         </script>
         </body>
