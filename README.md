@@ -2,7 +2,7 @@ CoursePickingHelper 選課小幫手
 ===============================
 使用說明
 -------------------------------
-* 進入頁面請點選<img src="images/01.png"> 選擇自己的學制、系、年級
+* 進入頁面請點選<img src="images/01.png"> 選擇自己的學制、系、年級<span style="color:red">(未選擇系級，無法使用下列功能)</span>
 * 課表將自動排上必修課，並出現<img src="images/02.png">的圖案
 * 點選<img src="images/02.png">可在右側欄位看見該空堂有甚麼課可排
 * 若想找特定課程，點擊<img src="images/03.png">可查詢課程
