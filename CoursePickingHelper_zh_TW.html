@@ -656,7 +656,7 @@
         (function($){
         //先定義JQuery為$，不要讓它衝突
         //var courses = null;
-            $(function(){
+            $(document).ready(function(){
                 //當文件準備好的時候，讀入json檔
                 toastr.success("1.從選擇系級開始<br />2.外系課程請按課程查詢<br /><button type='button' class='btn clear btn-danger'>GO</button>");//一開始的簡易版使用說明
                 $.getJSON('json/protoC.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
