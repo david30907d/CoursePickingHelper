@@ -658,6 +658,7 @@
         //var courses = null;
             $(function(){
                 //當文件準備好的時候，讀入json檔
+                toastr.success("1.從選擇系級開始<br />2.外系課程請按課程查詢<br /><button type='button' class='btn clear btn-danger'>GO</button>");//一開始的簡易版使用說明
                 $.getJSON('json/protoC.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
                     window.credits=0//一開始的學分數是0
                     window.courses = {};//宣告一個空的物件
@@ -712,82 +713,39 @@
                     "v_year"
                     $a.serializeArray()[1].value
                     "U"
-                }*/ 
-                //////泰瑋的程式遺跡//////
-                /*$("#obligatory-span").click(function(){
-                	$("#obligatory-post").trigger("slideEvent");
-
-                });   
-                $("#obligatory-post").delegate("button.btn-link","slideEvent",function(){
-                	$(this).slideToggle( "slow" );
-                });
-                ///////我用on沒辦法成功使用slideToggle///////
-                $("#obligatory-span").click(function(){
-                    $("#obligatory-post").attr("slide","on");
-                    if ($("#obligatory-post").attr("slide")=="on") {
-                        $("#bulletin_post").trigger("slideEvent"); 
-                        $("#bulletin_post").on("slideEvent","div[slide|='on']",function(){
-                            $(this).slideToggle( "slow" );
-                        })              
-                    };                  
-                });   
-                */
+                }*/                 
                 /*******    ↓製作隱藏側欄的功能↓   *******/
                     /***必修***/
-                $("#obligatory-span").hover(function(){
-                    $(this).addClass('obligatory-post-on');
-                }, function(){
-                    $(this).removeClass('obligatory-post-on');
-                }).click(function(){
+                $("#obligatory-span").click(function(){
                     // 當點到圖案時，若內容是隱藏時則顯示它；反之則隱藏
                     $('#obligatory-post').slideToggle();
                     $('#obligatory-span').find("span").toggle();
-                }).siblings('elective-post').hide();
+                });
                     /***學年課***/
-                $("#year-span").hover(function(){
-                    $(this).addClass('year-post-on');
-                }, function(){
-                    $(this).removeClass('year-post-on');
-                }).click(function(){
+                $("#year-span").click(function(){
                     $('#year-post').slideToggle();
                     $('#year-span').find("span").toggle();
-                }).siblings('year-post').hide();
+                });
                     /***選修***/
-                $("#elective-span").hover(function(){
-                    $(this).addClass('elective-post-on');
-                }, function(){
-                    $(this).removeClass('elective-post-on');
-                }).click(function(){
+                $("#elective-span").click(function(){
                     $('#elective-post').slideToggle();
                     $('#elective-span').find("span").toggle();
-                }).siblings('elective-post').hide();
+                });
                     /***通識***/
-                $("#general-span").hover(function(){
-                    $(this).addClass('general-post-on');
-                }, function(){
-                    $(this).removeClass('general-post-on');
-                }).click(function(){
+                $("#general-span").click(function(){
                     $('#general-post').slideToggle();
                     $('#general-span').find("span").toggle();
-                }).siblings('general-post').hide();
+                });
                     /***體育***/
-                $("#PE-span").hover(function(){
-                    $(this).addClass('PE-post-on');
-                }, function(){
-                    $(this).removeClass('PE-post-on');
-                }).click(function(){
+                $("#PE-span").click(function(){
                     $('#PE-post').slideToggle();
                     $('#PE-span').find("span").toggle();
-                }).siblings('PE-post').hide();
+                });
                     /***搜尋***/
-                $("#search-span").hover(function(){
-                    $(this).addClass('search-post-on');
-                }, function(){
-                    $(this).removeClass('search-post-on');
-                }).click(function(){
+                $("#search-span").click(function(){
                     $('#search-post').slideToggle();
                     $('#search-span').find("span").toggle();
-                }).siblings('search-post').hide();
+                });
                 /*******   ↑製作隱藏側欄的功能↑   *******/
                       					           
                 $("#bulletin").delegate("span.fa-trash", "click", function(){//這是給垃圾桶用的                    
