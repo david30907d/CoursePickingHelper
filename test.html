@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-tw" class="han-la">   
 <!--  
@@ -30,7 +28,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>選課小幫手</title>
-        <script type="text/javascript"></script>
+        <script type="text/javascript"></script>        
+        <link href="toastr/toastr.css" rel="stylesheet"/><!--這是toast message的css-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -590,6 +589,7 @@
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
             <script src="bootstrap/js/bootstrap.min.js"></script>
+            <script src="toastr/toastr.js"></script>
         <script>
         (function($){
         //先定義JQuery為$，不要讓它衝突
@@ -866,7 +866,13 @@
                 });
                 $("#time-table").on( "click", "button[class='close delete']",function(){//這是用來把一整個課程都刪掉的按鈕                	                   
                     var code = $(this).children("input").val();//找到子代的input，然後把裡面的代碼給取出來
-                    delete_course($('#time-table'), courses[code]); //就跟add_course一樣，只是把填東西改成刪掉                                                  
+                    if(courses[code].obligatory_tf==true){
+                    	toastr.warning("此為必修課，若要復原請點擊課表空格");
+                    	delete_course($('#time-table'), courses[code]); //就跟add_course一樣，只是把填東西改成刪掉                                                	
+                    }
+                    else{
+                    	delete_course($('#time-table'), courses[code]); //就跟add_course一樣，只是把填東西改成刪掉   
+                    }                                                                         
                 });                             
                 $("#time-table").on("click","button.plusIcon",function(){ //按一下課表欄位就有課程彈出來了
                     if($(this).text()==""){ //我現在才知道null!=""
@@ -971,7 +977,8 @@
                         var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
                         if($td.text()!=""){//用來判斷td裡面是不已經有放過課程了，但若先在裡面放個按鈕那.text()回傳回來的也是空字串                    
                             check_conflict = true;
-                            alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that     time! Please drop out some class");
+                            //alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that     time! Please drop out some class");
+                            toastr.error("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that     time! Please drop out some class")
                             return false;//傳回false就是跳離迴圈
                         }                           
                     });
