@@ -28,7 +28,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>選課小幫手</title>
-        <script type="text/javascript"></script>        
+        <script type="text/javascript"></script>
         <link href="toastr/toastr.css" rel="stylesheet"/><!--這是toast message的css-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -657,8 +657,8 @@
         //先定義JQuery為$，不要讓它衝突
         //var courses = null;
             $(function(){
+                toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />4. ", "使用說明", {timeOut: 50000});  //一開始的簡易版使用說明
                 //當文件準備好的時候，讀入json檔
-                toastr.success("1.從選擇系級開始<br />2.外系課程請按課程查詢<br /><button type='button' class='btn clear btn-danger'>GO</button>");//一開始的簡易版使用說明
                 $.getJSON('json/protoC.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
                     window.credits=0//一開始的學分數是0
                     window.courses = {};//宣告一個空的物件
