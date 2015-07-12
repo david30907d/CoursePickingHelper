@@ -850,7 +850,7 @@
                                     check_which_bulletin(jv);//由fuction決定該貼到哪個年級的欄位
                                 }                       
                             })
-                        })//以上為必修 選修填入 
+                        })	//以上為必修 選修填入 
                     }                   
                 });  
                 window.sub_major=$("#s_major").val();//為了方便使用者不斷查詢某一系不同年級的課
@@ -886,7 +886,7 @@
                         }          
                     }
                     else{
-                        sub_major=major;//紀錄這次提交的系級，好讓下次判斷有沒有變動
+                        sub_major=major;	//紀錄這次提交的系級，好讓下次判斷有沒有變動
                         sub_level=level;
                         var level = check_which_class(major,$("#s_level").val());//取到年級
                         major=major.split(" ");//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
@@ -932,7 +932,6 @@
                                 }
                                 if(iv.obligatory_tf==false){
                                     check_which_bulletin(iv.code);//由fuction決定該貼到哪個年級的欄位
-                                    
                                 }
                             }                                           
                         })                  
@@ -966,7 +965,7 @@
             });
             
             window.week = ["一", "二", "三", "四", "五"];
-            /************這是用來把課程放到右邊的欄位**************/
+            /************這是用來把課程放到左邊的欄位**************/
             var bulletin_post = function($target, course, language){ 
                 if( $.type(course.title_parsed)!=="object" )            //判斷課程名稱是不是物件
                     throw 'title_parsed error';
@@ -976,16 +975,16 @@
                 else{
                     course.title_short = course.title_parsed["en_US"];              
                 }               
-                var time = [];//time設定為空陣列
+                var time = [];	//time設定為空陣列
                 var $td;
                 time.push("上課時間:");
                 $.each(course.time_parsed, function(ik, iv){        
-                    time.push("星期"+week[iv.day-1]+iv.time);//push是把裡面的元素變成陣列的一格     
+                    time.push("星期"+week[iv.day-1]+iv.time);	//push是把裡面的元素變成陣列的一格     
                 })
                 time.push("代碼:"+course.code);
-                time = time.join(' ');//把多個陣列用" "分隔並合併指派給time
+                time = time.join(' ');	//把多個陣列用" "分隔並合併指派給time
                 //var time = course.time_parsed.day+course.time_parsed.time;
-                var $option = $($.parseHTML('<button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button>'));//把option做成dom，再把dom做成jQuery物件
+                var $option = $($.parseHTML('<button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button>'));	//把option做成dom，再把dom做成jQuery物件
                 //<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" >Tooltip on left</button>
                 $option.text(course.title_short);   //將對應的課程內容寫入cell的html語法中    
                 $option.attr("title", time);  //在title裡面放課堂時間
@@ -1011,11 +1010,11 @@
                 $.each(course.time_parsed,function(ik, iv){
                     $.each(iv.time,function(jk, jv){
                         var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
-                        if($td.text()!=""){//用來判斷td裡面是不已經有放過課程了，但若先在裡面放個按鈕那.text()回傳回來的也是空字串                    
+                        if($td.text()!=""){	//用來判斷td裡面是不已經有放過課程了，但若先在裡面放個按鈕那.text()回傳回來的也是空字串                    
                             check_conflict = true;
                             //alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that     time! Please drop out some class");
                             toastr.error("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that     time! Please drop out some class")
-                            return false;//傳回false就是跳離迴圈
+                            return false;	//傳回false就是跳離迴圈
                         }                           
                     });
                     if(check_conflict==true){
@@ -1029,8 +1028,8 @@
                             var $cell = $($.parseHTML('<div><div><button type="button" class="close delete" data-dismiss="alert" aria-label="Close" style="color:red;"><span aria-hidden="true"  style="color:red;">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));
                             //把上面的html格式匯入找到的td type中(  parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
                             $cell.find('.title').text(course.title_short).end()
-                            $cell.find('input').val(course.code).end()      //  將對應的課程內容寫入cell的html語法中，.title就是class="title"
-                                 .find('.professor').text(course.professor).end()//text()   會把東西填入找到的class那裡，end()會回到var $cell那一行
+                            $cell.find('input').val(course.code).end()      //將對應的課程內容寫入cell的html語法中，.title就是class="title"
+                                 .find('.professor').text(course.professor).end()	//text()   會把東西填入找到的class那裡，end()會回到var $cell那一行
                                  .find('.location').text(course.location);                              
                             $td.html($cell.html());     //顯示課程，把cell.html()塞到<td>tag裡面，就算裡面原本有按鈕也會直接被蓋掉
                         });
@@ -1038,10 +1037,10 @@
                     add_credits(course);
                 }
                 if(check_conflict==false){
-                    return("available");//沒衝堂，可以變色
+                    return("available");	//沒衝堂，可以變色
                 }
                 else{
-                    return("conflict")//衝堂，不要變色
+                    return("conflict")	//衝堂，不要變色
                 }
             };
 
@@ -1105,10 +1104,10 @@
                 $('#search-post').empty();
                 window.credits=0;
                 $("#class_credit").text(window.credits);
-                window.name_of_optional_obligatory=[];//把數過的課程清空
+                window.name_of_optional_obligatory=[];	//把數過的課程清空
             } 
-            var reset_for_time_request=function(){//這個function是在你的td的時候，會把該時段的課程顯示，但是要先把顯示欄位清空
-                $('#obligatory-post').empty();//以下是要清掉選修課程、指定時間搜尋等課程
+            var reset_for_time_request=function(){	//這個function是在你的td的時候，會把該時段的課程顯示，但是要先把顯示欄位清空
+                $('#obligatory-post').empty();	//以下是要清掉選修課程、指定時間搜尋等課程
                 $('#freshman').empty();
                 $('#sophomore').empty();
                 $('#senior').empty();
@@ -1118,7 +1117,7 @@
                 $('#general-post').empty();
                 $('#PE-post').empty();                
             }   
-            var change_color=function($target,command){//一旦添加了課程，則側欄的課名改了顏色 
+            var change_color=function($target,command){	//一旦添加了課程，則側欄的課名改了顏色 
                 if(command=="restore"){
                     $target.css("color","#3074B5");
                 }
@@ -1129,10 +1128,10 @@
                     alert("遇到不可預期的錯誤，請聯絡開發小組XD");
                 }
             } 
-            var check_optional_obligatory=function(course){//用來確認這個戲有幾堂必修課是同名的
+            var check_optional_obligatory=function(course){	//用來確認這個戲有幾堂必修課是同名的
                 var tmpCh = course.title_parsed["zh_TW"].split(' ');        //(這是中文課名)切割課程名稱，遇到空格就切開
                 course.title_short = tmpCh[0];      //title_short是會自動宣告的區域變數，存沒有英文的課名
-                if(typeof(window.name_of_optional_obligatory[course.title_short]) == 'undefined'){//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
+                if(typeof(window.name_of_optional_obligatory[course.title_short]) == 'undefined'){	//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
                     window.name_of_optional_obligatory[course.title_short] = 1;
                 }
                 else{
@@ -1147,9 +1146,9 @@
                     bulletin_post($("#obligatory-post"),course,language);
                 }
             }
-            var check_which_class=function(major,level){//確定他是不是有分A、B班
+            var check_which_class=function(major,level){	//確定他是不是有分A、B班
                 if(major=="獸醫學系學士班 A"||major=="獸醫學系學士班 B"||major=="應用數學系學士班 A"||major=="應用數學系學士班 B"||major=="機械工程學系學士班 A"||major=="機械工程學系學士班 B"||major=="土木工程學系學士班 A"||major=="土木工程學系學士班 B"||major=="電機工程學系學士班 A"||major=="電機工程學系學士班 B"){
-                    var subclass=major.split(" ");//A班或B班                   
+                    var subclass=major.split(" ");	//A班或B班                   
                     subclass=subclass[1];                   
                     var level = level;    //取到年級
                     level=(level+subclass);                 
@@ -1159,7 +1158,7 @@
                     return (level);    //取到年級
                 }
             } 
-            var check_which_bulletin=function(courseCode){//為了判斷A、B班以及不分班的科系開被放到哪個bulletin
+            var check_which_bulletin=function(courseCode){	//為了判斷A、B班以及不分班的科系開被放到哪個bulletin
                 if(courses[courseCode].class=="1"||courses[courseCode].class=="1A"||courses[courseCode].class=="1B"){
                     bulletin_post($("#freshman"),courses[courseCode], language);
                 }
@@ -1180,11 +1179,11 @@
                 }
             } 
             var department_course_for_specific_search=function(major,level){                
-                $.each(course_of_majors[major][level],function(ik,iv){//因為這種院的課一定是交給使用者自己選，所以就不自動填入
+                $.each(course_of_majors[major][level],function(ik,iv){	//因為這種院的課一定是交給使用者自己選，所以就不自動填入
                     if(courses[iv].obligatory_tf==true){
                         bulletin_post($("#obligatory-post"),courses[iv], language);
                     }
-                    if(courses[iv].obligatory_tf==false){//因為不知道使用這輸入的年級為幾年級，所以只好一個一個判斷該放到哪個bulletin
+                    if(courses[iv].obligatory_tf==false){	//因為不知道使用這輸入的年級為幾年級，所以只好一個一個判斷該放到哪個bulletin
                         check_which_bulletin(iv);
                     }
                     //check_optional_obligatory(courses[iv]);
