@@ -758,7 +758,7 @@
                 });
                 /*******   ↑製作隱藏側欄的功能↑   *******/
                                                    
-                $("#bulletin").delegate("span.fa-trash", "click", function(){//這是給垃圾桶用的                    
+                $("#bulletin").delegate("span.fa-trash", "click", function(){	//這是給垃圾桶用的                    
                     if($(this).parents("button").attr("class")=="close obligatory"){
                         $("#obligatory-post").empty();
                     }
@@ -770,7 +770,9 @@
                         $("#fifth-grade").empty();
                     }
                     else if($(this).parents("button").attr("class")=="close general"){
-                        $("#general-post").empty();
+                        $('#humanities').empty();
+		                $('#social').empty();
+		                $('#natural').empty();
                     }
                     else if($(this).parents("button").attr("class")=="close PE"){
                         $("#PE-post").empty();
@@ -907,10 +909,10 @@
                 $("#clear-button").click(function()
                 {
                     reset();
-                    $("td").html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');//再把加號的按鈕填上去
+                    $("td").html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');	//再把加號的按鈕填上去
                 });
-                $("#time-table").on( "click", "button[class='close delete']",function(){//這是用來把一整個課程都刪掉的按鈕                                     
-                    var code = $(this).children("input").val();//找到子代的input，然後把裡面的代碼給取出來
+                $("#time-table").on( "click", "button[class='close delete']",function(){	//這是用來把一整個課程都刪掉的按鈕                                     
+                    var code = $(this).children("input").val();	//找到子代的input，然後把裡面的代碼給取出來
                     if(courses[code].obligatory_tf==true){
                         toastr.warning("此為必修課，若要復原請點擊課表空格");
                         delete_course($('#time-table'), courses[code]); //就跟add_course一樣，只是把填東西改成刪掉                                                 
@@ -1119,7 +1121,9 @@
                 $('#junior').empty();
                 $('#fifth-grade').empty();
                 $('#whole-school').empty();                               
-                $('#general-post').empty();
+                $('#humanities').empty();
+                $('#social').empty();
+                $('#natural').empty();
                 $('#PE-post').empty();  
                 $('#search-post').empty();
                 window.credits=0;
@@ -1134,7 +1138,9 @@
                 $('#junior').empty();
                 $('#fifth-grade').empty();
                 $('#whole-school').empty();                               
-                $('#general-post').empty();
+                $('#humanities').empty();
+                $('#social').empty();
+                $('#natural').empty();
                 $('#PE-post').empty();                
             }   
             var change_color=function($target,command){	//一旦添加了課程，則側欄的課名改了顏色 
