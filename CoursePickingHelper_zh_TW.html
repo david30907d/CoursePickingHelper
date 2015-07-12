@@ -111,6 +111,11 @@
             text-align:left;
             color:#333;
         }
+        #toggleTable > span
+        {
+            color: #fff; /* IE8 proofing */
+            color: rgba(255,255,255,.75);
+        }
 
         </style>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -479,12 +484,10 @@
             <div class="col-md-9">
                 <div class="row" id="curriculum-title">
                     <div class="col-xs-4 col-xs-offset-4" style="text-align:center;">
-                        <h2>課表</h2>
-                        <button type="button" class="btn btn-link">（鏈接）Link</button>
-                        <button type="button" id="toggleTable"><span class="fa fa-sun-o fa-1x fa-fw"></span></button>
+                        <h2>課表<button type="button" class="btn btn-link" id="toggleTable" value="sun"><span class="fa fa-sun-o fa-1x fa-fw"></span></button></h2>
                     </div>
                     <div class="col-xs-4" style="text-align:left;">
-                        <h2><small><span class="glyphicon glyphicon-user" ></span>學分 <span class="badge" id="class_credit"></span></small></h2>
+                        <h2><small><span class="glyphicon glyphicon-user"></span>學分 <span class="badge" id="class_credit"></span></small></h2>
                     </div>
                 </div>
 
@@ -955,11 +958,13 @@
                 /**********用來把夜校的欄位隱藏起來***********/
                 $("#toggleTable").click(function(){
                     $("tr:gt(9)").toggle("slow");
-                    if($(this).text()=="夜校模式"){
-                        $(this).text("日校模式");
+                    if($(this).value()=="moon")
+                    {
+                        $(this).value("sun");
                     }
-                    else{
-                        $(this).text("夜校模式");
+                    else
+                    {
+                        $(this).text("moon");
                     }
                 });
             });
