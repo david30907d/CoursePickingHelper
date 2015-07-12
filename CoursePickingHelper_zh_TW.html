@@ -484,7 +484,8 @@
             <div class="col-md-9">
                 <div class="row" id="curriculum-title">
                     <div class="col-xs-4 col-xs-offset-4" style="text-align:center;">
-                        <h2>課表<button type="button" class="btn btn-link" id="toggleTable" value="sun"><span class="fa fa-sun-o fa-1x fa-fw"></span></button></h2>
+                        <!--<h2>課表<button type="button" class="btn btn-link" id="toggleTable" value="sun"><span class="fa fa-sun-o fa-1x fa-fw"></span></button></h2>-->
+                        <h2>課表<span class="fa fa-sun-o fa-1x fa-fw" value="sun" id="toggleTable"></span></h2>
                     </div>
                     <div class="col-xs-4" style="text-align:left;">
                         <h2><small><span class="glyphicon glyphicon-user"></span>學分 <span class="badge" id="class_credit"></span></small></h2>
@@ -880,7 +881,7 @@
                                 }                           
                             })  
                             $("#class_title").val("");                                            
-                        }                       
+                        }
                         if(teacher!=""){
                             $.each(teacher_course[teacher], function(ik, iv){                              
                                 bulletin_post($("#search-post"),iv, language);
@@ -958,15 +959,24 @@
                 });//這是tooltip的原版*/ 
                 /**********用來把夜校的欄位隱藏起來***********/
                 $("#toggleTable").click(function(){
+                    //var toggleicon="fa-sun-o";
+                    //var toggleHtml= $(this).html;
+                    //var $toggle= $($.parseHTML('<span class="fa ' + toggleicon + ' fa-1x fa-fw"></span>'));
+                    //console.log(buttonHtml);
                     $("tr:gt(9)").toggle("slow");
-                    if($(this).value()=="moon")
+                    if($(toggleTable).val()=="moon")
                     {
-                        $(this).value("sun");
+                        $(this).val("sun");
+                        $(this).removeClass("fa fa-moon-o fa-1x fa-fw");
+                        $(this).addClass("fa fa-sun-o fa-1x fa-fw");
                     }
                     else
                     {
-                        $(this).text("moon");
+                        $(this).val("moon");
+                        $(this).removeClass("fa fa-sun-o fa-1x fa-fw");
+                        $(this).addClass("fa fa-moon-o fa-1x fa-fw");
                     }
+                    console.log($(this).val);
                 });
             });
             
@@ -1085,7 +1095,7 @@
                         $td.html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');
                     })
                 })
-                minus_credits(course);                
+                minus_credits(course);  
                 change_color($("button[value="+course.code+"]"),"restore");
             };
             var add_credits = function(course){//增加學分
