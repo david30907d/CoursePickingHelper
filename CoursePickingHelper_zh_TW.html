@@ -36,14 +36,6 @@
         <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.js"></script>-->
         
         <style>
-        /*這裡開始是我寫的，選取表單和選單上的id，並把顏色反白*/
-        #icon-text, #icon-text1, #icon-text2, #icon-text3, #icon-text4, #icon-text5
-        {
-            color: white;
-            font-family: "Microsoft JhengHei";
-            font-size: 100%;
-            font-style: italic;
-        }
         body
         {
             background-color:#3074B5;
@@ -111,16 +103,15 @@
             text-align:left;
             color:#333;
         }
-        #toggleTable span
+        #toggleTable
         {
-            color: #fff; /* IE8 proofing */
-            color: rgba(255,255,255,.75);
+            color: #333; /* IE8 proofing */
         }
-        #toggleTable span:hover,
-        #toggleTable span:focus
+        #toggleTable:hover,
+        #toggleTable:focus
         {
             background-color: transparent;
-            color: white;
+            color: #ADBDC5;
         }
 
         </style>
@@ -490,7 +481,7 @@
             <div class="col-md-9">
                 <div class="row" id="curriculum-title">
                     <div class="col-xs-4 col-xs-offset-4" style="text-align:center;">
-                        <h2>課表<span class="fa fa-sun-o fa-1x fa-fw" value="sun" id="toggleTable"></span></h2>
+                        <h2 id="span-color">課表<span class="fa fa-sun-o fa-1x fa-fw" value="sun" id="toggleTable"></span></h2>
                     </div>
                     <div class="col-xs-4" style="text-align:left;">
                         <h2><small><span class="glyphicon glyphicon-user"></span>學分 <span class="badge" id="class_credit"></span></small></h2>
@@ -667,7 +658,7 @@
         //先定義JQuery為$，不要讓它衝突
         //var courses = null;
             $(function(){
-                toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 50000});  //一開始的簡易版使用說明
+                toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});  //一開始的簡易版使用說明
                 //當文件準備好的時候，讀入json檔
                 $.getJSON('json/protoC.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
                     window.credits=0//一開始的學分數是0
@@ -914,7 +905,7 @@
                 $("#time-table").on( "click", "button[class='close delete']",function(){	//這是用來把一整個課程都刪掉的按鈕                                     
                     var code = $(this).children("input").val();	//找到子代的input，然後把裡面的代碼給取出來
                     if(courses[code].obligatory_tf==true){
-                        toastr.warning("此為必修課，若要復原請點擊課表空格");
+                        toastr.warning("此為必修課，若要復原請點擊課表空格", {timeOut: 2500});
                         delete_course($('#time-table'), courses[code]); //就跟add_course一樣，只是把填東西改成刪掉                                                 
                     }
                     else{
@@ -1035,7 +1026,7 @@
                         if($td.text()!=""){	//用來判斷td裡面是不已經有放過課程了，但若先在裡面放個按鈕那.text()回傳回來的也是空字串                    
                             check_conflict = true;
                             //alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that     time! Please drop out some class");
-                            toastr.error("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that     time! Please drop out some class")
+                            toastr.error("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that     time! Please drop out some class", {timeOut: 2500});
                             return false;	//傳回false就是跳離迴圈
                         }                           
                     });
