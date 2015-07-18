@@ -10662,7 +10662,7 @@
         "class": "2",
         "hours": "3",
         "time_parsed": [{
-            "time": [2, 3, 4],
+            "time": [5, 6, 7],
             "day": 3
         }],
         "time": "3234",
@@ -22200,7 +22200,7 @@
         "code": "5004",
         "title_parsed": {
             "zh_TW": "診療實習 b",
-            "en_US": "Clinical Practice"
+            "en_US": "Cl5004inical Practice"
         },
         "obligatory": "必修",
         "previous": "",
@@ -37367,7 +37367,7 @@
         "class": "2B",
         "hours": "3",
         "time_parsed": [{
-            "time": [6, 7, 8],
+            "time": [5, 6, 7, 8],
             "day": 1
         }],
         "time": "1678",
@@ -38581,7 +38581,7 @@
         "class": "2A",
         "hours": "3",
         "time_parsed": [{
-            "time": [6, 7, 8],
+            "time": [5, 6, 7, 8],
             "day": 3
         }],
         "time": "3678",
@@ -43657,6 +43657,35 @@
         "department": "電機系",
         "year": "半"
     }, {
+        "credits": "3",
+        "credits_parsed": 3,
+        "note": "",
+        "location": "EE208",
+        "class": "4A",
+        "hours": "3",
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 1
+        }],
+        "time": "1234",
+        "for_dept": "電機工程學系學士班",
+        "code": "4213",
+        "title_parsed": {
+            "zh_TW": "數位控制 Z",
+            "en_US": "Digital Control"
+        },
+        "obligatory": "選修",
+        "previous": "",
+        "hours_parsed": 3,
+        "number": "50",
+        "professor": "林俊良",
+        "language": "中文",
+        "obligatory_tf": false,
+        "title": "數位控制 Z`Digital Control",
+        "number_parsed": 60,
+        "department": "電機系",
+        "year": "半"
+    }, {
         "credits": "2",
         "credits_parsed": 2,
         "note": "",
@@ -44770,6 +44799,35 @@
         "language": "英文",
         "obligatory_tf": false,
         "title": "計算機圖學 Z`Computer Graphics",
+        "number_parsed": 60,
+        "department": "電機系",
+        "year": "半"
+    }, {
+        "credits": "3",
+        "credits_parsed": 3,
+        "note": "",
+        "location": "EE208",
+        "class": "4B",
+        "hours": "3",
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 1
+        }],
+        "time": "1234",
+        "for_dept": "電機工程學系學士班",
+        "code": "4213",
+        "title_parsed": {
+            "zh_TW": "數位控制 Z",
+            "en_US": "Digital Control"
+        },
+        "obligatory": "選修",
+        "previous": "",
+        "hours_parsed": 3,
+        "number": "50",
+        "professor": "林俊良",
+        "language": "中文",
+        "obligatory_tf": false,
+        "title": "數位控制 Z`Digital Control",
         "number_parsed": 60,
         "department": "電機系",
         "year": "半"
