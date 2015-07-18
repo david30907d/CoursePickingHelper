@@ -37367,7 +37367,7 @@
         "class": "2B",
         "hours": "3",
         "time_parsed": [{
-            "time": [6, 7, 8],
+            "time": [5, 6, 7, 8],
             "day": 1
         }],
         "time": "1678",
@@ -38581,7 +38581,7 @@
         "class": "2A",
         "hours": "3",
         "time_parsed": [{
-            "time": [6, 7, 8],
+            "time": [5, 6, 7, 8],
             "day": 3
         }],
         "time": "3678",
