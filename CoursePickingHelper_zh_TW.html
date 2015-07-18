@@ -1234,27 +1234,7 @@
                     bulletin_post($("#whole-school"),course, language);
                 }
             } 
-            var department_course_for_specific_search=function(major,level){   /*                        
-                $.each(course_of_majors[major][level],function(ik,iv){	
-                    if(check_if_two_class(level)==1){
-                        
-                    }  
-                    $.each(courses[iv],function(jk,jv){
-                        if(jv.for_dept==major){
-                            if(jv.obligatory_tf==true){
-                                
-                            }       
-                        }  
-                    })
-                    $.each(courses[iv],function(jk,jv){
-                        if(jv.for_dept==major){
-                            if(jv.obligatory_tf==false){  //因為不知道使用這輸入的年級為幾年級，所以只好一個一個判斷該放到哪個bulletin
-                                check_which_bulletin(jv);
-                            }        
-                        }  
-                    })                    
-                    //check_optional_obligatory(courses[iv]);
-                });  */    
+            var department_course_for_specific_search=function(major,level){
                 $.each(course_of_majors[major][level], function(ik, iv){//因為這種輔系的課一定是交給使用者自己選，所以就不自動填入
                             $.each(courses[iv],function(jk,jv){
                                 if(jv.for_dept==major){//這個判斷是為了向景觀學程那種專門上別的科系的課的系而設計的
