@@ -1234,12 +1234,15 @@
                     bulletin_post($("#whole-school"),course, language);
                 }
             } 
-            var department_course_for_specific_search=function(major,level){                
-                $.each(course_of_majors[major][level],function(ik,iv){	//因為這種輔系的課一定是交給使用者自己選，所以就不自動填入
+            var department_course_for_specific_search=function(major,level){   /*                        
+                $.each(course_of_majors[major][level],function(ik,iv){	
+                    if(check_if_two_class(level)==1){
+                        
+                    }  
                     $.each(courses[iv],function(jk,jv){
                         if(jv.for_dept==major){
                             if(jv.obligatory_tf==true){
-                                bulletin_post($("#obligatory-post"),jv, language);
+                                
                             }       
                         }  
                     })
@@ -1251,7 +1254,19 @@
                         }  
                     })                    
                     //check_optional_obligatory(courses[iv]);
-                });                                                            
+                });  */    
+                $.each(course_of_majors[major][level], function(ik, iv){//因為這種輔系的課一定是交給使用者自己選，所以就不自動填入
+                            $.each(courses[iv],function(jk,jv){
+                                if(jv.for_dept==major){//這個判斷是為了向景觀學程那種專門上別的科系的課的系而設計的
+                                    if(jv.obligatory_tf==true&&jv.class==level){
+                                        bulletin_post($("#obligatory-post"),jv, language); 
+                                    } 
+                                    if(jv.obligatory_tf==false&&jv.class==level){//因為輔系的查詢只能查一個年級，所以就可以只判斷是否為level
+                                        check_which_bulletin(jv);
+                                    }   
+                                }                                 
+                            })                                                                                      
+                        });                                                        
             }                             
         })(jQuery);
         </script>
