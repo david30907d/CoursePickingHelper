@@ -21614,35 +21614,6 @@
         "credits": "2",
         "credits_parsed": 2,
         "note": "Z",
-        "location": "QB108",
-        "class": "3B",
-        "hours": "2",
-        "time_parsed": [{
-            "time": [9, 10],
-            "day": 2
-        }],
-        "time": "29A",
-        "for_dept": "獸醫學系學士班",
-        "code": "3172",
-        "title_parsed": {
-            "zh_TW": "獸醫預防醫學",
-            "en_US": "Veterinary Preventive Medicine"
-        },
-        "obligatory": "選修",
-        "previous": "",
-        "hours_parsed": 2,
-        "number": "80",
-        "professor": "張天傑",
-        "language": "中文",
-        "obligatory_tf": false,
-        "title": "獸醫預防醫學 `Veterinary Preventive Medicine",
-        "number_parsed": 80,
-        "department": "獸醫系",
-        "year": "半"
-    }, {
-        "credits": "2",
-        "credits_parsed": 2,
-        "note": "Z",
         "location": "QB201",
         "class": "3B",
         "hours": "2",
@@ -21694,6 +21665,32 @@
         "language": "中文",
         "obligatory_tf": true,
         "title": "獸醫影像診斷學實習 b`Lab of Veterinary Imaging Diagnosis",
+        "number_parsed": 60,
+        "department": "獸醫系",
+        "year": "半"
+    }, {
+        "credits": "1",
+        "credits_parsed": 1,
+        "note": "",
+        "location": "",
+        "class": "3A",
+        "hours": "3",
+        "time_parsed": [],
+        "time": "3678",
+        "for_dept": "獸醫學系學士班",
+        "code": "3176",
+        "title_parsed": {
+            "zh_TW": "獸醫影像診斷學實習 a",
+            "en_US": "Lab of Veterinary Imaging Diagnosis"
+        },
+        "obligatory": "必修",
+        "previous": "",
+        "hours_parsed": 3,
+        "number": "60",
+        "professor": "許添桓等",
+        "language": "中文",
+        "obligatory_tf": true,
+        "title": "獸醫影像診斷學實習 a`Lab of Veterinary Imaging Diagnosis",
         "number_parsed": 60,
         "department": "獸醫系",
         "year": "半"
@@ -23116,35 +23113,6 @@
         "obligatory_tf": false,
         "title": "臨床微生物學 a`Clinical Microbiology",
         "number_parsed": 120,
-        "department": "獸醫系",
-        "year": "半"
-    }, {
-        "credits": "2",
-        "credits_parsed": 2,
-        "note": "Z",
-        "location": "QB108",
-        "class": "3A",
-        "hours": "2",
-        "time_parsed": [{
-            "time": [9, 10],
-            "day": 2
-        }],
-        "time": "29A",
-        "for_dept": "獸醫學系學士班",
-        "code": "3172",
-        "title_parsed": {
-            "zh_TW": "獸醫預防醫學",
-            "en_US": "Veterinary Preventive Medicine"
-        },
-        "obligatory": "選修",
-        "previous": "",
-        "hours_parsed": 2,
-        "number": "80",
-        "professor": "張天傑",
-        "language": "中文",
-        "obligatory_tf": false,
-        "title": "獸醫預防醫學 `Veterinary Preventive Medicine",
-        "number_parsed": 80,
         "department": "獸醫系",
         "year": "半"
     }, {
