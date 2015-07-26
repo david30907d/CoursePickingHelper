@@ -804,7 +804,7 @@
                     major=major.split(" ");
                     major=major[0];                    
                     reset();
-                    $("td").html('<span class="fa fa-plus-circle fa-5x"></span>')  
+                    $("td").html('<span class="fa fa-plus-circle fa-5x"></span>');
                     if(level==""){//這是給文學院、管理學院與農業暨自然資源學院這種沒有年級的選項
                         $.each(course_of_majors[major][level],function(ik,iv){//因為這種院的課一定是交給使用者自己選，所以就不自動填入
                             $.each(courses[iv],function(jk,jv){
