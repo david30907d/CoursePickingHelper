@@ -966,7 +966,7 @@
                         }  
                     })
                 });                             
-                $("#time-table").on("click","button.plusIcon",function(){ //按一下課表欄位就有課程彈出來了
+                $("#time-table").on("click","span",function(){ //按一下課表欄位就有課程彈出來了
                     if($(this).text()==""){ //我現在才知道null!=""
                         var major=$("#v_major").val();  //取到系                       
                         major=major.split(" ");//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
