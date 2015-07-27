@@ -841,7 +841,7 @@
                         $.each(course_of_majors[major][level], function(ik, iv){//先這一年級的必修課全部跑過一次，計算重複課名的數量
                             $.each(courses[iv],function(jk,jv){
                                 if(jv.obligatory_tf==true&&jv.for_dept==major&&jv.class==level){//這樣就可以保證我計算到的必修數量一定是該科系該年級該班級了
-                                    check_optional_obligatory(jv); 
+                                    check_optional_obligatory(jv);                                     
                                 }  
                             })      
                                                                                 
@@ -948,24 +948,24 @@
                     reset();
                     $("td").html('<span class="fa fa-plus-circle fa-5x"></span>');	//再把加號的按鈕填上去
                 });
-                $("#time-table").on( "click", "button[class='close delete']",function(){	//這是用來把一整個課程都刪掉的按鈕                                     
-                    var code = $(this).children("input").val();	//找到子代的input，然後把裡面的代碼給取出來
+                $("#time-table").on( "click", "button[class='close delete']",function(){    //這是用來把一整個課程都刪掉的按鈕                                                     
+                    var code = $(this).children("input").val(); //找到子代的input，然後把裡面的代碼給取出來
                     var major=$("#v_major").val();  //取到系                                        
                     major=major.split(" ");
                     major=major[0];
-                    $.each(courses[code],function(ik,iv){
-                        if(iv.for_dept==major){
-                            if(iv.obligatory_tf==true){
-                                toastr.warning("此為必修課，若要復原請點擊課表空格", {timeOut: 2500});
-                                delete_course($('#time-table'), iv); //就跟add_course一樣，只是把填東西改成刪掉                                                 
-                                return false;
-                            }    
-                            else{
-                                delete_course($('#time-table'), iv); //就跟add_course一樣，只是把填東西改成刪掉   
-                            }     
-                        }  
+                    $.each(courses[code],function(ik,iv){                        
+                        if(iv.obligatory_tf==true&&iv.for_dept==major){
+                            toastr.warning("此為必修課，若要復原請點擊課表空格", {timeOut: 2500});
+                            delete_course($('#time-table'), iv); //就跟add_course一樣，只是把填東掉                                                 
+                            return false;
+                        }    
+                        else{
+                            delete_course($('#time-table'), iv)//就跟add_course一樣，只是把填東西改成刪掉   
+                            return false;
+                        }     
+                         
                     })
-                });                             
+                });                               
                 $("#time-table").on("click","span",function(){ //按一下課表欄位就有課程彈出來了
                     if($(this).text()==""){ //我現在才知道null!=""
                         var major=$("#v_major").val();  //取到系                       
@@ -1257,14 +1257,16 @@
                                 if(jv.for_dept==major){//這個判斷是為了向景觀學程那種專門上別的科系的課的系而設計的
                                     if(jv.obligatory_tf==true&&jv.class==level){
                                         bulletin_post($("#obligatory-post"),jv, language); 
+                                        return false;
                                     } 
                                     if(jv.obligatory_tf==false&&jv.class==level){//因為輔系的查詢只能查一個年級，所以就可以只判斷是否為level
                                         check_which_bulletin(jv);
+                                        return false;
                                     }   
                                 }                                 
                             })                                                                                      
                         });                                                        
-            }                             
+            }                                   
         })(jQuery);
         </script>
         </body>
