@@ -66,6 +66,22 @@
         #time-table th
         {
             text-align: center;
+            vertical-align:middle;
+        }
+        #time-table td
+         {
+             text-align: center;
+             vertical-align:middle;
+         }
+         #time-table td span
+         {
+             color: #DDD;
+         }
+         #time-table td span:hover,
+         #time-table td span:focus
+         {
+             background-color: transparent;
+             color: #666;
         }
         #time-table button.btn-link
         {
@@ -658,7 +674,8 @@
         //先定義JQuery為$，不要讓它衝突
         //var courses = null;
             $(function(){
-                toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});  //一開始的簡易版使用說明
+                /**一開始的簡易版使用說明**/
+                //toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});
                 //當文件準備好的時候，讀入json檔
                 $.getJSON('json/protoC.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
                     window.credits=0//一開始的學分數是0
@@ -787,7 +804,7 @@
                     major=major.split(" ");
                     major=major[0];                    
                     reset();
-                    $("td").html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>')  
+                    $("td").html('<span class="fa fa-plus-circle fa-5x"></span>');
                     if(level==""){//這是給文學院、管理學院與農業暨自然資源學院這種沒有年級的選項
                         $.each(course_of_majors[major][level],function(ik,iv){//因為這種院的課一定是交給使用者自己選，所以就不自動填入
                             $.each(courses[iv],function(jk,jv){
@@ -824,7 +841,7 @@
                         $.each(course_of_majors[major][level], function(ik, iv){//先這一年級的必修課全部跑過一次，計算重複課名的數量
                             $.each(courses[iv],function(jk,jv){
                                 if(jv.obligatory_tf==true&&jv.for_dept==major&&jv.class==level){//這樣就可以保證我計算到的必修數量一定是該科系該年級該班級了
-                                    check_optional_obligatory(jv); 
+                                    check_optional_obligatory(jv);                                     
                                 }  
                             })      
                                                                                 
@@ -929,27 +946,27 @@
                 $("#clear-button").click(function()
                 {
                     reset();
-                    $("td").html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');   //再把加號的按鈕填上去
+                    $("td").html('<span class="fa fa-plus-circle fa-5x"></span>');  //再把加號的按鈕填上去
                 });
-                $("#time-table").on( "click", "button[class='close delete']",function(){    //這是用來把一整個課程都刪掉的按鈕                                     
+                $("#time-table").on( "click", "button[class='close delete']",function(){    //這是用來把一整個課程都刪掉的按鈕                                                     
                     var code = $(this).children("input").val(); //找到子代的input，然後把裡面的代碼給取出來
                     var major=$("#v_major").val();  //取到系                                        
                     major=major.split(" ");
                     major=major[0];
-                    $.each(courses[code],function(ik,iv){
-                        if(iv.for_dept==major){
-                            if(iv.obligatory_tf==true){
-                                toastr.warning("此為必修課，若要復原請點擊課表空格", {timeOut: 2500});
-                                delete_course($('#time-table'), iv); //就跟add_course一樣，只是把填東西改成刪掉                                                 
-                                return false;
-                            }    
-                            else{
-                                delete_course($('#time-table'), iv); //就跟add_course一樣，只是把填東西改成刪掉   
-                            }     
-                        }  
+                    $.each(courses[code],function(ik,iv){                        
+                        if(iv.obligatory_tf==true&&iv.for_dept==major){
+                            toastr.warning("此為必修課，若要復原請點擊課表空格", {timeOut: 2500});
+                            delete_course($('#time-table'), iv); //就跟add_course一樣，只是把填東掉                                                 
+                            return false;
+                        }    
+                        else{
+                            delete_course($('#time-table'), iv)//就跟add_course一樣，只是把填東西改成刪掉   
+                            return false;
+                        }     
+                         
                     })
-                });                             
-                $("#time-table").on("click","button.plusIcon",function(){ //按一下課表欄位就有課程彈出來了
+                });                               
+                $("#time-table").on("click","span",function(){ //按一下課表欄位就有課程彈出來了
                     if($(this).text()==""){ //我現在才知道null!=""
                         var major=$("#v_major").val();  //取到系                       
                         major=major.split(" ");//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
@@ -1124,7 +1141,7 @@
                         var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');   
                         //td:eq()為搜尋td的陣列索引值，找到課程的時間    iv.day為星期，但因為td為陣列所以iv.day要減一    find()是找class!!
                         $td.empty();    //顯示課程，把cell.html()塞到<td>tag裡面
-                        $td.html('<center><button type="button" class="btn btn-info btn-block plusIcon"><span class="fa fa-plus-circle fa-3x fa-fw "></span></button></center>');
+                        $td.html('<span class="fa fa-plus-circle fa-5x"></span>');
                     })
                 })
                 minus_credits(course);  
@@ -1240,14 +1257,16 @@
                                 if(jv.for_dept==major){//這個判斷是為了向景觀學程那種專門上別的科系的課的系而設計的
                                     if(jv.obligatory_tf==true&&jv.class==level){
                                         bulletin_post($("#obligatory-post"),jv, language); 
+                                        return false;
                                     } 
                                     if(jv.obligatory_tf==false&&jv.class==level){//因為輔系的查詢只能查一個年級，所以就可以只判斷是否為level
                                         check_which_bulletin(jv);
+                                        return false;
                                     }   
                                 }                                 
                             })                                                                                      
                         });                                                        
-            }                             
+            }                                   
         })(jQuery);
         </script>
         </body>
