@@ -956,7 +956,7 @@
                     $.each(courses[code],function(ik,iv){                        
                         if(iv.obligatory_tf==true&&iv.for_dept==major){
                             toastr.warning("此為必修課，若要復原請點擊課表空格", {timeOut: 2500});
-                            delete_course($('#time-table'), iv); //就跟add_course一樣，只是把填東掉                                                 
+                            delete_course($('#time-table'), iv); //就跟add_course一樣，只是把填東西改成刪掉
                             return false;
                         }    
                         else{
@@ -966,7 +966,7 @@
                          
                     })
                 });                               
-                $("#time-table").on("click","span",function(){ //按一下課表欄位就有課程彈出來了
+                $("#time-table").on("click","span",function(){ //按一下課表欄位就有課程彈出來了                    
                     if($(this).text()==""){ //我現在才知道null!=""
                         var major=$("#v_major").val();  //取到系                       
                         major=major.split(" ");//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
@@ -977,17 +977,20 @@
                         s_major=s_major.split(" ");//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
                         s_major=s_major[0];                          
                         var day=$(this).closest("td").attr("data-day");//因為我把同一時段的課程塞進陣列裡，所以要用index去取
-                        var hour=$(this).closest("tr").attr("data-hour");                         
+                        var hour=$(this).closest("tr").attr("data-hour");
+                        console.log(day+" "+hour);                        
                         reset_for_time_request();
                         $.each(course_of_day[day][hour], function(ik, iv){                                             
-                            if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列    
+                            if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))||iv.for_dept==undefined){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列  
+                                console.log(iv)  
                                 if(iv.obligatory_tf==true){                                 
-                                    bulletin_post($("#obligatory-post"),course_of_day[day][hour][ik], language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
+                                    bulletin_post($("#obligatory-post"),iv, language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
                                 }
-                                if(iv.obligatory_tf==false){
+                                else if(iv.obligatory_tf==false){
                                     check_which_bulletin(iv);//由fuction決定該貼到哪個年級的欄位
                                 }
-                            }                                           
+                            }
+
                         })                  
                     }                   
                 });/*
@@ -1076,8 +1079,7 @@
                     $.each(iv.time,function(jk, jv){
                         var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
                         if($td.text()!=""){ //用來判斷td裡面是不已經有放過課程了，但若先在裡面放個按鈕那.text()回傳回來的也是空字串                    
-                            check_conflict = true;
-                            //alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that     time! Please drop out some class");
+                            check_conflict = true;                            
                             toastr.error("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that     time! Please drop out some class", {timeOut: 2500});
                             return false;   //傳回false就是跳離迴圈
                         }                           
@@ -1250,6 +1252,9 @@
                 else if(course.class==""){
                     bulletin_post($("#whole-school"),course, language);
                 }
+                else if(course.class==undefined){
+                    check_general(course);
+                }
             } 
             var department_course_for_specific_search=function(major,level){
                 $.each(course_of_majors[major][level], function(ik, iv){//因為這種輔系的課一定是交給使用者自己選，所以就不自動填入
@@ -1266,7 +1271,21 @@
                                 }                                 
                             })                                                                                      
                         });                                                        
-            }                                   
+            }     
+            var check_general=function(course){
+                var disciplineH={"文學":"","歷史":"","哲學":"","藝術":"","文化":""}
+                var disciplineS={"公民與社會":"","法律與政治":"","商業與管理":"","心理與教育":"","資訊與傳播":""}
+                var disciplineN={"生命科學":"","環境科學":"","物質科學":"","數學統計":"","工程科技":""}
+                if(course.discipline in disciplineH){                    
+                    bulletin_post($("#humanities"), course, language)
+                }
+                else if(course.discipline in disciplineS){                    
+                    bulletin_post($("#social"), course, language)
+                }
+                else if(course.discipline in disciplineN){                    
+                    bulletin_post($("#natural"), course, language)
+                }
+            };                              
         })(jQuery);
         </script>
         </body>
