@@ -687,7 +687,7 @@
                     window.name_of_optional_obligatory = [] //這是用來存系上的必修課，檢查有沒有課名是重複的，若有就讓使用者自行決定要上哪堂
                     $("#class_credit").text(0);
                     window.language="zh_TW";//固定顯示語言為中文
-                    $.each(json.course, function(ik, iv){
+                    $.each(json["course"], function(ik, iv){
                         if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
                             window.course_of_majors[iv.for_dept] = {};  
                         if(typeof(window.course_of_majors[iv.for_dept][iv.class]) == 'undefined'){
@@ -956,7 +956,7 @@
                     $.each(courses[code],function(ik,iv){                        
                         if(iv.obligatory_tf==true&&iv.for_dept==major){
                             toastr.warning("此為必修課，若要復原請點擊課表空格", {timeOut: 2500});
-                            delete_course($('#time-table'), iv); //就跟add_course一樣，只是把填東掉                                                 
+                            delete_course($('#time-table'), iv); //就跟add_course一樣，只是把填東西改成刪掉
                             return false;
                         }    
                         else{
@@ -1076,8 +1076,7 @@
                     $.each(iv.time,function(jk, jv){
                         var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
                         if($td.text()!=""){	//用來判斷td裡面是不已經有放過課程了，但若先在裡面放個按鈕那.text()回傳回來的也是空字串                    
-                            check_conflict = true;
-                            //alert("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that     time! Please drop out some class");
+                            check_conflict = true;                            
                             toastr.error("衝堂喔!請手動刪除衝堂的課程"+"\n"+"opps!You are not available at that     time! Please drop out some class", {timeOut: 2500});
                             return false;	//傳回false就是跳離迴圈
                         }                           
