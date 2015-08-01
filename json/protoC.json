@@ -4435,7 +4435,7 @@
         "code": "2042",
         "title_parsed": {
             "zh_TW": "歐洲身體法制史",
-            "en_US": "Europe"s Legal History of Body"
+            "en_US": "Europe's Legal History of Body"
         },
         "obligatory": "選修",
         "previous": "",
@@ -4444,7 +4444,7 @@
         "professor": "陳樂元",
         "language": "中文",
         "obligatory_tf": false,
-        "title": "歐洲身體法制史 `Europe"s Legal History of Body",
+        "title": "歐洲身體法制史 `Europe's Legal History of Body",
         "number_parsed": 60,
         "department": "歷史系",
         "year": "半"
@@ -47156,7 +47156,7 @@
         "number_parsed": 60,
         "department": "材料系",
         "year": "半"
-    },{
+    }, {
         "title": "對聯欣賞及創作 `Distich Appreciation and Creation",
         "enrolled_num": "3",
         "available": "28",
@@ -47171,74 +47171,74 @@
         "time_parsed": [{
             "day": 3,
             "time": [3, 4]
-    }],
-    "title_parsed": {
-        "en_US": "Distich Appreciation and Creation",
-        "zh_TW": "對聯欣賞及創作"
-    },
-    "possibility": "100%",
-    "obligatory_tf": true,
-    "registered_num": "15",
-    "obligatory": "必修",
-    "time": "334",
-    "professor": "李建福",
-    "department": "通識中心",
-    "year": "半",
-    "credits_parsed": 2,
-    "location": "Y201"
-}, {
-    "title": "跨國臺灣 `Transnational Taiwan",
-    "credits": "2",
-    "enrolled_num": "24",
-    "code": "0168",
-    "obligatory_tf": true,
-    "discipline": "公民與社會",
-    "obligatory": "必修",
-    "time": "5AB",
-    "number_parsed": 70,
-    "number": "70",
-    "department": "夜共同科",
-    "language": "中文",
-    "remaining_seat": "46",
-    "professor": "劉泰廷",
-    "year": "半",
-    "note": "可採計舊制社會學群",
-    "credits_parsed": 2,
-    "location": "Y403",
-    "time_parsed": [{
-        "day": 5,
-        "time": [10, 11]
-    }],
-    "title_parsed": {
-        "en_US": "Transnational Taiwan",
-        "zh_TW": "跨國臺灣"
-    }
-}, {
-    "title": "中國歷史與民間傳說 `Chinese History and Tales",
-    "credits": "2",
-    "enrolled_num": "8",
-    "code": "0181",
-    "obligatory_tf": true,
-    "discipline": "歷史",
-    "obligatory": "必修",
-    "time": "2CD",
-    "number_parsed": 50,
-    "number": "50",
-    "department": "夜共同科",
-    "language": "中文",
-    "remaining_seat": "42",
-    "professor": "吳政憲",
-    "year": "半",
-    "note": "可採計舊制歷史學群",
-    "credits_parsed": 2,
-    "location": "B24",
-    "time_parsed": [{
-        "day": 2,
-        "time": [12, 13]
-    }],
-    "title_parsed": {
-        "en_US": "Chinese History and Tales",
-        "zh_TW": "中國歷史與民間傳說"
-    }
-}]
+        }],
+        "title_parsed": {
+            "en_US": "Distich Appreciation and Creation",
+            "zh_TW": "對聯欣賞及創作"
+        },
+        "possibility": "100%",
+        "obligatory_tf": false,
+        "registered_num": "15",
+        "obligatory": "必修",
+        "time": "334",
+        "professor": "李建福",
+        "department": "通識中心",
+        "year": "半",
+        "credits_parsed": 2,
+        "location": "Y201"
+    }, {
+        "title": "跨國臺灣 `Transnational Taiwan",
+        "credits": "2",
+        "enrolled_num": "24",
+        "code": "0168",
+        "obligatory_tf": false,
+        "discipline": "公民與社會",
+        "obligatory": "必修",
+        "time": "5AB",
+        "number_parsed": 70,
+        "number": "70",
+        "department": "夜共同科",
+        "language": "中文",
+        "remaining_seat": "46",
+        "professor": "劉泰廷",
+        "year": "半",
+        "note": "可採計舊制社會學群",
+        "credits_parsed": 2,
+        "location": "Y403",
+        "time_parsed": [{
+            "day": 5,
+            "time": [10, 11]
+        }],
+        "title_parsed": {
+            "en_US": "Transnational Taiwan",
+            "zh_TW": "跨國臺灣"
+        }
+    }, {
+        "title": "中國歷史與民間傳說 `Chinese History and Tales",
+        "credits": "2",
+        "enrolled_num": "8",
+        "code": "0181",
+        "obligatory_tf": false,
+        "discipline": "歷史",
+        "obligatory": "必修",
+        "time": "2CD",
+        "number_parsed": 50,
+        "number": "50",
+        "department": "夜共同科",
+        "language": "中文",
+        "remaining_seat": "42",
+        "professor": "吳政憲",
+        "year": "半",
+        "note": "可採計舊制歷史學群",
+        "credits_parsed": 2,
+        "location": "B24",
+        "time_parsed": [{
+            "day": 2,
+            "time": [12, 13]
+        }],
+        "title_parsed": {
+            "en_US": "Chinese History and Tales",
+            "zh_TW": "中國歷史與民間傳說"
+        }
+    }]
 }
