@@ -52826,5 +52826,2273 @@
         "department": "夜共同科",
         "code": "0181",
         "number": "50"
+    },{
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [1, 2]
+        }],
+        "hours": "2",
+        "professor": "簡英智",
+        "title_parsed": {
+            "en_US": "Weight Training",
+            "zh_TW": "重量訓練1A"
+        },
+        "year": "半",
+        "time": "112",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0001",
+        "number": "22",
+        "title": "重量訓練1A `Weight Training",
+        "department": "體育室"
+    }, {
+        "number_parsed": 16,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [1, 2]
+        }],
+        "hours": "2",
+        "professor": "待聘",
+        "title_parsed": {
+            "en_US": "Canoeing & Kayaking",
+            "zh_TW": "輕艇1A"
+        },
+        "year": "半",
+        "time": "112",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0002",
+        "number": "16",
+        "title": "輕艇1A `Canoeing & Kayaking",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "林明宏",
+        "title_parsed": {
+            "en_US": "Badminton",
+            "zh_TW": "羽球1Ｂ"
+        },
+        "year": "半",
+        "time": "134",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0003",
+        "number": "24",
+        "title": "羽球1Ｂ `Badminton",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "巫錦霖",
+        "title_parsed": {
+            "en_US": "Tennis",
+            "zh_TW": "網球1B"
+        },
+        "year": "半",
+        "time": "134",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0004",
+        "number": "22",
+        "title": "網球1B `Tennis",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "王耀聰",
+        "title_parsed": {
+            "en_US": "Golf",
+            "zh_TW": "高爾夫1Ｂ"
+        },
+        "year": "半",
+        "time": "134",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0005",
+        "number": "24",
+        "title": "高爾夫1Ｂ `Golf",
+        "department": "體育室"
+    }, {
+        "number_parsed": 20,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "簡如君",
+        "title_parsed": {
+            "en_US": "Modern Dance",
+            "zh_TW": "現代舞1B"
+        },
+        "year": "半",
+        "time": "134",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0006",
+        "number": "20",
+        "title": "現代舞1B `Modern Dance",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "簡英智",
+        "title_parsed": {
+            "en_US": "Badminton",
+            "zh_TW": "羽球1C"
+        },
+        "year": "半",
+        "time": "156",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0007",
+        "number": "24",
+        "title": "羽球1C `Badminton",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "賈凡",
+        "title_parsed": {
+            "en_US": "Basketball",
+            "zh_TW": "籃球1C"
+        },
+        "year": "半",
+        "time": "156",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0008",
+        "number": "24",
+        "title": "籃球1C `Basketball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "許銘華",
+        "title_parsed": {
+            "en_US": "Table Tennis",
+            "zh_TW": "桌球1C"
+        },
+        "year": "半",
+        "time": "156",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0009",
+        "number": "24",
+        "title": "桌球1C `Table Tennis",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "莊淑蘭",
+        "title_parsed": {
+            "en_US": "Weight Management",
+            "zh_TW": "運動與體重控制1C"
+        },
+        "year": "半",
+        "time": "156",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0010",
+        "number": "22",
+        "title": "運動與體重控制1C `Weight Management",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "王耀聰",
+        "title_parsed": {
+            "en_US": "Golf",
+            "zh_TW": "高爾夫 1C"
+        },
+        "year": "半",
+        "time": "156",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0011",
+        "number": "24",
+        "title": "高爾夫 1C `Golf",
+        "department": "體育室"
+    }, {
+        "number_parsed": 20,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "簡如君",
+        "title_parsed": {
+            "en_US": "Modern Dance",
+            "zh_TW": "現代舞1C"
+        },
+        "year": "半",
+        "time": "156",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0012",
+        "number": "20",
+        "title": "現代舞1C `Modern Dance",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "簡英智",
+        "title_parsed": {
+            "en_US": "Badminton",
+            "zh_TW": "羽球1D"
+        },
+        "year": "半",
+        "time": "178",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0013",
+        "number": "24",
+        "title": "羽球1D `Badminton",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "許銘華",
+        "title_parsed": {
+            "en_US": "Table Tennis",
+            "zh_TW": "桌球1D"
+        },
+        "year": "半",
+        "time": "178",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0014",
+        "number": "24",
+        "title": "桌球1D `Table Tennis",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "賈凡",
+        "title_parsed": {
+            "en_US": "Basketball",
+            "zh_TW": "籃球1D"
+        },
+        "year": "半",
+        "time": "178",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0015",
+        "number": "24",
+        "title": "籃球1D `Basketball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "王耀聰",
+        "title_parsed": {
+            "en_US": "Golf",
+            "zh_TW": "高爾夫1D"
+        },
+        "year": "半",
+        "time": "178",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0016",
+        "number": "24",
+        "title": "高爾夫1D `Golf",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "莊淑蘭",
+        "title_parsed": {
+            "en_US": "Sports Dance",
+            "zh_TW": "運動舞蹈1D"
+        },
+        "year": "半",
+        "time": "178",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0017",
+        "number": "22",
+        "title": "運動舞蹈1D `Sports Dance",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "黃憲鐘",
+        "title_parsed": {
+            "en_US": "Badminton",
+            "zh_TW": "羽球2C"
+        },
+        "year": "半",
+        "time": "256",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0018",
+        "number": "24",
+        "title": "羽球2C `Badminton",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "許銘華",
+        "title_parsed": {
+            "en_US": "Table Tennis",
+            "zh_TW": "桌球2C"
+        },
+        "year": "半",
+        "time": "256",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0019",
+        "number": "24",
+        "title": "桌球2C `Table Tennis",
+        "department": "體育室"
+    }, {
+        "number_parsed": 16,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "陳明坤",
+        "title_parsed": {
+            "en_US": "Swimming",
+            "zh_TW": "游泳2C"
+        },
+        "year": "半",
+        "time": "256",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0020",
+        "number": "16",
+        "title": "游泳2C `Swimming",
+        "department": "體育室"
+    }, {
+        "number_parsed": 20,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "簡如君",
+        "title_parsed": {
+            "en_US": "Modern Dance",
+            "zh_TW": "現代舞2C"
+        },
+        "year": "半",
+        "time": "256",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0021",
+        "number": "20",
+        "title": "現代舞2C `Modern Dance",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "王耀聰",
+        "title_parsed": {
+            "en_US": "Golf",
+            "zh_TW": "高爾夫 2C"
+        },
+        "year": "半",
+        "time": "256",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0022",
+        "number": "24",
+        "title": "高爾夫 2C `Golf",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "賈凡",
+        "title_parsed": {
+            "en_US": "Basketball",
+            "zh_TW": "籃球2C"
+        },
+        "year": "半",
+        "time": "256",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0023",
+        "number": "24",
+        "title": "籃球2C `Basketball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 2,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "陳明坤",
+        "title_parsed": {
+            "en_US": "Badminton",
+            "zh_TW": "羽球2D"
+        },
+        "year": "半",
+        "time": "278",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0024",
+        "number": "24",
+        "title": "羽球2D `Badminton",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 2,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "黃憲鐘",
+        "title_parsed": {
+            "en_US": "Tennis",
+            "zh_TW": "網球2D"
+        },
+        "year": "半",
+        "time": "278",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0025",
+        "number": "22",
+        "title": "網球2D `Tennis",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 2,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "賈凡",
+        "title_parsed": {
+            "en_US": "Basketball",
+            "zh_TW": "籃球2D"
+        },
+        "year": "半",
+        "time": "278",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0026",
+        "number": "24",
+        "title": "籃球2D `Basketball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 20,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 2,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "簡如君",
+        "title_parsed": {
+            "en_US": "Modern Dance",
+            "zh_TW": "現代舞2D"
+        },
+        "year": "半",
+        "time": "278",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0027",
+        "number": "20",
+        "title": "現代舞2D `Modern Dance",
+        "department": "體育室"
+    }, {
+        "number_parsed": 16,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "待聘",
+        "title_parsed": {
+            "en_US": "Canoeing & Kayaking",
+            "zh_TW": "輕艇1B"
+        },
+        "year": "半",
+        "time": "134",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0028",
+        "number": "16",
+        "title": "輕艇1B `Canoeing & Kayaking",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 2,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "王耀聰",
+        "title_parsed": {
+            "en_US": "Golf",
+            "zh_TW": "高爾夫2D"
+        },
+        "year": "半",
+        "time": "278",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0029",
+        "number": "24",
+        "title": "高爾夫2D `Golf",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [1, 2]
+        }],
+        "hours": "2",
+        "professor": "黃憲鐘",
+        "title_parsed": {
+            "en_US": "Tennis",
+            "zh_TW": "網球3Ａ"
+        },
+        "year": "半",
+        "time": "312",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0030",
+        "number": "22",
+        "title": "網球3Ａ `Tennis",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "王美麗",
+        "title_parsed": {
+            "en_US": "Badminton",
+            "zh_TW": "羽球 3B"
+        },
+        "year": "半",
+        "time": "334",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0031",
+        "number": "24",
+        "title": "羽球 3B `Badminton",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "莊淑蘭",
+        "title_parsed": {
+            "en_US": "Sports Dance",
+            "zh_TW": "運動舞蹈3B"
+        },
+        "year": "半",
+        "time": "334",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0032",
+        "number": "22",
+        "title": "運動舞蹈3B `Sports Dance",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "涂鵬斐",
+        "title_parsed": {
+            "en_US": "Softball",
+            "zh_TW": "壘球3B"
+        },
+        "year": "半",
+        "time": "334",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0033",
+        "number": "22",
+        "title": "壘球3B `Softball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [1, 2]
+        }],
+        "hours": "2",
+        "professor": "許銘華",
+        "title_parsed": {
+            "en_US": "Table Tennis",
+            "zh_TW": "桌球3Ａ"
+        },
+        "year": "半",
+        "time": "312",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0034",
+        "number": "24",
+        "title": "桌球3Ａ `Table Tennis",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "初級",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "陳進發",
+        "title_parsed": {
+            "en_US": "Volleyball",
+            "zh_TW": "排球3Ｂ"
+        },
+        "year": "半",
+        "time": "334",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0035",
+        "number": "24",
+        "title": "排球3Ｂ `Volleyball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "賈凡",
+        "title_parsed": {
+            "en_US": "Basketball",
+            "zh_TW": "籃球3C"
+        },
+        "year": "半",
+        "time": "356",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0036",
+        "number": "24",
+        "title": "籃球3C `Basketball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "梁建偉",
+        "title_parsed": {
+            "en_US": "Weight Management",
+            "zh_TW": "運動與體重控制３B"
+        },
+        "year": "半",
+        "time": "334",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0037",
+        "number": "22",
+        "title": "運動與體重控制３B `Weight Management",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "許銘華",
+        "title_parsed": {
+            "en_US": "Table Tennis",
+            "zh_TW": "桌球3C"
+        },
+        "year": "半",
+        "time": "356",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0038",
+        "number": "24",
+        "title": "桌球3C `Table Tennis",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "王美麗",
+        "title_parsed": {
+            "en_US": "Badminton",
+            "zh_TW": "羽球3C"
+        },
+        "year": "半",
+        "time": "356",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0039",
+        "number": "24",
+        "title": "羽球3C `Badminton",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "進階班已具備基本高/低手傳球能力,未修過初級班者請勿選修進階班",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "王美麗",
+        "title_parsed": {
+            "en_US": "Volleyball",
+            "zh_TW": "排球3D"
+        },
+        "year": "半",
+        "time": "378",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0040",
+        "number": "24",
+        "title": "排球3D `Volleyball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 16,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "陳明坤",
+        "title_parsed": {
+            "en_US": "Swimming",
+            "zh_TW": "游泳3C"
+        },
+        "year": "半",
+        "time": "356",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0041",
+        "number": "16",
+        "title": "游泳3C `Swimming",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "涂鵬斐",
+        "title_parsed": {
+            "en_US": "Golf",
+            "zh_TW": "高爾夫 3C"
+        },
+        "year": "半",
+        "time": "356",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0042",
+        "number": "24",
+        "title": "高爾夫 3C `Golf",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "莊淑蘭",
+        "title_parsed": {
+            "en_US": "Sports Dance",
+            "zh_TW": "運動舞蹈3C"
+        },
+        "year": "半",
+        "time": "356",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0043",
+        "number": "22",
+        "title": "運動舞蹈3C `Sports Dance",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "進階班已具備基本高/低手傳球能力,未修過初級班者請勿選修進階班",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "陳明坤",
+        "title_parsed": {
+            "en_US": "Weight Training",
+            "zh_TW": "重量訓練4B"
+        },
+        "year": "半",
+        "time": "434",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0044",
+        "number": "22",
+        "title": "重量訓練4B `Weight Training",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "梁建偉",
+        "title_parsed": {
+            "en_US": "Soccer",
+            "zh_TW": "足球4C"
+        },
+        "year": "半",
+        "time": "456",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0045",
+        "number": "24",
+        "title": "足球4C `Soccer",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "待聘",
+        "title_parsed": {
+            "en_US": "Frisbee",
+            "zh_TW": "飛盤4D"
+        },
+        "year": "半",
+        "time": "478",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0046",
+        "number": "24",
+        "title": "飛盤4D `Frisbee",
+        "department": "體育室"
+    }, {
+        "number_parsed": 16,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "陳明坤",
+        "title_parsed": {
+            "en_US": "Swimming",
+            "zh_TW": "游泳3D"
+        },
+        "year": "半",
+        "time": "378",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0047",
+        "number": "16",
+        "title": "游泳3D `Swimming",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [9, 10]
+        }],
+        "hours": "2",
+        "professor": "待聘",
+        "title_parsed": {
+            "en_US": "Frisbee",
+            "zh_TW": "飛盤4E"
+        },
+        "year": "半",
+        "time": "49A",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0048",
+        "number": "24",
+        "title": "飛盤4E `Frisbee",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "涂鵬斐",
+        "title_parsed": {
+            "en_US": "Golf",
+            "zh_TW": "高爾夫 3D"
+        },
+        "year": "半",
+        "time": "378",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0049",
+        "number": "24",
+        "title": "高爾夫 3D `Golf",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 1,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "賈凡",
+        "title_parsed": {
+            "en_US": "Basketball",
+            "zh_TW": "籃球1B"
+        },
+        "year": "半",
+        "time": "134",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0050",
+        "number": "24",
+        "title": "籃球1B `Basketball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "梁建偉",
+        "title_parsed": {
+            "en_US": "Soccer",
+            "zh_TW": "足球3D"
+        },
+        "year": "半",
+        "time": "378",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0051",
+        "number": "24",
+        "title": "足球3D `Soccer",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [1, 2]
+        }],
+        "hours": "2",
+        "professor": "簡英智",
+        "title_parsed": {
+            "en_US": "Badminton",
+            "zh_TW": "羽球4A"
+        },
+        "year": "半",
+        "time": "412",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0052",
+        "number": "24",
+        "title": "羽球4A `Badminton",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [1, 2]
+        }],
+        "hours": "2",
+        "professor": "黃憲鐘",
+        "title_parsed": {
+            "en_US": "Tennis",
+            "zh_TW": "網球4Ａ"
+        },
+        "year": "半",
+        "time": "412",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0053",
+        "number": "22",
+        "title": "網球4Ａ `Tennis",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "初級班(未具傳球能力)",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "王美麗",
+        "title_parsed": {
+            "en_US": "Volleyball",
+            "zh_TW": "排球 4B"
+        },
+        "year": "半",
+        "time": "434",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0054",
+        "number": "24",
+        "title": "排球 4B `Volleyball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "莊淑蘭",
+        "title_parsed": {
+            "en_US": "Sports Dance",
+            "zh_TW": "運動舞蹈4B"
+        },
+        "year": "半",
+        "time": "434",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0055",
+        "number": "22",
+        "title": "運動舞蹈4B `Sports Dance",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "簡英智",
+        "title_parsed": {
+            "en_US": "Badminton",
+            "zh_TW": "羽球4B"
+        },
+        "year": "半",
+        "time": "434",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0056",
+        "number": "24",
+        "title": "羽球4B `Badminton",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "王耀聰",
+        "title_parsed": {
+            "en_US": "Golf",
+            "zh_TW": "高爾夫4Ｂ"
+        },
+        "year": "半",
+        "time": "434",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0057",
+        "number": "24",
+        "title": "高爾夫4Ｂ `Golf",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "梁建偉",
+        "title_parsed": {
+            "en_US": "Weight Management",
+            "zh_TW": "運動與體重控制3C"
+        },
+        "year": "半",
+        "time": "356",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0058",
+        "number": "22",
+        "title": "運動與體重控制3C `Weight Management",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 5,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "待聘",
+        "title_parsed": {
+            "en_US": "Tennis",
+            "zh_TW": "網球5C"
+        },
+        "year": "半",
+        "time": "556",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0059",
+        "number": "22",
+        "title": "網球5C `Tennis",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "進階班(具其本高低手傳球能力)",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "王美麗",
+        "title_parsed": {
+            "en_US": "Volleyball",
+            "zh_TW": "排球4C"
+        },
+        "year": "半",
+        "time": "456",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0060",
+        "number": "24",
+        "title": "排球4C `Volleyball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "邱靖華",
+        "title_parsed": {
+            "en_US": "Weight Management",
+            "zh_TW": "運動與體重控制4C"
+        },
+        "year": "半",
+        "time": "456",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0061",
+        "number": "22",
+        "title": "運動與體重控制4C `Weight Management",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "莊淑蘭",
+        "title_parsed": {
+            "en_US": "Sports Dance",
+            "zh_TW": "運動舞蹈4C"
+        },
+        "year": "半",
+        "time": "456",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0062",
+        "number": "22",
+        "title": "運動舞蹈4C `Sports Dance",
+        "department": "體育室"
+    }, {
+        "number_parsed": 16,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "待聘",
+        "title_parsed": {
+            "en_US": "Swimming",
+            "zh_TW": "游泳4C"
+        },
+        "year": "半",
+        "time": "456",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0063",
+        "number": "16",
+        "title": "游泳4C `Swimming",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "陳明坤",
+        "title_parsed": {
+            "en_US": "Badminton",
+            "zh_TW": "羽球4C"
+        },
+        "year": "半",
+        "time": "456",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0064",
+        "number": "24",
+        "title": "羽球4C `Badminton",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "初級",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "陳進發",
+        "title_parsed": {
+            "en_US": "Table Tennis",
+            "zh_TW": "桌球4Ｂ"
+        },
+        "year": "半",
+        "time": "434",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0065",
+        "number": "24",
+        "title": "桌球4Ｂ `Table Tennis",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "涂鵬斐",
+        "title_parsed": {
+            "en_US": "Golf",
+            "zh_TW": "高爾夫 4C"
+        },
+        "year": "半",
+        "time": "456",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0066",
+        "number": "24",
+        "title": "高爾夫 4C `Golf",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "黃憲鐘",
+        "title_parsed": {
+            "en_US": "Badminton",
+            "zh_TW": "羽球4D"
+        },
+        "year": "半",
+        "time": "478",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0067",
+        "number": "24",
+        "title": "羽球4D `Badminton",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 5,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "梁建偉",
+        "title_parsed": {
+            "en_US": "Weight Management",
+            "zh_TW": "運動與體重控制5B"
+        },
+        "year": "半",
+        "time": "534",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0068",
+        "number": "22",
+        "title": "運動與體重控制5B `Weight Management",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "涂鵬斐",
+        "title_parsed": {
+            "en_US": "Softball",
+            "zh_TW": "壘球4D"
+        },
+        "year": "半",
+        "time": "478",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0069",
+        "number": "22",
+        "title": "壘球4D `Softball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "黃憲鐘",
+        "title_parsed": {
+            "en_US": "Tennis",
+            "zh_TW": "網球3D"
+        },
+        "year": "半",
+        "time": "378",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0070",
+        "number": "22",
+        "title": "網球3D `Tennis",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 5,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "涂鵬斐",
+        "title_parsed": {
+            "en_US": "Softball",
+            "zh_TW": "壘球5B"
+        },
+        "year": "半",
+        "time": "534",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0071",
+        "number": "22",
+        "title": "壘球5B `Softball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "初級班(未具傳球能力)",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 5,
+            "time": [3, 4]
+        }],
+        "hours": "2",
+        "professor": "王美麗",
+        "title_parsed": {
+            "en_US": "Volleyball",
+            "zh_TW": "排球 5B"
+        },
+        "year": "半",
+        "time": "534",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0072",
+        "number": "24",
+        "title": "排球 5B `Volleyball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 20,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "簡如君",
+        "title_parsed": {
+            "en_US": "Modern Dance",
+            "zh_TW": "現代舞3D"
+        },
+        "year": "半",
+        "time": "378",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0073",
+        "number": "20",
+        "title": "現代舞3D `Modern Dance",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 5,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "待聘",
+        "title_parsed": {
+            "en_US": "Tennis",
+            "zh_TW": "網球5D"
+        },
+        "year": "半",
+        "time": "578",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0074",
+        "number": "22",
+        "title": "網球5D `Tennis",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 5,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "簡英智",
+        "title_parsed": {
+            "en_US": "Badminton",
+            "zh_TW": "羽球5C"
+        },
+        "year": "半",
+        "time": "556",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0075",
+        "number": "24",
+        "title": "羽球5C `Badminton",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "進階班(已具基本高低手傳球能力)",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 5,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "王美麗",
+        "title_parsed": {
+            "en_US": "Volleyball",
+            "zh_TW": "排球5C"
+        },
+        "year": "半",
+        "time": "556",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0076",
+        "number": "24",
+        "title": "排球5C `Volleyball",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 5,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "梁建偉",
+        "title_parsed": {
+            "en_US": "Weight Management",
+            "zh_TW": "運動與體重控制5C"
+        },
+        "year": "半",
+        "time": "556",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0077",
+        "number": "22",
+        "title": "運動與體重控制5C `Weight Management",
+        "department": "體育室"
+    }, {
+        "number_parsed": 16,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 5,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "林建宇",
+        "title_parsed": {
+            "en_US": "Swimming",
+            "zh_TW": "游泳5C"
+        },
+        "year": "半",
+        "time": "556",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0078",
+        "number": "16",
+        "title": "游泳5C `Swimming",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 5,
+            "time": [5, 6]
+        }],
+        "hours": "2",
+        "professor": "涂鵬斐",
+        "title_parsed": {
+            "en_US": "Golf",
+            "zh_TW": "高爾夫5C"
+        },
+        "year": "半",
+        "time": "556",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0079",
+        "number": "24",
+        "title": "高爾夫5C `Golf",
+        "department": "體育室"
+    }, {
+        "number_parsed": 20,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 3,
+            "time": [1, 2]
+        }],
+        "hours": "2",
+        "professor": "簡如君",
+        "title_parsed": {
+            "en_US": "Modern Dance",
+            "zh_TW": "現代舞3A"
+        },
+        "year": "半",
+        "time": "312",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0080",
+        "number": "20",
+        "title": "現代舞3A `Modern Dance",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 5,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "簡英智",
+        "title_parsed": {
+            "en_US": "Badminton",
+            "zh_TW": "羽球5D"
+        },
+        "year": "半",
+        "time": "578",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0081",
+        "number": "24",
+        "title": "羽球5D `Badminton",
+        "department": "體育室"
+    }, {
+        "number_parsed": 22,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [1, 2]
+        }],
+        "hours": "2",
+        "professor": "梁建偉",
+        "title_parsed": {
+            "en_US": "Weight Management",
+            "zh_TW": "運動與體重控制4A"
+        },
+        "year": "半",
+        "time": "412",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0082",
+        "number": "22",
+        "title": "運動與體重控制4A `Weight Management",
+        "department": "體育室"
+    }, {
+        "number_parsed": 16,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 4,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "待聘",
+        "title_parsed": {
+            "en_US": "Swimming",
+            "zh_TW": "游泳4D"
+        },
+        "year": "半",
+        "time": "478",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0083",
+        "number": "16",
+        "title": "游泳4D `Swimming",
+        "department": "體育室"
+    }, {
+        "number_parsed": 24,
+        "note": "",
+        "previous": "",
+        "location": "",
+        "language": "中文",
+        "time_parsed": [{
+            "day": 2,
+            "time": [7, 8]
+        }],
+        "hours": "2",
+        "professor": "許銘華",
+        "title_parsed": {
+            "en_US": "Table Tennis",
+            "zh_TW": "桌球2D"
+        },
+        "year": "半",
+        "time": "278",
+        "credits_parsed": 1,
+        "obligatory_tf": false,
+        "obligatory": "必修",
+        "credits": "1",
+        "hours_parsed": 2,
+        "code": "0086",
+        "number": "24",
+        "title": "桌球2D `Table Tennis",
+        "department": "體育室"
     }]
 }
