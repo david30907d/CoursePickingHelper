@@ -479,7 +479,7 @@
                                     <label class="col-xs-12 control-label" style="text-align: center;">欄位留白表示該條件不設限制</label>
                                 </div>
                                 <div class="form-group">
-                                    <a class="btn btn-lg col-sm-3 col-sm-offset-1" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-1x fa-fw"></span>選課系統</a>
+                                    <a class="btn btn-lg col-sm-3 col-sm-offset-1" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-1x fa-fw"></span>查詢系統</a>
                                     <a class="btn btn-lg col-sm-3" href="http://cah.nchu.edu.tw/class/class_plan.php?new=Y&d_id=3" target="_blank"><span class="fa fa-book fa-1x fa-fw"></span>通識中心</a>
                                     <a class="btn btn-lg col-sm-3" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-1x fa-fw"></span>單一簽入</a>
                                 </div>
@@ -1042,18 +1042,9 @@
                 }
                 else{
                     course.title_short = course.title_parsed["en_US"];              
-                }               
-                var time = [];	//time設定為空陣列
-                var $td;
-                time.push("上課時間:");
-                $.each(course.time_parsed, function(ik, iv){        
-                    time.push("星期"+week[iv.day-1]+iv.time);	//push是把裡面的元素變成陣列的一格     
-                })
-                time.push("代碼:"+course.code);
-                time = time.join(' ');	//把多個陣列用" "分隔並合併指派給time
-                //var time = course.time_parsed.day+course.time_parsed.time;
-                var $option = $($.parseHTML('<button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button>'));	//把option做成dom，再把dom做成jQuery物件
-                //<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" >Tooltip on left</button>
+                }     
+                var time=build_bulletin_time(course);//會回傳屬於那個課程的客製化時間title                          
+                var $option = $($.parseHTML('<button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button>'));	//把option做成dom，再把dom做成jQuery物件                
                 $option.text(course.title_short);   //將對應的課程內容寫入cell的html語法中    
                 $option.attr("title", time);  //在title裡面放課堂時間
                 $option.val(course.code);
@@ -1253,7 +1244,7 @@
                     bulletin_post($("#whole-school"),course, language);
                 }
                 else if(course.class==undefined){
-                    check_general(course);
+                    check_general_or_PE(course);
                 }
             } 
             var department_course_for_specific_search=function(major,level){
@@ -1272,20 +1263,39 @@
                             })                                                                                      
                         });                                                        
             }     
-            var check_general=function(course){
+            var check_general_or_PE=function(course){
                 var disciplineH={"文學":"","歷史":"","哲學":"","藝術":"","文化":""}
                 var disciplineS={"公民與社會":"","法律與政治":"","商業與管理":"","心理與教育":"","資訊與傳播":""}
                 var disciplineN={"生命科學":"","環境科學":"","物質科學":"","數學統計":"","工程科技":""}
-                if(course.discipline in disciplineH){                    
+                if(course.discipline==undefined){
+                    bulletin_post($("#PE-post"), course, language)
+                }
+                else if(course.discipline in disciplineH){
                     bulletin_post($("#humanities"), course, language)
                 }
-                else if(course.discipline in disciplineS){                    
+                else if(course.discipline in disciplineS){
                     bulletin_post($("#social"), course, language)
                 }
-                else if(course.discipline in disciplineN){                    
+                else if(course.discipline in disciplineN){
                     bulletin_post($("#natural"), course, language)
                 }
-            };                              
+            };          
+            var build_bulletin_time=function(course){
+                var time = [];  //time設定為空陣列                
+                time.push("上課時間:");
+                $.each(course.time_parsed, function(ik, iv){        
+                    time.push("星期"+week[iv.day-1]+iv.time); //push是把裡面的元素變成陣列的一格     
+                })
+                time.push("代碼:"+course.code);
+                if(course.discipline!=undefined){//代表他是通識課
+                    time.push("學群:"+course.discipline);
+                    time.push("剩餘名額:"+course.remaining_seat);
+                    time.push("中籤率:"+course.possibility);
+                    time.push("單位:"+course.department);                   
+                }
+                time = time.join(' ');  //把多個陣列用" "分隔並合併指派給time，此為字串型態，若是將字串split('')，則會回傳一個陣列型態           
+                return time;
+            }                   
         })(jQuery);
         </script>
         </body>
