@@ -1288,6 +1288,7 @@
                 })
                 time.push("代碼:"+course.code);
                 if(course.discipline!=undefined){//代表他是通識課
+                    time.push("教授:"+course.professor);
                     time.push("學群:"+course.discipline);
                     time.push("剩餘名額:"+course.remaining_seat);
                     time.push("中籤率:"+course.possibility);
