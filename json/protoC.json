@@ -55094,5 +55094,275 @@
         "number": "24",
         "title": "桌球2D `Table Tennis",
         "department": "體育室"
+    },{
+        "note": "",
+        "number": "44",
+        "time_parsed": [{
+            "day": 1,
+            "time": [12, 13]
+        }],
+        "hours": "2",
+        "title": "高爾夫一 `>Golf (1)",
+        "previous": "",
+        "number_parsed": 44,
+        "hours_parsed": 2,
+        "professor": "涂鵬斐",
+        "time": "1CD",
+        "location": "",
+        "obligatory": "必修",
+        "department": "夜共同科",
+        "language": "中文",
+        "credits_parsed": 1,
+        "year": "半",
+        "credits": "1",
+        "obligatory_tf": false,
+        "code": "0701",
+        "title_parsed": {
+            "en_US": ">Golf (1)",
+            "zh_TW": "高爾夫一"
+        }
+    }, {
+        "note": "",
+        "number": "44",
+        "time_parsed": [{
+            "day": 1,
+            "time": [12, 13]
+        }],
+        "hours": "2",
+        "title": "羽球一 `>Badminton (1)",
+        "previous": "",
+        "number_parsed": 44,
+        "hours_parsed": 2,
+        "professor": "黃憲鐘",
+        "time": "1CD",
+        "location": "",
+        "obligatory": "必修",
+        "department": "夜共同科",
+        "language": "中文",
+        "credits_parsed": 1,
+        "year": "半",
+        "credits": "1",
+        "obligatory_tf": false,
+        "code": "0702",
+        "title_parsed": {
+            "en_US": ">Badminton (1)",
+            "zh_TW": "羽球一"
+        }
+    }, {
+        "note": "",
+        "number": "44",
+        "time_parsed": [{
+            "day": 1,
+            "time": [12, 13]
+        }],
+        "hours": "2",
+        "title": "現代舞一 `>Modern Dance(1)",
+        "previous": "",
+        "number_parsed": 44,
+        "hours_parsed": 2,
+        "professor": "簡如君",
+        "time": "1CD",
+        "location": "",
+        "obligatory": "必修",
+        "department": "夜共同科",
+        "language": "中文",
+        "credits_parsed": 1,
+        "year": "半",
+        "credits": "1",
+        "obligatory_tf": false,
+        "code": "0703",
+        "title_parsed": {
+            "en_US": ">Modern Dance(1)",
+            "zh_TW": "現代舞一"
+        }
+    }, {
+        "note": "",
+        "number": "44",
+        "time_parsed": [{
+            "day": 1,
+            "time": [12, 13]
+        }],
+        "hours": "2",
+        "title": "運動與體重控制一 `>Weight Management Program(1)",
+        "previous": "",
+        "number_parsed": 44,
+        "hours_parsed": 2,
+        "professor": "莊淑蘭",
+        "time": "1CD",
+        "location": "",
+        "obligatory": "必修",
+        "department": "夜共同科",
+        "language": "中文",
+        "credits_parsed": 1,
+        "year": "半",
+        "credits": "1",
+        "obligatory_tf": false,
+        "code": "0704",
+        "title_parsed": {
+            "en_US": ">Weight Management Program(1)",
+            "zh_TW": "運動與體重控制一"
+        }
+    }, {
+        "note": "",
+        "number": "44",
+        "time_parsed": [{
+            "day": 3,
+            "time": [12, 13]
+        }],
+        "hours": "2",
+        "title": "高爾夫三 `>Golf (3)",
+        "previous": "",
+        "number_parsed": 44,
+        "hours_parsed": 2,
+        "professor": "王耀聰",
+        "time": "3CD",
+        "location": "",
+        "obligatory": "必修",
+        "department": "夜共同科",
+        "language": "中文",
+        "credits_parsed": 1,
+        "year": "半",
+        "credits": "1",
+        "obligatory_tf": false,
+        "code": "0705",
+        "title_parsed": {
+            "en_US": ">Golf (3)",
+            "zh_TW": "高爾夫三"
+        }
+    }, {
+        "note": "",
+        "number": "44",
+        "time_parsed": [{
+            "day": 3,
+            "time": [12, 13]
+        }],
+        "hours": "2",
+        "title": "羽球三 `>Badminton(3)",
+        "previous": "",
+        "number_parsed": 44,
+        "hours_parsed": 2,
+        "professor": "陳明坤",
+        "time": "3CD",
+        "location": "",
+        "obligatory": "必修",
+        "department": "夜共同科",
+        "language": "中文",
+        "credits_parsed": 1,
+        "year": "半",
+        "credits": "1",
+        "obligatory_tf": false,
+        "code": "0706",
+        "title_parsed": {
+            "en_US": ">Badminton(3)",
+            "zh_TW": "羽球三"
+        }
+    }, {
+        "note": "",
+        "number": "44",
+        "time_parsed": [{
+            "day": 3,
+            "time": [12, 13]
+        }],
+        "hours": "2",
+        "title": "籃球三 `>Basketball (3)",
+        "previous": "",
+        "number_parsed": 44,
+        "hours_parsed": 2,
+        "professor": "賈凡",
+        "time": "3CD",
+        "location": "",
+        "obligatory": "必修",
+        "department": "夜共同科",
+        "language": "中文",
+        "credits_parsed": 1,
+        "year": "半",
+        "credits": "1",
+        "obligatory_tf": false,
+        "code": "0707",
+        "title_parsed": {
+            "en_US": ">Basketball (3)",
+            "zh_TW": "籃球三"
+        }
+    }, {
+        "note": "",
+        "number": "44",
+        "time_parsed": [{
+            "day": 5,
+            "time": [12, 13]
+        }],
+        "hours": "2",
+        "title": "重量訓練五 `>Weight Training(5)",
+        "previous": "",
+        "number_parsed": 44,
+        "hours_parsed": 2,
+        "professor": "王美麗",
+        "time": "5CD",
+        "location": "",
+        "obligatory": "必修",
+        "department": "夜共同科",
+        "language": "中文",
+        "credits_parsed": 1,
+        "year": "半",
+        "credits": "1",
+        "obligatory_tf": false,
+        "code": "0708",
+        "title_parsed": {
+            "en_US": ">Weight Training(5)",
+            "zh_TW": "重量訓練五"
+        }
+    }, {
+        "note": "",
+        "number": "44",
+        "time_parsed": [{
+            "day": 5,
+            "time": [12, 13]
+        }],
+        "hours": "2",
+        "title": "桌球五 `>Table Tennis (5)",
+        "previous": "",
+        "number_parsed": 44,
+        "hours_parsed": 2,
+        "professor": "梁建偉",
+        "time": "5CD",
+        "location": "",
+        "obligatory": "必修",
+        "department": "夜共同科",
+        "language": "中文",
+        "credits_parsed": 1,
+        "year": "半",
+        "credits": "1",
+        "obligatory_tf": false,
+        "code": "0709",
+        "title_parsed": {
+            "en_US": ">Table Tennis (5)",
+            "zh_TW": "桌球五"
+        }
+    }, {
+        "note": "",
+        "number": "44",
+        "time_parsed": [{
+            "day": 5,
+            "time": [12, 13]
+        }],
+        "hours": "2",
+        "title": "羽球五 `>Badminton (5)",
+        "previous": "",
+        "number_parsed": 44,
+        "hours_parsed": 2,
+        "professor": "簡英智",
+        "time": "5CD",
+        "location": "",
+        "obligatory": "必修",
+        "department": "夜共同科",
+        "language": "中文",
+        "credits_parsed": 1,
+        "year": "半",
+        "credits": "1",
+        "obligatory_tf": false,
+        "code": "0710",
+        "title_parsed": {
+            "en_US": ">Badminton (5)",
+            "zh_TW": "羽球五"
+        }
     }]
 }
