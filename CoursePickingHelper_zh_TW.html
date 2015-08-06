@@ -1291,8 +1291,7 @@
                     time.push("教授:"+course.professor);
                     time.push("學群:"+course.discipline);
                     time.push("剩餘名額:"+course.remaining_seat);
-                    time.push("中籤率:"+course.possibility);
-                    time.push("單位:"+course.department);                   
+                    time.push("中籤率:"+course.possibility);   
                 }
                 time = time.join(' ');  //把多個陣列用" "分隔並合併指派給time，此為字串型態，若是將字串split('')，則會回傳一個陣列型態           
                 return time;
