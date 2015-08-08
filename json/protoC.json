@@ -52826,7 +52826,7 @@
         "department": "夜共同科",
         "code": "0181",
         "number": "50"
-    },{
+    }, {
         "number_parsed": 22,
         "note": "",
         "previous": "",
@@ -55094,7 +55094,7 @@
         "number": "24",
         "title": "桌球2D `Table Tennis",
         "department": "體育室"
-    },{
+    }, {
         "note": "",
         "number": "44",
         "time_parsed": [{
@@ -55364,5 +55364,2489 @@
             "en_US": ">Badminton (5)",
             "zh_TW": "羽球五"
         }
-    }]
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Spanish (I)",
+            "zh_TW": "西班牙文(一) c"
+        },
+        "professor": "待聘",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "中文",
+        "title": "西班牙文(一) c`>Spanish (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0969",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [6, 7, 8],
+            "day": 4
+        }],
+        "time": "4678",
+        "year": "全",
+        "location": "AA202",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Spanish (I)",
+            "zh_TW": "西班牙文(一) a"
+        },
+        "professor": "曾麗蓉",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "中文",
+        "title": "西班牙文(一) a`>Spanish (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0970",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [6, 7, 8],
+            "day": 2
+        }],
+        "time": "2678",
+        "year": "全",
+        "location": "AA503",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Spanish (I)",
+            "zh_TW": "西班牙文(一) b"
+        },
+        "professor": "林玉葉",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "中文",
+        "title": "西班牙文(一) b`>Spanish (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0971",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [6, 7, 8],
+            "day": 3
+        }],
+        "time": "3678",
+        "year": "全",
+        "location": "AA504",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Spanish (II)",
+            "zh_TW": "西班牙文(二) a"
+        },
+        "professor": "待聘",
+        "hours_parsed": 3,
+        "previous": "西班牙文(一)",
+        "language": "中文",
+        "title": "西班牙文(二) a`>Spanish (II)",
+        "hours": "3",
+        "number": "50",
+        "code": "0972",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 2
+        }],
+        "time": "2234",
+        "year": "全",
+        "location": "AA203",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "先修科目未修及格者不能選課",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">German(I)",
+            "zh_TW": "德文(一) b"
+        },
+        "professor": "林貞儀",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "中文",
+        "title": "德文(一) b`>German(I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0974",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [6, 7, 8],
+            "day": 5
+        }],
+        "time": "5678",
+        "year": "全",
+        "location": "AA302",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">German(II)",
+            "zh_TW": "德文(二) a"
+        },
+        "professor": "林貞儀",
+        "hours_parsed": 3,
+        "previous": "德文(一)",
+        "language": "中文",
+        "title": "德文(二) a`>German(II)",
+        "hours": "3",
+        "number": "50",
+        "code": "0975",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [5, 6, 7],
+            "day": 2
+        }],
+        "time": "2567",
+        "year": "全",
+        "location": "AA504",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "先修科目未修及格者不能選課",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Japanese (I)",
+            "zh_TW": "日文(一) a"
+        },
+        "professor": "朱韻如",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "日文",
+        "title": "日文(一) a`>Japanese (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0976",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 3
+        }],
+        "time": "3234",
+        "year": "全",
+        "location": "AA503",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Japanese (I)",
+            "zh_TW": "日文(一) b"
+        },
+        "professor": "朱韻如",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "日文",
+        "title": "日文(一) b`>Japanese (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0977",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [5, 6, 7],
+            "day": 3
+        }],
+        "time": "3567",
+        "year": "全",
+        "location": "AA202",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Japanese (I)",
+            "zh_TW": "日文(一) c"
+        },
+        "professor": "張瓊瑜",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "日文",
+        "title": "日文(一) c`>Japanese (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0978",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [6, 7, 8],
+            "day": 5
+        }],
+        "time": "5678",
+        "year": "全",
+        "location": "AA503",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Japanese (I)",
+            "zh_TW": "日文(一) d"
+        },
+        "professor": "陳宏傑",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "日文",
+        "title": "日文(一) d`>Japanese (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0979",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 2
+        }],
+        "time": "2234",
+        "year": "全",
+        "location": "AA503",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Japanese (I)",
+            "zh_TW": "日文(一) e"
+        },
+        "professor": "陳宏傑",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "日文",
+        "title": "日文(一) e`>Japanese (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0980",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 4
+        }],
+        "time": "4234",
+        "year": "全",
+        "location": "AA504",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Japanese (I)",
+            "zh_TW": "日文(一) f"
+        },
+        "professor": "陳怡如",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "日文",
+        "title": "日文(一) f`>Japanese (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0981",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 3
+        }],
+        "time": "3234",
+        "year": "全",
+        "location": "AA302",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Japanese (I)",
+            "zh_TW": "日文(一) g"
+        },
+        "professor": "陳怡如",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "日文",
+        "title": "日文(一) g`>Japanese (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0982",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [6, 7, 8],
+            "day": 3
+        }],
+        "time": "3678",
+        "year": "全",
+        "location": "AA503",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Japanese (I)",
+            "zh_TW": "日文(一) h"
+        },
+        "professor": "陳雪豪",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "日文",
+        "title": "日文(一) h`>Japanese (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0983",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 5
+        }],
+        "time": "5234",
+        "year": "全",
+        "location": "AA204",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Japanese (I)",
+            "zh_TW": "日文(一) i"
+        },
+        "professor": "陳雪豪",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "日文",
+        "title": "日文(一) i`>Japanese (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0984",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [6, 7, 8],
+            "day": 5
+        }],
+        "time": "5678",
+        "year": "全",
+        "location": "AA204",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Japanese (I)",
+            "zh_TW": "日文(一) k"
+        },
+        "professor": "顏秀菁",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "日文",
+        "title": "日文(一) k`>Japanese (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0986",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [6, 7, 8],
+            "day": 1
+        }],
+        "time": "1678",
+        "year": "全",
+        "location": "AA504",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Japanese (II)",
+            "zh_TW": "日文(二) a"
+        },
+        "professor": "李淑惠",
+        "hours_parsed": 3,
+        "previous": "日文(一)",
+        "language": "日文",
+        "title": "日文(二) a`>Japanese (II)",
+        "hours": "3",
+        "number": "50",
+        "code": "0987",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 3
+        }],
+        "time": "3234",
+        "year": "全",
+        "location": "AA203",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "先修科目未修及格者不能選課",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Japanese (II)",
+            "zh_TW": "日文(二) b"
+        },
+        "professor": "黃麗修",
+        "hours_parsed": 3,
+        "previous": "日文(一)",
+        "language": "日文",
+        "title": "日文(二) b`>Japanese (II)",
+        "hours": "3",
+        "number": "50",
+        "code": "0988",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [7, 8, 9],
+            "day": 4
+        }],
+        "time": "4789",
+        "year": "全",
+        "location": "AA201",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "先修科目未修及格者不能選課",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Japanese (II)",
+            "zh_TW": "日文(二) c"
+        },
+        "professor": "蔡碧玲",
+        "hours_parsed": 3,
+        "previous": "日文(一)",
+        "language": "日文",
+        "title": "日文(二) c`>Japanese (II)",
+        "hours": "3",
+        "number": "50",
+        "code": "0989",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [6],
+            "day": 1
+        }, {
+            "time": [7, 8],
+            "day": 3
+        }],
+        "time": "16,378",
+        "year": "全",
+        "location": "AA201",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "先修科目未修及格者不能選課",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">French (I)",
+            "zh_TW": "法文(一) a"
+        },
+        "professor": "張瑞芳",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "中文",
+        "title": "法文(一) a`>French (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0990",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 2
+        }],
+        "time": "2234",
+        "year": "全",
+        "location": "AA302",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">French (I)",
+            "zh_TW": "法文(一) b"
+        },
+        "professor": "張瑞芳",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "中文",
+        "title": "法文(一) b`>French (I)",
+        "hours": "3",
+        "number": "50",
+        "code": "0991",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 4
+        }],
+        "time": "4234",
+        "year": "全",
+        "location": "AA302",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">French (II)",
+            "zh_TW": "法文(二) a"
+        },
+        "professor": "蔡佳勳",
+        "hours_parsed": 3,
+        "previous": "法文(一)",
+        "language": "中文",
+        "title": "法文(二) a`>French (II)",
+        "hours": "3",
+        "number": "50",
+        "code": "0992",
+        "number_parsed": 50,
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 3
+        }],
+        "time": "3234",
+        "year": "全",
+        "location": "AA401",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "先修科目未修及格者不能選課",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Advanced English",
+            "zh_TW": "進階英文"
+        },
+        "professor": "黃麗雯",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "英文",
+        "title": "進階英文 `>Advanced English",
+        "hours": "3",
+        "number": "40",
+        "code": "0995",
+        "number_parsed": 40,
+        "time_parsed": [{
+            "time": [6, 7, 8],
+            "day": 1
+        }],
+        "time": "1678",
+        "year": "半",
+        "location": "AA204",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "限大學部學生選課不接受碩博學生",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Advanced English",
+            "zh_TW": "進階英文 d"
+        },
+        "professor": "待聘",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "英文",
+        "title": "進階英文 d`>Advanced English",
+        "hours": "3",
+        "number": "40",
+        "code": "0996",
+        "number_parsed": 40,
+        "time_parsed": [{
+            "time": [6, 7, 8],
+            "day": 4
+        }],
+        "time": "4678",
+        "year": "半",
+        "location": "AA204",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "限大學部學生選課不接受碩博學生",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Advanced English",
+            "zh_TW": "進階英文 e"
+        },
+        "professor": "韋金龍",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "英文",
+        "title": "進階英文 e`>Advanced English",
+        "hours": "3",
+        "number": "40",
+        "code": "0997",
+        "number_parsed": 40,
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 2
+        }],
+        "time": "2234",
+        "year": "半",
+        "location": "AA501",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "限大學部學生選課不接受碩博學生",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Advanced English",
+            "zh_TW": "進階英文 f"
+        },
+        "professor": "林依蓉",
+        "hours_parsed": 3,
+        "previous": "",
+        "language": "英文",
+        "title": "進階英文 f`>Advanced English",
+        "hours": "3",
+        "number": "40",
+        "code": "0998",
+        "number_parsed": 40,
+        "time_parsed": [{
+            "time": [2, 3, 4],
+            "day": 2
+        }],
+        "time": "2234",
+        "year": "半",
+        "location": "AA204",
+        "credits": "3",
+        "department": "語言中心",
+        "obligatory": "選修",
+        "note": "限碩博學生選課。欲計入畢業學分者請至註冊組網站下載計入學分申請表並至語言中心508辦理。",
+        "credits_parsed": 3
+    }, {
+        "obligatory_tf": true,
+        "title_parsed": {
+            "en_US": ">English Proficiency Improvement",
+            "zh_TW": "英文能力檢定及輔導★"
+        },
+        "professor": "全體教師",
+        "hours_parsed": 0,
+        "previous": "",
+        "language": "中文",
+        "title": "英文能力檢定及輔導★ `>English Proficiency Improvement",
+        "hours": "",
+        "number": "163",
+        "code": "0999",
+        "number_parsed": 163,
+        "time_parsed": [],
+        "time": "*",
+        "year": "半",
+        "location": "*",
+        "credits": "0",
+        "department": "語言中心",
+        "obligatory": "必修",
+        "note": "限98學年度〈含〉後學士班學生選修，採人工選課洽語言中心",
+        "credits_parsed": 0
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Journalistic English",
+            "zh_TW": "新聞英文"
+        },
+        "professor": "陳昭良",
+        "hours_parsed": 2,
+        "previous": "",
+        "language": "中文",
+        "title": "新聞英文 `>Journalistic English",
+        "hours": "2",
+        "number": "31",
+        "code": "1909",
+        "number_parsed": 31,
+        "time_parsed": [{
+            "time": [3, 4],
+            "day": 3
+        }],
+        "time": "334",
+        "year": "半",
+        "location": "Y405",
+        "credits": "2",
+        "department": "外文系",
+        "obligatory": "選修",
+        "note": "外文系學生選課不列入畢業學分",
+        "credits_parsed": 2
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Journalistic English",
+            "zh_TW": "新聞英文"
+        },
+        "professor": "陳昭良",
+        "hours_parsed": 2,
+        "previous": "",
+        "language": "中文",
+        "title": "新聞英文 `>Journalistic English",
+        "hours": "2",
+        "number": "31",
+        "code": "1911",
+        "number_parsed": 31,
+        "time_parsed": [{
+            "time": [3, 4],
+            "day": 4
+        }],
+        "time": "434",
+        "year": "半",
+        "location": "Y405",
+        "credits": "2",
+        "department": "外文系",
+        "obligatory": "選修",
+        "note": "外文系學生選課不列入畢業學分",
+        "credits_parsed": 2
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Theme-Based English",
+            "zh_TW": "主題式英文"
+        },
+        "professor": "陳瓊娟",
+        "hours_parsed": 2,
+        "previous": "法文(一) 等",
+        "language": "中文",
+        "title": "主題式英文 `>Theme-Based English",
+        "hours": "2",
+        "number": "31",
+        "code": "1960",
+        "number_parsed": 31,
+        "time_parsed": [{
+            "time": [5, 6],
+            "day": 3
+        }],
+        "time": "356",
+        "year": "半",
+        "location": "Y405",
+        "credits": "2",
+        "department": "外文系",
+        "obligatory": "選修",
+        "note": "外文系學生選課不列入畢業學分",
+        "credits_parsed": 2
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Journalistic English",
+            "zh_TW": "新聞英文"
+        },
+        "professor": "張睿銓",
+        "hours_parsed": 2,
+        "previous": "",
+        "language": "中文",
+        "title": "新聞英文 `>Journalistic English",
+        "hours": "2",
+        "number": "40",
+        "code": "1961",
+        "number_parsed": 40,
+        "time_parsed": [{
+            "time": [5, 6],
+            "day": 5
+        }],
+        "time": "556",
+        "year": "半",
+        "location": "Y204",
+        "credits": "2",
+        "department": "外文系",
+        "obligatory": "選修",
+        "note": "外文系學生選課不列入畢業學分",
+        "credits_parsed": 2
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">English Composition",
+            "zh_TW": "英文作文"
+        },
+        "professor": "張睿銓",
+        "hours_parsed": 2,
+        "previous": "",
+        "language": "中文",
+        "title": "英文作文 `>English Composition",
+        "hours": "2",
+        "number": "31",
+        "code": "1962",
+        "number_parsed": 31,
+        "time_parsed": [{
+            "time": [5, 6],
+            "day": 3
+        }],
+        "time": "356",
+        "year": "半",
+        "location": "Y406",
+        "credits": "2",
+        "department": "外文系",
+        "obligatory": "選修",
+        "note": "外文系學生選課不列入畢業學分",
+        "credits_parsed": 2
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Theme-Based English",
+            "zh_TW": "主題式英文"
+        },
+        "professor": "陳俐亨",
+        "hours_parsed": 2,
+        "previous": "法文(一) 等",
+        "language": "中文",
+        "title": "主題式英文 `>Theme-Based English",
+        "hours": "2",
+        "number": "31",
+        "code": "1963",
+        "number_parsed": 31,
+        "time_parsed": [{
+            "time": [3, 4],
+            "day": 1
+        }],
+        "time": "134",
+        "year": "半",
+        "location": "Y406",
+        "credits": "2",
+        "department": "外文系",
+        "obligatory": "選修",
+        "note": "外文系學生選課不列入畢業學分",
+        "credits_parsed": 2
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">English Conversation",
+            "zh_TW": "英文會話 a"
+        },
+        "professor": "佘嘉玲",
+        "hours_parsed": 2,
+        "previous": "",
+        "language": "英文",
+        "title": "英文會話 a`>English Conversation",
+        "hours": "2",
+        "number": "31",
+        "code": "1964",
+        "number_parsed": 31,
+        "time_parsed": [{
+            "time": [5, 6],
+            "day": 3
+        }],
+        "time": "356",
+        "year": "半",
+        "location": "Y404",
+        "credits": "2",
+        "department": "外文系",
+        "obligatory": "選修",
+        "note": "外文系學生選課不列入畢業學分",
+        "credits_parsed": 2
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">English Conversation",
+            "zh_TW": "英文會話 b"
+        },
+        "professor": "陳俐亨",
+        "hours_parsed": 2,
+        "previous": "",
+        "language": "英文",
+        "title": "英文會話 b`>English Conversation",
+        "hours": "2",
+        "number": "31",
+        "code": "1965",
+        "number_parsed": 31,
+        "time_parsed": [{
+            "time": [7, 8],
+            "day": 1
+        }],
+        "time": "178",
+        "year": "半",
+        "location": "Y417",
+        "credits": "2",
+        "department": "外文系",
+        "obligatory": "選修",
+        "note": "外文系學生選課不列入畢業學分",
+        "credits_parsed": 2
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">English for Travel",
+            "zh_TW": "觀光英語"
+        },
+        "professor": "陳俐亨",
+        "hours_parsed": 2,
+        "previous": "",
+        "language": "中文",
+        "title": "觀光英語 `>English for Travel",
+        "hours": "2",
+        "number": "31",
+        "code": "1966",
+        "number_parsed": 31,
+        "time_parsed": [{
+            "time": [5, 6],
+            "day": 1
+        }],
+        "time": "156",
+        "year": "半",
+        "location": "Y417",
+        "credits": "2",
+        "department": "外文系",
+        "obligatory": "選修",
+        "note": "外文系學生選課不列入畢業學分",
+        "credits_parsed": 2
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">English Composition",
+            "zh_TW": "英文作文"
+        },
+        "professor": "佘嘉玲",
+        "hours_parsed": 2,
+        "previous": "",
+        "language": "中文",
+        "title": "英文作文 `>English Composition",
+        "hours": "2",
+        "number": "31",
+        "code": "1967",
+        "number_parsed": 31,
+        "time_parsed": [{
+            "time": [7, 8],
+            "day": 3
+        }],
+        "time": "378",
+        "year": "半",
+        "location": "Y405",
+        "credits": "2",
+        "department": "外文系",
+        "obligatory": "選修",
+        "note": "外文系學生選課不列入畢業學分",
+        "credits_parsed": 2
+    }, {
+        "obligatory_tf": false,
+        "title_parsed": {
+            "en_US": ">Theme-Based English",
+            "zh_TW": "主題式英文"
+        },
+        "professor": "潘千惠",
+        "hours_parsed": 2,
+        "previous": "法文(一) 等",
+        "language": "英文",
+        "title": "主題式英文 `>Theme-Based English",
+        "hours": "2",
+        "number": "31",
+        "code": "1968",
+        "number_parsed": 31,
+        "time_parsed": [{
+            "time": [7, 8],
+            "day": 3
+        }],
+        "time": "378",
+        "year": "半",
+        "location": "Y407",
+        "credits": "2",
+        "department": "外文系",
+        "obligatory": "選修",
+        "note": "外文系學生選課不列入畢業學分",
+        "credits_parsed": 2
+    }, {
+        "number_parsed": 31,
+        "professor": "陳春美",
+        "previous": "",
+        "time": "1567",
+        "obligatory": "選修",
+        "note": "",
+        "obligatory_tf": false,
+        "location": "Y407",
+        "number": "31",
+        "code": "1910",
+        "time_parsed": [{
+            "time": [5, 6, 7],
+            "day": 1
+        }],
+        "credits": "3",
+        "title_parsed": {
+            "en_US": ">Practical Chinese(I)",
+            "zh_TW": "實用華語(一)"
+        },
+        "title": "實用華語(一) `>Practical Chinese(I)",
+        "year": "半",
+        "hours_parsed": 3,
+        "department": "外文系",
+        "language": "中文",
+        "hours": "3",
+        "credits_parsed": 3
+    }, {
+    "obligatory": "必修",
+    "credits_parsed": 3,
+    "obligatory_tf": true,
+    "language": "中文",
+    "note": "限新生延續暑期微積分(一)先修班者優先,為全學年微積分下學期授課內容",
+    "credits": "3",
+    "department": "應數系",
+    "time": "5567",
+    "hours": "3",
+    "number_parsed": 60,
+    "year": "半",
+    "previous": "",
+    "title": "微積分(二) `>Calculus(II)",
+    "time_parsed": [{
+        "time": [5, 6, 7],
+        "day": 5
+    }],
+    "professor": "陳焜燦",
+    "location": "U414",
+    "hours_parsed": 3,
+    "code": "1913",
+    "number": "60",
+    "title_parsed": {
+        "en_US": ">Calculus(II)",
+        "zh_TW": "微積分(二)"
+    }
+}, {
+    "obligatory": "選修",
+    "credits_parsed": 3,
+    "obligatory_tf": false,
+    "language": "英文",
+    "note": "",
+    "credits": "3",
+    "department": "化學系",
+    "time": "2234",
+    "hours": "3",
+    "number_parsed": 40,
+    "year": "半",
+    "previous": "",
+    "title": "有機化學 `>Organic Chemistry",
+    "time_parsed": [{
+        "time": [2, 3, 4],
+        "day": 2
+    }],
+    "professor": "陸大榮",
+    "location": "T711",
+    "hours_parsed": 3,
+    "code": "1920",
+    "number": "40",
+    "title_parsed": {
+        "en_US": ">Organic Chemistry",
+        "zh_TW": "有機化學"
+    }
+}, {
+    "obligatory": "選修",
+    "credits_parsed": 3,
+    "obligatory_tf": false,
+    "language": "英文",
+    "note": "",
+    "credits": "3",
+    "department": "化學系",
+    "time": "134>41",
+    "hours": "3",
+    "number_parsed": 40,
+    "year": "半",
+    "previous": "",
+    "title": "普通化學 `>General Chemistry",
+    "time_parsed": [{
+        "time": [3, 4, 4, 1],
+        "day": 1
+    }],
+    "professor": "林柏亨",
+    "location": "T114>T711",
+    "hours_parsed": 3,
+    "code": "1921",
+    "number": "40",
+    "title_parsed": {
+        "en_US": ">General Chemistry",
+        "zh_TW": "普通化學"
+    }
+}, {
+    "obligatory": "選修",
+    "credits_parsed": 3,
+    "obligatory_tf": false,
+    "language": "中文",
+    "note": "限生科系以外大三及大四以上學生且須修過生物化學才能選課",
+    "credits": "3",
+    "department": "生科院",
+    "time": "5234",
+    "hours": "3",
+    "number_parsed": 31,
+    "year": "半",
+    "previous": "生物化學",
+    "title": "分子生物學 `>Molecular Biology",
+    "time_parsed": [{
+        "time": [2, 3, 4],
+        "day": 5
+    }],
+    "professor": "楊文明 等",
+    "location": "Z901",
+    "hours_parsed": 3,
+    "code": "1901",
+    "number": "31",
+    "title_parsed": {
+        "en_US": ">Molecular Biology",
+        "zh_TW": "分子生物學"
+    }
+}, {
+    "obligatory": "選修",
+    "credits_parsed": 2,
+    "obligatory_tf": false,
+    "language": "中文",
+    "note": "限大三及大四以上學生選課",
+    "credits": "2",
+    "department": "生科中心",
+    "time": "334",
+    "hours": "2",
+    "number_parsed": 60,
+    "year": "半",
+    "previous": "",
+    "title": "生物產業科技與管理 `>Technology and Management of Bio-Products",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 3
+    }],
+    "professor": "謝淳仁",
+    "location": "AN514",
+    "hours_parsed": 2,
+    "code": "1902",
+    "number": "60",
+    "title_parsed": {
+        "en_US": ">Technology and Management of Bio-Products",
+        "zh_TW": "生物產業科技與管理"
+    }
+},{
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [1, 2],
+        "day": 1
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "林欣郁",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training--National Defense Policy",
+        "zh_TW": "全民國防教育軍事訓練-國防政策"
+    },
+    "time": "112",
+    "credits_parsed": 2,
+    "code": "2450",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-國防政策 `>All-Out Defense Education Military Training--National Defense Policy",
+    "location": "B19",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 1
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "林欣郁",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training--National Defense Policy",
+        "zh_TW": "全民國防教育軍事訓練-國防政策"
+    },
+    "time": "134",
+    "credits_parsed": 2,
+    "code": "2451",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-國防政策 `>All-Out Defense Education Military Training--National Defense Policy",
+    "location": "B19",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [5, 6],
+        "day": 1
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "劉國宗",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training---Civil Defense",
+        "zh_TW": "全民國防教育軍事訓練-全民國防"
+    },
+    "time": "156",
+    "credits_parsed": 2,
+    "code": "2452",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-全民國防 `>All-Out Defense Education Military Training---Civil Defense",
+    "location": "B18",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [1, 2],
+        "day": 2
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "張家熏",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training--National Defense Policy",
+        "zh_TW": "全民國防教育軍事訓練-國防政策"
+    },
+    "time": "212",
+    "credits_parsed": 2,
+    "code": "2453",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-國防政策 `>All-Out Defense Education Military Training--National Defense Policy",
+    "location": "B18",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [7, 8],
+        "day": 2
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "林劍鳴",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training---Civil Defense",
+        "zh_TW": "全民國防教育軍事訓練-全民國防"
+    },
+    "time": "278",
+    "credits_parsed": 2,
+    "code": "2454",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-全民國防 `>All-Out Defense Education Military Training---Civil Defense",
+    "location": "B18",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [1, 2],
+        "day": 2
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "待聘",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training---Civil Defense",
+        "zh_TW": "全民國防教育軍事訓練-全民國防"
+    },
+    "time": "212",
+    "credits_parsed": 2,
+    "code": "2455",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-全民國防 `>All-Out Defense Education Military Training---Civil Defense",
+    "location": "B20",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 2
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "待聘",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training---Civil Defense",
+        "zh_TW": "全民國防教育軍事訓練-全民國防"
+    },
+    "time": "234",
+    "credits_parsed": 2,
+    "code": "2456",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-全民國防 `>All-Out Defense Education Military Training---Civil Defense",
+    "location": "B20",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [5, 6],
+        "day": 2
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "待聘",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training---Civil Defense",
+        "zh_TW": "全民國防教育軍事訓練-全民國防"
+    },
+    "time": "256",
+    "credits_parsed": 2,
+    "code": "2457",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-全民國防 `>All-Out Defense Education Military Training---Civil Defense",
+    "location": "B20",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [7, 8],
+        "day": 3
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "廖淑芳",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training---Civil Defense",
+        "zh_TW": "全民國防教育軍事訓練-全民國防"
+    },
+    "time": "378",
+    "credits_parsed": 2,
+    "code": "2458",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-全民國防 `>All-Out Defense Education Military Training---Civil Defense",
+    "location": "B19",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 2
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "張家熏",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training--National Defense Policy",
+        "zh_TW": "全民國防教育軍事訓練-國防政策"
+    },
+    "time": "234",
+    "credits_parsed": 2,
+    "code": "2459",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-國防政策 `>All-Out Defense Education Military Training--National Defense Policy",
+    "location": "B18",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [1, 2],
+        "day": 5
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "林光志",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training---Civil Defense",
+        "zh_TW": "全民國防教育軍事訓練-全民國防"
+    },
+    "time": "512",
+    "credits_parsed": 2,
+    "code": "2460",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-全民國防 `>All-Out Defense Education Military Training---Civil Defense",
+    "location": "B18",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 2
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "盧婉萱",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training--National Defense Policy",
+        "zh_TW": "全民國防教育軍事訓練-國防政策"
+    },
+    "time": "234",
+    "credits_parsed": 2,
+    "code": "2461",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-國防政策 `>All-Out Defense Education Military Training--National Defense Policy",
+    "location": "B19",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 5
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "林光志",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training---Civil Defense",
+        "zh_TW": "全民國防教育軍事訓練-全民國防"
+    },
+    "time": "534",
+    "credits_parsed": 2,
+    "code": "2462",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-全民國防 `>All-Out Defense Education Military Training---Civil Defense",
+    "location": "B18",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [5, 6],
+        "day": 5
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "林光志",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training---Civil Defense",
+        "zh_TW": "全民國防教育軍事訓練-全民國防"
+    },
+    "time": "556",
+    "credits_parsed": 2,
+    "code": "2463",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-全民國防 `>All-Out Defense Education Military Training---Civil Defense",
+    "location": "B18",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [1, 2],
+        "day": 5
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "待聘",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training--National Defense Policy",
+        "zh_TW": "全民國防教育軍事訓練-國防政策"
+    },
+    "time": "512",
+    "credits_parsed": 2,
+    "code": "2464",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-國防政策 `>All-Out Defense Education Military Training--National Defense Policy",
+    "location": "B20",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 5
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "待聘",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training--National Defense Policy",
+        "zh_TW": "全民國防教育軍事訓練-國防政策"
+    },
+    "time": "534",
+    "credits_parsed": 2,
+    "code": "2465",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-國防政策 `>All-Out Defense Education Military Training--National Defense Policy",
+    "location": "B20",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [5, 6],
+        "day": 5
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "陳秀年",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training---Civil Defense",
+        "zh_TW": "全民國防教育軍事訓練-全民國防"
+    },
+    "time": "556",
+    "credits_parsed": 2,
+    "code": "2466",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-全民國防 `>All-Out Defense Education Military Training---Civil Defense",
+    "location": "B19",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 3
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "李政育",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training--National Defense Policy",
+        "zh_TW": "全民國防教育軍事訓練-國防政策"
+    },
+    "time": "334",
+    "credits_parsed": 2,
+    "code": "2467",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-國防政策 `>All-Out Defense Education Military Training--National Defense Policy",
+    "location": "B18",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [7, 8],
+        "day": 5
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "陳秀年",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training---Civil Defense",
+        "zh_TW": "全民國防教育軍事訓練-全民國防"
+    },
+    "time": "578",
+    "credits_parsed": 2,
+    "code": "2468",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-全民國防 `>All-Out Defense Education Military Training---Civil Defense",
+    "location": "B19",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [5, 6],
+        "day": 2
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "盧婉萱",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training--National Defense Policy",
+        "zh_TW": "全民國防教育軍事訓練-國防政策"
+    },
+    "time": "256",
+    "credits_parsed": 2,
+    "code": "2469",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-國防政策 `>All-Out Defense Education Military Training--National Defense Policy",
+    "location": "B19",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [7, 8],
+        "day": 2
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "盧婉萱",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training--National Defense Policy",
+        "zh_TW": "全民國防教育軍事訓練-國防政策"
+    },
+    "time": "278",
+    "credits_parsed": 2,
+    "code": "2470",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-國防政策 `>All-Out Defense Education Military Training--National Defense Policy",
+    "location": "B19",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [5, 6],
+        "day": 3
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "李政育",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training--National Defense Policy",
+        "zh_TW": "全民國防教育軍事訓練-國防政策"
+    },
+    "time": "356",
+    "credits_parsed": 2,
+    "code": "2472",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-國防政策 `>All-Out Defense Education Military Training--National Defense Policy",
+    "location": "B18",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [7, 8],
+        "day": 3
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "李政育",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training--National Defense Policy",
+        "zh_TW": "全民國防教育軍事訓練-國防政策"
+    },
+    "time": "378",
+    "credits_parsed": 2,
+    "code": "2473",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-國防政策 `>All-Out Defense Education Military Training--National Defense Policy",
+    "location": "B18",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+}, {
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 50,
+    "language": "中文",
+    "number": "50",
+    "time_parsed": [{
+        "time": [7, 8],
+        "day": 1
+    }],
+    "credits": "2",
+    "obligatory_tf": false,
+    "professor": "劉國宗",
+    "title_parsed": {
+        "en_US": ">All-Out Defense Education Military Training---Civil Defense",
+        "zh_TW": "全民國防教育軍事訓練-全民國防"
+    },
+    "time": "178",
+    "credits_parsed": 2,
+    "code": "2474",
+    "hours_parsed": 2,
+    "year": "半",
+    "title": "全民國防教育軍事訓練-全民國防 `>All-Out Defense Education Military Training---Civil Defense",
+    "location": "B18",
+    "obligatory": "選修",
+    "department": "教官室",
+    "note": ""
+},{
+    "obligatory": "選修",
+    "professor": "許健將",
+    "language": "中文",
+    "obligatory_tf": false,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [5, 6],
+        "day": 2
+    }],
+    "time": "256",
+    "department": "師培中心",
+    "code": "0801",
+    "hours_parsed": 2,
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 70,
+    "year": "半",
+    "title": "課程發展與設計 `>Curriculum Development and Design",
+    "title_parsed": {
+        "zh_TW": "課程發展與設計",
+        "en_US": ">Curriculum Development and Design"
+    },
+    "number": "70",
+    "credits": "2",
+    "location": "SC202"
+}, {
+    "obligatory": "必修",
+    "professor": "黃淑苓",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 4
+    }],
+    "time": "434",
+    "department": "師培中心",
+    "code": "0802",
+    "hours_parsed": 2,
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 48,
+    "year": "半",
+    "title": "教育心理學 `>Educational Psychology",
+    "title_parsed": {
+        "zh_TW": "教育心理學",
+        "en_US": ">Educational Psychology"
+    },
+    "number": "48",
+    "credits": "2",
+    "location": "SC432"
+}, {
+    "obligatory": "選修",
+    "professor": "洪慧涓",
+    "language": "中文",
+    "obligatory_tf": false,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [7, 8],
+        "day": 1
+    }],
+    "time": "178",
+    "department": "師培中心",
+    "code": "0804",
+    "hours_parsed": 2,
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 48,
+    "year": "半",
+    "title": "教師心理衛生 `>Mental Hygiene of Teachers",
+    "title_parsed": {
+        "zh_TW": "教師心理衛生",
+        "en_US": ">Mental Hygiene of Teachers"
+    },
+    "number": "48",
+    "credits": "2",
+    "location": "SC432"
+}, {
+    "obligatory": "必修",
+    "professor": "吳勁甫",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [7, 8],
+        "day": 4
+    }],
+    "time": "478",
+    "department": "師培中心",
+    "code": "0805",
+    "hours_parsed": 2,
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 70,
+    "year": "半",
+    "title": "班級經營 `>Classroom Management",
+    "title_parsed": {
+        "zh_TW": "班級經營",
+        "en_US": ">Classroom Management"
+    },
+    "number": "70",
+    "credits": "2",
+    "location": "SC202"
+}, {
+    "obligatory": "必修",
+    "professor": "白慧娟",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 1
+    }],
+    "time": "134",
+    "department": "師培中心",
+    "code": "0806",
+    "hours_parsed": 2,
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 31,
+    "year": "半",
+    "title": "輔導原理與實務 `>Principle and Practice of Guidance",
+    "title_parsed": {
+        "zh_TW": "輔導原理與實務",
+        "en_US": ">Principle and Practice of Guidance"
+    },
+    "number": "31",
+    "credits": "2",
+    "location": "SC746"
+}, {
+    "obligatory": "選修",
+    "professor": "關永馨",
+    "language": "中文",
+    "obligatory_tf": false,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [5, 6],
+        "day": 4
+    }],
+    "time": "456",
+    "department": "師培中心",
+    "code": "0807",
+    "hours_parsed": 2,
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 48,
+    "year": "半",
+    "title": "青少年發展 `>Adolescent Development",
+    "title_parsed": {
+        "zh_TW": "青少年發展",
+        "en_US": ">Adolescent Development"
+    },
+    "number": "48",
+    "credits": "2",
+    "location": "SC432"
+}, {
+    "obligatory": "必修",
+    "professor": "蔡文榮",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 2
+    }],
+    "time": "234",
+    "department": "師培中心",
+    "code": "0808",
+    "hours_parsed": 2,
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 80,
+    "year": "半",
+    "title": "教學原理 `>Instructional Theories",
+    "title_parsed": {
+        "zh_TW": "教學原理",
+        "en_US": ">Instructional Theories"
+    },
+    "number": "80",
+    "credits": "2",
+    "location": "SC226"
+}, {
+    "obligatory": "必修",
+    "professor": "王沛清",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [1, 2],
+        "day": 2
+    }],
+    "time": "212",
+    "department": "師培中心",
+    "code": "0809",
+    "hours_parsed": 2,
+    "previous": "教學原理",
+    "hours": "2",
+    "number_parsed": 36,
+    "year": "半",
+    "title": "數學/數學領域教材教法 `>Teaching Materials and Methods of Mathematics",
+    "title_parsed": {
+        "zh_TW": "數學/數學領域教材教法",
+        "en_US": ">Teaching Materials and Methods of Mathematics"
+    },
+    "number": "36",
+    "credits": "2",
+    "location": "SC747"
+}, {
+    "obligatory": "必修",
+    "professor": "韓碧琴",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [1, 2],
+        "day": 2
+    }],
+    "time": "212",
+    "department": "師培中心",
+    "code": "0810",
+    "hours_parsed": 2,
+    "previous": "教學原理",
+    "hours": "2",
+    "number_parsed": 36,
+    "year": "半",
+    "title": "國文/語文領域本國語文教材教法 `>CTeaching Materials and Methods of Chinese",
+    "title_parsed": {
+        "zh_TW": "國文/語文領域本國語文教材教法",
+        "en_US": ">CTeaching Materials and Methods of Chinese"
+    },
+    "number": "36",
+    "credits": "2",
+    "location": "SC746"
+}, {
+    "obligatory": "必修",
+    "professor": "韋金龍",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 3
+    }],
+    "time": "334",
+    "department": "師培中心",
+    "code": "0811",
+    "hours_parsed": 2,
+    "previous": "教學原理",
+    "hours": "2",
+    "number_parsed": 50,
+    "year": "半",
+    "title": "英文/語文領域英文教材教法 `>Teaching Materials and Methods of English",
+    "title_parsed": {
+        "zh_TW": "英文/語文領域英文教材教法",
+        "en_US": ">Teaching Materials and Methods of English"
+    },
+    "number": "50",
+    "credits": "2",
+    "location": "AA501"
+}, {
+    "obligatory": "必修",
+    "professor": "待聘",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 2
+    }],
+    "time": "234",
+    "department": "師培中心",
+    "code": "0812",
+    "hours_parsed": 2,
+    "previous": "教學原理",
+    "hours": "2",
+    "number_parsed": 50,
+    "year": "半",
+    "title": "歷史/社會領域歷史教材教法 `>Teaching Materials and Methods of History in Social Science Fields",
+    "title_parsed": {
+        "zh_TW": "歷史/社會領域歷史教材教法",
+        "en_US": ">Teaching Materials and Methods of History in Social Science Fields"
+    },
+    "number": "50",
+    "credits": "2",
+    "location": "Y622"
+}, {
+    "obligatory": "必修",
+    "professor": "許健將",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [7, 8],
+        "day": 2
+    }],
+    "time": "278",
+    "department": "師培中心",
+    "code": "0813",
+    "hours_parsed": 2,
+    "previous": "教學原理",
+    "hours": "2",
+    "number_parsed": 60,
+    "year": "半",
+    "title": "化學/自然與生活科技領域化學教材教法 `>Teaching Materials and Methods of Chemistry",
+    "title_parsed": {
+        "zh_TW": "化學/自然與生活科技領域化學教材教法",
+        "en_US": ">Teaching Materials and Methods of Chemistry"
+    },
+    "number": "60",
+    "credits": "2",
+    "location": "SC913"
+}, {
+    "obligatory": "必修",
+    "professor": "陳宇楓",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [8, 9],
+        "day": 3
+    }],
+    "time": "389",
+    "department": "師培中心",
+    "code": "0814",
+    "hours_parsed": 2,
+    "previous": "教學原理",
+    "hours": "2",
+    "number_parsed": 48,
+    "year": "半",
+    "title": "生物/自然與生活科技領域生物教材教法 `>Teaching Materials and Methods of Biology",
+    "title_parsed": {
+        "zh_TW": "生物/自然與生活科技領域生物教材教法",
+        "en_US": ">Teaching Materials and Methods of Biology"
+    },
+    "number": "48",
+    "credits": "2",
+    "location": "SC746"
+}, {
+    "obligatory": "必修",
+    "professor": "紀乃友",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [7, 8],
+        "day": 2
+    }],
+    "time": "278",
+    "department": "師培中心",
+    "code": "0815",
+    "hours_parsed": 2,
+    "previous": "教學原理",
+    "hours": "2",
+    "number_parsed": 48,
+    "year": "半",
+    "title": "物理/自然與生活科技領域物理教材教法 `>Teaching Materials and Methods of Physics",
+    "title_parsed": {
+        "zh_TW": "物理/自然與生活科技領域物理教材教法",
+        "en_US": ">Teaching Materials and Methods of Physics"
+    },
+    "number": "48",
+    "credits": "2",
+    "location": "SC432"
+}, {
+    "obligatory": "必修",
+    "professor": "王沛清",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [1, 2],
+        "day": 2
+    }],
+    "time": "212",
+    "department": "師培中心",
+    "code": "0817",
+    "hours_parsed": 2,
+    "previous": "教學原理",
+    "hours": "2",
+    "number_parsed": 50,
+    "year": "半",
+    "title": "資訊科技概論科教材教法 `>Instructional Materials and Methods for Introduction of Informational",
+    "title_parsed": {
+        "zh_TW": "資訊科技概論科教材教法",
+        "en_US": ">Instructional Materials and Methods for Introduction of Informational"
+    },
+    "number": "50",
+    "credits": "2",
+    "location": "SC747"
+}, {
+    "obligatory": "必修",
+    "professor": "劉子彰",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [5, 6],
+        "day": 3
+    }],
+    "time": "356",
+    "department": "師培中心",
+    "code": "0818",
+    "hours_parsed": 2,
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 48,
+    "year": "半",
+    "title": "教育社會學 `>Educational Sociology",
+    "title_parsed": {
+        "zh_TW": "教育社會學",
+        "en_US": ">Educational Sociology"
+    },
+    "number": "48",
+    "credits": "2",
+    "location": "SC432"
+}, {
+    "obligatory": "必修",
+    "professor": "廖錦文",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [12, 13],
+        "day": 4
+    }],
+    "time": "4CD",
+    "department": "師培中心",
+    "code": "0820",
+    "hours_parsed": 2,
+    "previous": "教學原理",
+    "hours": "2",
+    "number_parsed": 50,
+    "year": "半",
+    "title": "動力機械群教材教法 `>Instructional Materials and Methods for Subject of Dynamic Mechanics",
+    "title_parsed": {
+        "zh_TW": "動力機械群教材教法",
+        "en_US": ">Instructional Materials and Methods for Subject of Dynamic Mechanics"
+    },
+    "number": "50",
+    "credits": "2",
+    "location": "SC747"
+}, {
+    "obligatory": "必修",
+    "professor": "廖錦文",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [12, 13],
+        "day": 4
+    }],
+    "time": "4CD",
+    "department": "師培中心",
+    "code": "0821",
+    "hours_parsed": 2,
+    "previous": "教學原理",
+    "hours": "2",
+    "number_parsed": 50,
+    "year": "半",
+    "title": "機械群教材教法 `>Instructional Materials and Methods for Subject of Mechanics Disciplin",
+    "title_parsed": {
+        "zh_TW": "機械群教材教法",
+        "en_US": ">Instructional Materials and Methods for Subject of Mechanics Disciplin"
+    },
+    "number": "50",
+    "credits": "2",
+    "location": "SC747"
+}, {
+    "obligatory": "必修",
+    "professor": "雷偉斌",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [10, 11],
+        "day": 5
+    }],
+    "time": "5AB",
+    "department": "師培中心",
+    "code": "0822",
+    "hours_parsed": 2,
+    "previous": "教學原理",
+    "hours": "2",
+    "number_parsed": 50,
+    "year": "半",
+    "title": "食品群教材教法 `>Instructional Materials and Methods for Subject of Food Science",
+    "title_parsed": {
+        "zh_TW": "食品群教材教法",
+        "en_US": ">Instructional Materials and Methods for Subject of Food Science"
+    },
+    "number": "50",
+    "credits": "2",
+    "location": "SC746"
+}, {
+    "obligatory": "必修",
+    "professor": "雷偉斌",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [10, 11],
+        "day": 5
+    }],
+    "time": "5AB",
+    "department": "師培中心",
+    "code": "0823",
+    "hours_parsed": 2,
+    "previous": "教學原理",
+    "hours": "2",
+    "number_parsed": 50,
+    "year": "半",
+    "title": "農業群教材教法 `>Instructional Materials and Methods for Subject of Agriculture",
+    "title_parsed": {
+        "zh_TW": "農業群教材教法",
+        "en_US": ">Instructional Materials and Methods for Subject of Agriculture"
+    },
+    "number": "50",
+    "credits": "2",
+    "location": "SC746"
+}, {
+    "obligatory": "必修",
+    "professor": "黃淑苓",
+    "language": "中文",
+    "obligatory_tf": true,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [1, 2],
+        "day": 4
+    }],
+    "time": "412",
+    "department": "師培中心",
+    "code": "0824",
+    "hours_parsed": 2,
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 48,
+    "year": "半",
+    "title": "教育心理學 `>Educational Psychology",
+    "title_parsed": {
+        "zh_TW": "教育心理學",
+        "en_US": ">Educational Psychology"
+    },
+    "number": "48",
+    "credits": "2",
+    "location": "SC432"
+}, {
+    "obligatory": "選修",
+    "professor": "白慧娟",
+    "language": "中文",
+    "obligatory_tf": false,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [3, 4],
+        "day": 4
+    }],
+    "time": "434",
+    "department": "師培中心",
+    "code": "0825",
+    "hours_parsed": 2,
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 31,
+    "year": "半",
+    "title": "親職教育 `>Parenting Education",
+    "title_parsed": {
+        "zh_TW": "親職教育",
+        "en_US": ">Parenting Education"
+    },
+    "number": "31",
+    "credits": "2",
+    "location": "SC746"
+}, {
+    "obligatory": "選修",
+    "professor": "梁福鎮",
+    "language": "中文",
+    "obligatory_tf": false,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [7, 8],
+        "day": 2
+    }],
+    "time": "278",
+    "department": "師培中心",
+    "code": "0827",
+    "hours_parsed": 2,
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 70,
+    "year": "半",
+    "title": "改革教育學 `>Reformative Pedagogy",
+    "title_parsed": {
+        "zh_TW": "改革教育學",
+        "en_US": ">Reformative Pedagogy"
+    },
+    "number": "70",
+    "credits": "2",
+    "location": "SC202"
+}, {
+    "obligatory": "選修",
+    "professor": "梁福鎮",
+    "language": "中文",
+    "obligatory_tf": false,
+    "credits_parsed": 2,
+    "note": "",
+    "time_parsed": [{
+        "time": [5, 6],
+        "day": 1
+    }],
+    "time": "156",
+    "department": "師培中心",
+    "code": "0828",
+    "hours_parsed": 2,
+    "previous": "",
+    "hours": "2",
+    "number_parsed": 48,
+    "year": "半",
+    "title": "比較教育 `>Comparative Education",
+    "title_parsed": {
+        "zh_TW": "比較教育",
+        "en_US": ">Comparative Education"
+    },
+    "number": "48",
+    "credits": "2",
+    "location": "SC432"
+}]
 }
