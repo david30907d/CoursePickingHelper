@@ -149,17 +149,17 @@
                 <div class="container-fluid">
                     <div class="col-xs-4" id="btn-tools">
                         <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#focus">
-                            <span class="fa fa-heart fa-1x fa-fw"></span>選擇系級(Search by Department)
+                            <span class="fa fa-heart fa-1x fa-fw"></span>Department and Degree
                         </button>
                     </div>
                     <div class="col-xs-4" id="btn-tools">
                         <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#search">
-                            <span class="fa fa-search fa-1x fa-fw"></span>課程查詢(Course Information)
+                            <span class="fa fa-search fa-1x fa-fw"></span>Course Search
                         </button>
                     </div>
                     <div class="col-xs-4" id="btn-tools">
                         <button type="button" class="btn btn-warning btn-block" id="clear-button">
-                            <span class="fa fa-trash fa-1x fa-fw"></span>清除(Clear)
+                            <span class="fa fa-trash fa-1x fa-fw"></span>Clear
                         </button>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                                 <span class="glyphicon glyphicon-triangle-bottom"></span>
                                 <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
                             </button>
-                            必修(Obligatory)
+                            Required Course
                             <button type="button" class="close obligatory"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="obligatory-post" slide="">                          
@@ -184,7 +184,7 @@
                                 <span class="glyphicon glyphicon-triangle-bottom"></span>
                                 <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
                             </button>
-                            學年課(Course of two semesters?)
+                            Yearly Class
                             <button type="button" class="close general"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="year-post">
@@ -195,7 +195,7 @@
                             <button type="button" id="elective-span" style="background:none; border:none">
                                 <span class="glyphicon glyphicon-triangle-bottom"></span>
                                 <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
-                            </button>選修(optional)
+                            </button>Optional Course
                             <button type="button" class="close elective"><span class="fa fa-trash"></span></button>
                         <div class="expander"></div>
                         </div>
@@ -215,7 +215,7 @@
                             <h5 id="">Fifth-grade</h5>
                             <div id="fifth-grade">                                 
                             </div>
-                            <h5 id="">不分年級(for all degree)</h5>
+                            <h5 id="">Non-graded</h5>
                             <div id="whole-school">                                 
 
                             </div>
@@ -227,17 +227,17 @@
                                 <span class="glyphicon glyphicon-triangle-bottom"></span>
                                 <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
                             </button>
-                            通識(General Education)
+                            General Education
                             <button type="button" class="close general"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="general-post">
-                            <h5 id="">人文領域(Humanities)</h5>
+                            <h5 id="">Humanities</h5>
                             <div id="humanities">
                             </div>
-                            <h5 id="">社會科學領域(Social Science)</h5>
+                            <h5 id="">Social Science</h5>
                             <div id="social">
                             </div>
-                            <h5 id="">自然科學領域(Natural Science)</h5>
+                            <h5 id="">Natural Science</h5>
                             <div id="natural">
                             </div>
                         </div>
@@ -248,7 +248,7 @@
                                 <span class="glyphicon glyphicon-triangle-bottom"></span>
                                 <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
                             </button>
-                            體育(PE)
+                            Physical Education
                             <button type="button" class="close PE"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="PE-post">
@@ -260,7 +260,7 @@
                                 <span class="glyphicon glyphicon-triangle-bottom"></span>
                                 <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
                             </button>
-                            指定搜尋(specific search)
+                            Search Result
                             <button type="button" class="close search"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="search-post">
@@ -272,16 +272,16 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h3 class="modal-title" id="myModalLabel"><span class="fa fa-heart fa-1x fa-fw"></span>選擇系級(Department and Degree)</h3>
+                                <h3 class="modal-title" id="myModalLabel"><span class="fa fa-heart fa-1x fa-fw"></span>Department and Degree</h3>
                             </div>
                             
                         <div class="modal-body">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="v_career" class="col-xs-2 control-label">學制(Degree)</label>
+                                    <label for="v_career" class="col-xs-2 control-label">Degree</label>
                                     <div class="col-xs-10">
                                         <select class="form-control" name="v_career" id="v_career">
-                                            <option value="0">請選擇學制(Choose Degree)</option>
+                                            <option value="0">Choose Degree</option>
                                             <option value="U">Undergraduate</option>
                                             <option value="G">Graduate</option>
                                             <option value="D">Ph.D</option>
@@ -346,15 +346,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="v_level" class="col-xs-2 control-label">年級(Level)</label>
+                                    <label for="v_level" class="col-xs-2 control-label">grade</label>
                                     <div class="col-xs-10">
                                         <select class="form-control" name="v_level" id="v_level">
-                                            <option value="">請選擇年級(Choose Level)</option>
-                                            <option value="1">一年級(Freshman)</option>
-                                            <option value="2">二年級(Sophomore)</option>
-                                            <option value="3">三年級(Junior)</option>
-                                            <option value="4">四年級(Senior)</option>
-                                            <option value="5">五年級(Fifth-Grade?)</option>
+                                            <option value="">Choose grade</option>
+                                            <option value="1">Freshman</option>
+                                            <option value="2">Sophomore</option>
+                                            <option value="3">Junior</option>
+                                            <option value="4">Senior</option>
+                                            <option value="5">Fifth-Grade</option>
                                         </select>
                                     </div>
                                 </div>
@@ -373,12 +373,12 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h3 class="modal-title" id="myModalLabel"><span class="fa fa-search fa-1x fa-fw"></span>課程查詢(Search)</h3>
+                                <h3 class="modal-title" id="myModalLabel"><span class="fa fa-search fa-1x fa-fw"></span>Course Search</h3>
                             </div>                            
 				        <div class="modal-body">
 				            <form class="form-horizontal">
 				                <div class="form-group">
-				                    <label for="s_major" class="col-xs-2 control-label">系所(Department)</label>
+				                    <label for="s_major" class="col-xs-2 control-label">Department</label>
 				                    <div class="col-xs-10">
 				                        <select class="form-control" name="s_major" id="s_major">
 				                            <option value="">-----</option>
@@ -432,55 +432,57 @@
 				                    </div>
 				                </div>
 				                <div class="form-group">
-                                    <label for="s_level" class="col-xs-2 control-label">年級(Level)</label>
+                                    <label for="s_level" class="col-xs-2 control-label">Grade</label>
                                     <div class="col-xs-10">
                                         <select class="form-control" name="s_level" id="s_level">
 				                        	<option value="">-----</option>
-				                            <option value="1">一年級(Freshman)</option>
-				                            <option value="2">二年級(Sophomore)</option>
-				                            <option value="3">三年級(Junior)</option>
-				                            <option value="4">四年級(Senior)</option>
-				                            <option value="5">五年級(Fifth_grade)</option>
+				                            <option value="1">Freshman</option>
+				                            <option value="2">Sophomore</option>
+				                            <option value="3">Junior</option>
+				                            <option value="4">Senior</option>
+				                            <option value="5">Fifth_grade</option>
 				                        </select>
 				                    </div>
 				                </div>
 				                <div class="form-group">
-                                    <label for="class_credit" class="col-xs-2 control-label">學分數(Credits or units?)</label>
+                                    <label for="class_credit" class="col-xs-2 control-label">Credits</label>
                                     <div class="col-xs-10">
                                         <input type="teacher" class="form-control" id= value="0">
                                     </div>
                                 </div>
 				                <div class="form-group">
-				                    <label for="class_title" class="col-xs-2 control-label">課程名稱(Course Name(Key word))</label>
+				                    <label for="class_title" class="col-xs-2 control-label">Course Name(Key word)</label>
 				                    <div class="col-xs-10">
 				                        <input type="class" class="form-control" id="class_title">
 				                    </div>
 				                </div>
 				                <div class="form-group">
-				                    <label for="class_code" class="col-xs-2 control-label">課程代碼(Course Number)</label>
+				                    <label for="class_code" class="col-xs-2 control-label">Course Number</label>
 				                    <div class="col-xs-10">
 				                        <input type="class" class="form-control" id="class_code">
 				                    </div>
 				                </div>
 				                <div class="form-group">
-				                    <label for="class_teacher" class="col-xs-2 control-label">授課教師(Professor)</label>
+				                    <label for="class_teacher" class="col-xs-2 control-label">Professor</label>
 				                    <div class="col-xs-10">
 				                        <input type="teacher" class="form-control" id="class_teacher">
 				                    </div>
 				                </div>
 				                <div class="form-group">
-				                    <label for="class_room" class="col-xs-2 control-label">上課教室(Classroom)</label>
+				                    <label for="class_room" class="col-xs-2 control-label">Classroom</label>
 				                    <div class="col-xs-10">
 				                        <input type="teacher" class="form-control" id="class_room">
 				                    </div>
 				                </div>
 				                <div class="form-group">
-				                    <label class="col-xs-12 control-label" style="text-align: center;">欄位留白表示該條件不設限制(The blank with ----- means those blank should all be chosen if one of which is selected)</label>
+				                    <label class="col-xs-12 control-label" style="text-align: center;">If you fill in the blank with the sign---, you should fill in those which have the same sign, or the search function would never work.
+
+                                    <br\>However, the same rule doesn't apply to the blanks with no signs.</label>
 				                </div>
 				                <div class="form-group">
-				                    <a class="btn btn-lg col-sm-3 col-sm-offset-1" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-1x fa-fw"></span>課程查詢系統Course Information System</a>
-				                    <a class="btn btn-lg col-sm-3" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home_e" target="_blank"><span class="fa fa-book fa-1x fa-fw"></span>通識中心General Education Center</a>
-				                    <a class="btn btn-lg col-sm-3" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-1x fa-fw"></span>單一簽入系統(Entry of School System)</a>
+				                    <a class="btn btn-lg col-sm-3 col-sm-offset-1" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-1x fa-fw"></span>Course Information System</a>
+				                    <a class="btn btn-lg col-sm-3" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home_e" target="_blank"><span class="fa fa-book fa-1x fa-fw"></span>General Education Center</a>
+				                    <a class="btn btn-lg col-sm-3" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-1x fa-fw"></span>Entry of School System</a>
 				                </div>
 				            </form>
 				        </div>
@@ -495,10 +497,10 @@
             <div class="col-md-9">
                 <div class="row" id="curriculum-title">
                     <div class="col-xs-4 col-xs-offset-4" style="text-align:center;">
-                        <h2 id="span-color">課表(Time Table)<span class="fa fa-sun-o fa-1x fa-fw" value="sun" id="toggleTable"></span></h2>
+                        <h2 id="span-color">Time Table<span class="fa fa-sun-o fa-1x fa-fw" value="sun" id="toggleTable"></span></h2>
                     </div>
                     <div class="col-xs-4" style="text-align:left;">
-                        <h2><small><span class="glyphicon glyphicon-user"></span>學分(Credits of Units?) <span class="badge" id="class_credit"></span></small></h2>
+                        <h2><small><span class="glyphicon glyphicon-user"></span>Credits<span class="badge" id="class_credit"></span></small></h2>
                     </div>
                 </div>
 
@@ -506,7 +508,7 @@
                     <table class="table table-striped table-hover table-condensed table-bordered">
                         <thead>
                             <tr class="info">
-                                <th style="width: 1px">時間(Week Day)</th>
+                                <th style="width: 1px">Week Day</th>
                                 <th style="width: 20%">Mon</th>
                                 <th style="width: 20%">Tue</th>
                                 <th style="width: 20%">Wed</th>
@@ -673,7 +675,7 @@
         //var courses = null;
             $(function(){
                 /**一開始的簡易版使用說明**/
-                //toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});
+                toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});
                 //當文件準備好的時候，讀入json檔
                 $.getJSON('json/protoC.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
                     window.credits=0//一開始的學分數是0
