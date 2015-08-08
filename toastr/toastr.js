@@ -177,7 +177,7 @@
                     },
                     iconClass: 'toast-info',
                     /************改變位置 不會 所以從這裡改XD************/
-                    positionClass: 'toast-bottom-full-width',
+                    positionClass: 'toast-top-right',
                     timeOut: 5000, // Set timeOut and extendedTimeOut to 0 to make it sticky
                     titleClass: 'toast-title',
                     messageClass: 'toast-message',
