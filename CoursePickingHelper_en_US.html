@@ -244,14 +244,29 @@
                     </div>
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            <button type="button" id="PE-span" style="background:none; border:none">
+                            <button type="button" id="school-span" style="background:none; border:none">
                                 <span class="glyphicon glyphicon-triangle-bottom"></span>
                                 <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
                             </button>
-                            Physical Education
+                            全校共同(available for all student?)
                             <button type="button" class="close PE"><span class="fa fa-trash"></span></button>
                         </div>
-                        <div class="panel-body" id="PE-post">
+                        <div class="panel-body" id="school-post">
+                            <h5 id="">Pysical Education</h5>
+                            <div id="PE-post">
+                            </div>
+                            <h5 id="">Language Course</h5>
+                            <div id="foreign-post">
+                            </div>
+                            <h5 id="">Other Optional Course</h5>
+                            <div id="non-graded-optional-post">
+                            </div>
+                            <h5 id="">Education Program</h5>
+                            <div id="teacher-post">
+                            </div>
+                            <h5 id="">Military Education</h5>
+                            <div id="military-post">
+                            </div>
                         </div>
                     </div>
                     <div class="panel panel-info">
@@ -758,9 +773,9 @@
                     $('#general-span').find("span").toggle();
                 });
                     /***體育***/
-                $("#PE-span").click(function(){
-                    $('#PE-post').slideToggle();
-                    $('#PE-span').find("span").toggle();
+                $("#school-span").click(function(){
+                    $('#school-post').slideToggle();
+                    $('#school-span').find("span").toggle();
                 });
                     /***搜尋***/
                 $("#search-span").click(function(){
@@ -955,7 +970,7 @@
                     major=major[0];
                     $.each(courses[code],function(ik,iv){                        
                         if(iv.obligatory_tf==true&&iv.for_dept==major){
-                            toastr.warning("This is an obligatory class, if you want to restore please click the 'plus' button", {timeOut: 2500});
+                            toastr.warning("This is an required course, if you want to restore please click the 'plus' button", {timeOut: 2500});
                             delete_course($('#time-table'), iv); //就跟add_course一樣，只是把填東西改成刪掉
                             return false;
                         }    
@@ -985,7 +1000,7 @@
                             if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))||iv.for_dept==undefined){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列  
                                 console.log(iv)  
                                 if(iv.obligatory_tf==true){                                 
-                                    bulletin_post($("#obligatory-post"),iv, language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
+                                    check_which_bulletin_required(iv);//判斷為師培或是必修課                 
                                 }
                                 else if(iv.obligatory_tf==false){
                                     check_which_bulletin(iv);//由fuction決定該貼到哪個年級的欄位
@@ -1177,8 +1192,12 @@
                 $('#whole-school').empty();                               
                 $('#humanities').empty();
                 $('#social').empty();
-                $('#natural').empty();
-                $('#PE-post').empty();                
+                $('#natural').empty();                
+                $('#PE-post').empty();   
+                $('#foreign-post').empty(); 
+                $('#non-graded-optional-post').empty();   
+                $('#teacher-post').empty();
+                $('#military-post').empty();              
             }   
             var change_color=function($target,command){	//一旦添加了課程，則側欄的課名改了顏色 
                 if(command=="restore"){
@@ -1225,7 +1244,7 @@
                     return (level);    //取到年級
                 }
             } 
-            var check_which_bulletin=function(course){	//為了判斷A、B班以及不分班的科系開被放到哪個bulletin
+            var check_which_bulletin=function(course){  //為了判斷A、B班以及不分班的科系開被放到哪個bulletin
                 if(course.class=="1"||course.class=="1A"||course.class=="1B"){
                     bulletin_post($("#freshman"),course, language);
                 }
@@ -1240,14 +1259,23 @@
                 }
                 else if(course.class=="5"||course.class=="5A"||course.class=="5B"){
                     bulletin_post($("#fifth-grade"),course, language);
-                }
+                }                
                 else if(course.class==""){
                     bulletin_post($("#whole-school"),course, language);
                 }
                 else if(course.class==undefined){
-                    check_general_or_PE(course);
+                    check_general_or_school(course);
                 }
+
             } 
+            var check_which_bulletin_required=function(course){
+                if(course.department=="師培中心"){
+                    bulletin_post($("#teacher-post"),course, language);                  
+                }
+                else{
+                    bulletin_post($("#obligatory-post"),course, language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
+                }
+            }
             var department_course_for_specific_search=function(major,level){
                 $.each(course_of_majors[major][level], function(ik, iv){//因為這種輔系的課一定是交給使用者自己選，所以就不自動填入
                             $.each(courses[iv],function(jk,jv){
@@ -1264,12 +1292,26 @@
                             })                                                                                      
                         });                                                        
             }     
-            var check_general_or_PE=function(course){
+            var check_general_or_school=function(course){
                 var disciplineH={"文學":"","歷史":"","哲學":"","藝術":"","文化":""}
                 var disciplineS={"公民與社會":"","法律與政治":"","商業與管理":"","心理與教育":"","資訊與傳播":""}
                 var disciplineN={"生命科學":"","環境科學":"","物質科學":"","數學統計":"","工程科技":""}
                 if(course.discipline==undefined){
-                    bulletin_post($("#PE-post"), course, language)
+                    if(course.department=="師培中心"){
+                        bulletin_post($("#teacher-post"),course, language);              
+                    }
+                    else if(course.department=="教官室"){
+                        bulletin_post($("#military-post"),course, language);             
+                    }
+                    else if(course.department=="體育室"||course.department=="夜間共同"){
+                        bulletin_post($("#PE-post"),course, language);              
+                    }
+                    else if(course.department=="語言中心"||course.department=="外文系"){
+                        bulletin_post($("#foreign-post"),course, language);              
+                    } 
+                    else{
+                        bulletin_post($("#non-graded-optional-post"),course, language);              
+                    }                   
                 }
                 else if(course.discipline in disciplineH){
                     bulletin_post($("#humanities"), course, language)
@@ -1280,7 +1322,7 @@
                 else if(course.discipline in disciplineN){
                     bulletin_post($("#natural"), course, language)
                 }
-            };          
+            };            
             var build_bulletin_time=function(course){
                 var time = [];  //time設定為空陣列                
                 time.push("Class time:");
@@ -1290,9 +1332,9 @@
                 time.push("Class number:"+course.code);
                 if(course.discipline!=undefined){//代表他是通識課
                 	time.push("Professor:"+course.professor);
+                    time.push("Discipline:"+course.discipline);
                     time.push("Remaining seat:"+course.remaining_seat);
                     time.push("Possibility:"+course.possibility);
-                    time.push("Department:"+course.department);                   
                 }
                 time = time.join(' ');  //把多個陣列用" "分隔並合併指派給time，此為字串型態，若是將字串split('')，則會回傳一個陣列型態           
                 return time;

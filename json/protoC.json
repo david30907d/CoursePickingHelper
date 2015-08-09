@@ -197,7 +197,7 @@
         "number": "300",
         "professor": "王精文等",
         "language": "中文",
-        "obligatory_tf": true,
+        "obligatory_tf": false,
         "title": "企業家講座 `Seminar on Entrepreneurs",
         "number_parsed": 300,
         "department": "管理學院",
@@ -56420,7 +56420,7 @@
     }, {
     "obligatory": "必修",
     "credits_parsed": 3,
-    "obligatory_tf": true,
+    "obligatory_tf": false,
     "language": "中文",
     "note": "限新生延續暑期微積分(一)先修班者優先,為全學年微積分下學期授課內容",
     "credits": "3",
