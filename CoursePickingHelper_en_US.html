@@ -200,6 +200,10 @@
                         <div class="expander"></div>
                         </div>
                         <div class="panel-body" id="elective-post">
+                            <button type="button" id="freshman-span" style="background:none; border:none">
+                                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
+                            </button>
                             <h5 id="">一年級</h5>
                             <div id="freshman">                     
                             </div>
@@ -765,6 +769,7 @@
                     $('#search-post').slideToggle();
                     $('#search-span').find("span").toggle();
                 });
+
                 /*******   ↑製作隱藏側欄的功能↑   *******/
                                                    
                 $("#bulletin").delegate("span.fa-trash", "click", function(){	//這是給垃圾桶用的                    
@@ -964,8 +969,7 @@
                          
                     })
                 });                               
-                $("#time-table").on("click","span",function(){ //按一下課表欄位就有課程彈出來了                    
-                	console.log("HI");
+                $("#time-table").on("click","span",function(){ //按一下課表欄位就有課程彈出來了
                     if($(this).text()==""){ //我現在才知道null!=""
                         var major=$("#v_major").val();  //取到系                       
                         major=major.split(" ");//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
