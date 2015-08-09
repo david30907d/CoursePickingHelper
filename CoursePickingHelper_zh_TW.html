@@ -200,24 +200,23 @@
                         <div class="expander"></div>
                         </div>
                         <div class="panel-body" id="elective-post">
-                            <h5 id="">一年級</h5>
+                            <h5 id="freshman-head">一年級</h5>
                             <div id="freshman">                     
                             </div>
-                            <h5 id="">二年級</h5>
+                            <h5 id="sophomore-head">二年級</h5>
                             <div id="sophomore">
                             </div>
-                            <h5 id="">三年級</h5>
+                            <h5 id="junior-head">三年級</h5>
                             <div id="junior">
                             </div>
-                            <h5 id="">四年級</h5>
+                            <h5 id="senior-head">四年級</h5>
                             <div id="senior">
                             </div>
-                            <h5 id="">五年級</h5>
+                            <h5 id="fifth-grade-head">五年級</h5>
                             <div id="fifth-grade">                                 
                             </div>
-                            <h5 id="">不分年級</h5>
-                            <div id="whole-school">                                 
-
+                            <h5 id="whole-school-head">不分年級</h5>
+                            <div id="whole-school">
                             </div>
                         </div>
                     </div>
@@ -767,6 +766,28 @@
                     $('#search-post').slideToggle();
                     $('#search-span').find("span").toggle();
                 });
+                    /***一年級***/
+                $("#freshman-head").click(function(){
+                    $("#freshman").find("button").toggle("slow");
+                });
+
+                $("#sophomore-head").click(function(){
+                    $("#sophomore").find("button").toggle("slow");
+                });
+                $("#junior-head").click(function(){
+                    $("#junior").find("button").toggle("slow");
+                });
+                $("#senior-head").click(function(){
+                    $("#senior").find("button").toggle("slow");
+                });
+                $("#fifth-grade-head").click(function(){
+                    $("#fifth-grade").find("button").toggle("slow");
+                });
+                $("#whole-school-head").click(function(){
+                    $("#whole-school").find("button").toggle("slow");
+                });
+                   
+                
                 /*******   ↑製作隱藏側欄的功能↑   *******/
                                                    
                 $("#bulletin").delegate("span.fa-trash", "click", function(){	//這是給垃圾桶用的                    
