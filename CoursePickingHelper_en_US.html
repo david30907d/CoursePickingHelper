@@ -248,10 +248,16 @@
                                 <span class="glyphicon glyphicon-triangle-bottom"></span>
                                 <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
                             </button>
-                            全校共同(available for all student?)
+                            Common Subject
                             <button type="button" class="close PE"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="school-post">
+                            <h5 id="">Freshman Chinese</h5>
+                            <div id="chinese">
+                            </div>
+                            <h5 id="">Freshman English</h5>
+                            <div id="english">
+                            </div>
                             <h5 id="">Pysical Education</h5>
                             <div id="PE-post">
                             </div>
@@ -375,7 +381,7 @@
                                 </div>
                             </form>
                         </div>
-
+                        <center><h4>appreciate <a href="https://www.facebook.com/profile.php?id=100000490692318">glory's</a> contribution to translation, best regard!!</h4></center>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-success" data-dismiss="modal" id="department_search">Submit</button>
@@ -690,7 +696,7 @@
         //var courses = null;
             $(function(){
                 /**一開始的簡易版使用說明**/
-                toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});
+                toastr.success('1. Please start with "department and grade" (if you dont follow the rules above, the following functions would never work)<br />2. If you click the "plus" icon, the bulletin on the left would show the available courses.<br />3. any course can be found by using function "Course Search"', "Instruction", {timeOut: 2500});
                 //當文件準備好的時候，讀入json檔
                 $.getJSON('json/protoC.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
                     window.credits=0//一開始的學分數是0
@@ -784,7 +790,7 @@
                 });
                 /*******   ↑製作隱藏側欄的功能↑   *******/
                                                    
-                $("#bulletin").delegate("span.fa-trash", "click", function(){	//這是給垃圾桶用的                    
+                $("#bulletin").delegate("span.fa-trash", "click", function(){   //這是給垃圾桶用的
                     if($(this).parents("button").attr("class")=="close obligatory"){
                         $("#obligatory-post").empty();
                     }
@@ -797,11 +803,16 @@
                     }
                     else if($(this).parents("button").attr("class")=="close general"){
                         $('#humanities').empty();
-		                $('#social').empty();
-		                $('#natural').empty();
+                        $('#social').empty();
+                        $('#natural').empty();
                     }
-                    else if($(this).parents("button").attr("class")=="close PE"){
-                        $("#PE-post").empty();
+                    else if($(this).parents("button").attr("class")=="close other"){
+                        $('#chinese').empty();
+                        $('#english').empty();
+                        $('#PE').empty();
+                        $('#defense').empty();
+                        $('#education').empty();
+                        $('#language').empty();
                     }
                 });             
                 $("#bulletin").delegate("button.btn-link", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件                                  
@@ -1197,7 +1208,9 @@
                 $('#foreign-post').empty(); 
                 $('#non-graded-optional-post').empty();   
                 $('#teacher-post').empty();
-                $('#military-post').empty();              
+                $('#military-post').empty();  
+                $('#chinese').empty();
+                $('#english').empty();            
             }   
             var change_color=function($target,command){	//一旦添加了課程，則側欄的課名改了顏色 
                 if(command=="restore"){
