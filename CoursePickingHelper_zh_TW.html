@@ -1242,9 +1242,10 @@
                 $('#chinese').empty();
                 $('#english').empty();
                 $('#PE').empty();
-                $('#defense').empty();
-                $('#education').empty();
-                $('#language').empty();
+                $('#military-post').empty();
+                $('#teacher-post').empty();
+                $('#foreign-post').empty(); 
+                $('#non-graded-optional-post').empty();
                 $('#search-post').empty();
                 window.credits=0;
                 $("#class_credit").text(window.credits);
@@ -1339,8 +1340,16 @@
 
             } 
             var check_which_bulletin_required=function(course){
+                var EN={"語言中心":"","夜共同科":"","夜外文":""};
+                var CH={"通識中心":"","夜中文":""};
                 if(course.department=="師培中心"){
                     bulletin_post($("#teacher-post"),course, language);                  
+                }
+                else if(course.department in EN){
+                    bulletin_post($("#english"),course, language);
+                }
+                else if(course.department in CH){
+                    bulletin_post($("#chinese"),course, language);
                 }
                 else{
                     bulletin_post($("#obligatory-post"),course, language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
@@ -1363,9 +1372,9 @@
                         });                                                        
             }     
             var check_general_or_school=function(course){
-                var disciplineH={"文學":"","歷史":"","哲學":"","藝術":"","文化":""}
-                var disciplineS={"公民與社會":"","法律與政治":"","商業與管理":"","心理與教育":"","資訊與傳播":""}
-                var disciplineN={"生命科學":"","環境科學":"","物質科學":"","數學統計":"","工程科技":""}
+                var disciplineH={"文學":"","歷史":"","哲學":"","藝術":"","文化":""};
+                var disciplineS={"公民與社會":"","法律與政治":"","商業與管理":"","心理與教育":"","資訊與傳播":""};
+                var disciplineN={"生命科學":"","環境科學":"","物質科學":"","數學統計":"","工程科技":""};
                 if(course.discipline==undefined){
                     if(course.department=="師培中心"){
                         bulletin_post($("#teacher-post"),course, language);              
