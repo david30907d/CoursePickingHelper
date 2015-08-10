@@ -212,24 +212,42 @@
                         <div class="expander"></div>
                         </div>
                         <div class="panel-body" id="elective-post">
-                            <h5 id="">一年級</h5>
+                            <h5 id="freshman-head">
+                                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>一年級
+                            </h5>
                             <div id="freshman">
                             </div>
-                            <h5 id="">二年級</h5>
+                            <h5 id="sophomore-head">
+                                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>二年級
+                            </h5>
                             <div id="sophomore">
                             </div>
-                            <h5 id="">三年級</h5>
+                            <h5 id="junior-head">
+                                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>三年級
+                                </h5>
                             <div id="junior">
                             </div>
-                            <h5 id="">四年級</h5>
+                            <h5 id="senior-head">
+                                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>四年級
+                            </h5>
                             <div id="senior">
                             </div>
-                            <h5 id="">五年級</h5>
-                            <div id="fifth-grade">
+                            <h5 id="fifth-grade-head">
+                                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>五年級
+                            </h5>
+                            <div id="fifth-grade">                                 
                             </div>
-                            <h5 id="">不分年級</h5>
+                            <h5 id="whole-school-head">
+                                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
+                                不分年級
+                            </h5>
                             <div id="whole-school">
-
                             </div>
                         </div>
                     </div>
@@ -796,6 +814,34 @@
                     $('#search-post').slideToggle();
                     $('#search-span').find("span").toggle();
                 });
+                    /***一年級***/
+                $("#freshman-head").click(function(){
+                    $("#freshman-head").find("span").toggle();
+                    $("#freshman").find("button").toggle("slow");
+                });
+
+                $("#sophomore-head").click(function(){
+                    $("#sophomore-head").find("span").toggle();
+                    $("#sophomore").find("button").toggle("slow");
+                });
+                $("#junior-head").click(function(){
+                    $("#junior-head").find("span").toggle();
+                    $("#junior").find("button").toggle("slow");
+                });
+                $("#senior-head").click(function(){
+                    $("#senior-head").find("span").toggle();
+                    $("#senior").find("button").toggle("slow");
+                });
+                $("#fifth-grade-head").click(function(){
+                    $("#fifth-grade-head").find("span").toggle();
+                    $("#fifth-grade").find("button").toggle("slow");
+                });
+                $("#whole-school-head").click(function(){
+                    $("#whole-school-head").find("span").toggle();
+                    $("#whole-school").find("button").toggle("slow");
+                });
+                   
+                
                 /*******   ↑製作隱藏側欄的功能↑   *******/
 
                 $("#bulletin").delegate("span.fa-trash", "click", function(){	//這是給垃圾桶用的
