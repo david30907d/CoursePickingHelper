@@ -1010,7 +1010,7 @@
                     major=major[0];
                     $.each(courses[code],function(ik,iv){
                         if(iv.obligatory_tf==true&&iv.for_dept==major){
-                            toastr.warning("此為必修課，若要復原請點擊課表空格", {timeOut: 2500});
+                            toastr.warning("This is an obligatory class, if you want to restore please click the 'plus' button", {timeOut: 2500});
                             delete_course($('#time-table'), iv); //就跟add_course一樣，只是把填東西改成刪掉
                             return false;
                         }
@@ -1125,7 +1125,7 @@
                         var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
                         if($td.text()!=""){ //用來判斷td裡面是不已經有放過課程了，但若先在裡面放個按鈕那.text()回傳回來的也是空字串                    
                             check_conflict = true;                            
-                            toastr.error("衝堂喔!請手動刪除衝堂的課程", {timeOut: 2500});
+                            toastr.error("opps!You are not available at that time! Please drop out some class", {timeOut: 2500});
                             return false;   //傳回false就是跳離迴圈
                         }
                     });
@@ -1253,7 +1253,7 @@
                     $target.css("color","red");
                 }
                 else{
-                    alert("遇到不可預期的錯誤，請聯絡開發小組XD");
+                    alert("This situation is so weird that I didn't expected, please contact us for a better service XDD");
                 }
             }
             var check_optional_obligatory=function(course){ //用來確認這個戲有幾堂必修課是同名的
