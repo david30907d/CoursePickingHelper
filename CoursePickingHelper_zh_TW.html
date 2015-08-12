@@ -176,6 +176,8 @@
                             <button type="button" class="close search"><span class="fa fa-trash"></span></button>
                         </div>
                         <div class="panel-body" id="search-post">
+                            <!--<h5 style="color:#3074B5;" value="0320">台灣歷史導論</h5>-->
+                            <!--<h5 style="color:#3074B5;" value="0321">台灣歷史導論</h5>-->
                         </div>
                     </div>
                     <div class="panel panel-info">
@@ -240,7 +242,7 @@
                                 <span class="glyphicon glyphicon-triangle-bottom"></span>
                                 <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>五年級
                             </h5>
-                            <div id="fifth-grade">                                 
+                            <div id="fifth-grade">
                             </div>
                             <h5 id="whole-school-head">
                                 <span class="glyphicon glyphicon-triangle-bottom"></span>
@@ -271,7 +273,7 @@
                             <div id="natural">
                             </div>
                         </div>
-                    </div>                
+                    </div>
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <button type="button" id="school-span" style="background:none; border:none">
@@ -302,9 +304,9 @@
                             </div>
                             <h5 id="">全校選修</h5>
                             <div id="non-graded-optional-post">
-                            </div>                                                    
+                            </div>
                         </div>
-                    </div>                                        
+                    </div>
 
                 </div>
                 <div class="modal fade modal fade bs-example-modal-lg" id="focus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -721,7 +723,7 @@
 
             $(function(){
                 /**一開始的簡易版使用說明**/
-                toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});
+                //toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});
                 //當文件準備好的時候，讀入json檔
                 $.getJSON('json/protoC.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
                     window.credits=0//一開始的學分數是0
@@ -840,8 +842,8 @@
                     $("#whole-school-head").find("span").toggle();
                     $("#whole-school").find("button").toggle("slow");
                 });
-                   
-                
+
+
                 /*******   ↑製作隱藏側欄的功能↑   *******/
 
                 $("#bulletin").delegate("span.fa-trash", "click", function(){	//這是給垃圾桶用的
@@ -1059,10 +1061,10 @@
                         var day=$(this).closest("td").attr("data-day");//因為我把同一時段的課程塞進陣列裡，所以要用index去取
                         var hour=$(this).closest("tr").attr("data-hour");
                         reset_for_time_request();
-                        $.each(course_of_day[day][hour], function(ik, iv){                                             
-                            if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))||iv.for_dept==undefined){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列  
-                                console.log(iv)  
-                                if(iv.obligatory_tf==true){                                 check_which_bulletin_required(iv);//判斷為師培或是必修課                                
+                        $.each(course_of_day[day][hour], function(ik, iv){
+                            if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))||iv.for_dept==undefined){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列
+                                console.log(iv)
+                                if(iv.obligatory_tf==true){                                 check_which_bulletin_required(iv);//判斷為師培或是必修課
 
                                 }
                                 else if(iv.obligatory_tf==false){
@@ -1148,8 +1150,8 @@
                 $.each(course.time_parsed,function(ik, iv){
                     $.each(iv.time,function(jk, jv){
                         var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
-                        if($td.text()!=""){	//用來判斷td裡面是不已經有放過課程了，但若先在裡面放個按鈕那.text()回傳回來的也是空字串                    
-                            check_conflict = true;                            
+                        if($td.text()!=""){	//用來判斷td裡面是不已經有放過課程了，但若先在裡面放個按鈕那.text()回傳回來的也是空字串
+                            check_conflict = true;
                             toastr.error("衝堂喔!請手動刪除衝堂的課程", {timeOut: 2500});
                             return false;	//傳回false就是跳離迴圈
                         }
@@ -1244,7 +1246,7 @@
                 $('#PE').empty();
                 $('#military-post').empty();
                 $('#teacher-post').empty();
-                $('#foreign-post').empty(); 
+                $('#foreign-post').empty();
                 $('#non-graded-optional-post').empty();
                 $('#search-post').empty();
                 window.credits=0;
@@ -1262,15 +1264,15 @@
                 $('#humanities').empty();
                 $('#social').empty();
                 $('#natural').empty();
-                $('#PE-post').empty();   
-                $('#foreign-post').empty(); 
-                $('#non-graded-optional-post').empty();   
+                $('#PE-post').empty();
+                $('#foreign-post').empty();
+                $('#non-graded-optional-post').empty();
                 $('#teacher-post').empty();
-                $('#military-post').empty();   
+                $('#military-post').empty();
                 $('#chinese').empty();
-                $('#english').empty();     
-            }   
-            var change_color=function($target,command){	//一旦添加了課程，則側欄的課名改了顏色 
+                $('#english').empty();
+            }
+            var change_color=function($target,command){	//一旦添加了課程，則側欄的課名改了顏色
                 if(command=="restore"){
                     $target.css("color","#3074B5");
                 }
@@ -1330,7 +1332,7 @@
                 }
                 else if(course.class=="5"||course.class=="5A"||course.class=="5B"){
                     bulletin_post($("#fifth-grade"),course, language);
-                }                
+                }
                 else if(course.class==""){
                     bulletin_post($("#whole-school"),course, language);
                 }
@@ -1338,12 +1340,12 @@
                     check_general_or_school(course);
                 }
 
-            } 
+            }
             var check_which_bulletin_required=function(course){
                 var EN={"語言中心":"","夜共同科":"","夜外文":""};
                 var CH={"通識中心":"","夜中文":""};
                 if(course.department=="師培中心"){
-                    bulletin_post($("#teacher-post"),course, language);                  
+                    bulletin_post($("#teacher-post"),course, language);
                 }
                 else if(course.department in EN){
                     bulletin_post($("#english"),course, language);
@@ -1360,37 +1362,37 @@
                             $.each(courses[iv],function(jk,jv){
                                 if(jv.for_dept==major){//這個判斷是為了向景觀學程那種專門上別的科系的課的系而設計的
                                     if(jv.obligatory_tf==true&&jv.class==level){
-                                        bulletin_post($("#obligatory-post"),jv, language); 
+                                        bulletin_post($("#obligatory-post"),jv, language);
                                         return false;
-                                    } 
+                                    }
                                     if(jv.obligatory_tf==false&&jv.class==level){//因為輔系的查詢只能查一個年級，所以就可以只判斷是否為level
                                         check_which_bulletin(jv);
                                         return false;
-                                    }   
-                                }                                 
-                            })                                                                                      
-                        });                                                        
-            }     
+                                    }
+                                }
+                            })
+                        });
+            }
             var check_general_or_school=function(course){
                 var disciplineH={"文學":"","歷史":"","哲學":"","藝術":"","文化":""};
                 var disciplineS={"公民與社會":"","法律與政治":"","商業與管理":"","心理與教育":"","資訊與傳播":""};
                 var disciplineN={"生命科學":"","環境科學":"","物質科學":"","數學統計":"","工程科技":""};
                 if(course.discipline==undefined){
                     if(course.department=="師培中心"){
-                        bulletin_post($("#teacher-post"),course, language);              
+                        bulletin_post($("#teacher-post"),course, language);
                     }
                     else if(course.department=="教官室"){
-                        bulletin_post($("#military-post"),course, language);             
+                        bulletin_post($("#military-post"),course, language);
                     }
                     else if(course.department=="體育室"||course.department=="夜間共同"){
-                        bulletin_post($("#PE-post"),course, language);              
+                        bulletin_post($("#PE-post"),course, language);
                     }
                     else if(course.department=="語言中心"||course.department=="外文系"){
-                        bulletin_post($("#foreign-post"),course, language);              
-                    } 
+                        bulletin_post($("#foreign-post"),course, language);
+                    }
                     else{
-                        bulletin_post($("#non-graded-optional-post"),course, language);              
-                    }                   
+                        bulletin_post($("#non-graded-optional-post"),course, language);
+                    }
                 }
                 else if(course.discipline in disciplineH){
                     bulletin_post($("#humanities"), course, language)
