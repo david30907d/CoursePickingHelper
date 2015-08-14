@@ -367,7 +367,7 @@
                                             <option>行銷學系學士班</option>
                                             <option>化學系學士班</option>
                                             <option>生命科學系學士班</option>
-                                            <option value="應用數學系學士班 A">應用數學系學士班A</option>
+                                            <option>應用數學系學士班 A</option>
                                             <option value="應用數學系學士班 B">應用數學系學士班B</option>
                                             <option>物理學系一般物理組學士班</option>
                                             <option>物理學系光電物理組學士班</option>
@@ -585,7 +585,7 @@
                             <tr data-hour="3" class="active">
                                 <th>
                                     <h3>3</h3>
-                                    <h5>10:10-12:00</h5>
+                                    <h5>10:10-11:00</h5>
                                 </th>
                                 <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
                                 <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
@@ -722,8 +722,9 @@
             $(function(){
                 /**一開始的簡易版使用說明**/
                 toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});
-                //當文件準備好的時候，讀入json檔
-                $.getJSON('json/protoC.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
+                //當文件準備好的時候，讀入json檔                
+                $.getJSON("json/U51R.json", function(json){  //getJSON會用function(X)傳回X的物件或陣列
+                    console.log("有進來");
                     window.credits=0//一開始的學分數是0
                     window.courses = {};//宣告一個空的物件
                     window.course_of_majors = {};//宣告一個空的物件
@@ -733,7 +734,7 @@
                     window.name_of_optional_obligatory = [] //這是用來存系上的必修課，檢查有沒有課名是重複的，若有就讓使用者自行決定要上哪堂
                     $("#class_credit").text(0);
                     window.language="zh_TW";//固定顯示語言為中文
-                    $.each(json.course, function(ik, iv){
+                    $.each(json.course, function(ik, iv){                    
                         if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
                             window.course_of_majors[iv.for_dept] = {};
                         if(typeof(window.course_of_majors[iv.for_dept][iv.class]) == 'undefined'){
@@ -1409,6 +1410,9 @@
                 $.each(course.time_parsed, function(ik, iv){
                     time.push("星期"+week[iv.day-1]+iv.time); //push是把裡面的元素變成陣列的一格
                 })
+                if(course.intern_time!=""){//不是每一堂課都會有實習時間
+                    time.push("實習時間:"+course.intern_time);
+                }                
                 time.push("代碼:"+course.code);
                 if(course.discipline!=undefined){//代表他是通識課
                     time.push("教授:"+course.professor);
