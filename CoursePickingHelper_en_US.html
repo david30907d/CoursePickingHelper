@@ -468,7 +468,7 @@
 				                <div class="form-group">
                                     <label for="class_credit" class="col-xs-2 control-label">Credits</label>
                                     <div class="col-xs-10">
-                                        <input type="teacher" class="form-control" id= value="0">
+                                        <input type="teacher" class="form-control" id="credits" value="">
                                     </div>
                                 </div>
 				                <div class="form-group">
@@ -820,10 +820,11 @@
                 /*******   ↑製作隱藏側欄的功能↑   *******/
 
                 $("#bulletin").delegate("span.fa-trash", "click", function(){   //這是給垃圾桶用的
+                    /*
                     if($(this).parents("button").attr("class")=="close obligatory"){
                         $("#obligatory-post").empty();
-                    }
-                    else if($(this).parents("button").attr("class")=="close elective"){
+                    }*/
+                    if($(this).parents("button").attr("class")=="close elective"){
                         $("#freshman").empty();
                         $("#sophomore").empty();
                         $("#junior").empty();
@@ -834,14 +835,18 @@
                         $('#humanities').empty();
                         $('#social').empty();
                         $('#natural').empty();
-                    }
-                    else if($(this).parents("button").attr("class")=="close other"){
+                    }                    
+                    else if($(this).parents("button").attr("class")=="close school"){
                         $('#chinese').empty();
                         $('#english').empty();
-                        $('#PE').empty();
-                        $('#defense').empty();
-                        $('#education').empty();
-                        $('#language').empty();
+                        $('#PE-post').empty();
+                        $('#military-post').empty();
+                        $('#teacher-post').empty();
+                        $('#foreign-post').empty();
+                        $('#non-graded-optional-post').empty();
+                    }
+                    else{
+                        $(this).parents(".panel-heading").next().empty();
                     }
                 });
                 $("#bulletin").delegate("button.btn-link", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
@@ -961,32 +966,19 @@
                 $("#specific_search").click(function()  //可以用課號搜尋，把input的的課號用.val()取出
                 {
                     var major=$("#s_major").val();
-                    var level=$("#s_level").val();
-                    var code = $("#class_code").val();  //課號搜尋
-                    var class_title=$("#class_title").val();//課程名稱搜尋
-                    var teacher = $("#class_teacher").val();//老師名稱搜尋
+                    var level=$("#s_level").val();                    
+                    var code = $("#class_code").val();
+                    //課號搜尋                                  
                     if(major==sub_major&&level==sub_level){
-                        $("#search-post").empty();//每次搜尋都需要把指定搜尋的欄位給清空
+                        //$("#search-post").empty();//每次搜尋都需要把指定搜尋的欄位給清空
                         if(code!=""){
                             bulletin_post($("#search-post"),courses[code][0], language);
                             $("#class_code").val("");
                         }
-                        if(class_title!=""){
-                            $.each(name_of_course, function(ik, iv){
-                                if(ik.search(class_title)!=-1){
-                                    $.each(iv,function(jk, jv){
-                                        bulletin_post($("#search-post"),jv, language);
-                                    });
-                                }
-                            })
-                            $("#class_title").val("");
-                        }
-                        if(teacher!=""){
-                            $.each(teacher_course[teacher], function(ik, iv){
-                                bulletin_post($("#search-post"),iv, language);
-                            });
-                            $("#class_teacher").val("");
-                        }
+                        title_search(credits_filter());//這兩行分別是課名搜尋和教師名稱搜尋
+                        //把篩選學分的函式當作參數傳入
+                        teach_search(credits_filter());
+                        $("#credits").val("");
                     }
                     else{
                         sub_major=major;    //紀錄這次提交的系級，好讓下次判斷有沒有變動
@@ -1219,7 +1211,7 @@
                 $('#PE').empty();
                 $('#military-post').empty();
                 $('#teacher-post').empty();
-                $('#foreign-post').empty(); 
+                $('#foreign-post').empty();
                 $('#non-graded-optional-post').empty();
                 $('#search-post').empty();
                 window.credits=0;
@@ -1237,14 +1229,14 @@
                 $('#humanities').empty();
                 $('#social').empty();
                 $('#natural').empty();
-                $('#PE-post').empty();   
-                $('#foreign-post').empty(); 
-                $('#non-graded-optional-post').empty();   
+                $('#PE-post').empty();
+                $('#foreign-post').empty();
+                $('#non-graded-optional-post').empty();
                 $('#teacher-post').empty();
-                $('#military-post').empty();   
+                $('#military-post').empty();
                 $('#chinese').empty();
-                $('#english').empty();     
-            }   
+                $('#english').empty();
+            }
             var change_color=function($target,command){ //一旦添加了課程，則側欄的課名改了顏色 
                 if(command=="restore"){
                     $target.css("color","#3074B5");
@@ -1396,7 +1388,39 @@
                 }
                 time = time.join(' ');  //把多個陣列用" "分隔並合併指派給time，此為字串型態，若是將字串split('')，則會回傳一個陣列型態           
                 return time;
-            }                   
+            }   
+            var credits_filter=function(){
+                var credits=$("#credits").val();                
+                if(credits!=""){return credits;}
+                else{return true;}//到時候把整個credits_filter當成參數傳入搜尋的函式
+                //參數會return東西到if判斷式，如果沒有輸入學分，就return TRUE就不會有任何影響了
+            }            
+            var title_search=function(cre_funcion){
+                var class_title=$("#class_title").val();//課程名稱搜尋
+                condition=cre_funcion;//傳入會篩選學分條件的函式                      
+                if(class_title!=""){                    
+                    $.each(name_of_course, function(ik, iv){
+                        if(ik.search(class_title)!=-1&&(iv[0].credits==condition||condition==true)){                             
+                            $.each(iv,function(jk, jv){
+                                bulletin_post($("#search-post"),jv, language);
+                            });
+                        }
+                    })
+                    $("#class_title").val("");
+                }
+            }    
+            var teach_search=function(cre_funcion){
+                var teacher = $("#class_teacher").val();//老師名稱搜尋
+                condition=cre_funcion;            
+                if(teacher!=""){
+                    $.each(teacher_course[teacher], function(ik, iv){
+                        if(iv.credits==condition||condition==true){
+                            bulletin_post($("#search-post"),iv, language);
+                        }
+                    });
+                    $("#class_teacher").val("");
+                }
+            }                  
         })(jQuery);
         </script>
         </body>
