@@ -1396,7 +1396,7 @@
                 $.each(course.time_parsed, function(ik, iv){
                     time.push("星期"+week[iv.day-1]+iv.time); //push是把裡面的元素變成陣列的一格
                 })
-                if(course.intern_time!=""){//不是每一堂課都會有實習時間
+                if(course.intern_time!=""&&course.intern_time!=undefined){//不是每一堂課都會有實習時間
                     time.push("實習時間:"+course.intern_time);
                 }                
                 time.push("代碼:"+course.code);
@@ -1408,6 +1408,9 @@
                 }
                 else if(course.department in EN_CH){
                     time.push("教授:"+course.professor);
+                }
+                if(course.note!=""){
+                    time.push("備註:"+course.note);
                 }
                 time = time.join(' ');  //把多個陣列用" "分隔並合併指派給time，此為字串型態，若是將字串split('')，則會回傳一個陣列型態
                 return time;
