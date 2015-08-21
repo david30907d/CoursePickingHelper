@@ -240,6 +240,16 @@
                             <div id="fifth-grade">
                             </div>
                             <h5 id="">
+                                六年級
+                            </h5>
+                            <div id="sixth-grade">
+                            </div>
+                            <h5 id="">
+                                七年級
+                            </h5>
+                            <div id="seventh-grade">
+                            </div>
+                            <h5 id="">
                                 不分年級
                             </h5>
                             <div id="whole-school">
@@ -463,7 +473,7 @@
                                             <option value="電機工程學系學士班 A">電機工程學系學士班A</option>
                                             <option value="電機工程學系學士班 B">電機工程學系學士班B</option>
                                             <option>化學工程學系學士班</option>
-                                            <option>材料科學與工程學系學士班</option>
+                                            <option>材料科學與工程學系學士班</option> 
                                         </select>
                                     </div>
                                 </div>
@@ -476,7 +486,7 @@
                                             <option value="2">二年級</option>
                                             <option value="3">三年級</option>
                                             <option value="4">四年級</option>
-                                            <option value="5">五年級</option>
+                                            <option value="5">五年級</option>           
                                         </select>
                                     </div>
                                 </div>
@@ -1317,6 +1327,12 @@
                 }
                 else if(course.class=="5"||course.class=="5A"||course.class=="5B"){
                     bulletin_post($("#fifth-grade"),course, language);
+                }
+                else if(course.class=="6"||course.class=="6A"||course.class=="6B"){
+                    bulletin_post($("#sixth-grade"),course, language);
+                }
+                else if(course.class=="7"||course.class=="7A"||course.class=="7B"){
+                    bulletin_post($("#seventh-grade"),course, language);
                 }
                 else if(course.class==""){
                     bulletin_post($("#whole-school"),course, language);
