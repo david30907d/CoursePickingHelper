@@ -3,7 +3,7 @@
 //var courses = null;
     $(function(){
         /**一開始的簡易版使用說明**/
-        toastr.success('1. Please start with "department and grade" (if you dont follow the rules above, the following functions would never work)<br />2. If you click the "plus" icon, the bulletin on the left would show the available courses.<br />3. any course can be found by using function "Course Search"', "Instruction", {timeOut: 2500});
+        // toastr.success('1. Please start with "department and grade" (if you dont follow the rules above, the following functions would never work)<br />2. If you click the "plus" icon, the bulletin on the left would show the available courses.<br />3. any course can be found by using function "Course Search"', "Instruction", {timeOut: 2500});
         //當文件準備好的時候，讀入json檔
         $.getJSON('json/protoC.json', function(json){  //getJSON會用function(X)傳回X的物件或陣列
             window.credits=0//一開始的學分數是0
