@@ -92,62 +92,72 @@
 
     }
 
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
+  @media (min-width: 768px) {
+    .masthead-brand {
+      float: left;
+    }
+    .masthead-nav {
+      float: right;
+    }
   }
-  .masthead-nav {
-    float: right;
+
+
+  /*
+   * Cover
+   */
+
+  .cover {
+    padding: 0 20px;
   }
-}
-
-
-/*
- * Cover
- */
-
-.cover {
-  padding: 0 20px;
-}
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-
-
-/*
- * Affix and center
- */
-
-@media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
+  .cover .btn-lg {
+    padding: 10px 20px;
+    font-weight: bold;
   }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
-}
 
-@media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 700px;
+
+
+  /*
+   * Affix and center
+   */
+
+  @media (min-width: 768px) {
+    /* Pull out the header and footer */
+    .masthead {
+      position: fixed;
+      top: 0;
+    }
+    /* Start the vertical centering */
+    .site-wrapper-inner {
+      vertical-align: middle;
+    }
+    /* Handle the widths */
+    .masthead,
+    .cover-container {
+      width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
   }
-}
+
+  @media (min-width: 992px) {
+    .masthead,
+    .mastfoot,
+    .cover-container {
+      width: 700px;
+    }
+  }
 
 	</style>
-	</head>
 
+	</head>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-66684913-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 	<body>
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
