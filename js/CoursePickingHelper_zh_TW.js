@@ -408,7 +408,7 @@
                 $target.append($option);        //顯示課程，把$option放到elective-post，append是追加在後面
                 $('[data-toggle="tooltip"]').tooltip(); //讓tooltip功能綁上去
             };
-            var add_course = function($target, course, language) {      //假設target為time-table的參數，course為courses的某一個課程
+            var add_course = function($target, course, language){      //假設target為time-table的參數，course為courses的某一個課程
                 if( !$.isArray(course.time_parsed) )
                     throw 'time_parsed error';      //判斷time-parsed是不是陣列
                 if( $.type(course.title_parsed)!=="object" )            //判斷課程名稱是不是物件
@@ -439,13 +439,13 @@
                     $.each(course.time_parsed, function(ik, iv){
                         $.each(iv.time, function(jk, jv){       //同上，iv.    time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
                             var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
-                            var $cell = $($.parseHTML('<div><div><button type="button" class="close delete" data-dismiss="alert" aria-label="Close" style="color:red;"><span aria-hidden="true"  style="color:red;">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-6"></div><div class="location col-xs-6"></div>'));
+                            var $cell = $($.parseHTML('<div><div><button type="button" class="close delete" data-dismiss="alert" aria-label="Close" style="color:red;"><span aria-hidden="true"  style="color:red;">&times;</span><input type="hidden" name="code-of-course" value=""></button></div><div class="title"></div><div class="row"><div class="professor col-xs-5"></div><div class="location col-xs-7"></div>'));
                             //把上面的html格式匯入找到的td type中(  parseHtml把後面的包裝成dom，再用一個$包裝成jQuery物件)
                             $cell.find('.title').text(course.title_short).end()
                             $cell.find('input').val(course.code).end()      //將對應的課程內容寫入cell的html語法中，.title就是class="title"
                                  .find('.professor').text(course.professor).end()	//text()   會把東西填入找到的class那裡，end()會回到var $cell那一行
-                                 .find('.location').text(course.location);
-                            $td.html($cell.html());     //顯示課程，把cell.html()塞到<td>tag裡面，就算裡面原本有按鈕也會直接被蓋掉
+                                 .find('.location').text(fill_loction(course));
+                            $td.html($cell.html());     //顯示課程，把cell.html()塞到<td>tag裡面，就算裡面原本有按鈕也會直接被蓋掉，$.html()會取div裡面的東西                    
                         });
                     });
                     add_credits(course);
@@ -742,5 +742,20 @@
                     });
                     $("#class_teacher").val("");
                 }
+            }
+            var fill_loction=function(course){//回傳教室資訊，型態為string
+            //course是課程物件
+                var location="";
+                if(course.location!=[""]){
+                    $.each(course.location,function(ik,iv){
+                        location=location+" "+iv;
+                    })
+                }
+                if(course.intern_location!=[""]){
+                    $.each(course.intern_location,function(ik,iv){
+                        location=location+" "+iv;
+                    })
+                }
+                return location;//回傳字串
             }
         })(jQuery);
