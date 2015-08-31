@@ -444,7 +444,7 @@
                             $cell.find('.title').text(course.title_short).end()
                             $cell.find('input').val(course.code).end()      //將對應的課程內容寫入cell的html語法中，.title就是class="title"
                                  .find('.professor').text(course.professor).end()   //text()   會把東西填入找到的class那裡，end()會回到var $cell那一行
-                                 .find('.location').text(fill_loction(course));
+                                 //.find('.location').text(fill_loction(course));
                             $td.html($cell.html());     //顯示課程，把cell.html()塞到<td>tag裡面，就算裡面原本有按鈕也會直接被蓋掉，$.html()會取div裡面的東西                    
                         });
                     });
