@@ -334,13 +334,19 @@
                 var hour=$(this).closest("tr").attr("data-hour");
                 reset_for_time_request();
                 $.each(course_of_day[day][hour], function(ik, iv){
-                    if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))||iv.for_dept==undefined){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列
-                        console.log(iv)
-                        if(iv.obligatory_tf==true){                                 check_which_bulletin_required(iv);//判斷為師培或是必修課
+                    if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))||iv.for_dept==undefined||iv.for_dept==""||iv.for_dept=="C00全校共同"||iv.for_dept=="N00共同學科(進修學士班)"){//判斷如果是主系的課就不分年級全部都會顯示出來，如果是輔系的就只顯示該年級的課；如果for_dept==undefined就代表是通識課；如果為C00全校共同或N00共同學科(進修學士班)就會是體育、國防、服務學習、全校英外語                        
+                        //console.log(iv)
+                        if(iv.for_dept=="C00全校共同"||iv.for_dept=="N00共同學科(進修學士班)"){
+                        //代表是教務處綜合課程查詢裡面的所有課，包含體育、國防、師培、全校選修、全校英外語
+                            check_which_common_subject(iv);
+                        }
+                        else if(iv.obligatory_tf==true){                                 check_which_bulletin_required(iv);
+                        //判斷為國英文或是必修課
 
                         }
                         else if(iv.obligatory_tf==false){
-                            check_which_bulletin(iv);//由fuction決定該貼到哪個年級的欄位
+                            check_which_bulletin(iv);
+                            //決定選修課該貼到哪個年級的欄位
                         }
                     }
 
@@ -515,7 +521,7 @@
         $('#natural').empty();
         $('#chinese').empty();
         $('#english').empty();
-        $('#PE').empty();
+        $('#PE-post').empty();
         $('#military-post').empty();
         $('#teacher-post').empty();
         $('#foreign-post').empty();
@@ -605,68 +611,55 @@
         else if(course.class=="5"||course.class=="5A"||course.class=="5B"){
             bulletin_post($("#fifth-grade"),course, language);
         }
+        else if(course.class=="6"||course.class=="6A"||course.class=="6B"){
+            //6、7年級是放碩博班的課
+            bulletin_post($("#sixth-grade"),course, language);
+        }
+        else if(course.class=="7"||course.class=="7A"||course.class=="7B"){
+            bulletin_post($("#seventh-grade"),course, language);
+        }
         else if(course.class==""){
             bulletin_post($("#whole-school"),course, language);
-        }
-        else if(course.class==undefined){
-            check_general_or_school(course);
-        }
-
+        }                
     }
     var check_which_bulletin_required=function(course){
         var EN={"語言中心":"","夜共同科":"","夜外文":""};
-        var CH={"通識中心":"","夜中文":""};
-        if(course.department=="師培中心"){
-            bulletin_post($("#teacher-post"),course, language);
-        }
+        var CH={"通識中心":"","夜中文":""};  
+        if(course.discipline!=undefined&&course.discipline!=""){
+            //通識課才有學群這個欄位
+            check_general(course);
+        }              
         else if(course.department in EN){
             bulletin_post($("#english"),course, language);
         }
         else if(course.department in CH){
             bulletin_post($("#chinese"),course, language);
-        }
+        }                
         else{
             bulletin_post($("#obligatory-post"),course, language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
         }
     }
     var department_course_for_specific_search=function(major,level){
         $.each(course_of_majors[major][level], function(ik, iv){//因為這種輔系的課一定是交給使用者自己選，所以就不自動填入
-                    $.each(courses[iv],function(jk,jv){
-                        if(jv.for_dept==major){//這個判斷是為了向景觀學程那種專門上別的科系的課的系而設計的
-                            if(jv.obligatory_tf==true&&jv.class==level){
-                                bulletin_post($("#obligatory-post"),jv, language);
-                                return false;
-                            }
-                            if(jv.obligatory_tf==false&&jv.class==level){//因為輔系的查詢只能查一個年級，所以就可以只判斷是否為level
-                                check_which_bulletin(jv);
-                                return false;
-                            }
-                        }
-                    })
-                });
+            $.each(courses[iv],function(jk,jv){
+                if(jv.for_dept==major){//這個判斷是為了向景觀學程那種專門上別的科系的課的系而設計的
+                    if(jv.obligatory_tf==true&&jv.class==level){
+                        bulletin_post($("#obligatory-post"),jv, language);
+                        return false;
+                    }
+                    if(jv.obligatory_tf==false&&jv.class==level){//因為輔系的查詢只能查一個年級，所以就可以只判斷是否為level
+                        check_which_bulletin(jv);
+                        return false;
+                    }
+                }
+            })
+        });
     }
-    var check_general_or_school=function(course){
+    var check_general=function(course){
         var disciplineH={"文學":"","歷史":"","哲學":"","藝術":"","文化":""};
         var disciplineS={"公民與社會":"","法律與政治":"","商業與管理":"","心理與教育":"","資訊與傳播":""};
-        var disciplineN={"生命科學":"","環境科學":"","物質科學":"","數學統計":"","工程科技":""};
-        if(course.discipline==undefined){
-            if(course.department=="師培中心"){
-                bulletin_post($("#teacher-post"),course, language);
-            }
-            else if(course.department=="教官室"){
-                bulletin_post($("#military-post"),course, language);
-            }
-            else if(course.department=="體育室"||course.department=="夜間共同"){
-                bulletin_post($("#PE-post"),course, language);
-            }
-            else if(course.department=="語言中心"||course.department=="外文系"){
-                bulletin_post($("#foreign-post"),course, language);
-            }
-            else{
-                bulletin_post($("#non-graded-optional-post"),course, language);
-            }
-        }
-        else if(course.discipline in disciplineH){
+        var disciplineN={"生命科學":"","環境科學":"","物質科學":"","數學統計":"","工程科技":""};                
+        if(course.discipline in disciplineH){
             bulletin_post($("#humanities"), course, language)
         }
         else if(course.discipline in disciplineS){
@@ -675,7 +668,27 @@
         else if(course.discipline in disciplineN){
             bulletin_post($("#natural"), course, language)
         }
+        else{
+            alert("Sorry! Some errors happend in showing General Class, please contact us\nfb Page： https://www.facebook.com/CoursePickingHelper\nor search 選課小幫手 appreaciate your notification")
+        }                
     };
+    var check_which_common_subject = function(course){
+        if(course.department=="師培中心"){
+            bulletin_post($("#teacher-post"),course, language);
+        }
+        else if(course.department=="體育室"||course.department=="夜共同科"){
+            bulletin_post($("#PE-post"),course, language);
+        }
+        else if(course.department=="教官室"){
+            bulletin_post($("#military-post"),course, language);
+        }
+        else if(course.department=="語言中心"||course.department=="外文系"){
+            bulletin_post($("#foreign-post"),course, language);
+        }
+        else{ 
+            bulletin_post($("#non-graded-optional-post"),course, language);
+        }
+    }
     var build_bulletin_time=function(course){
         var EN_CH={"語言中心":"","夜共同科":"","夜外文":"","通識中心":"","夜中文":""};
         var time = [];  //time設定為空陣列
@@ -683,6 +696,9 @@
         $.each(course.time_parsed, function(ik, iv){
             time.push(week[iv.day-1]+" "+iv.time); //push是把裡面的元素變成陣列的一格
         })
+        if(course.intern_time!=""&&course.intern_time!=undefined){//不是每一堂課都會有實習時間
+            time.push("Intern-time:"+course.intern_time);
+        }
         time.push("Class number:"+course.code);
         if(course.discipline!=undefined){//代表他是通識課
             time.push("Professor:"+course.professor);
@@ -692,6 +708,9 @@
         }
         else if(course.department in EN_CH){
             time.push("Professor:"+course.professor);
+        }
+        if(course.note!=""){
+            time.push("Note:"+course.note);
         }
         time = time.join(' ');  //把多個陣列用" "分隔並合併指派給time，此為字串型態，若是將字串split('')，則會回傳一個陣列型態
         return time;
@@ -729,18 +748,20 @@
         }
     }
     var fill_loction=function(course){//回傳教室資訊，型態為string
-            //course是課程物件
-                var location="";
-                if(course.location!=[""]){
-                    $.each(course.location,function(ik,iv){
-                        location=location+" "+iv;
-                    })
-                }
-                if(course.intern_location!=[""]){
-                    $.each(course.intern_location,function(ik,iv){
-                        location=location+" "+iv;
-                    })
-                }
-                return location;//回傳字串
-            }
+    //course是課程物件
+        var location="";
+        if(course.location!=[""]&&course.location!=undefined){
+            //要確保真的有location這個key才可以進if，不然undefined進到each迴圈
+            // 就會跳 [Uncaught TypeError: Cannot read property 'length' of undefined]這個error
+            $.each(course.location,function(ik,iv){
+                location=location+" "+iv;
+            })
+        }
+        if(course.intern_location!=[""]&&course.intern_location!=undefined){
+            $.each(course.intern_location,function(ik,iv){
+                location=location+" "+iv;
+            })
+        }
+        return location;//回傳字串
+    }
 })(jQuery);
