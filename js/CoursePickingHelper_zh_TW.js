@@ -8,7 +8,7 @@
                 /**一開始的簡易版使用說明**/
                 //toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});
                 //當文件準備好的時候，讀入json檔
-                $.getJSON("json/protoC.json", function(json){  //getJSON會用function(X)傳回X的物件或陣列
+                $.getJSON("json/原protoC.json", function(json){  //getJSON會用function(X)傳回X的物件或陣列
                     window.credits=0//一開始的學分數是0
                     window.courses = {};//宣告一個空的物件
                     window.course_of_majors = {};//宣告一個空的物件
@@ -337,13 +337,20 @@
                         var hour=$(this).closest("tr").attr("data-hour");
                         reset_for_time_request();
                         $.each(course_of_day[day][hour], function(ik, iv){
-                            if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))||iv.for_dept==undefined){//判斷如果不是這個系的課就不要顯示出來，以後應該可以再按照系級進化陣列
-                                console.log(iv)
-                                if(iv.obligatory_tf==true){                                 check_which_bulletin_required(iv);//判斷為師培或是必修課
+                            if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))||iv.for_dept==undefined||iv.for_dept==""||iv.for_dept=="C00全校共同"||iv.for_dept=="N00共同學科(進修學士班)"){//判斷如果是主系的課就不分年級全部都會顯示出來，如果是輔系的就只顯示該年級的課；如果for_dept==undefined就代表是通識課；如果為C00全校共同或N00共同學科(進修學士班)就會是體育、國防、服務學習、全校英外語                        
+                                //console.log(iv)
+                                if(iv.for_dept=="C00全校共同"||iv.for_dept=="N00共同學科(進修學士班)"){
+                                //代表是教務處綜合課程查詢裡面的所有課，包含體育、國防、師培、全校選修、全校英外語
+                                    check_which_common_subject(iv);
+
+                                }
+                                else if(iv.obligatory_tf==true){                                 check_which_bulletin_required(iv);
+                                //判斷為國英文或是必修課
 
                                 }
                                 else if(iv.obligatory_tf==false){
-                                    check_which_bulletin(iv);//由fuction決定該貼到哪個年級的欄位
+                                    check_which_bulletin(iv);
+                                    //決定選修課該貼到哪個年級的欄位
                                 }
                             }
 
@@ -518,7 +525,7 @@
                 $('#natural').empty();
                 $('#chinese').empty();
                 $('#english').empty();
-                $('#PE').empty();
+                $('#PE-post').empty();
                 $('#military-post').empty();
                 $('#teacher-post').empty();
                 $('#foreign-post').empty();
@@ -609,6 +616,7 @@
                     bulletin_post($("#fifth-grade"),course, language);
                 }
                 else if(course.class=="6"||course.class=="6A"||course.class=="6B"){
+                    //6、7年級是放碩博班的課
                     bulletin_post($("#sixth-grade"),course, language);
                 }
                 else if(course.class=="7"||course.class=="7A"||course.class=="7B"){
@@ -616,24 +624,21 @@
                 }
                 else if(course.class==""){
                     bulletin_post($("#whole-school"),course, language);
-                }
-                else if(course.class==undefined){
-                    check_general_or_school(course);
-                }
-
+                }                
             }
             var check_which_bulletin_required=function(course){
                 var EN={"語言中心":"","夜共同科":"","夜外文":""};
-                var CH={"通識中心":"","夜中文":""};
-                if(course.department=="師培中心"){
-                    bulletin_post($("#teacher-post"),course, language);
-                }
+                var CH={"通識中心":"","夜中文":""};  
+                if(course.discipline!=undefined&&course.discipline!=""){
+                    //通識課才有學群這個欄位
+                    check_general(course);
+                }              
                 else if(course.department in EN){
                     bulletin_post($("#english"),course, language);
                 }
                 else if(course.department in CH){
                     bulletin_post($("#chinese"),course, language);
-                }
+                }                
                 else{
                     bulletin_post($("#obligatory-post"),course, language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
                 }
@@ -654,28 +659,11 @@
                             })
                         });
             }
-            var check_general_or_school=function(course){
+            var check_general=function(course){
                 var disciplineH={"文學":"","歷史":"","哲學":"","藝術":"","文化":""};
                 var disciplineS={"公民與社會":"","法律與政治":"","商業與管理":"","心理與教育":"","資訊與傳播":""};
-                var disciplineN={"生命科學":"","環境科學":"","物質科學":"","數學統計":"","工程科技":""};
-                if(course.discipline==undefined){
-                    if(course.department=="師培中心"){
-                        bulletin_post($("#teacher-post"),course, language);
-                    }
-                    else if(course.department=="教官室"){
-                        bulletin_post($("#military-post"),course, language);
-                    }
-                    else if(course.department=="體育室"||course.department=="夜間共同"){
-                        bulletin_post($("#PE-post"),course, language);
-                    }
-                    else if(course.department=="語言中心"||course.department=="外文系"){
-                        bulletin_post($("#foreign-post"),course, language);
-                    }
-                    else{
-                        bulletin_post($("#non-graded-optional-post"),course, language);
-                    }
-                }
-                else if(course.discipline in disciplineH){
+                var disciplineN={"生命科學":"","環境科學":"","物質科學":"","數學統計":"","工程科技":""};                
+                if(course.discipline in disciplineH){
                     bulletin_post($("#humanities"), course, language)
                 }
                 else if(course.discipline in disciplineS){
@@ -684,7 +672,27 @@
                 else if(course.discipline in disciplineN){
                     bulletin_post($("#natural"), course, language)
                 }
+                else{
+                    alert("有通識課程無法顯示，煩請記下點擊的結束為何並告知開發小組\nFB搜尋：選課小幫手\nhttps://www.facebook.com/CoursePickingHelper")
+                }                
             };
+            var check_which_common_subject = function(course){
+                if(course.department=="師培中心"){
+                    bulletin_post($("#teacher-post"),course, language);
+                }
+                else if(course.department=="體育室"||course.department=="夜共同科"){
+                    bulletin_post($("#PE-post"),course, language);
+                }
+                else if(course.department=="教官室"){
+                    bulletin_post($("#military-post"),course, language);
+                }
+                else if(course.department=="語言中心"||course.department=="外文系"){
+                    bulletin_post($("#foreign-post"),course, language);
+                }
+                else{ 
+                    bulletin_post($("#non-graded-optional-post"),course, language);
+                }
+            }
             var build_bulletin_time=function(course){
                 var EN_CH={"語言中心":"","夜共同科":"","夜外文":"","通識中心":"","夜中文":""};
                 var time = [];  //time設定為空陣列
@@ -696,7 +704,7 @@
                     time.push("實習時間:"+course.intern_time);
                 }
                 time.push("代碼:"+course.code);
-                if(course.discipline!=undefined){//代表他是通識課
+                if(course.discipline!=""&&course.discipline!=undefined){//代表他是通識課
                     time.push("教授:"+course.professor);
                     time.push("學群:"+course.discipline);
                     time.push("剩餘名額:"+course.remaining_seat);
@@ -746,12 +754,14 @@
             var fill_loction=function(course){//回傳教室資訊，型態為string
             //course是課程物件
                 var location="";
-                if(course.location!=[""]){
+                if(course.location!=[""]&&course.location!=undefined){
+                    //要確保真的有location這個key才可以進if，不然undefined進到each迴圈
+                    // 就會跳 [Uncaught TypeError: Cannot read property 'length' of undefined]這個error
                     $.each(course.location,function(ik,iv){
                         location=location+" "+iv;
                     })
                 }
-                if(course.intern_location!=[""]){
+                if(course.intern_location!=[""]&&course.intern_location!=undefined){
                     $.each(course.intern_location,function(ik,iv){
                         location=location+" "+iv;
                     })
