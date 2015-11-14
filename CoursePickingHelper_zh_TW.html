@@ -27,7 +27,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>選課小幫手</title>
+        <title>排課小幫手</title>
         <script type="text/javascript"></script>
         <link href="toastr/toastr.css" rel="stylesheet"/><!--這是toast message的css-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
@@ -348,7 +348,54 @@
                                 <div class="form-group">
                                     <label for="v_major" class="col-xs-2 control-label">系所</label>
                                     <div class="col-xs-10">
-                                        <select class="form-control" name="v_major" id="v_major">                                            
+                                        <select class="form-control" name="v_major" id="v_major">
+                                            <option>請選擇系所</option>
+                                            <option>文學院</option>
+                                            <option>管理學院</option>
+                                            <option>農業暨自然資源學院</option>
+                                            <option>中國文學系學士班</option>
+                                            <option>外國語文學系學士班</option>
+                                            <option>歷史學系學士班</option>
+                                            <option>財務金融學系學士班</option>
+                                            <option>企業管理學系學士班</option>
+                                            <option>法律學系學士班</option>
+                                            <option>會計學系學士班</option>
+                                            <option>資訊管理學系學士班</option>
+                                            <option>景觀與遊憩學士學位學程</option>
+                                            <option>生物科技學士學位學程</option>
+                                            <option>國際農企業學士學位學程</option>
+                                            <option>農藝學系學士班</option>
+                                            <option>園藝學系學士班</option>
+                                            <option>森林學系林學組學士班</option>
+                                            <option>森林學系木材科學組學士班</option>
+                                            <option>應用經濟學系學士班</option>
+                                            <option>植物病理學系學士班</option>
+                                            <option>昆蟲學系學士班</option>
+                                            <option>動物科學系學士班</option>
+                                            <option value="獸醫學系學士班 A">獸醫學系學士班A</option>
+                                            <option value="獸醫學系學士班 B">獸醫學系學士班B</option>
+                                            <option>土壤環境科學系學士班</option>
+                                            <option>生物產業機電工程學系學士班</option>
+                                            <option>水土保持學系學士班</option>
+                                            <option>食品暨應用生物科技學系學士班</option>
+                                            <option>行銷學系學士班</option>
+                                            <option>化學系學士班</option>
+                                            <option>生命科學系學士班</option>
+                                            <option>應用數學系學士班 A</option>
+                                            <option value="應用數學系學士班 B">應用數學系學士班B</option>
+                                            <option>物理學系一般物理組學士班</option>
+                                            <option>物理學系光電物理組學士班</option>
+                                            <option>資訊科學與工程學系學士班</option>
+                                            <option>學士後太陽能光電系統應用學士學位學程</option>
+                                            <option value="機械工程學系學士班 A">機械工程學系學士班A</option>
+                                            <option value="機械工程學系學士班 B">機械工程學系學士班B</option>
+                                            <option value="土木工程學系學士班 A">土木工程學系學士班A</option>
+                                            <option value="土木工程學系學士班 B">土木工程學系學士班B</option>
+                                            <option>環境工程學系學士班</option>
+                                            <option value="電機工程學系學士班 A">電機工程學系學士班A</option>
+                                            <option value="電機工程學系學士班 B">電機工程學系學士班B</option>
+                                            <option>化學工程學系學士班</option>
+                                            <option>材料科學與工程學系學士班</option>
                                         </select>
                                     </div>
                                 </div>
@@ -507,7 +554,7 @@
                         <!--<h2><span class="fa fa-sun-o fa-1x fa-fw" value="sun" id="toggleTable"></span></h2>-->
                     </div>
                     <div class="col-xs-4" style="text-align:center;">
-                        <h2 id="span-color">課表<span class="fa fa-sun-o fa-1x fa-fw" value="sun" id="toggleTable"></span></h2>
+                        <h3 id="span-color" style="color:#F9F4F4">課程資料最終更新時間：2015/9/1<span class="fa fa-sun-o fa-1x fa-fw" value="sun" id="toggleTable"></span></h3>
                     </div>
                     <div class="col-xs-4" style="text-align:center;">
                         <h2><small><span class="glyphicon glyphicon-user"></span>學分 <span class="badge" id="class_credit"></span></small></h2>
@@ -662,7 +709,6 @@
                             <tr data-hour="13" class="active" style="display:none">
                                 <th>
                                     <h3>D</h3>
-                                    <a class="btn btn-lg" href="https://github.com/david30907d" target="_blank"><span class="fa fa-question-circle fa-fw"></span></a>
                                     <h5>21:05-21:55</h5>
                                 </th>
                                 <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
