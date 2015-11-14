@@ -284,8 +284,7 @@
                 $("#specific_search").click(function()  //可以用課號搜尋，把input的的課號用.val()取出
                 {
                     var major=$("#s_major").val();
-                    var level=$("#s_level").val();
-                    console.log(major+' '+level);
+                    var level=$("#s_level").val();                 
                     var code = $("#class_code").val();
                     //課號搜尋
                     if(major==sub_major&&level==sub_level){                        
