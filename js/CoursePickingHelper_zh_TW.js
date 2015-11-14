@@ -63,22 +63,13 @@
                         }
                         //console.log(iv.degree)
                         $.each(iv.department,function(jk,jv){
-                            window.department_name[iv.degree].push(jv.name);
+                            var option="";
+                            option+=jv.value+'-'+jv.name;
+                            window.department_name[iv.degree].push(option);
                         })
                     })
                     
-                })
-                /*//這段是均民的原始碼
-                var serializearray=function(){//比較好的方法來取option 的value!!!!
-                    $a = $($0)//取到年級選單
-                    //[<form class=​"form-horizontal">​…​</form>​]
-                    $a.serializeArray()
-                    [Objectname: "v_year"value: "103_2"__proto__: Object, Objectname: "v_career"value: "U"__proto__: Object, Objectname: "v_major"value: "C10"__proto__: Object, Objectname: "v_level"value: "1"__proto__: Object]
-                    $a.serializeArray()[0].name
-                    "v_year"
-                    $a.serializeArray()[1].value
-                    "U"
-                }*/
+                })              
                 /*******    ↓製作隱藏側欄的功能↓   *******/
                     /***必修***/
                 $("#obligatory-span").click(function(){
@@ -182,8 +173,9 @@
                 });
                 /**********最主要的系級提交funciton，若要修改請謹慎小心!!!***********/
                 $("#department_search").click(function(){//
-                    var major=$("#v_major").val();  //取到系
-                    var level = check_which_class(major,$("#v_level").val());//取到年級
+                    var major=$("#v_major").val();  //取到系                    
+                    major=major.split('-')[1];                    
+                    var level = check_which_class(major,$("#v_level").val());//取到年級                  
                     major=major.split(" ");
                     major=major[0];                    
                     reset();
@@ -293,10 +285,10 @@
                 {
                     var major=$("#s_major").val();
                     var level=$("#s_level").val();
+                    console.log(major+' '+level);
                     var code = $("#class_code").val();
                     //課號搜尋
-                    if(major==sub_major&&level==sub_level){
-                        //$("#search-post").empty();//每次搜尋都需要把指定搜尋的欄位給清空
+                    if(major==sub_major&&level==sub_level){                        
                         if(code!=""){
                             bulletin_post($("#search-post"),courses[code][0], language);
                             $("#class_code").val("");
@@ -309,8 +301,9 @@
                     else{
                         sub_major=major;	//紀錄這次提交的系級，好讓下次判斷有沒有變動
                         sub_level=level;
+                        major=major.split('-')[1];                        
                         var level = check_which_class(major,$("#s_level").val());//取到年級
-                        major=major.split(" ");//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
+                        major=major.split(' ');//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
                         major=major[0];
                         reset_for_time_request();
                         department_course_for_specific_search(major,level);
@@ -372,22 +365,7 @@
 
                         })
                     }
-                });/*
-                $("#obligatory-check").change(function(){//用來檢查勾選表被選了沒
-                    if ($(this).prop("checked")){//如果選了，就設定成隱藏的css屬性
-                        $("#obligatory-post").css("display", "");
-                    };
-                    if($(this).prop("checked")==false){//如果沒有就恢復成空的
-                        $("#obligatory-post").css("display", "none");
-                    }
-                });     */
-
-                /*
-                $(document).ready(function(){
-                    $(document).delegate("[data-toggle='tooltip']","load",function(){
-                        $(this).tooltip();
-                    })
-                });//這是tooltip的原版*/
+                });
                 /**********用來把夜校的欄位隱藏起來***********/
                 $("#toggleTable").click(function(){
                     //var toggleicon="fa-sun-o";
@@ -410,10 +388,12 @@
                     //console.log($(this).val);
                 });
 
-                $("#v_career").change(function(){//if the career(degree) has been changed, also change the level
+                $("#v_career").change(function(){//會動態變動系所與年級名稱
+                //if the career(degree) has been changed, also change the level
                     $("#v_major").empty();
+                    $("#s_major").empty();
                     var str="";                                        
-                    $( "select option:selected" ).each(function(ik,iv) {// filter all selected options, to find the degree options.
+                    $( "select option:selected" ).each(function(ik,iv){// filter all selected options, to find the degree options.
                         if($(iv).parent().attr("id")=="v_career"){        
                             str += $( this ).text();
                             //str will be user's degree.
@@ -423,10 +403,13 @@
                     $.each(window.department_name[str],function(ik,iv){
                         var newOption=$.parseHTML('<option>'+window.department_name[str][ik]+'</option>');
                         $("#v_major").append(newOption);
+                        var newOption=$.parseHTML('<option>'+window.department_name[str][ik]+'</option>');
+                        $('#s_major').append(newOption);
                         //append all the department option into major field!!
                     })  
                     if(str=='碩士班'||str=='博士班'||str=='碩專班'||str=='產專班'){
                         $('#v_level').empty();
+                        $('#s_level').empty();
                         var freshman_value="6",sophomore_value="7";
                         if(str=='博士班'){
                             freshman_value="8";
@@ -435,18 +418,22 @@
                         var newGrade=$.parseHTML('<option value='+freshman_value+'>一年級</option>');
                         var newGrade2=$.parseHTML('<option value='+sophomore_value+'>二年級</option>');
                         $('#v_level').append(newGrade).append(newGrade2);
-                    }  
+                        newGrade=$.parseHTML('<option value='+freshman_value+'>一年級</option>');
+                        newGrade2=$.parseHTML('<option value='+sophomore_value+'>二年級</option>');
+                        $('#s_level').append(newGrade).append(newGrade2);
+                    }
                     else{                        
                         $('#v_level').empty();
-                        var newGrade=$.parseHTML('<option value="1">一年級</option>');
-                        $('#v_level').append(newGrade)
-                        newGrade=$.parseHTML('<option value="2">二年級</option>');
-                        $('#v_level').append(newGrade)
-                        newGrade=$.parseHTML('<option value="3">三年級</option>');
-                        $('#v_level').append(newGrade)
-                        newGrade=$.parseHTML('<option value="4">四年級</option>');$('#v_level').append(newGrade)                        
-                        newGrade=$.parseHTML('<option value="5">五年級</option>');
-                        $('#v_level').append(newGrade)
+                        $('#s_level').empty();
+                        var target_array=['#v_level','#s_level'];
+                        var option_array=['<option value="">無年級</option>','<option value="1">一年級</option>','<option value="2">二年級</option>','<option value="3">三年級</option>','<option value="4">四年級</option>','<option value="5">五年級</option>']
+                        var newGrade;
+                        $.each(target_array,function(ik,iv){// use for loop use automatically append the option into the right position.
+                            $.each(option_array,function(jk,jv){
+                                newGrade=$.parseHTML(jv);
+                                $(iv).append(newGrade)
+                            })
+                        })                        
                     }               
                 })
             });
