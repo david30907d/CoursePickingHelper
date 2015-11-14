@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>選課小幫手</title>
+      <title>排課小幫手</title>
       <script type="text/javascript"></script>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
       <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -244,12 +244,12 @@
           </div>
 
           <div class="inner cover">
-            <h1 class="cover-heading">選課小幫手</h1>
-            <p class="lead">隨著選課之日逼近，想先整理自己想要的課卻礙於學校系統操作不便，而浪費的不少寶貴時間嗎？「工欲善其事，必先利其器」，想打場勝仗必定要有好工具，「選課小幫手」一定能幫助各位打場漂亮的勝仗。</p>
+            <h1 class="cover-heading">排課小幫手</h1>
+            <p class="lead">隨著選課之日逼近，想先整理自己想要的課卻礙於學校系統操作不便，而浪費的不少寶貴時間嗎？「工欲善其事，必先利其器」，想打場勝仗必定要有好工具，「排課小幫手」一定能幫助各位打場漂亮的勝仗。</p>
             <p class="lead">請選擇語系</p>
             <p class="lead">
-              <a href="CoursePickingHelper_zh_TW.html" class="btn btn-lg btn-default">中文</a>
-              <a href="CoursePickingHelper_en_US.html" class="btn btn-lg btn-default">English</a>
+              <a id="chinese" href="CoursePickingHelper_zh_TW.html" class="btn btn-lg btn-default">中文</a>
+              <a id="english" href="CoursePickingHelper_en_US.html" class="btn btn-lg btn-default">English</a>
             </p>
           </div>
 
@@ -257,6 +257,14 @@
       </div>
     </div>
 	</body>
+	<script>
+	   $("#chinese").click(function(){
+	    	alert("本程式是預先排課的小幫手\n同學仍然需要進入學校選課系統\n依照開放選課的時程來選課!!!");
+	    })
+	    $("#english").click(function(){
+	    	alert("Timetabling Helper is just a tool\nStudents still need to log in System of school to enroll class!!!");
+	    })
+	</script>
 </html>
 
 
@@ -278,3 +286,4 @@
 ──▐▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▄▌──────
 ────▀▄▄▀▀▀▀▀▄▄▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▄▄▀▀▀▀▀▄▄▀────────
 -->
+
