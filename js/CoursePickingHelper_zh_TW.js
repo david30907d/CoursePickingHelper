@@ -588,7 +588,7 @@
                 $('#search-post').empty();
                 window.credits=0;
                 $("#class_credit").text(window.credits);
-                window.name_of_optional_obligatory=[];	//把數過的課程清空
+                window.name_of_optional_obligatory=[];	//把數過的課程清空                
                 window.user={"name":"","time_table":[]};
             }
             var reset_for_time_request=function(){	//這個function是在你的td的時候，會把該時段的課程顯示，但是要先把顯示欄位清空
