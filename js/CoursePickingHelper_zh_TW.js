@@ -829,4 +829,3 @@
                 return location;//回傳字串
             }
         })(jQuery);
->>>>>>> 9786924e6f699ca8f8c6eb909ac2d52e665fb61d
