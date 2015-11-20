@@ -373,23 +373,25 @@
                     })
                 });//這是tooltip的原版*/
                 /**********用來把夜校的欄位隱藏起來***********/
-                $("#toggleTable").click(function(){
-                    //var toggleicon="fa-sun-o";
-                    //var toggleHtml= $(this).html;
-                    //var $toggle= $($.parseHTML('<span class="fa ' + toggleicon + ' fa-1x fa-fw"></span>'));
-                    //console.log(buttonHtml);
-                    $("tr:gt(9)").toggle("slow");
-                    if($(toggleTable).val()=="moon")
+
+                $("#toggleTable").click(function(){                    
+                    if($("#toggleTable").val()=="moon")
                     {
+                        $("tr:gt(0)").toggle("slow");
+                        $("tr:gt(9)").toggle("slow");
+                        $(this).val("all");
+                        $("#sun-span").toggle("slow");
+                    }
+                    else if($("#toggleTable").val()=="all"){
+                        $("tr:gt(9)").toggle("slow");
                         $(this).val("sun");
-                        $(this).removeClass("fa fa-moon-o fa-1x fa-fw");
-                        $(this).addClass("fa fa-sun-o fa-1x fa-fw");
+                        $("#moon-span").toggle("slow");
                     }
                     else
                     {
+                        $("tr:gt(0)").toggle("slow");
                         $(this).val("moon");
-                        $(this).removeClass("fa fa-sun-o fa-1x fa-fw");
-                        $(this).addClass("fa fa-moon-o fa-1x fa-fw");
+                        $(this).find("span").toggle("slow");
                     }
                     //console.log($(this).val);
                 });
