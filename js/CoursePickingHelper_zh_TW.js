@@ -132,6 +132,19 @@
 
 
                 /*******   ↑製作隱藏側欄的功能↑   *******/
+                
+                /*******       ↓雙主修選擇↓       *******/
+                $("#checkbox").click(function(){
+                    if($(this).val() == "noDoubleMajor"){
+                        $(this).val("DoubleMajor");
+                        $("#v_major_2").toggle("slow");
+                    }
+                    else{
+                        $(this).val("noDoubleMajor");
+                        $("#v_major_2").toggle("slow");
+                    }
+                });
+                /*******       ↑雙主修選擇↑       *******/
 
                 $("#bulletin").delegate("span.fa-trash", "click", function(){	//這是給垃圾桶用的
                     /*
@@ -165,6 +178,7 @@
                 });
                 $("#bulletin").delegate("button.btn-link", "click", function(){//delegate可以去抓到還不存在的東西，第一個$()是指作用的區域，delegate的()裡面就是option，dblclick是事件
                     var code = $(this).val();//this會代表我抓到的那個東西，也就是option
+
                     course = courses[code][0];
                     var check=add_course($('#time-table'), course, language);
                     if(check=="available"){
@@ -172,8 +186,14 @@
                     }
                 });
                 /**********最主要的系級提交funciton，若要修改請謹慎小心!!!***********/
-                $("#department_search").click(function(){//
-                    var major=$("#v_major").val();  //取到系                    
+                $("#department_search").click(function(){   //
+                    var major=$("#v_major").val();  //取到系 
+                    if($("#checkbox").val() == "DoubleMajor"){
+                        var major2 = $("#v_major2").val();
+                        major2 = major2.split('-')[1];
+                        major2 = major2.split(" ");
+                        major2 = major2[0];
+                    }
                     major=major.split('-')[1];                    
                     var level = check_which_class(major,$("#v_level").val());//取到年級                  
                     major=major.split(" ");
@@ -392,6 +412,7 @@
                 $("#v_career").change(function(){//會動態變動系所與年級名稱
                 //if the career(degree) has been changed, also change the level
                     $("#v_major").empty();
+                    $("#v_major2").empty();
                     $("#s_major").empty();
                     var str="";                                        
                     $( "select option:selected" ).each(function(ik,iv){// filter all selected options, to find the degree options.
@@ -404,6 +425,8 @@
                     $.each(window.department_name[str],function(ik,iv){
                         var newOption=$.parseHTML('<option>'+window.department_name[str][ik]+'</option>');
                         $("#v_major").append(newOption);
+                        var newOption=$.parseHTML('<option>'+window.department_name[str][ik]+'</option>');
+                        $("#v_major2").append(newOption);
                         var newOption=$.parseHTML('<option>'+window.department_name[str][ik]+'</option>');
                         $('#s_major').append(newOption);
                         //append all the department option into major field!!
