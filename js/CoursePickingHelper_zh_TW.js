@@ -188,115 +188,20 @@
                 /**********最主要的系級提交funciton，若要修改請謹慎小心!!!***********/
                 $("#department_search").click(function(){   //
                     var major=$("#v_major").val();  //取到系 
-                    if($("#checkbox").val() == "DoubleMajor"){
-                        var major2 = $("#v_major2").val();
-                        major2 = major2.split('-')[1];
-                        major2 = major2.split(" ");
-                        major2 = major2[0];
-                    }
                     major=major.split('-')[1];                    
-                    var level = check_which_class(major,$("#v_level").val());//取到年級                  
+                    var level = check_which_class(major, $("#v_level").val());//取到年級                  
                     major=major.split(" ");
                     major=major[0];                    
                     reset();
                     $("td").html('<span class="fa fa-plus-circle fa-5x"></span>');
-                    if(level==""){//這是給文學院、管理學院與農業暨自然資源學院這種沒有年級的選項
-                        $.each(course_of_majors[major][level],function(ik,iv){//因為這種院的課一定是交給使用者自己選，所以就不自動填入
-                            $.each(courses[iv],function(jk,jv){
-                                if(jv.for_dept==major){//因為課程代碼會被重複使用，所以用for迴圈判斷他是不是系上開的課
-                                    if(jv.obligatory_tf==true){
-                                        bulletin_post($("#obligatory-post"),jv, language);
-                                    }
-                                    if(jv.obligatory_tf==false){
-                                        if(jv.class==1){
-                                            bulletin_post($("#freshman"),jv, language);
-                                        }
-                                        if(jv.class==2){
-                                            bulletin_post($("#sophomore"),jv, language);
-                                        }
-                                        if(jv.class==3){
-                                            bulletin_post($("#junior"),jv, language);
-                                        }
-                                        if(jv.class==4){
-                                            bulletin_post($("#senior"),jv, language);
-                                        }
-                                        if(jv.class==5){
-                                            bulletin_post($("#fifth-grade"),jv, language);
-                                        }
-                                        if(jv.class==""){
-                                            bulletin_post($("#whole-school"),jv, language);
-                                        }
-                                    }
-                                    //check_optional_obligatory(courses[iv]);
-                                }
-                            })
-                        });
-                    }                    
-                    else{                        
-                        $.each(course_of_majors[major][level], function(ik, iv){//先這一年級的必修課全部跑過一次，計算重複課名的數量
-                            $.each(courses[iv],function(jk,jv){
-                                if(jv.obligatory_tf==true&&jv.for_dept==major&&jv.class==level){//這樣就可以保證我計算到的必修數量一定是該科系該年級該班級了
-                                    check_optional_obligatory(jv);
-                                }
-                            })
-
-                        });                       
-                        $.each(course_of_majors[major][level], function(ik, iv){//知道那些課程會重複之後，再決定那些課程要填入課表
-                            $.each(courses[iv],function(jk,jv){
-                                if(jv.for_dept==major){                    
-                                    var tmpCh = jv.title_parsed["zh_TW"].split(' ');       //(這是中文課名)切割課程名稱，遇到空格就切開
-                                    title_short = tmpCh[0];     //title_short是會自動宣告的區域變數，存沒有英文的課名
-                                    var class_EN=level.split("")[1];//班級的A或B，就是最後那個代碼
-                                    if(window.name_of_optional_obligatory[title_short]==1){//只有必修課會被函式計算數量，所以就不用再判斷是否為必修了，一定是                             
-                                 
-                                        if(title_short=="日文(一)"||title_short=="德文(一)"||title_short=="西班牙文(一)"||title_short=="法文(一)"){//判斷是否為德日西法等語言課
-                                          
-                                            bulletin_post($("#year-post"),jv,language);                            
-                                        }
-                                        if(jv.time_parsed==0){//表示應該為實習課，所以無時間，神奇的是[]在boolean判斷式中居然會被當作0
-                                            bulletin_post($("#obligatory-post"),jv,language);                                            
-                                        }
-                                        else{
-                                            if(jv.class==level){
-                                                add_course($('#time-table'), jv, language);//如果這個課名只有出現過一次，就可以自動填入       
-                                            }
-                                            
-                                        }                                        
-                                    }
-                                    else{//當出現不止一次的時候就丟到bulletin，但是只丟屬於這個班級的                    
-                                        if(jv.class==level&&jv.obligatory_tf==true){
-                                            show_optional_obligatory(jv);//若重複出現，則讓使用者自己決定
-                                        }
-                                    }
-                                }
-                            })
-                        });
-                        $.each(course_of_majors[major], function(ik, iv){//系上所有的選修課都先填入bulletin
-                            if(check_if_two_class(level).length==1){//代表只有一個班
-                                $.each(iv,function(jk, jv){
-                                    $.each(courses[jv],function(kk,kv){
-                                        if(kv.obligatory_tf==false&&kv.for_dept==major){
-                                            //console.log(kv);
-                                            check_which_bulletin(kv);//由fuction決定該貼到哪個年級的欄位
-                                        }
-                                    })
-                                })
-                            }                            
-                            else{//代表有兩個班                                
-                                var class_EN=level.split("")[1];//班級的A或B，就是最後那個代碼
-                                if(ik.split("")[1]==class_EN){
-                                    $.each(iv,function(jk, jv){
-                                        $.each(courses[jv],function(kk,kv){
-                                            if(kv.obligatory_tf==false&&kv.for_dept==major&&kv.class.split("")[1]==class_EN&&kv.class.split("")[0]==ik.split("")[0]){
-                                                //console.log(kv);
-                                                check_which_bulletin(kv);//由fuction決定該貼到哪個年級的欄位
-                                                return false;
-                                            }
-                                        })
-                                    })
-                                }
-                            }
-                        })	//以上為必修 選修填入
+                    add_major(major, level);
+                    if ($("#checkbox").val() == "DoubleMajor"){
+                        var major2 = $("#v_major2").val();
+                        major2 = major2.split('-')[1];
+                        var level = check_which_class(major2, $("#v_level").val());
+                        major2 = major2.split(" ");
+                        major2 = major2[0];
+                        add_major(major2, level);
                     }
                 });
                 window.sub_major=$("#s_major").val();//為了方便使用者不斷查詢某一系不同年級的課
@@ -309,7 +214,7 @@
                     //課號搜尋
                     if(major==sub_major&&level==sub_level){                        
                         if(code!=""){
-                            bulletin_post($("#search-post"),courses[code][0], language);
+                            bulletin_post($("#search-post"), courses[code][0], language);
                             $("#class_code").val("");
                         }
                         title_search(credits_filter());//這兩行分別是課名搜尋和教師名稱搜尋
@@ -321,7 +226,7 @@
                         sub_major=major;	//紀錄這次提交的系級，好讓下次判斷有沒有變動
                         sub_level=level;
                         major=major.split('-')[1];                        
-                        var level = check_which_class(major,$("#s_level").val());//取到年級
+                        var level = check_which_class(major, $("#s_level").val());//取到年級
                         major=major.split(' ');//這兩行是為了處理有分A、B班的系的字串，只要取系就好，AB就砍掉八
                         major=major[0];
                         reset_for_time_request();
@@ -535,7 +440,107 @@
                 }
 
             };
+            /*******嘗試函式化選修填入課程的功能！！*******/
+            var add_major = function(major, level){
+                if(level==""){//這是給文學院、管理學院與農業暨自然資源學院這種沒有年級的選項
+                        $.each(course_of_majors[major][level],function(ik, iv){//因為這種院的課一定是交給使用者自己選，所以就不自動填入
+                            $.each(courses[iv],function(jk, jv){
+                                if(jv.for_dept==major){//因為課程代碼會被重複使用，所以用for迴圈判斷他是不是系上開的課
+                                    if(jv.obligatory_tf==true){
+                                        bulletin_post($("#obligatory-post"), jv, language);
+                                    }
+                                    if(jv.obligatory_tf==false){
+                                        if(jv.class==1){
+                                            bulletin_post($("#freshman"), jv, language);
+                                        }
+                                        if(jv.class==2){
+                                            bulletin_post($("#sophomore"), jv, language);
+                                        }
+                                        if(jv.class==3){
+                                            bulletin_post($("#junior"), jv, language);
+                                        }
+                                        if(jv.class==4){
+                                            bulletin_post($("#senior"), jv, language);
+                                        }
+                                        if(jv.class==5){
+                                            bulletin_post($("#fifth-grade"), jv, language);
+                                        }
+                                        if(jv.class==""){
+                                            bulletin_post($("#whole-school"), jv, language);
+                                        }
+                                    }
+                                    //check_optional_obligatory(courses[iv]);
+                                }
+                            })
+                        });
+                    }                    
+                else{                        
+                    $.each(course_of_majors[major][level], function(ik, iv){    //先這一年級的必修課全部跑過一次，計算重複課名的數量
+                        $.each(courses[iv],function(jk, jv){
+                            if(jv.obligatory_tf==true&&jv.for_dept==major&&jv.class==level){//這樣就可以保證我計算到的必修數量一定是該科系該年級該班級了
+                                check_optional_obligatory(jv);
+                            }
+                        })
 
+                    });                       
+                    $.each(course_of_majors[major][level], function(ik, iv){//知道那些課程會重複之後，再決定那些課程要填入課表
+                        $.each(courses[iv],function(jk, jv){
+                            if(jv.for_dept==major){                    
+                                var tmpCh = jv.title_parsed["zh_TW"].split(' ');       //(這是中文課名)切割課程名稱，遇到空格就切開
+                                title_short = tmpCh[0];     //title_short是會自動宣告的區域變數，存沒有英文的課名
+                                var class_EN=level.split("")[1];//班級的A或B，就是最後那個代碼
+                                if(window.name_of_optional_obligatory[title_short]==1){//只有必修課會被函式計算數量，所以就不用再判斷是否為必修了，一定是                             
+                             
+                                    if(title_short=="日文(一)"||title_short=="德文(一)"||title_short=="西班牙文(一)"||title_short=="法文(一)"){//判斷是否為德日西法等語言課
+                                      
+                                        bulletin_post($("#year-post"), jv, language);                            
+                                    }
+                                    if(jv.time_parsed==0){//表示應該為實習課，所以無時間，神奇的是[]在boolean判斷式中居然會被當作0
+                                        bulletin_post($("#obligatory-post"), jv, language);                                            
+                                    }
+                                    else{
+                                        if(jv.class==level){
+                                            add_course($('#time-table'), jv, language);//如果這個課名只有出現過一次，就可以自動填入       
+                                        }
+                                        
+                                    }                                        
+                                }
+                                else{//當出現不止一次的時候就丟到bulletin，但是只丟屬於這個班級的                    
+                                    if(jv.class==level&&jv.obligatory_tf==true){
+                                        show_optional_obligatory(jv);//若重複出現，則讓使用者自己決定
+                                    }
+                                }
+                            }
+                        })
+                    });
+                    $.each(course_of_majors[major], function(ik, iv){//系上所有的選修課都先填入bulletin
+                        if(check_if_two_class(level).length==1){//代表只有一個班
+                            $.each(iv,function(jk, jv){
+                                $.each(courses[jv], function(kk, kv){
+                                    if(kv.obligatory_tf==false&&kv.for_dept==major){
+                                        //console.log(kv);
+                                        check_which_bulletin(kv);//由fuction決定該貼到哪個年級的欄位
+                                    }
+                                })
+                            })
+                        }                            
+                        else{//代表有兩個班                                
+                            var class_EN=level.split("")[1];//班級的A或B，就是最後那個代碼
+                            if(ik.split("")[1]==class_EN){
+                                $.each(iv,function(jk, jv){
+                                    $.each(courses[jv], function(kk, kv){
+                                        if(kv.obligatory_tf==false&&kv.for_dept==major&&kv.class.split("")[1]==class_EN&&kv.class.split("")[0]==ik.split("")[0]){
+                                            //console.log(kv);
+                                            check_which_bulletin(kv);//由fuction決定該貼到哪個年級的欄位
+                                            return false;
+                                        }
+                                    })
+                                })
+                            }
+                        }
+                    })
+                }
+            };
             /**********這是用來刪除衝堂的課程***********/
             var delete_conflict = function($target, course, stop_day, stop_time) {
             //假設target為time-table的參數，course為courses的某一個課程
