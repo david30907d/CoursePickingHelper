@@ -332,6 +332,16 @@
                         <div class="modal-body">
                             <form class="form-horizontal">
                                 <div class="form-group">
+                                    <label for="doubleMajor" class="col-xs-2 control-label">雙主修</label>
+                                    <div class="col-xs-10">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="checkbox" value="noDoubleMajor">
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label for="v_career" class="col-xs-2 control-label">學制</label>
                                     <div class="col-xs-10">
                                         <select class="form-control" name="v_career" id="v_career">
@@ -349,6 +359,14 @@
                                     <label for="v_major" class="col-xs-2 control-label">系所</label>
                                     <div class="col-xs-10">
                                         <select class="form-control" name="v_major" id="v_major">
+                                            <option>請選擇系所</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="v_major_2" style="display:none">
+                                    <label for="v_major2" class="col-xs-2 control-label">系所</label>
+                                    <div class="col-xs-10">
+                                        <select class="form-control" name="v_major2" id="v_major2">
                                             <option>請選擇系所</option>
                                         </select>
                                     </div>
