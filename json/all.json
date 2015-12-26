@@ -122027,5 +122027,284 @@
             "zh_TW": "博士論文"
         },
         "year": "半"
+    },{
+        "class": "6",
+        "code": "8601",
+        "credits": "0",
+        "credits_parsed": 0,
+        "department": "LED產專",
+        "for_dept": "精密工程研究所LED產業碩士專班",
+        "hours": "2",
+        "hours_parsed": 2,
+        "intern_location": [""],
+        "intern_time": "",
+        "language": "中文",
+        "location": ["M106"],
+        "note": "",
+        "number": "30",
+        "number_parsed": 30,
+        "obligatory": "必修",
+        "obligatory_tf": true,
+        "previous": "",
+        "professor": "韓斌",
+        "time": "534",
+        "time_parsed": [{
+            "day": 5,
+            "time": [3, 4]
+        }],
+        "title": "專題討論(一) `Seminar(I)",
+        "title_parsed": {
+            "en_US": "Seminar(I)",
+            "zh_TW": "專題討論(一)"
+        },
+        "year": "全"
+    }, {
+        "class": "6",
+        "code": "8602",
+        "credits": "3",
+        "credits_parsed": 3,
+        "department": "LED產專",
+        "for_dept": "精密工程研究所LED產業碩士專班",
+        "hours": "3",
+        "hours_parsed": 3,
+        "intern_location": [""],
+        "intern_time": "",
+        "language": "中文",
+        "location": ["M106"],
+        "note": "",
+        "number": "30",
+        "number_parsed": 30,
+        "obligatory": "選修",
+        "obligatory_tf": false,
+        "previous": "",
+        "professor": "劉柏良",
+        "time": "3234",
+        "time_parsed": [{
+            "day": 3,
+            "time": [2, 3, 4]
+        }],
+        "title": "材料科學 `Material Science",
+        "title_parsed": {
+            "en_US": "Material Science",
+            "zh_TW": "材料科學"
+        },
+        "year": "半"
+    }, {
+        "class": "6",
+        "code": "8603",
+        "credits": "3",
+        "credits_parsed": 3,
+        "department": "LED產專",
+        "for_dept": "精密工程研究所LED產業碩士專班",
+        "hours": "3",
+        "hours_parsed": 3,
+        "intern_location": [""],
+        "intern_time": "",
+        "language": "中文",
+        "location": ["M106"],
+        "note": "",
+        "number": "30",
+        "number_parsed": 30,
+        "obligatory": "選修",
+        "obligatory_tf": false,
+        "previous": "",
+        "professor": "林明澤",
+        "time": "4567",
+        "time_parsed": [{
+            "day": 4,
+            "time": [5, 6, 7]
+        }],
+        "title": "微製造工程 `Microfabrication Technology",
+        "title_parsed": {
+            "en_US": "Microfabrication Technology",
+            "zh_TW": "微製造工程"
+        },
+        "year": "半"
+    }, {
+        "class": "6",
+        "code": "8604",
+        "credits": "3",
+        "credits_parsed": 3,
+        "department": "LED產專",
+        "for_dept": "精密工程研究所LED產業碩士專班",
+        "hours": "3",
+        "hours_parsed": 3,
+        "intern_location": [""],
+        "intern_time": "",
+        "language": "中文",
+        "location": ["M106"],
+        "note": "",
+        "number": "30",
+        "number_parsed": 30,
+        "obligatory": "選修",
+        "obligatory_tf": false,
+        "previous": "",
+        "professor": "韓斌",
+        "time": "2234",
+        "time_parsed": [{
+            "day": 2,
+            "time": [2, 3, 4]
+        }],
+        "title": "光學設計與顯示光源檢測技術 `Optical Design and Display Light Source Measurement",
+        "title_parsed": {
+            "en_US": "Optical Design and Display Light Source Measurement",
+            "zh_TW": "光學設計與顯示光源檢測技術"
+        },
+        "year": "半"
+    }, {
+        "class": "6",
+        "code": "8605",
+        "credits": "3",
+        "credits_parsed": 3,
+        "department": "LED產專",
+        "for_dept": "精密工程研究所LED產業碩士專班",
+        "hours": "3",
+        "hours_parsed": 3,
+        "intern_location": [""],
+        "intern_time": "",
+        "language": "英文",
+        "location": ["M106"],
+        "note": "",
+        "number": "30",
+        "number_parsed": 30,
+        "obligatory": "選修",
+        "obligatory_tf": false,
+        "previous": "",
+        "professor": "王東安",
+        "time": "2567",
+        "time_parsed": [{
+            "day": 2,
+            "time": [5, 6, 7]
+        }],
+        "title": "能量擷取技術 `Energy Harvesting Technology",
+        "title_parsed": {
+            "en_US": "Energy Harvesting Technology",
+            "zh_TW": "能量擷取技術"
+        },
+        "year": "半"
+    }, {
+        "class": "6",
+        "code": "8606",
+        "credits": "3",
+        "credits_parsed": 3,
+        "department": "LED產專",
+        "for_dept": "精密工程研究所LED產業碩士專班",
+        "hours": "3",
+        "hours_parsed": 3,
+        "intern_location": [""],
+        "intern_time": "",
+        "language": "中文",
+        "location": ["M101"],
+        "note": "",
+        "number": "30",
+        "number_parsed": 30,
+        "obligatory": "選修",
+        "obligatory_tf": false,
+        "previous": "",
+        "professor": "蔡政穆",
+        "time": "4234",
+        "time_parsed": [{
+            "day": 4,
+            "time": [2, 3, 4]
+        }],
+        "title": "顯示色彩工程 `Color Engineering of Display",
+        "title_parsed": {
+            "en_US": "Color Engineering of Display",
+            "zh_TW": "顯示色彩工程"
+        },
+        "year": "半"
+    }, {
+        "class": "6",
+        "code": "8607",
+        "credits": "3",
+        "credits_parsed": 3,
+        "department": "LED產專",
+        "for_dept": "精密工程研究所LED產業碩士專班",
+        "hours": "3",
+        "hours_parsed": 3,
+        "intern_location": [""],
+        "intern_time": "",
+        "language": "中文",
+        "location": ["M106"],
+        "note": "",
+        "number": "30",
+        "number_parsed": 30,
+        "obligatory": "選修",
+        "obligatory_tf": false,
+        "previous": "",
+        "professor": "楊錫杭",
+        "time": "1234",
+        "time_parsed": [{
+            "day": 1,
+            "time": [2, 3, 4]
+        }],
+        "title": "奈米加工技術 `Nano Fabrication Technology",
+        "title_parsed": {
+            "en_US": "Nano Fabrication Technology",
+            "zh_TW": "奈米加工技術"
+        },
+        "year": "半"
+    }, {
+        "class": "6",
+        "code": "8608",
+        "credits": "3",
+        "credits_parsed": 3,
+        "department": "LED產專",
+        "for_dept": "精密工程研究所LED產業碩士專班",
+        "hours": "3",
+        "hours_parsed": 3,
+        "intern_location": [""],
+        "intern_time": "",
+        "language": "中文",
+        "location": ["M106"],
+        "note": "",
+        "number": "30",
+        "number_parsed": 30,
+        "obligatory": "選修",
+        "obligatory_tf": false,
+        "previous": "",
+        "professor": "蔡政穆",
+        "time": "3567",
+        "time_parsed": [{
+            "day": 3,
+            "time": [5, 6, 7]
+        }],
+        "title": "光學導論 `Introduction to Optics",
+        "title_parsed": {
+            "en_US": "Introduction to Optics",
+            "zh_TW": "光學導論"
+        },
+        "year": "半"
+    }, {
+        "class": "6",
+        "code": "8609",
+        "credits": "3",
+        "credits_parsed": 3,
+        "department": "LED產專",
+        "for_dept": "精密工程研究所LED產業碩士專班",
+        "hours": "3",
+        "hours_parsed": 3,
+        "intern_location": [""],
+        "intern_time": "",
+        "language": "中文",
+        "location": ["M106"],
+        "note": "",
+        "number": "30",
+        "number_parsed": 30,
+        "obligatory": "選修",
+        "obligatory_tf": false,
+        "previous": "",
+        "professor": "劉柏良",
+        "time": "4234",
+        "time_parsed": [{
+            "day": 4,
+            "time": [2, 3, 4]
+        }],
+        "title": "固體之微觀性質 `Microscopic Properties of Solids",
+        "title_parsed": {
+            "en_US": "Microscopic Properties of Solids",
+            "zh_TW": "固體之微觀性質"
+        },
+        "year": "半"
     }]
 }
