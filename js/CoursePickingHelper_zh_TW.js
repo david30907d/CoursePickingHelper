@@ -1,60 +1,24 @@
 (function($){
-        //先定義JQuery為$，不要讓它衝突
-        //var courses = null;
-        //var $td = 'tr[data-hour=4] td:eq(13)';
-        //$td.html('<span class="fa fa-plus-circle fa-5x"></span>');
-
+        //先定義JQuery為$，不要讓它衝突        
             $(function(){
                 /**一開始的簡易版使用說明**/
-                //toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});
-                //當文件準備好的時候，讀入json檔
-                $.getJSON("json/U.json", function(json){  //getJSON會用function(X)傳回X的物件或陣列                    
-                    window.credits=0//一開始的學分數是0
-                    window.courses = {};//宣告一個空的物件
-                    window.course_of_majors = {};//宣告一個空的物件
-                    window.course_of_day = {};  //這是宣告日期的陣列
-                    window.teacher_course = {}; //這是以老師姓名為index的陣列
-                    window.name_of_course = {}; //這是以課程名稱為index的陣列
-                    window.name_of_optional_obligatory = [] //這是用來存系上的必修課，檢查有沒有課名是重複的，若有就讓使用者自行決定要上哪堂
-                    window.user={"name":"","time_table":[]};
-                    $("#class_credit").text(0);
-                    window.language="zh_TW";//固定顯示語言為中文                    
-                    $.each(json.course, function(ik, iv){
-                        if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
-                            window.course_of_majors[iv.for_dept] = {};
-                        if(typeof(window.course_of_majors[iv.for_dept][iv.class]) == 'undefined'){
-                            window.course_of_majors[iv.for_dept][iv.class] = [];//如果這一行(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，[]裡面的是放陣列
-                        }
-                        window.course_of_majors[iv.for_dept][iv.class].push(iv.code);//把東西推進這個陣列裡，概念跟stack一樣
-                        if(typeof(window.courses[iv.code])=='undefined'){
-                            window.courses[iv.code]=[];
-                        }
-                        window.courses[iv.code].push(iv);//這邊可以直接把選課號當作索引值key，裡面的值為object
-                        $.each(iv.time_parsed, function(jk, jv){//建立日期的陣列
-                            $.each(jv.time, function(mk, mv){
-                                if(typeof(window.course_of_day[jv.day])=='undefined'){
-                                    window.course_of_day[jv.day]={};
-                                }
-                                if(typeof(window.course_of_day[jv.day][mv])=='undefined'){
-                                    window.course_of_day[jv.day][mv]=[];
-                                }
-                                window.course_of_day[jv.day][mv].push(iv);
-                            })
-                        })
-                        if(typeof(window.teacher_course[iv.professor])=='undefined'){//建立老師名稱的陣列
-                            window.teacher_course[iv.professor]=[];
-                        }
-                        window.teacher_course[iv.professor].push(iv);
-                        if(typeof(window.name_of_course[iv.title_parsed.zh_TW])=='undefined'){//中文課名陣列
-                            window.name_of_course[iv.title_parsed.zh_TW]=[];
-                        }
-                        window.name_of_course[iv.title_parsed.zh_TW].push(iv);
-                        if(typeof(window.name_of_course[iv.title_parsed.en_US])=='undefined'){//英文課名陣列
-                            window.name_of_course[iv.title_parsed.en_US]=[];
-                        }
-                        window.name_of_course[iv.title_parsed.en_US].push(iv);
-                    });
-                });
+                toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});                
+                /*initialization!!!*/
+
+                window.credits=0//一開始的學分數是0
+                window.courses = {};//宣告一個空的物件
+                window.course_of_majors = {};//宣告一個空的物件
+                window.course_of_day = {};  //這是宣告日期的陣列
+                window.teacher_course = {}; //這是以老師姓名為index的陣列
+                window.name_of_course = {}; //這是以課程名稱為index的陣列
+                window.name_of_optional_obligatory = [] //這是用來存系上的必修課，檢查有沒有課名是重複的，若有就讓使用者自行決定要上哪堂
+                window.user={"name":"","time_table":[]};
+                $("#class_credit").text(0);
+                window.language="zh_TW";//固定顯示語言為中文           
+                window.url_base="";//used to be the url that link to the syllabus of that course.
+                /*initialization!!!*/
+
+                //當文件準備好的時候，讀入department的json檔, 因為這是顯示系所，沒多大就全部都載進來                                
                 $.getJSON("json/department.json",function(depJson){
                     window.department_name={};
                     $.each(depJson,function(ik,iv){
@@ -67,9 +31,17 @@
                             option+=jv.value+'-'+jv.name;
                             window.department_name[iv.degree].push(option);
                         })
-                    })
-                    
-                })              
+                    }) 
+                    return_url_base();
+                })      
+
+                $('#v_career').change(function(){
+                    var degree=$('#v_career').val();
+                    var path = "json/" + degree + ".json";
+                    get_json_when_change_degree("json/O.json");
+                    get_json_when_change_degree(path);
+                    //cause O means other, general education, department class and others are all included, so this json is loaded in by default.
+                })                        
                 /*******    ↓製作隱藏側欄的功能↓   *******/
                     /***必修***/
                 $("#obligatory-span").click(function(){
@@ -251,27 +223,26 @@
                         var level=get_major_and_level('v')['level'];
                         var s_major=get_major_and_level('s')['major'];
                         var s_level=get_major_and_level('s')['level'];
-
                         var day=$(this).closest("td").attr("data-day");//因為我把同一時段的課程塞進陣列裡，所以要用index去取
                         var hour=$(this).closest("tr").attr("data-hour");
                         reset_for_time_request();
                          console.log(major+' = '+s_major+' = '+s_level);
+                         console.log(day+' '+hour);
                         $.each(course_of_day[day][hour], function(ik, iv){
-                            if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))||iv.for_dept==undefined||iv.for_dept==""||iv.for_dept=="C00全校共同"||iv.for_dept=="N00共同學科(進修學士班)"){//判斷如果是主系的課就不分年級全部都會顯示出來，如果是輔系的就只顯示該年級的課；如果for_dept==undefined就代表是通識課；如果為C00全校共同或N00共同學科(進修學士班)就會是體育、國防、服務學習、全校英外語                        
-                                if(iv.for_dept=="C00全校共同"||iv.for_dept=="N00共同學科(進修學士班)"){
-                                //代表是教務處綜合課程查詢裡面的所有課，包含體育、國防、師培、全校選修、全校英外語
+                            if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))||iv.for_dept=="全校共同"||iv.for_dept=="共同學科(進修學士班)"){//判斷如果是主系的課就不分年級全部都會顯示出來，如果是輔系的就只顯示該年級的課；如果for_dept==undefined就代表是通識課；如果為全校共同或共同學科(進修學士班)就會是體育、國防、服務學習、全校英外語 or general education, chinese and english.                           
+                                if(iv.obligatory_tf==false && iv.department != major && iv.department != s_major){
+                                //代表是教務處綜合課程查詢裡面的所有課、國防、師培、全校選修、全校英外語  (obligatory of 師培 can be true or false!!!)
                                     check_which_common_subject(iv);
-
                                 }
-                                else if(iv.obligatory_tf==true){                                 
+                                else if(iv.obligatory_tf==true){
                                     check_which_bulletin_required(iv);
-                                //判斷為國英文或是必修課
-
+                                //判斷為國英文或是必修課和通識課!!!，包含體育
+                                //(obligatory of 師培 can be true or false!!!)
                                 }
                                 else if(iv.obligatory_tf==false){
                                     check_which_bulletin(iv);
                                     //決定選修課該貼到哪個年級的欄位
-                                }
+                                }                                
                             }
 
                         })
@@ -298,7 +269,6 @@
                         $(this).val("moon");
                         $(this).find("span").toggle("slow");
                     }
-                    //console.log($(this).val);
                 });
 
                 $("#v_career").change(function(){//會動態變動系所與年級名稱
@@ -371,8 +341,8 @@
                 $option.find('button').attr("title", time);  //在title裡面放課堂時間
                 $option.find('button').val(course.code);                
                 //把現在找到的這門選修課課程代碼儲存到這個option，並用value表示       
-                //var url=course.url;              
-                $option.find('a').attr('href','https://onepiece.nchu.edu.tw/cofsys/plsql/Syllabus_main_q?v_strm=1041&v_class_nbr=5346');
+                var url=window.url_base+course.url;     
+                $option.find('a').attr('href',url);
                 $target.append($option);        //顯示課程，把$option放到elective-post，append是追加在後面                
                 $('[data-toggle="tooltip"]').tooltip(); //讓tooltip功能綁上去
             };
@@ -417,7 +387,8 @@
                         });
                     });
                     add_credits(course);                    
-                    window.user.time_table.push(course);//here means once i add this course in my timetable, i will also record this object in a json format, to save this time_table for users.
+                    window.user.time_table.push(course);//here means once i add this course in my timetable, i will also record this object in a json format, to save this time_table for users. 
+                    build_toastr_time(course);
                 }
                 if(check_conflict==false){
                     return("available");	//沒衝堂，可以變色
@@ -703,17 +674,23 @@
             }
             var check_which_bulletin_required=function(course){
                 var EN={"語言中心":"","夜共同科":"","夜外文":""};
-                var CH={"通識中心":"","夜中文":""};  
+                var CH={"通識教育中心":"","夜中文":""};
                 if(course.discipline!=undefined&&course.discipline!=""){
                     //通識課才有學群這個欄位
                     check_general(course);
-                }              
+                }
                 else if(course.department in EN){
                     bulletin_post($("#english"),course, language);
                 }
                 else if(course.department in CH){
                     bulletin_post($("#chinese"),course, language);
-                }                
+                }
+                else if(course.department == "體育室" ||                 course.department=="夜共同科"){
+                    bulletin_post($("#PE-post"),course, language);
+                }
+                else if(course.department == "師資培育中心"){
+                    bulletin_post($("#teacher-post"),course, language);
+                }
                 else{
                     bulletin_post($("#obligatory-post"),course, language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
                 }
@@ -735,9 +712,9 @@
                         });
             }
             var check_general=function(course){
-                var disciplineH={"文學":"","歷史":"","哲學":"","藝術":"","文化":""};
-                var disciplineS={"公民與社會":"","法律與政治":"","商業與管理":"","心理與教育":"","資訊與傳播":""};
-                var disciplineN={"生命科學":"","環境科學":"","物質科學":"","數學統計":"","工程科技":""};                
+                var disciplineH={"文學學群":"","歷史學群":"","哲學學群":"","藝術學群":"","文化學群":""};
+                var disciplineS={"公民與社會學群":"","法律與政治學群":"","商業與管理學群":"","心理與教育學群":"","資訊與傳播學群":""};
+                var disciplineN={"生命科學學群":"","環境科學學群":"","物質科學學群":"","數學統計學群":"","工程科技學群":""};                
                 if(course.discipline in disciplineH){
                     bulletin_post($("#humanities"), course, language)
                 }
@@ -752,16 +729,13 @@
                 }                
             };
             var check_which_common_subject = function(course){
-                if(course.department=="師培中心"){
+                if(course.department=="師資培育中心"){
                     bulletin_post($("#teacher-post"),course, language);
-                }
-                else if(course.department=="體育室"||course.department=="夜共同科"){
-                    bulletin_post($("#PE-post"),course, language);
                 }
                 else if(course.department=="教官室"){
                     bulletin_post($("#military-post"),course, language);
                 }
-                else if(course.department=="語言中心"||course.department=="外文系"){
+                else if(course.department=="語言中心"){
                     bulletin_post($("#foreign-post"),course, language);
                 }
                 else{ 
@@ -778,21 +752,31 @@
                 if(course.intern_time!=""&&course.intern_time!=undefined){//不是每一堂課都會有實習時間
                     time.push("實習時間:"+course.intern_time);
                 }
-                time.push("代碼:"+course.code);
                 if(course.discipline!=""&&course.discipline!=undefined){//代表他是通識課
                     time.push("教授:"+course.professor);
                     time.push("學群:"+course.discipline);
-                    time.push("剩餘名額:"+course.remaining_seat);
-                    //time.push("中籤率:"+course.possibility);
                 }
-                else if(course.department in EN_CH){
+                else{
                     time.push("教授:"+course.professor);
-                }
-                if(course.note!=""){
-                    time.push("備註:"+course.note);
-                }
+                }                
                 time = time.join(' ');  //把多個陣列用" "分隔並合併指派給time，此為字串型態，若是將字串split('')，則會回傳一個陣列型態
                 return time;
+            }
+            var build_toastr_time=function(course){
+                var EN_CH={"語言中心":"","夜共同科":"","夜外文":"","通識中心":"","夜中文":""};   
+                var toast_mg=[];
+                toast_mg.push("代碼: "+course.code);
+                toast_mg.push("剩餘名額:"+(course.available-course.enrolled_num));
+                if(course.discipline!=""&&course.discipline!=undefined){//代表他是通識課
+                    toast_mg.push("學群:"+course.discipline);
+                    var possibility = cal_possibility(course);// a fuction that return the possibility of enrolling that course successfully.
+                    toast_mg.push("中籤率:" + possibility + "%");
+                }                
+                if(course.note!=""){
+                    toast_mg.push("備註:"+course.note);
+                }                
+                toast_mg = toast_mg.join('<br/>');
+                toastr.info(toast_mg);
             }
             var credits_filter=function(){
                 var credits=$("#credits").val();
@@ -857,7 +841,8 @@
             }
             var get_major_and_level = function(typechar){
                 //這會回傳一個major和level的陣列，供全域呼叫使用
-                var arr = $('form').serializeArray();
+                var arr = $('form').serializeArray();//this is a jQuery function
+                // will select all form of this html Document, and build and array of object
                 var returnarr={};
                 var temp;
                 if(typechar == 'v'){
@@ -872,5 +857,59 @@
                 }
                 else alert("遇到不可預期的錯誤，請聯絡開發小組XD");
                 return returnarr;
-            }       
+            }    
+            var get_json_when_change_degree = function(path)   {
+                $.getJSON(path, function(json){  //getJSON會用function(X)傳回X的物件或陣列  
+                    $.each(json.course, function(ik, iv){
+                        if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
+                            window.course_of_majors[iv.for_dept] = {};
+                        if(typeof(window.course_of_majors[iv.for_dept][iv.class]) == 'undefined'){
+                            window.course_of_majors[iv.for_dept][iv.class] = [];//如果這一行(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，[]裡面的是放陣列
+                        }
+                        window.course_of_majors[iv.for_dept][iv.class].push(iv.code);//把東西推進這個陣列裡，概念跟stack一樣
+                        if(typeof(window.courses[iv.code])=='undefined'){
+                            window.courses[iv.code]=[];
+                        }
+                        window.courses[iv.code].push(iv);//這邊可以直接把選課號當作索引值key，裡面的值為object
+                        $.each(iv.time_parsed, function(jk, jv){//建立日期的陣列
+                            $.each(jv.time, function(mk, mv){
+                                if(typeof(window.course_of_day[jv.day])=='undefined'){
+                                    window.course_of_day[jv.day]={};
+                                }
+                                if(typeof(window.course_of_day[jv.day][mv])=='undefined'){
+                                    window.course_of_day[jv.day][mv]=[];
+                                }
+                                window.course_of_day[jv.day][mv].push(iv);
+                            })
+                        })
+                        if(typeof(window.teacher_course[iv.professor])=='undefined'){//建立老師名稱的陣列
+                            window.teacher_course[iv.professor]=[];
+                        }
+                        window.teacher_course[iv.professor].push(iv);
+                        if(typeof(window.name_of_course[iv.title_parsed.zh_TW])=='undefined'){//中文課名陣列
+                            window.name_of_course[iv.title_parsed.zh_TW]=[];
+                        }
+                        window.name_of_course[iv.title_parsed.zh_TW].push(iv);
+                        if(typeof(window.name_of_course[iv.title_parsed.en_US])=='undefined'){//英文課名陣列
+                            window.name_of_course[iv.title_parsed.en_US]=[];
+                        }
+                        window.name_of_course[iv.title_parsed.en_US].push(iv);
+                    });
+                });
+            }
+            var return_url_base = function(){
+                // this function will return a string, url base, which will link to syllabus of that course. and assign it to a global variable.
+                 $.getJSON("json/url_base.json", function(json){
+                    window.url_base=json[0];                   
+                 })
+            }
+            var cal_possibility = function(course){
+                var pos = (course.available-course.enrolled_num)/course.available*100;
+                pos = new Number(pos);
+                pos = pos.toFixed(2);
+                if(pos<0){
+                    return 0;
+                }           
+                return pos;     
+            }
 })(jQuery);
