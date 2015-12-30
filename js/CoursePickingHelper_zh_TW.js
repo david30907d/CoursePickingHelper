@@ -441,14 +441,13 @@
                             })
                         });
                     }                    
-                else{                        
+                else{                     
                     $.each(course_of_majors[major][level], function(ik, iv){    //先這一年級的必修課全部跑過一次，計算重複課名的數量
                         $.each(courses[iv],function(jk, jv){
                             if(jv.obligatory_tf==true&&jv.for_dept==major&&jv.class==level){//這樣就可以保證我計算到的必修數量一定是該科系該年級該班級了
                                 check_optional_obligatory(jv);
                             }
                         })
-
                     });                       
                     $.each(course_of_majors[major][level], function(ik, iv){//知道那些課程會重複之後，再決定那些課程要填入課表
                         $.each(courses[iv],function(jk, jv){
@@ -856,15 +855,16 @@
                 var temp;
                 if(typechar == 'v'){
                     temp=arr[1]['value'].split('-')[1];
-                    returnarr['level']=check_which_class(temp,arr[3]['value']);
+                    console.log(arr[2]['value']);
+                    returnarr['level']=check_which_class(temp,arr[2]['value']);
                     returnarr['major']=temp.split(' ')[0];
                 }
                 else if(typechar == 's'){
-                    temp=arr[4]['value'].split('-')[1];
+                    temp=arr[1]['value'].split('-')[1];
                     returnarr['level']=check_which_class(temp,arr[5]['value']);
                     returnarr['major']=temp.split(' ')[0];
                 }
-                else alert("遇到不可預期的錯誤，請聯絡開發小組XD");
+                else alert("遇到不可預期的錯誤，請聯絡開發小組");
                 return returnarr;
             }    
             var get_json_when_change_degree = function(path)   {
