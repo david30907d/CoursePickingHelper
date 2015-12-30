@@ -110,10 +110,14 @@
                     if($(this).val() == "noDoubleMajor"){
                         $(this).val("DoubleMajor");
                         $("#v_major_2").toggle("slow");
+                        $("#level_2").toggle("slow");
+                        $("#textForDM").toggle("slow");
                     }
                     else{
                         $(this).val("noDoubleMajor");
                         $("#v_major_2").toggle("slow");
+                        $("#level_2").toggle("slow");
+                        $("#textForDM").toggle("slow");
                     }
                 });
                 /*******       ↑雙主修選擇↑       *******/
@@ -295,6 +299,7 @@
                     })  
                     if(str=='碩士班'||str=='博士班'||str=='碩專班'||str=='產專班'){
                         $('#v_level').empty();
+                        $('#v_level2').empty();
                         $('#s_level').empty();
                         var freshman_value="6",sophomore_value="7";
                         if(str=='博士班'){
@@ -306,12 +311,16 @@
                         $('#v_level').append(newGrade).append(newGrade2);
                         newGrade=$.parseHTML('<option value='+freshman_value+'>一年級</option>');
                         newGrade2=$.parseHTML('<option value='+sophomore_value+'>二年級</option>');
+                        $('#v_level2').append(newGrade).append(newGrade2);
+                        newGrade=$.parseHTML('<option value='+freshman_value+'>一年級</option>');
+                        newGrade2=$.parseHTML('<option value='+sophomore_value+'>二年級</option>');
                         $('#s_level').append(newGrade).append(newGrade2);
                     }
                     else{                        
                         $('#v_level').empty();
+                        $('#v_level2').empty();
                         $('#s_level').empty();
-                        var target_array=['#v_level','#s_level'];
+                        var target_array=['#v_level', '#v_level2', '#s_level'];
                         var option_array=['<option value="">無年級</option>','<option value="1">一年級</option>','<option value="2">二年級</option>','<option value="3">三年級</option>','<option value="4">四年級</option>','<option value="5">五年級</option>']
                         var newGrade;
                         $.each(target_array,function(ik,iv){// use for loop use automatically append the option into the right position.
