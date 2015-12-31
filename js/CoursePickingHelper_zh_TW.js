@@ -162,19 +162,18 @@
                     }
                 });
                 /**********最主要的系級提交funciton，若要修改請謹慎小心!!!***********/
-                $("#department_search").click(function(){   //
+                $("#department_search").click(function(){
                     window.sub_major=get_major_and_level('s')['major'];//為了方便使用者不斷查詢某一系不同年級的課
                     window.sub_level=get_major_and_level('s')['level'];//所以不會自動將這兩個欄位清空到預設值，所以要判斷當這兩個欄位有更動才進行查詢動作
                     /*this part is for specific search*/
                     var major=get_major_and_level('v')['major'];
-                    var level=get_major_and_level('v')['level'];   
-                    console.log(major+' '+level);
+                    var level=get_major_and_level('v')['level'];
                     reset();
                     $("td").html('<span class="fa fa-plus-circle fa-5x"></span>');
                     add_major(major, level);
                     if ($("#checkbox").val() == "DoubleMajor"){
-                        var major2=get_major_and_level('v')['major'];
-                        var level2=get_major_and_level('v')['level'];
+                        var major2=get_major_and_level('s')['major'];
+                        var level2=get_major_and_level('s')['level'];
                         add_major(major2, level2);
                     }
                 });                
@@ -278,7 +277,6 @@
                 $("#v_career").change(function(){//會動態變動系所與年級名稱
                 //if the career(degree) has been changed, also change the level
                     $("#v_major").empty();
-                    $("#v_major2").empty();
                     $("#s_major").empty();
                     var str="";                                        
                     $( "select option:selected" ).each(function(ik,iv){// filter all selected options, to find the degree options.
@@ -291,8 +289,6 @@
                     $.each(window.department_name[str],function(ik,iv){
                         var newOption=$.parseHTML('<option>'+window.department_name[str][ik]+'</option>');
                         $("#v_major").append(newOption);
-                        var newOption=$.parseHTML('<option>'+window.department_name[str][ik]+'</option>');
-                        $("#v_major2").append(newOption);
                         var newOption=$.parseHTML('<option>'+window.department_name[str][ik]+'</option>');
                         $('#s_major').append(newOption);
                         //append all the department option into major field!!
@@ -855,13 +851,12 @@
                 var temp;
                 if(typechar == 'v'){
                     temp=arr[1]['value'].split('-')[1];
-                    console.log(arr[2]['value']);
                     returnarr['level']=check_which_class(temp,arr[2]['value']);
                     returnarr['major']=temp.split(' ')[0];
                 }
                 else if(typechar == 's'){
-                    temp=arr[1]['value'].split('-')[1];
-                    returnarr['level']=check_which_class(temp,arr[5]['value']);
+                    temp=arr[3]['value'].split('-')[1];
+                    returnarr['level']=check_which_class(temp,arr[4]['value']);
                     returnarr['major']=temp.split(' ')[0];
                 }
                 else alert("遇到不可預期的錯誤，請聯絡開發小組");
