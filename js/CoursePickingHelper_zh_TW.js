@@ -346,7 +346,12 @@
                     course.title_short = course.title_parsed["en_US"];
                 }
                 var time=build_bulletin_time(course);//會回傳屬於那個課程的客製化時間title
-                var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));	//把option做成dom，再把dom做成jQuery物件
+                if(course.for_dept == get_major_and_level('s')['major']){
+                    var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#B53074;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));
+                }
+                else{
+                    var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));	//把option做成dom，再把dom做成jQuery物件
+                }
                 $option.find('button').text(course.title_short);   //將對應的課程內容寫入cell的html語法中
                 $option.find('button').attr("title", time);  //在title裡面放課堂時間
                 $option.find('button').val(course.code);                
@@ -467,7 +472,13 @@
                                     }
                                     else{
                                         if(jv.class==level){
-                                            add_course($('#time-table'), jv, language);//如果這個課名只有出現過一次，就可以自動填入       
+                                            console.log(jv.for_dept);
+                                            if(jv.for_dept == get_major_and_level('s')['major']){
+                                                bulletin_post($("#obligatory-post"), jv, language);  
+                                            }
+                                            else{
+                                                add_course($('#time-table'), jv, language);//如果這個課名只有出現過一次，就可以自動填入       
+                                            }
                                         }
                                         
                                     }                                        
@@ -534,6 +545,12 @@
             /**********這個函式是用來刪除一整門課程的**********/
             var delete_course = function($target, course) {
             //假設target為time-table的參數，course為courses的某一個課程
+            if(course.for_dept == get_major_and_level('s')['major']){
+                var str = "restore2"
+            }
+            else{
+                var str = "restore"
+            }
                 $.each(course.time_parsed, function(ik, iv){
                 //each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
                     $.each(iv.time, function(jk, jv){       //同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
@@ -544,7 +561,7 @@
                     })
                 })
                 minus_credits(course);
-                change_color($("button[value="+course.code+"]"),"restore");
+                change_color($("button[value="+course.code+"]"), str);
                 $.each(user.time_table,function(ik,iv){
                     //this for loop is to see which element in this array is the one i want to delete.
                     if(iv==course){
@@ -611,10 +628,13 @@
             }
             var change_color=function($target,command){	//一旦添加了課程，則側欄的課名改了顏色
                 if(command=="restore"){
-                    $target.css("color","#3074B5");
+                        $target.css("color","#3074B5");
                 }
                 else if(command=="used"){
                     $target.css("color","red");
+                }
+                else if(command=="restore2"){
+                    $target.css("color","#B53074");
                 }
                 else{
                     alert("遇到不可預期的錯誤，請聯絡開發小組XD");
@@ -635,7 +655,7 @@
                 var tmpCh = course.title_parsed["zh_TW"].split(' ');        //(這是中文課名)切割課程名稱，遇到空格就切開
                 course.title_short = tmpCh[0];      //title_short是會自動宣告的區域變數，存沒有英文的課名
                 if(window.name_of_optional_obligatory[course.title_short]>1){
-                    bulletin_post($("#obligatory-post"),course,language);
+                    bulletin_post($("#obligatory-post"), course, language);
                 }
             }
             var check_if_two_class=function(level){//為了讓我確認他是不是有分AB班，這個是用在選修課的填入判斷上
