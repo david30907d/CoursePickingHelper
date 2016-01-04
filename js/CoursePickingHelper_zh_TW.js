@@ -322,7 +322,7 @@
                         $('#v_level2').empty();
                         $('#s_level').empty();
                         var target_array=['#v_level', '#v_level2', '#s_level'];
-                        var option_array=['<option value="">無年級</option>','<option value="1">一年級</option>','<option value="2">二年級</option>','<option value="3">三年級</option>','<option value="4">四年級</option>','<option value="5">五年級</option>']
+                        var option_array=['<option value="0">無年級</option>','<option value="1">一年級</option>','<option value="2">二年級</option>','<option value="3">三年級</option>','<option value="4">四年級</option>','<option value="5">五年級</option>']
                         var newGrade;
                         $.each(target_array,function(ik,iv){// use for loop use automatically append the option into the right position.
                             $.each(option_array,function(jk,jv){
