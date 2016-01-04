@@ -2,7 +2,7 @@
         //先定義JQuery為$，不要讓它衝突        
             $(function(){
                 /**一開始的簡易版使用說明**/
-                toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});                
+                toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用雙主修功能<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 250000});                
                 /*initialization!!!*/
 
                 window.credits=0//一開始的學分數是0
@@ -16,9 +16,12 @@
                 $("#class_credit").text(0);
                 window.language="zh_TW";//固定顯示語言為中文           
                 window.url_base="";//used to be the url that link to the syllabus of that course.
+                window.haveloadin={D:false,G:false,N:false,O:false,U:false,W:false};//used to checked whether that json of specific degree has been loaded in or not, if it did, the value turn to ture.
+                window.lastupdatetime="";//show the update time on server.
+                get_json_when_change_degree("json/O.json");//couse O.json is suitable for all kind of degree, so it will be loaded in automatically.
                 /*initialization!!!*/
 
-                //當文件準備好的時候，讀入department的json檔, 因為這是顯示系所，沒多大就全部都載進來                                
+                //當文件準備好的時候，讀入department的json檔, 因為這是顯示系所，沒多大就全部都載進來                              
                 $.getJSON("json/department.json",function(depJson){
                     window.department_name={};
                     $.each(depJson,function(ik,iv){
@@ -32,14 +35,16 @@
                             window.department_name[iv.degree].push(option);
                         })
                     }) 
-                    return_url_base();
+                    return_url_and_time_base();
                 })      
 
                 $('#v_career').change(function(){
                     var degree=$('#v_career').val();
                     var path = "json/" + degree + ".json";
-                    get_json_when_change_degree("json/O.json");
-                    get_json_when_change_degree(path);
+                    if(haveloadin[degree]==false){
+                        get_json_when_change_degree(path);
+                        haveloadin[degree]=true;
+                    }
                     //cause O means other, general education, department class and others are all included, so this json is loaded in by default.
                 })                        
                 /*******    ↓製作隱藏側欄的功能↓   *******/
@@ -317,7 +322,7 @@
                         $('#v_level2').empty();
                         $('#s_level').empty();
                         var target_array=['#v_level', '#v_level2', '#s_level'];
-                        var option_array=['<option value="">無年級</option>','<option value="1">一年級</option>','<option value="2">二年級</option>','<option value="3">三年級</option>','<option value="4">四年級</option>','<option value="5">五年級</option>']
+                        var option_array=['<option value="0">無年級</option>','<option value="1">一年級</option>','<option value="2">二年級</option>','<option value="3">三年級</option>','<option value="4">四年級</option>','<option value="5">五年級</option>']
                         var newGrade;
                         $.each(target_array,function(ik,iv){// use for loop use automatically append the option into the right position.
                             $.each(option_array,function(jk,jv){
@@ -341,7 +346,12 @@
                     course.title_short = course.title_parsed["en_US"];
                 }
                 var time=build_bulletin_time(course);//會回傳屬於那個課程的客製化時間title
-                var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));	//把option做成dom，再把dom做成jQuery物件
+                if(course.for_dept == get_major_and_level('s')['major']){
+                    var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#B53074;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));
+                }
+                else{
+                    var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));	//把option做成dom，再把dom做成jQuery物件
+                }
                 $option.find('button').text(course.title_short);   //將對應的課程內容寫入cell的html語法中
                 $option.find('button').attr("title", time);  //在title裡面放課堂時間
                 $option.find('button').val(course.code);                
@@ -462,7 +472,13 @@
                                     }
                                     else{
                                         if(jv.class==level){
-                                            add_course($('#time-table'), jv, language);//如果這個課名只有出現過一次，就可以自動填入       
+                                            console.log(jv.for_dept);
+                                            if(jv.for_dept == get_major_and_level('s')['major']){
+                                                bulletin_post($("#obligatory-post"), jv, language);  
+                                            }
+                                            else{
+                                                add_course($('#time-table'), jv, language);//如果這個課名只有出現過一次，就可以自動填入       
+                                            }
                                         }
                                         
                                     }                                        
@@ -529,6 +545,12 @@
             /**********這個函式是用來刪除一整門課程的**********/
             var delete_course = function($target, course) {
             //假設target為time-table的參數，course為courses的某一個課程
+            if(course.for_dept == get_major_and_level('s')['major']){
+                var str = "restore2"
+            }
+            else{
+                var str = "restore"
+            }
                 $.each(course.time_parsed, function(ik, iv){
                 //each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
                     $.each(iv.time, function(jk, jv){       //同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
@@ -539,7 +561,7 @@
                     })
                 })
                 minus_credits(course);
-                change_color($("button[value="+course.code+"]"),"restore");
+                change_color($("button[value="+course.code+"]"), str);
                 $.each(user.time_table,function(ik,iv){
                     //this for loop is to see which element in this array is the one i want to delete.
                     if(iv==course){
@@ -606,10 +628,13 @@
             }
             var change_color=function($target,command){	//一旦添加了課程，則側欄的課名改了顏色
                 if(command=="restore"){
-                    $target.css("color","#3074B5");
+                        $target.css("color","#3074B5");
                 }
                 else if(command=="used"){
                     $target.css("color","red");
+                }
+                else if(command=="restore2"){
+                    $target.css("color","#B53074");
                 }
                 else{
                     alert("遇到不可預期的錯誤，請聯絡開發小組XD");
@@ -630,7 +655,7 @@
                 var tmpCh = course.title_parsed["zh_TW"].split(' ');        //(這是中文課名)切割課程名稱，遇到空格就切開
                 course.title_short = tmpCh[0];      //title_short是會自動宣告的區域變數，存沒有英文的課名
                 if(window.name_of_optional_obligatory[course.title_short]>1){
-                    bulletin_post($("#obligatory-post"),course,language);
+                    bulletin_post($("#obligatory-post"), course, language);
                 }
             }
             var check_if_two_class=function(level){//為了讓我確認他是不是有分AB班，這個是用在選修課的填入判斷上
@@ -770,7 +795,7 @@
                 var EN_CH={"語言中心":"","夜共同科":"","夜外文":"","通識中心":"","夜中文":""};   
                 var toast_mg=[];
                 toast_mg.push("代碼: "+course.code);
-                toast_mg.push("剩餘名額:"+(course.available-course.enrolled_num));
+                toast_mg.push("剩餘名額:"+(course.number-course.enrolled_num));
                 if(course.discipline!=""&&course.discipline!=undefined){//代表他是通識課
                     toast_mg.push("學群:"+course.discipline);
                     var possibility = cal_possibility(course);// a fuction that return the possibility of enrolling that course successfully.
@@ -778,7 +803,10 @@
                 }                
                 if(course.note!=""){
                     toast_mg.push("備註:"+course.note);
-                }                
+                }  
+                if(course.previous!=""){
+                    toast_mg.push("先修科目:"+course.previous);
+                }              
                 toast_mg = toast_mg.join('<br/>');
                 toastr.info(toast_mg);
             }
@@ -901,14 +929,17 @@
                     });
                 });
             }
-            var return_url_base = function(){
+            var return_url_and_time_base = function(){
                 // this function will return a string, url base, which will link to syllabus of that course. and assign it to a global variable.
                  $.getJSON("json/url_base.json", function(json){
-                    window.url_base=json[0];                   
+                    window.url_base=json[0];
+                    window.lastupdatetime=json[1];
+                    $('#updatetime').text(window.lastupdatetime);
                  })
+
             }
             var cal_possibility = function(course){
-                var pos = (course.available-course.enrolled_num)/course.available*100;
+                var pos = (course.number-course.enrolled_num)/course.number*100;
                 pos = new Number(pos);
                 pos = pos.toFixed(2);
                 if(pos<0){
