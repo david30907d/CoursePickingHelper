@@ -28,6 +28,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>選課小幫手</title>
+        <link rel="shortcut icon" href="images/goose.jpg" />
         <script type="text/javascript"></script>
         <link href="toastr/toastr.css" rel="stylesheet"/><!--這是toast message的css-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
@@ -332,7 +333,7 @@
                         <div class="modal-body">
                             <form class="form-horizontal">
                                 <div class="form-group">
-                                    <label for="doubleMajor" class="col-xs-2 control-label">雙主修</label>
+                                    <label for="doubleMajor" class="col-xs-2 control-label">第二學系</label>
                                     <div class="col-xs-10">
                                         <div class="checkbox">
                                             <label>
@@ -375,7 +376,7 @@
                                     <label for="v_major2" class="col-xs-2 control-label">系所</label>
                                     <div class="col-xs-10">
                                         <select class="form-control" name="v_major2" id="s_major">
-                                            <option>請選擇 第二主修系所</option>
+                                            <option>請選擇 第二學系系所</option>
                                         </select>
                                     </div>
                                 </div>
@@ -383,12 +384,15 @@
                                     <label for="v_major2" class="col-xs-2 control-label">年級</label>
                                     <div class="col-xs-10">
                                         <select class="form-control" name="v_level2" id="s_level">
-                                            <option>請選擇 第二主修年級</option>
+                                            <option>請選擇 第二學系年級</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group" id="textForDM" style="display:none">
-                                    <label class="col-xs-12 control-label" style="text-align: center;">若第二主修年級選擇無年級，則列出全部必選修課程</label>
+                                    <label class="col-xs-12 control-label" style="text-align: center;">第二學系適用於有雙主修、輔系或想看其他系必選修的人<br>且會以不同顏色與主修辨別</label>
+                                </div>
+                                <div class="form-group" id="textForDM" style="display:none">
+                                    <label class="col-xs-12 control-label" style="text-align: center;"></label>
                                 </div>
                             </form>
                         </div>
@@ -458,7 +462,16 @@
                     <div class="col-xs-4" style="text-align:left;">                       
                     </div>
                     <div class="col-xs-4" style="text-align:center;">
-                        <h3 id="span-color" style="color:#F9F4F4">課程資料最終更新時間：2015/9/1
+                        <div class="row">
+                            <div class="col-xs-7">
+                            <h5 id="" style="color:#F9F4F4">
+                                <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>更新時間：</h5></div>
+                            <div class="col-xs-5">
+                            <h4 id="updatetime" style="color:#F9F4F4">
+                            </h4>
+                            </div>
+                        </div>
+                        <h3 id="span-color" style="color:#F9F4F4">
                             <button id="toggleTable" value="sun" style="background:none; border:none">
                                 <span id="sun-span" class="fa fa-sun-o fa-1x fa-fw" style=""></span>
                                 <span id="moon-span" class="fa fa-moon-o fa-1x fa-fw" style="display: none;"></span>
