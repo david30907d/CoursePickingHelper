@@ -11,4 +11,4 @@ char="_"
 folder="${date}-${time}"
 
 #echo "${folder}"
-cp -r ./json ./backup-json/${folder}
+cp -r /var/www/html/CoursePickingHelper/json /var/www/html/CoursePickingHelper/backup-json/${folder}
