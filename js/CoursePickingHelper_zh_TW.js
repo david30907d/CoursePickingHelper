@@ -2,7 +2,7 @@
         //先定義JQuery為$，不要讓它衝突        
             $(function(){
                 /**一開始的簡易版使用說明**/
-                toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用課程查詢<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 2500});                
+                toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用雙主修功能<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 250000});                
                 /*initialization!!!*/
 
                 window.credits=0//一開始的學分數是0
@@ -16,9 +16,12 @@
                 $("#class_credit").text(0);
                 window.language="zh_TW";//固定顯示語言為中文           
                 window.url_base="";//used to be the url that link to the syllabus of that course.
+                window.haveloadin={D:false,G:false,N:false,O:false,U:false,W:false};//used to checked whether that json of specific degree has been loaded in or not, if it did, the value turn to ture.
+                window.lastupdatetime="";//show the update time on server.
+                get_json_when_change_degree("json/O.json");//couse O.json is suitable for all kind of degree, so it will be loaded in automatically.
                 /*initialization!!!*/
 
-                //當文件準備好的時候，讀入department的json檔, 因為這是顯示系所，沒多大就全部都載進來                                
+                //當文件準備好的時候，讀入department的json檔, 因為這是顯示系所，沒多大就全部都載進來                              
                 $.getJSON("json/department.json",function(depJson){
                     window.department_name={};
                     $.each(depJson,function(ik,iv){
@@ -32,14 +35,16 @@
                             window.department_name[iv.degree].push(option);
                         })
                     }) 
-                    return_url_base();
+                    return_url_and_time_base();
                 })      
 
                 $('#v_career').change(function(){
                     var degree=$('#v_career').val();
                     var path = "json/" + degree + ".json";
-                    get_json_when_change_degree("json/O.json");
-                    get_json_when_change_degree(path);
+                    if(haveloadin[degree]==false){
+                        get_json_when_change_degree(path);
+                        haveloadin[degree]=true;
+                    }
                     //cause O means other, general education, department class and others are all included, so this json is loaded in by default.
                 })                        
                 /*******    ↓製作隱藏側欄的功能↓   *******/
@@ -770,7 +775,7 @@
                 var EN_CH={"語言中心":"","夜共同科":"","夜外文":"","通識中心":"","夜中文":""};   
                 var toast_mg=[];
                 toast_mg.push("代碼: "+course.code);
-                toast_mg.push("剩餘名額:"+(course.available-course.enrolled_num));
+                toast_mg.push("剩餘名額:"+(course.number-course.enrolled_num));
                 if(course.discipline!=""&&course.discipline!=undefined){//代表他是通識課
                     toast_mg.push("學群:"+course.discipline);
                     var possibility = cal_possibility(course);// a fuction that return the possibility of enrolling that course successfully.
@@ -778,7 +783,10 @@
                 }                
                 if(course.note!=""){
                     toast_mg.push("備註:"+course.note);
-                }                
+                }  
+                if(course.previous!=""){
+                    toast_mg.push("先修科目:"+course.previous);
+                }              
                 toast_mg = toast_mg.join('<br/>');
                 toastr.info(toast_mg);
             }
@@ -901,14 +909,17 @@
                     });
                 });
             }
-            var return_url_base = function(){
+            var return_url_and_time_base = function(){
                 // this function will return a string, url base, which will link to syllabus of that course. and assign it to a global variable.
                  $.getJSON("json/url_base.json", function(json){
-                    window.url_base=json[0];                   
+                    window.url_base=json[0];
+                    window.lastupdatetime=json[1];
+                    $('#updatetime').text(window.lastupdatetime);
                  })
+
             }
             var cal_possibility = function(course){
-                var pos = (course.available-course.enrolled_num)/course.available*100;
+                var pos = (course.number-course.enrolled_num)/course.number*100;
                 pos = new Number(pos);
                 pos = pos.toFixed(2);
                 if(pos<0){
