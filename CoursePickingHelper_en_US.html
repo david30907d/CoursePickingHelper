@@ -1,143 +1,153 @@
 <!DOCTYPE html>
 <html lang="zh-tw" class="han-la">
-<!--
-//                                  _oo8oo_
-//                                 o8888888o
-//                                 88" . "88
-//                                 (| -_- |)
-//                                 0\  =  /0
-//                               ___/'==='\___
-//                             .' \\|     |// '.
-//                            / \\|||  :  |||// \
-//                           / _||||| -:- |||||_ \
-//                          |   | \\\  -  /// |   |
-//                          | \_|  ''\---/''  |_/ |
-//                          \  .-\__  '-'  __/-.  /
-//                        ___'. .'  /--.--\  '. .'___
-//                     ."" '<  '.___\_<|>_/___.'  >' "".
-//                    | | :  `- \`.:`\ _ /`:.`/ -`  : | |
-//                    \  \ `-.   \_ __\ /__ _/   .-` /  /
-//                =====`-.____`.___ \_____/ ___.`____.-`=====
-//                                  `=---=`
-//
-//
-//                       佛祖保佑  　　　　　永無bug
--->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>選課小幫手</title>
-        <script type="text/javascript"></script>
-        <link href="toastr/toastr.css" rel="stylesheet"/><!--這是toast message的css-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.js"></script>-->
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>選課小幫手</title>
+      <script type="text/javascript"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
+      <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+      <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<style>
+    html,body
+    {
+      height: 100%;
+      background-color:#3074B5;
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+      font-family: "Microsoft JhengHei";
+    }
+    body
+    {
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    }
+    .site-wrapper
+    {
+      display: table;
+      width: 100%;
+      height: 100%; /* For at least Firefox */
+      min-height: 100%;
+      -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+              box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+    }
+    .site-wrapper-inner
+    {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .cover-container
+    {
+      margin-right: auto;
+      margin-left: auto;
+    }
 
-        <style>
-        body
-        {
-            background-color:#3074B5;
-            background-repeat:no-repeat;
-            background-attachment: fixed;
-            font-family: "Microsoft JhengHei";
-        }
-        /*最後改的p是相簿的英文字*/
-        #elective-post
-        {
-            margin-bottom: 10px;
-        }
-        #btn-tools
-        {
-            padding: 0;
-        }
-        #classification
-        {
-            padding: 0px;
-        }
-        /*修改table的border*/
-        #time-table tbody th
-        {
-            white-space: nowrap;
-            font-size: 100%;
-            height:55px;
-        }
-        #time-table th
-        {
-            text-align: center;
-            vertical-align:middle;
-        }
-        #time-table td
-         {
-             text-align: center;
-             vertical-align:middle;
-         }
-         #time-table td span
-         {
-             color: #DDD;
-         }
-         #time-table td span:hover,
-         #time-table td span:focus
-         {
-             background-color: transparent;
-             color: #666;
-        }
-        #time-table button.btn-link
-        {
-            text-align: center;
-            color:black;
-        }
-        #time-table div.title
-        {
-            text-align: center;
-            font-size: 120%;
-            padding-bottom: 3px;
-        }
-        #time-table div.location
-        {
-            text-align: left;
-            font-size: 80%;
-        }
-        #time-table div.professor
-        {
-            text-align: right;
-            font-size: 80%;
-        }
-        /*table的屬性結束*/
-        .search-class .panel-body
-        {
-            padding-top: 0;
-            padding-bottom  : 0;
-        }
-        .add
-        {
-            color: red;
-        }
-        #curriculum-title small
-        {
-            text-align:left;
-            color:#333;
-        }
-        #toggleTable
-        {
-            color: #333; /* IE8 proofing */
-        }
-        #toggleTable:hover,
-        #toggleTable:focus
-        {
-            background-color: transparent;
-            color: #ADBDC5;
-        }
+    .inner
+    {
+      padding: 30px;
+    }
 
-        </style>
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
+    .masthead-brand
+    {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .masthead-nav
+    {
+      color: #333;
+      text-align: left;
+    }
+    .masthead-nav > li
+    {
+      display: inline-block;
+    }
+    .masthead-nav > li + li
+    {
+      margin-left: 20px;
+    }
+    .masthead-nav > li > a
+    {
+      padding-right: 0;
+      padding-left: 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff; /* IE8 proofing */
+      color: rgba(255,255,255,.75);
+      border-bottom: 2px solid transparent;
+    }
+    .masthead-nav > li > a:hover,
+    .masthead-nav > li > a:focus
+    {
+      background-color: transparent;
+      border-bottom-color: #a9a9a9;
+      border-bottom-color: rgba(255,255,255,.25);
+    }
+    .exp
+    {
+
+    }
+
+  @media (min-width: 768px) {
+    .masthead-brand {
+      float: left;
+    }
+    .masthead-nav {
+      float: right;
+    }
+  }
+
+
+  /*
+   * Cover
+   */
+
+  .cover {
+    padding: 0 20px;
+  }
+  .cover .btn-lg {
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+
+
+
+  /*
+   * Affix and center
+   */
+
+  @media (min-width: 768px) {
+    /* Pull out the header and footer */
+    .masthead {
+      position: fixed;
+      top: 0;
+    }
+    /* Start the vertical centering */
+    .site-wrapper-inner {
+      vertical-align: middle;
+    }
+    /* Handle the widths */
+    .masthead,
+    .cover-container {
+      width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+  }
+
+  @media (min-width: 992px) {
+    .masthead,
+    .mastfoot,
+    .cover-container {
+      width: 700px;
+    }
+  }
+
+	</style>
+
+	</head>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -148,557 +158,29 @@
       ga('send', 'pageview');
 
     </script>
-    <body>
+	<body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
 
-        <!--選取系級的表單結束-->
-        <div class="container-fluid">
-            <!--會出現系選修和體育、通識-->
-            <div class="col-md-3" id="classification">
-                <br>
-                <div class="container-fluid">
-                    <div class="col-xs-4" id="btn-tools">
-                        <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#focus">
-                            <span class="fa fa-heart fa-1x fa-fw"></span>Department<br/>and<br/>Degree
-                        </button>
-                    </div>
-                    <div class="col-xs-4" id="btn-tools">
-                        <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#search">
-                            <span class="fa fa-search fa-1x fa-fw"></span>Course<br/><br/>Search
-                        </button>
-                    </div>
-                    <div class="col-xs-4" id="btn-tools">
-                        <button type="button" class="btn btn-warning btn-block" id="clear-button">
-                            <span class="fa fa-trash fa-1x fa-fw"></span><br/><br/>Clear
-                        </button>
-                    </div>
-                </div>
-                <br>
-
-                <div class="search-class" id="bulletin">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <button type="button" id="obligatory-span" style="background:none; border:none">
-                                <span class="glyphicon glyphicon-triangle-bottom"></span>
-                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
-                            </button>
-                            Required Course
-                            <button type="button" class="close obligatory"><span class="fa fa-trash"></span></button>
-                        </div>
-                        <div class="panel-body" id="obligatory-post" slide="">
-                        </div>
-                    </div>
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <button type="button" id="year-span" style="background:none; border:none">
-                                <span class="glyphicon glyphicon-triangle-bottom"></span>
-                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
-                            </button>
-                            Yearly Class
-                            <button type="button" class="close general"><span class="fa fa-trash"></span></button>
-                        </div>
-                        <div class="panel-body" id="year-post">
-                        </div>
-                    </div>
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <button type="button" id="elective-span" style="background:none; border:none">
-                                <span class="glyphicon glyphicon-triangle-bottom"></span>
-                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
-                            </button>Optional Course
-                            <button type="button" class="close elective"><span class="fa fa-trash"></span></button>
-                        <div class="expander"></div>
-                        </div>
-                        <div class="panel-body" id="elective-post">
-                            <h5 id="">Freshman</h5>
-                            <div id="freshman">
-                            </div>
-                            <h5 id="">Sophomore</h5>
-                            <div id="sophomore">
-                            </div>
-                            <h5 id="">Junior</h5>
-                            <div id="junior">
-                            </div>
-                            <h5 id="">Senior</h5>
-                            <div id="senior">
-                            </div>
-                            <h5 id="">Fifth-grade</h5>
-                            <div id="fifth-grade">
-                            </div>
-                            <h5 id="">Non-graded</h5>
-                            <div id="whole-school">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <button type="button" id="general-span" style="background:none; border:none">
-                                <span class="glyphicon glyphicon-triangle-bottom"></span>
-                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
-                            </button>
-                            General Education
-                            <button type="button" class="close general"><span class="fa fa-trash"></span></button>
-                        </div>
-                        <div class="panel-body" id="general-post">
-                            <h5 id="">Humanities</h5>
-                            <div id="humanities">
-                            </div>
-                            <h5 id="">Social Science</h5>
-                            <div id="social">
-                            </div>
-                            <h5 id="">Natural Science</h5>
-                            <div id="natural">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <button type="button" id="school-span" style="background:none; border:none">
-                                <span class="glyphicon glyphicon-triangle-bottom"></span>
-                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
-                            </button>
-                            Common Subject
-                            <button type="button" class="close PE"><span class="fa fa-trash"></span></button>
-                        </div>
-                        <div class="panel-body" id="school-post">
-                            <h5 id="">Freshman Chinese</h5>
-                            <div id="chinese">
-                            </div>
-                            <h5 id="">Freshman English</h5>
-                            <div id="english">
-                            </div>
-                            <h5 id="">Pysical Education</h5>
-                            <div id="PE-post">
-                            </div>
-                            <h5 id="">Language Course</h5>
-                            <div id="foreign-post">
-                            </div>
-                            <h5 id="">Other Optional Course</h5>
-                            <div id="non-graded-optional-post">
-                            </div>
-                            <h5 id="">Education Program</h5>
-                            <div id="teacher-post">
-                            </div>
-                            <h5 id="">Military Education</h5>
-                            <div id="military-post">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <button type="button" id="search-span" style="background:none; border:none">
-                                <span class="glyphicon glyphicon-triangle-bottom"></span>
-                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
-                            </button>
-                            Search Result
-                            <button type="button" class="close search"><span class="fa fa-trash"></span></button>
-                        </div>
-                        <div class="panel-body" id="search-post">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade modal fade bs-example-modal-lg" id="focus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h3 class="modal-title" id="myModalLabel"><span class="fa fa-heart fa-1x fa-fw"></span>Department and Degree</h3>
-                            </div>
-
-                        <div class="modal-body">
-                            <form class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="v_career" class="col-xs-2 control-label">Degree</label>
-                                    <div class="col-xs-10">
-                                        <select class="form-control" name="v_career" id="v_career">
-                                            <option value="0">Choose Degree</option>
-                                            <option value="U">Undergraduate</option>
-                                            <option value="G">Graduate</option>
-                                            <option value="D">Ph.D</option>
-                                            <option value="R">(R)Graduate</option>
-                                            <option value="W">(W)Graduate</option>
-                                            <option value="N">(N)Undergraduate</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="v_major" class="col-xs-2 control-label">Department</label>
-                                    <div class="col-xs-10">
-                                        <select class="form-control" name="v_major" id="v_major">
-                                            <option value="">-----</option>
-                                            <option value="文學院">Liberal Arts</option>
-                                            <option value="管理學院">Management</option>
-                                            <option value="農業暨自然資源學院">Agriculture and Natural Resources</option>
-                                            <option value="中國文學系學士班">Chinese Literature</option>
-                                            <option value="外國語文學系學士班">Foreign Languages and Literature</option>
-                                            <option value="歷史學系學士班">History</option>
-                                            <option value="財務金融學系學士班">Finance</option>
-                                            <option value="企業管理學系學士班">Business Administration</option>
-                                            <option value="法律學系學士班">Law</option>
-                                            <option value="會計學系學士班">Accounting</option>
-                                            <option value="資訊管理學系學士班">Management Information Systems</option>
-                                            <option value="景觀與遊憩學士學位學程">Landscape and Recreation</option>
-                                            <option value="生物科技學士學位學程">Bachelor Program of Biotechnology</option>
-                                            <option value="國際農企業學士學位學程">International Bachelor's Program of Agribusiness</option>
-                                            <option value="農藝學系學士班">Agronomy</option>
-                                            <option value="園藝學系學士班">Horticulture</option>
-                                            <option value="森林學系林學組學士班">Forestry A</option>
-                                            <option value="森林學系木材科學組學士班">Forestry B</option>
-                                            <option value="應用經濟學系學士班">Applied Economics</option>
-                                            <option value="植物病理學系學士班">Plant Pathology</option>
-                                            <option value="昆蟲學系學士班">Entomology</option>
-                                            <option value="動物科學系學士班">Animal Science</option>
-                                            <option value="獸醫學系學士班 A">Veterinary Medicine A</option>
-                                            <option value="獸醫學系學士班 B">Veterinary Medicine B</option>
-                                            <option value="土壤環境科學系學士班">Soil and Enviromental Sciences</option>
-                                            <option value="生物產業機電工程學系學士班">Bio-Industrial Mechatronics Engineering</option>
-                                            <option value="水土保持學系學士班">Soil and Water Conservation</option>
-                                            <option value="食品暨應用生物科技學系學士班">Food Science and Biotechnology</option>
-                                            <option value="行銷學系學士班">Marketing</option>
-                                            <option value="化學系學士班">Chemistry</option>
-                                            <option value="生命科學系學士班">Life Sciences</option>
-                                            <option value="應用數學系學士班 A">Applied Math A</option>
-                                            <option value="應用數學系學士班 B">Applied Math B</option>
-                                            <option value="物理學系一般物理組學士班">Physics A</option>
-                                            <option value="物理學系光電物理組學士班">Physics B</option>
-                                            <option value="資訊科學與工程學系學士班">Computer Science and Engineering</option>
-                                            <option value="學士後太陽能光電系統應用學士學位學程">Photovoltaic System</option>
-                                            <option value="機械工程學系學士班 A">Mechanical Engineering A</option>
-                                            <option value="機械工程學系學士班 B">Mechanical Engineering B</option>
-                                            <option value="土木工程學系學士班 A">Civil Engineering A</option>
-                                            <option value="土木工程學系學士班 B">Civil Engineering B</option>
-                                            <option value="環境工程學系學士班">Environmental Engineering</option>
-                                            <option value="電機工程學系學士班 A">Electricaal Engineering A</option>
-                                            <option value="電機工程學系學士班 B">Electricaal Engineering B</option>
-                                            <option value="化學工程學系學士班">Chemical Engineering</option>
-                                            <option value="材料科學與工程學系學士班">Materals Science and Engineering</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="v_level" class="col-xs-2 control-label">grade</label>
-                                    <div class="col-xs-10">
-                                        <select class="form-control" name="v_level" id="v_level">
-                                            <option value="">Choose grade</option>
-                                            <option value="1">Freshman</option>
-                                            <option value="2">Sophomore</option>
-                                            <option value="3">Junior</option>
-                                            <option value="4">Senior</option>
-                                            <option value="5">Fifth-Grade</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <center><h4>appreciate <a href="https://www.facebook.com/profile.php?id=100000490692318">glory's</a> contribution to translation, best regard!!</h4></center>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success" data-dismiss="modal" id="department_search">Submit</button>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal fade modal fade bs-example-modal-lg" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h3 class="modal-title" id="myModalLabel"><span class="fa fa-search fa-1x fa-fw"></span>Course Search</h3>
-                            </div>
-                        <div class="modal-body">
-                            <form class="form-horizontal">
-                                <div class="form-group">
-                                    <label for="s_major" class="col-xs-2 control-label">Department</label>
-                                    <div class="col-xs-10">
-                                        <select class="form-control" name="s_major" id="s_major">
-                                            <option value="">-----</option>
-                                            <option value="文學院">Liberal Arts</option>
-                                            <option value="管理學院">Management</option>
-                                            <option value="農業暨自然資源學院">Agriculture and Natural Resources</option>
-                                            <option value="中國文學系學士班">Chinese Literature</option>
-                                            <option value="外國語文學系學士班">Foreign Languages and Literature</option>
-                                            <option value="歷史學系學士班">History</option>
-                                            <option value="財務金融學系學士班">Finance</option>
-                                            <option value="企業管理學系學士班">Business Administration</option>
-                                            <option value="法律學系學士班">Law</option>
-                                            <option value="會計學系學士班">Accounting</option>
-                                            <option value="資訊管理學系學士班">Management Information Systems</option>
-                                            <option value="景觀與遊憩學士學位學程">Landscape and Recreation</option>
-                                            <option value="生物科技學士學位學程">Bachelor Program of Biotechnology</option>
-                                            <option value="國際農企業學士學位學程">International Bachelor's Program of Agribusiness</option>
-                                            <option value="農藝學系學士班">Agronomy</option>
-                                            <option value="園藝學系學士班">Horticulture</option>
-                                            <option value="森林學系林學組學士班">Forestry A</option>
-                                            <option value="森林學系木材科學組學士班">Forestry B</option>
-                                            <option value="應用經濟學系學士班">Applied Economics</option>
-                                            <option value="植物病理學系學士班">Plant Pathology</option>
-                                            <option value="昆蟲學系學士班">Entomology</option>
-                                            <option value="動物科學系學士班">Animal Science</option>
-                                            <option value="獸醫學系學士班 A">Veterinary Medicine A</option>
-                                            <option value="獸醫學系學士班 B">Veterinary Medicine B</option>
-                                            <option value="土壤環境科學系學士班">Soil and Enviromental Sciences</option>
-                                            <option value="生物產業機電工程學系學士班">Bio-Industrial Mechatronics Engineering</option>
-                                            <option value="水土保持學系學士班">Soil and Water Conservation</option>
-                                            <option value="食品暨應用生物科技學系學士班">Food Science and Biotechnology</option>
-                                            <option value="行銷學系學士班">Marketing</option>
-                                            <option value="化學系學士班">Chemistry</option>
-                                            <option value="生命科學系學士班">Life Sciences</option>
-                                            <option value="應用數學系學士班 A">Applied Math A</option>
-                                            <option value="應用數學系學士班 B">Applied Math B</option>
-                                            <option value="物理學系一般物理組學士班">Physics A</option>
-                                            <option value="物理學系光電物理組學士班">Physics B</option>
-                                            <option value="資訊科學與工程學系學士班">Computer Science and Engineering</option>
-                                            <option value="學士後太陽能光電系統應用學士學位學程">Photovoltaic System</option>
-                                            <option value="機械工程學系學士班 A">Mechanical Engineering A</option>
-                                            <option value="機械工程學系學士班 B">Mechanical Engineering B</option>
-                                            <option value="土木工程學系學士班 A">Civil Engineering A</option>
-                                            <option value="土木工程學系學士班 B">Civil Engineering B</option>
-                                            <option value="環境工程學系學士班">Environmental Engineering</option>
-                                            <option value="電機工程學系學士班 A">Electricaal Engineering A</option>
-                                            <option value="電機工程學系學士班 B">Electricaal Engineering B</option>
-                                            <option value="化學工程學系學士班">Chemical Engineering</option>
-                                            <option value="材料科學與工程學系學士班">Materals Science and Engineering</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="s_level" class="col-xs-2 control-label">Grade</label>
-                                    <div class="col-xs-10">
-                                        <select class="form-control" name="s_level" id="s_level">
-                                            <option value="">-----</option>
-                                            <option value="1">Freshman</option>
-                                            <option value="2">Sophomore</option>
-                                            <option value="3">Junior</option>
-                                            <option value="4">Senior</option>
-                                            <option value="5">Fifth_grade</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="class_credit" class="col-xs-2 control-label">Credits</label>
-                                    <div class="col-xs-10">
-                                        <input type="teacher" class="form-control" id="credits" value="">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="class_title" class="col-xs-2 control-label">Course Name(Key word)</label>
-                                    <div class="col-xs-10">
-                                        <input type="class" class="form-control" id="class_title">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="class_code" class="col-xs-2 control-label">Course Number</label>
-                                    <div class="col-xs-10">
-                                        <input type="class" class="form-control" id="class_code">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="class_teacher" class="col-xs-2 control-label">Professor</label>
-                                    <div class="col-xs-10">
-                                        <input type="teacher" class="form-control" id="class_teacher">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="class_room" class="col-xs-2 control-label">Classroom</label>
-                                    <div class="col-xs-10">
-                                        <input type="teacher" class="form-control" id="class_room">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-xs-12 control-label" style="text-align: center;">If you fill in the blank with the sign---, you should fill in those which have the same sign, or the search function would never work.
-
-                                    <br\>However, the same rule doesn't apply to the blanks with no signs.</label>
-                                </div>
-                                <div class="form-group">
-                                    <a class="btn btn-lg col-sm-3 col-sm-offset-1" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-1x fa-fw"></span>Course Information System</a>
-                                    <a class="btn btn-lg col-sm-3" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home_e" target="_blank"><span class="fa fa-book fa-1x fa-fw"></span>General Education Center</a>
-                                    <a class="btn btn-lg col-sm-3" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-1x fa-fw"></span>Entry of School System</a>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-success" data-dismiss="modal" id="specific_search">Submit</button>
-                        </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand"></h3>
+              <nav>
+              </nav>
             </div>
-            <div class="col-md-9">
-                <div class="row" id="curriculum-title">
-                    <div class="col-xs-4 col-xs-offset-4" style="text-align:center;">
-                        <h2 id="span-color">Time Table<span class="fa fa-sun-o fa-1x fa-fw" value="sun" id="toggleTable"></span></h2>
-                    </div>
-                    <div class="col-xs-4" style="text-align:left;">
-                        <h2><small><span class="glyphicon glyphicon-user"></span>Credits<span class="badge" id="class_credit"></span></small></h2>
-                    </div>
-                </div>
+          </div>
 
-                <div class="table-responsive" id="time-table">
-                    <table class="table table-striped table-hover table-condensed table-bordered">
-                        <thead>
-                            <tr class="info">
-                                <th style="width: 1px">Week Day</th>
-                                <th style="width: 20%">Mon</th>
-                                <th style="width: 20%">Tue</th>
-                                <th style="width: 20%">Wed</th>
-                                <th style="width: 20%">Thu</th>
-                                <th style="width: 20%">Fri</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr data-hour="1" class="active">
-                                <th>
-                                    <h3>1</h3>
-                                    <h5>08:10-09:00</h5>
-                                </th>
-                                <td data-day="1"></td>
-                                <td data-day="2"></td>
-                                <td data-day="3"></td>
-                                <td data-day="4"></td>
-                                <td data-day="5"></td>
-                            </tr>
-                            <tr data-hour="2" class="active">
-                                <th>
-                                    <h3>2</h3>
-                                    <h5>09:10-10:00</h5>
-                                </th>
-                                <td data-day="1"></td>
-                                <td data-day="2"></td>
-                                <td data-day="3"></td>
-                                <td data-day="4"></td>
-                                <td data-day="5"></td>
-                            </tr>
-                            <tr data-hour="3" class="active">
-                                <th>
-                                    <h3>3</h3>
-                                    <h5>10:10-11:00</h5>
-                                </th>
-                                <td data-day="1"></td>
-                                <td data-day="2"></td>
-                                <td data-day="3"></td>
-                                <td data-day="4"></td>
-                                <td data-day="5"></td>
-                            </tr>
-                            <tr data-hour="4" class="active">
-                                <th>
-                                    <h3>4</h3>
-                                    <h5>11:10-12:00</h5>
-                                </th>
-                                <td data-day="1"></td>
-                                <td data-day="2"></td>
-                                <td data-day="3"></td>
-                                <td data-day="4"></td>
-                                <td data-day="5"></td>
-                            </tr>
-                            <tr data-hour="5" class="active">
-                                <th>
-                                    <h3>5</h3>
-                                    <h5>13:10-14:00</h5>
-                                </th>
-                                <td data-day="1"></td>
-                                <td data-day="2"></td>
-                                <td data-day="3"></td>
-                                <td data-day="4"></td>
-                                <td data-day="5"></td>
-                            </tr>
-                            <tr data-hour="6" class="active">
-                                <th>
-                                    <h3>6</h3>
-                                    <h5>14:10-15:00</h5>
-                                </th>
-                                <td data-day="1"></td>
-                                <td data-day="2"></td>
-                                <td data-day="3"></td>
-                                <td data-day="4"></td>
-                                <td data-day="5"></td>
-                            </tr>
-                            <tr data-hour="7" class="active">
-                                <th>
-                                    <h3>7</h3>
-                                    <h5>15:10-16:00</h5>
-                                </th>
-                                <td data-day="1"></td>
-                                <td data-day="2"></td>
-                                <td data-day="3"></td>
-                                <td data-day="4"></td>
-                                <td data-day="5"></td>
-                            </tr>
-                            <tr data-hour="8" class="active">
-                                <th>
-                                    <h3>8</h3>
-                                    <h5>16:10-17:00</h5>
-                                </th>
-                                <td data-day="1"></td>
-                                <td data-day="2"></td>
-                                <td data-day="3"></td>
-                                <td data-day="4"></td>
-                                <td data-day="5"></td>
-                            </tr>
-                            <tr data-hour="9" class="active">
-                                <th>
-                                    <h3>9</h3>
-                                    <h5>17:10-18:00</h5>
-                                </th>
-                                <td data-day="1"></td>
-                                <td data-day="2"></td>
-                                <td data-day="3"></td>
-                                <td data-day="4"></td>
-                                <td data-day="5"></td>
-                            </tr>
-                            <tr data-hour="10" class="active" style="display:none">
-                                <th>
-                                    <h3>A</h3>
-                                    <h5>18:20-19:10</h5>
-                                </th>
-                                <td data-day="1"></td>
-                                <td data-day="2"></td>
-                                <td data-day="3"></td>
-                                <td data-day="4"></td>
-                                <td data-day="5"></td>
-                            </tr>
-                            <tr data-hour="11" class="active" style="display:none">
-                                <th>
-                                    <h3>B</h3>
-                                    <h5>19:15-20:05</h5>
-                                </th>
-                                <td data-day="1"></td>
-                                <td data-day="2"></td>
-                                <td data-day="3"></td>
-                                <td data-day="4"></td>
-                                <td data-day="5"></td>
-                            </tr>
-                            <tr data-hour="12" class="active" style="display:none">
-                                <th>
-                                    <h3>C</h3>
-                                    <h5>20:10-21:00</h5>
-                                </th>
-                                <td data-day="1"></td>
-                                <td data-day="2"></td>
-                                <td data-day="3"></td>
-                                <td data-day="4"></td>
-                                <td data-day="5"></td>
-                            </tr>
-                            <tr data-hour="13" class="active" style="display:none">
-                                <th>
-                                    <h3>D</h3>
-                                    <h5>21:05-21:55</h5>
-                                </th>
-                                <td data-day="1"></td>
-                                <td data-day="2"></td>
-                                <td data-day="3"></td>
-                                <td data-day="4"></td>
-                                <td data-day="5"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+          <div class="inner cover">
+            <h1 class="cover-heading">選課小幫手</h1>
+            <p class="lead">我們的選課小幫手搬家啦～謝謝大家對我們支持<br>歡迎繼續使用我們的選課小幫手↓</p>
+            <p class="lead">
+              <a id="chinese" href="http://course.nchusg.org/" class="btn btn-lg btn-default">按下我</a>
+            </p>
+          </div>
 
-            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-            <script src="bootstrap/js/bootstrap.min.js"></script>
-            <script src="toastr/toastr.js"></script>
-            <script src="js/CoursePickingHelper_en_US.js"></script>
-        </body>
-    </html>
+        </div>
+      </div>
+    </div>
+	</body>
+</html>
