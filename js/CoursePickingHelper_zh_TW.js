@@ -819,8 +819,9 @@
                 if(course.note!=""){
                     toast_mg.push("備註:"+course.note);
                 }  
-                if(course.previous!=""){
-                    toast_mg.push("先修科目:"+course.previous);
+                if(course.prerequisite!=""){
+                    //prerequisite means you need to enroll that course before enroll this course
+                    toast_mg.push("先修科目:"+course.prerequisite);
                 }              
                 toast_mg = toast_mg.join('<br/>');
                 toastr.info(toast_mg);

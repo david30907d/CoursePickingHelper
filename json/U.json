@@ -16201,6 +16201,7 @@
             "url":"2181",
             "year":"半"}
             ,{
+<<<<<<< HEAD
             "class":"2",
             "code":"2254",
             "credits":"2",
@@ -16263,6 +16264,8 @@
             "url":"2188",
             "year":"半"}
             ,{
+=======
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "class":"2",
             "code":"2254",
             "credits":"2",
@@ -16291,17 +16294,28 @@
             "title_parsed":{
                 "en_US":"Biochemistry Laboratory",
                 "zh_TW":"生物化學實習a"},
+<<<<<<< HEAD
             "url":"2187",
             "year":"半"}
             ,{
             "class":"4",
+=======
+            "url":"2185",
+            "year":"半"}
+            ,{
+            "class":"3",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "code":"2254",
             "credits":"2",
             "credits_parsed":2,
             "department":"食品暨應用生物科技學系學士班",
             "discipline": "",
             "enrolled_num": "0",
+<<<<<<< HEAD
             "for_dept":"昆蟲學系學士班",
+=======
+            "for_dept":"生物產業機電工程學系學士班",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "hours":"1",
             "hours_parsed":"1",
             "intern_location":["FB105"],
@@ -16309,8 +16323,13 @@
             "language":"中文",
             "location":["FB101"],
             "note":"",
+<<<<<<< HEAD
             "number":"2",
             "number_parsed":2,
+=======
+            "number":"1",
+            "number_parsed":1,
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "obligatory":"選修",
             "obligatory_tf":false,
             "prerequisite":"生物化學",
@@ -16322,17 +16341,28 @@
             "title_parsed":{
                 "en_US":"Biochemistry Laboratory",
                 "zh_TW":"生物化學實習a"},
+<<<<<<< HEAD
             "url":"2186",
             "year":"半"}
             ,{
             "class":"3",
+=======
+            "url":"2188",
+            "year":"半"}
+            ,{
+            "class":"2",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "code":"2254",
             "credits":"2",
             "credits_parsed":2,
             "department":"食品暨應用生物科技學系學士班",
             "discipline": "",
             "enrolled_num": "0",
+<<<<<<< HEAD
             "for_dept":"農藝學系學士班",
+=======
+            "for_dept":"動物科學系學士班",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "hours":"1",
             "hours_parsed":"1",
             "intern_location":["FB105"],
@@ -16353,17 +16383,28 @@
             "title_parsed":{
                 "en_US":"Biochemistry Laboratory",
                 "zh_TW":"生物化學實習a"},
+<<<<<<< HEAD
             "url":"2182",
             "year":"半"}
             ,{
             "class":"3",
+=======
+            "url":"2187",
+            "year":"半"}
+            ,{
+            "class":"4",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "code":"2254",
             "credits":"2",
             "credits_parsed":2,
             "department":"食品暨應用生物科技學系學士班",
             "discipline": "",
             "enrolled_num": "0",
+<<<<<<< HEAD
             "for_dept":"森林學系林學組學士班",
+=======
+            "for_dept":"昆蟲學系學士班",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "hours":"1",
             "hours_parsed":"1",
             "intern_location":["FB105"],
@@ -16371,11 +16412,15 @@
             "language":"中文",
             "location":["FB101"],
             "note":"",
-            "number":"1",
-            "number_parsed":1,
+            "number":"2",
+            "number_parsed":2,
             "obligatory":"選修",
             "obligatory_tf":false,
+<<<<<<< HEAD
             "prerequisite":"",
+=======
+            "prerequisite":"生物化學",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "professor":"蔡碩文",
             "time":"35",
             "time_parsed":[{
@@ -16384,10 +16429,17 @@
             "title_parsed":{
                 "en_US":"Biochemistry Laboratory",
                 "zh_TW":"生物化學實習a"},
+<<<<<<< HEAD
             "url":"2184",
             "year":"半"}
             ,{
             "class":"2",
+=======
+            "url":"2186",
+            "year":"半"}
+            ,{
+            "class":"3",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "code":"2254",
             "credits":"2",
             "credits_parsed":2,
@@ -16402,11 +16454,19 @@
             "language":"中文",
             "location":["FB101"],
             "note":"",
+<<<<<<< HEAD
             "number":"17",
             "number_parsed":17,
             "obligatory":"必修",
             "obligatory_tf":true,
             "prerequisite":"",
+=======
+            "number":"4",
+            "number_parsed":4,
+            "obligatory":"選修",
+            "obligatory_tf":false,
+            "prerequisite":"生物化學",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "professor":"蔡碩文",
             "time":"35",
             "time_parsed":[{
@@ -16415,6 +16475,99 @@
             "title_parsed":{
                 "en_US":"Biochemistry Laboratory",
                 "zh_TW":"生物化學實習a"},
+<<<<<<< HEAD
+            "url":"2043",
+            "year":"半"}
+            ,{
+            "class":"2",
+=======
+            "url":"2182",
+            "year":"半"}
+            ,{
+            "class":"3",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
+            "code":"2254",
+            "credits":"2",
+            "credits_parsed":2,
+            "department":"食品暨應用生物科技學系學士班",
+            "discipline": "",
+            "enrolled_num": "0",
+            "for_dept":"食品暨應用生物科技學系學士班",
+            "hours":"1",
+            "hours_parsed":"1",
+            "intern_location":["FB105"],
+            "intern_time":"3678",
+            "language":"中文",
+            "location":["FB101"],
+            "note":"",
+            "number":"8",
+            "number_parsed":8,
+            "obligatory":"選修",
+            "obligatory_tf":false,
+<<<<<<< HEAD
+            "prerequisite":"生物化學",
+=======
+            "prerequisite":"",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
+            "professor":"蔡碩文",
+            "time":"35",
+            "time_parsed":[{
+            "day":3,"time":[5,6,7,8]}],
+            "title":"生物化學實習a `Biochemistry Laboratory",
+            "title_parsed":{
+                "en_US":"Biochemistry Laboratory",
+                "zh_TW":"生物化學實習a"},
+<<<<<<< HEAD
+            "url":"2189",
+            "year":"半"}
+            ,{
+            "class":"3",
+=======
+            "url":"2184",
+            "year":"半"}
+            ,{
+            "class":"2",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
+            "code":"2254",
+            "credits":"2",
+            "credits_parsed":2,
+            "department":"食品暨應用生物科技學系學士班",
+            "discipline": "",
+            "enrolled_num": "0",
+            "for_dept":"園藝學系學士班",
+            "hours":"1",
+            "hours_parsed":"1",
+            "intern_location":["FB105"],
+            "intern_time":"3678",
+            "language":"中文",
+            "location":["FB101"],
+            "note":"",
+<<<<<<< HEAD
+            "number":"1",
+            "number_parsed":1,
+            "obligatory":"選修",
+            "obligatory_tf":false,
+            "prerequisite":"生物化學",
+=======
+            "number":"17",
+            "number_parsed":17,
+            "obligatory":"必修",
+            "obligatory_tf":true,
+            "prerequisite":"",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
+            "professor":"蔡碩文",
+            "time":"35",
+            "time_parsed":[{
+            "day":3,"time":[5,6,7,8]}],
+            "title":"生物化學實習a `Biochemistry Laboratory",
+            "title_parsed":{
+                "en_US":"Biochemistry Laboratory",
+                "zh_TW":"生物化學實習a"},
+<<<<<<< HEAD
+            "url":"2183",
+            "year":"半"}
+            ,{
+=======
             "url":"2043",
             "year":"半"}
             ,{
@@ -16480,6 +16633,7 @@
             "url":"2183",
             "year":"半"}
             ,{
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "class":"2",
             "code":"2261",
             "credits":"2",
@@ -20379,7 +20533,11 @@
             "intern_time":"25",
             "language":"中文",
             "location":[""],
+<<<<<<< HEAD
             "note":"實習時間267,教室為C414",
+=======
+            "note":"上課時間267,上課教室C414",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "number":"31",
             "number_parsed":31,
             "obligatory":"選修",

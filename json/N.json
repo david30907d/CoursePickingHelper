@@ -2065,7 +2065,11 @@
             "obligatory":"必修",
             "obligatory_tf":true,
             "prerequisite":"",
+<<<<<<< HEAD
             "professor":"待聘",
+=======
+            "professor":"楊淑瓊",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "time":"4101112",
             "time_parsed":[{
             "day":4,"time":[10,11,12]}],
@@ -4421,7 +4425,11 @@
             "obligatory":"選修",
             "obligatory_tf":false,
             "prerequisite":"",
+<<<<<<< HEAD
             "professor":"王建博",
+=======
+            "professor":"待聘",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "time":"3101112",
             "time_parsed":[{
             "day":3,"time":[10,11,12]}],
