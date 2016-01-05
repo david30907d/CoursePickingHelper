@@ -1,4 +1,4 @@
-{"course":[{"available": "20",
+{"course":[{
             "class":"6",
             "code":"9301",
             "credits":"2",
@@ -18,7 +18,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"李建福",
             "time":"41213",
             "time_parsed":[{
@@ -29,7 +29,7 @@
                 "zh_TW":"古文研究"},
             "url":"4829",
             "year":"全"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9302",
             "credits":"2",
@@ -49,7 +49,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳器文",
             "time":"31011",
             "time_parsed":[{
@@ -60,7 +60,7 @@
                 "zh_TW":"神話學研究"},
             "url":"4830",
             "year":"全"}
-            ,{"available": "20",
+            ,{
             "class":"7",
             "code":"9303",
             "credits":"0",
@@ -80,7 +80,7 @@
             "number_parsed":20,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林淑貞",
             "time":"*",
             "time_parsed":[],
@@ -90,7 +90,7 @@
                 "zh_TW":"論文寫作指導"},
             "url":"4831",
             "year":"全"}
-            ,{"available": "100",
+            ,{
             "class":"7",
             "code":"9304",
             "credits":"3",
@@ -110,7 +110,7 @@
             "number_parsed":100,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -120,7 +120,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4832",
             "year":"全"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9305",
             "credits":"2",
@@ -140,7 +140,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃東陽",
             "time":"31213",
             "time_parsed":[{
@@ -151,7 +151,7 @@
                 "zh_TW":"文獻學研究"},
             "url":"4833",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9306",
             "credits":"2",
@@ -171,7 +171,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林清源",
             "time":"41011",
             "time_parsed":[{
@@ -182,7 +182,7 @@
                 "zh_TW":"《說文》研究"},
             "url":"4834",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9307",
             "credits":"2",
@@ -202,7 +202,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"李建崑",
             "time":"11213",
             "time_parsed":[{
@@ -213,7 +213,7 @@
                 "zh_TW":"唐代文學研究"},
             "url":"4835",
             "year":"全"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9308",
             "credits":"2",
@@ -233,7 +233,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"解昆樺",
             "time":"21213",
             "time_parsed":[{
@@ -244,7 +244,7 @@
                 "zh_TW":"文學文化論"},
             "url":"4836",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9309",
             "credits":"1",
@@ -264,7 +264,7 @@
             "number_parsed":20,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林淑貞",
             "time":"510",
             "time_parsed":[{
@@ -275,7 +275,7 @@
                 "zh_TW":"文獻研讀"},
             "url":"4837",
             "year":"全"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9310",
             "credits":"2",
@@ -295,7 +295,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳啟佑",
             "time":"11011",
             "time_parsed":[{
@@ -306,7 +306,7 @@
                 "zh_TW":"臺灣文學研究"},
             "url":"4838",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9311",
             "credits":"2",
@@ -326,7 +326,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳欽忠",
             "time":"21011",
             "time_parsed":[{
@@ -337,7 +337,7 @@
                 "zh_TW":"書法美學研究"},
             "url":"4839",
             "year":"全"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9312",
             "credits":"2",
@@ -357,7 +357,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"劉瑞寬",
             "time":"21011",
             "time_parsed":[{
@@ -368,7 +368,7 @@
                 "zh_TW":"藝術與歷史"},
             "url":"4840",
             "year":"半"}
-            ,{"available": "80",
+            ,{
             "class":"7",
             "code":"9313",
             "credits":"3",
@@ -388,7 +388,7 @@
             "number_parsed":80,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -398,7 +398,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4841",
             "year":"全"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9314",
             "credits":"2",
@@ -418,7 +418,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林志龍",
             "time":"31011",
             "time_parsed":[{
@@ -429,7 +429,7 @@
                 "zh_TW":"英國史研究"},
             "url":"4842",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9315",
             "credits":"3",
@@ -449,7 +449,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"王良行",
             "time":"1101112",
             "time_parsed":[{
@@ -460,7 +460,7 @@
                 "zh_TW":"泡沫經濟史研究"},
             "url":"4843",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9317",
             "credits":"2",
@@ -480,7 +480,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"宋德喜",
             "time":"41011",
             "time_parsed":[{
@@ -491,7 +491,7 @@
                 "zh_TW":"隋唐社會與國家"},
             "url":"4845",
             "year":"全"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9318",
             "credits":"3",
@@ -511,7 +511,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"汪俊彥",
             "time":"4101112",
             "time_parsed":[{
@@ -522,7 +522,7 @@
                 "zh_TW":"臺灣劇場專題"},
             "url":"4846",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"7",
             "code":"9319",
             "credits":"3",
@@ -542,7 +542,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"劉鳳芯",
             "time":"3101112",
             "time_parsed":[{
@@ -553,7 +553,7 @@
                 "zh_TW":"臺灣兒童文學專題"},
             "url":"4847",
             "year":"半"}
-            ,{"available": "80",
+            ,{
             "class":"7",
             "code":"9320",
             "credits":"3",
@@ -573,7 +573,7 @@
             "number_parsed":80,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -583,7 +583,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4848",
             "year":"全"}
-            ,{"available": "20",
+            ,{
             "class":"7",
             "code":"9321",
             "credits":"3",
@@ -603,7 +603,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳國偉",
             "time":"2101112",
             "time_parsed":[{
@@ -614,7 +614,7 @@
                 "zh_TW":"全球流行文化在臺灣專題"},
             "url":"4849",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9322",
             "credits":"3",
@@ -634,7 +634,7 @@
             "number_parsed":20,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"朱惠足",
             "time":"5101112",
             "time_parsed":[{
@@ -645,7 +645,7 @@
                 "zh_TW":"文學研究方法與論文寫作"},
             "url":"4850",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9323",
             "credits":"3",
@@ -665,7 +665,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"楊三億",
             "time":"6234",
             "time_parsed":[{
@@ -676,7 +676,7 @@
                 "zh_TW":"歐洲區域安全"},
             "url":"4851",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9324",
             "credits":"3",
@@ -696,7 +696,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡明彥",
             "time":"5101112",
             "time_parsed":[{
@@ -707,7 +707,7 @@
                 "zh_TW":"兩岸問題與國際戰略"},
             "url":"4852",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9325",
             "credits":"3",
@@ -727,7 +727,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"鄭蕙燕",
             "time":"2101112",
             "time_parsed":[{
@@ -738,7 +738,7 @@
                 "zh_TW":"休閒遊憩需求之理論與實務"},
             "url":"4920",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9326",
             "credits":"3",
@@ -758,7 +758,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"譚偉恩",
             "time":"3101112",
             "time_parsed":[{
@@ -769,7 +769,7 @@
                 "zh_TW":"全球化理論"},
             "url":"3125",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9327",
             "credits":"3",
@@ -789,7 +789,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"廖舜右",
             "time":"6234",
             "time_parsed":[{
@@ -800,7 +800,7 @@
                 "zh_TW":"全球傳播與國際關係"},
             "url":"4854",
             "year":"半"}
-            ,{"available": "80",
+            ,{
             "class":"7",
             "code":"9328",
             "credits":"3",
@@ -820,7 +820,7 @@
             "number_parsed":80,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -830,7 +830,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4855",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9329",
             "credits":"3",
@@ -850,7 +850,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"廖舜右",
             "time":"6678",
             "time_parsed":[{
@@ -861,7 +861,7 @@
                 "zh_TW":"國際政治理論"},
             "url":"4856",
             "year":"半"}
-            ,{"available": "27",
+            ,{
             "class":"7",
             "code":"9330",
             "credits":"2",
@@ -881,7 +881,7 @@
             "number_parsed":27,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"廖緯民",
             "time":"51011",
             "time_parsed":[{
@@ -892,7 +892,7 @@
                 "zh_TW":"買賣契約法"},
             "url":"2841",
             "year":"半"}
-            ,{"available": "27",
+            ,{
             "class":"7",
             "code":"9331",
             "credits":"2",
@@ -912,7 +912,7 @@
             "number_parsed":27,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林三元",
             "time":"41011",
             "time_parsed":[{
@@ -923,7 +923,7 @@
                 "zh_TW":"科技法案例研究(一)"},
             "url":"4858",
             "year":"半"}
-            ,{"available": "27",
+            ,{
             "class":"7",
             "code":"9332",
             "credits":"2",
@@ -943,7 +943,7 @@
             "number_parsed":27,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"唐敏寶",
             "time":"31011",
             "time_parsed":[{
@@ -954,7 +954,7 @@
                 "zh_TW":"繼承法"},
             "url":"4859",
             "year":"半"}
-            ,{"available": "27",
+            ,{
             "class":"6",
             "code":"9334",
             "credits":"2",
@@ -974,7 +974,7 @@
             "number_parsed":27,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡蕙芳",
             "time":"31011",
             "time_parsed":[{
@@ -985,7 +985,7 @@
                 "zh_TW":"刑法(二)"},
             "url":"4860",
             "year":"半"}
-            ,{"available": "27",
+            ,{
             "class":"7",
             "code":"9335",
             "credits":"2",
@@ -1005,7 +1005,7 @@
             "number_parsed":27,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"高玉泉",
             "time":"11011",
             "time_parsed":[{
@@ -1016,7 +1016,7 @@
                 "zh_TW":"國際公法"},
             "url":"4861",
             "year":"半"}
-            ,{"available": "27",
+            ,{
             "class":"6",
             "code":"9337",
             "credits":"2",
@@ -1036,7 +1036,7 @@
             "number_parsed":27,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"劉昭辰",
             "time":"21011",
             "time_parsed":[{
@@ -1047,7 +1047,7 @@
                 "zh_TW":"民法債編總論(一)"},
             "url":"4863",
             "year":"半"}
-            ,{"available": "6",
+            ,{
             "class":"6",
             "code":"9338",
             "credits":"2",
@@ -1067,7 +1067,7 @@
             "number_parsed":6,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳政憲",
             "time":"31213",
             "time_parsed":[{
@@ -1078,7 +1078,7 @@
                 "zh_TW":"日治時期臺灣史研究"},
             "url":"5062",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9339",
             "credits":"3",
@@ -1098,7 +1098,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -1108,7 +1108,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4864",
             "year":"全"}
-            ,{"available": "27",
+            ,{
             "class":"6",
             "code":"9340",
             "credits":"2",
@@ -1128,7 +1128,7 @@
             "number_parsed":27,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"劉昭辰",
             "time":"21213",
             "time_parsed":[{
@@ -1139,7 +1139,7 @@
                 "zh_TW":"民法債編總論(二)"},
             "url":"4865",
             "year":"半"}
-            ,{"available": "27",
+            ,{
             "class":"7",
             "code":"9341",
             "credits":"2",
@@ -1159,7 +1159,7 @@
             "number_parsed":27,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"廖緯民",
             "time":"31011",
             "time_parsed":[{
@@ -1170,7 +1170,7 @@
                 "zh_TW":"兩岸投資紛爭解決"},
             "url":"4659",
             "year":"半"}
-            ,{"available": "27",
+            ,{
             "class":"6",
             "code":"9342",
             "credits":"2",
@@ -1190,7 +1190,7 @@
             "number_parsed":27,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"羅俊瑋",
             "time":"41213",
             "time_parsed":[{
@@ -1201,7 +1201,7 @@
                 "zh_TW":"保險法"},
             "url":"4660",
             "year":"半"}
-            ,{"available": "27",
+            ,{
             "class":"6",
             "code":"9343",
             "credits":"2",
@@ -1221,7 +1221,7 @@
             "number_parsed":27,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"李惠宗",
             "time":"11011",
             "time_parsed":[{
@@ -1232,7 +1232,7 @@
                 "zh_TW":"行政法(一)"},
             "url":"2977",
             "year":"半"}
-            ,{"available": "27",
+            ,{
             "class":"6",
             "code":"9344",
             "credits":"2",
@@ -1252,7 +1252,7 @@
             "number_parsed":27,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"李惠宗",
             "time":"11213",
             "time_parsed":[{
@@ -1263,7 +1263,7 @@
                 "zh_TW":"行政法(二)"},
             "url":"4866",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9346",
             "credits":"3",
@@ -1283,7 +1283,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -1293,7 +1293,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4868",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9347",
             "credits":"3",
@@ -1313,7 +1313,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張瑞當",
             "time":"2111213",
             "time_parsed":[{
@@ -1324,7 +1324,7 @@
                 "zh_TW":"會計分析與管理決策"},
             "url":"4869",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9348",
             "credits":"3",
@@ -1344,17 +1344,17 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"*",
             "time_parsed":[],
-            "title":"碩士論文 `Thesis",
+            "title":"碩士論文b `Thesis",
             "title_parsed":{
                 "en_US":"Thesis",
-                "zh_TW":"碩士論文"},
+                "zh_TW":"碩士論文b"},
             "url":"4870",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9349",
             "credits":"3",
@@ -1374,7 +1374,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林谷合",
             "time":"4111213",
             "time_parsed":[{
@@ -1385,7 +1385,7 @@
                 "zh_TW":"國際企業管理"},
             "url":"4871",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9350",
             "credits":"3",
@@ -1405,7 +1405,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"袁鶴齡",
             "time":"4111213",
             "time_parsed":[{
@@ -1416,7 +1416,7 @@
                 "zh_TW":"國際商務談判"},
             "url":"4872",
             "year":"半"}
-            ,{"available": "0",
+            ,{
             "class":"6",
             "code":"9351",
             "credits":"3",
@@ -1436,7 +1436,7 @@
             "number_parsed":0,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林金賢",
             "time":"7234",
             "time_parsed":[{
@@ -1447,7 +1447,7 @@
                 "zh_TW":"營運管理與經營決策分析"},
             "url":"4873",
             "year":"半"}
-            ,{"available": "0",
+            ,{
             "class":"7",
             "code":"9352",
             "credits":"3",
@@ -1467,7 +1467,7 @@
             "number_parsed":0,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林丙輝",
             "time":"6567",
             "time_parsed":[{
@@ -1478,7 +1478,7 @@
                 "zh_TW":"企業倫理與永續經營"},
             "url":"4874",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9353",
             "credits":"3",
@@ -1498,7 +1498,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"徐俊明",
             "time":"3111213",
             "time_parsed":[{
@@ -1509,7 +1509,7 @@
                 "zh_TW":"企業購併專題"},
             "url":"4875",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9354",
             "credits":"3",
@@ -1529,7 +1529,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"許志義",
             "time":"6234",
             "time_parsed":[{
@@ -1540,7 +1540,7 @@
                 "zh_TW":"資訊科技與競爭優勢"},
             "url":"4876",
             "year":"半"}
-            ,{"available": "0",
+            ,{
             "class":"6",
             "code":"9355",
             "credits":"3",
@@ -1560,7 +1560,7 @@
             "number_parsed":0,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"楊聲勇",
             "time":"6234",
             "time_parsed":[{
@@ -1571,7 +1571,7 @@
                 "zh_TW":"國際金融與投資"},
             "url":"4877",
             "year":"半"}
-            ,{"available": "85",
+            ,{
             "class":"7",
             "code":"9356",
             "credits":"3",
@@ -1591,17 +1591,17 @@
             "number_parsed":85,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"*",
             "time_parsed":[],
-            "title":"碩士論文 `Thesis",
+            "title":"碩士論文a `Thesis",
             "title_parsed":{
                 "en_US":"Thesis",
-                "zh_TW":"碩士論文"},
+                "zh_TW":"碩士論文a"},
             "url":"4878",
             "year":"全"}
-            ,{"available": "37",
+            ,{
             "class":"6",
             "code":"9358",
             "credits":"3",
@@ -1621,7 +1621,7 @@
             "number_parsed":37,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳明惠",
             "time":"6234",
             "time_parsed":[{
@@ -1632,7 +1632,7 @@
                 "zh_TW":"創意與科技管理"},
             "url":"4879",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9359",
             "credits":"3",
@@ -1652,7 +1652,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"楊聲勇",
             "time":"4111213",
             "time_parsed":[{
@@ -1663,7 +1663,7 @@
                 "zh_TW":"國際財務管理"},
             "url":"4880",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9360",
             "credits":"3",
@@ -1683,7 +1683,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"王建富",
             "time":"3111213",
             "time_parsed":[{
@@ -1694,7 +1694,7 @@
                 "zh_TW":"流通管理"},
             "url":"4881",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9361",
             "credits":"3",
@@ -1714,7 +1714,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"紀信義",
             "time":"4111213",
             "time_parsed":[{
@@ -1725,7 +1725,7 @@
                 "zh_TW":"財務報表分析"},
             "url":"4882",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9362",
             "credits":"3",
@@ -1745,7 +1745,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蕭　櫓",
             "time":"5111213",
             "time_parsed":[{
@@ -1756,7 +1756,7 @@
                 "zh_TW":"策略賽局"},
             "url":"4883",
             "year":"半"}
-            ,{"available": "0",
+            ,{
             "class":"7",
             "code":"9363",
             "credits":"1",
@@ -1776,7 +1776,7 @@
             "number_parsed":0,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"喬友慶",
             "time":"74",
             "time_parsed":[{
@@ -1787,7 +1787,7 @@
                 "zh_TW":"企業參訪"},
             "url":"4884",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9364",
             "credits":"3",
@@ -1807,18 +1807,18 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林谷合",
             "time":"5111213",
             "time_parsed":[{
             "day":5,"time":[11,12,13]}],
-            "title":"策略管理 `Strategic Management",
+            "title":"策略管理a `Strategic Management",
             "title_parsed":{
                 "en_US":"Strategic Management",
-                "zh_TW":"策略管理"},
+                "zh_TW":"策略管理a"},
             "url":"4885",
             "year":"半"}
-            ,{"available": "38",
+            ,{
             "class":"6",
             "code":"9365",
             "credits":"3",
@@ -1838,17 +1838,17 @@
             "number_parsed":38,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林建宇",
             "time":"*",
             "time_parsed":[],
-            "title":"運動與健康全適能管理 `Management of Exercise and Health Wellness",
+            "title":"運動與健康全適能管理b `Management of Exercise and Health Wellness",
             "title_parsed":{
                 "en_US":"Management of Exercise and Health Wellness",
-                "zh_TW":"運動與健康全適能管理"},
+                "zh_TW":"運動與健康全適能管理b"},
             "url":"4886",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9366",
             "credits":"3",
@@ -1868,18 +1868,18 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林金賢",
             "time":"6567",
             "time_parsed":[{
             "day":6,"time":[5,6,7]}],
-            "title":"營運管理 `Operations Management",
+            "title":"營運管理a `Operations Management",
             "title_parsed":{
                 "en_US":"Operations Management",
-                "zh_TW":"營運管理"},
+                "zh_TW":"營運管理a"},
             "url":"4887",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9367",
             "credits":"3",
@@ -1899,7 +1899,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"莊智薰",
             "time":"3111213",
             "time_parsed":[{
@@ -1910,7 +1910,7 @@
                 "zh_TW":"人力資源管理"},
             "url":"4888",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"7",
             "code":"9368",
             "credits":"3",
@@ -1930,7 +1930,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"曹修源",
             "time":"2111213",
             "time_parsed":[{
@@ -1941,7 +1941,7 @@
                 "zh_TW":"策略行銷管理專題"},
             "url":"4889",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9369",
             "credits":"3",
@@ -1961,7 +1961,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"葉仕國",
             "time":"6234",
             "time_parsed":[{
@@ -1972,7 +1972,7 @@
                 "zh_TW":"衍生性商品與金融創新"},
             "url":"4890",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9370",
             "credits":"3",
@@ -1992,7 +1992,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳家彬",
             "time":"68910",
             "time_parsed":[{
@@ -2003,7 +2003,7 @@
                 "zh_TW":"高階管理個案研討"},
             "url":"4891",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"6",
             "code":"9371",
             "credits":"3",
@@ -2023,18 +2023,18 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"唐資文",
             "time":"5111213",
             "time_parsed":[{
             "day":5,"time":[11,12,13]}],
-            "title":"策略管理 `Strategic Management",
+            "title":"策略管理b `Strategic Management",
             "title_parsed":{
                 "en_US":"Strategic Management",
-                "zh_TW":"策略管理"},
+                "zh_TW":"策略管理b"},
             "url":"4892",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9372",
             "credits":"3",
@@ -2054,18 +2054,18 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡玫亭",
             "time":"6567",
             "time_parsed":[{
             "day":6,"time":[5,6,7]}],
-            "title":"營運管理 `Operations Management",
+            "title":"營運管理b `Operations Management",
             "title_parsed":{
                 "en_US":"Operations Management",
-                "zh_TW":"營運管理"},
+                "zh_TW":"營運管理b"},
             "url":"4893",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9373",
             "credits":"3",
@@ -2085,7 +2085,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"喬友慶",
             "time":"5234",
             "time_parsed":[{
@@ -2096,7 +2096,7 @@
                 "zh_TW":"高階經營決策專題"},
             "url":"4894",
             "year":"半"}
-            ,{"available": "0",
+            ,{
             "class":"7",
             "code":"9374",
             "credits":"3",
@@ -2116,7 +2116,7 @@
             "number_parsed":0,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"袁鶴齡",
             "time":"6234",
             "time_parsed":[{
@@ -2127,7 +2127,7 @@
                 "zh_TW":"危機管理與商務談判"},
             "url":"4895",
             "year":"半"}
-            ,{"available": "0",
+            ,{
             "class":"7",
             "code":"9375",
             "credits":"2",
@@ -2147,7 +2147,7 @@
             "number_parsed":0,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"許志義",
             "time":"723",
             "time_parsed":[{
@@ -2158,7 +2158,7 @@
                 "zh_TW":"資訊科技與競爭優勢"},
             "url":"4896",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9376",
             "credits":"3",
@@ -2178,7 +2178,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"許志義",
             "time":"6567",
             "time_parsed":[{
@@ -2189,7 +2189,7 @@
                 "zh_TW":"資訊管理"},
             "url":"4897",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9377",
             "credits":"3",
@@ -2209,7 +2209,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"許永聲",
             "time":"3111213",
             "time_parsed":[{
@@ -2220,7 +2220,7 @@
                 "zh_TW":"企業診斷與價值評估"},
             "url":"4898",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9378",
             "credits":"3",
@@ -2240,7 +2240,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳連勝",
             "time":"6234",
             "time_parsed":[{
@@ -2251,7 +2251,7 @@
                 "zh_TW":"服務業管理"},
             "url":"4899",
             "year":"半"}
-            ,{"available": "0",
+            ,{
             "class":"6",
             "code":"9379",
             "credits":"3",
@@ -2271,7 +2271,7 @@
             "number_parsed":0,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"王精文",
             "time":"6567",
             "time_parsed":[{
@@ -2282,7 +2282,7 @@
                 "zh_TW":"組織與人力資源管理"},
             "url":"4900",
             "year":"半"}
-            ,{"available": "0",
+            ,{
             "class":"7",
             "code":"9380",
             "credits":"3",
@@ -2302,7 +2302,7 @@
             "number_parsed":0,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"*",
             "time_parsed":[],
@@ -2312,7 +2312,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4901",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9381",
             "credits":"3",
@@ -2332,7 +2332,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳育成",
             "time":"6234",
             "time_parsed":[{
@@ -2343,7 +2343,7 @@
                 "zh_TW":"企業倫理與公司治理"},
             "url":"4902",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9382",
             "credits":"3",
@@ -2363,7 +2363,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳美源",
             "time":"5234",
             "time_parsed":[{
@@ -2374,7 +2374,7 @@
                 "zh_TW":"兩岸政經與經營決策"},
             "url":"4903",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9383",
             "credits":"3",
@@ -2394,7 +2394,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"詹永寬",
             "time":"3101112",
             "time_parsed":[{
@@ -2405,7 +2405,7 @@
                 "zh_TW":"資料庫系統"},
             "url":"4904",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9384",
             "credits":"3",
@@ -2425,7 +2425,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳佳楨",
             "time":"4101112",
             "time_parsed":[{
@@ -2436,7 +2436,7 @@
                 "zh_TW":"高等資訊管理"},
             "url":"5072",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9385",
             "credits":"1",
@@ -2456,7 +2456,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"呂瑞麟",
             "time":"11011",
             "time_parsed":[{
@@ -2467,7 +2467,7 @@
                 "zh_TW":"專題研討(一)"},
             "url":"4905",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9386",
             "credits":"3",
@@ -2487,7 +2487,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"*",
             "time_parsed":[],
@@ -2497,7 +2497,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4906",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9387",
             "credits":"3",
@@ -2517,7 +2517,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"沈肇基",
             "time":"2101112",
             "time_parsed":[{
@@ -2528,7 +2528,7 @@
                 "zh_TW":"軟體品質保證"},
             "url":"3880",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9390",
             "credits":"3",
@@ -2548,7 +2548,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"楊育誠",
             "time":"3101112",
             "time_parsed":[{
@@ -2559,7 +2559,7 @@
                 "zh_TW":"總體經濟理論(一)"},
             "url":"4908",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9391",
             "credits":"3",
@@ -2579,7 +2579,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"鄭蕙燕",
             "time":"1101112",
             "time_parsed":[{
@@ -2590,7 +2590,7 @@
                 "zh_TW":"益本分析"},
             "url":"4909",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9392",
             "credits":"3",
@@ -2610,7 +2610,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"簡立賢",
             "time":"1101112",
             "time_parsed":[{
@@ -2621,7 +2621,7 @@
                 "zh_TW":"資訊經濟學"},
             "url":"4910",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9393",
             "credits":"3",
@@ -2641,7 +2641,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"胡吳岳",
             "time":"1101112",
             "time_parsed":[{
@@ -2652,7 +2652,7 @@
                 "zh_TW":"產業經濟實證研究"},
             "url":"4911",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9394",
             "credits":"3",
@@ -2672,7 +2672,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"廖述誼",
             "time":"4101112",
             "time_parsed":[{
@@ -2683,7 +2683,7 @@
                 "zh_TW":"多變量分析"},
             "url":"4912",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9395",
             "credits":"3",
@@ -2703,7 +2703,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"萬鍾汶",
             "time":"4101112",
             "time_parsed":[{
@@ -2714,7 +2714,7 @@
                 "zh_TW":"服務創新與管理"},
             "url":"4913",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9396",
             "credits":"3",
@@ -2734,7 +2734,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃炳文",
             "time":"2101112",
             "time_parsed":[{
@@ -2745,7 +2745,7 @@
                 "zh_TW":"論文寫作"},
             "url":"4914",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9397",
             "credits":"3",
@@ -2765,7 +2765,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張國益",
             "time":"5101112",
             "time_parsed":[{
@@ -2776,7 +2776,7 @@
                 "zh_TW":"日本經濟分析"},
             "url":"4915",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9398",
             "credits":"3",
@@ -2796,7 +2796,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃文仙",
             "time":"3101112",
             "time_parsed":[{
@@ -2807,7 +2807,7 @@
                 "zh_TW":"行銷管理"},
             "url":"4916",
             "year":"半"}
-            ,{"available": "80",
+            ,{
             "class":"7",
             "code":"9399",
             "credits":"3",
@@ -2827,7 +2827,7 @@
             "number_parsed":80,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -2837,7 +2837,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4917",
             "year":"全"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9401",
             "credits":"3",
@@ -2857,7 +2857,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"詹勳全",
             "time":"6234",
             "time_parsed":[{
@@ -2868,7 +2868,7 @@
                 "zh_TW":"水文學特論"},
             "url":"4919",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9402",
             "credits":"3",
@@ -2888,7 +2888,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林宗儀",
             "time":"6234",
             "time_parsed":[{
@@ -2899,7 +2899,7 @@
                 "zh_TW":"應用多變量資料分析"},
             "url":"5105",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9403",
             "credits":"2",
@@ -2919,7 +2919,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"段錦浩",
             "time":"41011",
             "time_parsed":[{
@@ -2930,7 +2930,7 @@
                 "zh_TW":"水土保持法規特論"},
             "url":"4921",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9404",
             "credits":"1",
@@ -2950,17 +2950,17 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林昭遠",
             "time":"*",
             "time_parsed":[],
-            "title":"專題研究(二) `Special Topics Research (II)",
+            "title":"專題研究(二)b `Special Topics Research (II)",
             "title_parsed":{
                 "en_US":"Special Topics Research (II)",
-                "zh_TW":"專題研究(二)"},
+                "zh_TW":"專題研究(二)b"},
             "url":"4922",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9405",
             "credits":"1",
@@ -2980,7 +2980,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林俐玲",
             "time":"*",
             "time_parsed":[],
@@ -2990,7 +2990,7 @@
                 "zh_TW":"專題討論(四)"},
             "url":"4923",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9406",
             "credits":"1",
@@ -3010,7 +3010,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蕭宇伸",
             "time":"*",
             "time_parsed":[],
@@ -3020,7 +3020,7 @@
                 "zh_TW":"專題討論(二)"},
             "url":"4924",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9407",
             "credits":"3",
@@ -3040,7 +3040,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林德貴",
             "time":"31011",
             "time_parsed":[{
@@ -3051,7 +3051,7 @@
                 "zh_TW":"工程地質特論"},
             "url":"4925",
             "year":"半"}
-            ,{"available": "8",
+            ,{
             "class":"6",
             "code":"9408",
             "credits":"3",
@@ -3071,7 +3071,7 @@
             "number_parsed":8,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳輝龍",
             "time":"6678",
             "time_parsed":[{
@@ -3082,7 +3082,7 @@
                 "zh_TW":"水土保持規劃與實務"},
             "url":"4926",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9409",
             "credits":"1",
@@ -3102,17 +3102,17 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林俐玲",
             "time":"*",
             "time_parsed":[],
-            "title":"專題研究(二) `Special Topics Research (II)",
+            "title":"專題研究(二)c `Special Topics Research (II)",
             "title_parsed":{
                 "en_US":"Special Topics Research (II)",
-                "zh_TW":"專題研究(二)"},
+                "zh_TW":"專題研究(二)c"},
             "url":"4927",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9410",
             "credits":"1",
@@ -3132,17 +3132,17 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳文福",
             "time":"*",
             "time_parsed":[],
-            "title":"專題研究(二) `Special Topics Research (II)",
+            "title":"專題研究(二)a `Special Topics Research (II)",
             "title_parsed":{
                 "en_US":"Special Topics Research (II)",
-                "zh_TW":"專題研究(二)"},
+                "zh_TW":"專題研究(二)a"},
             "url":"4928",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9411",
             "credits":"1",
@@ -3162,17 +3162,17 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"馮正一",
             "time":"*",
             "time_parsed":[],
-            "title":"專題研究(二) `Special Topics Research (II)",
+            "title":"專題研究(二)n `Special Topics Research (II)",
             "title_parsed":{
                 "en_US":"Special Topics Research (II)",
-                "zh_TW":"專題研究(二)"},
+                "zh_TW":"專題研究(二)n"},
             "url":"4929",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9412",
             "credits":"1",
@@ -3192,17 +3192,17 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張光宗",
             "time":"*",
             "time_parsed":[],
-            "title":"專題研究(二) `Special Topics Research (II)",
+            "title":"專題研究(二)p `Special Topics Research (II)",
             "title_parsed":{
                 "en_US":"Special Topics Research (II)",
-                "zh_TW":"專題研究(二)"},
+                "zh_TW":"專題研究(二)p"},
             "url":"4930",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9413",
             "credits":"3",
@@ -3222,7 +3222,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林俐玲",
             "time":"6678",
             "time_parsed":[{
@@ -3233,7 +3233,7 @@
                 "zh_TW":"土壤物理學特論"},
             "url":"4931",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9414",
             "credits":"3",
@@ -3253,7 +3253,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"鄭皆達",
             "time":"6101112",
             "time_parsed":[{
@@ -3264,7 +3264,7 @@
                 "zh_TW":"集水區水資源規劃與經營"},
             "url":"4932",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9415",
             "credits":"1",
@@ -3284,17 +3284,17 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"詹勳全",
             "time":"*",
             "time_parsed":[],
-            "title":"專題研究(二) `Special Topics Research (II)",
+            "title":"專題研究(二)q `Special Topics Research (II)",
             "title_parsed":{
                 "en_US":"Special Topics Research (II)",
-                "zh_TW":"專題研究(二)"},
+                "zh_TW":"專題研究(二)q"},
             "url":"4933",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9416",
             "credits":"3",
@@ -3314,7 +3314,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"馮正一",
             "time":"5101112",
             "time_parsed":[{
@@ -3325,7 +3325,7 @@
                 "zh_TW":"坡地工程特論"},
             "url":"4934",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9417",
             "credits":"1",
@@ -3345,17 +3345,17 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林信輝",
             "time":"*",
             "time_parsed":[],
-            "title":"專題研究(二) `Special Topics Research (II)",
+            "title":"專題研究(二)d `Special Topics Research (II)",
             "title_parsed":{
                 "en_US":"Special Topics Research (II)",
-                "zh_TW":"專題研究(二)"},
+                "zh_TW":"專題研究(二)d"},
             "url":"4935",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9418",
             "credits":"1",
@@ -3375,17 +3375,17 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"鄭皆達",
             "time":"*",
             "time_parsed":[],
-            "title":"專題研究(二) `Special Topics Research (II)",
+            "title":"專題研究(二)i `Special Topics Research (II)",
             "title_parsed":{
                 "en_US":"Special Topics Research (II)",
-                "zh_TW":"專題研究(二)"},
+                "zh_TW":"專題研究(二)i"},
             "url":"4936",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9419",
             "credits":"1",
@@ -3405,17 +3405,17 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃隆明",
             "time":"*",
             "time_parsed":[],
-            "title":"專題研究(二) `Special Topics Research (II)",
+            "title":"專題研究(二)k `Special Topics Research (II)",
             "title_parsed":{
                 "en_US":"Special Topics Research (II)",
-                "zh_TW":"專題研究(二)"},
+                "zh_TW":"專題研究(二)k"},
             "url":"4937",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9420",
             "credits":"3",
@@ -3435,7 +3435,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林昭遠",
             "time":"3101112",
             "time_parsed":[{
@@ -3446,7 +3446,7 @@
                 "zh_TW":"坡地資源調查特論"},
             "url":"4938",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9421",
             "credits":"1",
@@ -3466,17 +3466,17 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳樹群",
             "time":"*",
             "time_parsed":[],
-            "title":"專題研究(二) `Special Topics Research (II)",
+            "title":"專題研究(二)f `Special Topics Research (II)",
             "title_parsed":{
                 "en_US":"Special Topics Research (II)",
-                "zh_TW":"專題研究(二)"},
+                "zh_TW":"專題研究(二)f"},
             "url":"4939",
             "year":"半"}
-            ,{"available": "80",
+            ,{
             "class":"7",
             "code":"9422",
             "credits":"3",
@@ -3496,7 +3496,7 @@
             "number_parsed":80,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -3506,7 +3506,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4292",
             "year":"全"}
-            ,{"available": "80",
+            ,{
             "class":"7",
             "code":"9423",
             "credits":"3",
@@ -3526,7 +3526,7 @@
             "number_parsed":80,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -3536,7 +3536,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4941",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9424",
             "credits":"1",
@@ -3556,17 +3556,17 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"游繁結",
             "time":"*",
             "time_parsed":[],
-            "title":"專題研究(二) `Special Topics Research (II)",
+            "title":"專題研究(二)j `Special Topics Research (II)",
             "title_parsed":{
                 "en_US":"Special Topics Research (II)",
-                "zh_TW":"專題研究(二)"},
+                "zh_TW":"專題研究(二)j"},
             "url":"4942",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9425",
             "credits":"1",
@@ -3586,17 +3586,17 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林德貴",
             "time":"*",
             "time_parsed":[],
-            "title":"專題研究(二) `Special Topics Research (II)",
+            "title":"專題研究(二)l `Special Topics Research (II)",
             "title_parsed":{
                 "en_US":"Special Topics Research (II)",
-                "zh_TW":"專題研究(二)"},
+                "zh_TW":"專題研究(二)l"},
             "url":"4943",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9426",
             "credits":"2",
@@ -3616,7 +3616,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"江伯源",
             "time":"*",
             "time_parsed":[],
@@ -3626,7 +3626,7 @@
                 "zh_TW":"高等園產品加工學"},
             "url":"4944",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9427",
             "credits":"2",
@@ -3646,7 +3646,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"劉伯康",
             "time":"*",
             "time_parsed":[],
@@ -3656,7 +3656,7 @@
                 "zh_TW":"食品官能品質與分析"},
             "url":"4945",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9428",
             "credits":"1",
@@ -3676,7 +3676,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡碩文",
             "time":"*",
             "time_parsed":[],
@@ -3686,7 +3686,7 @@
                 "zh_TW":"專題討論(二)"},
             "url":"4946",
             "year":"全"}
-            ,{"available": "100",
+            ,{
             "class":"7",
             "code":"9429",
             "credits":"3",
@@ -3706,7 +3706,7 @@
             "number_parsed":100,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -3716,7 +3716,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4947",
             "year":"全"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9430",
             "credits":"2",
@@ -3736,7 +3736,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"溫曉薇",
             "time":"*",
             "time_parsed":[],
@@ -3746,7 +3746,7 @@
                 "zh_TW":"食品生物技術"},
             "url":"4948",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9431",
             "credits":"2",
@@ -3766,7 +3766,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"金安兒",
             "time":"*",
             "time_parsed":[],
@@ -3776,7 +3776,7 @@
                 "zh_TW":"高等食品工程"},
             "url":"4949",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9433",
             "credits":"2",
@@ -3796,7 +3796,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"毛正倫",
             "time":"*",
             "time_parsed":[],
@@ -3806,7 +3806,7 @@
                 "zh_TW":"食品科學實驗設計"},
             "url":"4951",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9434",
             "credits":"1",
@@ -3826,7 +3826,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"劉沛棻",
             "time":"*",
             "time_parsed":[],
@@ -3836,7 +3836,7 @@
                 "zh_TW":"專題討論(一)"},
             "url":"4952",
             "year":"全"}
-            ,{"available": "10",
+            ,{
             "class":"7",
             "code":"9435",
             "credits":"3",
@@ -3856,7 +3856,7 @@
             "number_parsed":10,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -3866,7 +3866,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4953",
             "year":"全"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9436",
             "credits":"2",
@@ -3886,7 +3886,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蘇鴻麟",
             "time":"612",
             "time_parsed":[{
@@ -3897,7 +3897,7 @@
                 "zh_TW":"幹細胞導論"},
             "url":"4954",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9437",
             "credits":"2",
@@ -3917,7 +3917,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳良築",
             "time":"667",
             "time_parsed":[{
@@ -3928,7 +3928,7 @@
                 "zh_TW":"生物技術學專論"},
             "url":"4955",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"7",
             "code":"9438",
             "credits":"1",
@@ -3948,7 +3948,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃介辰",
             "time":"65",
             "time_parsed":[{
@@ -3959,7 +3959,7 @@
                 "zh_TW":"專題討論(二)"},
             "url":"4956",
             "year":"全"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9439",
             "credits":"1",
@@ -3979,7 +3979,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳昇明",
             "time":"65",
             "time_parsed":[{
@@ -3990,7 +3990,7 @@
                 "zh_TW":"專題討論(一)"},
             "url":"4957",
             "year":"全"}
-            ,{"available": "80",
+            ,{
             "class":"7",
             "code":"9440",
             "credits":"3",
@@ -4010,7 +4010,7 @@
             "number_parsed":80,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -4020,7 +4020,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4958",
             "year":"全"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9441",
             "credits":"2",
@@ -4040,7 +4040,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"闕斌如",
             "time":"689",
             "time_parsed":[{
@@ -4051,7 +4051,7 @@
                 "zh_TW":"生物醫學實驗研究法"},
             "url":"4959",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9442",
             "credits":"2",
@@ -4071,7 +4071,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳明義",
             "time":"612",
             "time_parsed":[{
@@ -4082,7 +4082,7 @@
                 "zh_TW":"生態學特論"},
             "url":"4960",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9443",
             "credits":"1",
@@ -4102,7 +4102,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳昇明",
             "time":"63",
             "time_parsed":[{
@@ -4113,7 +4113,7 @@
                 "zh_TW":"真菌學"},
             "url":"4961",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9444",
             "credits":"1",
@@ -4133,7 +4133,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"李天雄",
             "time":"64",
             "time_parsed":[{
@@ -4144,7 +4144,7 @@
                 "zh_TW":"生物化學專論"},
             "url":"4962",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9445",
             "credits":"2",
@@ -4164,7 +4164,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳健尉",
             "time":"667",
             "time_parsed":[{
@@ -4175,7 +4175,7 @@
                 "zh_TW":"科學論文英文寫作"},
             "url":"3319",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9446",
             "credits":"2",
@@ -4195,7 +4195,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林正宏",
             "time":"689",
             "time_parsed":[{
@@ -4206,7 +4206,7 @@
                 "zh_TW":"植物生理學特論"},
             "url":"4964",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9447",
             "credits":"3",
@@ -4226,7 +4226,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡文榮",
             "time":"6678",
             "time_parsed":[{
@@ -4237,7 +4237,7 @@
                 "zh_TW":"數學科行動研究"},
             "url":"4965",
             "year":"半"}
-            ,{"available": "80",
+            ,{
             "class":"7",
             "code":"9448",
             "credits":"3",
@@ -4257,7 +4257,7 @@
             "number_parsed":80,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -4267,7 +4267,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4966",
             "year":"全"}
-            ,{"available": "15",
+            ,{
             "class":"7",
             "code":"9449",
             "credits":"3",
@@ -4287,7 +4287,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"顏增昌",
             "time":"6234",
             "time_parsed":[{
@@ -4298,7 +4298,7 @@
                 "zh_TW":"數學e化教學"},
             "url":"4505",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"7",
             "code":"9450",
             "credits":"3",
@@ -4318,7 +4318,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"王輝清",
             "time":"7678",
             "time_parsed":[{
@@ -4329,7 +4329,7 @@
                 "zh_TW":"數學軟體與動畫"},
             "url":"4595",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9451",
             "credits":"1",
@@ -4349,7 +4349,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"施因澤",
             "time":"65",
             "time_parsed":[{
@@ -4360,7 +4360,7 @@
                 "zh_TW":"研究方法"},
             "url":"4969",
             "year":"全"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9452",
             "credits":"3",
@@ -4380,7 +4380,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳齊康",
             "time":"7234",
             "time_parsed":[{
@@ -4391,7 +4391,7 @@
                 "zh_TW":"微分方程專題"},
             "url":"4970",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9455",
             "credits":"3",
@@ -4411,7 +4411,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -4421,7 +4421,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4973",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9456",
             "credits":"3",
@@ -4441,7 +4441,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張軒彬",
             "time":"3101112",
             "time_parsed":[{
@@ -4452,7 +4452,7 @@
                 "zh_TW":"網際網路規約"},
             "url":"4974",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9457",
             "credits":"3",
@@ -4472,7 +4472,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃德成",
             "time":"4101112",
             "time_parsed":[{
@@ -4483,7 +4483,7 @@
                 "zh_TW":"數位系統測試"},
             "url":"4975",
             "year":"半"}
-            ,{"available": "150",
+            ,{
             "class":"7",
             "code":"9458",
             "credits":"3",
@@ -4503,7 +4503,7 @@
             "number_parsed":150,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -4513,7 +4513,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4976",
             "year":"全"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9459",
             "credits":"3",
@@ -4533,7 +4533,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"洪國寶",
             "time":"3101112",
             "time_parsed":[{
@@ -4544,7 +4544,7 @@
                 "zh_TW":"演算法設計與分析"},
             "url":"4977",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9460",
             "credits":"3",
@@ -4564,7 +4564,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃春融",
             "time":"4101112",
             "time_parsed":[{
@@ -4575,7 +4575,7 @@
                 "zh_TW":"多媒體系統"},
             "url":"4978",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9463",
             "credits":"2",
@@ -4595,7 +4595,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔣慎思",
             "time":"*",
             "time_parsed":[],
@@ -4605,7 +4605,7 @@
                 "zh_TW":"食品香味化學"},
             "url":"5075",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9464",
             "credits":"3",
@@ -4625,7 +4625,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"曾柏昌",
             "time":"4101112",
             "time_parsed":[{
@@ -4636,7 +4636,7 @@
                 "zh_TW":"生產工程"},
             "url":"4981",
             "year":"半"}
-            ,{"available": "150",
+            ,{
             "class":"7",
             "code":"9465",
             "credits":"3",
@@ -4656,7 +4656,7 @@
             "number_parsed":150,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -4666,7 +4666,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4982",
             "year":"全"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9466",
             "credits":"3",
@@ -4686,7 +4686,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"盧昭暉",
             "time":"4101112",
             "time_parsed":[{
@@ -4697,7 +4697,7 @@
                 "zh_TW":"高等熱傳學"},
             "url":"4983",
             "year":"半"}
-            ,{"available": "10",
+            ,{
             "class":"6",
             "code":"9467",
             "credits":"3",
@@ -4717,7 +4717,7 @@
             "number_parsed":10,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃敏睿",
             "time":"3101112",
             "time_parsed":[{
@@ -4728,7 +4728,7 @@
                 "zh_TW":"雷射全像光學精密量測"},
             "url":"4984",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9468",
             "credits":"3",
@@ -4748,7 +4748,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"范光堯",
             "time":"2101112",
             "time_parsed":[{
@@ -4759,7 +4759,7 @@
                 "zh_TW":"機械製造分析"},
             "url":"4985",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9469",
             "credits":"3",
@@ -4779,7 +4779,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳天堯",
             "time":"5101112",
             "time_parsed":[{
@@ -4790,7 +4790,7 @@
                 "zh_TW":"高等振動學與模態分析"},
             "url":"2800",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9470",
             "credits":"3",
@@ -4810,7 +4810,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳昭亮",
             "time":"1101112",
             "time_parsed":[{
@@ -4821,7 +4821,7 @@
                 "zh_TW":"精密機械設計原理"},
             "url":"4987",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9471",
             "credits":"3",
@@ -4841,7 +4841,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"沈君洋",
             "time":"5101112",
             "time_parsed":[{
@@ -4852,7 +4852,7 @@
                 "zh_TW":"熱對流學"},
             "url":"4988",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9472",
             "credits":"2",
@@ -4872,7 +4872,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林炫秋",
             "time":"612",
             "time_parsed":[{
@@ -4883,7 +4883,7 @@
                 "zh_TW":"民法物權(一)"},
             "url":"3342",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"6",
             "code":"9473",
             "credits":"3",
@@ -4903,7 +4903,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"郭其珍",
             "time":"2101112",
             "time_parsed":[{
@@ -4914,7 +4914,7 @@
                 "zh_TW":"營建安全"},
             "url":"4989",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9474",
             "credits":"3",
@@ -4934,7 +4934,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張明添",
             "time":"1101112",
             "time_parsed":[{
@@ -4945,7 +4945,7 @@
                 "zh_TW":"彈性力學"},
             "url":"4990",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9475",
             "credits":"2",
@@ -4965,7 +4965,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林炫秋",
             "time":"634",
             "time_parsed":[{
@@ -4976,7 +4976,7 @@
                 "zh_TW":"民法物權(二)"},
             "url":"3345",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9476",
             "credits":"2",
@@ -4996,7 +4996,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"廖大穎",
             "time":"656",
             "time_parsed":[{
@@ -5007,7 +5007,7 @@
                 "zh_TW":"公司法(一)"},
             "url":"3348",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9477",
             "credits":"3",
@@ -5027,7 +5027,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張延任",
             "time":"2101112",
             "time_parsed":[{
@@ -5038,7 +5038,7 @@
                 "zh_TW":"嵌入式系統原理與應用"},
             "url":"2679",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9478",
             "credits":"3",
@@ -5058,7 +5058,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"廖宜恩",
             "time":"1101112",
             "time_parsed":[{
@@ -5069,7 +5069,7 @@
                 "zh_TW":"資料挖掘"},
             "url":"4662",
             "year":"半"}
-            ,{"available": "80",
+            ,{
             "class":"7",
             "code":"9479",
             "credits":"3",
@@ -5089,7 +5089,7 @@
             "number_parsed":80,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -5099,7 +5099,7 @@
                 "zh_TW":"碩士論文"},
             "url":"4992",
             "year":"全"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9480",
             "credits":"3",
@@ -5119,7 +5119,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林宜清",
             "time":"4101112",
             "time_parsed":[{
@@ -5130,7 +5130,7 @@
                 "zh_TW":"混凝土非破壞檢測"},
             "url":"4993",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"6",
             "code":"9481",
             "credits":"3",
@@ -5150,7 +5150,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林　呈",
             "time":"3101112",
             "time_parsed":[{
@@ -5161,7 +5161,7 @@
                 "zh_TW":"橋樑水力學"},
             "url":"4994",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9482",
             "credits":"3",
@@ -5181,7 +5181,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"壽克堅",
             "time":"3101112",
             "time_parsed":[{
@@ -5192,7 +5192,7 @@
                 "zh_TW":"高等工程地質學"},
             "url":"4995",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9483",
             "credits":"3",
@@ -5212,7 +5212,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃添坤",
             "time":"1101112",
             "time_parsed":[{
@@ -5223,7 +5223,7 @@
                 "zh_TW":"電子計算機在大地工程上之應用"},
             "url":"4996",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9484",
             "credits":"2",
@@ -5243,7 +5243,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"廖大穎",
             "time":"678",
             "time_parsed":[{
@@ -5254,7 +5254,7 @@
                 "zh_TW":"公司法(二)"},
             "url":"4021",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9485",
             "credits":"2",
@@ -5274,7 +5274,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"洪俊雄",
             "time":"21011",
             "time_parsed":[{
@@ -5285,7 +5285,7 @@
                 "zh_TW":"環境生物技術之污染防治應用"},
             "url":"4998",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9487",
             "credits":"2",
@@ -5305,7 +5305,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林明德",
             "time":"11011",
             "time_parsed":[{
@@ -5316,7 +5316,7 @@
                 "zh_TW":"環境資訊系統理論與應用"},
             "url":"4999",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9488",
             "credits":"3",
@@ -5336,7 +5336,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林伯雄",
             "time":"4101112",
             "time_parsed":[{
@@ -5347,7 +5347,7 @@
                 "zh_TW":"污染物分析"},
             "url":"5000",
             "year":"半"}
-            ,{"available": "100",
+            ,{
             "class":"7",
             "code":"9489",
             "credits":"3",
@@ -5367,7 +5367,7 @@
             "number_parsed":100,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -5377,7 +5377,7 @@
                 "zh_TW":"碩士論文"},
             "url":"5001",
             "year":"全"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9490",
             "credits":"3",
@@ -5397,7 +5397,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"洪俊雄",
             "time":"5101112",
             "time_parsed":[{
@@ -5408,7 +5408,7 @@
                 "zh_TW":"水及廢水之物化處理"},
             "url":"5002",
             "year":"半"}
-            ,{"available": "10",
+            ,{
             "class":"6",
             "code":"9491",
             "credits":"3",
@@ -5428,7 +5428,7 @@
             "number_parsed":10,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳崇賓",
             "time":"3101112",
             "time_parsed":[{
@@ -5439,7 +5439,7 @@
                 "zh_TW":"單晶片系統設計"},
             "url":"5003",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9492",
             "credits":"0",
@@ -5459,7 +5459,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"楊清淵",
             "time":"41011",
             "time_parsed":[{
@@ -5470,7 +5470,7 @@
                 "zh_TW":"系統晶片研討(一)"},
             "url":"5004",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9493",
             "credits":"0",
@@ -5490,7 +5490,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"楊清淵",
             "time":"41011",
             "time_parsed":[{
@@ -5501,7 +5501,7 @@
                 "zh_TW":"系統晶片研討(二)"},
             "url":"5005",
             "year":"半"}
-            ,{"available": "10",
+            ,{
             "class":"6",
             "code":"9494",
             "credits":"3",
@@ -5521,7 +5521,7 @@
             "number_parsed":10,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"貢中元",
             "time":"1101112",
             "time_parsed":[{
@@ -5532,7 +5532,7 @@
                 "zh_TW":"固態物理"},
             "url":"5006",
             "year":"半"}
-            ,{"available": "10",
+            ,{
             "class":"6",
             "code":"9495",
             "credits":"3",
@@ -5552,7 +5552,7 @@
             "number_parsed":10,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃穎聰",
             "time":"1101112",
             "time_parsed":[{
@@ -5563,7 +5563,7 @@
                 "zh_TW":"超大型積體電路訊號處理架構設計"},
             "url":"5007",
             "year":"半"}
-            ,{"available": "10",
+            ,{
             "class":"6",
             "code":"9496",
             "credits":"3",
@@ -5583,7 +5583,7 @@
             "number_parsed":10,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"溫志煜",
             "time":"1101112",
             "time_parsed":[{
@@ -5594,7 +5594,7 @@
                 "zh_TW":"通訊協定工程"},
             "url":"5008",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9497",
             "credits":"0",
@@ -5614,7 +5614,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"鄧洪聲",
             "time":"41011",
             "time_parsed":[{
@@ -5625,7 +5625,7 @@
                 "zh_TW":"控制研討(一)"},
             "url":"5009",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9498",
             "credits":"3",
@@ -5645,7 +5645,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"許舜斌",
             "time":"3101112",
             "time_parsed":[{
@@ -5656,7 +5656,7 @@
                 "zh_TW":"系統理論"},
             "url":"5010",
             "year":"半"}
-            ,{"available": "10",
+            ,{
             "class":"6",
             "code":"9499",
             "credits":"3",
@@ -5676,7 +5676,7 @@
             "number_parsed":10,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"裴靜偉",
             "time":"3101112",
             "time_parsed":[{
@@ -5687,7 +5687,7 @@
                 "zh_TW":"光電子學"},
             "url":"5011",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9500",
             "credits":"0",
@@ -5707,7 +5707,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"劉漢文",
             "time":"41011",
             "time_parsed":[{
@@ -5718,7 +5718,7 @@
                 "zh_TW":"電子研討(一)"},
             "url":"5012",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9501",
             "credits":"3",
@@ -5738,7 +5738,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳正倫",
             "time":"2101112",
             "time_parsed":[{
@@ -5749,7 +5749,7 @@
                 "zh_TW":"系統與控制最佳化方法"},
             "url":"5013",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9502",
             "credits":"3",
@@ -5769,7 +5769,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林俊良",
             "time":"1101112",
             "time_parsed":[{
@@ -5780,7 +5780,7 @@
                 "zh_TW":"最佳估測與識別"},
             "url":"5014",
             "year":"半"}
-            ,{"available": "10",
+            ,{
             "class":"6",
             "code":"9503",
             "credits":"3",
@@ -5800,7 +5800,7 @@
             "number_parsed":10,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林泓均",
             "time":"2101112",
             "time_parsed":[{
@@ -5811,7 +5811,7 @@
                 "zh_TW":"電腦輔助超大型積體電路設計"},
             "url":"5015",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9504",
             "credits":"0",
@@ -5831,7 +5831,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"鄧洪聲",
             "time":"41011",
             "time_parsed":[{
@@ -5842,7 +5842,7 @@
                 "zh_TW":"控制研討(二)"},
             "url":"5016",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9505",
             "credits":"0",
@@ -5862,7 +5862,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"劉漢文",
             "time":"41011",
             "time_parsed":[{
@@ -5873,7 +5873,7 @@
                 "zh_TW":"電子研討(二)"},
             "url":"5017",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9506",
             "credits":"0",
@@ -5893,7 +5893,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳國光",
             "time":"41011",
             "time_parsed":[{
@@ -5904,7 +5904,7 @@
                 "zh_TW":"通訊資訊研討(一)"},
             "url":"5018",
             "year":"半"}
-            ,{"available": "10",
+            ,{
             "class":"6",
             "code":"9507",
             "credits":"3",
@@ -5924,7 +5924,7 @@
             "number_parsed":10,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳後守",
             "time":"2101112",
             "time_parsed":[{
@@ -5935,7 +5935,7 @@
                 "zh_TW":"錯誤更正碼"},
             "url":"5019",
             "year":"半"}
-            ,{"available": "100",
+            ,{
             "class":"7",
             "code":"9508",
             "credits":"3",
@@ -5955,7 +5955,7 @@
             "number_parsed":100,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -5965,7 +5965,7 @@
                 "zh_TW":"碩士論文"},
             "url":"5020",
             "year":"全"}
-            ,{"available": "10",
+            ,{
             "class":"6",
             "code":"9509",
             "credits":"3",
@@ -5985,7 +5985,7 @@
             "number_parsed":10,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"汪芳興",
             "time":"5101112",
             "time_parsed":[{
@@ -5996,7 +5996,7 @@
                 "zh_TW":"半導體製程技術"},
             "url":"5021",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9510",
             "credits":"0",
@@ -6016,7 +6016,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳國光",
             "time":"41011",
             "time_parsed":[{
@@ -6027,7 +6027,7 @@
                 "zh_TW":"通訊資訊研討(二)"},
             "url":"5022",
             "year":"半"}
-            ,{"available": "10",
+            ,{
             "class":"6",
             "code":"9511",
             "credits":"3",
@@ -6047,7 +6047,7 @@
             "number_parsed":10,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡智強",
             "time":"3101112",
             "time_parsed":[{
@@ -6058,7 +6058,7 @@
                 "zh_TW":"嵌入式微處理機"},
             "url":"5023",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"6",
             "code":"9512",
             "credits":"3",
@@ -6078,7 +6078,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"李長晏",
             "time":"6678",
             "time_parsed":[{
@@ -6089,7 +6089,7 @@
                 "zh_TW":"政策規劃與執行專題"},
             "url":"2518",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9513",
             "credits":"3",
@@ -6109,7 +6109,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"李榮和",
             "time":"3101112",
             "time_parsed":[{
@@ -6120,7 +6120,7 @@
                 "zh_TW":"高等化工熱力學"},
             "url":"5025",
             "year":"半"}
-            ,{"available": "80",
+            ,{
             "class":"7",
             "code":"9514",
             "credits":"3",
@@ -6140,7 +6140,7 @@
             "number_parsed":80,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -6150,7 +6150,7 @@
                 "zh_TW":"碩士論文"},
             "url":"5026",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9515",
             "credits":"3",
@@ -6170,7 +6170,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"楊宏達",
             "time":"4101112",
             "time_parsed":[{
@@ -6181,7 +6181,7 @@
                 "zh_TW":"界面化學特論"},
             "url":"5027",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9516",
             "credits":"3",
@@ -6201,7 +6201,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"邱明斌",
             "time":"6234",
             "time_parsed":[{
@@ -6212,7 +6212,7 @@
                 "zh_TW":"決策理論與實務"},
             "url":"5028",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9517",
             "credits":"3",
@@ -6232,7 +6232,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張厚謙",
             "time":"1101112",
             "time_parsed":[{
@@ -6243,7 +6243,7 @@
                 "zh_TW":"工程統計"},
             "url":"5029",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9518",
             "credits":"3",
@@ -6263,7 +6263,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林克偉",
             "time":"4101112",
             "time_parsed":[{
@@ -6274,7 +6274,7 @@
                 "zh_TW":"電子顯微鏡原理"},
             "url":"5030",
             "year":"半"}
-            ,{"available": "80",
+            ,{
             "class":"7",
             "code":"9519",
             "credits":"3",
@@ -6294,7 +6294,7 @@
             "number_parsed":80,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -6304,7 +6304,7 @@
                 "zh_TW":"碩士論文"},
             "url":"5031",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9520",
             "credits":"3",
@@ -6324,7 +6324,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"呂福興",
             "time":"3101112",
             "time_parsed":[{
@@ -6335,7 +6335,7 @@
                 "zh_TW":"材料缺陷"},
             "url":"5032",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9521",
             "credits":"3",
@@ -6355,7 +6355,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"武東星",
             "time":"5101112",
             "time_parsed":[{
@@ -6366,7 +6366,7 @@
                 "zh_TW":"高等元件物理"},
             "url":"5033",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9522",
             "credits":"3",
@@ -6386,7 +6386,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳威德",
             "time":"2101112",
             "time_parsed":[{
@@ -6397,7 +6397,7 @@
                 "zh_TW":"金屬材料與製程"},
             "url":"3774",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9523",
             "credits":"3",
@@ -6417,7 +6417,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"顏秀崗",
             "time":"1101112",
             "time_parsed":[{
@@ -6428,7 +6428,7 @@
                 "zh_TW":"繞射原理"},
             "url":"5035",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"6",
             "code":"9524",
             "credits":"3",
@@ -6448,7 +6448,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡政穆",
             "time":"3101112",
             "time_parsed":[{
@@ -6459,7 +6459,7 @@
                 "zh_TW":"光學鏡頭與薄膜設計"},
             "url":"5036",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"6",
             "code":"9525",
             "credits":"3",
@@ -6479,7 +6479,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"韓　斌",
             "time":"4101112",
             "time_parsed":[{
@@ -6490,7 +6490,7 @@
                 "zh_TW":"光學設計與顯示光源檢測技術"},
             "url":"5037",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"6",
             "code":"9526",
             "credits":"3",
@@ -6510,7 +6510,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"潘競恒",
             "time":"3101112",
             "time_parsed":[{
@@ -6521,7 +6521,7 @@
                 "zh_TW":"量化研究方法"},
             "url":"5038",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"6",
             "code":"9527",
             "credits":"3",
@@ -6541,7 +6541,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"劉柏良",
             "time":"1111213",
             "time_parsed":[{
@@ -6552,7 +6552,7 @@
                 "zh_TW":"應用電化學"},
             "url":"5039",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9528",
             "credits":"3",
@@ -6572,7 +6572,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"李思禹",
             "time":"2101112",
             "time_parsed":[{
@@ -6583,7 +6583,7 @@
                 "zh_TW":"生化工程特論"},
             "url":"4980",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9529",
             "credits":"3",
@@ -6603,7 +6603,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -6613,7 +6613,7 @@
                 "zh_TW":"碩士論文"},
             "url":"5040",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"6",
             "code":"9530",
             "credits":"3",
@@ -6633,7 +6633,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"沈玄池",
             "time":"6678",
             "time_parsed":[{
@@ -6644,7 +6644,7 @@
                 "zh_TW":"區域經濟整合與國家政策"},
             "url":"3280",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"6",
             "code":"9531",
             "credits":"3",
@@ -6664,7 +6664,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"袁鶴齡",
             "time":"6234",
             "time_parsed":[{
@@ -6675,7 +6675,7 @@
                 "zh_TW":"政府公關與政策行銷"},
             "url":"2941",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9532",
             "credits":"3",
@@ -6695,7 +6695,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔣慎思",
             "time":"2101112",
             "time_parsed":[{
@@ -6706,7 +6706,7 @@
                 "zh_TW":"香辛料之應用與保健機能"},
             "url":"5042",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"7",
             "code":"9533",
             "credits":"3",
@@ -6726,7 +6726,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃裕銘",
             "time":"1101112",
             "time_parsed":[{
@@ -6737,7 +6737,7 @@
                 "zh_TW":"土壤與肥料管理"},
             "url":"5043",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9534",
             "credits":"3",
@@ -6757,7 +6757,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -6767,7 +6767,7 @@
                 "zh_TW":"碩士論文"},
             "url":"5109",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9535",
             "credits":"3",
@@ -6787,7 +6787,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃國益",
             "time":"2101112",
             "time_parsed":[{
@@ -6798,7 +6798,7 @@
                 "zh_TW":"生物產業工程特論"},
             "url":"4656",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9536",
             "credits":"3",
@@ -6818,7 +6818,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"莊智薰",
             "time":"5101112",
             "time_parsed":[{
@@ -6829,7 +6829,7 @@
                 "zh_TW":"人力資源管理"},
             "url":"5044",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9538",
             "credits":"3",
@@ -6849,7 +6849,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃三元",
             "time":"1101112",
             "time_parsed":[{
@@ -6860,7 +6860,7 @@
                 "zh_TW":"動物農場管理"},
             "url":"5045",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9539",
             "credits":"3",
@@ -6880,7 +6880,7 @@
             "number_parsed":20,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃琮琪",
             "time":"6234",
             "time_parsed":[{
@@ -6891,7 +6891,7 @@
                 "zh_TW":"農業與食品產業政策分析"},
             "url":"5046",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9540",
             "credits":"3",
@@ -6911,7 +6911,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"喬友慶",
             "time":"3101112",
             "time_parsed":[{
@@ -6922,7 +6922,7 @@
                 "zh_TW":"策略管理"},
             "url":"5047",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9541",
             "credits":"3",
@@ -6942,7 +6942,7 @@
             "number_parsed":15,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"簡立賢",
             "time":"2101112",
             "time_parsed":[{
@@ -6953,7 +6953,7 @@
                 "zh_TW":"農產運銷與價格"},
             "url":"5048",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"7",
             "code":"9542",
             "credits":"3",
@@ -6973,7 +6973,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -6983,7 +6983,7 @@
                 "zh_TW":"碩士論文"},
             "url":"5049",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9543",
             "credits":"3",
@@ -7003,7 +7003,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃炳文",
             "time":"3101112",
             "time_parsed":[{
@@ -7014,7 +7014,7 @@
                 "zh_TW":"研究方法與論文寫作"},
             "url":"5050",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9545",
             "credits":"3",
@@ -7034,7 +7034,7 @@
             "number_parsed":20,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡必焜",
             "time":"2101112",
             "time_parsed":[{
@@ -7045,7 +7045,7 @@
                 "zh_TW":"休閒產業管理與行銷"},
             "url":"5052",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"6",
             "code":"9546",
             "credits":"3",
@@ -7065,7 +7065,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"李昌麟",
             "time":"4101112",
             "time_parsed":[{
@@ -7076,7 +7076,7 @@
                 "zh_TW":"公共政策理論與實務專題"},
             "url":"5053",
             "year":"半"}
-            ,{"available": "100",
+            ,{
             "class":"7",
             "code":"9547",
             "credits":"3",
@@ -7096,7 +7096,7 @@
             "number_parsed":100,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -7106,7 +7106,7 @@
                 "zh_TW":"碩士論文"},
             "url":"5054",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"7",
             "code":"9552",
             "credits":"0",
@@ -7126,7 +7126,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"劉漢文",
             "time":"41011",
             "time_parsed":[{
@@ -7137,7 +7137,7 @@
                 "zh_TW":"光電研討(二)"},
             "url":"5056",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9553",
             "credits":"0",
@@ -7157,7 +7157,7 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"劉漢文",
             "time":"41011",
             "time_parsed":[{
@@ -7168,7 +7168,7 @@
                 "zh_TW":"光電研討(一)"},
             "url":"5057",
             "year":"半"}
-            ,{"available": "100",
+            ,{
             "class":"7",
             "code":"9554",
             "credits":"3",
@@ -7188,7 +7188,7 @@
             "number_parsed":100,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"全體教師",
             "time":"",
             "time_parsed":[],
@@ -7198,7 +7198,7 @@
                 "zh_TW":"碩士論文"},
             "url":"5058",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9555",
             "credits":"3",
@@ -7218,7 +7218,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"汪芳興",
             "time":"5101112",
             "time_parsed":[{
@@ -7229,7 +7229,7 @@
                 "zh_TW":"半導體製程技術"},
             "url":"5059",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9556",
             "credits":"3",
@@ -7249,7 +7249,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"裴靜偉",
             "time":"3101112",
             "time_parsed":[{
@@ -7260,7 +7260,7 @@
                 "zh_TW":"光電子學"},
             "url":"5060",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"6",
             "code":"9557",
             "credits":"3",
@@ -7280,7 +7280,7 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"貢中元",
             "time":"1101112",
             "time_parsed":[{
@@ -7291,7 +7291,7 @@
                 "zh_TW":"固態物理"},
             "url":"5061",
             "year":"半"}
-            ,{"available": "15",
+            ,{
             "class":"6",
             "code":"9559",
             "credits":"2",
@@ -7311,7 +7311,7 @@
             "number_parsed":15,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡宗憲",
             "time":"41213",
             "time_parsed":[{
@@ -7322,7 +7322,7 @@
                 "zh_TW":"論文寫作與實習"},
             "url":"5063",
             "year":"全"}
-            ,{"available": "29",
+            ,{
             "class":"7",
             "code":"9562",
             "credits":"2",
@@ -7342,7 +7342,7 @@
             "number_parsed":29,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"唐敏寶",
             "time":"31213",
             "time_parsed":[{
@@ -7353,7 +7353,7 @@
                 "zh_TW":"民事法案例研究(二)"},
             "url":"5064",
             "year":"半"}
-            ,{"available": "27",
+            ,{
             "class":"7",
             "code":"9564",
             "credits":"2",
@@ -7373,7 +7373,7 @@
             "number_parsed":27,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"李惠宗",
             "time":"51213",
             "time_parsed":[{
@@ -7384,7 +7384,7 @@
                 "zh_TW":"公法案例研究(二)"},
             "url":"5065",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"6",
             "code":"9565",
             "credits":"3",
@@ -7404,7 +7404,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡東杰",
             "time":"1101112",
             "time_parsed":[{
@@ -7415,7 +7415,7 @@
                 "zh_TW":"第三世界發展問題研究"},
             "url":"5066",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"7",
             "code":"9566",
             "credits":"3",
@@ -7435,7 +7435,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡垂雄",
             "time":"5101112",
             "time_parsed":[{
@@ -7446,7 +7446,7 @@
                 "zh_TW":"高等電子商務與行銷策略"},
             "url":"4066",
             "year":"半"}
-            ,{"available": "29",
+            ,{
             "class":"7",
             "code":"9567",
             "credits":"2",
@@ -7466,7 +7466,7 @@
             "number_parsed":29,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳啟垂",
             "time":"41011",
             "time_parsed":[{
