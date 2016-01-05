@@ -346,12 +346,17 @@
                     course.title_short = course.title_parsed["en_US"];
                 }
                 var time=build_bulletin_time(course);//會回傳屬於那個課程的客製化時間title
-                if(course.for_dept == get_major_and_level('s')['major']){
-                    var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#B53074;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));
-                }
-                else{
-                    var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));	//把option做成dom，再把dom做成jQuery物件
-                }
+                    if(course.for_dept == get_major_and_level('s')['major']){
+                        if($("#checkbox").val() == "DoubleMajor"){
+                            var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#B53074;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));
+                        }
+                        else{
+                            var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));
+                        }
+                    }
+                    else{
+                        var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));	//把option做成dom，再把dom做成jQuery物件
+                    }
                 $option.find('button').text(course.title_short);   //將對應的課程內容寫入cell的html語法中
                 $option.find('button').attr("title", time);  //在title裡面放課堂時間
                 $option.find('button').val(course.code);                
@@ -474,7 +479,12 @@
                                         if(jv.class==level){
                                             console.log(jv.for_dept);
                                             if(jv.for_dept == get_major_and_level('s')['major']){
-                                                bulletin_post($("#obligatory-post"), jv, language);  
+                                                if($("#checkbox").val() == "DoubleMajor"){
+                                                    bulletin_post($("#obligatory-post"), jv, language);
+                                                }  
+                                                else{
+                                                    add_course($('#time-table'), jv, language);
+                                                }
                                             }
                                             else{
                                                 add_course($('#time-table'), jv, language);//如果這個課名只有出現過一次，就可以自動填入       
@@ -545,12 +555,17 @@
             /**********這個函式是用來刪除一整門課程的**********/
             var delete_course = function($target, course) {
             //假設target為time-table的參數，course為courses的某一個課程
-            if(course.for_dept == get_major_and_level('s')['major']){
-                var str = "restore2"
-            }
-            else{
-                var str = "restore"
-            }
+                if(course.for_dept == get_major_and_level('s')['major']){
+                    if($("#checkbox").val() == "DoubleMajor"){
+                        var str = "restore2"
+                    }
+                    else{
+                        var str = "restore"
+                    }
+                }
+                else{
+                    var str = "restore"
+                }
                 $.each(course.time_parsed, function(ik, iv){
                 //each是for迴圈 time-parsed[{...}, {...}]，以微積分為例:一個{"day"+"time"}就是陣列的一格，所以ik為0~1(兩次)
                     $.each(iv.time, function(jk, jv){       //同上，iv.time為"time"的陣列{3,4}，jk為0~1、jv為3~4(節數)
