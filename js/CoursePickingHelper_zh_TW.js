@@ -238,7 +238,7 @@
                          console.log(day+' '+hour);
                         $.each(course_of_day[day][hour], function(ik, iv){
                             if(iv.for_dept==major||((iv.for_dept==s_major)&&(iv.class==s_level))||iv.for_dept=="全校共同"||iv.for_dept=="共同學科(進修學士班)"){//判斷如果是主系的課就不分年級全部都會顯示出來，如果是輔系的就只顯示該年級的課；如果for_dept==undefined就代表是通識課；如果為全校共同或共同學科(進修學士班)就會是體育、國防、服務學習、全校英外語 or general education, chinese and english.                           
-                                if(iv.obligatory_tf==false && iv.department != major && iv.department != s_major){
+                                if(iv.obligatory_tf==false && iv.for_dept != major && iv.for_dept != s_major){
                                 //代表是教務處綜合課程查詢裡面的所有課、國防、師培、全校選修、全校英外語  (obligatory of 師培 can be true or false!!!)
                                     check_which_common_subject(iv);
                                 }
@@ -420,7 +420,8 @@
             };
             /*******嘗試函式化選修填入課程的功能！！*******/
             var add_major = function(major, level){
-                if(level==""){//這是給文學院、管理學院與農業暨自然資源學院這種沒有年級的選項
+                console.log(major+' '+level);
+                if(level=="0"){//這是給文學院、管理學院與農業暨自然資源學院這種沒有年級的選項
                         $.each(course_of_majors[major][level],function(ik, iv){//因為這種院的課一定是交給使用者自己選，所以就不自動填入
                             $.each(courses[iv],function(jk, jv){
                                 if(jv.for_dept==major){//因為課程代碼會被重複使用，所以用for迴圈判斷他是不是系上開的課
@@ -443,7 +444,7 @@
                                         if(jv.class==5){
                                             bulletin_post($("#fifth-grade"), jv, language);
                                         }
-                                        if(jv.class==""){
+                                        if(jv.class=="0"){
                                             bulletin_post($("#whole-school"), jv, language);
                                         }
                                     }
