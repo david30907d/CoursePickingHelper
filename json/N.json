@@ -1,4 +1,4 @@
-{"course":[{"available": "50",
+{"course":[{
             "class":"0",
             "code":"0151",
             "credits":"2",
@@ -12,13 +12,13 @@
             "intern_location":[""],
             "intern_time":"",
             "language":"中文",
-            "location":["Y109"],
+            "location":["Y203"],
             "note":"可採計舊制歷史學群",
             "number":"50",
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"宋德喜",
             "time":"21213",
             "time_parsed":[{
@@ -29,7 +29,7 @@
                 "zh_TW":"歷史·生活與學習"},
             "url":"1086",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0152",
             "credits":"2",
@@ -43,13 +43,13 @@
             "intern_location":[""],
             "intern_time":"",
             "language":"中文",
-            "location":["Y109"],
+            "location":["Y203"],
             "note":"可採計舊制歷史學群",
             "number":"50",
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"宋德喜",
             "time":"41213",
             "time_parsed":[{
@@ -60,7 +60,7 @@
                 "zh_TW":"歷史·生活與學習"},
             "url":"3092",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0153",
             "credits":"2",
@@ -80,7 +80,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"鄭執翰",
             "time":"41213",
             "time_parsed":[{
@@ -91,7 +91,7 @@
                 "zh_TW":"臺灣環境與永續生活"},
             "url":"1088",
             "year":"半"}
-            ,{"available": "55",
+            ,{
             "class":"0",
             "code":"0154",
             "credits":"2",
@@ -111,7 +111,7 @@
             "number_parsed":55,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"楊謦綺",
             "time":"41011",
             "time_parsed":[{
@@ -122,7 +122,7 @@
                 "zh_TW":"生命教育"},
             "url":"3169",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0155",
             "credits":"2",
@@ -142,18 +142,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"翟　挹",
             "time":"11213",
             "time_parsed":[{
             "day":1,"time":[12,13]}],
-            "title":"倫理學與當代議題 `Ethics and Contemporary Issues",
+            "title":"倫理學與當代議題a `Ethics and Contemporary Issues",
             "title_parsed":{
                 "en_US":"Ethics and Contemporary Issues",
-                "zh_TW":"倫理學與當代議題"},
+                "zh_TW":"倫理學與當代議題a"},
             "url":"1090",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0156",
             "credits":"2",
@@ -173,18 +173,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"翟　挹",
             "time":"31213",
             "time_parsed":[{
             "day":3,"time":[12,13]}],
-            "title":"倫理學與當代議題 `Ethics and Contemporary Issues",
+            "title":"倫理學與當代議題b `Ethics and Contemporary Issues",
             "title_parsed":{
                 "en_US":"Ethics and Contemporary Issues",
-                "zh_TW":"倫理學與當代議題"},
+                "zh_TW":"倫理學與當代議題b"},
             "url":"1091",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0157",
             "credits":"2",
@@ -204,7 +204,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"顧毓民",
             "time":"31011",
             "time_parsed":[{
@@ -215,7 +215,7 @@
                 "zh_TW":"哲學概論"},
             "url":"5221",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0158",
             "credits":"2",
@@ -235,7 +235,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"顧毓民",
             "time":"51011",
             "time_parsed":[{
@@ -246,7 +246,7 @@
                 "zh_TW":"實用邏輯學"},
             "url":"5222",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0159",
             "credits":"2",
@@ -266,18 +266,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳政憲",
             "time":"21011",
             "time_parsed":[{
             "day":2,"time":[10,11]}],
-            "title":"中國歷史與民間傳說 `Chinese History and Tales",
+            "title":"中國歷史與民間傳說a `Chinese History and Tales",
             "title_parsed":{
                 "en_US":"Chinese History and Tales",
-                "zh_TW":"中國歷史與民間傳說"},
+                "zh_TW":"中國歷史與民間傳說a"},
             "url":"3091",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0160",
             "credits":"2",
@@ -297,18 +297,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳政憲",
             "time":"31011",
             "time_parsed":[{
             "day":3,"time":[10,11]}],
-            "title":"中國歷史與民間傳說 `Chinese History and Tales",
+            "title":"中國歷史與民間傳說b `Chinese History and Tales",
             "title_parsed":{
                 "en_US":"Chinese History and Tales",
-                "zh_TW":"中國歷史與民間傳說"},
+                "zh_TW":"中國歷史與民間傳說b"},
             "url":"5223",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0161",
             "credits":"2",
@@ -328,7 +328,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"顧毓民",
             "time":"11011",
             "time_parsed":[{
@@ -339,7 +339,7 @@
                 "zh_TW":"政治社會哲學"},
             "url":"5226",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"0",
             "code":"0162",
             "credits":"2",
@@ -359,7 +359,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"關永馨",
             "time":"21011",
             "time_parsed":[{
@@ -370,7 +370,7 @@
                 "zh_TW":"性別•社會•個人"},
             "url":"1094",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0163",
             "credits":"2",
@@ -390,18 +390,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"潘競恒",
             "time":"21011",
             "time_parsed":[{
             "day":2,"time":[10,11]}],
-            "title":"民主與憲政 `Democracy and Constitution",
+            "title":"民主與憲政a `Democracy and Constitution",
             "title_parsed":{
                 "en_US":"Democracy and Constitution",
-                "zh_TW":"民主與憲政"},
+                "zh_TW":"民主與憲政a"},
             "url":"5227",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0164",
             "credits":"2",
@@ -421,18 +421,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"翟　挹",
             "time":"41213",
             "time_parsed":[{
             "day":4,"time":[12,13]}],
-            "title":"民主與憲政 `Democracy and Constitution",
+            "title":"民主與憲政b `Democracy and Constitution",
             "title_parsed":{
                 "en_US":"Democracy and Constitution",
-                "zh_TW":"民主與憲政"},
+                "zh_TW":"民主與憲政b"},
             "url":"1096",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0165",
             "credits":"2",
@@ -452,7 +452,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"李昌麟",
             "time":"11213",
             "time_parsed":[{
@@ -463,7 +463,7 @@
                 "zh_TW":"國家發展"},
             "url":"5228",
             "year":"半"}
-            ,{"available": "70",
+            ,{
             "class":"0",
             "code":"0166",
             "credits":"2",
@@ -483,7 +483,7 @@
             "number_parsed":70,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳裕勝",
             "time":"41011",
             "time_parsed":[{
@@ -494,7 +494,7 @@
                 "zh_TW":"網際文化"},
             "url":"5229",
             "year":"半"}
-            ,{"available": "70",
+            ,{
             "class":"0",
             "code":"0171",
             "credits":"2",
@@ -514,7 +514,7 @@
             "number_parsed":70,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"謝議霆",
             "time":"51011",
             "time_parsed":[{
@@ -525,7 +525,7 @@
                 "zh_TW":"環境生態變遷與永續發展"},
             "url":"1098",
             "year":"半"}
-            ,{"available": "70",
+            ,{
             "class":"0",
             "code":"0172",
             "credits":"2",
@@ -545,7 +545,7 @@
             "number_parsed":70,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"謝議霆",
             "time":"51213",
             "time_parsed":[{
@@ -556,7 +556,7 @@
                 "zh_TW":"生態學"},
             "url":"5230",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0173",
             "credits":"2",
@@ -576,7 +576,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳樂元",
             "time":"31011",
             "time_parsed":[{
@@ -587,7 +587,7 @@
                 "zh_TW":"化學、醫藥與社會"},
             "url":"5231",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0181",
             "credits":"2",
@@ -607,18 +607,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳政憲",
             "time":"21213",
             "time_parsed":[{
             "day":2,"time":[12,13]}],
-            "title":"中國歷史與民間傳說 `Chinese History and Tales",
+            "title":"中國歷史與民間傳說c `Chinese History and Tales",
             "title_parsed":{
                 "en_US":"Chinese History and Tales",
-                "zh_TW":"中國歷史與民間傳說"},
+                "zh_TW":"中國歷史與民間傳說c"},
             "url":"5224",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"0",
             "code":"0182",
             "credits":"2",
@@ -638,7 +638,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蘇全正",
             "time":"11011",
             "time_parsed":[{
@@ -649,7 +649,7 @@
                 "zh_TW":"歷史與人生"},
             "url":"5225",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"",
             "code":"0701",
             "credits":"1",
@@ -669,7 +669,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"涂鵬斐",
             "time":"11213",
             "time_parsed":[{
@@ -680,7 +680,7 @@
                 "zh_TW":"高爾夫一"},
             "url":"1276",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"",
             "code":"0702",
             "credits":"1",
@@ -700,7 +700,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃憲鐘",
             "time":"11213",
             "time_parsed":[{
@@ -711,7 +711,7 @@
                 "zh_TW":"羽球一"},
             "url":"1277",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"",
             "code":"0703",
             "credits":"1",
@@ -731,7 +731,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"簡如君",
             "time":"11213",
             "time_parsed":[{
@@ -742,7 +742,7 @@
                 "zh_TW":"現代舞一"},
             "url":"1278",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"",
             "code":"0704",
             "credits":"1",
@@ -762,7 +762,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"莊淑蘭",
             "time":"11213",
             "time_parsed":[{
@@ -773,7 +773,7 @@
                 "zh_TW":"運動與體重控制一"},
             "url":"1279",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"",
             "code":"0705",
             "credits":"1",
@@ -793,7 +793,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"王耀聰",
             "time":"31213",
             "time_parsed":[{
@@ -804,7 +804,7 @@
                 "zh_TW":"高爾夫三"},
             "url":"1280",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"",
             "code":"0706",
             "credits":"1",
@@ -824,7 +824,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳明坤",
             "time":"31213",
             "time_parsed":[{
@@ -835,7 +835,7 @@
                 "zh_TW":"羽球三"},
             "url":"1281",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"",
             "code":"0707",
             "credits":"1",
@@ -855,7 +855,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"賈凡",
             "time":"31213",
             "time_parsed":[{
@@ -866,7 +866,7 @@
                 "zh_TW":"籃球三"},
             "url":"1282",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"",
             "code":"0708",
             "credits":"1",
@@ -886,7 +886,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"王美麗",
             "time":"51213",
             "time_parsed":[{
@@ -897,7 +897,7 @@
                 "zh_TW":"重量訓練五"},
             "url":"1283",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"",
             "code":"0709",
             "credits":"1",
@@ -917,7 +917,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"梁建偉",
             "time":"51213",
             "time_parsed":[{
@@ -928,7 +928,7 @@
                 "zh_TW":"桌球五"},
             "url":"1284",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"",
             "code":"0710",
             "credits":"1",
@@ -948,7 +948,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"簡英智",
             "time":"51213",
             "time_parsed":[{
@@ -959,7 +959,7 @@
                 "zh_TW":"羽球五"},
             "url":"1285",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"",
             "code":"0711",
             "credits":"1",
@@ -979,7 +979,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"涂鵬斐",
             "time":"51213",
             "time_parsed":[{
@@ -990,7 +990,7 @@
                 "zh_TW":"高爾夫五"},
             "url":"2391",
             "year":"半"}
-            ,{"available": "53",
+            ,{
             "class":"1",
             "code":"1502",
             "credits":"2",
@@ -1004,13 +1004,13 @@
             "intern_location":[""],
             "intern_time":"",
             "language":"中文",
-            "location":["Y109"],
+            "location":["Y301"],
             "note":"",
             "number":"53",
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"宋德喜",
             "time":"11011",
             "time_parsed":[{
@@ -1021,7 +1021,7 @@
                 "zh_TW":"帝王學:創業經營謀略"},
             "url":"1716",
             "year":"半"}
-            ,{"available": "53",
+            ,{
             "class":"1",
             "code":"1503",
             "credits":"2",
@@ -1041,7 +1041,7 @@
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"施世昱",
             "time":"21011",
             "time_parsed":[{
@@ -1052,7 +1052,7 @@
                 "zh_TW":"基礎素描"},
             "url":"5207",
             "year":"半"}
-            ,{"available": "53",
+            ,{
             "class":"1",
             "code":"1504",
             "credits":"2",
@@ -1072,7 +1072,7 @@
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"李君山",
             "time":"21213",
             "time_parsed":[{
@@ -1083,7 +1083,7 @@
                 "zh_TW":"中國文化與經典"},
             "url":"5208",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"1",
             "code":"1505",
             "credits":"3",
@@ -1103,18 +1103,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"謝焸君",
             "time":"2101112",
             "time_parsed":[{
             "day":2,"time":[10,11,12]}],
-            "title":"管理學 `Management",
+            "title":"管理學a `Management",
             "title_parsed":{
                 "en_US":"Management",
-                "zh_TW":"管理學"},
+                "zh_TW":"管理學a"},
             "url":"1717",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"1",
             "code":"1506",
             "credits":"2",
@@ -1134,18 +1134,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張水清",
             "time":"11011",
             "time_parsed":[{
             "day":1,"time":[10,11]}],
-            "title":"微積分(二) `Calculus(II)",
+            "title":"微積分(二)a `Calculus(II)",
             "title_parsed":{
                 "en_US":"Calculus(II)",
-                "zh_TW":"微積分(二)"},
+                "zh_TW":"微積分(二)a"},
             "url":"1718",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"1",
             "code":"1507",
             "credits":"3",
@@ -1165,18 +1165,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蘇明俊",
             "time":"5101112",
             "time_parsed":[{
             "day":5,"time":[10,11,12]}],
-            "title":"經濟學 `Economics",
+            "title":"經濟學a `Economics",
             "title_parsed":{
                 "en_US":"Economics",
-                "zh_TW":"經濟學"},
+                "zh_TW":"經濟學a"},
             "url":"1719",
             "year":"全"}
-            ,{"available": "41",
+            ,{
             "class":"1",
             "code":"1508",
             "credits":"2",
@@ -1196,7 +1196,7 @@
             "number_parsed":41,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林育信",
             "time":"41213",
             "time_parsed":[{
@@ -1207,7 +1207,7 @@
                 "zh_TW":"文學概論"},
             "url":"1720",
             "year":"全"}
-            ,{"available": "40",
+            ,{
             "class":"1",
             "code":"1509",
             "credits":"2",
@@ -1227,7 +1227,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳啟佑",
             "time":"11213",
             "time_parsed":[{
@@ -1238,7 +1238,7 @@
                 "zh_TW":"現代散文"},
             "url":"1721",
             "year":"半"}
-            ,{"available": "55",
+            ,{
             "class":"1",
             "code":"1510",
             "credits":"2",
@@ -1258,7 +1258,7 @@
             "number_parsed":55,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳欽忠",
             "time":"31011",
             "time_parsed":[{
@@ -1269,7 +1269,7 @@
                 "zh_TW":"書法"},
             "url":"1722",
             "year":"全"}
-            ,{"available": "45",
+            ,{
             "class":"1",
             "code":"1512",
             "credits":"2",
@@ -1289,7 +1289,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"呂光華",
             "time":"11011",
             "time_parsed":[{
@@ -1300,7 +1300,7 @@
                 "zh_TW":"國學導讀"},
             "url":"1724",
             "year":"全"}
-            ,{"available": "21",
+            ,{
             "class":"1",
             "code":"1513",
             "credits":"2",
@@ -1320,18 +1320,18 @@
             "number_parsed":21,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳雅雯",
             "time":"31011",
             "time_parsed":[{
             "day":3,"time":[10,11]}],
-            "title":"英文作文(一) `English Composition (I)",
+            "title":"英文作文(一)A `English Composition (I)",
             "title_parsed":{
                 "en_US":"English Composition (I)",
-                "zh_TW":"英文作文(一)"},
+                "zh_TW":"英文作文(一)A"},
             "url":"4761",
             "year":"全"}
-            ,{"available": "21",
+            ,{
             "class":"1",
             "code":"1514",
             "credits":"2",
@@ -1351,18 +1351,18 @@
             "number_parsed":21,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"魏雪玲",
             "time":"31011",
             "time_parsed":[{
             "day":3,"time":[10,11]}],
-            "title":"英文作文(一) `English Composition (I)",
+            "title":"英文作文(一)B `English Composition (I)",
             "title_parsed":{
                 "en_US":"English Composition (I)",
-                "zh_TW":"英文作文(一)"},
+                "zh_TW":"英文作文(一)B"},
             "url":"4814",
             "year":"全"}
-            ,{"available": "21",
+            ,{
             "class":"1",
             "code":"1515",
             "credits":"2",
@@ -1382,18 +1382,18 @@
             "number_parsed":21,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"許玉霜",
             "time":"31011",
             "time_parsed":[{
             "day":3,"time":[10,11]}],
-            "title":"英文作文(一) `English Composition (I)",
+            "title":"英文作文(一)C `English Composition (I)",
             "title_parsed":{
                 "en_US":"English Composition (I)",
-                "zh_TW":"英文作文(一)"},
+                "zh_TW":"英文作文(一)C"},
             "url":"3232",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"1",
             "code":"1516",
             "credits":"1",
@@ -1413,18 +1413,18 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳雅雯",
             "time":"31213",
             "time_parsed":[{
             "day":3,"time":[12,13]}],
-            "title":"英語聽講教學(一) `Language Lab. Workshop (I)",
+            "title":"英語聽講教學(一)A `Language Lab. Workshop (I)",
             "title_parsed":{
                 "en_US":"Language Lab. Workshop (I)",
-                "zh_TW":"英語聽講教學(一)"},
+                "zh_TW":"英語聽講教學(一)A"},
             "url":"4815",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"1",
             "code":"1517",
             "credits":"1",
@@ -1444,18 +1444,18 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"余淑惠",
             "time":"31213",
             "time_parsed":[{
             "day":3,"time":[12,13]}],
-            "title":"英語聽講教學(一) `Language Lab. Workshop (I)",
+            "title":"英語聽講教學(一)B `Language Lab. Workshop (I)",
             "title_parsed":{
                 "en_US":"Language Lab. Workshop (I)",
-                "zh_TW":"英語聽講教學(一)"},
+                "zh_TW":"英語聽講教學(一)B"},
             "url":"4760",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"1",
             "code":"1518",
             "credits":"2",
@@ -1475,18 +1475,18 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"詹鄢如",
             "time":"41213",
             "time_parsed":[{
             "day":4,"time":[12,13]}],
-            "title":"英語口語訓練(一) `English Oral Training (I)",
+            "title":"英語口語訓練(一)A `English Oral Training (I)",
             "title_parsed":{
                 "en_US":"English Oral Training (I)",
-                "zh_TW":"英語口語訓練(一)"},
+                "zh_TW":"英語口語訓練(一)A"},
             "url":"3231",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"1",
             "code":"1519",
             "credits":"2",
@@ -1506,18 +1506,18 @@
             "number_parsed":30,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔣豐維",
             "time":"41213",
             "time_parsed":[{
             "day":4,"time":[12,13]}],
-            "title":"英語口語訓練(一) `English Oral Training (I)",
+            "title":"英語口語訓練(一)B `English Oral Training (I)",
             "title_parsed":{
                 "en_US":"English Oral Training (I)",
-                "zh_TW":"英語口語訓練(一)"},
+                "zh_TW":"英語口語訓練(一)B"},
             "url":"4758",
             "year":"全"}
-            ,{"available": "65",
+            ,{
             "class":"1",
             "code":"1520",
             "credits":"2",
@@ -1537,7 +1537,7 @@
             "number_parsed":65,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張持正",
             "time":"11011",
             "time_parsed":[{
@@ -1548,7 +1548,7 @@
                 "zh_TW":"文學作品讀法"},
             "url":"3237",
             "year":"全"}
-            ,{"available": "53",
+            ,{
             "class":"1",
             "code":"1521",
             "credits":"2",
@@ -1568,7 +1568,7 @@
             "number_parsed":53,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蘇全正",
             "time":"41011",
             "time_parsed":[{
@@ -1579,7 +1579,7 @@
                 "zh_TW":"臺灣文化資產保存與維護"},
             "url":"5206",
             "year":"半"}
-            ,{"available": "53",
+            ,{
             "class":"1",
             "code":"1522",
             "credits":"2",
@@ -1599,7 +1599,7 @@
             "number_parsed":53,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"待聘",
             "time":"41213",
             "time_parsed":[{
@@ -1610,7 +1610,7 @@
                 "zh_TW":"經典與文獻(h):史記選讀與文化創意"},
             "url":"5205",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"1",
             "code":"1523",
             "credits":"2",
@@ -1630,7 +1630,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳黌銘",
             "time":"11011",
             "time_parsed":[{
@@ -1641,7 +1641,7 @@
                 "zh_TW":"高級英文文法(二)"},
             "url":"1735",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"1",
             "code":"1524",
             "credits":"2",
@@ -1661,18 +1661,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"王國明",
             "time":"11011",
             "time_parsed":[{
             "day":1,"time":[10,11]}],
-            "title":"經濟學 `Economics",
+            "title":"經濟學b `Economics",
             "title_parsed":{
                 "en_US":"Economics",
-                "zh_TW":"經濟學"},
+                "zh_TW":"經濟學b"},
             "url":"1736",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"1",
             "code":"1525",
             "credits":"2",
@@ -1692,18 +1692,18 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張明添",
             "time":"31213",
             "time_parsed":[{
             "day":3,"time":[12,13]}],
-            "title":"微積分(二) `Calculus(II)",
+            "title":"微積分(二)b `Calculus(II)",
             "title_parsed":{
                 "en_US":"Calculus(II)",
-                "zh_TW":"微積分(二)"},
+                "zh_TW":"微積分(二)b"},
             "url":"1737",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"1",
             "code":"1526",
             "credits":"3",
@@ -1723,7 +1723,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"待聘",
             "time":"2101112",
             "time_parsed":[{
@@ -1734,7 +1734,7 @@
                 "zh_TW":"生物產業概論"},
             "url":"1738",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"1",
             "code":"1527",
             "credits":"3",
@@ -1754,18 +1754,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔣寬和",
             "time":"4101112",
             "time_parsed":[{
             "day":4,"time":[10,11,12]}],
-            "title":"管理學 `Management",
+            "title":"管理學b `Management",
             "title_parsed":{
                 "en_US":"Management",
-                "zh_TW":"管理學"},
+                "zh_TW":"管理學b"},
             "url":"1739",
             "year":"全"}
-            ,{"available": "30",
+            ,{
             "class":"1",
             "code":"1528",
             "credits":"2",
@@ -1785,18 +1785,18 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"葉蕙華",
             "time":"41011",
             "time_parsed":[{
             "day":4,"time":[10,11]}],
-            "title":"語音學 `Phonetics",
+            "title":"語音學A `Phonetics",
             "title_parsed":{
                 "en_US":"Phonetics",
-                "zh_TW":"語音學"},
+                "zh_TW":"語音學A"},
             "url":"4759",
             "year":"半"}
-            ,{"available": "30",
+            ,{
             "class":"1",
             "code":"1529",
             "credits":"2",
@@ -1816,18 +1816,18 @@
             "number_parsed":30,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"李華德",
             "time":"21011",
             "time_parsed":[{
             "day":2,"time":[10,11]}],
-            "title":"語音學 `Phonetics",
+            "title":"語音學B `Phonetics",
             "title_parsed":{
                 "en_US":"Phonetics",
-                "zh_TW":"語音學"},
+                "zh_TW":"語音學B"},
             "url":"3245",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"1",
             "code":"1530",
             "credits":"3",
@@ -1847,18 +1847,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林佑容",
             "time":"5101112",
             "time_parsed":[{
             "day":5,"time":[10,11,12]}],
-            "title":"英文 `English",
+            "title":"英文c `English",
             "title_parsed":{
                 "en_US":"English",
-                "zh_TW":"英文"},
+                "zh_TW":"英文c"},
             "url":"1740",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"1",
             "code":"1531",
             "credits":"3",
@@ -1878,18 +1878,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"廖秀芬",
             "time":"5101112",
             "time_parsed":[{
             "day":5,"time":[10,11,12]}],
-            "title":"英文 `English",
+            "title":"英文f `English",
             "title_parsed":{
                 "en_US":"English",
-                "zh_TW":"英文"},
+                "zh_TW":"英文f"},
             "url":"1741",
             "year":"全"}
-            ,{"available": "53",
+            ,{
             "class":"1",
             "code":"1532",
             "credits":"3",
@@ -1909,18 +1909,18 @@
             "number_parsed":53,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"廖秀芬",
             "time":"3101112",
             "time_parsed":[{
             "day":3,"time":[10,11,12]}],
-            "title":"英文 `English",
+            "title":"英文a `English",
             "title_parsed":{
                 "en_US":"English",
-                "zh_TW":"英文"},
+                "zh_TW":"英文a"},
             "url":"1742",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"1",
             "code":"1533",
             "credits":"3",
@@ -1940,18 +1940,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳國豪",
             "time":"3101112",
             "time_parsed":[{
             "day":3,"time":[10,11,12]}],
-            "title":"英文 `English",
+            "title":"英文b `English",
             "title_parsed":{
                 "en_US":"English",
-                "zh_TW":"英文"},
+                "zh_TW":"英文b"},
             "url":"1743",
             "year":"全"}
-            ,{"available": "29",
+            ,{
             "class":"1",
             "code":"1534",
             "credits":"3",
@@ -1971,18 +1971,18 @@
             "number_parsed":29,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳黌銘",
             "time":"2101112",
             "time_parsed":[{
             "day":2,"time":[10,11,12]}],
-            "title":"英文 `English",
+            "title":"英文d `English",
             "title_parsed":{
                 "en_US":"English",
-                "zh_TW":"英文"},
+                "zh_TW":"英文d"},
             "url":"1744",
             "year":"全"}
-            ,{"available": "29",
+            ,{
             "class":"1",
             "code":"1535",
             "credits":"3",
@@ -2002,18 +2002,18 @@
             "number_parsed":29,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳瓊娟",
             "time":"2101112",
             "time_parsed":[{
             "day":2,"time":[10,11,12]}],
-            "title":"英文 `English",
+            "title":"英文e `English",
             "title_parsed":{
                 "en_US":"English",
-                "zh_TW":"英文"},
+                "zh_TW":"英文e"},
             "url":"1745",
             "year":"全"}
-            ,{"available": "45",
+            ,{
             "class":"1",
             "code":"1536",
             "credits":"3",
@@ -2033,18 +2033,18 @@
             "number_parsed":45,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"周安邦",
             "time":"2101112",
             "time_parsed":[{
             "day":2,"time":[10,11,12]}],
-            "title":"國文 `Chinese",
+            "title":"國文c `Chinese",
             "title_parsed":{
                 "en_US":"Chinese",
-                "zh_TW":"國文"},
+                "zh_TW":"國文c"},
             "url":"1746",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"1",
             "code":"1537",
             "credits":"3",
@@ -2064,18 +2064,22 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
+<<<<<<< HEAD
+            "professor":"待聘",
+=======
             "professor":"楊淑瓊",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "time":"4101112",
             "time_parsed":[{
             "day":4,"time":[10,11,12]}],
-            "title":"國文 `Chinese",
+            "title":"國文b `Chinese",
             "title_parsed":{
                 "en_US":"Chinese",
-                "zh_TW":"國文"},
+                "zh_TW":"國文b"},
             "url":"1747",
             "year":"全"}
-            ,{"available": "53",
+            ,{
             "class":"1",
             "code":"1538",
             "credits":"3",
@@ -2095,18 +2099,18 @@
             "number_parsed":53,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡金昌",
             "time":"5101112",
             "time_parsed":[{
             "day":5,"time":[10,11,12]}],
-            "title":"國文 `Chinese",
+            "title":"國文a `Chinese",
             "title_parsed":{
                 "en_US":"Chinese",
-                "zh_TW":"國文"},
+                "zh_TW":"國文a"},
             "url":"1748",
             "year":"全"}
-            ,{"available": "55",
+            ,{
             "class":"1",
             "code":"1539",
             "credits":"3",
@@ -2126,18 +2130,18 @@
             "number_parsed":55,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"王毓榮",
             "time":"5101112",
             "time_parsed":[{
             "day":5,"time":[10,11,12]}],
-            "title":"國文 `Chinese",
+            "title":"國文d `Chinese",
             "title_parsed":{
                 "en_US":"Chinese",
-                "zh_TW":"國文"},
+                "zh_TW":"國文d"},
             "url":"1749",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"1",
             "code":"1540",
             "credits":"3",
@@ -2157,18 +2161,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張錦瑤",
             "time":"391011",
             "time_parsed":[{
             "day":3,"time":[10,11,9]}],
-            "title":"國文 `Chinese",
+            "title":"國文e `Chinese",
             "title_parsed":{
                 "en_US":"Chinese",
-                "zh_TW":"國文"},
+                "zh_TW":"國文e"},
             "url":"1750",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"",
             "code":"1591",
             "credits":"2",
@@ -2188,7 +2192,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張家熏",
             "time":"49,413",
             "time_parsed":[{
@@ -2199,7 +2203,7 @@
                 "zh_TW":"全民國防教育軍事訓練-國際情勢"},
             "url":"1754",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"2",
             "code":"2501",
             "credits":"3",
@@ -2219,7 +2223,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳雪豪",
             "time":"1101112",
             "time_parsed":[{
@@ -2230,7 +2234,7 @@
                 "zh_TW":"日文(一)"},
             "url":"2363",
             "year":"全"}
-            ,{"available": "40",
+            ,{
             "class":"2",
             "code":"2502",
             "credits":"3",
@@ -2250,7 +2254,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"謝琬湞",
             "time":"1101112",
             "time_parsed":[{
@@ -2261,7 +2265,7 @@
                 "zh_TW":"西班牙文(一)"},
             "url":"2364",
             "year":"全"}
-            ,{"available": "57",
+            ,{
             "class":"2",
             "code":"2503",
             "credits":"3",
@@ -2281,7 +2285,7 @@
             "number_parsed":57,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林  璇",
             "time":"1111213",
             "time_parsed":[{
@@ -2292,7 +2296,7 @@
                 "zh_TW":"德文(一)"},
             "url":"2365",
             "year":"全"}
-            ,{"available": "41",
+            ,{
             "class":"2",
             "code":"2504",
             "credits":"3",
@@ -2312,7 +2316,7 @@
             "number_parsed":41,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡佳勳",
             "time":"1101112",
             "time_parsed":[{
@@ -2323,7 +2327,7 @@
                 "zh_TW":"法文(一)"},
             "url":"2366",
             "year":"全"}
-            ,{"available": "53",
+            ,{
             "class":"2",
             "code":"2505",
             "credits":"2",
@@ -2343,7 +2347,7 @@
             "number_parsed":53,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"江彥賢",
             "time":"31011",
             "time_parsed":[{
@@ -2354,7 +2358,7 @@
                 "zh_TW":"經典與文獻(b):科技與環境經典研讀"},
             "url":"2367",
             "year":"半"}
-            ,{"available": "53",
+            ,{
             "class":"2",
             "code":"2509",
             "credits":"3",
@@ -2374,7 +2378,7 @@
             "number_parsed":53,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"郭如秀",
             "time":"1101112",
             "time_parsed":[{
@@ -2385,7 +2389,7 @@
                 "zh_TW":"創意行銷企劃"},
             "url":"2369",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"2",
             "code":"2513",
             "credits":"3",
@@ -2405,7 +2409,7 @@
             "number_parsed":45,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蘇明俊",
             "time":"2101112",
             "time_parsed":[{
@@ -2416,7 +2420,7 @@
                 "zh_TW":"知識管理與創新"},
             "url":"2372",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"3",
             "code":"2513",
             "credits":"3",
@@ -2436,7 +2440,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蘇明俊",
             "time":"2101112",
             "time_parsed":[{
@@ -2447,7 +2451,7 @@
                 "zh_TW":"知識管理與創新"},
             "url":"2371",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"2",
             "code":"2514",
             "credits":"3",
@@ -2467,7 +2471,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"郭如秀",
             "time":"3101112",
             "time_parsed":[{
@@ -2478,7 +2482,7 @@
                 "zh_TW":"行銷管理"},
             "url":"2373",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"2",
             "code":"2515",
             "credits":"2",
@@ -2498,7 +2502,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"楊承志",
             "time":"51011",
             "time_parsed":[{
@@ -2509,7 +2513,7 @@
                 "zh_TW":"商業應用軟體"},
             "url":"2374",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"2",
             "code":"2516",
             "credits":"3",
@@ -2529,7 +2533,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"江惠櫻",
             "time":"1111213",
             "time_parsed":[{
@@ -2540,7 +2544,7 @@
                 "zh_TW":"會計學"},
             "url":"2375",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"2",
             "code":"2517",
             "credits":"3",
@@ -2560,7 +2564,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"應立志",
             "time":"4101112",
             "time_parsed":[{
@@ -2571,7 +2575,7 @@
                 "zh_TW":"統計學"},
             "url":"2376",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"2",
             "code":"2520",
             "credits":"2",
@@ -2591,7 +2595,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"羅珮瑩",
             "time":"51011",
             "time_parsed":[{
@@ -2602,7 +2606,7 @@
                 "zh_TW":"編輯與採訪"},
             "url":"2378",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"2",
             "code":"2521",
             "credits":"2",
@@ -2622,7 +2626,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"石美玲",
             "time":"21213",
             "time_parsed":[{
@@ -2633,7 +2637,7 @@
                 "zh_TW":"語言學概論"},
             "url":"2379",
             "year":"全"}
-            ,{"available": "46",
+            ,{
             "class":"2",
             "code":"2522",
             "credits":"2",
@@ -2653,7 +2657,7 @@
             "number_parsed":46,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳昌遠",
             "time":"31213",
             "time_parsed":[{
@@ -2664,7 +2668,7 @@
                 "zh_TW":"小說選讀及習作"},
             "url":"2380",
             "year":"全"}
-            ,{"available": "45",
+            ,{
             "class":"2",
             "code":"2523",
             "credits":"3",
@@ -2684,7 +2688,7 @@
             "number_parsed":45,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"熊道麟",
             "time":"1101112",
             "time_parsed":[{
@@ -2695,7 +2699,7 @@
                 "zh_TW":"歷代文選及習作"},
             "url":"2381",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"2",
             "code":"2524",
             "credits":"2",
@@ -2715,7 +2719,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林聖峯",
             "time":"41011",
             "time_parsed":[{
@@ -2726,7 +2730,7 @@
                 "zh_TW":"文字學"},
             "url":"2382",
             "year":"全"}
-            ,{"available": "40",
+            ,{
             "class":"2",
             "code":"2525",
             "credits":"2",
@@ -2746,7 +2750,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"祁立峰",
             "time":"21011",
             "time_parsed":[{
@@ -2757,7 +2761,7 @@
                 "zh_TW":"詩選及習作"},
             "url":"2383",
             "year":"全"}
-            ,{"available": "17",
+            ,{
             "class":"2",
             "code":"2526",
             "credits":"2",
@@ -2777,18 +2781,18 @@
             "number_parsed":17,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"英文作文(一)",
+            "prerequisite":"英文作文(一)",
             "professor":"潘衍至",
             "time":"21011",
             "time_parsed":[{
             "day":2,"time":[10,11]}],
-            "title":"英文作文(二) `English Composition (II)",
+            "title":"英文作文(二)A `English Composition (II)",
             "title_parsed":{
                 "en_US":"English Composition (II)",
-                "zh_TW":"英文作文(二)"},
+                "zh_TW":"英文作文(二)A"},
             "url":"2384",
             "year":"全"}
-            ,{"available": "17",
+            ,{
             "class":"2",
             "code":"2527",
             "credits":"2",
@@ -2808,18 +2812,18 @@
             "number_parsed":17,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"英文作文(一)",
+            "prerequisite":"英文作文(一)",
             "professor":"林佑容",
             "time":"21011",
             "time_parsed":[{
             "day":2,"time":[10,11]}],
-            "title":"英文作文(二) `English Composition (II)",
+            "title":"英文作文(二)B `English Composition (II)",
             "title_parsed":{
                 "en_US":"English Composition (II)",
-                "zh_TW":"英文作文(二)"},
+                "zh_TW":"英文作文(二)B"},
             "url":"2390",
             "year":"全"}
-            ,{"available": "17",
+            ,{
             "class":"2",
             "code":"2528",
             "credits":"2",
@@ -2839,18 +2843,18 @@
             "number_parsed":17,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"英文作文(一)",
+            "prerequisite":"英文作文(一)",
             "professor":"吳雅玲",
             "time":"21011",
             "time_parsed":[{
             "day":2,"time":[10,11]}],
-            "title":"英文作文(二) `English Composition (II)",
+            "title":"英文作文(二)C `English Composition (II)",
             "title_parsed":{
                 "en_US":"English Composition (II)",
-                "zh_TW":"英文作文(二)"},
+                "zh_TW":"英文作文(二)C"},
             "url":"2386",
             "year":"全"}
-            ,{"available": "28",
+            ,{
             "class":"2",
             "code":"2529",
             "credits":"1",
@@ -2870,18 +2874,18 @@
             "number_parsed":28,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"英語聽講教學(一)",
+            "prerequisite":"英語聽講教學(一)",
             "professor":"余淑惠",
             "time":"31011",
             "time_parsed":[{
             "day":3,"time":[10,11]}],
-            "title":"英語聽講教學(二) `Language Lab. Workshop(II)",
+            "title":"英語聽講教學(二)A `Language Lab. Workshop(II)",
             "title_parsed":{
                 "en_US":"Language Lab. Workshop(II)",
-                "zh_TW":"英語聽講教學(二)"},
+                "zh_TW":"英語聽講教學(二)A"},
             "url":"4818",
             "year":"全"}
-            ,{"available": "28",
+            ,{
             "class":"2",
             "code":"2530",
             "credits":"1",
@@ -2901,18 +2905,18 @@
             "number_parsed":28,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"英語聽講教學(一)",
+            "prerequisite":"英語聽講教學(一)",
             "professor":"陳文苓",
             "time":"31011",
             "time_parsed":[{
             "day":3,"time":[10,11]}],
-            "title":"英語聽講教學(二) `Language Lab. Workshop(II)",
+            "title":"英語聽講教學(二)B `Language Lab. Workshop(II)",
             "title_parsed":{
                 "en_US":"Language Lab. Workshop(II)",
-                "zh_TW":"英語聽講教學(二)"},
+                "zh_TW":"英語聽講教學(二)B"},
             "url":"2388",
             "year":"全"}
-            ,{"available": "28",
+            ,{
             "class":"2",
             "code":"2531",
             "credits":"2",
@@ -2932,18 +2936,18 @@
             "number_parsed":28,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"英語口語訓練(一)",
+            "prerequisite":"英語口語訓練(一)",
             "professor":"張旭琪",
             "time":"21213",
             "time_parsed":[{
             "day":2,"time":[12,13]}],
-            "title":"英語口語訓練(二) `English Oral Training (II)",
+            "title":"英語口語訓練(二)A `English Oral Training (II)",
             "title_parsed":{
                 "en_US":"English Oral Training (II)",
-                "zh_TW":"英語口語訓練(二)"},
+                "zh_TW":"英語口語訓練(二)A"},
             "url":"2389",
             "year":"全"}
-            ,{"available": "28",
+            ,{
             "class":"2",
             "code":"2532",
             "credits":"2",
@@ -2963,18 +2967,18 @@
             "number_parsed":28,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"英語口語訓練(一)",
+            "prerequisite":"英語口語訓練(一)",
             "professor":"李華德",
             "time":"21213",
             "time_parsed":[{
             "day":2,"time":[12,13]}],
-            "title":"英語口語訓練(二) `English Oral Training (II)",
+            "title":"英語口語訓練(二)B `English Oral Training (II)",
             "title_parsed":{
                 "en_US":"English Oral Training (II)",
-                "zh_TW":"英語口語訓練(二)"},
+                "zh_TW":"英語口語訓練(二)B"},
             "url":"2385",
             "year":"全"}
-            ,{"available": "65",
+            ,{
             "class":"2",
             "code":"2533",
             "credits":"2",
@@ -2994,7 +2998,7 @@
             "number_parsed":65,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"宋維科",
             "time":"41011",
             "time_parsed":[{
@@ -3005,7 +3009,7 @@
                 "zh_TW":"西洋文學概論"},
             "url":"2387",
             "year":"全"}
-            ,{"available": "65",
+            ,{
             "class":"2",
             "code":"2534",
             "credits":"2",
@@ -3025,7 +3029,7 @@
             "number_parsed":65,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張旭琪",
             "time":"41213",
             "time_parsed":[{
@@ -3036,7 +3040,7 @@
                 "zh_TW":"語言學概論"},
             "url":"2392",
             "year":"全"}
-            ,{"available": "35",
+            ,{
             "class":"2",
             "code":"2535",
             "credits":"2",
@@ -3056,7 +3060,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"詹鄢如",
             "time":"41011",
             "time_parsed":[{
@@ -3067,7 +3071,7 @@
                 "zh_TW":"新聞英文"},
             "url":"2393",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"2",
             "code":"2536",
             "credits":"3",
@@ -3087,7 +3091,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳永杰",
             "time":"5101112",
             "time_parsed":[{
@@ -3098,7 +3102,7 @@
                 "zh_TW":"休閒概論"},
             "url":"2394",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"2",
             "code":"2537",
             "credits":"3",
@@ -3118,7 +3122,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"王世澤",
             "time":"2101112",
             "time_parsed":[{
@@ -3129,7 +3133,7 @@
                 "zh_TW":"行銷學"},
             "url":"2395",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"2",
             "code":"2538",
             "credits":"3",
@@ -3149,7 +3153,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳建德",
             "time":"1101112",
             "time_parsed":[{
@@ -3160,7 +3164,7 @@
                 "zh_TW":"製茶學與實習"},
             "url":"2396",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"2",
             "code":"2539",
             "credits":"3",
@@ -3180,7 +3184,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"邱國欽",
             "time":"3101112",
             "time_parsed":[{
@@ -3191,7 +3195,7 @@
                 "zh_TW":"社會統計"},
             "url":"2397",
             "year":"全"}
-            ,{"available": "53",
+            ,{
             "class":"2",
             "code":"2540",
             "credits":"2",
@@ -3211,7 +3215,7 @@
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"于迺文",
             "time":"21011",
             "time_parsed":[{
@@ -3222,7 +3226,7 @@
                 "zh_TW":"企劃報告撰寫實務"},
             "url":"2368",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"2",
             "code":"2541",
             "credits":"3",
@@ -3242,7 +3246,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳連勝",
             "time":"4101112",
             "time_parsed":[{
@@ -3253,7 +3257,7 @@
                 "zh_TW":"生物產業經營分析"},
             "url":"2398",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"2",
             "code":"2542",
             "credits":"2",
@@ -3273,7 +3277,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"岳家青",
             "time":"31213",
             "time_parsed":[{
@@ -3284,7 +3288,7 @@
                 "zh_TW":"創意餐飲經營實務"},
             "url":"2399",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"2",
             "code":"2543",
             "credits":"2",
@@ -3304,7 +3308,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"待聘",
             "time":"31213",
             "time_parsed":[{
@@ -3315,7 +3319,7 @@
                 "zh_TW":"小說導讀"},
             "url":"4817",
             "year":"全"}
-            ,{"available": "53",
+            ,{
             "class":"2",
             "code":"2544",
             "credits":"2",
@@ -3335,7 +3339,7 @@
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"施世昱",
             "time":"21213",
             "time_parsed":[{
@@ -3346,7 +3350,7 @@
                 "zh_TW":"透明水彩基本技法"},
             "url":"2370",
             "year":"半"}
-            ,{"available": "53",
+            ,{
             "class":"2",
             "code":"2545",
             "credits":"2",
@@ -3366,7 +3370,7 @@
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"馬幼娟",
             "time":"51011",
             "time_parsed":[{
@@ -3377,7 +3381,7 @@
                 "zh_TW":"流行美學與時尚文化"},
             "url":"2400",
             "year":"半"}
-            ,{"available": "53",
+            ,{
             "class":"2",
             "code":"2546",
             "credits":"2",
@@ -3397,7 +3401,7 @@
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"廖志輝",
             "time":"51213",
             "time_parsed":[{
@@ -3408,7 +3412,7 @@
                 "zh_TW":"物質與消費文化"},
             "url":"2677",
             "year":"半"}
-            ,{"available": "53",
+            ,{
             "class":"2",
             "code":"2547",
             "credits":"2",
@@ -3428,7 +3432,7 @@
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"江彥賢",
             "time":"41011",
             "time_parsed":[{
@@ -3439,7 +3443,7 @@
                 "zh_TW":"創業人物分析"},
             "url":"2401",
             "year":"半"}
-            ,{"available": "53",
+            ,{
             "class":"2",
             "code":"2548",
             "credits":"2",
@@ -3459,7 +3463,7 @@
             "number_parsed":53,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"待聘",
             "time":"41213",
             "time_parsed":[{
@@ -3470,7 +3474,7 @@
                 "zh_TW":"社區文化創意產業"},
             "url":"2402",
             "year":"全"}
-            ,{"available": "40",
+            ,{
             "class":"3",
             "code":"3501",
             "credits":"3",
@@ -3490,7 +3494,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"日文(一)",
+            "prerequisite":"日文(一)",
             "professor":"朱韻如",
             "time":"5101112",
             "time_parsed":[{
@@ -3501,7 +3505,7 @@
                 "zh_TW":"日文(二)"},
             "url":"2918",
             "year":"全"}
-            ,{"available": "40",
+            ,{
             "class":"3",
             "code":"3502",
             "credits":"3",
@@ -3521,7 +3525,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"德文(一)德文(一)",
+            "prerequisite":"德文(一)德文(一)",
             "professor":"林  璇",
             "time":"5111213",
             "time_parsed":[{
@@ -3532,7 +3536,7 @@
                 "zh_TW":"德文(二)"},
             "url":"2919",
             "year":"全"}
-            ,{"available": "53",
+            ,{
             "class":"3",
             "code":"3504",
             "credits":"2",
@@ -3552,7 +3556,7 @@
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"楊寶華",
             "time":"31011",
             "time_parsed":[{
@@ -3563,7 +3567,7 @@
                 "zh_TW":"文創商品企劃與開發"},
             "url":"2921",
             "year":"半"}
-            ,{"available": "53",
+            ,{
             "class":"3",
             "code":"3505",
             "credits":"2",
@@ -3583,7 +3587,7 @@
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林慶弧",
             "time":"31213",
             "time_parsed":[{
@@ -3594,7 +3598,7 @@
                 "zh_TW":"國際禮儀與跨國文化"},
             "url":"2922",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"3",
             "code":"3506",
             "credits":"2",
@@ -3614,7 +3618,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"尤雅姿",
             "time":"21011",
             "time_parsed":[{
@@ -3625,7 +3629,7 @@
                 "zh_TW":"世說新語"},
             "url":"2377",
             "year":"全"}
-            ,{"available": "53",
+            ,{
             "class":"3",
             "code":"3507",
             "credits":"2",
@@ -3645,7 +3649,7 @@
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"賴郁君",
             "time":"41011",
             "time_parsed":[{
@@ -3656,7 +3660,7 @@
                 "zh_TW":"旅遊日語與日本文化(二)"},
             "url":"2923",
             "year":"半"}
-            ,{"available": "53",
+            ,{
             "class":"3",
             "code":"3508",
             "credits":"2",
@@ -3676,7 +3680,7 @@
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蘇全正",
             "time":"41213",
             "time_parsed":[{
@@ -3687,7 +3691,7 @@
                 "zh_TW":"山海關-中部海洋文化思想起"},
             "url":"2924",
             "year":"半"}
-            ,{"available": "53",
+            ,{
             "class":"3",
             "code":"3509",
             "credits":"2",
@@ -3707,7 +3711,7 @@
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"周曉楓",
             "time":"11213",
             "time_parsed":[{
@@ -3718,7 +3722,7 @@
                 "zh_TW":"文化創意與生活"},
             "url":"2925",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"3",
             "code":"3510",
             "credits":"2",
@@ -3738,7 +3742,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"王正良",
             "time":"51011",
             "time_parsed":[{
@@ -3749,7 +3753,7 @@
                 "zh_TW":"臺灣文學"},
             "url":"2926",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"3",
             "code":"3511",
             "credits":"3",
@@ -3769,7 +3773,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"施麗玉",
             "time":"5101112",
             "time_parsed":[{
@@ -3780,7 +3784,7 @@
                 "zh_TW":"生物產業政策與法規"},
             "url":"4747",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"3",
             "code":"3512",
             "credits":"2",
@@ -3800,7 +3804,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳昌遠",
             "time":"31011",
             "time_parsed":[{
@@ -3811,7 +3815,7 @@
                 "zh_TW":"修辭學"},
             "url":"2928",
             "year":"全"}
-            ,{"available": "40",
+            ,{
             "class":"3",
             "code":"3513",
             "credits":"3",
@@ -3831,7 +3835,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"西班牙文(一)",
+            "prerequisite":"西班牙文(一)",
             "professor":"謝琬湞",
             "time":"5101112",
             "time_parsed":[{
@@ -3842,7 +3846,7 @@
                 "zh_TW":"西班牙文(二)"},
             "url":"2937",
             "year":"全"}
-            ,{"available": "40",
+            ,{
             "class":"3",
             "code":"3514",
             "credits":"2",
@@ -3862,7 +3866,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張錦瑤",
             "time":"41011",
             "time_parsed":[{
@@ -3873,7 +3877,7 @@
                 "zh_TW":"詞曲選及習作"},
             "url":"2930",
             "year":"全"}
-            ,{"available": "40",
+            ,{
             "class":"3",
             "code":"3515",
             "credits":"2",
@@ -3893,7 +3897,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡金昌",
             "time":"31213",
             "time_parsed":[{
@@ -3904,7 +3908,7 @@
                 "zh_TW":"學庸"},
             "url":"2931",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"3",
             "code":"3516",
             "credits":"3",
@@ -3924,7 +3928,7 @@
             "number_parsed":40,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃東陽",
             "time":"1101112",
             "time_parsed":[{
@@ -3935,7 +3939,7 @@
                 "zh_TW":"中國文學史"},
             "url":"2932",
             "year":"全"}
-            ,{"available": "45",
+            ,{
             "class":"3",
             "code":"3517",
             "credits":"2",
@@ -3955,7 +3959,7 @@
             "number_parsed":45,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"丘彥遂",
             "time":"51213",
             "time_parsed":[{
@@ -3966,7 +3970,7 @@
                 "zh_TW":"聲韻學"},
             "url":"2933",
             "year":"全"}
-            ,{"available": "40",
+            ,{
             "class":"3",
             "code":"3518",
             "credits":"2",
@@ -3986,7 +3990,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"宋天瀚",
             "time":"11011",
             "time_parsed":[{
@@ -3997,7 +4001,7 @@
                 "zh_TW":"影視史學"},
             "url":"5209",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"3",
             "code":"3519",
             "credits":"3",
@@ -4017,7 +4021,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"鄭仁隆",
             "time":"2101112",
             "time_parsed":[{
@@ -4028,7 +4032,7 @@
                 "zh_TW":"英國文學:復辟與新古典時期"},
             "url":"2935",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"3",
             "code":"3520",
             "credits":"3",
@@ -4048,7 +4052,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蕭仁傑",
             "time":"1101112",
             "time_parsed":[{
@@ -4059,7 +4063,7 @@
                 "zh_TW":"生產與作業管理"},
             "url":"5212",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"3",
             "code":"3521",
             "credits":"3",
@@ -4079,18 +4083,18 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"王韶濱",
             "time":"2101112",
             "time_parsed":[{
             "day":2,"time":[10,11,12]}],
-            "title":"管理會計 `Managerial Accounting",
+            "title":"管理會計學 `Managerial Accounting",
             "title_parsed":{
                 "en_US":"Managerial Accounting",
-                "zh_TW":"管理會計"},
-            "url":"5213",
+                "zh_TW":"管理會計學"},
+            "url":"2032",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"3",
             "code":"3522",
             "credits":"2",
@@ -4110,7 +4114,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳黌銘",
             "time":"31011",
             "time_parsed":[{
@@ -4121,7 +4125,7 @@
                 "zh_TW":"句法學"},
             "url":"2938",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"3",
             "code":"3523",
             "credits":"2",
@@ -4141,7 +4145,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"魏雪玲",
             "time":"31213",
             "time_parsed":[{
@@ -4152,7 +4156,7 @@
                 "zh_TW":"翻譯習作(二)"},
             "url":"2939",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"3",
             "code":"3524",
             "credits":"3",
@@ -4172,7 +4176,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"楊上禾",
             "time":"2101112",
             "time_parsed":[{
@@ -4183,7 +4187,7 @@
                 "zh_TW":"生物產業經營組織"},
             "url":"2940",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"3",
             "code":"3526",
             "credits":"3",
@@ -4203,7 +4207,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"賴正南",
             "time":"4101112",
             "time_parsed":[{
@@ -4214,7 +4218,7 @@
                 "zh_TW":"茶產業管理實務"},
             "url":"2942",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"3",
             "code":"3527",
             "credits":"3",
@@ -4234,7 +4238,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳姿伶",
             "time":"1101112",
             "time_parsed":[{
@@ -4245,7 +4249,7 @@
                 "zh_TW":"生物產業訓練與發展"},
             "url":"2943",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"3",
             "code":"3528",
             "credits":"2",
@@ -4265,7 +4269,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳文苓",
             "time":"31213",
             "time_parsed":[{
@@ -4276,7 +4280,7 @@
                 "zh_TW":"戲劇專題(二)"},
             "url":"2934",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"3",
             "code":"3529",
             "credits":"3",
@@ -4296,7 +4300,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"鍾燕宜",
             "time":"4101112",
             "time_parsed":[{
@@ -4307,7 +4311,7 @@
                 "zh_TW":"人力資源管理"},
             "url":"5214",
             "year":"半"}
-            ,{"available": "53",
+            ,{
             "class":"3",
             "code":"3534",
             "credits":"2",
@@ -4327,7 +4331,7 @@
             "number_parsed":53,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"馬幼娟",
             "time":"51213",
             "time_parsed":[{
@@ -4338,7 +4342,7 @@
                 "zh_TW":"平面設計與編排"},
             "url":"2920",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"3",
             "code":"3535",
             "credits":"3",
@@ -4358,7 +4362,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"吳俊霖",
             "time":"2101112",
             "time_parsed":[{
@@ -4369,7 +4373,7 @@
                 "zh_TW":"數位攝影與影像處理"},
             "url":"2949",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"3",
             "code":"3536",
             "credits":"2",
@@ -4389,7 +4393,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"湯家鴻",
             "time":"31011",
             "time_parsed":[{
@@ -4400,7 +4404,7 @@
                 "zh_TW":"茶產業專題"},
             "url":"2950",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"3",
             "code":"3537",
             "credits":"3",
@@ -4420,8 +4424,12 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
+<<<<<<< HEAD
+            "professor":"王建博",
+=======
             "professor":"待聘",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "time":"3101112",
             "time_parsed":[{
             "day":3,"time":[10,11,12]}],
@@ -4431,7 +4439,7 @@
                 "zh_TW":"投資學"},
             "url":"5215",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"3",
             "code":"3538",
             "credits":"2",
@@ -4451,7 +4459,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"董國昌",
             "time":"51011",
             "time_parsed":[{
@@ -4462,7 +4470,7 @@
                 "zh_TW":"零售管理"},
             "url":"5216",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"3",
             "code":"3541",
             "credits":"2",
@@ -4482,7 +4490,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"茶作學",
+            "prerequisite":"茶作學",
             "professor":"李臺強",
             "time":"51011",
             "time_parsed":[{
@@ -4493,7 +4501,7 @@
                 "zh_TW":"茶樹品種與育種"},
             "url":"2954",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"4",
             "code":"4501",
             "credits":"2",
@@ -4513,7 +4521,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張志鴻",
             "time":"11213",
             "time_parsed":[{
@@ -4524,7 +4532,7 @@
                 "zh_TW":"創意書法設計"},
             "url":"2951",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"4",
             "code":"4502",
             "credits":"2",
@@ -4544,7 +4552,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蘇全正",
             "time":"21011",
             "time_parsed":[{
@@ -4555,7 +4563,7 @@
                 "zh_TW":"古蹟歷史建築與遺址導覽實務"},
             "url":"2952",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"4",
             "code":"4503",
             "credits":"2",
@@ -4575,7 +4583,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林育鴻",
             "time":"21213",
             "time_parsed":[{
@@ -4586,7 +4594,7 @@
                 "zh_TW":"中臺灣地方產業與文化創意"},
             "url":"2953",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"4",
             "code":"4504",
             "credits":"2",
@@ -4606,7 +4614,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"宋天瀚",
             "time":"41011",
             "time_parsed":[{
@@ -4617,7 +4625,7 @@
                 "zh_TW":"微電影製作"},
             "url":"3177",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"4",
             "code":"4505",
             "credits":"2",
@@ -4637,7 +4645,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"廖志輝",
             "time":"51011",
             "time_parsed":[{
@@ -4648,7 +4656,7 @@
                 "zh_TW":"傳統工藝與現代生活"},
             "url":"3178",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"4",
             "code":"4506",
             "credits":"2",
@@ -4668,7 +4676,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"待聘",
             "time":"51213",
             "time_parsed":[{
@@ -4679,7 +4687,7 @@
                 "zh_TW":"展覽企劃"},
             "url":"3181",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"4",
             "code":"4507",
             "credits":"2",
@@ -4699,7 +4707,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"楊寶華",
             "time":"31213",
             "time_parsed":[{
@@ -4710,7 +4718,7 @@
                 "zh_TW":"文化創意產業創業資源評估"},
             "url":"3179",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"4",
             "code":"4508",
             "credits":"2",
@@ -4730,7 +4738,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃惠鈴",
             "time":"11011",
             "time_parsed":[{
@@ -4741,7 +4749,7 @@
                 "zh_TW":"自然與人文書寫"},
             "url":"3180",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"4",
             "code":"4510",
             "credits":"3",
@@ -4761,7 +4769,7 @@
             "number_parsed":50,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳姿伶",
             "time":"2101112",
             "time_parsed":[{
@@ -4772,7 +4780,7 @@
                 "zh_TW":"生物產業管理個案分析"},
             "url":"3198",
             "year":"半"}
-            ,{"available": "55",
+            ,{
             "class":"4",
             "code":"4511",
             "credits":"2",
@@ -4792,7 +4800,7 @@
             "number_parsed":55,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"文字學聲韻學",
+            "prerequisite":"文字學聲韻學",
             "professor":"石美玲",
             "time":"11011",
             "time_parsed":[{
@@ -4803,7 +4811,7 @@
                 "zh_TW":"訓詁學"},
             "url":"3182",
             "year":"全"}
-            ,{"available": "25",
+            ,{
             "class":"4",
             "code":"4512",
             "credits":"2",
@@ -4823,7 +4831,7 @@
             "number_parsed":25,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"王正良",
             "time":"31011",
             "time_parsed":[{
@@ -4834,7 +4842,7 @@
                 "zh_TW":"現代文學"},
             "url":"3183",
             "year":"全"}
-            ,{"available": "55",
+            ,{
             "class":"4",
             "code":"4513",
             "credits":"2",
@@ -4854,7 +4862,7 @@
             "number_parsed":55,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳一峰",
             "time":"41213",
             "time_parsed":[{
@@ -4865,7 +4873,7 @@
                 "zh_TW":"論孟"},
             "url":"2927",
             "year":"全"}
-            ,{"available": "45",
+            ,{
             "class":"4",
             "code":"4514",
             "credits":"3",
@@ -4885,7 +4893,7 @@
             "number_parsed":45,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"劉錦賢",
             "time":"2101112",
             "time_parsed":[{
@@ -4896,7 +4904,7 @@
                 "zh_TW":"中國思想史"},
             "url":"3185",
             "year":"全"}
-            ,{"available": "45",
+            ,{
             "class":"4",
             "code":"4515",
             "credits":"2",
@@ -4916,7 +4924,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林育信",
             "time":"41011",
             "time_parsed":[{
@@ -4927,7 +4935,7 @@
                 "zh_TW":"文學批評"},
             "url":"2929",
             "year":"全"}
-            ,{"available": "45",
+            ,{
             "class":"4",
             "code":"4516",
             "credits":"2",
@@ -4947,7 +4955,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"楊淑瓊",
             "time":"31213",
             "time_parsed":[{
@@ -4958,7 +4966,7 @@
                 "zh_TW":"荀子"},
             "url":"3184",
             "year":"全"}
-            ,{"available": "20",
+            ,{
             "class":"4",
             "code":"4517",
             "credits":"2",
@@ -4978,7 +4986,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蕭振聲",
             "time":"11213",
             "time_parsed":[{
@@ -4989,7 +4997,7 @@
                 "zh_TW":"老莊"},
             "url":"3188",
             "year":"全"}
-            ,{"available": "65",
+            ,{
             "class":"4",
             "code":"4519",
             "credits":"3",
@@ -5009,7 +5017,7 @@
             "number_parsed":65,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"鄭仁隆",
             "time":"4101112",
             "time_parsed":[{
@@ -5020,7 +5028,7 @@
                 "zh_TW":"英國文學:二十世紀迄今"},
             "url":"3190",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"4",
             "code":"4520",
             "credits":"2",
@@ -5040,7 +5048,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"邱幸珍",
             "time":"21213",
             "time_parsed":[{
@@ -5051,7 +5059,7 @@
                 "zh_TW":"外語習得(二)"},
             "url":"3191",
             "year":"半"}
-            ,{"available": "65",
+            ,{
             "class":"4",
             "code":"4521",
             "credits":"3",
@@ -5071,7 +5079,7 @@
             "number_parsed":65,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林依蓉",
             "time":"3101112",
             "time_parsed":[{
@@ -5082,7 +5090,7 @@
                 "zh_TW":"美國文學:二十世紀迄今"},
             "url":"3192",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"4",
             "code":"4522",
             "credits":"2",
@@ -5102,7 +5110,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳雅雯",
             "time":"51213",
             "time_parsed":[{
@@ -5113,7 +5121,7 @@
                 "zh_TW":"商用英文"},
             "url":"3193",
             "year":"全"}
-            ,{"available": "35",
+            ,{
             "class":"4",
             "code":"4523",
             "credits":"2",
@@ -5133,7 +5141,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔣豐維",
             "time":"21011",
             "time_parsed":[{
@@ -5144,7 +5152,7 @@
                 "zh_TW":"進階翻譯習作(二)"},
             "url":"3194",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"4",
             "code":"4524",
             "credits":"2",
@@ -5164,7 +5172,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林依蓉",
             "time":"51213",
             "time_parsed":[{
@@ -5175,7 +5183,7 @@
                 "zh_TW":"小說專題(一)"},
             "url":"3189",
             "year":"半"}
-            ,{"available": "31",
+            ,{
             "class":"4",
             "code":"4525",
             "credits":"2",
@@ -5195,7 +5203,7 @@
             "number_parsed":31,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳瓊娟",
             "time":"11011",
             "time_parsed":[{
@@ -5206,7 +5214,7 @@
                 "zh_TW":"專業英文寫作"},
             "url":"3195",
             "year":"全"}
-            ,{"available": "35",
+            ,{
             "class":"4",
             "code":"4526",
             "credits":"2",
@@ -5226,7 +5234,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳瓊娟",
             "time":"11213",
             "time_parsed":[{
@@ -5237,7 +5245,7 @@
                 "zh_TW":"話語分析"},
             "url":"3205",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"4",
             "code":"4527",
             "credits":"3",
@@ -5257,7 +5265,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蔡必焜",
             "time":"6234",
             "time_parsed":[{
@@ -5268,7 +5276,7 @@
                 "zh_TW":"社區與社區發展"},
             "url":"3197",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"4",
             "code":"4529",
             "credits":"3",
@@ -5288,7 +5296,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"杜蒼林",
             "time":"4101112",
             "time_parsed":[{
@@ -5299,7 +5307,7 @@
                 "zh_TW":"茶葉品評"},
             "url":"3199",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"4",
             "code":"4530",
             "credits":"3",
@@ -5319,7 +5327,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"鄧資新",
             "time":"2101112",
             "time_parsed":[{
@@ -5330,7 +5338,7 @@
                 "zh_TW":"養生保健事業"},
             "url":"3200",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"4",
             "code":"4531",
             "credits":"3",
@@ -5350,7 +5358,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"洪志誠",
             "time":"1101112",
             "time_parsed":[{
@@ -5361,7 +5369,7 @@
                 "zh_TW":"綠色事業經營管理"},
             "url":"3201",
             "year":"半"}
-            ,{"available": "50",
+            ,{
             "class":"4",
             "code":"4532",
             "credits":"3",
@@ -5381,7 +5389,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"呂文博",
             "time":"5101112",
             "time_parsed":[{
@@ -5392,7 +5400,7 @@
                 "zh_TW":"永續鄉村發展"},
             "url":"3202",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"4",
             "code":"4533",
             "credits":"3",
@@ -5412,7 +5420,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳家彬",
             "time":"1101112",
             "time_parsed":[{
@@ -5423,7 +5431,7 @@
                 "zh_TW":"中小企業管理"},
             "url":"3203",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"4",
             "code":"4534",
             "credits":"3",
@@ -5443,7 +5451,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃培源",
             "time":"4101112",
             "time_parsed":[{
@@ -5454,7 +5462,7 @@
                 "zh_TW":"商業談判"},
             "url":"3204",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"4",
             "code":"4535",
             "credits":"2",
@@ -5474,7 +5482,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"邱幸珍",
             "time":"51213",
             "time_parsed":[{
@@ -5485,7 +5493,7 @@
                 "zh_TW":"高級英語會話"},
             "url":"3213",
             "year":"全"}
-            ,{"available": "60",
+            ,{
             "class":"4",
             "code":"4536",
             "credits":"3",
@@ -5505,7 +5513,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃培源",
             "time":"3101112",
             "time_parsed":[{
@@ -5516,7 +5524,7 @@
                 "zh_TW":"策略管理"},
             "url":"3206",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"4",
             "code":"4537",
             "credits":"3",
@@ -5536,7 +5544,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"邱賜程",
             "time":"5101112",
             "time_parsed":[{
@@ -5547,7 +5555,7 @@
                 "zh_TW":"國際貿易實務"},
             "url":"3207",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"4",
             "code":"4538",
             "credits":"3",
@@ -5567,7 +5575,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"郭珍貝",
             "time":"1101112",
             "time_parsed":[{
@@ -5578,7 +5586,7 @@
                 "zh_TW":"消費者行為"},
             "url":"3208",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"5",
             "code":"5501",
             "credits":"2",
@@ -5598,7 +5606,7 @@
             "number_parsed":45,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"待聘",
             "time":"41011",
             "time_parsed":[{
@@ -5609,7 +5617,7 @@
                 "zh_TW":"經典與文獻(f):歷史小說"},
             "url":"3209",
             "year":"半"}
-            ,{"available": "40",
+            ,{
             "class":"5",
             "code":"5502",
             "credits":"2",
@@ -5629,7 +5637,7 @@
             "number_parsed":40,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蘇曼如",
             "time":"11213",
             "time_parsed":[{
@@ -5640,7 +5648,7 @@
                 "zh_TW":"民間文學"},
             "url":"3186",
             "year":"全"}
-            ,{"available": "25",
+            ,{
             "class":"5",
             "code":"5503",
             "credits":"2",
@@ -5660,7 +5668,7 @@
             "number_parsed":25,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蘇曼如",
             "time":"11011",
             "time_parsed":[{
@@ -5671,7 +5679,7 @@
                 "zh_TW":"神話學"},
             "url":"3228",
             "year":"全"}
-            ,{"available": "35",
+            ,{
             "class":"5",
             "code":"5504",
             "credits":"2",
@@ -5691,7 +5699,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"張旭琪",
             "time":"41011",
             "time_parsed":[{
@@ -5702,7 +5710,7 @@
                 "zh_TW":"多媒體輔助英語教學"},
             "url":"3229",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"5",
             "code":"5505",
             "credits":"2",
@@ -5722,7 +5730,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"施彥如",
             "time":"11213",
             "time_parsed":[{
@@ -5733,7 +5741,7 @@
                 "zh_TW":"口譯進階"},
             "url":"3230",
             "year":"半"}
-            ,{"available": "35",
+            ,{
             "class":"5",
             "code":"5506",
             "credits":"2",
@@ -5753,7 +5761,7 @@
             "number_parsed":35,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"周廷戎",
             "time":"41011",
             "time_parsed":[{
@@ -5764,7 +5772,7 @@
                 "zh_TW":"比較文學"},
             "url":"2936",
             "year":"半"}
-            ,{"available": "20",
+            ,{
             "class":"5",
             "code":"5509",
             "credits":"2",
@@ -5784,7 +5792,7 @@
             "number_parsed":20,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳一峰",
             "time":"51011",
             "time_parsed":[{
@@ -5795,7 +5803,7 @@
                 "zh_TW":"周易"},
             "url":"3187",
             "year":"全"}
-            ,{"available": "50",
+            ,{
             "class":"5",
             "code":"5512",
             "credits":"3",
@@ -5815,7 +5823,7 @@
             "number_parsed":50,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"待聘",
             "time":"3101112",
             "time_parsed":[{
@@ -5826,7 +5834,7 @@
                 "zh_TW":"果樹學"},
             "url":"3236",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"5",
             "code":"5514",
             "credits":"3",
@@ -5846,7 +5854,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"黃江川",
             "time":"5101112",
             "time_parsed":[{
@@ -5857,7 +5865,7 @@
                 "zh_TW":"期貨與選擇權"},
             "url":"3238",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"5",
             "code":"5515",
             "credits":"3",
@@ -5877,7 +5885,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"徐淑媚",
             "time":"1101112",
             "time_parsed":[{
@@ -5888,7 +5896,7 @@
                 "zh_TW":"行銷專題討論"},
             "url":"3239",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"5",
             "code":"5516",
             "credits":"3",
@@ -5908,7 +5916,7 @@
             "number_parsed":60,
             "obligatory":"必修",
             "obligatory_tf":true,
-            "previous":"",
+            "prerequisite":"",
             "professor":"王建博",
             "time":"1101112",
             "time_parsed":[{
@@ -5919,7 +5927,7 @@
                 "zh_TW":"財務專題討論"},
             "url":"3240",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"5",
             "code":"5518",
             "credits":"3",
@@ -5939,7 +5947,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"藍世明",
             "time":"4111213",
             "time_parsed":[{
@@ -5950,7 +5958,7 @@
                 "zh_TW":"產業與競爭分析"},
             "url":"3242",
             "year":"半"}
-            ,{"available": "60",
+            ,{
             "class":"5",
             "code":"5519",
             "credits":"3",
@@ -5970,7 +5978,7 @@
             "number_parsed":60,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"蕭　櫓",
             "time":"4101112",
             "time_parsed":[{
@@ -5981,7 +5989,7 @@
                 "zh_TW":"廣告學"},
             "url":"3243",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"5",
             "code":"5531",
             "credits":"3",
@@ -6001,7 +6009,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"陳瑞卿",
             "time":"1101112",
             "time_parsed":[{
@@ -6012,7 +6020,7 @@
                 "zh_TW":"數位典藏與後設資料庫概論"},
             "url":"3210",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"5",
             "code":"5532",
             "credits":"2",
@@ -6032,7 +6040,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"廖哲強",
             "time":"21011",
             "time_parsed":[{
@@ -6043,7 +6051,7 @@
                 "zh_TW":"農產業與地方行銷"},
             "url":"3211",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"5",
             "code":"5534",
             "credits":"2",
@@ -6063,7 +6071,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"林慶弧",
             "time":"31011",
             "time_parsed":[{
@@ -6074,7 +6082,7 @@
                 "zh_TW":"資訊搜尋與利用"},
             "url":"5210",
             "year":"半"}
-            ,{"available": "45",
+            ,{
             "class":"5",
             "code":"5535",
             "credits":"2",
@@ -6094,7 +6102,7 @@
             "number_parsed":45,
             "obligatory":"選修",
             "obligatory_tf":false,
-            "previous":"",
+            "prerequisite":"",
             "professor":"江彥賢",
             "time":"41213",
             "time_parsed":[{
