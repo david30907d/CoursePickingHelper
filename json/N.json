@@ -12,7 +12,7 @@
             "intern_location":[""],
             "intern_time":"",
             "language":"中文",
-            "location":["Y109"],
+            "location":["Y203"],
             "note":"可採計舊制歷史學群",
             "number":"50",
             "number_parsed":50,
@@ -43,7 +43,7 @@
             "intern_location":[""],
             "intern_time":"",
             "language":"中文",
-            "location":["Y109"],
+            "location":["Y203"],
             "note":"可採計舊制歷史學群",
             "number":"50",
             "number_parsed":50,
@@ -1004,7 +1004,7 @@
             "intern_location":[""],
             "intern_time":"",
             "language":"中文",
-            "location":["Y109"],
+            "location":["Y301"],
             "note":"",
             "number":"53",
             "number_parsed":53,
@@ -2065,7 +2065,11 @@
             "obligatory":"必修",
             "obligatory_tf":true,
             "prerequisite":"",
+<<<<<<< HEAD
+            "professor":"待聘",
+=======
             "professor":"楊淑瓊",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "time":"4101112",
             "time_parsed":[{
             "day":4,"time":[10,11,12]}],
@@ -4084,11 +4088,11 @@
             "time":"2101112",
             "time_parsed":[{
             "day":2,"time":[10,11,12]}],
-            "title":"管理會計 `Managerial Accounting",
+            "title":"管理會計學 `Managerial Accounting",
             "title_parsed":{
                 "en_US":"Managerial Accounting",
-                "zh_TW":"管理會計"},
-            "url":"5213",
+                "zh_TW":"管理會計學"},
+            "url":"2032",
             "year":"半"}
             ,{
             "class":"3",
@@ -4421,7 +4425,11 @@
             "obligatory":"選修",
             "obligatory_tf":false,
             "prerequisite":"",
+<<<<<<< HEAD
+            "professor":"王建博",
+=======
             "professor":"待聘",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "time":"3101112",
             "time_parsed":[{
             "day":3,"time":[10,11,12]}],

@@ -2411,7 +2411,11 @@
             "obligatory":"選修",
             "obligatory_tf":false,
             "prerequisite":"",
+<<<<<<< HEAD
+            "professor":"林谷合",
+=======
             "professor":"陳家彬",
+>>>>>>> 5e67730fc0030b3785aa6453531706d9583c04d5
             "time":"3234",
             "time_parsed":[{
             "day":3,"time":[2,3,4]}],
