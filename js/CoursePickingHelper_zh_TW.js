@@ -335,6 +335,7 @@
             });
 
             window.week = ["一", "二", "三", "四", "五"];
+
             /************這是用來把課程放到左邊的欄位**************/
             var bulletin_post = function($target, course, language){
                 if( $.type(course.title_parsed)!=="object" )            //判斷課程名稱是不是物件
@@ -418,6 +419,7 @@
                 }
 
             };
+
             /*******嘗試函式化選修填入課程的功能！！*******/
             var add_major = function(major, level){
                 console.log(major+' '+level);
@@ -530,6 +532,7 @@
                     })
                 }
             };
+
             /**********這是用來刪除衝堂的課程***********/
             var delete_conflict = function($target, course, stop_day, stop_time) {
             //假設target為time-table的參數，course為courses的某一個課程
@@ -586,14 +589,20 @@
                     }
                 })
             };
-            var add_credits = function(course){//增加學分
+
+            /****************增加學分****************/
+            var add_credits = function(course){
                 window.credits+=parseInt(course.credits);//要先把字串型態的學分轉成int才能做加減
                 $("#class_credit").text(window.credits);
             };
+
+
             var minus_credits = function(course){
                 window.credits-=parseInt(course.credits);
                 $("#class_credit").text(window.credits);
             };
+
+            /***********清除***********/
             var reset=function(){
                 $('#time-table td').empty(); //把目前的time-table清空，好讓下個年級的課程能夠乾淨的顯示
                 $('#obligatory-post').empty();//以下是要清掉選修課程、指定時間搜尋等課程
@@ -621,6 +630,8 @@
                 window.name_of_optional_obligatory=[];	//把數過的課程清空                
                 window.user={"name":"","time_table":[]};
             }
+
+            /********用+字號功能時，清空側欄********/
             var reset_for_time_request=function(){	//這個function是在你的td的時候，會把該時段的課程顯示，但是要先把顯示欄位清空
                 $('#obligatory-post').empty();	//以下是要清掉選修課程、指定時間搜尋等課程
                 $('#freshman').empty();
@@ -642,6 +653,8 @@
                 $('#chinese').empty();
                 $('#english').empty();
             }
+
+            /**************改變側欄課程顏色**************/
             var change_color=function($target,command){	//一旦添加了課程，則側欄的課名改了顏色
                 if(command=="restore"){
                         $target.css("color","#3074B5");
@@ -656,7 +669,9 @@
                     alert("遇到不可預期的錯誤，請聯絡開發小組XD");
                 }
             }
-            var check_optional_obligatory=function(course){	//用來確認這個戲有幾堂必修課是同名的
+
+            /*********確認系上必修有無重名*********/
+            var check_optional_obligatory=function(course){	//用來確認這個系有幾堂必修課是同名的
                 var tmpCh = course.title_parsed["zh_TW"].split(' ');        //(這是中文課名)切割課程名稱，遇到空格就切開
                 course.title_short = tmpCh[0];      //title_short是會自動宣告的區域變數，存沒有英文的課名
                 if(typeof(window.name_of_optional_obligatory[course.title_short]) == 'undefined'){	//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
@@ -667,6 +682,8 @@
                 }
                 // console.log(course.title_short+window.name_of_optional_obligatory[course.title_short]);
             }
+
+            /*********處理課名*********/
             var show_optional_obligatory=function(course){
                 var tmpCh = course.title_parsed["zh_TW"].split(' ');        //(這是中文課名)切割課程名稱，遇到空格就切開
                 course.title_short = tmpCh[0];      //title_short是會自動宣告的區域變數，存沒有英文的課名
@@ -674,10 +691,14 @@
                     bulletin_post($("#obligatory-post"), course, language);
                 }
             }
+
+            /********確認此系有沒有分AB班(選修用)********/
             var check_if_two_class=function(level){//為了讓我確認他是不是有分AB班，這個是用在選修課的填入判斷上
                 level=level.split("");
                 return(level);//可以從回傳的長度判斷是否有兩個班
             }
+
+            /********確定有無分AB班********/
             var check_which_class=function(major,level){	//確定他是不是有分A、B班
                 if(major=="獸醫學系學士班 A"||major=="獸醫學系學士班 B"||major=="應用數學系學士班 A"||major=="應用數學系學士班 B"||major=="機械工程學系學士班 A"||major=="機械工程學系學士班 B"||major=="土木工程學系學士班 A"||major=="土木工程學系學士班 B"||major=="電機工程學系學士班 A"||major=="電機工程學系學士班 B"){
                     var subclass=major.split(" ");	//A班或B班
@@ -690,6 +711,8 @@
                     return (level);    //取到年級
                 }
             }
+
+            /*********判斷課程放入哪個欄位*********/
             var check_which_bulletin=function(course){	//為了判斷A、B班以及不分班的科系開被放到哪個bulletin
                 if(course.class=="1"||course.class=="1A"||course.class=="1B"){
                     bulletin_post($("#freshman"),course, language);
@@ -717,11 +740,13 @@
                     bulletin_post($("#whole-school"),course, language);
                 }                
             }
+
+            /******判斷非必選修之課程的正確欄位******/
             var check_which_bulletin_required=function(course){
                 var EN={"語言中心":"","夜共同科":"","夜外文":""};
                 var CH={"通識教育中心":"","夜中文":""};
                 if(course.discipline!=undefined&&course.discipline!=""){
-                    //通識課才有學群這個欄位
+                    //通識課有細分不同領域
                     check_general(course);
                 }
                 else if(course.department in EN){
@@ -740,10 +765,12 @@
                     bulletin_post($("#obligatory-post"),course, language); //因為我把同一時段的課程塞進陣列裡，所以要用index去取
                 }
             }
+
+            /*********搜尋用*********/
             var department_course_for_specific_search=function(major,level){
                 $.each(course_of_majors[major][level], function(ik, iv){//因為這種輔系的課一定是交給使用者自己選，所以就不自動填入
                             $.each(courses[iv],function(jk,jv){
-                                if(jv.for_dept==major){//這個判斷是為了向景觀學程那種專門上別的科系的課的系而設計的
+                                if(jv.for_dept==major){//這個判斷是為了像景觀學程那種專門上別的科系的課的系而設計的
                                     if(jv.obligatory_tf==true&&jv.class==level){
                                         bulletin_post($("#obligatory-post"),jv, language);
                                         return false;
@@ -756,6 +783,8 @@
                             })
                         });
             }
+
+            /*****確認此通識課之領域*****/
             var check_general=function(course){
                 var disciplineH={"文學學群":"","歷史學群":"","哲學學群":"","藝術學群":"","文化學群":""};
                 var disciplineS={"公民與社會學群":"","法律與政治學群":"","商業與管理學群":"","心理與教育學群":"","資訊與傳播學群":""};
@@ -773,6 +802,8 @@
                     alert("有通識課程無法顯示，煩請記下點擊的結束為何並告知開發小組\nFB搜尋：選課小幫手\nhttps://www.facebook.com/CoursePickingHelper")
                 }                
             };
+
+            /*********細分綜合課程*********/
             var check_which_common_subject = function(course){
                 if(course.department=="師資培育中心"){
                     bulletin_post($("#teacher-post"),course, language);
@@ -787,6 +818,8 @@
                     bulletin_post($("#non-graded-optional-post"),course, language);
                 }
             }
+
+            /********建立側欄所有課程的資訊(放入title中)********/
             var build_bulletin_time=function(course){
                 var EN_CH={"語言中心":"","夜共同科":"","夜外文":"","通識中心":"","夜中文":""};
                 var time = [];  //time設定為空陣列
@@ -807,6 +840,8 @@
                 time = time.join(' ');  //把多個陣列用" "分隔並合併指派給time，此為字串型態，若是將字串split('')，則會回傳一個陣列型態
                 return time;
             }
+
+            /*****建立 選擇課程後跳出toastr的資訊*****/
             var build_toastr_time=function(course){
                 var EN_CH={"語言中心":"","夜共同科":"","夜外文":"","通識中心":"","夜中文":""};   
                 var toast_mg=[];
@@ -827,18 +862,24 @@
                 toast_mg = toast_mg.join('<br/>');
                 toastr.info(toast_mg);
             }
+
+            /****/
             var credits_filter=function(){
                 var credits=$("#credits").val();
                 if(credits!=""){return credits;}
                 else{return true;}//到時候把整個credits_filter當成參數傳入搜尋的函式
                 //參數會return東西到if判斷式，如果沒有輸入學分，就return TRUE就不會有任何影響了
             }
+
+            /*******課程代碼搜尋*******/
             var code_search=function(code){
                 if(code!=""){
                     bulletin_post($("#search-post"),courses[code][0], language);
                     $("#class_code").val("");
                 }
             }
+
+            /********課程名稱搜尋********/
             var title_search=function(cre_funcion){
                 var class_title=$("#class_title").val();//課程名稱搜尋
                 condition=cre_funcion;//傳入會篩選學分條件的函式
@@ -859,6 +900,8 @@
                     $("#class_title").val("");
                 }
             }
+
+            /********授課教授搜尋*********/
             var teach_search=function(cre_funcion){
                 var teacher = $("#class_teacher").val();//老師名稱搜尋
                 condition=cre_funcion;
@@ -871,6 +914,8 @@
                     $("#class_teacher").val("");
                 }
             }
+
+            /*********教室資訊**********/
             var fill_loction=function(course){//回傳教室資訊，型態為string
             //course是課程物件
                 var location="";
@@ -888,6 +933,8 @@
                 }
                 return location;//回傳字串
             }
+
+            /*******獲得使用者選擇的主修資訊與年級*******/
             var get_major_and_level = function(typechar){
                 //這會回傳一個major和level的陣列，供全域呼叫使用
                 var arr = $('form').serializeArray();//this is a jQuery function
@@ -907,6 +954,8 @@
                 else alert("遇到不可預期的錯誤，請聯絡開發小組");
                 return returnarr;
             }    
+
+            /*******變換學制後，匯入該json檔*******/
             var get_json_when_change_degree = function(path)   {
                 $.getJSON(path, function(json){  //getJSON會用function(X)傳回X的物件或陣列  
                     $.each(json.course, function(ik, iv){
@@ -946,6 +995,8 @@
                     });
                 });
             }
+
+            /*********獲得課程最後的更新時間*********/
             var return_url_and_time_base = function(){
                 // this function will return a string, url base, which will link to syllabus of that course. and assign it to a global variable.
                  $.getJSON("json/url_base.json", function(json){
@@ -955,6 +1006,8 @@
                  })
 
             }
+
+            /****/
             var cal_possibility = function(course){
                 var pos = (course.number-course.enrolled_num)/course.number*100;
                 pos = new Number(pos);
