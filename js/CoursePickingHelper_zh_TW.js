@@ -958,6 +958,7 @@
             /*******變換學制後，匯入該json檔*******/
             var get_json_when_change_degree = function(path)   {
                 $.getJSON(path, function(json){  //getJSON會用function(X)傳回X的物件或陣列  
+                    console.log('really get json');
                     $.each(json.course, function(ik, iv){
                         if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
                             window.course_of_majors[iv.for_dept] = {};
