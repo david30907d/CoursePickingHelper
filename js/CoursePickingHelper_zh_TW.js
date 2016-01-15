@@ -423,77 +423,51 @@
             /*******嘗試函式化選修填入課程的功能！！*******/
             var add_major = function(major, level){
                 console.log(major+' '+level);
-                if(level=="0"){//這是給文學院、管理學院與農業暨自然資源學院這種沒有年級的選項
+                if(level=="0"){
+                //這是給文學院、管理學院與農業暨自然資源學院這種沒有年級的選項
                         $.each(course_of_majors[major][level],function(ik, iv){//因為這種院的課一定是交給使用者自己選，所以就不自動填入
                             $.each(courses[iv],function(jk, jv){
                                 if(jv.for_dept==major){//因為課程代碼會被重複使用，所以用for迴圈判斷他是不是系上開的課
+                                    console.log('department')
                                     if(jv.obligatory_tf==true){
                                         bulletin_post($("#obligatory-post"), jv, language);
                                     }
-                                    if(jv.obligatory_tf==false){
-                                        if(jv.class==1){
-                                            bulletin_post($("#freshman"), jv, language);
-                                        }
-                                        if(jv.class==2){
-                                            bulletin_post($("#sophomore"), jv, language);
-                                        }
-                                        if(jv.class==3){
-                                            bulletin_post($("#junior"), jv, language);
-                                        }
-                                        if(jv.class==4){
-                                            bulletin_post($("#senior"), jv, language);
-                                        }
-                                        if(jv.class==5){
-                                            bulletin_post($("#fifth-grade"), jv, language);
-                                        }
-                                        if(jv.class=="0"){
-                                            bulletin_post($("#whole-school"), jv, language);
-                                        }
+                                    else{
+                                        console.log('herer')
+                                        check_which_bulletin(jv);
                                     }
-                                    //check_optional_obligatory(courses[iv]);
                                 }
                             })
                         });
-                    }                    
+                }                    
                 else{                     
                     $.each(course_of_majors[major][level], function(ik, iv){    //先這一年級的必修課全部跑過一次，計算重複課名的數量
                         $.each(courses[iv],function(jk, jv){
                             if(jv.obligatory_tf==true&&jv.for_dept==major&&jv.class==level){//這樣就可以保證我計算到的必修數量一定是該科系該年級該班級了
                                 check_optional_obligatory(jv);
+                                return false;
                             }
                         })
                     });                       
                     $.each(course_of_majors[major][level], function(ik, iv){//知道那些課程會重複之後，再決定那些課程要填入課表
                         $.each(courses[iv],function(jk, jv){
-                            if(jv.for_dept==major){                    
-                                var tmpCh = jv.title_parsed["zh_TW"].split(' ');       //(這是中文課名)切割課程名稱，遇到空格就切開
-                                title_short = tmpCh[0];     //title_short是會自動宣告的區域變數，存沒有英文的課名
-                                var class_EN=level.split("")[1];//班級的A或B，就是最後那個代碼
+                            if(jv.for_dept==major&&jv.class==level){                    
+                                var title_short=return_optional_obligatory_course_name(jv);
+                                console.log('enter if:'+title_short);
                                 if(window.name_of_optional_obligatory[title_short]==1){//只有必修課會被函式計算數量，所以就不用再判斷是否為必修了，一定是                             
-                             
-                                    if(title_short=="日文(一)"||title_short=="德文(一)"||title_short=="西班牙文(一)"||title_short=="法文(一)"){//判斷是否為德日西法等語言課
-                                      
-                                        bulletin_post($("#year-post"), jv, language);                            
-                                    }
-                                    if(jv.time_parsed==0){//表示應該為實習課，所以無時間，神奇的是[]在boolean判斷式中居然會被當作0
+                                                                
+                                    if(jv.time_parsed==0){//表示應該為實習課，所以無時間,他沒有正課時間和實習時間，反正就是都沒有時間，神奇的是[]在boolean判斷式中居然會被當作0
                                         bulletin_post($("#obligatory-post"), jv, language);                                            
                                     }
-                                    else{
-                                        if(jv.class==level){
-                                            console.log(jv.for_dept);
-                                            if(jv.for_dept == get_major_and_level('s')['major']){
-                                                if($("#checkbox").val() == "DoubleMajor"){
-                                                    bulletin_post($("#obligatory-post"), jv, language);
-                                                }  
-                                                else{
-                                                    add_course($('#time-table'), jv, language);
-                                                }
-                                            }
-                                            else{
-                                                add_course($('#time-table'), jv, language);//如果這個課名只有出現過一次，就可以自動填入       
-                                            }
+                                    else{                                        
+                                        console.log('enter add course');
+                                        if(jv.for_dept == get_major_and_level('s')['major'] && $("#checkbox").val() == "DoubleMajor"){
+                                            //s 是指雙主修的系所
+                                            bulletin_post($("#obligatory-post"), jv, language);                                            
                                         }
-                                        
+                                        else{
+                                            add_course($('#time-table'), jv, language);//如果這個課名只有出現過一次，就可以自動填入       
+                                        }  
                                     }                                        
                                 }
                                 else{//當出現不止一次的時候就丟到bulletin，但是只丟屬於這個班級的                    
@@ -669,25 +643,40 @@
                     alert("遇到不可預期的錯誤，請聯絡開發小組XD");
                 }
             }
+            /****把有abcd班別的必修課做判斷，讓使用這自己選擇**********/
+            var return_optional_obligatory_course_name=function(course){
+                var len=course.title_parsed["zh_TW"].length;
+                if(isChar(course.title_parsed["zh_TW"][len-1])==true){
+                    //check whether the last char is 'abcd' or not.
+                    //if so, return the title without char.
+                    return course.title_parsed["zh_TW"].substring(0,len-1);
+                }
+                else{
+                    return course.title_parsed["zh_TW"];
+                }
+
+            }
 
             /*********確認系上必修有無重名*********/
-            var check_optional_obligatory=function(course){ //用來確認這個系有幾堂必修課是同名的
-                var tmpCh = course.title_parsed["zh_TW"].split(' ');        //(這是中文課名)切割課程名稱，遇到空格就切開
-                course.title_short = tmpCh[0];      //title_short是會自動宣告的區域變數，存沒有英文的課名
+            var check_optional_obligatory=function(course){ 
+            //用來確認這個系有幾堂必修課是同名的
+                course.title_short = return_optional_obligatory_course_name(course);//will make a new key called title_short, that contains a chinese title which dont contain a character at the end.(like 英文作文(二)a -> 英文作文(二))
+                //title_short是會自動宣告的區域變數，存沒有英文的課名
+
                 if(typeof(window.name_of_optional_obligatory[course.title_short]) == 'undefined'){  //如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
                     window.name_of_optional_obligatory[course.title_short] = 1;
                 }
                 else{
                     window.name_of_optional_obligatory[course.title_short]++;
                 }
-                // console.log(course.title_short+window.name_of_optional_obligatory[course.title_short]);
+                console.log(course.title_short+' '+window.name_of_optional_obligatory[course.title_short]);
             }
 
             /*********處理課名*********/
             var show_optional_obligatory=function(course){
-                var tmpCh = course.title_parsed["zh_TW"].split(' ');        //(這是中文課名)切割課程名稱，遇到空格就切開
-                course.title_short = tmpCh[0];      //title_short是會自動宣告的區域變數，存沒有英文的課名
-                if(window.name_of_optional_obligatory[course.title_short]>1){
+                var trun_title=return_optional_obligatory_course_name(course);
+                //cause the character at the end of title is truncate, so named it trun_title
+                if(window.name_of_optional_obligatory[trun_title]>1){
                     bulletin_post($("#obligatory-post"), course, language);
                 }
             }
@@ -736,9 +725,12 @@
                 else if(course.class=="7"||course.class=="7A"||course.class=="7B"){
                     bulletin_post($("#seventh-grade"),course, language);
                 }
-                else if(course.class==""){
+                else if(course.class=="0"){
                     bulletin_post($("#whole-school"),course, language);
-                }                
+                }       
+                else{
+                    alert("check_which_bulletin ERROR,麻煩您到粉專通知開發人員喔");
+                }         
             }
 
             /******判斷非必選修之課程的正確欄位******/
@@ -1017,5 +1009,16 @@
                     return 0;
                 }           
                 return pos;     
+            }            
+            var isChar = function(input){
+                //input is the last character of short title.
+                var code = input.charCodeAt(0);
+                if ( ((code >= 65) && (code <= 90)) || ((code >= 97) && (code <= 122)) ) {
+                    // it is a letter
+                    return true;
+                }
+                else{                    
+                    return false;
+                }
             }
 })(jQuery);
