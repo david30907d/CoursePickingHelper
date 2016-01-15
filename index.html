@@ -298,14 +298,7 @@
     </div> 
       
     <div style="display:none">      
-      <a id="1" class="fancybox" href="./images/nchuit.png" data-fancybox-group="gallery" title="lake"><img src="./images/nchuit.png" alt="" />      
-      </a>
-
-      <a id="2" class="fancybox" href="./images/nchuit.png" data-fancybox-group="gallery" title="Etiam quis mi eu elit temp"><img src="./images/nchuit.png" alt="" /></a>
-
-      <a id="3" class="fancybox" href="./images/nchuit.png" data-fancybox-group="gallery" title="Cras neque mi, semper leon"><img src="./images/nchuit.png" alt="" /></a>
-
-      <a id="4" class="fancybox" href="./images/nchuit.png" data-fancybox-group="gallery" title="Sed vel sapien vel sem uno"><img src="./images/nchuit.png" alt="" /></a>     
+      <a id="fancybox-manual-b" href="javascript:;">advertisement</a>
     </div>          
     <div class="footer">
         <a href="https://github.com/david30907d/CoursePickingHelper"><span class="github_sign fa fa-github-square fa-1x"></span></a>&nbsp;
@@ -322,15 +315,15 @@
       })
       $("#english").click(function(){
         alert("Timetabling Helper is just a tool\nStudents still need to log in System of school to enroll class!!!");
-      })      
-      // $.getJSON("https://spreadsheets.google.com/feeds/list/12Kg_gazD75Tq9ItucMXzxvttCWiRlLsGr_iulD3P5U0/1/public/values?alt=json",function(json){
-      //     $('#1 img').attr('src','https://drive.google.com/open?id=0B19mg1oUrRQ3UnhHWG9YN0NpMkk');
-      //     $('#1').attr('href',"https://drive.google.com/open?id=0B19mg1oUrRQ3UnhHWG9YN0NpMkk");
-      // })  
-      $('#1 img').attr('src','https://googledrive.com/host/0B19mg1oUrRQ3MUJla1lMUlV3Mzg');
-      $('#1').attr('href',"https://googledrive.com/host/0B19mg1oUrRQ3MUJla1lMUlV3Mzg"); 
-      $('.fancybox').fancybox();
-      $(".fancybox").click();
+      })            
+      $("#fancybox-manual-b").click(function() {
+        $.fancybox.open({
+          href : '../advertisement/index.html',//在這邊放絕對網址會讓圖片爆掉,我還沒解決，所以讓他用相對路徑直接去連到廣告的頁面../advertisement/index.html
+          type : 'iframe',
+          padding : 5
+        });
+      });
+      $("#fancybox-manual-b").click();
     });	             
 	</script>
 </html>
