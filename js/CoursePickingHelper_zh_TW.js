@@ -813,7 +813,7 @@
                 if(course.discipline!=""&&course.discipline!=undefined){//代表他是通識課
                     toast_mg.push("學群:"+course.discipline);
                     var possibility = cal_possibility(course);// a fuction that return the possibility of enrolling that course successfully.
-                    toast_mg.push("中籤率:" + possibility + "%");
+                    //toast_mg.push("中籤率:" + possibility + "%");
                 }                
                 if(course.note!=""){
                     toast_mg.push("備註:"+course.note);
