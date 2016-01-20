@@ -14,7 +14,7 @@
                 window.name_of_optional_obligatory = [] //這是用來存系上的必修課，檢查有沒有課名是重複的，若有就讓使用者自行決定要上哪堂
                 window.user={"name":"","time_table":[]};
                 $("#class_credit").text(0);
-                window.language="en_US";//固定顯示語言為中文           
+                window.language="en_US";//固定顯示語言為英文           
                 window.url_base="";//used to be the url that link to the syllabus of that course.
                 window.haveloadin={D:false,G:false,N:false,O:false,U:false,W:false};//used to checked whether that json of specific degree has been loaded in or not, if it did, the value turn to ture.
                 window.lastupdatetime="";//show the update time on server.
@@ -307,14 +307,14 @@
                             freshman_value="8";
                             sophomore_value="9";
                         }
-                        var newGrade=$.parseHTML('<option value='+freshman_value+'>一年級</option>');
-                        var newGrade2=$.parseHTML('<option value='+sophomore_value+'>二年級</option>');
+                        var newGrade=$.parseHTML('<option value='+freshman_value+'>freshman</option>');
+                        var newGrade2=$.parseHTML('<option value='+sophomore_value+'>Sophomore</option>');
                         $('#v_level').append(newGrade).append(newGrade2);
-                        newGrade=$.parseHTML('<option value='+freshman_value+'>一年級</option>');
-                        newGrade2=$.parseHTML('<option value='+sophomore_value+'>二年級</option>');
+                        newGrade=$.parseHTML('<option value='+freshman_value+'>freshman</option>');
+                        newGrade2=$.parseHTML('<option value='+sophomore_value+'>Sophomore</option>');
                         $('#v_level2').append(newGrade).append(newGrade2);
-                        newGrade=$.parseHTML('<option value='+freshman_value+'>一年級</option>');
-                        newGrade2=$.parseHTML('<option value='+sophomore_value+'>二年級</option>');
+                        newGrade=$.parseHTML('<option value='+freshman_value+'>freshman</option>');
+                        newGrade2=$.parseHTML('<option value='+sophomore_value+'>Sophomore</option>');
                         $('#s_level').append(newGrade).append(newGrade2);
                     }
                     else{                        
@@ -341,7 +341,9 @@
                 if( $.type(course.title_parsed)!=="object" )            //判斷課程名稱是不是物件
                     throw 'title_parsed error';
                 if( language=="zh_TW" ){
+
                     course.title_short = course.title_parsed["zh_TW"];      //title_short是會自動宣告的區域變數，存沒有英文的課名
+
                 }
                 else{
                     course.title_short = course.title_parsed["en_US"];
@@ -373,7 +375,9 @@
                 if( $.type(course.title_parsed)!=="object" )            //判斷課程名稱是不是物件
                     throw 'title_parsed error';
                 if(language == "zh_TW"){
+
                     var tmpCh = course.title_parsed["zh_TW"].split(' ');        //(這是中文課名)切割課程名稱，遇到空格就切開
+
                     course.title_short = tmpCh[0];      //title_short是會自動宣告的區域變數，存沒有英文的課名
                 }
                 else{
@@ -381,7 +385,7 @@
                     course.title_short = tmpEn;
                 }
                 var check_conflict = false; //他用來判斷是否衝堂，如果有則下面的if就會讓最外圈的each停止
-                $.each(course.time_parsed,function(ik, iv){
+                $.each(course.time_parsed,function(ik, iv
                     $.each(iv.time,function(jk, jv){
                         var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
                         if($td.text()!=""){ //用來判斷td裡面是不已經有放過課程了，但若先在裡面放個按鈕那.text()回傳回來的也是空字串
@@ -467,7 +471,8 @@
                     $.each(course_of_majors[major][level], function(ik, iv){//知道那些課程會重複之後，再決定那些課程要填入課表
                         $.each(courses[iv],function(jk, jv){
                             if(jv.for_dept==major){                    
-                                var tmpCh = jv.title_parsed["zh_TW"].split(' ');       //(這是中文課名)切割課程名稱，遇到空格就切開
+                                var tmpCh = jv.title_parsed["en_US"]split(' ');      //(這是中文課名)切割課程名稱，遇到空格就切開
+
                                 title_short = tmpCh[0];     //title_short是會自動宣告的區域變數，存沒有英文的課名
                                 if(window.name_of_optional_obligatory[title_short]==1){//只有必修課會被函式計算數量，所以就不用再判斷是否為必修了，一定是                             
                              
@@ -673,8 +678,10 @@
             }
             /****把有abcd班別的必修課做判斷，讓使用這自己選擇**********/
             var return_optional_obligatory_course_name=function(course){
-                var len=course.title_parsed["zh_TW"].length;
-               return course.title_parsed["zh_TW"].substring(0,len-1);
+                var len=course.title_parsed["en_US"].length;
+
+               return course.title_parsed["en_US"].substring(0,len-1);
+
 
             }
             /*********確認系上必修有無重名*********/
@@ -992,10 +999,13 @@
                             window.teacher_course[iv.professor]=[];
                         }
                         window.teacher_course[iv.professor].push(iv);
-                        if(typeof(window.name_of_course[iv.title_parsed.zh_TW])=='undefined'){//中文課名陣列
-                            window.name_of_course[iv.title_parsed.zh_TW]=[];
+                        if(typeof(window.name_of_course[iv.title_parsed.en_US])=='undefined'){//中文課名陣列
+
+                            window.name_of_course[iv.title_parsed.en_US]=[];
+
                         }
-                        window.name_of_course[iv.title_parsed.zh_TW].push(iv);
+                        window.name_of_course[iv.title_parsed.en_US].push(iv);
+
                         if(typeof(window.name_of_course[iv.title_parsed.en_US])=='undefined'){//英文課名陣列
                             window.name_of_course[iv.title_parsed.en_US]=[];
                         }
