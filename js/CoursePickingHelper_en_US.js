@@ -1,9 +1,9 @@
 (function($){
         //先定義JQuery為$，不要讓它衝突        
             $(function(){
-                /**一開始的簡易版使用說明**/
+                /**一開始的簡易版使用說明
                 toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用雙主修功能<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 250000});                
-                /*initialization!!!*/
+                initialization!!!*/
 
                 window.credits=0//一開始的學分數是0
                 window.courses = {};//宣告一個空的物件
@@ -291,6 +291,7 @@
                             //e.g. undergraduate, phd
                         }                        
                     });  
+                    console.log(str)
                     $.each(window.department_name[str],function(ik,iv){
                         var newOption=$.parseHTML('<option>'+window.department_name[str][ik]+'</option>');
                         $("#v_major").append(newOption);
@@ -334,7 +335,7 @@
                 })
             });
 
-            window.week = ["一", "二", "三", "四", "五"];
+            window.week = ["Mon", "Tue", "Web", "Thu", "Fri"];
 
             /************這是用來把課程放到左邊的欄位**************/
             var bulletin_post = function($target, course, language){
@@ -385,7 +386,7 @@
                     course.title_short = tmpEn;
                 }
                 var check_conflict = false; //他用來判斷是否衝堂，如果有則下面的if就會讓最外圈的each停止
-                $.each(course.time_parsed,function(ik, iv
+                $.each(course.time_parsed,function(ik, iv){
                     $.each(iv.time,function(jk, jv){
                         var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
                         if($td.text()!=""){ //用來判斷td裡面是不已經有放過課程了，但若先在裡面放個按鈕那.text()回傳回來的也是空字串
@@ -471,7 +472,7 @@
                     $.each(course_of_majors[major][level], function(ik, iv){//知道那些課程會重複之後，再決定那些課程要填入課表
                         $.each(courses[iv],function(jk, jv){
                             if(jv.for_dept==major){                    
-                                var tmpCh = jv.title_parsed["en_US"]split(' ');      //(這是中文課名)切割課程名稱，遇到空格就切開
+                                var tmpCh = jv.title_parsed["en_US"].split(' ');      //(這是中文課名)切割課程名稱，遇到空格就切開
 
                                 title_short = tmpCh[0];     //title_short是會自動宣告的區域變數，存沒有英文的課名
                                 if(window.name_of_optional_obligatory[title_short]==1){//只有必修課會被函式計算數量，所以就不用再判斷是否為必修了，一定是                             
@@ -838,19 +839,19 @@
             var build_bulletin_time=function(course){
                 var EN_CH={"語言中心":"","夜共同科":"","夜外文":"","通識中心":"","夜中文":""};
                 var time = [];  //time設定為空陣列
-                time.push("上課時間:");
+                time.push("Class Time:");
                 $.each(course.time_parsed, function(ik, iv){
-                    time.push("星期"+week[iv.day-1]+iv.time); //push是把裡面的元素變成陣列的一格
+                    time.push(week[iv.day-1]+iv.time); //push是把裡面的元素變成陣列的一格
                 })
                 if(course.intern_time!=""&&course.intern_time!=undefined){//不是每一堂課都會有實習時間
-                    time.push("實習時間:"+course.intern_time);
+                    time.push("Practice Time:"+course.intern_time);
                 }
                 if(course.discipline!=""&&course.discipline!=undefined){//代表他是通識課
-                    time.push("教授:"+course.professor);
-                    time.push("學群:"+course.discipline);
+                    time.push("Professor:"+course.professor);
+                    time.push("Discipline:"+course.discipline);
                 }
                 else{
-                    time.push("教授:"+course.professor);
+                    time.push("Professor:"+course.professor);
                 }                
                 time = time.join(' ');  //把多個陣列用" "分隔並合併指派給time，此為字串型態，若是將字串split('')，則會回傳一個陣列型態
                 return time;
@@ -860,19 +861,19 @@
             var build_toastr_time=function(course){
                 var EN_CH={"語言中心":"","夜共同科":"","夜外文":"","通識中心":"","夜中文":""};   
                 var toast_mg=[];
-                toast_mg.push("代碼: "+course.code);
-                toast_mg.push("剩餘名額:"+(course.number-course.enrolled_num));
+                toast_mg.push("Code: "+course.code);
+                toast_mg.push("Remaining Seat:"+(course.number-course.enrolled_num));
                 if(course.discipline!=""&&course.discipline!=undefined){//代表他是通識課
-                    toast_mg.push("學群:"+course.discipline);
+                    toast_mg.push("Discipline:"+course.discipline);
                     var possibility = cal_possibility(course);// a fuction that return the possibility of enrolling that course successfully.
-                    toast_mg.push("中籤率:" + possibility + "%");
+                    toast_mg.push("Success rate:" + possibility + "%");
                 }                
                 if(course.note!=""){
-                    toast_mg.push("備註:"+course.note);
+                    toast_mg.push("Remarks:"+course.note);
                 }  
                 if(course.prerequisite!=""){
                     //prerequisite means you need to enroll that course before enroll this course
-                    toast_mg.push("先修科目:"+course.prerequisite);
+                    toast_mg.push("Pre-course:"+course.prerequisite);
                 }              
                 toast_mg = toast_mg.join('<br/>');
                 toastr.info(toast_mg);
