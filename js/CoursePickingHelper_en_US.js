@@ -14,7 +14,7 @@
                 window.name_of_optional_obligatory = [] //這是用來存系上的必修課，檢查有沒有課名是重複的，若有就讓使用者自行決定要上哪堂
                 window.user={"name":"","time_table":[]};
                 $("#class_credit").text(0);
-                window.language="en_US";//固定顯示語言為中文           
+                window.language="zh_TW";//固定顯示語言為中文           
                 window.url_base="";//used to be the url that link to the syllabus of that course.
                 window.haveloadin={D:false,G:false,N:false,O:false,U:false,W:false};//used to checked whether that json of specific degree has been loaded in or not, if it did, the value turn to ture.
                 window.lastupdatetime="";//show the update time on server.
@@ -998,7 +998,7 @@
                 }     
             }
             var return_department_option_html = function(degree, department){
-                option = '<option value='+window.department_name[degree][department]['zh_TW']+'>'+window.department_name[degree][department][window.language]+'</option>'//因為course of majors這個陣列的key全部都是中文，所以選單按鈕的value一定要是中文，而按鈕的文字則是按這是什麼語言版本的頁面
+                option = '<option value="'+window.department_name[degree][department]['zh_TW']+'">'+window.department_name[degree][department][window.language]+'</option>'//因為course of majors這個陣列的key全部都是中文，所以選單按鈕的value一定要是中文，而按鈕的文字則是按這是什麼語言版本的頁面
                 return option;
             }
             var return_two_grade_arr = function(degree, language){

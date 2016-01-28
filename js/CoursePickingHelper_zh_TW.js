@@ -998,7 +998,7 @@
                 }     
             }
             var return_department_option_html = function(degree, department){
-                option = '<option value='+window.department_name[degree][department]['zh_TW']+'>'+window.department_name[degree][department][window.language]+'</option>'//因為course of majors這個陣列的key全部都是中文，所以選單按鈕的value一定要是中文，而按鈕的文字則是按這是什麼語言版本的頁面
+                option = '<option value="'+window.department_name[degree][department]['zh_TW']+'">'+window.department_name[degree][department][window.language]+'</option>'//因為course of majors這個陣列的key全部都是中文，所以選單按鈕的value一定要是中文，而按鈕的文字則是按這是什麼語言版本的頁面
                 return option;
             }
             var return_two_grade_arr = function(degree, language){
