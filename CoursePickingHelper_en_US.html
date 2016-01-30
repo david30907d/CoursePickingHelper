@@ -27,14 +27,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>選課小幫手</title>
+        <title>CoursePickingHelper</title>
         <link rel="shortcut icon" href="images/goose.jpg" />
         <script type="text/javascript"></script>
         <link href="toastr/toastr.css" rel="stylesheet"/><!--這是toast message的css-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.css">
 
         <style>
         body
@@ -160,7 +160,6 @@
 
     </script>
     <body>
-        <button id="saveAsPicture">輸出課表</button>
         <!--選取系級的表單結束-->
         <div class="container-fluid">
             <!--會出現系選修和體育、通識-->
@@ -169,17 +168,17 @@
                 <div class="container-fluid">
                     <div class="col-xs-4" id="btn-tools">
                         <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#focus">
-                            <span class="fa fa-heart fa-1x fa-fw"></span>Department<br/>and<br/>Degree
+                            <span class="fa fa-heart fa-1x fa-fw"></span>Dept.
                         </button>
                     </div>
                     <div class="col-xs-4" id="btn-tools">
                         <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#search">
-                            <span class="fa fa-search fa-1x fa-fw"></span>Course<br/><br/>Search
+                            <span class="fa fa-search fa-1x fa-fw"></span>Search
                         </button>
                     </div>
                     <div class="col-xs-4" id="btn-tools">
                         <button type="button" class="btn btn-warning btn-block" id="clear-button">
-                            <span class="fa fa-trash fa-1x fa-fw"></span><br/><br/>Clear
+                            <span class="fa fa-trash fa-1x fa-fw"></span>Clear
                         </button>
                     </div>
                 </div>
@@ -434,34 +433,35 @@
             </div>
             <div class="col-md-9">
                 <div class="row" id="curriculum-title">
-                    <div class="col-xs-4" style="text-align:left;">                       
+                    <div class="col-xs-4" style="text-align:center;margin-top: 18px;">
+                    <button class="ui violet button" id="saveAsPicture"><i class="download icon"></i>Save As</button>
                     </div>
-                    <div class="col-xs-4" style="text-align:center;">
+                    <div class="col-xs-4" style="text-align:center; margin-top: 12px;">
                         <div class="row">
                             <div class="col-xs-7">
                             <h5 id="" style="color:#F9F4F4">
-                                <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>Time Table Last Update Date：</h5></div>
+                                <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>Latest Update：</h5></div>
                             <div class="col-xs-5">
                             <h4 id="updatetime" style="color:#F9F4F4">
                             </h4>
                             </div>
                         </div>
-                        <h3 id="span-color" style="color:#F9F4F4">
-                            <button id="toggleTable" value="sun" style="background:none; border:none">
+                        <h3 id="span-color" style="color:#F9F4F4 ;margin-top: 4px; margin-bottom: 6px;" >
+                            <button id="toggleTable" value="sun" style="background:none; border:none ">
                                 <span id="sun-span" class="fa fa-sun-o fa-1x fa-fw" style=""></span>
                                 <span id="moon-span" class="fa fa-moon-o fa-1x fa-fw" style="display: none;"></span>
                             </button>
                         </h3>
                     </div>
-                    <div class="col-xs-4" style="text-align:center;">
+                    <div class="col-xs-4" style="text-align:center;margin-top: 6px;margin-bottom: 2px;">
                         <!--使用說明投影片的按鈕-->
-                        <button type="button" class="btn btn-primary " data-toggle="modal" data-target=".bs-example-modal-lg-question" style="background:none; border:none"><span class="fa fa-question fa-1x fa-fw"></span>Instruction manual</button>
+                        <button type="button" class="btn btn-primary " data-toggle="modal" data-target=".bs-example-modal-lg-question" style="background:none; border:none"><span class="fa fa-question fa-1x fa-fw"></span>Instruction Manual</button>
                         <div class="modal fade modal fade bs-example-modal-lg-question" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="exp">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h3 class="modal-title" id="myModalLabel"><span class="fa fa-question fa-1x fa-fw"></span>Instruction manual</h3>
+                                        <h3 class="modal-title" id="myModalLabel"><span class="fa fa-question fa-1x fa-fw"></span>Instruction Manual</h3>
                                     </div>
                                     <div class="modal-body">
                                         <!--杜杰的圖片輪播-->
@@ -524,7 +524,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h2><small><span class="glyphicon glyphicon-user"></span>Credits<span class="badge" id="class_credit"></span></small></h2>
+                        <div><span class="glyphicon glyphicon-user"></span>Credits<span class="badge" id="class_credit"></span></div>
                     </div>  
                 </div>
 
