@@ -2,7 +2,7 @@
         //先定義JQuery為$，不要讓它衝突        
             $(function(){
                 /**一開始的簡易版使用說明**/
-                toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用雙主修功能<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 250000});                
+                //toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用雙主修功能<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 250000});                
                 /*initialization!!!*/
                 window.credits=0//一開始的學分數是0
                 window.courses = {};//宣告一個空的物件
@@ -21,19 +21,9 @@
                 /*initialization!!!*/
 
                 //當文件準備好的時候，讀入department的json檔, 因為這是顯示系所，沒多大就全部都載進來                              
-                $.getJSON("json/department.json",function(depJson){
+                $.getJSON("json/new_department.json",function(depJson){
                     window.department_name={};
-                    $.each(depJson,function(ik,iv){
-                        if(typeof(window.department_name[iv.degree])=='undefined'){
-                            window.department_name[iv.degree]=[];
-                        }
-                        //console.log(iv.degree)
-                        $.each(iv.department,function(jk,jv){
-                            var option="";
-                            option+=jv.value+'-'+jv.name;
-                            window.department_name[iv.degree].push(option);
-                        })
-                    }) 
+                    build_department_arr(depJson);
                     return_url_and_time_base();
                 })      
 
@@ -278,56 +268,7 @@
 
                 $("#v_career").change(function(){//會動態變動系所與年級名稱
                 //if the career(degree) has been changed, also change the level
-                    $("#v_major").empty();
-                    $("#s_major").empty();
-                    var str="";                                        
-                    $( "select option:selected" ).each(function(ik,iv){// filter all selected options, to find the degree options.
-                        if($(iv).parent().attr("id")=="v_career"){        
-                            str += $( this ).text();
-                            //str will be user's degree.
-                            //e.g. undergraduate, phd
-                        }                        
-                    });  
-                    $.each(window.department_name[str],function(ik,iv){
-                        var newOption=$.parseHTML('<option>'+window.department_name[str][ik]+'</option>');
-                        $("#v_major").append(newOption);
-                        var newOption=$.parseHTML('<option>'+window.department_name[str][ik]+'</option>');
-                        $('#s_major').append(newOption);
-                        //append all the department option into major field!!
-                    })  
-                    if(str=='碩士班'||str=='博士班'||str=='碩專班'||str=='產專班'){
-                        $('#v_level').empty();
-                        $('#v_level2').empty();
-                        $('#s_level').empty();
-                        var freshman_value="6",sophomore_value="7";
-                        if(str=='博士班'){
-                            freshman_value="8";
-                            sophomore_value="9";
-                        }
-                        var newGrade=$.parseHTML('<option value='+freshman_value+'>一年級</option>');
-                        var newGrade2=$.parseHTML('<option value='+sophomore_value+'>二年級</option>');
-                        $('#v_level').append(newGrade).append(newGrade2);
-                        newGrade=$.parseHTML('<option value='+freshman_value+'>一年級</option>');
-                        newGrade2=$.parseHTML('<option value='+sophomore_value+'>二年級</option>');
-                        $('#v_level2').append(newGrade).append(newGrade2);
-                        newGrade=$.parseHTML('<option value='+freshman_value+'>一年級</option>');
-                        newGrade2=$.parseHTML('<option value='+sophomore_value+'>二年級</option>');
-                        $('#s_level').append(newGrade).append(newGrade2);
-                    }
-                    else{                        
-                        $('#v_level').empty();
-                        $('#v_level2').empty();
-                        $('#s_level').empty();
-                        var target_array=['#v_level', '#v_level2', '#s_level'];
-                        var option_array=['<option value="0">無年級</option>','<option value="1">一年級</option>','<option value="2">二年級</option>','<option value="3">三年級</option>','<option value="4">四年級</option>','<option value="5">五年級</option>']
-                        var newGrade;
-                        $.each(target_array,function(ik,iv){// use for loop use automatically append the option into the right position.
-                            $.each(option_array,function(jk,jv){
-                                newGrade=$.parseHTML(jv);
-                                $(iv).append(newGrade)
-                            })
-                        })                        
-                    }               
+                    generate_major_level_option();
                 })
             });
             
@@ -920,7 +861,7 @@
             /*******變換學制後，匯入該json檔*******/
             var get_json_when_change_degree = function(path)   {
                 $.getJSON(path, function(json){  //getJSON會用function(X)傳回X的物件或陣列  
-                    console.log('really get json');
+                    console.log(json);
                     $.each(json.course, function(ik, iv){
                         if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
                             window.course_of_majors[iv.for_dept] = {};
@@ -999,5 +940,94 @@
                     var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));  //把option做成dom，再把dom做成jQuery物件
                 }
                 return $option;
+            }
+            window.return_degree_text = function(){                
+                return $('#v_career').val();
+            }
+            var build_department_arr = function(depJson){//depJson 是傳入的department json檔名
+                $.each(depJson,function(ik,iv){
+                    if(typeof(window.department_name[iv.degree])=='undefined'){
+                        window.department_name[iv.degree]={};
+                    }
+                    //console.log(iv.degree)
+                    $.each(iv.department,function(jk,jv){
+                        if(typeof(window.department_name[iv.degree][jv.zh_TW]) == 'undefined'){
+                            window.department_name[iv.degree][jv.zh_TW]={};
+                        }
+                        var option="";
+                        option+=jv.value+'-'+jv["zh_TW"];
+                        window.department_name[iv.degree][jv.zh_TW]["zh_TW"]=option;
+                        var option="";
+                        option+=jv.value+'-'+jv["en_US"];
+                        window.department_name[iv.degree][jv.zh_TW]["en_US"]=option;
+                    })
+                }) 
+            }
+            var generate_major_level_option = function(){
+                $("#v_major").empty();
+                $("#s_major").empty();                
+                var degree=return_degree_text();
+                $.each(window.department_name[degree],function(ik,iv){
+                    var newOption=return_department_option_html(degree,ik);
+                    $("#v_major").append(newOption);
+                    var newOption=return_department_option_html(degree,ik);
+                    $('#s_major').append(newOption);
+                    //append all the department option into major field!!
+                })  
+                if(degree=='G'||degree=='D'||degree=='W'||degree=='R'){
+                    $('#v_level').empty();
+                    $('#s_level').empty();
+                    var option_array=return_two_grade_arr(degree, window.language);
+                    $('#v_level').append(option_array[0]).append(option_array[1]);  
+                    option_array=return_two_grade_arr(degree, window.language);
+                    $('#s_level').append(option_array[0]).append(option_array[1]);                  
+                }
+                else{                        
+                    $('#v_level').empty();
+                    $('#s_level').empty();
+                    var target_array=['#v_level', '#s_level'];
+                    var option_array=return_five_grade_arr(window.language);
+                    var newGrade;
+                    $.each(target_array,function(ik,iv){// use for loop use automatically append the option into the right position.
+                        $.each(option_array,function(jk,jv){
+                            newGrade=$.parseHTML(jv);
+                            $(iv).append(newGrade)
+                        })
+                    })                        
+                }     
+            }
+            var return_department_option_html = function(degree, department){
+                option = '<option value="'+window.department_name[degree][department]['zh_TW']+'">'+window.department_name[degree][department][window.language]+'</option>'//因為course of majors這個陣列的key全部都是中文，所以選單按鈕的value一定要是中文，而按鈕的文字則是按這是什麼語言版本的頁面
+                return option;
+            }
+            var return_two_grade_arr = function(degree, language){
+                var freshman_value="6",sophomore_value="7";//take graduate's value as default.
+                if(degree=='D'){
+                    freshman_value="8";
+                    sophomore_value="9";
+                }
+
+                if(language=='zh_TW'){
+                    var newGrade=$.parseHTML('<option value='+freshman_value+'>一年級</option>');
+                    var newGrade2=$.parseHTML('<option value='+sophomore_value+'>二年級</option>'); 
+                }else if(language=='en_US'){
+                    var newGrade=$.parseHTML('<option value='+freshman_value+'>freshman</option>');
+                    var newGrade2=$.parseHTML('<option value='+sophomore_value+'>sophomore</option>');
+                }
+                else{
+                    alert("language error,請通知開發人員 感謝~");
+                }
+                return [newGrade, newGrade2]; 
+            }
+            var return_five_grade_arr = function(language){
+                if(language=='zh_TW'){
+                    return ['<option value="0">無年級</option>','<option value="1">一年級</option>','<option value="2">二年級</option>','<option value="3">三年級</option>','<option value="4">四年級</option>','<option value="5">五年級</option>'];
+                }
+                else if(language=='en_US'){
+                    return ['<option value="0">non-graded</option>','<option value="1">freshman</option>','<option value="2">sophomore</option>','<option value="3">junior</option>','<option value="4">senior</option>','<option value="5">fifth-grade</option>']
+                }
+                else{
+                    alert('five grade error, 請通知開發人員 感謝~');
+                }
             }
 })(jQuery);
