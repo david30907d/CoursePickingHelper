@@ -14,7 +14,7 @@
                 window.name_of_optional_obligatory = [] //這是用來存系上的必修課，檢查有沒有課名是重複的，若有就讓使用者自行決定要上哪堂
                 window.user={"name":"","time_table":[]};
                 $("#class_credit").text(0);
-                window.language="zh_TW";//固定顯示語言為中文           
+                window.language="en_US";//固定顯示語言為中文           
                 window.url_base="";//used to be the url that link to the syllabus of that course.
                 window.haveloadin={D:false,G:false,N:false,O:false,U:false,W:false};//used to checked whether that json of specific degree has been loaded in or not, if it did, the value turn to ture.
                 window.lastupdatetime="";//show the update time on server.
