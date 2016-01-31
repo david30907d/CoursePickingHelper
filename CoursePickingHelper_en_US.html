@@ -133,8 +133,10 @@
         .footer{
             position: relative;
             text-align: center;
-            font-color:white;
-            background-color: black
+        }
+        #contact{
+          font-color:white;
+          background-color: black
         }
         /*footer裡的圖片*/
         #SGsign,#ITsign{
@@ -690,10 +692,25 @@
             </div>
             </div>
             <div class="footer">
-                <a href="https://github.com/david30907d/CoursePickingHelper"><span class="github_sign fa fa-github-square fa-1x"></span></a>&nbsp;
-                <a href="https://www.facebook.com/CoursePickingHelper/"><span class="github_sign fa fa-facebook-official fa-1x"></span></a>&nbsp;
-                  <a href="http://new.nchusg.org/"><span class="github_sign"><img id="SGsign" src="./images/會徽-01.jpg"><i>中興大學學生會</i></span></a>&nbsp;
-                  <a href="https://zh-tw.facebook.com/it.nchu"><span class="github_sign"><img id="SGsign" src="./images/nchuit.png"><i>中興大學資訊社</i></span></a>
+                <!-- FB讚和分享按鈕 -->
+                <div id="like">
+                  <div id="fb-root"></div>
+                  <script>(function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.5";
+                    fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'facebook-jssdk'));</script>
+                  <div class="fb-like" data-href="https://www.facebook.com/CoursePickingHelper/" data-width="280px" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                </div>
+
+                <div id="contact">
+                  <a href="https://github.com/david30907d/CoursePickingHelper"><span class="github_sign fa fa-github-square fa-1x"></span></a>&nbsp;
+                  <a href="https://www.facebook.com/CoursePickingHelper/"><span class="github_sign fa fa-facebook-official fa-1x"></span></a>&nbsp;
+                    <a href="http://new.nchusg.org/"><span class="github_sign"><img id="SGsign" src="./images/會徽-01.jpg"><i>中興大學學生會</i></span></a>&nbsp;
+                    <a href="https://zh-tw.facebook.com/it.nchu"><span class="github_sign"><img id="SGsign" src="./images/nchuit.png"><i>中興大學資訊社</i></span></a>
+                </div>
             </div>
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
