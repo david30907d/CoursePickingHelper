@@ -42,12 +42,7 @@
                     // 當點到圖案時，若內容是隱藏時則顯示它；反之則隱藏
                     $('#obligatory-post').slideToggle();
                     $('#obligatory-span').find("span").toggle();
-                });
-                    /***學年課***/
-                $("#year-span").click(function(){
-                    $('#year-post').slideToggle();
-                    $('#year-span').find("span").toggle();
-                });
+                });                
                     /***選修***/
                 $("#elective-span").click(function(){
                     $('#elective-post').slideToggle();
@@ -201,7 +196,11 @@
                     var level=get_major_and_level('v')['level'];
                     $.each(courses[code],function(ik,iv){
                         if(iv.obligatory_tf==true&&iv.for_dept==major){
-                            toastr.warning("此為必修課，若要復原請點擊課表空格", {timeOut: 2500});
+                            if(window.language=="zh_TW"){
+                                toastr.warning("此為必修課，若要復原請點擊課表空格", {timeOut: 2500});
+                            }else{
+                                toastr.warning("This is a required course, if you want to undo, please click the \"plus\" symbol", {timeOut: 2500});
+                            }
                             delete_course($('#time-table'), iv); //就跟add_course一樣，只是把填東西改成刪掉
                             return false;
                         }
@@ -314,7 +313,11 @@
                         var $td = $target.find('tr[data-hour=' + jv + '] td:eq(' + (iv.day-1) + ')');
                         if($td.text()!=""){ //用來判斷td裡面是不已經有放過課程了，但若先在裡面放個按鈕那.text()回傳回來的也是空字串
                             check_conflict = true;
-                            toastr.error("衝堂喔!請手動刪除衝堂的課程", {timeOut: 2500});
+                            if(window.language=="zh_TW"){
+                                toastr.error("衝堂喔!請手動刪除衝堂的課程", {timeOut: 2500});
+                            }else{
+                                toastr.error("Conflict! please drop some course manually.", {timeOut: 2500});
+                            }
                             return false;   //傳回false就是跳離迴圈
                         }
                     });
@@ -337,7 +340,7 @@
                     });
                     add_credits(course);                    
                     window.user.time_table.push(course);//here means once i add this course in my timetable, i will also record this object in a json format, to save this time_table for users. 
-                    build_toastr_time(course);
+                    build_toastr_time(course,window.language);
                 }
                 if(check_conflict==false){
                     return("available");    //沒衝堂，可以變色
@@ -745,22 +748,51 @@
             }
 
             /*****建立 選擇課程後跳出toastr的資訊*****/
-            var build_toastr_time=function(course){
+            var build_toastr_time=function(course, language){
                 var EN_CH={"語言中心":"","夜共同科":"","夜外文":"","通識中心":"","夜中文":""};   
                 var toast_mg=[];
-                toast_mg.push("代碼: "+course.code);
-                toast_mg.push("剩餘名額:"+(course.number-course.enrolled_num));
+                var toastr1;
+                var toastr2;
+                if(language=='zh_TW'){
+                    toastr1="代碼: ";
+                    toastr2="剩餘名額:";                
+                }
+                else if(language=='en_US'){
+                    toastr1="Course ID: ";
+                    toastr2="Remaining Seat:";
+                }
+                toast_mg.push(toastr1+course.code);
+                toast_mg.push(toastr2+(course.number-course.enrolled_num));    
+
                 if(course.discipline!=""&&course.discipline!=undefined){//代表他是通識課
-                    toast_mg.push("學群:"+course.discipline);
+                    if(language=='zh_TW'){
+                        toastr1="學群:";
+                    }
+                    else if(language=='en_US'){
+                        toastr1="Discipline:";
+                    }                   
+                    toast_mg.push(toastr1+course.discipline);
                     var possibility = cal_possibility(course);// a fuction that return the possibility of enrolling that course successfully.
                     //toast_mg.push("中籤率:" + possibility + "%");
                 }                
                 if(course.note!=""){
-                    toast_mg.push("備註:"+course.note);
+                    if(language=='zh_TW'){
+                        toastr1="備註:";
+                    }
+                    else if(language=='en_US'){
+                        toastr1="Note:";
+                    } 
+                    toast_mg.push(toastr1+course.note);
                 }  
                 if(course.prerequisite!=""){
                     //prerequisite means you need to enroll that course before enroll this course
-                    toast_mg.push("先修科目:"+course.prerequisite);
+                    if(language=='zh_TW'){
+                        toastr1="先修科目:";
+                    }
+                    else if(language=='en_US'){
+                        toastr1="Prerequisite:";
+                    }
+                    toast_mg.push(toastr1+course.prerequisite);
                 }              
                 toast_mg = toast_mg.join('<br/>');
                 toastr.info(toast_mg);
