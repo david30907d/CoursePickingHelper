@@ -11,7 +11,7 @@
                 window.teacher_course = {}; //這是以老師姓名為index的陣列
                 window.name_of_course = {}; //這是以課程名稱為index的陣列
                 window.name_of_optional_obligatory = [] //這是用來存系上的必修課，檢查有沒有課名是重複的，若有就讓使用者自行決定要上哪堂
-                window.user={"name":"","time_table":[]};
+                window.user={"user-name":"","user-dept":"","time_table":[]};
                 $("#class_credit").text(0);
                 window.language="zh_TW";//固定顯示語言為中文           
                 window.url_base="";//used to be the url that link to the syllabus of that course.
@@ -269,6 +269,16 @@
                 //if the career(degree) has been changed, also change the level
                     generate_major_level_option();
                 })
+
+                /********提交user的json檔*********/
+                $('#saveAsJson').click(function(){
+                    window.user['user-name']=$('#user-name').val();
+                    window.user['user-dept']=$('#user-dept').val();
+                    var filename = $('#user-name').val();
+                    var json_string =  JSON.stringify(window.user);
+                    var blob = new Blob([json_string], {type: "application/json"});
+                    saveAs(blob, filename+".json");
+                })
             });
             
             window.week = ["一", "二", "三", "四", "五"];
@@ -510,7 +520,7 @@
                 window.credits=0;
                 $("#class_credit").text(window.credits);
                 window.name_of_optional_obligatory=[];  //把數過的課程清空                
-                window.user={"name":"","time_table":[]};
+                window.user={"user-name":"","time_table":[]};
             }
 
             /********用+字號功能時，清空側欄********/

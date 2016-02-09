@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+a<!DOCTYPE html>
 <html lang="zh-tw" class="han-la">
 <!--
 //                                  _oo8oo_
@@ -110,7 +110,7 @@
         {
             padding-top: 0;
             padding-bottom  : 0;
-        }
+        }f
         .add
         {
             color: red;
@@ -219,7 +219,7 @@
                             <button type="button" id="elective-span" style="background:none; border:none">
                                 <span class="glyphicon glyphicon-triangle-bottom"></span>
                                 <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
-                            </button>Optional Course
+                            </button>Elective Course
                             <button type="button" class="close elective"><span class="fa fa-trash"></span></button>
                         <div class="expander"></div>
                         </div>
@@ -315,7 +315,7 @@
                             <h5 id="">Language Course</h5>
                             <div id="foreign-post">
                             </div>
-                            <h5 id="">Other Optional Course</h5>
+                            <h5 id="">Other Elective Course</h5>
                             <div id="non-graded-optional-post">
                             </div>
                         </div>
@@ -744,12 +744,19 @@
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
             <script src="bootstrap/js/bootstrap.min.js"></script>
             <script src="toastr/toastr.js"></script>
-            <script src="js/CoursePickingHelper_en_US.js"></script>
+            <!--廣告-->
             <script type="text/javascript" src="http://ad.nchusg.org/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
             <link rel="stylesheet" type="text/css" href="http://ad.nchusg.org/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
             <link rel="stylesheet" type="text/css" href="http://ad.nchusg.org/ad.css" />  
             <script src="http://ad.nchusg.org/ad.js"></script>
-            <script src="js/html2canvas.js"></script>
-            <script src="js/saveAsPicture.js"></script>
+            <!--截圖-->
+            <script src="js/save/html2canvas.js"></script>
+            <script src="js/save/saveAsPicture.js"></script>
+            <!--儲存json到本地端-->
+            <script async="" src="https://cdn.rawgit.com/eligrey/Blob.js/master/Blob.js"/>
+            <script src="js/save/FileSaver.js"></script>
+            <script src="js/save/FileSaver.min.js"></script>
+            <!--功能主函式-->
+            <script src="js/CoursePickingHelper_en_US.js"></script>
         </body>
     </html>
