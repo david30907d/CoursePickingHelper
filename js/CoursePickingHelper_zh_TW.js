@@ -1,6 +1,6 @@
 (function($){
         //先定義JQuery為$，不要讓它衝突        
-            $(function(){
+            $(function(){     
                 /**一開始的簡易版使用說明**/
                 //toastr.success("1. 請從選擇系級開始（未選擇系級，無法使用以下功能）<br />2. 點擊課表中的+字號，旁邊欄位會顯示可排的課程，請善加利用<br />3. 任何課程都可以使用課程查詢來找<br />特別小叮嚀(1)：課程查詢以各位輸入的條件篩選，條件越少，找到符合的課程就越多<br />特別小叮嚀(2)：如果有想要查詢其他系的必選修，也可以使用雙主修功能<br />4. 如果排好課，有需要請截圖來保留自己理想的課表（如果課表太大，可利用縮放功能來縮小視窗以利截圖）", "使用說明", {timeOut: 250000});                
                 /*initialization!!!*/
@@ -11,7 +11,7 @@
                 window.teacher_course = {}; //這是以老師姓名為index的陣列
                 window.name_of_course = {}; //這是以課程名稱為index的陣列
                 window.name_of_optional_obligatory = [] //這是用來存系上的必修課，檢查有沒有課名是重複的，若有就讓使用者自行決定要上哪堂
-                window.user={"user-name":"","user-dept":"","time_table":[]};
+                window.user={"user-name":"","user-dept":"","time_table":[],"returnarr":{'level':'',"major":""}};
                 $("#class_credit").text(0);
                 window.language="zh_TW";//固定顯示語言為中文           
                 window.url_base="";//used to be the url that link to the syllabus of that course.
@@ -20,7 +20,8 @@
                 get_json_when_change_degree("json/O.json");//couse O.json is suitable for all kind of degree, so it will be loaded in automatically.
                 /*initialization!!!*/
 
-                //當文件準備好的時候，讀入department的json檔, 因為這是顯示系所，沒多大就全部都載進來                              
+                //當文件準備好的時候，讀入department的json檔, 因為這是顯示系所，沒多大就全部都載進來                          
+                localstorage_func();
                 $.getJSON("json/new_department.json",function(depJson){
                     window.department_name={};
                     build_department_arr(depJson);
@@ -351,14 +352,14 @@
                     add_credits(course);                    
                     window.user.time_table.push(course);//here means once i add this course in my timetable, i will also record this object in a json format, to save this time_table for users. 
                     build_toastr_time(course,window.language);
+                    add_to_local();
                 }
                 if(check_conflict==false){
                     return("available");    //沒衝堂，可以變色
                 }
                 else{
                     return("conflict")  //衝堂，不要變色
-                }
-
+                }                        
             };
 
             /*******嘗試函式化選修填入課程的功能！！*******/
@@ -587,7 +588,7 @@
                 else{
                     window.name_of_optional_obligatory[course.title_short]++;
                 }
-                console.log(course.title_short+' '+window.name_of_optional_obligatory[course.title_short]);
+                //console.log(course.title_short+' '+window.name_of_optional_obligatory[course.title_short]);
             }
 
             /*********處理課名*********/
@@ -882,6 +883,8 @@
             /*******獲得使用者選擇的主修資訊與年級*******/
             var get_major_and_level = function(typechar){
                 //這會回傳一個major和level的陣列，供全域呼叫使用
+
+
                 var arr = $('form').serializeArray();//this is a jQuery function
                 // will select all form of this html Document, and build and array of object
                 var returnarr={};
@@ -890,6 +893,8 @@
                     temp=arr[1]['value'].split('-')[1];
                     returnarr['level']=check_which_class(temp,arr[2]['value']);
                     returnarr['major']=temp.split(' ')[0];
+                    //window.user['returnarr']['level']=returnarr['level'];
+                    //window.user['returnarr']['major']=returnarr['major'];
                 }
                 else if(typechar == 's'){
                     temp=arr[3]['value'].split('-')[1];
@@ -903,7 +908,7 @@
             /*******變換學制後，匯入該json檔*******/
             var get_json_when_change_degree = function(path)   {
                 $.getJSON(path, function(json){  //getJSON會用function(X)傳回X的物件或陣列  
-                    console.log(json);
+                    //console.log(json);
                     $.each(json.course, function(ik, iv){
                         if(typeof(window.course_of_majors[iv.for_dept]) == 'undefined')//如果這一列(列的名稱為索引值key)是空的也就是undefined，那就對他進行初始化，{}物件裡面可以放任意的東西，在下面會把很多陣列塞進這個物件裡面
                             window.course_of_majors[iv.for_dept] = {};
@@ -1071,5 +1076,37 @@
                 else{
                     alert('five grade error, 請通知開發人員 感謝~');
                 }
+            }
+            var localstorage_func = function(){
+                if(typeof(Storage) !== "undefined") {//如果typeof(Storage)!==undefined，代表他的瀏覽器有支援localstorage
+                    if(localStorage['jsonstorage']!=undefined){
+                        local = JSON.parse(localStorage['jsonstorage']);
+                        load_localstorage(local);
+                    }                    
+                }    
+            }
+            var add_to_local =function(){
+                if(typeof(Storage) !== "undefined") {//如果typeof(Storage)!==undefined，代表他的瀏覽器有支援localstorage
+                    stringify=JSON.stringify(window.user);
+                    localStorage['jsonstorage']=stringify;
+                }
+            }
+            var load_localstorage = function(local){
+                //把localstorage的資料填進課表
+                //console.log(local);
+                $.each(local['time_table'],function(ik,iv){
+                    add_course($('#time-table'), iv, language);
+                })
+            }
+            var return_major_level_in_local = function(){
+                if(typeof(Storage) !== "undefined") {//如果typeof(Storage)!==undefined，代表他的瀏覽器有支援localstorage
+                    if(localStorage['jsonstorage']!=undefined){
+                        local = JSON.parse(localStorage['jsonstorage']);
+                        returnarr={};
+                        returnarr['level']=local['returnarr']['level'];
+                        returnarr['major']=local['returnarr']['major']
+                        return returnarr;
+                    }           
+                } 
             }
 })(jQuery);
