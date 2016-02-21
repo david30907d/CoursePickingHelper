@@ -6,8 +6,8 @@
 
 # 3. 開始利用 date 指令來取得所需要的檔名了；
 date=$(date +%Y%m%d)  # 今天的日期
+#要把指令的結果回傳給變數的話要寫$( command )
 time=$(date | awk '{print $4}')
-char="_"           
 folder="${date}-${time}"
 
 #echo "${folder}"
