@@ -1,0 +1,755 @@
+a<!DOCTYPE html>
+<html lang="zh-tw" class="han-la">
+<!--
+//                                  _oo8oo_
+//                                 o8888888o
+//                                 88" . "88
+//                                 (| -_- |)
+//                                 0\  =  /0
+//                               ___/'==='\___
+//                             .' \\|     |// '.
+//                            / \\|||  :  |||// \
+//                           / _||||| -:- |||||_ \
+//                          |   | \\\  -  /// |   |
+//                          | \_|  ''\---/''  |_/ |
+//                          \  .-\__  '-'  __/-.  /
+//                        ___'. .'  /--.--\  '. .'___
+//                     ."" '<  '.___\_<|>_/___.'  >' "".
+//                    | | :  `- \`.:`\ _ /`:.`/ -`  : | |
+//                    \  \ `-.   \_ __\ /__ _/   .-` /  /
+//                =====`-.____`.___ \_____/ ___.`____.-`=====
+//                                  `=---=`
+//
+//
+//                       佛祖保佑  　　　　　永無bug
+-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CoursePickingHelper</title>
+        <link rel="shortcut icon" href="images/goose.jpg" />
+        <script type="text/javascript"></script>
+        <link href="toastr/toastr.css" rel="stylesheet"/><!--這是toast message的css-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/Han/2.3.0/han.css" rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.css">        
+
+        <style>
+        body
+        {
+            background-color:#3074B5;
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+            font-family: "Microsoft JhengHei";
+        }
+        /*最後改的p是相簿的英文字*/
+        #elective-post
+        {
+            margin-bottom: 10px;
+        }
+        #btn-tools
+        {
+            padding: 0;
+        }
+        #classification
+        {
+            padding: 0px;
+        }
+        /*修改table的border*/
+        #time-table tbody th
+        {
+            white-space: nowrap;
+            font-size: 100%;
+            height:55px;
+        }
+        #time-table th
+        {
+            text-align: center;
+            vertical-align:middle;
+        }
+        #time-table td
+         {
+             text-align: center;
+             vertical-align:middle;
+         }
+         #time-table td span
+         {
+             color: #DDD;
+         }
+         #time-table td span:hover,
+         #time-table td span:focus
+         {
+             background-color: transparent;
+             color: #666;
+        }
+        #time-table button.btn-link
+        {
+            text-align: center;
+            color:black;
+        }
+        #time-table div.title
+        {
+            text-align: center;
+            font-size: 120%;
+            padding-bottom: 3px;
+        }
+        #time-table div.location
+        {
+            text-align: left;
+            font-size: 80%;
+        }
+        #time-table div.professor
+        {
+            text-align: right;
+            font-size: 80%;
+        }
+        /*table的屬性結束*/
+        .search-class .panel-body
+        {
+            padding-top: 0;
+            padding-bottom  : 0;
+        }f
+        .add
+        {
+            color: red;
+        }
+        #curriculum-title small
+        {
+            text-align:left;
+            color:#333;
+        }
+        #toggleTable
+        {
+            color: #333; /* IE8 proofing */
+        }
+        #toggleTable:hover,
+        #toggleTable:focus
+        {
+            background-color: transparent;
+            color: #ADBDC5;
+        }
+        .footer{
+            position: relative;
+            text-align: center;
+        }
+        #contact{
+          font-color:white;
+          background-color: black
+        }
+        /*footer裡的圖片*/
+        #SGsign,#ITsign{
+          width: 20px;
+          height: 20px;
+        }
+        /*footer裡的圖片*/
+        .github_sign{
+          color: white;
+        }
+        
+        </style>
+        
+    </head>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46281023-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <body>
+
+        <!--選取系級的表單結束-->
+        <div class="container-fluid">
+            <!--會出現系選修和體育、通識-->
+            <div class="col-md-3" id="classification">
+                <br>
+                <div class="container-fluid">
+                    <div class="col-xs-4" id="btn-tools">
+                        <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#focus">
+                            <span class="fa fa-heart fa-1x fa-fw"></span>Dept.
+                        </button>
+                    </div>
+                    <div class="col-xs-4" id="btn-tools">
+                        <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#search">
+                            <span class="fa fa-search fa-1x fa-fw"></span>Search
+                        </button>
+                    </div>
+                    <div class="col-xs-4" id="btn-tools">
+                        <button type="button" class="btn btn-warning btn-block" id="clear-button">
+                            <span class="fa fa-trash fa-1x fa-fw"></span>Clear
+                        </button>
+                    </div>
+                </div>
+                <br>
+
+                <div class="search-class" id="bulletin">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <button type="button" id="search-span" style="background:none; border:none">
+                                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
+                            </button>
+                            Required Course
+                            <button type="button" class="close search"><span class="fa fa-trash"></span></button>
+                        </div>
+                        <div class="panel-body" id="search-post">
+                            <!--<h5 style="color:#3074B5;" value="0320">台灣歷史導論</h5>-->
+                            <!--<h5 style="color:#3074B5;" value="0321">台灣歷史導論</h5>-->
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <button type="button" id="obligatory-span" style="background:none; border:none">
+                                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
+                            </button>
+                            Obligatory Class
+                            <button type="button" class="close obligatory"><span class="fa fa-trash"></span></button>
+                        </div>
+                        <div class="panel-body" id="obligatory-post" slide="">
+                        </div>
+                    </div>                    
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <button type="button" id="elective-span" style="background:none; border:none">
+                                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
+                            </button>Elective Course
+                            <button type="button" class="close elective"><span class="fa fa-trash"></span></button>
+                        <div class="expander"></div>
+                        </div>
+                        <div class="panel-body" id="elective-post">
+                            <h5 id="">
+                                Freshman
+                            </h5>
+                            <div id="freshman">
+                            </div>
+                            <h5 id="">
+                                Sophomore
+                            </h5>
+                            <div id="sophomore">
+                            </div>
+                            <h5 id="">
+                                Junior
+                                </h5>
+                            <div id="junior">
+                            </div>
+                            <h5 id="">
+                                Senior
+                            </h5>
+                            <div id="senior">
+                            </div>
+                            <h5 id="">
+                                Fifth-grade
+                            </h5>
+                            <div id="fifth-grade">
+                            </div>
+                            <h5 id="">
+                                Sixth-grade
+                            </h5>
+                            <div id="sixth-grade">
+                            </div>
+                            <h5 id="">
+                                Seventh-grade
+                            </h5>
+                            <div id="seventh-grade">
+                            </div>
+                            <h5 id="">
+                                Non-graded
+                            </h5>
+                            <div id="whole-school">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <button type="button" id="general-span" style="background:none; border:none">
+                                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
+                            </button>
+                            General Education
+                            <button type="button" class="close general"><span class="fa fa-trash"></span></button>
+                        </div>
+                        <div class="panel-body" id="general-post">
+                            <h5 id="">Humanities</h5>
+                            <div id="humanities">
+                            </div>
+                            <h5 id="">Social</h5>
+                            <div id="social">
+                            </div>
+                            <h5 id="">Natural</h5>
+                            <div id="natural">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <button type="button" id="school-span" style="background:none; border:none">
+                                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                <span class="glyphicon glyphicon-triangle-right" style="display: none;"></span>
+                            </button>
+                            Common Subject
+                            <button type="button" class="close school"><span class="fa fa-trash"></span></button>
+                        </div>
+                        <div class="panel-body" id="school-post">
+                            <h5 id="">Freshman Chinese</h5>
+                            <div id="chinese">
+                            </div>
+                            <h5 id="">Freshman English</h5>
+                            <div id="english">
+                            </div>
+                            <h5 id="">Physical Education</h5>
+                            <div id="PE-post">
+                            </div>
+                            <h5 id="">Military Education</h5>
+                            <div id="military-post">
+                            </div>
+                            <h5 id="">Education Program</h5>
+                            <div id="teacher-post">
+                            </div>
+                            <h5 id="">Language Course</h5>
+                            <div id="foreign-post">
+                            </div>
+                            <h5 id="">Other Elective Course</h5>
+                            <div id="non-graded-optional-post">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal fade modal fade bs-example-modal-lg" id="focus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h3 class="modal-title" id="myModalLabel"><span class="fa fa-heart fa-1x fa-fw"></span>Department and Degree</h3>
+                            </div>
+
+                        <div class="modal-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="doubleMajor" class="col-xs-2 control-label">Double Major</label>
+                                    <div class="col-xs-10">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="checkbox" value="noDoubleMajor">
+                                            </label>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="degree_div">
+                                    <label for="v_career" class="col-xs-2 control-label">Degree</label>
+                                    <div class="col-xs-10">
+                                        <select class="form-control" name="v_career" id="v_career">
+                                            <option value="0">Choose Degree</option>
+                                            <option value="U">Undergraduate</option>
+                                            <option value="G">Graduate</option>
+                                            <option value="D">Ph.D</option>
+                                            <option value="R">(R)Graduate</option>
+                                            <option value="W">(W)Graduate</option>
+                                            <option value="N">(N)Undergraduate</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="major_div">
+                                    <label for="v_major" class="col-xs-2 control-label">Department</label>
+                                    <div class="col-xs-10">
+                                        <select class="form-control" name="v_major" id="v_major">
+                                            <option>Choose Department</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="level_div">
+                                    <label for="v_level" class="col-xs-2 control-label">Grade</label>
+                                    <div class="col-xs-10">
+                                        <select class="form-control" name="v_level" id="v_level">
+                                            <option value="">Choose Grade</option>   
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="v_major_2" style="display:none">
+                                    <label for="v_major2" class="col-xs-2 control-label">Department</label>
+                                    <div class="col-xs-10">
+                                        <select class="form-control" name="v_major2" id="s_major">
+                                            <option>Choose Double major Dept.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="level_2" style="display:none">
+                                    <label for="v_major2" class="col-xs-2 control-label">Grade</label>
+                                    <div class="col-xs-10">
+                                        <select class="form-control" name="v_level2" id="s_level">
+                                            <option>Choose Double major Grade</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="textForDM" style="display:none">
+                                    <label class="col-xs-12 control-label" style="text-align: center;">Double Major:Those people who want to  <font color="purple">Double Major</font> or just want to enroll <font color="purple">course of other Dept.</font> can use this function<br>And we'll use <font color="purple">purple</font> to distinguish the course title.</label>
+                                </div>
+                                <div class="form-group" id="textForDM" style="display:none">
+                                    <label class="col-xs-12 control-label" style="text-align: center;"></label>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+                            <button type="button" class="btn btn-success" data-dismiss="modal" id="department_search"><span class="glyphicon glyphicon-ok"></span></button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade modal fade bs-example-modal-lg" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h3 class="modal-title" id="myModalLabel"><span class="fa fa-search fa-1x fa-fw"></span>Course Search</h3>
+                            </div>
+
+                        <div class="modal-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="class_credit" class="col-xs-2 control-label">Credits</label>
+                                    <div class="col-xs-10">
+                                        <input type="teacher" class="form-control" id="credits" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="class_title" class="col-xs-2 control-label">Course Name(Key word)</label>
+                                    <div class="col-xs-10">
+                                        <input type="class" class="form-control" id="class_title">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="class_code" class="col-xs-2 control-label">Course Number</label>
+                                    <div class="col-xs-10">
+                                        <input type="class" class="form-control" id="class_code">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="class_teacher" class="col-xs-2 control-label">Professor</label>
+                                    <div class="col-xs-10">
+                                        <input type="teacher" class="form-control" id="class_teacher">
+                                    </div>
+                                </div>                                
+                                <div class="form-group">
+                                    <label class="col-xs-12 control-label" style="text-align: center;">請先選擇系級，才能使用查詢功能喔！</label>
+                                    <label class="col-xs-12 control-label" style="text-align: center;">學分數搜尋能與 課程名稱搜尋搭配使用,限制搜尋結果的學分數</label>
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <a class="btn btn-lg col-sm-3 col-sm-offset-1" href="https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home" target="_blank"><span class="fa fa-graduation-cap fa-1x fa-fw"></span>Course Information System</a>
+                                    <a class="btn btn-lg col-sm-3" href="http://cah.nchu.edu.tw/class/class_plan.php?new=Y&d_id=3" target="_blank"><span class="fa fa-book fa-1x fa-fw"></span>General Education Center</a>
+                                    <a class="btn btn-lg col-sm-3" href="https://nchu-am.nchu.edu.tw/nidp/idff/sso?id=3&sid=0&option=credential&sid=0" target="_blank"><span class="fa fa-external-link fa-1x fa-fw"></span>Entry of School System</a>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+                            <button type="button" class="btn btn-success" data-dismiss="modal" id="specific_search"><span class="glyphicon glyphicon-ok"></span></button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row" id="curriculum-title">
+                    <div class="col-xs-4" style="text-align:center;margin-top: 18px;">
+                    <button class="ui violet button" id="saveAsPicture"><i class="download icon"></i>Save As</button>                      
+                    </div>
+                    <div class="col-xs-4" style="text-align:center; margin-top: 12px;">
+                        <div class="row">
+                            <div class="col-xs-7">
+                            <h5 id="" style="color:#F9F4F4">
+                                <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>Last Update Date：</h5></div>
+                            <div class="col-xs-5">
+                            <h4 id="updatetime" style="color:#F9F4F4">
+                            </h4>
+                            </div>
+                        </div>
+                        <h3 id="span-color" style="color:#F9F4F4 ;margin-top: 4px; margin-bottom: 6px;" >     <button id="toggleTable" value="sun" style="background:none; border:none">
+                                <span id="sun-span" class="fa fa-sun-o fa-1x fa-fw" style=""></span>
+                                <span id="moon-span" class="fa fa-moon-o fa-1x fa-fw" style="display: none;"></span>
+                            </button>
+                        </h3>
+                    </div>
+                    <div class="col-xs-4" style="text-align:center;margin-top: 6px;margin-bottom: 2px;">
+                        <!--使用說明投影片的按鈕-->
+                        <button type="button" class="btn btn-primary " data-toggle="modal" data-target=".bs-example-modal-lg-question" style="background:none; border:none"><span class="fa fa-question fa-1x fa-fw"></span>Instruction Manual</button>
+                        <div class="modal fade modal fade bs-example-modal-lg-question" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="exp">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h3 class="modal-title" id="myModalLabel"><span class="fa fa-question fa-1x fa-fw"></span>Instruction Manual</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!--杜杰的圖片輪播-->
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner" role="listbox">
+                                                  <div class="item active">
+                                                    <img src="images/manual/001.png" alt="...">
+                                                  </div>
+                                                  <div class="item">
+                                                    <img src="images/manual/002.png" alt="...">
+                                                  </div>
+                                                  <div class="item">
+                                                    <img src="images/manual/003.png" alt="...">
+                                                  </div>
+                                                  <div class="item">
+                                                    <img src="images/manual/004.png" alt="...">
+                                                  </div>
+                                                  <div class="item">
+                                                    <img src="images/manual/005.png" alt="...">
+                                                  </div>
+                                                  <div class="item">
+                                                    <img src="images/manual/006.png" alt="...">
+                                                  </div>
+                                                  <div class="item">
+                                                    <img src="images/manual/007.png" alt="...">
+                                                  </div>
+                                                  <div class="item">
+                                                    <img src="images/manual/008.png" alt="...">
+                                                  </div>
+                                                  <div class="item">
+                                                    <img src="images/manual/009.png" alt="...">
+                                                  </div>  
+                                                </div>
+                                                <!-- Controls -->
+                                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                                  <span class="sr-only">Previous</span>
+                                                </a>
+                                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                                  <span class="sr-only">Next</span>
+                                                </a>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <!--杜杰的圖片結束-->
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div><span class="glyphicon glyphicon-user"></span>Credits<span class="badge" id="class_credit"></span></div>
+                    </div>  
+                </div>
+
+                <div class="table-responsive" id="time-table">
+                    <table class="table table-striped table-hover table-condensed table-bordered">
+                        <thead>
+                            <tr class="info">
+                                <th style="width: 1px"></th>
+                                <th style="width: 20%">Mon</th>
+                                <th style="width: 20%">Tue</th>
+                                <th style="width: 20%">Web</th>
+                                <th style="width: 20%">Thu</th>
+                                <th style="width: 20%">Fri</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-hour="1" class="active">
+                                <th>
+                                    <h3>1</h3>
+                                    <h5>08:10-09:00</h5>
+                                </th>
+                                <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="3"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="4"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="5"><span class="fa fa-plus-circle fa-5x"></span></td>
+                            </tr>
+                            <tr data-hour="2" class="active">
+                                <th>
+                                    <h3>2</h3>
+                                    <h5>09:10-10:00</h5>
+                                </th>
+                                <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="3"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="4"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="5"><span class="fa fa-plus-circle fa-5x"></span></td>
+                            </tr>
+                            <tr data-hour="3" class="active">
+                                <th>
+                                    <h3>3</h3>
+                                    <h5>10:10-11:00</h5>
+                                </th>
+                                <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="3"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="4"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="5"><span class="fa fa-plus-circle fa-5x"></span></td>
+                            </tr>
+                            <tr data-hour="4" class="active">
+                                <th>
+                                    <h3>4</h3>
+                                    <h5>11:10-12:00</h5>
+                                </th>
+                                <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="3"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="4"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="5"><span class="fa fa-plus-circle fa-5x"></span></td>
+                            </tr>
+                            <tr data-hour="5" class="active">
+                                <th>
+                                    <h3>5</h3>
+                                    <h5>13:10-14:00</h5>
+                                </th>
+                                <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="3"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="4"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="5"><span class="fa fa-plus-circle fa-5x"></span></td>
+                            </tr>
+                            <tr data-hour="6" class="active">
+                                <th>
+                                    <h3>6</h3>
+                                    <h5>14:10-15:00</h5>
+                                </th>
+                                <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="3"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="4"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="5"><span class="fa fa-plus-circle fa-5x"></span></td>
+                            </tr>
+                            <tr data-hour="7" class="active">
+                                <th>
+                                    <h3>7</h3>
+                                    <h5>15:10-16:00</h5>
+                                </th>
+                                <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="3"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="4"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="5"><span class="fa fa-plus-circle fa-5x"></span></td>
+                            </tr>
+                            <tr data-hour="8" class="active">
+                                <th>
+                                    <h3>8</h3>
+                                    <h5>16:10-17:00</h5>
+                                </th>
+                                <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="3"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="4"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="5"><span class="fa fa-plus-circle fa-5x"></span></td>
+                            </tr>
+                            <tr data-hour="9" class="active">
+                                <th>
+                                    <h3>9</h3>
+                                    <h5>17:10-18:00</h5>
+                                </th>
+                                <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="3"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="4"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="5"><span class="fa fa-plus-circle fa-5x"></span></td>
+                            </tr>
+                            <tr data-hour="10" class="active" style="display:none">
+                                <th>
+                                    <h3>A</h3>
+                                    <h5>18:20-19:10</h5>
+                                </th>
+                                <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="3"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="4"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="5"><span class="fa fa-plus-circle fa-5x"></span></td>
+                            </tr>
+                            <tr data-hour="11" class="active" style="display:none">
+                                <th>
+                                    <h3>B</h3>
+                                    <h5>19:15-20:05</h5>
+                                </th>
+                                <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="3"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="4"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="5"><span class="fa fa-plus-circle fa-5x"></span></td>
+                            </tr>
+                            <tr data-hour="12" class="active" style="display:none">
+                                <th>
+                                    <h3>C</h3>
+                                    <h5>20:10-21:00</h5>
+                                </th>
+                                <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="3"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="4"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="5"><span class="fa fa-plus-circle fa-5x"></span></td>
+                            </tr>
+                            <tr data-hour="13" class="active" style="display:none">
+                                <th>
+                                    <h3>D</h3>
+                                    <h5>21:05-21:55</h5>
+                                </th>
+                                <td data-day="1"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="2"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="3"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="4"><span class="fa fa-plus-circle fa-5x"></span></td>
+                                <td data-day="5"><span class="fa fa-plus-circle fa-5x"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+            <div style="display:none">      
+              <a id="fancybox-manual-b" href="javascript:;">advertisement</a>
+            </div>    
+            <div class="footer">
+                <!-- FB讚和分享按鈕 -->
+                <div id="like">
+                  <div id="fb-root"></div>
+                  <script>(function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.5";
+                    fjs.parentNode.insertBefore(js, fjs);
+                  }(document, 'script', 'facebook-jssdk'));</script>
+                  <div class="fb-like" data-href="https://www.facebook.com/CoursePickingHelper/" data-width="280px" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                </div>
+
+                <div id="contact">
+                  <a href="https://github.com/david30907d/CoursePickingHelper"><span class="github_sign fa fa-github-square fa-1x"></span></a>&nbsp;
+                  <a href="https://www.facebook.com/CoursePickingHelper/"><span class="github_sign fa fa-facebook-official fa-1x"></span></a>&nbsp;
+                    <a href="http://new.nchusg.org/"><span class="github_sign"><img id="SGsign" src="./images/會徽-01.jpg"><i>中興大學學生會</i></span></a>&nbsp;
+                    <a href="https://zh-tw.facebook.com/it.nchu"><span class="github_sign"><img id="SGsign" src="./images/nchuit.png"><i>中興大學資訊社</i></span></a>
+                </div>
+            </div>
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+            <script src="toastr/toastr.js"></script>
+            <!--廣告-->
+            <script type="text/javascript" src="http://ad.nchusg.org/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+            <link rel="stylesheet" type="text/css" href="http://ad.nchusg.org/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+            <link rel="stylesheet" type="text/css" href="http://ad.nchusg.org/ad.css" />  
+            <script src="http://ad.nchusg.org/ad.js"></script>
+            <!--截圖-->
+            <script src="js/save/html2canvas.js"></script>
+            <script src="js/save/saveAsPicture.js"></script>
+            <!--儲存json到本地端-->
+            <script async="" src="https://cdn.rawgit.com/eligrey/Blob.js/master/Blob.js"/>
+            <script src="js/save/FileSaver.js"></script>
+            <script src="js/save/FileSaver.min.js"></script>
+            <!--功能主函式-->
+            <script src="js/CoursePickingHelper_en_US.js"></script>
+        </body>
+    </html>
