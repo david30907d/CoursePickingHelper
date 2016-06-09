@@ -1,0 +1,5 @@
+# m h  dom mon dow   command
+* * * * * python3 /var/www/html/Python-Crawler/nchu/CoursePickingHelper.py
+* * * * * bash ~/www/CoursePickingHelper/shell-script/updatejson.sh
+0 0 7 * * bash ~/www/CoursePickingHelper/shell-script/backup.sh
+
