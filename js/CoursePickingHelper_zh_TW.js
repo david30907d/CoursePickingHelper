@@ -15,6 +15,7 @@
                 $("#class_credit").text(0);
                 window.language="zh_TW";//固定顯示語言為中文           
                 window.url_base="";//used to be the url that link to the syllabus of that course.
+                window.feedbackUrl = "http://feedback.nchusg.org/search/?q=";
                 window.haveloadin={D:false,G:false,N:false,O:false,U:false,W:false};//used to checked whether that json of specific degree has been loaded in or not, if it did, the value turn to ture.
                 window.lastupdatetime="";//show the update time on server.
                 get_json_when_change_degree("json/O.json");//couse O.json is suitable for all kind of degree, so it will be loaded in automatically.
@@ -158,7 +159,11 @@
                 });
                 /**********最主要的系級提交funciton，若要修改請謹慎小心!!!***********/
                 $("#department_search").click(function(){
-/*                    window.sub_major=get_major_and_level('s')['major'];//為了方便使用者不斷查詢某一系不同年級的課
+                    if ($("#department_search").attr('class') == 'ui primary button loading'){
+                        toastr.warning('課程資料還在載入中<br />請稍帶片刻~');
+                        return;
+                    }
+/*                     window.sub_major=get_major_and_level('s')['major'];//為了方便使用者不斷查詢某一系不同年級的課
                     window.sub_level=get_major_and_level('s')['level'];//所以不會自動將這兩個欄位清空到預設值，所以要判斷當這兩個欄位有更動才進行查詢動作
 */                    /*this part is for specific search*/
                     var major=get_major_and_level('v')['major'];
@@ -269,6 +274,10 @@
                 //if the career(degree) has been changed, also change the level
                     generate_major_level_option();
                 })
+
+                $('#checkbox').click(function(){
+                    toastr.warning("一定要先選擇您的系級</br>才可以使用外系查詢這個功能喔！")
+                })
             });
             
             window.week = ["一", "二", "三", "四", "五"];
@@ -290,7 +299,8 @@
                 $option.find('button').val(course.code);                
                 //把現在找到的這門選修課課程代碼儲存到這個option，並用value表示       
                 var url=window.url_base+course.url;     
-                $option.find('a').attr('href',url);
+                $option.find('a.syllabus').attr('href',url);
+                LinkToFeedback($option, course); // dynamically fill link of Feedback.nchusg.org into bulletion option.
                 $target.append($option);        //顯示課程，把$option放到elective-post，append是追加在後面                
                 $('[data-toggle="tooltip"]').tooltip(); //讓tooltip功能綁上去
             };
@@ -892,6 +902,8 @@
 
             /*******變換學制後，匯入該json檔*******/
             var get_json_when_change_degree = function(path)   {
+                $('#department_search').attr('class',$('#department_search').attr('class')+' loading');
+
                 $.getJSON(path, function(json){  //getJSON會用function(X)傳回X的物件或陣列  
                     console.log(json);
                     $.each(json.course, function(ik, iv){
@@ -930,6 +942,7 @@
                         window.name_of_course[iv.title_parsed.en_US].push(iv);
                     });
                 });
+                $('#department_search').attr('class','ui primary button');
             }
 
             /*********獲得課程最後的更新時間*********/
@@ -966,10 +979,10 @@
             }
             var return_bulletin_option = function(course){
                 if(course.for_dept == get_major_and_level('s')['major'] && $("#checkbox").val() == "DoubleMajor"){                    
-                    var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#B53074;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));
+                    var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#B53074;" title="" value=""></button><a class="btn syllabus" href="" target="_blank"><span class="fa fa-comment"></span></a><a class="btn feedback" href="" target="_blank"><span class="fa fa-pencil-square-o"></span></a></div>'));
                 }
                 else{
-                    var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button><a class="btn" href="" target="_blank"><span class="fa fa-comment"></span></a></div>'));  //把option做成dom，再把dom做成jQuery物件
+                    var $option = $($.parseHTML('<div><button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" style="color:#3074B5;" title="" value=""></button><a class="btn syllabus" href="" target="_blank"><span class="fa fa-comment"></span></a><a class="btn feedback" href="" target="_blank"><span class="fa fa-pencil-square-o"></span></a></div>'));  //把option做成dom，再把dom做成jQuery物件
                 }
                 return $option;
             }
@@ -1061,5 +1074,8 @@
                 else{
                     alert('five grade error, 請通知開發人員 感謝~');
                 }
+            }
+            var LinkToFeedback = function($option, course){
+                $option.find('a.feedback').attr('href',feedbackUrl+course['title_parsed']['zh_TW']);
             }
 })(jQuery);
